@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% import 'publication_list_macro.html' as publist with context %}
+
+{% block main %}
+
+{% if os.path.exists('files/photo_'+member.id+'.jpg') %}
+<img src="photo_{{member.id}}.jpg" class="FloatingImageRightBorder"/>
+{% endif %}
+<h2>{{ member.name }}</h2>
+
+<p>
+    {% if hasattr(member, 'telephone') %}
+        <i>Telephone:</i> {{ member.telephone }}
+        <br/>
+    {% endif %}
+    {% if hasattr(member, 'email') %}
+        <i>Email:</i> <img src="{{ generate_email(member.name, member.email) }}" style="height:1.5em; vertical-align: middle;"/>
+        <br/>
+    {% endif %}
+    {% if hasattr(member, 'address') %}
+        <font color="#aaaaaa">
+        {% for line in member.address.split('\n') if line.strip() %}
+        {{ line }}<br/>
+        {% endfor %}
+        </font>
+    {% endif %}
+</p>
+
+<div>
+{{ member.long }}
+</div>
+
+{% if member.show_publications and member_publications(member) %}
+<h2>Group publications</h2>
+
+{{ publist.grouped_publications(member) }}
+{% endif %}
+
+{% endblock %}

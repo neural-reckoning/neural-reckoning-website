@@ -1,0 +1,16 @@
+{% macro toolbar() %}
+    <div class="navigation">
+        {% for page_filename, page_title in pages.items() %}
+            <div {%if page_filename!=filename%}id="currentpage"{%endif%}>
+            {% if page_filename!=filename %}
+                <a href="{{ page_filename }}">
+            {% endif %}
+            {{ page_title }}
+            {% if page_filename!=filename %}
+                </a>
+            {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="clr"> </div>
+{% endmacro %}

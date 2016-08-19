@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% import 'publication_list_macro.html' as publist with context %}
+
+{% block main %}
+
+<h2>Publications</h2>
+
+<p>The full list of publications is below, or click on one of the following
+categories:</p>
+
+<ul>
+{% for catid, catname in category_id_names.items() | sort %}
+<li style="margin-bottom: 0em"><a href="publication_category_{{ catid }}.html">{{ catname }}</a></li>
+{% endfor %}
+</ul>
+
+<h2>All publications</h2>
+
+{{ publist.grouped_publications() }}
+
+{% endblock %}

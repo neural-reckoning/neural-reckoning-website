@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<h2>Lab members</h2>
+
+<div class="member_list">
+{% for group in members | groupby('position') %}
+    {% if member_types[group.grouper] %}
+        <div style="padding-top: 10px; padding-bottom: 10px;">{{member_types[group.grouper]}}</div>
+    {% endif %}
+    <!--
+    {% for member in group.list %}
+        <li>
+        <a href="{{member.id}}.html"><b>{{member.name}}</b></a>
+        {{ member.short }}
+        </li>
+    {% endfor %}
+    </ul>
+    -->
+    <table width="100%" padding="20px">
+    {% for member in group.list %}
+        <tr>
+            <td width="120px">
+                {% if os.path.exists('files/photo_'+member.id+'.jpg') %}
+                    <a href="{{member.id}}.html">
+                    <img src="photo_{{member.id}}.jpg" style="max-height: 100px; max-width: 100px; border: 1px solid black;"/>
+                    </a>
+                {% else %}
+                    &nbsp;
+                {% endif %}
+            </td>
+            <td>
+                <a href="{{member.id}}.html"><b>{{member.name}}</b></a><br/>
+                {{ member.short }}
+            </td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endfor %}
+</div>
+
+{% endblock %}

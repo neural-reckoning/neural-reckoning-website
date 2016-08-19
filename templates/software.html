@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% import 'publication_list_macro.html' as publist with context %}
+
+{% block main %}
+
+<h2>Software</h2>
+
+<table width="100%" style="cell-padding: 20px; border-spacing: 20px 50px;">
+    <tr>
+        <td>
+            <p>
+            <a href="http://briansimulator.org">Brian</a> is a simulator
+            for spiking neural networks. It is written in Python for rapid
+            development and ease-of-use, and generates code in several different
+            languages for a variety of computational devices for efficient
+            execution. It includes packages for
+            <a href="pub_modelfitting_focussed_review.html">automatically
+            fitting neuron models to experimental data</a> and for
+            <a href="pub_brian_hears.html">modelling the auditory system</a>.
+            </p>
+            <p>
+            The core Brian team consists of
+            <a href="dan_goodman.html">Dan Goodman</a> at Imperial, and 
+            <a href="http://romainbrette.fr/">Romain Brette</a> and
+            <a href="http://scholar.google.co.uk/citations?user=KJs3XswAAAAJ&hl=en">Marcel Stimberg</a>
+            at l'Institut de la Vision in Paris.
+            </p>
+        </td>
+        <td width="250px" align="center">
+            <img src="brian.png">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>
+            <a href="http://klusta-team.github.io/">KlustaSuite</a> is a
+            collection of programs for "spike sorting". That is, for
+            extracting spike trains from a set of simultaneously recorded
+            extracellular traces. This problem involves preprocessing data to
+            remove noise, clustering to identify patterns across channels
+            that correspond to spikes, and finally manually inspecting and
+            refining the output. This software is currently undergoing a
+            massive redesign to make it possible to sort spikes using
+            enormous electrode arrays with hundreds to thousands of channels.
+            </p>
+            <p>
+            The KlustaSuite team is led by
+            <a href="https://iris.ucl.ac.uk/iris/browse/profile?upi=KDHAR02">Kenneth Harris</a>
+            at UCL.
+            </p>
+        </td>
+        <td width="250px">
+            <img src="spikedetekt.png" width="250px">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>
+                <a href="http://ecobuildergame.org">EcoBuilder</a> is a game
+                for exploring the development and maintenance of ecosystems
+                for both education and research purposes. The game was written by
+                Jonathan Zheng, with ecosystems modelling by Orestes Gutierrez
+                and <a href="http://www.imperial.ac.uk/people/s.pawar">Samraat Pawar</a>.
+            </p>
+        </td>
+        <td>
+            <img src="ecobuilder.jpg" width="250px">
+        </td>
+    </tr>
+</table>
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% macro li_publication(publication) %}
+    <li>
+    <a href="pub_{{publication.name}}.html">
+    {{publication.authors}} ({{publication.year}})<br/>
+    <b>{{publication.title}}.</b><br/>
+    <i>{{publication.journal}}</i> <font color="#aaaaaa">{{publication.additional}}</font>
+    </a>
+    </li>
+{% endmacro %}
+
+{% macro detailed_publication(publication) %}
+    <h2>{{ publication.title }}</h2>
+    <div>{{ publication.authors }}</div>
+    <div><i>{{ publication.journal }}</i> ({{ publication.year }}) {{ publication.additional }}</div>
+    <div>&nbsp;</div>
+    {% if hasattr(publication, 'abstract') %}
+        <div><b>Abstract.</b> {{ publication.abstract }}</div>
+    {% endif %}
+    <div>&nbsp;</div>
+    <div><b>Links:</b>
+    {% for url_title, url in publication.urls %}
+        <a href="{{ url }}">{{ url_title }}</a>{% if not loop.last %},{% endif %}
+    {% endfor %}
+    </div>
+    <div>&nbsp;</div>
+    <div><b>Categories:</b>
+    {% for catid in publication.category_ids | sort %}
+        <a href="publication_category_{{ catid }}.html">{{ category_id_names[catid] }}</a>{% if not loop.last %},{% endif %}
+    {% endfor %}
+    </div>
+{% endmacro %}
+
+{% macro grouped_publications(member=None, cat=None) %}
+    {% if member %}
+    {% set publications = member_publications(member) %}
+    {% endif %}
+    {% if cat %}
+    {% set publications = category_publications(category_id(cat)) %}
+    {% endif %}
+    <div class="publication_list">
+    {% for group in publications | groupby('year') | reverse %}
+        <div>{{group.grouper}}</div>
+        <ul>
+        {% for publication in group.list %}
+            {{ li_publication(publication) }}
+        {% endfor %}
+        </ul>
+    {% endfor %}
+    </div>
+{% endmacro %}
+
+{% macro selected_publications() %}
+    <div class="publication_list">
+    <ul>
+    {% for publication in publications %}
+        {% if hasattr(publication, 'selected') and publication.selected %}
+            {{ li_publication(publication) }}
+        {% endif %}
+    {% endfor %}
+    </ul>
+    </div>
+{% endmacro %}

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% import 'publication_list_macro.html' as publist with context %}
+
+{% block main %}
+
+<h2>Sensory neuroscience</h2>
+
+<div style="float: right; margin-left: 30px; width: 350px; font-size: 80%; margin-bottom: 30px;">
+<a href="localisation-model.png">
+<img src="localisation-model.png" style="border: 1px solid black;" width="350px"/>
+</a>
+Model of how sound localisation could be performed in a complex listening
+environment using the behaviour of ensembles of spiking neurons. 
+</div>
+
+<p>
+Sensory neuroscience is the study of how the brain processes sensory
+information, such as sight, sound, touch, etc. Some of the main aspects of our
+work are:
+</p>
+
+<ul>
+<li><b>Spike-based computation</b>. The brain computes using precisely timed
+but discrete events called spikes. This mode of computation is different from
+both traditional analogue and digital computation, and presumably offers
+benefits compared to them. However, despite several interesting hypotheses and
+specific models, there is as yet not comprehensive theory of this form of
+computation.</li>
+
+<li><b>Auditory system</b>. As we are interested in computation with
+precisely timed spikes, the auditory system is a natural one to study as the
+role of precise temporal information is so well established there.</li>
+
+<li><b>Realistic environments</b>. We are interested in how sensory processing
+is done in realistic rather than laboratory environments. Specifically,
+rather than using simplified stimuli such as pure tones, we prefer to analyse
+the processing of complex stimuli such as natural sounds in a noisy background.
+We are also interested in the problem of processing a continuous stream of
+sensory data rather than the typical laboratory problem of responding to a
+brief, precisely delineated stimuli.</li> 
+</ul>
+
+<p>
+We are interested in both fundamental research into these problems, and
+applications in areas such as robotics and automatic speech recognition.
+</p>
+
+<h3>Publications in sensory neuroscience</h3>
+
+{{ publist.grouped_publications(cat='Sensory') }}
+
+
+{% endblock %}

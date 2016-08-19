@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% import 'publication_list_macro.html' as publist with context %}
+
+{% block title %}Neural Reckoning Group{% endblock %}
+
+{% block main %}
+
+<p>
+The Neural Reckoning Group is led by
+<a href="dan_goodman.html">Dan Goodman</a>. It is part of the
+<a href="http://www3.imperial.ac.uk/intellisysnetworks">Intelligent
+Systems and Networks group</a> in the
+<a href="http://www3.imperial.ac.uk/electricalengineering">Department
+of Electrical and Electronic Engineering</a> at
+<a href="http://www3.imperial.ac.uk/">Imperial College London</a>.
+</p>
+
+<a href="neural_population.png">
+<img src="neural_population.png" class="FloatingImageRight" width="400px"/>
+</a>
+
+<p>
+The brain processes information using highly connected parallel networks of
+neurons communicating via precisely timed, discrete neural impulses (called "spikes").
+This spike-based form of computation is specific to the brain, being radically
+different to conventional digital and analogue computation. The aim of our
+research is to uncover the principles underlying spike-based neuronal
+computation, both as a fundamental research problem and with an eye to
+applications in intelligent systems and neural prosthetics (as we know that
+brains massively outperform state of the art algorithms).
+</p>
+
+<p>
+Specifically, we work in two main domains: neuroinformatics and sensory
+neuroscience.
+</p>
+
+<ul>
+    <li>
+    <a href="neuroinformatics.html"><b>Neuroinformatics</b></a> is the
+    application of computational methods
+    in neuroscience, and we are particularly interested in the simulation of
+    spiking neural networks and the analysis of experimentally recorded spiking
+    data (see <a href="software.html">Software</a>).
+    </li>
+    
+    <li>
+    In the domain of <a href="sensory.html"><b>sensory neuroscience</b></a>, we
+    have worked primarily in
+    the auditory system as the significance of spike-timing is so clearly
+    established there. We use complex stimuli (such as natural sounds) to better
+    understand the functioning of sensory systems in realistic environments.   
+    </li>    
+</ul>
+
+<h2>Selected publications</h2>
+
+{{ publist.selected_publications() }}
+
+{% endblock %}
