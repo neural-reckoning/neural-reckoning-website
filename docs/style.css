@@ -4,7 +4,7 @@ text-align: justify;
 background-color: white;
 color: black;
 /*font-size: 0.9em;*/
-margin: 30px;
+margin: 10px 30px 30px 30px;
 font-family: Arial, sans-serif;
 }
 
@@ -17,6 +17,19 @@ div, p
 li
 {
 margin-bottom: 1em;
+}
+
+.banner
+{
+margin-bottom: 10px;
+}
+
+.banner table, td
+{
+border: none;
+border-collapse: collapse;
+padding: 0;
+margin: 0;
 }
 
 .navigation
@@ -37,11 +50,12 @@ text-align: center;
 
 .navigation div
 {
-background-color: #81a7b8;
+background-color: #0c7c3e;
 text-align: center;
-width: 150px;
+width: 175px;
 float:left;
 margin-right: 1px;
+margin-top: 1px;
 }
 
 #currentpage
