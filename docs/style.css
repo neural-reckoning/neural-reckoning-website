@@ -164,4 +164,19 @@ text-decoration: underline;
 color: #2a6e8e;
 }
 
+.ContactDetails
+{
+    width: 50%;
+    font-size: 80%;
+}
 
+.ContactDetails td
+{
+    width: 50%;
+    vertical-align: top;
+}
+
+.ContactDetailsLeft div
+{
+    margin-bottom: 0.3em;
+}

@@ -9,21 +9,35 @@
 <h2>{{ member.name }}</h2>
 
 <p>
-    {% if hasattr(member, 'telephone') %}
-        <i>Telephone:</i> {{ member.telephone }}
-        <br/>
-    {% endif %}
+    <table class="ContactDetails">
+    <tr><td class="ContactDetailsLeft">
     {% if hasattr(member, 'email') %}
-        <i>Email:</i> <img src="{{ generate_email(member.name, member.email) }}" style="height:1.5em; vertical-align: middle;"/>
-        <br/>
+        <div>
+        <img src="{{ generate_email(member.name, member.email) }}" style="height:1em; vertical-align: text-top;"/>
+        </div>
     {% endif %}
+    {% if hasattr(member, 'telephone') %}
+        <div>
+        {{ member.telephone }}
+        </div>
+    {% endif %}
+    {% if hasattr(member, 'social_media') %}
+        <div>
+        {{ member.social_media }}
+        </div>
+    {% endif %}
+    <!--</td><td width="50%" style="vertical-align: top;">-->
+    </td><td>
     {% if hasattr(member, 'address') %}
-        <font color="#aaaaaa">
+        <!--<font color="#aaaaaa">-->
+        <div style="color: #aaaaaa;">
         {% for line in member.address.split('\n') if line.strip() %}
         {{ line }}<br/>
         {% endfor %}
-        </font>
+        </div>
+        <!--</font>-->
     {% endif %}
+    </td></tr></table>
 </p>
 
 <div>

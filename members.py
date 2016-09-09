@@ -28,6 +28,8 @@ members = [
         # generate this by import base64; base64.b64encode('address')
         email='ZC5nb29kbWFuQGltcGVyaWFsLmFjLnVr',
         telephone='+44 (0)20 7594 6264',
+        social_media='''<a href="https://twitter.com/thesamovar">@thesamovar</a>
+                        <a href="https://twitter.com/neuralreckoning">@neuralreckoning</a>''',
         short='''
         Head of lab.
         ''',
