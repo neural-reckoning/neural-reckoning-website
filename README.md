@@ -1,2 +1,3 @@
-# neural-reckoning-website
-Website for Neural Reckoning group
+# Website for Neural Reckoning group
+
+http://neural-reckoning.org
