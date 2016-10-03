@@ -94,6 +94,11 @@ margin-left: 20px;
     text-decoration: none;
 }
 
+.member_list table
+{
+    border-spacing: 5px 20px;
+}
+
 h1
 {
 font-size: 1.8em;
