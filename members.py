@@ -3,6 +3,7 @@ class Member(object):
         for k, v in args.items():
             setattr(self, k, v)
 
+
 # Positions: 1_pi, 2_postdoc, 3_phd, 4_other, 5_former
 
 member_types = {'1_pi': '',
@@ -40,9 +41,9 @@ members = [
         <a href="http://www3.imperial.ac.uk/electricalengineering">Department
         of Electrical and Electronic Engineering</a> at
         <a href="http://www3.imperial.ac.uk/">Imperial College London</a>.
-        
+
         <h2>Research interests</h2>
-        
+
         <p>
         The aim of my research is to uncover the principles underlying neural
         computation with precisely timed spikes. This is a form of computation
@@ -55,7 +56,7 @@ members = [
         realistic stimuli, primarily in the auditory system.
         </p>
         ''',
-        ),
+    ),
     ############# PHD STUDENTS ################################
     # Alphabetical order
     Member(
@@ -78,7 +79,7 @@ members = [
         and whether or not we can help using neural prostheses.
         </p>
         ''',
-        ),
+    ),
     Member(
         id='jean_hugues_lestang',
         name='Jean-Hugues Lestang',
@@ -98,7 +99,7 @@ members = [
         </p>
         <p>His Imperial webpage is <a href="http://www.ee.ic.ac.uk/electricalengineering/eepeople/person.asp?f=rg&c=ISN&s=NIL&id=30033">here</a>.
         ''',
-        ),
+    ),
     Member(
         id='lotte_weerts',
         name='Lotte Weerts',
@@ -120,7 +121,7 @@ members = [
         <a href="http://www.bg.ic.ac.uk/research/c.clopath/members/claudia_clopath/">Claudia Clopath</a>.
         </p>
         ''',
-        ),
+    ),
     Member(
         id='chu_yang',
         name='Chu Yang',
@@ -129,7 +130,7 @@ members = [
         associate=False,
         show_publications=True,
         # generate this by import base64; base64.b64encode('address')
-        #email='',
+        email='eS5jaHUxNkBpbXBlcmlhbC5hYy51aw==',
         short='''
         Neural network simulation techniques
         ''',
@@ -141,7 +142,7 @@ members = [
         <a href="http://www.imperial.ac.uk/people/w.luk">Wayne Luk</a>.
         </p>
         ''',
-        ),
+    ),
     Member(
         id='jonathan_zheng',
         name='Jonathan Zheng',
@@ -164,6 +165,6 @@ members = [
         <a href="http://ecobuildergame.org/">EcoBuilder</a> website.
         </p>
         ''',
-        ),
+    ),
 
 ]
