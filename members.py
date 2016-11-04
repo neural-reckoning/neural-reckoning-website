@@ -60,6 +60,27 @@ members = [
     ############# PHD STUDENTS ################################
     # Alphabetical order
     Member(
+        id='isaac_engel',
+        name='Isaac Engel',
+        author_names=['Engel I'],
+        position='3_phd',
+        associate=False,
+        show_publications=True,
+        # generate this by import base64; base64.b64encode('address')
+        email='aXNhYWMuZW5nZWxAaW1wZXJpYWwuYWMudWs=',
+        short='''
+        Auditory augmented reality
+        ''',
+        long='''
+        <p>
+        Isaac Engel is a PhD student working on Auditory Augmented Reality
+        (AAR) and spatial hearing. He is supervised by
+        <a href="http://www.imperial.ac.uk/people/l.picinali">Lorenzo Picinali</a>
+        and <a href="dan_goodman.html">Dan Goodman</a>.
+        </p>
+        ''',
+    ),
+    Member(
         id='pamela_hathway',
         name='Pamela Hathway',
         author_names=['Hathway P'],
