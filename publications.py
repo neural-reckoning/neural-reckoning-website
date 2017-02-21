@@ -45,7 +45,7 @@ publications = [
        categories=['Spike sorting'],
        urls=[('Journal', 'http://dx.doi.org/10.1038/nn.4268'),
              ('PDF', 'http://www.nature.com/neuro/journal/vaop/ncurrent/pdf/nn.4268.pdf'),
-             ('Preprint', 'https://dl.dropboxusercontent.com/u/556426/spikesorting-preprint.pdf'),
+             ('Preprint', 'https://www.dropbox.com/s/emnup6d0aoyjccs/spikesorting-preprint.pdf?dl=1'),
              ],
        abstract='''
        Developments in microfabrication technology have enabled the production of
@@ -218,7 +218,7 @@ publications = [
         additional='4(5):352-259',
         urls=[('Journal', 'http://www.sciencedirect.com/science/article/pii/S1877750311000561'),
               ('DOI', 'http://dx.doi.org/10.1016/j.jocs.2011.06.002'),
-              ('PDF (preprint)', 'http://dl.dropbox.com/u/556426/playdoh-preprint.pdf'),
+              ('PDF (preprint)', 'https://www.dropbox.com/s/d2v1dvfu5xv1i9q/playdoh-preprint.pdf?dl=1'),
               ],
         categories=['Neuroinformatics'],
         abstract='''
@@ -243,7 +243,7 @@ publications = [
         journal='Network: Computation in Neural Systems',
         additional='23(4)',
         urls=[('Journal', 'http://informahealthcare.com/doi/abs/10.3109/0954898X.2012.730170'),
-              ('PDF (preprint)', 'https://dl.dropbox.com/u/556426/gpureview-preprint.pdf'),
+              ('PDF (preprint)', 'https://www.dropbox.com/s/2rxybu315p0tclq/gpureview-preprint.pdf?dl=1'),
               ],
         categories=['Neural simulation'],
         abstract='''
@@ -264,7 +264,7 @@ publications = [
         journal='Journal of Neuroscience',
         additional='31(29). doi:10.1523/?JNEUROSCI.6541-10.2011 ',
         urls=[('Journal', 'http://www.jneurosci.org/content/31/29/10689.abstract'),
-              ('PDF (preprint)', 'http://dl.dropbox.com/u/556426/barrelcortex-preprint.pdf'),
+              ('PDF (preprint)', 'https://www.dropbox.com/s/ypos545ptv0blf4/barrelcortex-preprint.pdf?dl=1'),
               ],
         categories=['Sensory', 'Modelling', 'Spiking'],
         abstract='''
@@ -328,7 +328,7 @@ publications = [
         journal='Neural Computation',
         additional='23:6',
         urls=[('Journal', 'http://www.mitpressjournals.org/doi/abs/10.1162/NECO_a_00123?journalCode=neco'),
-              ('PDF (preprint)', 'http://dl.dropbox.com/u/556426/algorithms-preprint.pdf'),
+              ('PDF (preprint)', 'https://www.dropbox.com/s/okq0bywihietbgr/algorithms-preprint.pdf?dl=1'),
               ],
         categories=['Brian'],
         abstract='''
@@ -413,7 +413,7 @@ publications = [
         journal='Conformal Geometry and Dynamics',
         additional='14',
         urls=[('Journal', 'http://www.ams.org/journals/ecgd/2010-14-17/S1088-4173-2010-00219-5/home.html'),
-              ('PDF (preprint)', 'http://dl.dropbox.com/u/556426/quadqr.pdf'),
+              ('PDF (preprint)', 'https://www.dropbox.com/s/v6h2bex5y09uqej/quadqr.pdf?dl=1'),
               ],
         categories=['Mathematics'],
         abstract='''
@@ -475,7 +475,7 @@ publications = [
         journal='Neuroinformatics',
         additional='8, no. 3 (9). doi:10.1007/s12021-010-9082-x',
         urls=[('Journal', 'http://www.springerlink.com/content/12614h7817602680/'),
-              ('PDF (preprint)', 'http://dl.dropbox.com/u/556426/codegen.pdf'),
+              ('PDF (preprint)', 'https://www.dropbox.com/s/si4uaau33csqejk/codegen.pdf?dl=1'),
               ],
         categories=['Brian'],
         abstract='''
@@ -599,7 +599,7 @@ publications = [
         journal='Conformal Geometry and Dynamics',
         additional='10',
         urls=[('Journal', 'http://www.ams.org/journals/ecgd/2006-10-08/S1088-4173-06-00133-0/home.html'),
-              ('PDF (preprint)', 'http://dl.dropbox.com/u/556426/spirals-paper.pdf'),
+              ('PDF (preprint)', 'https://www.dropbox.com/s/ygz9demdn5n5l19/spirals-paper.pdf?dl=1'),
               ],
         categories=['Mathematics'],
         abstract='''
