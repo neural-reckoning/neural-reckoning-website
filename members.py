@@ -23,8 +23,10 @@ members = [
         show_publications=False,
         address='''
         Room 1001
-        Electrical Engineering
-        South Kensington Campus 
+        Department of Electrical and Electronic Engineering
+        Imperial College
+        Exhibition Road
+        London SW7 2AZ
         ''',
         # generate this by import base64; base64.b64encode('address')
         email='ZC5nb29kbWFuQGltcGVyaWFsLmFjLnVr',
