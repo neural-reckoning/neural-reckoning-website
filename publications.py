@@ -132,6 +132,7 @@ publications = [
         additional='2013;2:e01312',
         urls=[('Journal', 'http://elifesciences.org/content/2/e01312'),
               ('PDF', 'http://elifesciences.org/content/2/e01312.full.pdf'),
+              ('Code on GitHub', 'https://github.com/neural-reckoning/decoding_sound_location'),
               ],
         categories=['Sound localisation', 'Modelling'],
         abstract='''
