@@ -45,7 +45,11 @@
 </div>
 
 {% if member.show_publications and member_publications(member) %}
-<h2>Group publications</h2>
+<h2>Publications</h2>
+
+{% if member.id!="dan_goodman" %}
+<p>Note that only publications as part of the Neural Reckoning group are included.</p>
+{% endif %}
 
 {{ publist.grouped_publications(member) }}
 {% endif %}

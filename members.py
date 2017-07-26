@@ -20,7 +20,7 @@ members = [
         author_names=['Goodman DFM', 'Goodman D', 'Goodman DF'],
         position='1_pi',
         associate=False,
-        show_publications=False,
+        show_publications=True,
         address='''
         Room 1001
         Department of Electrical and Electronic Engineering
@@ -92,14 +92,14 @@ members = [
         # generate this by import base64; base64.b64encode('address')
         email='cC5oYXRod2F5MTZAaW1wZXJpYWwuYWMudWs=',
         short='''
-        Auditory neuroscience: hearing in difficult environments
+        Large scale neural data analysis.
         ''',
         long='''
         <p>
-        Pamela Hathway is a PhD student working on the problem of hearing
-        in difficult auditory environments (such as noisy restaurants). She is
-        interested in understanding how the brain copes with these problems,
-        and whether or not we can help using neural prostheses.
+        Pamela Hathway is a PhD student working on the problem of large
+        scale neural data analysis. With new techniques to record from
+        huge numbers of neurons simultaneously, we need new methods to
+        make sense of this data.
         </p>
         ''',
     ),
@@ -120,7 +120,6 @@ members = [
         Jean-Hugues Lestang is a PhD student, looking at the role of neural adaptation
         in sound localisation in realistic acoustic environments.
         </p>
-        <p>His Imperial webpage is <a href="http://www.ee.ic.ac.uk/electricalengineering/eepeople/person.asp?f=rg&c=ISN&s=NIL&id=30033">here</a>.
         ''',
     ),
     Member(
@@ -159,9 +158,10 @@ members = [
         ''',
         long='''
         <p>
-        Chu Yang is a PhD student, working on high performance spiking neural
-        network simulation, particularly in non-standard computational
-        hardware such as FPGAs. He is jointly supervised by
+        Chu Yang is a PhD student, working on principles of neural computation,
+        and high performance implementations using spiking neural
+        network (in particular, using non-standard computational
+        hardware such as FPGAs). He is jointly supervised by
         <a href="http://www.imperial.ac.uk/people/w.luk">Wayne Luk</a>.
         </p>
         ''',
