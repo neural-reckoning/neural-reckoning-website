@@ -120,6 +120,10 @@ members = [
         Jean-Hugues Lestang is a PhD student, looking at the role of neural adaptation
         in sound localisation in realistic acoustic environments.
         </p>
+        <p>
+        Jean is also the Python developer for the
+        <a href="https://github.com/model-initiative/model_initiative">Auditory Model Initiative</a>.
+        </p>
         ''',
     ),
     Member(
