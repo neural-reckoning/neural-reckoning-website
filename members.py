@@ -133,6 +133,7 @@ members = [
         position='3_phd',
         associate=False,
         show_publications=True,
+        social_media='''<a href="http://lotteweerts.com/">lotteweerts.com</a>''',
         # generate this by import base64; base64.b64encode('address')
         email='bG90dGUud2VlcnRzMTVAaW1wZXJpYWwuYWMudWs=',
         short='''

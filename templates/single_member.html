@@ -4,7 +4,7 @@
 {% block main %}
 
 {% if os.path.exists('files/photo_'+member.id+'.jpg') %}
-<img src="photo_{{member.id}}.jpg" class="FloatingImageRightBorder"/>
+<img src="photo_{{member.id}}.jpg" class="FloatingImageRightBorder"  style="max-height: 200px; max-width: 200px; border: 1px solid black;"/>
 {% endif %}
 <h2>{{ member.name }}</h2>
 
