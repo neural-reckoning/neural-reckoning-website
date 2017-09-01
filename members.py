@@ -151,7 +151,7 @@ members = [
     ),
     Member(
         id='chu_yang',
-        name='Chu Yang',
+        name='Yang Chu',
         author_names=['Chu Y'],
         position='3_phd',
         associate=False,
@@ -163,7 +163,7 @@ members = [
         ''',
         long='''
         <p>
-        Chu Yang is a PhD student, working on principles of neural computation,
+        Yang Chu is a PhD student, working on principles of neural computation,
         and high performance implementations using spiking neural
         network (in particular, using non-standard computational
         hardware such as FPGAs). He is jointly supervised by
