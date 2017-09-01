@@ -159,7 +159,7 @@ members = [
         # generate this by import base64; base64.b64encode('address')
         email='eS5jaHUxNkBpbXBlcmlhbC5hYy51aw==',
         short='''
-        Neural network simulation techniques
+        Principles of neural computation and simulation techniques
         ''',
         long='''
         <p>
