@@ -37,7 +37,7 @@ publications = [
 #        ),
 
    Publication(
-       name='vcn_regularity',
+       name='vcn_regularity', selected=True,
        year='Preprints',
        authors=u'Goodman DFM, Winter IM, Léger AC, de Cheveigné A, Lorenzi C',
        title='Modelling firing regularity in the ventral cochlear nucleus: mechanisms, and effects of stimulus level and synaptopathy',
