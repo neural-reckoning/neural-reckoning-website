@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class Member(object):
     def __init__(self, **args):
         for k, v in args.items():

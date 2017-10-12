@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os, base64
 from PIL import Image, ImageFont, ImageDraw, ImageChops
 

@@ -1,7 +1,11 @@
 {% macro li_publication(publication) %}
     <li>
     <a href="pub_{{publication.name}}.html">
-    {{publication.authors}} ({{publication.year}})<br/>
+    {{publication.authors}}
+        {% if publication.year!='Preprints' %}
+            ({{publication.year}})
+        {% endif %}
+        <br/>
     <b>{{publication.title}}.</b><br/>
     <i>{{publication.journal}}</i> <font color="#aaaaaa">{{publication.additional}}</font>
     </a>
@@ -11,7 +15,11 @@
 {% macro detailed_publication(publication) %}
     <h2>{{ publication.title }}</h2>
     <div>{{ publication.authors }}</div>
-    <div><i>{{ publication.journal }}</i> ({{ publication.year }}) {{ publication.additional }}</div>
+    {% if publication.year!='Preprints' %}
+        <div><i>{{ publication.journal }}</i> ({{ publication.year }}) {{ publication.additional }}</div>
+    {% else %}
+        <div><i>Preprint</i></div>
+    {% endif %}
     <div>&nbsp;</div>
     {% if hasattr(publication, 'abstract') %}
         <div><b>Abstract.</b> {{ publication.abstract }}</div>

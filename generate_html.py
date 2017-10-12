@@ -1,11 +1,13 @@
+# -*- coding: utf-8 -*-
 import os
-from jinja2 import Environment, FileSystemLoader
+from jinja2 import Environment, FileSystemLoader, select_autoescape
 from collections import OrderedDict
 import urllib2
 from copy import copy
 import pickle
 import time
 import re
+import codecs
 
 from publications import publications, category_inclusions, category_detail_links
 from members import members, member_types
@@ -110,7 +112,7 @@ def scan_html_for_links(page, name):
 for filename, title in pages.items()+unindexed_pages.items():
     if os.path.exists(os.path.join('templates', filename)):
         page = env.get_template(filename).render(title=title, filename=filename)
-        open(os.path.join('docs', filename), 'w').write(scan_html_for_links(page, filename))
+        codecs.open(os.path.join('docs', filename), 'w', encoding='utf-8').write(scan_html_for_links(page, filename))
 
 # Generate publications
 for publication in publications:
@@ -118,7 +120,7 @@ for publication in publications:
     page = env.get_template('single_publication.html').render(
                                 publication=publication,
                                 title=publication.title, filename=filename)
-    open(os.path.join('docs', filename), 'w').write(scan_html_for_links(page, filename))
+    codecs.open(os.path.join('docs', filename), 'w', encoding='utf-8').write(scan_html_for_links(page, filename))
     
 # Generate publication categories
 for catid, catname in category_id_names.items():
@@ -129,7 +131,7 @@ for catid, catname in category_id_names.items():
                 title=catname, filename=filename,
                 detail_link=category_detail_links.get(catid, None),
                 )
-    open(os.path.join('docs', filename), 'w').write(scan_html_for_links(page, filename))
+    codecs.open(os.path.join('docs', filename), 'w', encoding='utf-8').write(scan_html_for_links(page, filename))
     
     
 # Generate members
@@ -138,7 +140,7 @@ for member in members:
     page = env.get_template('single_member.html').render(
                                 member=member,
                                 title=member.name, filename=filename)
-    open(os.path.join('docs', filename), 'w').write(scan_html_for_links(page, filename))
+    codecs.open(os.path.join('docs', filename), 'w', encoding='utf-8').write(scan_html_for_links(page, filename))
     
 # Copy static files to docs directory
 os.system(r'copy files\* docs >nul')

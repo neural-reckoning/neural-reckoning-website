@@ -1,3 +1,4 @@
+# coding=utf-8
 class Publication(object):
     def __init__(self, **args):
         for k, v in args.items():
@@ -22,7 +23,7 @@ category_detail_links = {
 publications = [
 #    Publication(
 #        name='', #selected=True,
-#        year=2014,
+#        year=2014, # set year to 'Preprints' if not published yet
 #        authors='',
 #        title='',
 #        journal='',
@@ -35,6 +36,35 @@ publications = [
 #        ''',
 #        ),
 
+   Publication(
+       name='vcn_regularity',
+       year='Preprints',
+       authors=u'Goodman DFM, Winter IM, Léger AC, de Cheveigné A, Lorenzi C',
+       title='Modelling firing regularity in the ventral cochlear nucleus: mechanisms, and effects of stimulus level and synaptopathy',
+       #journal='Hearing Research',
+       #additional='doi: ',
+       categories=['Auditory'],
+       urls=[('Preprint', 'https://www.biorxiv.org/content/early/2017/09/19/121707'),
+             ('Code (GitHub)', 'https://github.com/neural-reckoning/vcn_regularity'),
+             ('Code (Binder, interactive)', 'http://mybinder.org/repo/neural-reckoning/vcn_regularity'),
+             ],
+       abstract='''
+       The auditory system processes temporal information at multiple scales, and disruptions to this temporal
+       processing may lead to deficits in auditory tasks such as detecting and discriminating sounds in a noisy
+       environment. Here, a modelling approach is used to study the temporal regularity of firing by chopper cells in
+       the ventral cochlear nucleus, in both the normal and impaired auditory system. Chopper cells, which have a
+       strikingly regular firing response, divide into two classes, sustained and transient, based on the time course of
+       this regularity. Several hypotheses have been proposed to explain the behaviour of chopper cells, and the
+       difference between sustained and transient cells in particular. However, there is no conclusive evidence so far.
+       Here, a reduced mathematical model is developed and used to compare and test a wide range of hypotheses with a
+       limited number of parameters. Simulation results show a continuum of cell types and behaviours: chopper-like
+       behaviour arises for a wide range of parameters, suggesting that multiple mechanisms may underlie this behaviour.
+       The model accounts for systematic trends in regularity as a function of stimulus level that have previously only
+       been reported anecdotally. Finally, the model is used to predict the effects of a reduction in the number of
+       auditory nerve fibres (deafferentation due to, for example, cochlear synaptopathy). An interactive
+       version of this paper in which all the model parameters can be changed is available online.
+       ''',
+       ),
    Publication(
        name='spikesorting', selected=True,
        year=2016,
@@ -196,6 +226,7 @@ publications = [
         Brian (http://briansimulator.org) is an open source Python package for
         developing simulations of networks of spiking neurons (Goodman and
         Brette 2008, 2009). The design is aimed at minimizing users' development
+
         time, with execution speed as secondary goal. Users specify neuron and
         synapse models by giving their equations in standard mathematical form,
         create groups of neurons, and connect them via synapses. The intent is
@@ -260,7 +291,7 @@ publications = [
     Publication(
         name='rat_barrel_cortex',
         year=2011,
-        authors='Kremer Y, L&eacute;ger J-F, Goodman D, Brette R, Bourdieu L',
+        authors=u'Kremer Y, Léger J-F, Goodman D, Brette R, Bourdieu L',
         title='Late emergence of the vibrissa direction selectivity map in the rat barrel cortex',
         journal='Journal of Neuroscience',
         additional='31(29). doi:10.1523/?JNEUROSCI.6541-10.2011 ',
