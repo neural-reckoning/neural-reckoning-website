@@ -68,3 +68,13 @@
     </ul>
     </div>
 {% endmacro %}
+
+{% macro recent_publications(n) %}
+    <div class="publication_list">
+    <ul>
+    {% for publication in publications[:n] %}
+        {{ li_publication(publication) }}
+    {% endfor %}
+    </ul>
+    </div>
+{% endmacro %}
