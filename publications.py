@@ -36,7 +36,51 @@ publications = [
 #        ''',
 #        ),
 
-   Publication(
+    Publication(
+       name='graph_drawing_wcr', #selected=True,
+       year='Preprints', # set year to 'Preprints' if not published yet
+       authors='Zheng JX, Goodman DFM, Pawar S',
+       title='Graph Drawing by Weighted Constraint Relaxation',
+       #journal='',
+       #additional='',
+       categories=['Visualisation'],
+       urls=[('Preprint', 'https://arxiv.org/abs/1710.04626'),
+             ('PDF (preprint)', 'https://arxiv.org/pdf/1710.04626'),
+             ],
+       abstract='''
+       A popular method of force-directed graph drawing is multidimensional scaling using graph-theoretic distances as
+       input. We present an algorithm to minimize its energy function, known as stress, by using a relaxation method
+       that considers a single pair of vertices at a time. Our results show that relaxation can reach lower stress
+       levels faster and more consistently than majorization, without needing help from a good initialization. We then
+       present various real-world applications to show how the unique properties of relaxation make it easier to produce
+       constrained layouts than previous approaches. We also show how relaxation can be directly applied within the
+       sparse stress approximation of Ortmann et al. [1], making the algorithm scalable up to large graphs.
+       ''',
+       ),
+    Publication(
+       name='astrocytes', #selected=True,
+       year='Preprints', # set year to 'Preprints' if not published yet
+       authors=u'Stimberg M, Goodman DFM, Brette R, De Pittà M',
+       title='Modeling neuron-glia interactions with the Brian 2 simulator',
+       #journal='',
+       #additional='',
+       categories=['Brian', 'Modelling'],
+       urls=[('Preprint', 'https://www.biorxiv.org/content/early/2017/10/05/198366'),
+             ('PDF (preprint)', 'https://www.biorxiv.org/content/early/2017/10/05/198366.full.pdf'),
+             ],
+       abstract='''
+       Despite compelling evidence that glial cells could crucially regulate neural network activity, the vast majority
+       of available neural simulators ignores the possible contribution of glia to neuronal physiology. Here, we show
+       how to model glial physiology and neuron-glia interactions in the Brian 2 simulator. Brian 2 offers facilities to
+       explicitly describe any model in mathematical terms with limited and simple simulator-specific syntax,
+       automatically generating high-performance code from the user-provided descriptions. The flexibility of this
+       approach allows us to model not only networks of neurons, but also individual glial cells, electrical coupling of
+       glial cells, and the interaction between glial cells and synapses. We therefore conclude that Brian 2 provides an
+       ideal platform to efficiently simulate glial physiology, and specifically, the influence of astrocytes on neural
+       activity.
+       ''',
+       ),
+    Publication(
        name='vcn_regularity', selected=True,
        year='Preprints',
        authors=u'Goodman DFM, Winter IM, Léger AC, de Cheveigné A, Lorenzi C',
@@ -45,6 +89,7 @@ publications = [
        #additional='doi: ',
        categories=['Auditory'],
        urls=[('Preprint', 'https://www.biorxiv.org/content/early/2017/09/19/121707'),
+             ('PDF (preprint)', 'https://www.biorxiv.org/content/early/2017/09/19/121707.full.pdf'),
              ('Code (GitHub)', 'https://github.com/neural-reckoning/vcn_regularity'),
              ('Code (Binder, interactive)', 'http://mybinder.org/repo/neural-reckoning/vcn_regularity'),
              ],
@@ -75,7 +120,7 @@ publications = [
        categories=['Spike sorting'],
        urls=[('Journal', 'http://dx.doi.org/10.1038/nn.4268'),
              ('PDF', 'http://www.nature.com/neuro/journal/vaop/ncurrent/pdf/nn.4268.pdf'),
-             ('Preprint', 'https://www.dropbox.com/s/emnup6d0aoyjccs/spikesorting-preprint.pdf?dl=1'),
+             ('PDF (preprint)', 'https://www.dropbox.com/s/emnup6d0aoyjccs/spikesorting-preprint.pdf?dl=1'),
              ],
        abstract='''
        Developments in microfabrication technology have enabled the production of
@@ -134,6 +179,7 @@ publications = [
         urls=[('Journal', 'http://www.mitpressjournals.org/doi/abs/10.1162/NECO_a_00661'),
               ('PDF', 'http://www.mitpressjournals.org/doi/pdf/10.1162/NECO_a_00661'),
               ('Preprint', 'http://arxiv.org/abs/1309.2848'),
+              ('PDF (preprint)', 'https://arxiv.org/pdf/1309.2848'),
               ],
         categories=['Spike sorting'],
         abstract='''

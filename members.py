@@ -175,7 +175,7 @@ members = [
     Member(
         id='jonathan_zheng',
         name='Jonathan Zheng',
-        author_names=['Zheng J'],
+        author_names=['Zheng JX', 'Zheng J'],
         position='3_phd',
         associate=False,
         show_publications=True,
