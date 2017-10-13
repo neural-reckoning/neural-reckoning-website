@@ -46,6 +46,7 @@ publications = [
        categories=['Visualisation'],
        urls=[('Preprint', 'https://arxiv.org/abs/1710.04626'),
              ('PDF (preprint)', 'https://arxiv.org/pdf/1710.04626'),
+             ('Code (GitHub)', 'https://github.com/jxz12/wcr'),
              ],
        abstract='''
        A popular method of force-directed graph drawing is multidimensional scaling using graph-theoretic distances as
