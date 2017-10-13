@@ -49,6 +49,19 @@ def member_publications(member):
     return newpubs
 
 
+# Generate links to member pages in publications
+for member in members:
+    for publication in publications:
+        pubauths = [a.strip() for a in publication.authors.split(',')]
+        newpubauths = []
+        for pubauth in pubauths:
+            if pubauth in member.author_names:
+                pubauth = '''<a href="{member.id}.html">{pubauth}</a>'''.format(member=member, pubauth=pubauth)
+            newpubauths.append(pubauth)
+        publication.authors = ', '.join(newpubauths)
+
+
+
 def category_id(name):
     return name.lower().replace(' ', '')
 

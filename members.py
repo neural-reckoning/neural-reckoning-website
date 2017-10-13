@@ -18,7 +18,7 @@ members = [
     Member(
         id='dan_goodman',
         name='Dan Goodman',
-        author_names=['Goodman DFM', 'Goodman D', 'Goodman DF'],
+        author_names=['Goodman DFM', 'Goodman DF', 'Goodman D'],
         position='1_pi',
         associate=False,
         show_publications=True,
@@ -107,7 +107,7 @@ members = [
     Member(
         id='jean_hugues_lestang',
         name='Jean-Hugues Lestang',
-        author_names=['Lestang JH', 'Lestang J', 'Lestang J-H'],
+        author_names=['Lestang JH', 'Lestang J-H', 'Lestang J'],
         position='3_phd',
         associate=False,
         show_publications=True,

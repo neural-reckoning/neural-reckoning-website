@@ -1,14 +1,14 @@
 {% macro li_publication(publication) %}
     <li>
-    <a href="pub_{{publication.name}}.html">
     {{publication.authors}}
         {% if publication.year!='Preprints' %}
             ({{publication.year}})
         {% endif %}
         <br/>
-    <b>{{publication.title}}.</b><br/>
-    <i>{{publication.journal}}</i> <font color="#aaaaaa">{{publication.additional}}</font>
+    <a href="pub_{{publication.name}}.html">
+        <b>{{publication.title}}.</b><br/>
     </a>
+    <i>{{publication.journal}}</i> <font color="#aaaaaa">{{publication.additional}}</font>
     </li>
 {% endmacro %}
 

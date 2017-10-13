@@ -370,7 +370,7 @@ publications = [
     Publication(
         name='brian_hears', selected=True,
         year=2011,
-        authors='Fontaine B, Goodman DFM (joint first authors), Benichoux V, Brette R',
+        authors='Fontaine B, Goodman DFM, Benichoux V, Brette R',
         title='Brian Hears: online auditory processing using vectorisation over channels',
         journal='Frontiers in Neuroinformatics',
         additional='5:9. doi: 10.3389/fninf.2011.00009',
