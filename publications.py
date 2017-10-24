@@ -37,6 +37,35 @@ publications = [
 #        ),
 
     Publication(
+       name='gamification_sound_localisation', #selected=True,
+       year='Preprints', # set year to 'Preprints' if not published yet
+       authors='Steadman MA, Kim C, Lestang JH, Goodman DFM, Picinali L',
+       title='Effects of gamification and active listening on short-term sound localization training in virtual reality',
+       #journal='',
+       #additional='',
+       categories=['Auditory', 'Sound localisation'],
+       urls=[('Preprint', 'https://www.biorxiv.org/content/early/2017/10/23/207753'),
+             ('PDF (preprint)', 'https://www.biorxiv.org/content/early/2017/10/23/207753.full.pdf'),
+             ],
+       abstract='''
+       Headphone-based virtual audio systems typically use non-individualized head-related transfer
+       functions (HRTFs) to create the illusion of spatialized sound. Listeners are therefore
+       provided with unfamiliar spatial cues leading to poor sound localization. In this study, a
+       smartphone-based system was developed to investigate the effects of short-term training on
+       virtual sound localization accuracy. Participants underwent multiple training sessions in
+       which visual positional feedback was provided in a virtual environment, interleaved with
+       localization accuracy evaluation sessions. Different versions of the training software were
+       developed to investigate the effects of introducing game-design elements ("gamification")
+       and relative sound source motion using head tracking ("active listening") on improvements in
+       localization accuracy. The results demonstrate that adaptation to a non-individualized HRTF
+       can be facilitated using a small number of short (12 minute) training sessions, and is
+       retained across multiple days. This adaptation is not HRTF-specific, as the learning effect
+       generalizes to a second HRTF not used in the training, regardless of the training paradigm
+       used. The introduction of game-design elements and the use of active listening had no
+       significant effect on the efficacy of localization training.
+       ''',
+       ),
+    Publication(
        name='graph_drawing_wcr', #selected=True,
        year='Preprints', # set year to 'Preprints' if not published yet
        authors='Zheng JX, Goodman DFM, Pawar S',
