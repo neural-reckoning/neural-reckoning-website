@@ -195,5 +195,29 @@ members = [
         </p>
         ''',
     ),
+    Member(
+        id='tom_clegg',
+        name='Tom Clegg',
+        author_names=['Clegg T'],
+        position='3_phd',
+        associate=False,
+        show_publications=True,
+        # generate this by import base64; base64.b64encode('address')
+        email='dC5jbGVnZzE3QGltcGVyaWFsLmFjLnVr',
+        short='''
+        Effects of temperature on the structure and dynamics of ecological networks
+        ''',
+        long='''
+        <p>
+        Tom Clegg is a PhD student, supervised by
+        <a href="http://www.imperial.ac.uk/people/s.pawar">Samraat Pawar</a>,
+        <a href="https://www.imperial.ac.uk/people/guy.woodward">Guy Woodward</a> and
+        <a href="dan_goodman.html">Dan Goodman</a>.
+        He studies the effects of temperature on the structure and dynamics of ecological networks and how this affects
+        their function (i.e. their ability to convert nutrients to biomass). He uses a combination of theoretical models
+        and empirical data collected from stream ecosystems across the globe.
+        </p>
+        ''',
+    ),
 
 ]
