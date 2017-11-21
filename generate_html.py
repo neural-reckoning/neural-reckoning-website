@@ -59,7 +59,8 @@ for member in members:
                 pubauth = '''<a href="{member.id}.html">{pubauth}</a>'''.format(member=member, pubauth=pubauth)
             newpubauths.append(pubauth)
         publication.authors = ', '.join(newpubauths)
-
+        if not hasattr(publication, 'authors_list_text'):
+            publication.authors_list_text = pubauths
 
 
 def category_id(name):
