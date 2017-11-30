@@ -10,7 +10,10 @@ categories:</p>
 
 <ul>
 {% for catid, catname in category_id_names.items() | sort %}
-<li style="margin-bottom: 0em"><a href="publication_category_{{ catid }}.html">{{ catname }}</a></li>
+{% set catpubs = category_publications(catid) %}
+<li style="margin-bottom: 0em"><a href="publication_category_{{ catid }}.html">{{ catname }}</a>
+    <font color="#aaaaaa">({{catpubs|length}} paper{% if catpubs|length!=1 %}s{% endif %})</font>
+</li>
 {% endfor %}
 </ul>
 
