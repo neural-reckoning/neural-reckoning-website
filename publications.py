@@ -38,13 +38,14 @@ publications = [
 
     Publication(
        name='framework_comparing_binaural_models', #selected=True,
-       year='Preprints', # set year to 'Preprints' if not published yet
+       year=2017, # set year to 'Preprints' if not published yet
        authors='Dietz M, Lestang J-H, Majdak P, Stern RM, Marquardt T, Ewert SD, Hartmann WH, Goodman DFM',
        title='A framework for testing and comparing binaural models',
-       #journal='',
-       #additional='',
+       journal='Hearing Research',
+       additional='doi: 10.1016/j.heares.2017.11.010',
        categories=['Auditory', 'Neuroinformatics', 'Sound localisation'],
-       urls=[('PDF (preprint)', 'https://www.dropbox.com/s/v64783umlei7448/framework-for-testing-and-comparing-binaural-models.pdf?dl=1'),
+       urls=[('Journal', 'https://doi.org/10.1016/j.heares.2017.11.010'),
+             ('PDF (preprint)', 'https://www.dropbox.com/s/v64783umlei7448/framework-for-testing-and-comparing-binaural-models.pdf?dl=1'),
              ('Code (GitHub)', 'https://github.com/model-initiative/model_initiative'),
              ],
        abstract='''
@@ -141,13 +142,14 @@ publications = [
        ),
     Publication(
        name='vcn_regularity', selected=True,
-       year='Preprints',
+       year=2017,
        authors=u'Goodman DFM, Winter IM, Léger AC, de Cheveigné A, Lorenzi C',
        title='Modelling firing regularity in the ventral cochlear nucleus: mechanisms, and effects of stimulus level and synaptopathy',
-       #journal='Hearing Research',
-       #additional='doi: ',
+       journal='Hearing Research',
+       additional='doi: 10.1016/j.heares.2017.09.010',
        categories=['Auditory'],
-       urls=[('Preprint', 'https://www.biorxiv.org/content/early/2017/09/19/121707'),
+       urls=[('Journal', 'https://doi.org/10.1016/j.heares.2017.09.010'),
+             ('Preprint', 'https://www.biorxiv.org/content/early/2017/09/19/121707'),
              ('PDF (preprint)', 'https://www.biorxiv.org/content/early/2017/09/19/121707.full.pdf'),
              ('Code (GitHub)', 'https://github.com/neural-reckoning/vcn_regularity'),
              ('Code (Binder, interactive)', 'http://mybinder.org/repo/neural-reckoning/vcn_regularity'),
