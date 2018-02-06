@@ -38,7 +38,7 @@ publications = [
 
     Publication(
        name='framework_comparing_binaural_models', #selected=True,
-       year=2017, # set year to 'Preprints' if not published yet
+       year=2018, # set year to 'Preprints' if not published yet
        authors='Dietz M, Lestang J-H, Majdak P, Stern RM, Marquardt T, Ewert SD, Hartmann WH, Goodman DFM',
        title='A framework for testing and comparing binaural models',
        journal='Hearing Research',
@@ -142,7 +142,7 @@ publications = [
        ),
     Publication(
        name='vcn_regularity', selected=True,
-       year=2017,
+       year=2018,
        authors=u'Goodman DFM, Winter IM, Léger AC, de Cheveigné A, Lorenzi C',
        title='Modelling firing regularity in the ventral cochlear nucleus: mechanisms, and effects of stimulus level and synaptopathy',
        journal='Hearing Research',
