@@ -58,6 +58,11 @@ members = [
         network simulator</a>. My focus is on sensory processing of complex,
         realistic stimuli, primarily in the auditory system.
         </p>
+
+        <p>
+        A few people may also be interested in my
+        <a href="mathematics.html">former career as a mathematician</a>.
+        </p>
         ''',
     ),
     ############# PHD STUDENTS ################################

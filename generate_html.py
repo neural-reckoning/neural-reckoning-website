@@ -35,7 +35,8 @@ pages = OrderedDict([
 
 unindexed_pages = {
     'neuroinformatics.html': 'Neuroinformatics',
-    'sensory.html':' Sensory neuroscience',
+    'sensory.html': 'Sensory neuroscience',
+    'mathematics.html': 'Mathematics',
     }
 
 

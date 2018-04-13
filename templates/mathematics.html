@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% import 'publication_list_macro.html' as publist with context %}
+
+{% block main %}
+
+<h2>Mathematics</h2>
+
+<img src="maskit-multizoom.jpg" class="FloatingImageRight" width="400px"/>
+
+<p>
+    This page is for the relatively few people who may be interested in my former career in mathematics.
+    The image to the right is a series of zooms into the Maskit slice, clockwise from top left to bottom right,
+    illustrating the phenomenon of spirals in the boundary of the Maskit slice.
+</p>
+
+<h3>Thesis</h3>
+
+<p>
+    My PhD thesis title was <emph>Boundaries of slices of quasifuchsian space</emph>. As well as the results from
+    <a href="pub_spirals.html">my first paper</a> it has
+    some conjectural results about the boundary of the Maskit and Bers slices. On the basis of very strong numerical
+    evidence, I conjecture that the boundary spirals infinitely almost everywhere and that the Hausdorff dimension of
+    the Maskit slice is less than 1.25 (and more likely to be closer to 1.05).
+</p>
+
+<p>
+    You can <a href="dan-goodman-thesis.pdf">download the thesis</a> (PDF, 1.8MB).
+</p>
+
+<h3>Software</h3>
+
+<p>
+    I wrote some software to draw pictures of the Maskit slice, including pleating rays. I haven't looked at this
+    code in a long time, so it may take some effort to get it running. The Windows GUI looks like this.
+</p>
+
+<img src="maskit-screenshot.jpg"/>
+
+<p>
+    Available code:
+</p>
+
+<ul>
+    <li>
+        <a href="mathematica-nodata.zip">Mathematica version</a>. Slower than the C++ version, but may be easier to
+        use. Reproduces all the figures in my thesis, although some of the notebooks require data produced by the C++
+        version (large file, so not included here).
+    </li>
+    <li>
+        <a href="hyperbolic.zip">C++ command line version</a>. Should run on any platform.
+    </li>
+    <li>
+        <a href="maskit-distrib.zip">Windows GUI version</a>. No idea if this still runs.
+    </li>
+</ul>
+
+{% endblock %}
