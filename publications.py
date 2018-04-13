@@ -98,23 +98,24 @@ publications = [
     Publication(
        name='graph_drawing_wcr', #selected=True,
        year='Preprints', # set year to 'Preprints' if not published yet
-       authors='Zheng JX, Goodman DFM, Pawar S',
-       title='Graph Drawing by Weighted Constraint Relaxation',
+       authors='Zheng JX, Pawar S, Goodman DFM',
+       title='Graph Drawing by Stochastic Gradient Descent',
        #journal='',
        #additional='',
        categories=['Visualisation'],
        urls=[('Preprint', 'https://arxiv.org/abs/1710.04626'),
              ('PDF (preprint)', 'https://arxiv.org/pdf/1710.04626'),
-             ('Code (GitHub)', 'https://github.com/jxz12/wcr'),
+             ('Code (GitHub)', 'https://github.com/jxz12/s_gd2'),
              ],
        abstract='''
-       A popular method of force-directed graph drawing is multidimensional scaling using graph-theoretic distances as
-       input. We present an algorithm to minimize its energy function, known as stress, by using a relaxation method
-       that considers a single pair of vertices at a time. Our results show that relaxation can reach lower stress
-       levels faster and more consistently than majorization, without needing help from a good initialization. We then
-       present various real-world applications to show how the unique properties of relaxation make it easier to produce
-       constrained layouts than previous approaches. We also show how relaxation can be directly applied within the
-       sparse stress approximation of Ortmann et al. [1], making the algorithm scalable up to large graphs.
+       A popular method of force-directed graph drawing is multidimensional scaling using graph-theoretic
+       distances as input. We present an algorithm to minimize its energy function, known as stress, by
+       using stochastic gradient descent (SGD) to move a single pair of vertices at a time. Our results
+       show that SGD can reach lower stress levels faster and more consistently than majorization, without
+       needing help from a good initialization. We then present various real-world applications to show
+       how the unique properties of SGD make it easier to produce constrained layouts than previous
+       approaches. We also show how SGD can be directly applied within the sparse stress approximation of
+       Ortmann et al. [1], making the algorithm scalable up to large graphs.
        ''',
        ),
     Publication(
