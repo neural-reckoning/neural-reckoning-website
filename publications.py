@@ -35,7 +35,23 @@ publications = [
 #        abstract='''
 #        ''',
 #        ),
-
+   Publication(
+       name='re_stdp_repeating_patterns', #selected=True,
+       year='Preprints', # set year to 'Preprints' if not published yet
+       authors='Hathway P, Goodman DFM',
+       title='[Re] Spike Timing Dependent Plasticity Finds the Start of Repeating Patterns in Continuous Spike Trains',
+       journal='ReScience',
+       additional='',
+       categories=['Modelling', 'Learning', 'Plasticity', 'Spiking'],
+       urls=[('PDF (preprint', 'https://github.com/pamelahathway/ReScience-submission/raw/Hathway-Goodman/article/Hathway-Goodman-2018.pdf'),
+             ('Code (GitHub)', 'https://github.com/pamelahathway/ReScience-submission/tree/Hathway-Goodman/code'),
+             ],
+       abstract='''
+       This article is a replication of
+       <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0001377">Masquelier et al. (2008)
+       "Spike Timing Dependent Plasticity Finds the Start of Repeating Patterns in Continuous Spike Trains"</a>.
+       ''',
+       ),
     Publication(
        name='framework_comparing_binaural_models', #selected=True,
        year=2018, # set year to 'Preprints' if not published yet
@@ -73,7 +89,7 @@ publications = [
        title='Effects of gamification and active listening on short-term sound localization training in virtual reality',
        #journal='',
        #additional='',
-       categories=['Auditory', 'Sound localisation'],
+       categories=['Auditory', 'Sound localisation', 'Learning'],
        urls=[('Preprint', 'https://www.biorxiv.org/content/early/2017/10/23/207753'),
              ('PDF (preprint)', 'https://www.biorxiv.org/content/early/2017/10/23/207753.full.pdf'),
              ],
@@ -148,7 +164,7 @@ publications = [
        title='Modelling firing regularity in the ventral cochlear nucleus: mechanisms, and effects of stimulus level and synaptopathy',
        journal='Hearing Research',
        additional='doi: 10.1016/j.heares.2017.09.010',
-       categories=['Auditory'],
+       categories=['Auditory', 'Spiking', 'Modelling'],
        urls=[('Journal', 'https://doi.org/10.1016/j.heares.2017.09.010'),
              ('Preprint', 'https://www.biorxiv.org/content/early/2017/09/19/121707'),
              ('PDF (preprint)', 'https://www.biorxiv.org/content/early/2017/09/19/121707.full.pdf'),
@@ -406,7 +422,7 @@ publications = [
         urls=[('Journal', 'http://www.jneurosci.org/content/31/29/10689.abstract'),
               ('PDF (preprint)', 'https://www.dropbox.com/s/ypos545ptv0blf4/barrelcortex-preprint.pdf?dl=1'),
               ],
-        categories=['Sensory', 'Modelling', 'Spiking'],
+        categories=['Sensory', 'Modelling', 'Spiking', 'Plasticity'],
         abstract='''
         In the neocortex, neuronal selectivities for multiple sensorimotor
         modalities are often distributed in topographical maps thought to emerge
@@ -526,7 +542,7 @@ publications = [
               ('PDF', 'http://papers.nips.cc/paper/4127-learning-to-localise-sounds-with-spiking-neural-networks.pdf'),
               ('BibTeX', 'http://papers.nips.cc/paper/4127-learning-to-localise-sounds-with-spiking-neural-networks/bibtex'),
               ],
-        categories=['Sound localisation', 'Modelling', 'Spiking'],
+        categories=['Sound localisation', 'Modelling', 'Spiking', 'Learning', 'Plasticity'],
         abstract='''
         To localise the source of a sound, we use location-specific properties
         of the signals received at the two ears caused by the asymmetric
