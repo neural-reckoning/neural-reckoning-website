@@ -185,3 +185,17 @@ color: #2a6e8e;
 {
     margin-bottom: 0.3em;
 }
+
+.software_list
+{
+    border-collapse: collapse;
+}
+.software_list td
+{
+    border-bottom: 2px solid #dddddd;
+    padding: 20px 40px 20px 0px;
+}
+.software_list td:last-child
+{
+    padding-right: 0px;
+}
