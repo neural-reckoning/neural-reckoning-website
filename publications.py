@@ -37,14 +37,16 @@ publications = [
 #        ),
    Publication(
        name='re_stdp_repeating_patterns', #selected=True,
-       year='Preprints', # set year to 'Preprints' if not published yet
+       year=2018, # set year to 'Preprints' if not published yet
        authors='Hathway P, Goodman DFM',
        title='[Re] Spike Timing Dependent Plasticity Finds the Start of Repeating Patterns in Continuous Spike Trains',
        journal='ReScience',
-       additional='',
+       additional='doi:10.5281/zenodo.1327348',
        categories=['Modelling', 'Learning', 'Plasticity', 'Spiking'],
-       urls=[('PDF (preprint', 'https://github.com/pamelahathway/ReScience-submission/raw/Hathway-Goodman/article/Hathway-Goodman-2018.pdf'),
+       urls=[('PDF', 'https://github.com/ReScience-Archives/Hathway-Goodman-2018/raw/master/article/Hathway-Goodman-2018.pdf'),
              ('Code (GitHub)', 'https://github.com/pamelahathway/ReScience-submission/tree/Hathway-Goodman/code'),
+             ('Code (Zenodo)', 'https://doi.org/10.5281/zenodo.1327348'),
+             ('Review', 'https://github.com/ReScience/ReScience-submission/pull/51'),
              ],
        abstract='''
        This article is a replication of

@@ -133,6 +133,26 @@ members = [
         ''',
     ),
     Member(
+        id='nicolas_perez',
+        name='Nicolas Perez',
+        author_names=['Perez N'],
+        position='3_phd',
+        associate=False,
+        show_publications=True,
+        # generate this by import base64; base64.b64encode('address')
+        email='bmljb2xhcy5wZXJlejE0QGltcGVyaWFsLmFjLnVr',
+        short='''
+        Multiresolution processing with heterogeneous spiking neural networks
+        ''',
+        long='''
+        <p>
+        Nicolas Perez is a PhD student working on understanding how
+        spiking neural networks can use heterogeneous neuron properties
+        to carry out multiresolution processing of sensory data.
+        </p>
+        ''',
+    ),
+    Member(
         id='lotte_weerts',
         name='Lotte Weerts',
         author_names=['Weerts L'],
@@ -143,14 +163,14 @@ members = [
         # generate this by import base64; base64.b64encode('address')
         email='bG90dGUud2VlcnRzMTVAaW1wZXJpYWwuYWMudWs=',
         short='''
-        Auditory neuroscience: plasticity across multiple timescales
+        Auditory neuroscience, information theory and machine learning
         ''',
         long='''
         <p>
         Lotte Weerts is a PhD student in the
         <a href="http://www.imperial.ac.uk/neurotechnology/cdt/">Neurotechnology CDT</a>,
-        working on how the brain learns to cope with different auditory
-        environments. She is jointly supervised by
+        working on a combined information theory and machine learning approach to
+        understanding the auditory system. She is jointly supervised by
         <a href="http://www.bg.ic.ac.uk/research/c.clopath/members/claudia_clopath/">Claudia Clopath</a>.
         </p>
         ''',
