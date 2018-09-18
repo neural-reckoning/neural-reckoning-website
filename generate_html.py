@@ -26,7 +26,6 @@ last_checked_links = dict((url, day) for url, day in last_checked_links.iteritem
 pages = OrderedDict([
     ('index.html', 'Home'),
     ('members.html', 'Members'),
-    ('dan_goodman.html', 'Dan Goodman'),
     ('publications.html', 'Publications'),
     ('software.html', 'Software'),
     ('openings.html', 'Openings'),
