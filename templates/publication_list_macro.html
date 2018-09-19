@@ -47,7 +47,7 @@
     {% endif %}
     <div class="publication_list">
     {% for group in publications | groupby('year') | reverse %}
-        <div>{{group.grouper}}</div>
+        <h5>{{group.grouper}}</h5>
         <ul>
         {% for publication in group.list %}
             {{ li_publication(publication) }}
