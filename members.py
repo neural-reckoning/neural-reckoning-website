@@ -14,6 +14,15 @@ member_types = {'1_pi': '',
                 '5_former': 'Former members',
                 }
 
+def sk_address(room):
+    return '''
+    Room {room}
+    Department of Electrical and Electronic Engineering
+    Imperial College
+    Exhibition Road
+    London SW7 2AZ
+    '''.format(room=room)
+
 members = [
     Member(
         id='dan_goodman',
@@ -22,13 +31,7 @@ members = [
         position='1_pi',
         associate=False,
         show_publications=True,
-        address='''
-        Room 1001
-        Department of Electrical and Electronic Engineering
-        Imperial College
-        Exhibition Road
-        London SW7 2AZ
-        ''',
+        address=sk_address(1001),
         # generate this by import base64; base64.b64encode('address')
         email='ZC5nb29kbWFuQGltcGVyaWFsLmFjLnVr',
         telephone='+44 (0)20 7594 6264',
@@ -95,6 +98,7 @@ members = [
         position='3_phd',
         associate=False,
         show_publications=True,
+        address=sk_address(1008),
         # generate this by import base64; base64.b64encode('address')
         email='cC5oYXRod2F5MTZAaW1wZXJpYWwuYWMudWs=',
         short='''
@@ -116,6 +120,7 @@ members = [
         position='3_phd',
         associate=False,
         show_publications=True,
+        address=sk_address(1008),
         # generate this by import base64; base64.b64encode('address')
         email='ai5sZXN0YW5nMTVAaW1wZXJpYWwuYWMudWs=',
         short='''
@@ -139,6 +144,7 @@ members = [
         position='3_phd',
         associate=False,
         show_publications=True,
+        address=sk_address(1008),
         # generate this by import base64; base64.b64encode('address')
         email='bmljb2xhcy5wZXJlejE0QGltcGVyaWFsLmFjLnVr',
         short='''
@@ -159,6 +165,7 @@ members = [
         position='3_phd',
         associate=False,
         show_publications=True,
+        address=sk_address(1008),
         social_media='''<a href="http://lotteweerts.com/">lotteweerts.com</a>''',
         # generate this by import base64; base64.b64encode('address')
         email='bG90dGUud2VlcnRzMTVAaW1wZXJpYWwuYWMudWs=',
@@ -182,6 +189,7 @@ members = [
         position='3_phd',
         associate=False,
         show_publications=True,
+        address=sk_address(1008),
         # generate this by import base64; base64.b64encode('address')
         email='eS5jaHUxNkBpbXBlcmlhbC5hYy51aw==',
         short='''
@@ -204,6 +212,7 @@ members = [
         position='3_phd',
         associate=False,
         show_publications=True,
+        address=sk_address(1008),
         # generate this by import base64; base64.b64encode('address')
         email='am9uYXRoYW4uemhlbmcxMkBpbXBlcmlhbC5hYy51aw==',
         short='''
