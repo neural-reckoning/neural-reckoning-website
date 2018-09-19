@@ -10,6 +10,7 @@
 {% endif %}
 <h2>{{ member.name }}</h2>
 
+<!--
 <p>
     <table class="ContactDetails">
     <tr><td class="ContactDetailsLeft">
@@ -28,19 +29,17 @@
         {{ member.social_media }}
         </div>
     {% endif %}
-    <!--</td><td width="50%" style="vertical-align: top;">-->
     </td><td>
     {% if hasattr(member, 'address') %}
-        <!--<font color="#aaaaaa">-->
         <div style="color: #aaaaaa;">
         {% for line in member.address.split('\n') if line.strip() %}
         {{ line }}<br/>
         {% endfor %}
         </div>
-        <!--</font>-->
     {% endif %}
     </td></tr></table>
 </p>
+-->
 
 <div>
 {{ member.long }}
