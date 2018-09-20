@@ -13,9 +13,9 @@
         <div style="flex: 0 0 125px;">
             <a href="{{member.id}}.html">
                 {% if os.path.exists('files/photo_'+member.id+'.jpg') %}
-                    <img src="photo_{{member.id}}.jpg" style="max-height: 100px; max-width: 100px; border: 1px solid black;"/>
+                    <img src="photo_{{member.id}}.jpg" style="max-height: 100px; max-width: 100px;"/>
                 {% else %}
-                    <img src="portrait_placeholder.png" style="max-height: 100px; max-width: 100px; border: 1px solid black;"/>
+                    <img src="portrait_placeholder.png" style="max-height: 100px; max-width: 100px;"/>
                 {% endif %}
             </a>
         </div>
