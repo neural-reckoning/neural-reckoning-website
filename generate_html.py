@@ -177,7 +177,7 @@ def check_link(url, msg):
             last_checked_links[url] = today
         except Exception as ex:
             try:
-                if ex.getcode()==500: # just do a retry in this situation (internal server error)
+                if hasattr(ex, 'getcode') and ex.getcode()==500: # just do a retry in this situation (internal server error)
                     ex.read()
                 else:
                     raise
