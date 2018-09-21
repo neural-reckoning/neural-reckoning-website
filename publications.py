@@ -504,7 +504,7 @@ publications = [
         ),
                 
     Publication(
-        name='modelfitting_focussed_review', selected=True,
+        name='modelfitting_focussed_review',
         year=2011,
         authors='Rossant C, Goodman DFM, Fontaine B, Platkiewicz J, Magnusson AK, Brette R',
         title='Fitting neuron models to spike trains',
