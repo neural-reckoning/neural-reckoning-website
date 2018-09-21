@@ -3,41 +3,47 @@
 
 {% block main %}
 
-<h2>Software</h2>
+<h2 class="pb-3">Software</h2>
 
-<table class="software_list" width="100%">
-    <tr>
-        <td>
-            <p>
-                <a href="http://briansimulator.org">Brian</a> is a simulator
-                for spiking neural networks. It is written in Python for rapid
-                development and ease-of-use, and generates code in several different
-                languages for a variety of computational devices for efficient
-                execution (for example on GPU via the
-                <a href="https://genn-team.github.io/genn/">GeNN</a> simulator using the
-                <a href="http://brian2genn.readthedocs.io/en/latest/">Brian2GeNN</a> package).
-                It includes packages for
-                <a href="pub_modelfitting_focussed_review.html">automatically
-                fitting neuron models to experimental data</a> and for
-                <a href="pub_brian_hears.html">modelling the auditory system</a>.
-                </p>
-                <p>
-                The core Brian team consists of
-                <a href="dan_goodman.html">Dan Goodman</a> at Imperial, and
-                <a href="http://romainbrette.fr/">Romain Brette</a> and
-                <a href="http://scholar.google.co.uk/citations?user=KJs3XswAAAAJ&hl=en">Marcel Stimberg</a>
-                at l'Institut de la Vision in Paris.
-            </p>
-        </td>
-        <td width="250px" align="center">
-            <img src="brian.png">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>
-            <a href="http://klusta-team.github.io/">KlustaSuite</a> is a
-            collection of programs for "spike sorting". That is, for
+<div class="border rounded p-3 miniboxed">
+<h4><a href="http://briansimulator.org">Brian</a></h4>
+<div class="row">
+    <div class="col-sm-4 order-sm-12">
+        <img class="img-fluid" src="brian.png" style="width: 250px; max-width: 100%">
+    </div>
+    <div class="col-sm-8 order-sm-1">
+        <p>
+            A simulator for spiking neural networks. It is written in Python for rapid
+            development and ease-of-use, and generates code in several different
+            languages for a variety of computational devices for efficient
+            execution (for example on GPU via the
+            <a href="https://genn-team.github.io/genn/">GeNN</a> simulator using the
+            <a href="http://brian2genn.readthedocs.io/en/latest/">Brian2GeNN</a> package).
+            It includes packages for
+            <a href="pub_modelfitting_focussed_review.html">automatically
+            fitting neuron models to experimental data</a> and for
+            <a href="pub_brian_hears.html">modelling the auditory system</a>.
+        </p>
+        <p>
+            The core Brian team consists of
+            <a href="dan_goodman.html">Dan Goodman</a> at Imperial, and
+            <a href="http://romainbrette.fr/">Romain Brette</a> and
+            <a href="http://scholar.google.co.uk/citations?user=KJs3XswAAAAJ&hl=en">Marcel Stimberg</a>
+            at l'Institut de la Vision in Paris.
+        </p>
+    </div>
+</div>
+</div>
+
+<div class="border rounded p-3 miniboxed">
+<h4><a href="http://klusta-team.github.io/">KlustaSuite</a></h4>
+<div class="row">
+    <div class="col-sm-4 order-sm-12">
+        <img class="img-fluid" src="spikedetekt.png" style="width: 250px; max-width: 100%">
+    </div>
+    <div class="col-sm-8 order-sm-1">
+        <p>
+            A collection of programs for "spike sorting". That is, for
             extracting spike trains from a set of simultaneously recorded
             extracellular traces. This problem involves preprocessing data to
             remove noise, clustering to identify patterns across channels
@@ -45,73 +51,83 @@
             refining the output. This software is currently undergoing a
             massive redesign to make it possible to sort spikes using
             enormous electrode arrays with hundreds to thousands of channels.
-            </p>
-            <p>
+        </p>
+        <p>
             The KlustaSuite team is led by
-            <a href="https://iris.ucl.ac.uk/iris/browse/profile?upi=KDHAR02">Kenneth Harris</a>
+            <a href="http://iris.ucl.ac.uk/iris/browse/profile?upi=KDHAR02">Kenneth Harris</a>
             at UCL.
-            </p>
-        </td>
-        <td width="250px">
-            <img src="spikedetekt.png" width="250px">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>
-                <a href="https://github.com/jxz12/s_gd2">s(gd)<sup>2</sup></a> is a package available for C++ and Python
-                for graph layout based on a stochastic gradient descent algorithm. The package is described in the paper
-                <a href="pub_graph_drawing_wcr.html">Graph Drawing by Stochastic Gradient Descent (Zheng et al. 2018)</a>
-                and was written by <a href="jonathan_zheng.html">Jonny Zheng</a>.
-            </p>
-        </td>
-        <td width="250px">
-            <img src="https://raw.githubusercontent.com/jxz12/s_gd2/master/comparison.gif" width="250px"/>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>
-                <a href="http://ecobuildergame.org">EcoBuilder</a> is a game
-                for exploring the development and maintenance of ecosystems
-                for both education and research purposes. The game was written by
-                Jonathan Zheng, with ecosystems modelling by Orestes Gutierrez
-                and <a href="http://www.imperial.ac.uk/people/s.pawar">Samraat Pawar</a>.
-            </p>
-        </td>
-        <td>
-            <img src="ecobuilder.jpg" width="250px">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>
-                The <a href="https://github.com/model-initiative/model_initiative">Auditory Model Initiative</a>
-                is a set of Python and Matlab software packages for comparing
-                auditory models. The package is still in an early stage of development.
-                The initiative is led by
-                <a href="http://www.uwo.ca/fhs/csd/people/faculty/dietz_m.html">Mathias Dietz</a>,
-                with Python contributions from
-                <a href="jean_hugues_lestang.html">Jean-Hugues Lestang</a>.
-            </p>
-        </td>
-        <td>
-            <img src="model-initiative.png" width="250px">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <p>
-                <a href="conference-timer.html">Conference timer.</a>
-                A handy little HTML/Javascript page that can be used as a timer at conferences or workshops.
-                It gives you the option to set a length of time for the talk and for questions, and shows a visual
-                display of the remaining time. Works with Firefox and some versions of Internet Explorer.
-            </p>
-        </td>
-        <td>
-            <img src="conference-timer-screenshot.png" width="250px">
-        </td>
-    </tr>
-</table>
+        </p>
+    </div>
+</div>
+</div>
+
+<div class="border rounded p-3 miniboxed">
+<h4><a href="https://github.com/jxz12/s_gd2">s(gd)<sup>2</sup></a></h4>
+<div class="row">
+    <div class="col-sm-4 order-sm-12">
+        <img class="img-fluid" src="https://raw.githubusercontent.com/jxz12/s_gd2/master/comparison.gif" style="width: 250px; max-width: 100%">
+    </div>
+    <div class="col-sm-8 order-sm-1">
+        <p>
+            A package for graph layout based on a stochastic gradient descent algorithm (available for C++ and Python).
+            The package is described in the paper
+            <a href="pub_graph_drawing_wcr.html">Graph Drawing by Stochastic Gradient Descent (Zheng et al. 2018)</a>
+            and was written by <a href="jonathan_zheng.html">Jonny Zheng</a>.
+        </p>
+    </div>
+</div>
+</div>
+
+<div class="border rounded p-3 miniboxed">
+<h4><a href="http://ecobuildergame.org">EcoBuilder</a></h4>
+<div class="row">
+    <div class="col-sm-4 order-sm-12">
+        <img class="img-fluid" src="ecobuilder.jpg" style="width: 250px; max-width: 100%">
+    </div>
+    <div class="col-sm-8 order-sm-1">
+        <p>
+            A game for exploring the development and maintenance of ecosystems
+            for both education and research purposes. The game was written by
+            Jonathan Zheng, with ecosystems modelling by Orestes Gutierrez
+            and <a href="http://www.imperial.ac.uk/people/s.pawar">Samraat Pawar</a>.
+        </p>
+    </div>
+</div>
+</div>
+
+<div class="border rounded p-3 miniboxed">
+<h4><a href="https://github.com/model-initiative/model_initiative">Auditory Model Initiative</a></h4>
+<div class="row">
+    <div class="col-sm-4 order-sm-12">
+        <img class="img-fluid" src="model-initiative.png" style="width: 250px; max-width: 100%">
+    </div>
+    <div class="col-sm-8 order-sm-1">
+        <p>
+            A set of Python and Matlab software packages for comparing
+            auditory models. The package is still in an early stage of development.
+            The initiative is led by
+            <a href="http://www.uwo.ca/fhs/csd/people/faculty/dietz_m.html">Mathias Dietz</a>,
+            with Python contributions from
+            <a href="jean_hugues_lestang.html">Jean-Hugues Lestang</a>.
+        </p>
+    </div>
+</div>
+</div>
+
+<div class="border rounded p-3 miniboxed">
+<h4><a href="conference-timer.html">Conference Timer</a></h4>
+<div class="row">
+    <div class="col-sm-4 order-sm-12">
+        <img class="img-fluid" src="conference-timer-screenshot.png" style="width: 250px; max-width: 100%">
+    </div>
+    <div class="col-sm-8 order-sm-1">
+        <p>
+            A handy little HTML/Javascript page that can be used as a timer at conferences or workshops.
+            It gives you the option to set a length of time for the talk and for questions, and shows a visual
+            display of the remaining time. Works with Firefox and some versions of Internet Explorer.
+        </p>
+    </div>
+</div>
+</div>
 
 {% endblock %}

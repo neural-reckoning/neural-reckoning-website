@@ -3,13 +3,99 @@
 
 {% block main %}
 
-{% if os.path.exists('files/photo_'+member.id+'.jpg') %}
-<img src="photo_{{member.id}}.jpg" class="FloatingImageRightBorder"  style="max-height: 200px; max-width: 200px; border: 1px solid black;"/>
-{% else %}
-<img src="portrait_placeholder.png" class="FloatingImageRightBorder"  style="max-height: 200px; max-width: 200px; border: 1px solid black;"/>
-{% endif %}
 <h2>{{ member.name }}</h2>
 
+{% if os.path.exists('files/photo_'+member.id+'.jpg') %}
+{% set photo_filename = 'photo_'+member.id+'.jpg' %}
+{% else %}
+{% set photo_filename = 'portrait_placeholder.png' %}
+{% endif %}
+
+<div class="row">
+    <div class="col-sm-4 order-sm-12">
+        <img src="{{photo_filename}}" class="img-fluid mb-3" style="width: 200px; max-width: 100%;">
+        {% if hasattr(member, 'email') %}
+            <div>
+                <img class="img-fluid mb-3"
+                     src="{{ generate_email(member.name, member.email) }}"
+                     style="height:1em; vertical-align: text-top;"/>
+            </div>
+        {% endif %}
+        {% if hasattr(member, 'telephone') %}
+            <div>
+                {{ member.telephone }}
+            </div>
+        {% endif %}
+        {% if hasattr(member, 'social_media') %}
+            <div>
+            {{ member.social_media }}
+            </div>
+        {% endif %}
+        {% if hasattr(member, 'address') %}
+            <div class="mb-3 mt-3" style="color: #aaaaaa;">
+                {% for line in member.address.split('\n') if line.strip() %}
+                {{ line }}<br/>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    <div class="col-sm-8 order-sm-1">
+        <div>
+        {{ member.long }}
+        </div>
+
+        {% if member.show_publications and member_publications(member) %}
+        <h2>Publications</h2>
+
+        {% if member.id!="dan_goodman" %}
+        <p>Note that only publications as part of the Neural Reckoning group are included.</p>
+        {% endif %}
+
+        {{ publist.grouped_publications(member) }}
+        {% else %}
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+        {% endif %}
+    </div>
+</div>
+
+<!--
+<div class="row align-items-end">
+    <div class="col-sm-4 order-sm-12">
+        <img src="{{photo_filename}}" class="img-fluid" style="width: 200px; max-width: 100%;">
+    </div>
+    <div class="col-sm-4 order-sm-1">
+        {% if hasattr(member, 'email') %}
+            <div>
+            <img src="{{ generate_email(member.name, member.email) }}" style="height:1em; vertical-align: text-top;"/>
+            </div>
+        {% endif %}
+        {% if hasattr(member, 'telephone') %}
+            <div>
+            {{ member.telephone }}
+            </div>
+        {% endif %}
+        {% if hasattr(member, 'social_media') %}
+            <div>
+            {{ member.social_media }}
+            </div>
+        {% endif %}
+    </div>
+    <div class="col-sm-4 order-sm-4">
+        {% if hasattr(member, 'address') %}
+            <div style="color: #aaaaaa;">
+            {% for line in member.address.split('\n') if line.strip() %}
+            {{ line }}<br/>
+            {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</div>
+-->
+
+<!--
+<img src="photo_{{member.id}}.jpg" class="FloatingImageRightBorder"  style="max-height: 200px; max-width: 200px; border: 1px solid black;"/>
 <p>
     <table class="ContactDetails">
     <tr><td class="ContactDetailsLeft">
@@ -28,20 +114,19 @@
         {{ member.social_media }}
         </div>
     {% endif %}
-    <!--</td><td width="50%" style="vertical-align: top;">-->
     </td><td>
     {% if hasattr(member, 'address') %}
-        <!--<font color="#aaaaaa">-->
         <div style="color: #aaaaaa;">
         {% for line in member.address.split('\n') if line.strip() %}
         {{ line }}<br/>
         {% endfor %}
         </div>
-        <!--</font>-->
     {% endif %}
     </td></tr></table>
 </p>
+-->
 
+<!--
 <div>
 {{ member.long }}
 </div>
@@ -59,5 +144,6 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
 {% endif %}
+-->
 
 {% endblock %}

@@ -18,7 +18,7 @@ Follow us on Twitter
 </p>
 
 <a href="neural_population.png">
-<img src="neural_population.png" class="FloatingImageRight" width="400px"/>
+<img src="neural_population.png" class="img-fluid float-right ml-3" width="400px"/>
 </a>
 
 <p>
@@ -55,12 +55,14 @@ neuroscience.
     </li>    
 </ul>
 
-<h2>Recent publications</h2>
+<div class="row"><div class="col bg-light mt-3 mb-3 pt-2">
+    <h2>Recent publications</h2>
+    {{ publist.recent_publications(5) }}
+</div></div>
 
-{{ publist.recent_publications(5) }}
-
-<h2>Selected publications</h2>
-
-{{ publist.selected_publications() }}
+<div class="row"><div class="col bg-light mt-3 mb-3 pt-2">
+    <h2>Selected publications</h2>
+    {{ publist.selected_publications() }}
+</div></div>
 
 {% endblock %}

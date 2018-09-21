@@ -26,7 +26,6 @@ last_checked_links = dict((url, day) for url, day in last_checked_links.iteritem
 pages = OrderedDict([
     ('index.html', 'Home'),
     ('members.html', 'Members'),
-    ('dan_goodman.html', 'Dan Goodman'),
     ('publications.html', 'Publications'),
     ('software.html', 'Software'),
     ('openings.html', 'Openings'),
@@ -178,7 +177,7 @@ def check_link(url, msg):
             last_checked_links[url] = today
         except Exception as ex:
             try:
-                if ex.getcode()==500: # just do a retry in this situation (internal server error)
+                if hasattr(ex, 'getcode') and ex.getcode()==500: # just do a retry in this situation (internal server error)
                     ex.read()
                 else:
                     raise
