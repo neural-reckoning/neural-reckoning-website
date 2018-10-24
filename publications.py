@@ -3,6 +3,9 @@ class Publication(object):
     def __init__(self, **args):
         for k, v in args.items():
             setattr(self, k, v)
+    @property
+    def is_preprint(self):
+        return isinstance(self.year, basestring) and self.year=="Preprints"
 
 category_inclusions = {
     'Brian': ['Neural simulation', 'Spiking'],
@@ -35,6 +38,25 @@ publications = [
 #        abstract='''
 #        ''',
 #        ),
+    Publication(
+       name='comments_on_edge_bundling', #selected=True,
+       year='Preprints', # set year to 'Preprints' if not published yet
+       authors='Zheng JX, Pawar S, Goodman DFM',
+       title='Comments on "Towards Unambiguous Edge Bundling: Investigating Confluent Drawings for Network Visualization"',
+       # journal='',
+       # additional='',
+       categories=['Visualisation'],
+       urls=[('Preprint', 'https://arxiv.org/abs/1810.09948'),
+             ('Preprint (PDF)', 'https://arxiv.org/pdf/1810.09948'),
+             ],
+       abstract='''
+       Bach et al. recently presented an algorithm for constructing general confluent drawings, by leveraging power
+       graph decomposition to generate an auxiliary routing graph. We show that the resulting drawings are not strictly
+       guaranteed to be confluent due to potential corner cases that do not satisfy the original definition. We then
+       reframe their work within the context of previous literature on using auxiliary graphs for bundling, which will
+       help to guide future research in this area. 
+       ''',
+       ),
     Publication(
        name='brian2genn', #selected=True,
        year='Preprints', # set year to 'Preprints' if not published yet
@@ -471,7 +493,7 @@ publications = [
         ),
                 
     Publication(
-        name='brian_hears', selected=True,
+        name='brian_hears',
         year=2011,
         authors='Fontaine B, Goodman DFM, Benichoux V, Brette R',
         title='Brian Hears: online auditory processing using vectorisation over channels',
