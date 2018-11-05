@@ -1,6 +1,6 @@
 {% macro li_publication(publication) %}
     <li>
-    {{publication.authors}}
+    {{publication.authors_short}}
         {% if publication.year!='Preprints' %}
             ({{publication.year}})
         {% endif %}

@@ -61,6 +61,10 @@ for member in members:
         publication.authors = ', '.join(newpubauths)
         if not hasattr(publication, 'authors_list_text'):
             publication.authors_list_text = pubauths
+        if len(pubauths)<=6:
+            publication.authors_short = publication.authors
+        else:
+            publication.authors_short = pubauths[0]+', et al.'
 
 
 def category_id(name):
