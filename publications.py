@@ -70,6 +70,68 @@ publications = [
        ''',
        ),
     Publication(
+       name='codegen_review', #selected=True,
+       year=2018,
+       authors=(u'Blundell I, Brette R, Cleland TA, Close TG, Coca D, Davison AP, Diaz-Pier S, Musoles CF, '
+                u'Gleeson P, Goodman DFM, Hines M, Hopkins MW, Kumbhar P, Lester DR, Marin B, Morrison A, '
+                u'Müller E, Nowotny T, Peyser A, Plotnikov D, Richmond P, Rowley A, Rumpe B, Stimberg M, '
+                u'Stokes AB, Tomkins A, Trensch G, Woodman M, Eppler JM'),
+       title='Code Generation in Computational Neuroscience: A Review of Tools and Techniques',
+       journal='Frontiers in Neuroinformatics',
+       additional='doi:10.3389/fninf.2018.00068',
+       categories=['Neuroinformatics', 'Neural simulation'],
+       urls=[('Journal', 'https://www.frontiersin.org/articles/10.3389/fninf.2018.00068/full'),
+             ('PDF', 'https://www.frontiersin.org/articles/10.3389/fninf.2018.00068/pdf'),
+             ],
+       abstract='''
+       Advances in experimental techniques and computational power allowing researchers to gather anatomical and
+       electrophysiological data at unprecedented levels of detail have fostered the development of increasingly complex
+       models in computational neuroscience. Large-scale, biophysically detailed cell models pose a particular set of
+       computational challenges, and this has led to the development of a number of domain-specific simulators. At the
+       other level of detail, the ever growing variety of point neuron models increases the implementation barrier even
+       for those based on the relatively simple integrate-and-fire neuron model. Independently of the model complexity,
+       all modeling methods crucially depend on an efficient and accurate transformation of mathematical model
+       descriptions into efficiently executable code. Neuroscientists usually publish model descriptions in terms of the
+       mathematical equations underlying them. However, actually simulating them requires they be translated into code.
+       This can cause problems because errors may be introduced if this process is carried out by hand, and code written
+       by neuroscientists may not be very computationally efficient. Furthermore, the translated code might be generated
+       for different hardware platforms, operating system variants or even written in different languages and thus
+       cannot easily be combined or even compared. Two main approaches to addressing this issues have been followed. The
+       first is to limit users to a fixed set of optimized models, which limits flexibility. The second is to allow
+       model definitions in a high level interpreted language, although this may limit performance. Recently, a third
+       approach has become increasingly popular: using code generation to automatically translate high level
+       descriptions into efficient low level code to combine the best of previous approaches. This approach also greatly
+       enriches efforts to standardize simulator-independent model description languages. In the past few years, a
+       number of code generation pipelines have been developed in the computational neuroscience community, which differ
+       considerably in aim, scope and functionality. This article provides an overview of existing pipelines currently
+       used within the community and contrasts their capabilities and the technologies and concepts behind them.
+       ''',
+       ),
+    Publication(
+       name='graph_drawing_wcr', #selected=True,
+       year=2018, # set year to 'Preprints' if not published yet
+       authors='Zheng JX, Pawar S, Goodman DFM',
+       title='Graph Drawing by Stochastic Gradient Descent',
+       journal=' IEEE Transactions on Visualization and Computer Graphics',
+       additional='doi:10.1109/TVCG.2018.2859997',
+       categories=['Visualisation'],
+       urls=[('Journal', 'https://ieeexplore.ieee.org/document/8419285'),
+             ('Preprint', 'https://arxiv.org/abs/1710.04626'),
+             ('PDF (preprint)', 'https://arxiv.org/pdf/1710.04626'),
+             ('Code (GitHub)', 'https://github.com/jxz12/s_gd2'),
+             ],
+       abstract='''
+       A popular method of force-directed graph drawing is multidimensional scaling using graph-theoretic
+       distances as input. We present an algorithm to minimize its energy function, known as stress, by
+       using stochastic gradient descent (SGD) to move a single pair of vertices at a time. Our results
+       show that SGD can reach lower stress levels faster and more consistently than majorization, without
+       needing help from a good initialization. We then present various real-world applications to show
+       how the unique properties of SGD make it easier to produce constrained layouts than previous
+       approaches. We also show how SGD can be directly applied within the sparse stress approximation of
+       Ortmann et al. [1], making the algorithm scalable up to large graphs.
+       ''',
+       ),
+    Publication(
        name='comments_on_edge_bundling', #selected=True,
        year='Preprints', # set year to 'Preprints' if not published yet
        authors='Zheng JX, Pawar S, Goodman DFM',
@@ -190,29 +252,6 @@ publications = [
        ''',
        ),
     Publication(
-       name='graph_drawing_wcr', #selected=True,
-       year='Preprints', # set year to 'Preprints' if not published yet
-       authors='Zheng JX, Pawar S, Goodman DFM',
-       title='Graph Drawing by Stochastic Gradient Descent',
-       #journal='',
-       #additional='',
-       categories=['Visualisation'],
-       urls=[('Preprint', 'https://arxiv.org/abs/1710.04626'),
-             ('PDF (preprint)', 'https://arxiv.org/pdf/1710.04626'),
-             ('Code (GitHub)', 'https://github.com/jxz12/s_gd2'),
-             ],
-       abstract='''
-       A popular method of force-directed graph drawing is multidimensional scaling using graph-theoretic
-       distances as input. We present an algorithm to minimize its energy function, known as stress, by
-       using stochastic gradient descent (SGD) to move a single pair of vertices at a time. Our results
-       show that SGD can reach lower stress levels faster and more consistently than majorization, without
-       needing help from a good initialization. We then present various real-world applications to show
-       how the unique properties of SGD make it easier to produce constrained layouts than previous
-       approaches. We also show how SGD can be directly applied within the sparse stress approximation of
-       Ortmann et al. [1], making the algorithm scalable up to large graphs.
-       ''',
-       ),
-    Publication(
        name='vcn_regularity', selected=True,
        year=2018,
        authors=u'Goodman DFM, Winter IM, Léger AC, de Cheveigné A, Lorenzi C',
@@ -246,7 +285,8 @@ publications = [
    Publication(
        name='spikesorting', selected=True,
        year=2016,
-       authors='Rossant C, Kadir SN, Goodman DFM, et al.',
+       authors=(u'Rossant C, Kadir SN, Goodman DFM, Schulman J, Hunter MLD, Saleem AB, Grosmark A, Belluscio M, '
+                u'Denfield GH, Ecker AS, Tolias AS, Solomon S, Buzsáki G, Carandini M, Harris KD'),
        title='Spike sorting for large, dense electrode arrays',
        journal='Nature Neuroscience',
        doi='10.1038/nn.4268',
