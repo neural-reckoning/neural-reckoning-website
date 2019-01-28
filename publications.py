@@ -29,8 +29,11 @@ publications = [
 #        year=2014, # set year to 'Preprints' if not published yet
 #        authors='',
 #        title='',
-#        journal='',
+#        journal='', # for an article
+#        publisher='', # for a book
 #        additional='',
+#        book='', book_editors='', # if it's a book chapter, fill this in
+#        additional_detail='', # only shown on detail page
 #        categories=[],
 #        urls=[('Journal', ''),
 #              ('PDF', ''),
@@ -38,6 +41,34 @@ publications = [
 #        abstract='''
 #        ''',
 #        ),
+    Publication(
+       name='astrocytes', #selected=True,
+       year=2019,
+       authors=u'Stimberg M, Goodman DFM, Brette R, De Pittà M',
+       title='Modeling neuron-glia interactions with the Brian 2 simulator',
+       #journal='',
+       publisher='Springer',
+       book_chapter=True,
+       book=u'Computational Glioscience',
+       book_editors=u'De Pittà M, Berry H',
+       categories=['Brian', 'Modelling'],
+       urls=[('Book', 'https://link.springer.com/book/10.1007/978-3-030-00817-8'),
+             ('Chapter', 'https://link.springer.com/chapter/10.1007/978-3-030-00817-8_18'),
+             ('Preprint', 'https://www.biorxiv.org/content/early/2017/10/05/198366'),
+             ('PDF (preprint)', 'https://www.biorxiv.org/content/early/2017/10/05/198366.full.pdf'),
+             ],
+       abstract='''
+       Despite compelling evidence that glial cells could crucially regulate neural network activity, the vast majority
+       of available neural simulators ignores the possible contribution of glia to neuronal physiology. Here, we show
+       how to model glial physiology and neuron-glia interactions in the Brian 2 simulator. Brian 2 offers facilities to
+       explicitly describe any model in mathematical terms with limited and simple simulator-specific syntax,
+       automatically generating high-performance code from the user-provided descriptions. The flexibility of this
+       approach allows us to model not only networks of neurons, but also individual glial cells, electrical coupling of
+       glial cells, and the interaction between glial cells and synapses. We therefore conclude that Brian 2 provides an
+       ideal platform to efficiently simulate glial physiology, and specifically, the influence of astrocytes on neural
+       activity.
+       ''',
+       ),
     Publication(
        name='comments_on_edge_bundling', #selected=True,
        year='Preprints', # set year to 'Preprints' if not published yet
@@ -86,7 +117,7 @@ publications = [
        authors='Hathway P, Goodman DFM',
        title='[Re] Spike Timing Dependent Plasticity Finds the Start of Repeating Patterns in Continuous Spike Trains',
        journal='ReScience',
-       additional='doi:10.5281/zenodo.1327348',
+       doi='10.5281/zenodo.1327348',
        categories=['Modelling', 'Learning', 'Plasticity', 'Spiking'],
        urls=[('PDF', 'https://github.com/ReScience-Archives/Hathway-Goodman-2018/raw/master/article/Hathway-Goodman-2018.pdf'),
              ('Code (GitHub)', 'https://github.com/pamelahathway/ReScience-submission/tree/Hathway-Goodman/code'),
@@ -105,7 +136,7 @@ publications = [
        authors='Dietz M, Lestang J-H, Majdak P, Stern RM, Marquardt T, Ewert SD, Hartmann WH, Goodman DFM',
        title='A framework for testing and comparing binaural models',
        journal='Hearing Research',
-       additional='doi: 10.1016/j.heares.2017.11.010',
+       doi='10.1016/j.heares.2017.11.010',
        categories=['Auditory', 'Neuroinformatics', 'Sound localisation'],
        urls=[('Journal', 'https://doi.org/10.1016/j.heares.2017.11.010'),
              ('PDF (preprint)', 'https://www.dropbox.com/s/v64783umlei7448/framework-for-testing-and-comparing-binaural-models.pdf?dl=1'),
@@ -182,35 +213,12 @@ publications = [
        ''',
        ),
     Publication(
-       name='astrocytes', #selected=True,
-       year='Preprints', # set year to 'Preprints' if not published yet
-       authors=u'Stimberg M, Goodman DFM, Brette R, De Pittà M',
-       title='Modeling neuron-glia interactions with the Brian 2 simulator',
-       #journal='',
-       #additional='',
-       categories=['Brian', 'Modelling'],
-       urls=[('Preprint', 'https://www.biorxiv.org/content/early/2017/10/05/198366'),
-             ('PDF (preprint)', 'https://www.biorxiv.org/content/early/2017/10/05/198366.full.pdf'),
-             ],
-       abstract='''
-       Despite compelling evidence that glial cells could crucially regulate neural network activity, the vast majority
-       of available neural simulators ignores the possible contribution of glia to neuronal physiology. Here, we show
-       how to model glial physiology and neuron-glia interactions in the Brian 2 simulator. Brian 2 offers facilities to
-       explicitly describe any model in mathematical terms with limited and simple simulator-specific syntax,
-       automatically generating high-performance code from the user-provided descriptions. The flexibility of this
-       approach allows us to model not only networks of neurons, but also individual glial cells, electrical coupling of
-       glial cells, and the interaction between glial cells and synapses. We therefore conclude that Brian 2 provides an
-       ideal platform to efficiently simulate glial physiology, and specifically, the influence of astrocytes on neural
-       activity.
-       ''',
-       ),
-    Publication(
        name='vcn_regularity', selected=True,
        year=2018,
        authors=u'Goodman DFM, Winter IM, Léger AC, de Cheveigné A, Lorenzi C',
        title='Modelling firing regularity in the ventral cochlear nucleus: mechanisms, and effects of stimulus level and synaptopathy',
        journal='Hearing Research',
-       additional='doi: 10.1016/j.heares.2017.09.010',
+       doi='10.1016/j.heares.2017.09.010',
        categories=['Auditory', 'Spiking', 'Modelling'],
        urls=[('Journal', 'https://doi.org/10.1016/j.heares.2017.09.010'),
              ('Preprint', 'https://www.biorxiv.org/content/early/2017/09/19/121707'),
@@ -241,7 +249,7 @@ publications = [
        authors='Rossant C, Kadir SN, Goodman DFM, et al.',
        title='Spike sorting for large, dense electrode arrays',
        journal='Nature Neuroscience',
-       additional='doi: 10.1038/nn.4268',
+       doi='10.1038/nn.4268',
        categories=['Spike sorting'],
        urls=[('Journal', 'http://dx.doi.org/10.1038/nn.4268'),
              ('PDF', 'http://www.nature.com/neuro/journal/vaop/ncurrent/pdf/nn.4268.pdf'),
@@ -266,7 +274,8 @@ publications = [
         authors='Stimberg M, Goodman DFM, Benichoux V, Brette R',
         title='Equation-oriented specification of neural models for simulations',
         journal='Frontiers in Neuroinformatics',
-        additional='8:6. doi: 10.3389/fninf.2014.00006',
+        additional='8:6',
+        doi='10.3389/fninf.2014.00006',
         urls=[('Journal', 'http://www.frontiersin.org/Journal/abstract/69453'),
               ],
         categories=['Brian'],
@@ -293,14 +302,14 @@ publications = [
         in the Brian2 simulator.        
         ''',
         ),
-                
     Publication(
         name='mkk', selected=False,
         year=2014,
         authors='Kadir SN, Goodman DFM, Harris KD',
         title='High-dimensional cluster analysis with the masked EM algorithm',
         journal='Neural Computation',
-        additional='26:11. doi:10.1162/NECO_a_00661',
+        additional='26:11',
+        doi='10.1162/NECO_a_00661',
         urls=[('Journal', 'http://www.mitpressjournals.org/doi/abs/10.1162/NECO_a_00661'),
               ('PDF', 'http://www.mitpressjournals.org/doi/pdf/10.1162/NECO_a_00661'),
               ('Preprint', 'http://arxiv.org/abs/1309.2848'),
@@ -388,8 +397,9 @@ publications = [
         year=2013,
         authors='Goodman DFM, Brette R',
         title='Brian Spiking Neural Network Simulator',
-        journal='Encyclopedia of Computational Neuroscience',
-        additional='SpringerReference',
+        book='Encyclopedia of Computational Neuroscience',
+        book_editors='Jaeger D, Jung R',
+        publisher='SpringerReference',
         urls=[('Full text (paywall)', 'http://www.springerreference.com/docs/html/chapterdbid/348318.html'),
               ],
         categories=['Brian'],
@@ -419,8 +429,8 @@ publications = [
         title='Playdoh: a lightweight Python package for distributed computing and optimisation',
         journal='Journal of Computational Science',
         additional='4(5):352-259',
+        doi='10.1016/j.jocs.2011.06.002',
         urls=[('Journal', 'http://www.sciencedirect.com/science/article/pii/S1877750311000561'),
-              ('DOI', 'http://dx.doi.org/10.1016/j.jocs.2011.06.002'),
               ('PDF (preprint)', 'https://www.dropbox.com/s/d2v1dvfu5xv1i9q/playdoh-preprint.pdf?dl=1'),
               ],
         categories=['Neuroinformatics'],
@@ -465,7 +475,8 @@ publications = [
         authors=u'Kremer Y, Léger J-F, Goodman D, Brette R, Bourdieu L',
         title='Late emergence of the vibrissa direction selectivity map in the rat barrel cortex',
         journal='Journal of Neuroscience',
-        additional='31(29). doi:10.1523/?JNEUROSCI.6541-10.2011 ',
+        additional='31(29)',
+        doi='10.1523/JNEUROSCI.6541-10.2011',
         urls=[('Journal', 'http://www.jneurosci.org/content/31/29/10689.abstract'),
               ('PDF (preprint)', 'https://www.dropbox.com/s/ypos545ptv0blf4/barrelcortex-preprint.pdf?dl=1'),
               ],
@@ -498,7 +509,8 @@ publications = [
         authors='Fontaine B, Goodman DFM, Benichoux V, Brette R',
         title='Brian Hears: online auditory processing using vectorisation over channels',
         journal='Frontiers in Neuroinformatics',
-        additional='5:9. doi: 10.3389/fninf.2011.00009',
+        additional='5:9',
+        doi='10.3389/fninf.2011.00009',
         urls=[('Journal', 'http://journal.frontiersin.org/Journal/10.3389/fninf.2011.00009/abstract'),
               ],
         categories=['Brian', 'Auditory'],
@@ -554,7 +566,8 @@ publications = [
         authors='Rossant C, Goodman DFM, Fontaine B, Platkiewicz J, Magnusson AK, Brette R',
         title='Fitting neuron models to spike trains',
         journal='Frontiers in Neuroscience',
-        additional='5:9. doi: 10.3389/fnins.2011.00009',
+        additional='5:9',
+        doi='10.3389/fnins.2011.00009',
         urls=[('Journal', 'http://www.frontiersin.org/Neuroscience/10.3389/fnins.2011.00009/abstract'),
               ],
         categories=['Brian'],
@@ -636,7 +649,8 @@ publications = [
         authors='Goodman DFM, Brette R',
         title='Spike-timing-based computation in sound localization',
         journal='PLoS Computational Biology',
-        additional='6(11): e1000993. doi:10.1371/journal.pcbi.1000993',
+        additional='6(11): e1000993',
+        doi='10.1371/journal.pcbi.1000993',
         urls=[('Journal', 'http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1000993'),
               ('PDF', 'http://www.ploscompbiol.org/article/fetchObject.action?uri=info%3Adoi%2F10.1371%2Fjournal.pcbi.1000993&representation=PDF'),
               ('Code on ModelDB', 'http://senselab.med.yale.edu/ModelDB/ShowModel.asp?model=126465'),
@@ -676,7 +690,8 @@ publications = [
         authors='Goodman DFM',
         title='Code Generation: A Strategy for Neural Network Simulators',
         journal='Neuroinformatics',
-        additional='8, no. 3 (9). doi:10.1007/s12021-010-9082-x',
+        additional='8, no. 3 (9).',
+        doi='10.1007/s12021-010-9082-x',
         urls=[('Journal', 'http://www.springerlink.com/content/12614h7817602680/'),
               ('PDF (preprint)', 'https://www.dropbox.com/s/si4uaau33csqejk/codegen.pdf?dl=1'),
               ],
@@ -703,7 +718,7 @@ publications = [
         authors='Rossant C, Goodman DFM, Platkiewicz J, Brette R',
         title='Automatic fitting of spiking neuron models to electrophysiological recordings',
         journal='Frontiers in Neuroinformatics',
-        additional='doi:10.3389/neuro.11.002.2010',
+        doi='10.3389/neuro.11.002.2010',
         urls=[('Journal', 'http://journal.frontiersin.org/Journal/10.3389/neuro.11.002.2010/abstract'),
               ],
         categories=['Brian'],
@@ -734,7 +749,8 @@ publications = [
         authors='Goodman DFM, Brette R',
         title='The Brian simulator',
         journal='Frontiers in Neuroscience',
-        additional='3(2), doi:10.3389/neuro.01.026.2009',
+        additional='3(2)',
+        doi='10.3389/neuro.01.026.2009',
         urls=[('Journal', 'http://journal.frontiersin.org/Journal/10.3389/neuro.01.026.2009/abstract'),
               ],
         categories=['Brian'],
@@ -760,9 +776,11 @@ publications = [
         authors='Brette R, Goodman D',
         title='Brian: a simple and flexible simulator for spiking neural networks',
         journal='The Neuromorphic Engineer',
-        additional='doi: 10.2417/1200906.1659',
-        urls=[('Journal', 'http://www.ine-news.org/view.php?source=1659-2009-07-07'),
-              ('PDF', 'http://www.ine-news.org/pdf/1659/1659.pdf'),
+        additional_detail='''
+            Note: The Neuromorphic Engineer journal appears to have closed down, so only a direct link to a
+            PDF of the original article is included below.
+            ''',
+        urls=[('PDF', 'https://www.dropbox.com/s/ri7yhwzqk318ff4/brian-neuromorphic-engineer.pdf?dl=0')
               ],
         categories=['Brian'],
         ),
@@ -773,7 +791,8 @@ publications = [
         authors='Goodman D, Brette R',
         title='Brian: a simulator for spiking neural networks in Python',
         journal='Frontiers in Neuroinformatics',
-        additional='2(5), doi:10.3389/neuro.11.005.2008',
+        additional='2(5)',
+        doi='10.3389/neuro.11.005.2008',
         urls=[('Journal', 'http://journal.frontiersin.org/Journal/10.3389/neuro.11.005.2008/abstract'),
               ],
         categories=['Brian'],

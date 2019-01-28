@@ -16,9 +16,27 @@
     <h2>{{ publication.title }}</h2>
     <div>{{ publication.authors }}</div>
     {% if publication.year!='Preprints' %}
-        <div><i>{{ publication.journal }}</i> ({{ publication.year }}) {{ publication.additional }}</div>
+        <div>
+            <i>{{ publication.journal }}</i>
+            <i>{{ publication.publisher }}</i>
+            ({{ publication.year }}) {{ publication.additional }}
+            {% if publication.book_editors %}
+                <br/>
+                In: {{publication.book}}. {{publication.book_editors}} (eds)
+            {% endif %}
+        </div>
     {% else %}
         <div><i>Preprint</i></div>
+    {% endif %}
+    {% if publication.doi %}
+        <div>
+            <a href="http://dx.doi.org/{{publication.doi}}">doi: {{publication.doi}}</a>
+        </div>
+    {% endif %}
+    {% if publication.additional_detail %}
+        <div>
+            {{ publication.additional_detail }}
+        </div>
     {% endif %}
     <div>&nbsp;</div>
     {% if hasattr(publication, 'abstract') %}
