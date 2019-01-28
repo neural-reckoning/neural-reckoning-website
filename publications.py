@@ -31,7 +31,8 @@ publications = [
 #        title='',
 #        journal='', # for an article
 #        publisher='', # for a book
-#        additional='',
+#        additional='', # goes after Journal (Year)
+#        doi='', # linked to on detail page only
 #        book='', book_editors='', # if it's a book chapter, fill this in
 #        additional_detail='', # only shown on detail page
 #        categories=[],
@@ -46,7 +47,6 @@ publications = [
        year=2019,
        authors=u'Stimberg M, Goodman DFM, Brette R, De Pittà M',
        title='Modeling neuron-glia interactions with the Brian 2 simulator',
-       #journal='',
        publisher='Springer',
        book_chapter=True,
        book=u'Computational Glioscience',
