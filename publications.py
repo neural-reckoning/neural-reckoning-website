@@ -43,6 +43,34 @@ publications = [
 #        ''',
 #        ),
     Publication(
+       name='gamification_sound_localisation', #selected=True,
+       year='Preprints', # set year to 'Preprints' if not published yet
+       authors='Steadman MA, Kim C, Lestang JH, Goodman DFM, Picinali L',
+       title='Short-term effects of sound localization training in virtual reality',
+       #journal='',
+       #additional='',
+       categories=['Auditory', 'Sound localisation', 'Learning'],
+       urls=[('Preprint', 'https://www.biorxiv.org/content/10.1101/207753v2'),
+             ('PDF (preprint)', 'https://www.biorxiv.org/content/biorxiv/early/2019/03/19/207753.full-text.pdf'),
+             ],
+       abstract='''
+       Head-related transfer functions (HRTFs) capture the direction-dependant way that sound interacts the head and
+       torso. In virtual audio systems, which aim to emulate these effects, non-individualized, generic HRTFs are
+       typically used, leading to inaccurate virtual sound localization. Training has the potential to exploit the
+       brain's ability to adapt to these unfamiliar cues. In this study, three virtual sound localization training
+       paradigms were evaluated; one provided simple visual positional confirmation of sound source location, a second
+       introduced game design elements ("gamification") and a final version additionally utilized head-tracking to
+       provide listeners with experience of relative sound source motion ("active listening"). The results demonstrate a
+       significant effect of training after a small number of short (12-minute) training sessions, which is retained
+       across multiple days. Gamification alone had no significant effect on the efficacy of the training, but the
+       inclusion of active listening resulted in a significantly greater improvement in virtual sound localization
+       accuracy. Improvements in polar angle judgement were significantly larger for the trained HRTFs, while
+       improvement in lateral judgements and front-back reversals also generalized to a second set of HRTFs, for which
+       no positional feedback was given. The implications of this on the putative mechanisms of the adaptation process
+       are discussed.
+       ''',
+       ),
+    Publication(
        name='astrocytes', #selected=True,
        year=2019,
        authors=u'Stimberg M, Goodman DFM, Brette R, De Pittà M',
@@ -220,35 +248,6 @@ publications = [
        experimentally. The core of the proposed framework is an interface that connects three components irrespective of
        their underlying programming language: The experiment software, an auditory pathway model, and task-dependent
        decision stages called artificial observers that provide the same output format as the test subject.
-       ''',
-       ),
-    Publication(
-       name='gamification_sound_localisation', #selected=True,
-       year='Preprints', # set year to 'Preprints' if not published yet
-       authors='Steadman MA, Kim C, Lestang JH, Goodman DFM, Picinali L',
-       title='Effects of gamification and active listening on short-term sound localization training in virtual reality',
-       #journal='',
-       #additional='',
-       categories=['Auditory', 'Sound localisation', 'Learning'],
-       urls=[('Preprint', 'https://www.biorxiv.org/content/early/2017/10/23/207753'),
-             ('PDF (preprint)', 'https://www.biorxiv.org/content/early/2017/10/23/207753.full.pdf'),
-             ],
-       abstract='''
-       Headphone-based virtual audio systems typically use non-individualized head-related transfer
-       functions (HRTFs) to create the illusion of spatialized sound. Listeners are therefore
-       provided with unfamiliar spatial cues leading to poor sound localization. In this study, a
-       smartphone-based system was developed to investigate the effects of short-term training on
-       virtual sound localization accuracy. Participants underwent multiple training sessions in
-       which visual positional feedback was provided in a virtual environment, interleaved with
-       localization accuracy evaluation sessions. Different versions of the training software were
-       developed to investigate the effects of introducing game-design elements ("gamification")
-       and relative sound source motion using head tracking ("active listening") on improvements in
-       localization accuracy. The results demonstrate that adaptation to a non-individualized HRTF
-       can be facilitated using a small number of short (12 minute) training sessions, and is
-       retained across multiple days. This adaptation is not HRTF-specific, as the learning effect
-       generalizes to a second HRTF not used in the training, regardless of the training paradigm
-       used. The introduction of game-design elements and the use of active listening had no
-       significant effect on the efficacy of localization training.
        ''',
        ),
     Publication(
