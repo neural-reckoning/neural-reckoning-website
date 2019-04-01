@@ -43,6 +43,24 @@ publications = [
 #        ''',
 #        ),
     Publication(
+       name='comments_on_edge_bundling', #selected=True,
+       year='Preprints', # set year to 'Preprints' if not published yet
+       authors='Zheng JX, Pawar S, Goodman DFM',
+       title='Comments on "Towards Unambiguous Edge Bundling: Investigating Confluent Drawings for Network Visualization"',
+       # journal='',
+       # additional='',
+       categories=['Visualisation'],
+       urls=[('Preprint', 'https://arxiv.org/abs/1810.09948'),
+             ('Preprint (PDF)', 'https://arxiv.org/pdf/1810.09948'),
+             ],
+       abstract='''
+       Bach et al. recently presented an algorithm for constructing confluent drawings, by leveraging power graph
+       decomposition to generate an auxiliary routing graph. We identify two problems with their method and offer a
+       single solution to solve both. We then recognize a limitation regarding planarity, and help to guide future
+       research by introducing a new classification of 'power-confluent' drawing. 
+       ''',
+       ),
+    Publication(
        name='gamification_sound_localisation', #selected=True,
        year='Preprints', # set year to 'Preprints' if not published yet
        authors='Steadman MA, Kim C, Lestang JH, Goodman DFM, Picinali L',
@@ -157,25 +175,6 @@ publications = [
        how the unique properties of SGD make it easier to produce constrained layouts than previous
        approaches. We also show how SGD can be directly applied within the sparse stress approximation of
        Ortmann et al. [1], making the algorithm scalable up to large graphs.
-       ''',
-       ),
-    Publication(
-       name='comments_on_edge_bundling', #selected=True,
-       year='Preprints', # set year to 'Preprints' if not published yet
-       authors='Zheng JX, Pawar S, Goodman DFM',
-       title='Comments on "Towards Unambiguous Edge Bundling: Investigating Confluent Drawings for Network Visualization"',
-       # journal='',
-       # additional='',
-       categories=['Visualisation'],
-       urls=[('Preprint', 'https://arxiv.org/abs/1810.09948'),
-             ('Preprint (PDF)', 'https://arxiv.org/pdf/1810.09948'),
-             ],
-       abstract='''
-       Bach et al. recently presented an algorithm for constructing general confluent drawings, by leveraging power
-       graph decomposition to generate an auxiliary routing graph. We show that the resulting drawings are not strictly
-       guaranteed to be confluent due to potential corner cases that do not satisfy the original definition. We then
-       reframe their work within the context of previous literature on using auxiliary graphs for bundling, which will
-       help to guide future research in this area. 
        ''',
        ),
     Publication(
