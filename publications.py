@@ -43,6 +43,39 @@ publications = [
 #        ''',
 #        ),
     Publication(
+       name='brian2', #selected=True,
+       year='Preprints', # set year to 'Preprints' if not published yet
+       authors='Stimberg M, Brette R, Goodman DFM',
+       title='Brian 2: an intuitive and efficient neural simulator',
+       # journal='', # for an article
+       # publisher='', # for a book
+       # additional='', # goes after Journal (Year)
+       # doi='', # linked to on detail page only
+       # book='', book_editors='', # if it's a book chapter, fill this in
+       # additional_detail='', # only shown on detail page
+       categories=['Brian'],
+       urls=[('Preprint', 'https://www.biorxiv.org/content/10.1101/595710v1'),
+             ('Preprint (PDF)', 'https://www.biorxiv.org/content/biorxiv/early/2019/04/01/595710.full-text.pdf'),
+             ],
+       abstract='''
+       To be maximally useful for neuroscience research, neural simulators must make it possible to define original
+       models. This is especially important because a computational experiment might not only need descriptions of
+       neurons and synapses, but also models of interactions with the environment (e.g. muscles), or the environment
+       itself. To preserve high performance when defining new models, current simulators offer two options: low-level
+       programming, or mark-up languages (and other domain specific languages). The first option requires time and
+       expertise, is prone to errors, and contributes to problems with reproducibility and replicability. The second
+       option has limited scope, since it can only describe the range of neural models covered by the ontology. Other
+       aspects of a computational experiment, such as the stimulation protocol, cannot be expressed within this
+       framework. "Brian" 2 is a complete rewrite of Brian that addresses this issue by using runtime code generation
+       with a procedural equation-oriented approach. Brian 2 enables scientists to write code that is particularly
+       simple and concise, closely matching the way they conceptualise their models, while the technique of runtime code
+       generation automatically transforms high level descriptions of models into efficient low level code tailored to
+       different hardware (e.g. CPU or GPU). We illustrate it with several challenging examples: a plastic model of the
+       pyloric network of crustaceans, a closed-loop sensorimotor model, programmatic exploration of a neuron model, and
+       an auditory model with real-time input from a microphone.
+       ''',
+       ),
+    Publication(
        name='comments_on_edge_bundling', #selected=True,
        year='Preprints', # set year to 'Preprints' if not published yet
        authors='Zheng JX, Pawar S, Goodman DFM',
