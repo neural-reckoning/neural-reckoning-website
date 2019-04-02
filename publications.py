@@ -56,6 +56,11 @@ publications = [
        categories=['Brian'],
        urls=[('Preprint', 'https://www.biorxiv.org/content/10.1101/595710v1'),
              ('Preprint (PDF)', 'https://www.biorxiv.org/content/biorxiv/early/2019/04/01/595710.full-text.pdf'),
+             ('Code', 'https://github.com/brian-team/brian2'),
+             ('Documentation', 'https://brian2.readthedocs.io/en/stable/'),
+             ('Examples code', 'https://github.com/brian-team/brian2_paper_examples'),
+             ('Interactive examples', 'https://mybinder.org/v2/gh/brian-team/brian2_paper_examples/master?filepath=index.ipynb'),
+             ('Website', 'http://briansimulator.org/'),
              ],
        abstract='''
        To be maximally useful for neuroscience research, neural simulators must make it possible to define original
