@@ -37,7 +37,6 @@ members = [
         telephone='+44 (0)20 7594 6264',
         social_media='''
             <p>
-                <a href="https://twitter.com/thesamovar">@thesamovar</a>
                 <a href="https://twitter.com/neuralreckoning">@neuralreckoning</a>
             </p>
             <p>
