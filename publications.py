@@ -140,24 +140,23 @@ publications = [
        #journal='',
        #additional='',
        categories=['Auditory', 'Sound localisation', 'Learning'],
-       urls=[('Preprint', 'https://www.biorxiv.org/content/10.1101/207753v2'),
-             ('PDF (preprint)', 'https://www.biorxiv.org/content/biorxiv/early/2019/03/19/207753.full-text.pdf'),
+       urls=[('Preprint', 'https://www.biorxiv.org/content/10.1101/207753v3'),
+             ('PDF (preprint)', 'https://www.biorxiv.org/content/biorxiv/early/2019/07/10/207753.full-text.pdf'),
              ],
        abstract='''
-       Head-related transfer functions (HRTFs) capture the direction-dependant way that sound interacts the head and
-       torso. In virtual audio systems, which aim to emulate these effects, non-individualized, generic HRTFs are
-       typically used, leading to inaccurate virtual sound localization. Training has the potential to exploit the
-       brain's ability to adapt to these unfamiliar cues. In this study, three virtual sound localization training
-       paradigms were evaluated; one provided simple visual positional confirmation of sound source location, a second
-       introduced game design elements ("gamification") and a final version additionally utilized head-tracking to
-       provide listeners with experience of relative sound source motion ("active listening"). The results demonstrate a
-       significant effect of training after a small number of short (12-minute) training sessions, which is retained
-       across multiple days. Gamification alone had no significant effect on the efficacy of the training, but the
-       inclusion of active listening resulted in a significantly greater improvement in virtual sound localization
-       accuracy. Improvements in polar angle judgement were significantly larger for the trained HRTFs, while
-       improvement in lateral judgements and front-back reversals also generalized to a second set of HRTFs, for which
-       no positional feedback was given. The implications of this on the putative mechanisms of the adaptation process
-       are discussed.
+       Head-related transfer functions (HRTFs) capture the direction-dependant way that sound interacts with the head
+       and torso. In virtual audio systems, which aim to emulate these effects, non-individualized, generic HRTFs are
+       typically used leading to an inaccurate perception of virtual sound location. Training has the potential to
+       exploit the brain's ability to adapt to these unfamiliar cues. In this study, three virtual sound localization
+       training paradigms were evaluated; one provided simple visual positional confirmation of sound source location, a
+       second introduced game design elements ("gamification") and a final version additionally utilized head-tracking
+       to provide listeners with experience of relative sound source motion ("active listening"). The results
+       demonstrate a significant effect of training after a small number of short (12-minute) training sessions, which
+       is retained across multiple days. Gamification alone had no significant effect on the efficacy of the training,
+       but active listening resulted in a significantly greater improvements in localization accuracy. In general,
+       improvements in virtual sound localization following training generalized to a second set of non-individualized
+       HRTFs, although some HRTF-specific changes were observed in polar angle judgement for the active listening group.
+       The implications of this on the putative mechanisms of the adaptation process are discussed.
        ''',
        ),
     Publication(
@@ -451,7 +450,6 @@ publications = [
         journal='eLife',
         additional='2013;2:e01312',
         urls=[('Journal', 'http://elifesciences.org/content/2/e01312'),
-              ('PDF', 'http://elifesciences.org/content/2/e01312.full.pdf'),
               ('Code on GitHub', 'https://github.com/neural-reckoning/decoding_sound_location'),
               ],
         categories=['Sound localisation', 'Modelling'],
