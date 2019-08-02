@@ -22,6 +22,7 @@ else:
 
 today = time.strftime('%d/%m/%Y')
 last_checked_links = dict((url, day) for url, day in last_checked_links.iteritems() if day==today)
+last_updated = time.strftime('%Y/%m/%d')
 
 pages = OrderedDict([
     ('index.html', 'Home'),
@@ -109,6 +110,7 @@ def category_publications(catid):
         
 
 env_globals = dict(pages=pages, publications=publications, hasattr=hasattr,
+                   last_updated=last_updated,
                    members=members, member_types=member_types,
                    member_publications=member_publications,
                    generate_email=generate_email, os=os,

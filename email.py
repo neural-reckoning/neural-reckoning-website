@@ -14,6 +14,9 @@ def trim(im):
         return im.crop(bbox)
 
 def generate_email(name, address):
+    fname = os.path.join('docs', name+'.jpg')
+    if os.path.exists(fname):
+        return name+'.jpg'
     # addresses are obfuscated as source code is open
     address = base64.b64decode(address)
     img = Image.new('RGB', (800, 40), 'white')
