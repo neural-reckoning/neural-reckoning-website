@@ -12,6 +12,7 @@ import codecs
 from publications import publications, category_inclusions, category_detail_links
 from members import members, member_types
 from email import generate_email
+from link_exceptions import link_exceptions
 
 check_links = True
 
@@ -171,7 +172,7 @@ import httplib
 from urlparse import urlparse
 
 def check_link(url, msg):
-    if url in last_checked_links:
+    if url in last_checked_links or url in link_exceptions:
         return
     # first try just getting the header (quick)
     p = urlparse(url)

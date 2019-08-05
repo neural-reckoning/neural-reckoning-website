@@ -129,6 +129,13 @@ members = [
         address=sk_address(1008),
         # generate this by import base64; base64.b64encode('address')
         email='ai5sZXN0YW5nMTVAaW1wZXJpYWwuYWMudWs=',
+        social_media='''
+            <ul class="list-unstyled">
+                <li><a href="https://scholar.google.com/citations?user=j9wUAigAAAAJ&hl=en">Google Scholar</a></li>
+                <li><a href="https://uk.linkedin.com/in/jean-hugues-lestang-90b70073">LinkedIn</a></li>
+                <li><a href="https://github.com/jylls">GitHub</a></li>
+            </ul>
+            ''',
         short='''
         Auditory neuroscience: sound localisation, neural adaptation.
         ''',
