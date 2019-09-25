@@ -11,6 +11,7 @@ category_inclusions = {
     'Brian': ['Neural simulation', 'Spiking'],
     'Neural simulation': ['Neuroinformatics', 'Spiking'],
     'Spike sorting': ['Neuroinformatics', 'Spiking', 'Neural data analysis'],
+    'Neural data analysis': ['Neuroinformatics'],
     'Sound localisation': ['Auditory'],
     'Auditory': ['Sensory'],
     }
@@ -31,6 +32,7 @@ publications = [
 #        title='',
 #        journal='', # for an article
 #        publisher='', # for a book
+#        conference='', # for a conference paper (use short name here, and long name under additional_detail)
 #        additional='', # goes after Journal (Year)
 #        doi='', # linked to on detail page only
 #        book='', book_editors='', # if it's a book chapter, fill this in
@@ -291,6 +293,29 @@ publications = [
        ideal platform to efficiently simulate glial physiology, and specifically, the influence of astrocytes on neural
        activity.
        ''',
+       ),
+    Publication(
+       name='confluent_hierarchical_gd2018', #selected=True,
+       year=2018, # set year to 'Preprints' if not published yet
+       authors='Zheng JX, Pawar S, Goodman DFM',
+       title='Confluent* Drawings by Hierarchical Clustering',
+       conference='Graph Drawing and Network Visualization', # for a conference paper (use short name here, and long name under additional_detail)
+       additional='', # goes after Journal (Year)
+       doi='10.1007/978-3-030-04414-5', # linked to on detail page only
+       additional_detail='26th International Symposium, GD 2018, Barcelona, Spain, September 26-28, 2018, Proceedings', # only shown on detail page
+       categories=['Visualisation'],
+       urls=[('Proceedings', 'https://link.springer.com/book/10.1007/978-3-030-04414-5'),
+             ('Proceedings PDF (see p. 640)', 'https://link.springer.com/content/pdf/10.1007%2F978-3-030-04414-5.pdf'),
+             ],
+       abstract='Recently an edge bundling technique known as confluent* drawing was applied to general graphs by Bach '
+                'et al. (2017) by leveraging power graph decomposition (a form of edge compression that groups similar '
+                'vertices together, merging edges shared among group members). We explore the technique further by '
+                'demonstrating the equivalence between confluent drawing and the hierarchical edge bundling of Holten '
+                '(2006), thereby opening the door for existing hierarchical clustering algorithms to be used instead of '
+                'power graphs to produce confluent drawings for general graphs. We investigate various popular '
+                'hierarchical clustering methods, and present a qualitative experimental comparison between them. We '
+                'also introduce a new distance measure for agglomerative clustering that outperforms previous measures, '
+                'and make recommendations for using the method in practice.',
        ),
     Publication(
        name='codegen_review', #selected=True,
