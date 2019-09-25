@@ -10,7 +10,7 @@ class Publication(object):
 category_inclusions = {
     'Brian': ['Neural simulation', 'Spiking'],
     'Neural simulation': ['Neuroinformatics', 'Spiking'],
-    'Spike sorting': ['Neuroinformatics', 'Spiking'],
+    'Spike sorting': ['Neuroinformatics', 'Spiking', 'Neural data analysis'],
     'Sound localisation': ['Auditory'],
     'Auditory': ['Sensory'],
     }
@@ -42,6 +42,118 @@ publications = [
 #        abstract='''
 #        ''',
 #        ),
+    Publication(
+       name='attention_ccn2019', #selected=True,
+       year=2019, # set year to 'Preprints' if not published yet
+       authors='Chu Y, Goodman DFM',
+       title='An Inference Network Model for Goal-directed Attentional Selection',
+       conference='Cognitive Computational Neuroscience',
+       additional='', # goes after Journal (Year)
+       additional_detail='2019 Conference on Cognitive Computational Neuroscience, 13-16 September 2019, Berlin, Germany',
+       doi='10.32470/CCN.2019.1431-0', # linked to on detail page only
+       categories=['Machine learning', 'Modelling'],
+       urls=[('Abstract', 'https://ccneuro.org/2019/Papers/ViewPapers.asp?PaperNum=1431'),
+             ('PDF', 'https://ccneuro.org/2019/showDoc.php?s=W&pn=1431'),
+             ],
+       abstract='''
+       "Listen to the cello in this symphony!" How can we direct selective attention according to different goals, even
+       in distracting environments which we haven't experienced before? It is an essential cognitive ability of the
+       brain, but remains challenging for machines. We developed a computational model that can identify individual
+       digits in images containing multiple overlapping digits, without ever having seen overlapping digits during
+       training. The goal-driven attentional selection is modelled as inferring the posterior distribution of latent
+       variables (the attended target) in a generative model, conditioned on both sensory input and different semantic
+       goals. A neural network model has been build to efficiently carry out the the inference process by predicting the
+       most likely results, instead of using classic per-sample based iterative optimization methods which may not
+       naturally map onto neural structures. Our model also help to understand how top-down and bottom-up attention are
+       combined during perception in the brain.
+       ''',
+       ),
+    Publication(
+       name='heterogeneity_ccn2019', #selected=True,
+       year=2019, # set year to 'Preprints' if not published yet
+       authors='Perez-Nieves N, Leung VCH, Dragotti PL, Goodman DFM',
+       title='Advantages of heterogeneity of parameters in spiking neural network training',
+       conference='Cognitive Computational Neuroscience',
+       additional='', # goes after Journal (Year)
+       additional_detail='2019 Conference on Cognitive Computational Neuroscience, 13-16 September 2019, Berlin, Germany',
+       doi='10.32470/CCN.2019.1173-0', # linked to on detail page only
+       categories=['Machine learning', 'Spiking', 'Modelling'],
+       urls=[('Abstract', 'https://ccneuro.org/2019/Papers/ViewPapers.asp?PaperNum=1173'),
+             ('PDF', 'https://ccneuro.org/2019/showDoc.php?s=W&pn=1173'),
+             ],
+       abstract='It is very common in studies of the learning capabilities of spiking neural networks (SNNs) to use '
+                'homogeneous neural and synaptic parameters (time constants, thresholds, etc.). Even in studies in '
+                'which these parameters are distributed heterogeneously, the advantages or disadvantages of the '
+                'heterogeneity have rarely been studied in depth. By contrast, in the brain, neurons and synapses are '
+                'highly diverse, leading naturally to the hypothesis that this heterogeneity may be advantageous for '
+                'learning. Starting from two state-of-the-art methods for training spiking neural networks (Nicola & '
+                'Clopath, 2017, Shrestha & Orchard 2018), we found that adding parameter heterogeneity reduced errors '
+                'when the network had to learn more complex patterns, increased robustness to hyperparameter '
+                'mistuning, and reduced the number of training iterations required. We propose that neural '
+                'heterogeneity may be an important principle for brains to learn robustly in real world environments '
+                'with highly complex structure, and where task-specific hyperparameter tuning may be impossible. '
+                'Consequently, heterogeneity may also be a good candidate design principle for artificial neural '
+                'networks, to reduce the need for expensive hyperparameter tuning as well as for reducing training '
+                'time. '
+       ),
+    Publication(
+       name='neural_topic_modelling_ccn2019', #selected=True,
+       year=2019, # set year to 'Preprints' if not published yet
+       authors='Hathway P, Goodman DFM',
+       title=' Neural Topic Modelling',
+       conference='Cognitive Computational Neuroscience',
+       additional='', # goes after Journal (Year)
+       additional_detail='2019 Conference on Cognitive Computational Neuroscience, 13-16 September 2019, Berlin, Germany',
+       doi='10.32470/CCN.2019.1382-0', # linked to on detail page only
+       categories=['Machine learning', 'Neuroinformatics', 'Neural data analysis'],
+       urls=[('Abstract', 'https://ccneuro.org/2019/Papers/ViewPapers.asp?PaperNum=1382'),
+             ('PDF', 'https://ccneuro.org/2019/showDoc.php?s=W&pn=1382'),
+             ],
+       abstract='We introduce neural topic modelling - an unsupervised, scalable and interpretable neural data '
+                'analysis tool which can be applied across different spatial and temporal scales. The aim is an '
+                'approach that can handle the ever-increasing number of neurons recorded by high channel count '
+                'multi-electrode arrays. Neural topic modelling is based on latent Dirichlet allocation, '
+                'a method routinely used in text mining to find latent topics in texts. The spike trains are '
+                'converted into "neural words" - the presence or absence of discrete events (e.g. neuron 1 has a '
+                'higher firing rate than usual). Neural topic modelling results in a number of topics (probability '
+                'distributions over words) which best explain the given co-occurrences of neural words over time. '
+                'Applied to an electrophysiological dataset of mouse visual cortex, hippocampus and thalamus neurons, '
+                'neural topic modelling groups neural words into topics which exhibit common attributes such as '
+                'overlapping receptive fields or proximity on the recording electrode. It recovers these '
+                'relationships despite receiving no knowledge about the cortex topography or about the spatial '
+                'structure of the stimuli. Choosing neural activity patterns as neural words that are relevant to the '
+                'brain makes the topics interpretable by both the brain and researchers, setting neural topic '
+                'modelling apart from other machine learning approaches.'
+       ),
+    Publication(
+       name='data_driven_auditory_ccn2019', #selected=True,
+       year=2019, # set year to 'Preprints' if not published yet
+       authors='Weerts L, Clopath C, Goodman DFM',
+       title=' A Unifying Framework for Neuro-Inspired, Data-Driven Detection of Low-Level Auditory Features',
+       conference='Cognitive Computational Neuroscience',
+       additional='', # goes after Journal (Year)
+       additional_detail='2019 Conference on Cognitive Computational Neuroscience, 13-16 September 2019, Berlin, Germany',
+       doi='10.32470/CCN.2019.1245-0', # linked to on detail page only
+       categories=['Machine learning', 'Auditory', 'Modelling'],
+       urls=[('Abstract', 'https://ccneuro.org/2019/Papers/ViewPapers.asp?PaperNum=1245'),
+             ('PDF', 'https://ccneuro.org/2019/showDoc.php?s=W&pn=1245'),
+             ],
+       abstract='Our understanding of hearing and speech recognition rests on controlled experiments requiring simple '
+                'stimuli. However, these stimuli often lack the characteristics of complex sounds such as speech. We '
+                'propose an approach that combines neural modelling with machine learning to determine relevant '
+                'low-level auditory features. Our approach bridges the gap between detailed neuronal models that '
+                'capture specific auditory responses, and research on the statistics of real-world speech data and '
+                'speech recognition. First, we introduce a feature detection model with a modest number of parameters '
+                'that is compatible with auditory physiology. In order to objectively determine relevant feature '
+                'detectors within the model parameter space, the model is tested in a speech classification task, '
+                'using a simple classifier that approximates the information bottleneck. This framework allows us to '
+                'determine the best model parameters and their neurophysiological and psychoacoustic implications. We '
+                'show that our model can capture a variety of well-studied features (such as amplitude modulations '
+                'and onsets) and allows us to unify concepts from different areas of hearing research. Our approach '
+                'has various potential applications. Firstly, it could lead to new, testable experimental hypotheses '
+                'for understanding hearing. Moreover, promising features could be directly applied as a new acoustic '
+                'front-end for speech recognition systems.'
+       ),
     Publication(
        name='brian2', selected=True,
        year=2019, # set year to 'Preprints' if not published yet

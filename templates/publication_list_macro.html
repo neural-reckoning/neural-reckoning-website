@@ -1,5 +1,5 @@
 {% macro li_publication(publication) %}
-    <li>
+    <li>{% if publication.conference %}<div class="{{collapse_conference_papers_default}} conference_paper">{% endif %}
     {{publication.authors_short}}
         {% if publication.year!='Preprints' %}
             ({{publication.year}})
@@ -8,8 +8,8 @@
     <a href="pub_{{publication.name}}.html">
         <b>{{publication.title}}.</b><br/>
     </a>
-    <i>{{publication.journal}}{{publication.publisher}}</i>
-    </li>
+    <i>{{publication.journal}}{{publication.publisher}}{{publication.conference}}</i>
+    {% if publication.conference %}</div>{% endif %}</li>
 {% endmacro %}
 
 {% macro detailed_publication(publication) %}
@@ -19,6 +19,7 @@
         <div>
             <i>{{ publication.journal }}</i>
             <i>{{ publication.publisher }}</i>
+            <i>{{ publication.conference }}</i>
             ({{ publication.year }}) <font color="#aaaaaa">{{ publication.additional }}</font>
             {% if publication.book_editors %}
                 <br/>
@@ -94,5 +95,14 @@
         {{ li_publication(publication) }}
     {% endfor %}
     </ul>
+    </div>
+{% endmacro %}
+
+{% macro show_conference_papers() %}
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" data-toggle="collapse" data-target=".conference_paper" role="button" id="check_show_hide_conf" aria-expanded="false">
+        <label class="form-check-label" for="check_show_hide_conf">
+            Show conference papers
+        </label>
     </div>
 {% endmacro %}

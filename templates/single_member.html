@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+{% if member.id!="dan_goodman" %}
+    {% set collapse_conference_papers_default = "show" %}
+{% else %}
+    {% set collapse_conference_papers_default = "collapse" %}
+{% endif %}
 {% import 'publication_list_macro.html' as publist with context %}
 
 {% block main %}
@@ -48,7 +53,10 @@
         <h2>Publications</h2>
 
         {% if member.id!="dan_goodman" %}
-        <p>Note that only publications as part of the Neural Reckoning group are included.</p>
+            <p>Note that only publications as part of the Neural Reckoning group are included.</p>
+        {% else %}
+            {% set collapse_conference_papers_default = "collapse" %}
+            {{ publist.show_conference_papers() }}
         {% endif %}
 
         {{ publist.grouped_publications(member) }}

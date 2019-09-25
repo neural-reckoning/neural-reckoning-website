@@ -153,7 +153,7 @@ members = [
     Member(
         id='nicolas_perez',
         name='Nicolas Perez',
-        author_names=['Perez N'],
+        author_names=['Perez N', 'Perez-Nieves N'],
         position='3_phd',
         associate=False,
         show_publications=True,
