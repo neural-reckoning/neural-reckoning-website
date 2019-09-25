@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import os
+import os, sys
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from collections import OrderedDict
 import urllib2
@@ -29,6 +29,7 @@ pages = OrderedDict([
     ('index.html', 'Home'),
     ('members.html', 'Members'),
     ('publications.html', 'Publications'),
+    ('themes.html', 'Themes'),
     ('software.html', 'Software'),
     ('openings.html', 'Openings'),
     ('location.html', 'Location'),
@@ -108,7 +109,99 @@ def category_publications(catid):
         if catid in pub.category_ids:
             pubs.append(pub)
     return pubs
-        
+
+# Generate category graphs and HTML maps
+from collections import defaultdict
+numpapers = defaultdict(int)
+category_graph = {}
+category_connections = defaultdict(int)
+for pub in publications:
+    for cat in pub.category_ids:
+        category_graph[cat] = set([])
+        numpapers[cat] += 1
+        for cat2 in pub.category_ids:
+            if cat2<cat:
+                category_connections[cat, cat2] += 1
+max_connections = max(category_connections.values())
+min_connections = min(category_connections.values())
+max_num_papers = max(numpapers.values())
+min_num_papers = min(numpapers.values())
+for catname, inclusions in category_inclusions.items():
+    tgt_id = category_id(catname)
+    for inclusion in inclusions:
+        src_id = category_id(inclusion)
+        category_graph[src_id].add(tgt_id)
+# Generate hierarchical categories
+category_dot_lines = []
+category_colours = {}
+for cat_id in category_graph.keys():
+    cat_name = category_id_names[cat_id]
+    col = 0.7-0.7*(numpapers[cat_id]-min_num_papers)/(1.0*(max_num_papers-min_num_papers))
+    col = int(255.0*col)
+    col = ('%.02X' % col)*3
+    col = '#'+col
+    category_colours[cat_id] = col
+    category_dot_lines.append('{cat_id} [URL="publication_category_{cat_id}.html", label="{cat_name}", color="{col}", fontcolor="{col}", '
+                              'shape=box];'.format(cat_id=cat_id, cat_name=cat_name, col=col))
+for src_id, target_ids in category_graph.items():
+    for tgt_id in target_ids:
+        category_dot_lines.append('{src_id} -> {tgt_id} [color="{col}"];'.format(src_id=src_id, tgt_id=tgt_id,
+                                                                                 col=category_colours[tgt_id]))
+category_dot = '''
+digraph categories_hierarchy {{
+    rankdir = LR;
+{graphspec}
+}}
+'''.format(graphspec='\n'.join(category_dot_lines))
+if not os.path.exists('temp'):
+    os.mkdir('temp')
+open('temp/categories_hierarchy.dot', 'w').write(category_dot)
+layout_algo = 'dot'
+if os.system('{algo} -Tsvg temp/categories_hierarchy.dot -o temp/categories_hierarchy.svg'.format(algo=layout_algo))==0:
+    svg = open('temp/categories_hierarchy.svg', 'r').read()
+    svg = svg.replace('<svg', '<svg class="img-fluid"')
+    open('temp/categories_hierarchy.svg', 'w').write(svg)
+# Spontaneous category graph
+category_dot_lines = []
+for (cat_id_1, cat_id_2), nc in category_connections.items():
+    col = 0.9-0.9*(nc-min_connections)/(1.0*(max_connections-min_connections))
+    col = int(255.0*col)
+    col = ('%.02X' % col)*3
+    col = '#'+col
+    category_dot_lines.append(
+        '    {cat_id_1} -- {cat_id_2} [len={edgelen}, color="{col}"]'.format(cat_id_1=cat_id_1, cat_id_2=cat_id_2, nc=nc,
+                                                                             col=col, edgelen=1.0/(max_connections/2+nc)))
+for cat_id in category_graph.keys():
+    cat_name = category_id_names[cat_id]
+    col = category_colours[cat_id]
+    category_dot_lines.append(
+        '    {cat_id} [URL="publication_category_{cat_id}.html", label="{cat_name}", color="{col}", fontcolor="{col}", shape=box];'.format(
+            cat_id=cat_id, cat_name=cat_name, col=col))
+category_dot = '''
+graph categories_spontaneous {{
+    overlap=scale; splines=true;
+{graphspec}
+}}
+'''.format(graphspec='\n'.join(category_dot_lines))
+category_dot.replace('<svg', '<svg class="img-fluid" ')
+open('temp/categories_spontaneous.dot', 'w').write(category_dot)
+layout_algo = 'neato'
+if os.system('{algo} -Tsvg temp/categories_spontaneous.dot -o temp/categories_spontaneous.svg'.format(algo=layout_algo))==0:
+    svg = open('temp/categories_spontaneous.svg', 'r').read()
+    svg = svg.replace('<svg', '<svg class="img-fluid"')
+    open('temp/categories_spontaneous.svg', 'w').write(svg)
+
+
+# wordcloud: explicitly delete docs/wordcloud.png to recalculate
+if not os.path.exists('docs/wordcloud.png'):
+    try:
+        from wordcloud import WordCloud
+        all_abstracts = ' '.join(getattr(pub, 'abstract', '') for pub in publications)
+        wordcloud = WordCloud(background_color="white", width=1000, height=600).generate(all_abstracts)
+        wordcloud.to_file('docs/wordcloud.png')
+    except ImportError:
+        pass
+
 
 env_globals = dict(pages=pages, publications=publications, hasattr=hasattr,
                    last_updated=last_updated,
@@ -119,7 +212,7 @@ env_globals = dict(pages=pages, publications=publications, hasattr=hasattr,
                    category_publications=category_publications,
                    category_id=category_id)
 
-env = Environment(loader=FileSystemLoader('templates'),
+env = Environment(loader=FileSystemLoader(['templates', 'temp']),
                   trim_blocks=True,
                   lstrip_blocks=True,
                   )

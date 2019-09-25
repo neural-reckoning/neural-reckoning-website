@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<h2>Research themes</h2>
+
+<p>
+    This is an experimental page to visualise the research themes of the lab. Note that some of the visualisations
+    do not work well in Internet Explorer. Nodes in the graphs below are clickable and will take you to the
+    list of associated publications.
+</p>
+
+<h3>Word cloud</h3>
+
+<img src="wordcloud.png" class="img-fluid">
+
+<h3>Connections</h3>
+
+{% include 'categories_spontaneous.svg' %}
+
+<h3>Hierarchy</h3>
+
+{% include 'categories_hierarchy.svg' %}
+
+
+{% endblock %}
