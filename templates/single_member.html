@@ -36,15 +36,15 @@
             {{ member.social_media }}
             </div>
         {% endif %}
+        {% if os.path.exists('docs/wordcloud_'+member.id+'.png') %}
+            <img src="wordcloud_{{member.id}}.png" class="img-fluid mb-3" style="max-width: 100%;">
+        {% endif %}
         {% if hasattr(member, 'address') %}
             <div class="mb-3 mt-3" style="color: #aaaaaa;">
                 {% for line in member.address.split('\n') if line.strip() %}
                 {{ line }}<br/>
                 {% endfor %}
             </div>
-        {% endif %}
-        {% if os.path.exists('docs/wordcloud_'+member.id+'.png') %}
-            <img src="wordcloud_{{member.id}}.png" class="img-fluid mb-3" style="width: 200px; max-width: 100%;">
         {% endif %}
 
     </div>
