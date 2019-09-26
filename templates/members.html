@@ -19,6 +19,13 @@
                 {% endif %}
             </a>
         </div>
+        <div style="flex: 0 0 125px;" class="d-none d-md-block">
+            <a href="{{member.id}}.html">
+                {% if os.path.exists('docs/wordcloud_'+member.id+'.png') %}
+                    <img src="wordcloud_{{member.id}}.png" style="max-height: 100px; max-width: 100px;"/>
+                {% endif %}
+            </a>
+        </div>
         <div class="col">
             <a href="{{member.id}}.html"><b>{{member.name}}</b></a><br/>
             {{ member.short }}

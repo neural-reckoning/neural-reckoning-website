@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 import os, sys
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-from collections import OrderedDict
+from collections import OrderedDict, defaultdict
 import urllib2
 from copy import copy
 import pickle
 import time
 import re
 import codecs
+from wordcloud import WordCloud
 
 from publications import publications, category_inclusions, category_detail_links
 from members import members, member_types
@@ -111,7 +112,6 @@ def category_publications(catid):
     return pubs
 
 # Generate category graphs and HTML maps
-from collections import defaultdict
 numpapers = defaultdict(int)
 category_graph = {}
 category_connections = defaultdict(int)
@@ -193,15 +193,18 @@ if os.system('{algo} -Tsvg temp/categories_spontaneous.dot -o temp/categories_sp
 
 
 # wordcloud: explicitly delete docs/wordcloud.png to recalculate
-if not os.path.exists('docs/wordcloud.png'):
-    try:
-        from wordcloud import WordCloud
-        all_abstracts = ' '.join(getattr(pub, 'abstract', '') for pub in publications)
-        wordcloud = WordCloud(background_color="white", width=1000, height=600).generate(all_abstracts)
-        wordcloud.to_file('docs/wordcloud.png')
-    except ImportError:
-        pass
+def make_wordcloud(member):
+    if os.path.exists('docs/wordcloud_{author}.png'.format(author=member.id)):
+        return
+    mpubs = member_publications(member)
+    if len(mpubs)==0:
+        return
+    all_abstracts = ' '.join(getattr(pub, 'abstract', '') for pub in mpubs)
+    wordcloud = WordCloud(background_color="white", width=1000, height=600).generate(all_abstracts)
+    wordcloud.to_file('docs/wordcloud_{author}.png'.format(author=member.id))
 
+for member in members:
+    make_wordcloud(member)
 
 env_globals = dict(pages=pages, publications=publications, hasattr=hasattr,
                    last_updated=last_updated,
