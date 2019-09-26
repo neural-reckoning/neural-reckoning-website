@@ -78,18 +78,29 @@ def category_id(name):
 
 
 # generate inclusions and category ids for publications
-category_id_inclusions = {}
+all_categories = set(category_inclusions.keys()+[cat for inc in category_inclusions.values() for cat in inc])
+for pub in publications:
+    for cat in pub.categories:
+        all_categories.add(cat)
+category_id_inclusions = defaultdict(list)
 category_id_names = {}
-for name, inc in category_inclusions.items():
+# recursively fill in all inclusions
+def recursive_inclusions(name):
+    inc = set(category_inclusions.get(name, []))
+    for name in inc:
+        inc = inc.union(recursive_inclusions(name))
+    return inc
+for name in all_categories:
     catid = category_id(name)
     category_id_names[catid] = name
-    category_id_inclusions[catid] = set([])
-    inc = copy(inc)
-    while len(inc):
-        curname, inc = inc[0], inc[1:]
-        category_id_inclusions[catid].add(category_id(curname))
-        if curname in category_inclusions:
-            inc.extend(category_inclusions[curname])
+    category_id_inclusions[catid] = set([category_id(n) for n in recursive_inclusions(name)])
+# for name, inc in category_inclusions.items():
+#     inc = copy(inc)
+#     while len(inc):
+#         curname, inc = inc[0], inc[1:]
+#         category_id_inclusions[catid].add(category_id(curname))
+#         if curname in category_inclusions:
+#             inc.extend(category_inclusions[curname])
 for pub in publications:
     names = pub.categories
     pub.category_ids = set([])
@@ -113,7 +124,7 @@ def category_publications(catid):
 
 # Generate category graphs and HTML maps
 numpapers = defaultdict(int)
-category_graph = {}
+category_graph = defaultdict(set)
 category_connections = defaultdict(int)
 for pub in publications:
     for cat in pub.category_ids:

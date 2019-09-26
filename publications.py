@@ -12,8 +12,14 @@ category_inclusions = {
     'Neural simulation': ['Neuroinformatics', 'Spiking'],
     'Spike sorting': ['Neuroinformatics', 'Spiking', 'Neural data analysis'],
     'Neural data analysis': ['Neuroinformatics'],
-    'Sound localisation': ['Auditory'],
+    'Neuroinformatics': ['Neuroscience'],
+    'Sound localisation': ['Auditory', 'Neuroscience'],
     'Auditory': ['Sensory'],
+    'Spiking': ['Neuroscience'],
+    'Plasticity': ['Neuroscience'],
+    'Learning': ['Neuroscience'],
+    'Modelling': ['Neuroscience'],
+    'Visual': ['Sensory'],
     }
 
 category_detail_links = {
@@ -53,7 +59,7 @@ publications = [
        additional='', # goes after Journal (Year)
        additional_detail='2019 Conference on Cognitive Computational Neuroscience, 13-16 September 2019, Berlin, Germany',
        doi='10.32470/CCN.2019.1431-0', # linked to on detail page only
-       categories=['Machine learning', 'Modelling'],
+       categories=['Machine learning', 'Modelling', 'Visual'],
        urls=[('Abstract', 'https://ccneuro.org/2019/Papers/ViewPapers.asp?PaperNum=1431'),
              ('PDF', 'https://ccneuro.org/2019/showDoc.php?s=W&pn=1431'),
              ],
@@ -303,7 +309,7 @@ publications = [
        additional='', # goes after Journal (Year)
        doi='10.1007/978-3-030-04414-5', # linked to on detail page only
        additional_detail='26th International Symposium, GD 2018, Barcelona, Spain, September 26-28, 2018, Proceedings', # only shown on detail page
-       categories=['Visualisation'],
+       categories=['Visualisation', 'Machine learning'],
        urls=[('Proceedings', 'https://link.springer.com/book/10.1007/978-3-030-04414-5'),
              ('Proceedings PDF (see p. 640)', 'https://link.springer.com/content/pdf/10.1007%2F978-3-030-04414-5.pdf'),
              ],
@@ -327,7 +333,7 @@ publications = [
        title='Code Generation in Computational Neuroscience: A Review of Tools and Techniques',
        journal='Frontiers in Neuroinformatics',
        doi='10.3389/fninf.2018.00068',
-       categories=['Neuroinformatics', 'Neural simulation'],
+       categories=['Neuroinformatics', 'Neural simulation', 'Brian'],
        urls=[('Journal', 'https://www.frontiersin.org/articles/10.3389/fninf.2018.00068/full'),
              ('PDF', 'https://www.frontiersin.org/articles/10.3389/fninf.2018.00068/pdf'),
              ],
@@ -362,7 +368,7 @@ publications = [
        title='Graph Drawing by Stochastic Gradient Descent',
        journal=' IEEE Transactions on Visualization and Computer Graphics',
        doi='10.1109/TVCG.2018.2859997',
-       categories=['Visualisation'],
+       categories=['Visualisation', 'Machine learning'],
        urls=[('Journal', 'https://ieeexplore.ieee.org/document/8419285'),
              ('Preprint', 'https://arxiv.org/abs/1710.04626'),
              ('PDF (preprint)', 'https://arxiv.org/pdf/1710.04626'),
@@ -490,7 +496,7 @@ publications = [
        title='Spike sorting for large, dense electrode arrays',
        journal='Nature Neuroscience',
        doi='10.1038/nn.4268',
-       categories=['Spike sorting'],
+       categories=['Spike sorting', 'Machine learning'],
        urls=[('Journal', 'http://dx.doi.org/10.1038/nn.4268'),
              ('PDF', 'http://www.nature.com/neuro/journal/vaop/ncurrent/pdf/nn.4268.pdf'),
              ('PDF (preprint)', 'https://www.dropbox.com/s/emnup6d0aoyjccs/spikesorting-preprint.pdf?dl=1'),
@@ -555,7 +561,7 @@ publications = [
               ('Preprint', 'http://arxiv.org/abs/1309.2848'),
               ('PDF (preprint)', 'https://arxiv.org/pdf/1309.2848'),
               ],
-        categories=['Spike sorting'],
+        categories=['Spike sorting', 'Machine learning'],
         abstract='''
         Cluster analysis faces two problems in high dimensions: the "curse of
         dimensionality" that can lead to overfitting and poor generalization
@@ -583,7 +589,7 @@ publications = [
         urls=[('Journal', 'http://elifesciences.org/content/2/e01312'),
               ('Code on GitHub', 'https://github.com/neural-reckoning/decoding_sound_location'),
               ],
-        categories=['Sound localisation', 'Modelling'],
+        categories=['Sound localisation', 'Modelling', 'Machine learning'],
         abstract='''
         The activity of sensory neural populations carries information about the
         environment. This may be extracted from neural activity using different
