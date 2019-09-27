@@ -94,13 +94,6 @@ for name in all_categories:
     catid = category_id(name)
     category_id_names[catid] = name
     category_id_inclusions[catid] = set([category_id(n) for n in recursive_inclusions(name)])
-# for name, inc in category_inclusions.items():
-#     inc = copy(inc)
-#     while len(inc):
-#         curname, inc = inc[0], inc[1:]
-#         category_id_inclusions[catid].add(category_id(curname))
-#         if curname in category_inclusions:
-#             inc.extend(category_inclusions[curname])
 for pub in publications:
     names = pub.categories
     pub.category_ids = set([])
@@ -204,16 +197,24 @@ if os.system('{algo} -Tsvg temp/categories_spontaneous.dot -o temp/categories_sp
 
 
 # wordcloud: explicitly delete docs/wordcloud.png to recalculate
-def make_wordcloud(member):
-    if os.path.exists('docs/wordcloud_{author}.png'.format(author=member.id)):
+def make_wordcloud(member=None, width=350, height=350):
+    if member is None:
+        fname = 'docs/wordcloud.png'
+    else:
+        fname = 'docs/wordcloud_{author}.png'.format(author=member.id)
+    if os.path.exists(fname):
         return
-    mpubs = member_publications(member)
+    if member is None:
+        mpubs = publications
+    else:
+        mpubs = member_publications(member)
     if len(mpubs)==0:
         return
     all_abstracts = ' '.join(getattr(pub, 'abstract', '') for pub in mpubs)
-    wordcloud = WordCloud(background_color="white", width=1000, height=600).generate(all_abstracts)
-    wordcloud.to_file('docs/wordcloud_{author}.png'.format(author=member.id))
+    wordcloud = WordCloud(background_color="white", width=width, height=height).generate(all_abstracts)
+    wordcloud.to_file(fname)
 
+make_wordcloud(width=1000, height=400)
 for member in members:
     make_wordcloud(member)
 
