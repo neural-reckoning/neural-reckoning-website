@@ -12,7 +12,7 @@ category_inclusions = {
     'Neural simulation': ['Neuroinformatics', 'Spiking'],
     'Spike sorting': ['Neuroinformatics', 'Spiking', 'Neural data analysis'],
     'Neural data analysis': ['Neuroinformatics'],
-    'Neuroinformatics': ['Neuroscience'],
+    'Neuroinformatics': ['Neuroscience', 'Software'],
     'Sound localisation': ['Auditory', 'Neuroscience'],
     'Auditory': ['Sensory'],
     'Spiking': ['Neuroscience'],
@@ -20,7 +20,7 @@ category_inclusions = {
     'Learning': ['Neuroscience'],
     'Modelling': ['Neuroscience'],
     'Visual': ['Sensory'],
-    'Virtual reality': ['Sensory'],
+    'Virtual reality': ['Sensory']
     }
 
 category_detail_links = {
@@ -29,6 +29,7 @@ category_detail_links = {
     'Spike sorting': 'software.html',
     'Neuroinformatics': 'neuroinformatics.html',
     'Sensory': 'sensory.html',
+    'Software': 'software.html',
     }
 
 publications = [
@@ -59,7 +60,7 @@ publications = [
         title='Further Towards Unambiguous Edge Bundling: Investigating Power-Confluent Drawings for Network Visualization',
         journal='IEEE Transactions on Visualization and Computer Graphics',
         doi='10.1109/TVCG.2019.2944619',
-        categories=['Visualisation'],
+        categories=['Visualisation', 'Software'],
         urls=[('Journal', 'https://ieeexplore.ieee.org/document/8852738'),
               ('Preprint', 'https://arxiv.org/abs/1810.09948'),
               ('Preprint (PDF)', 'https://arxiv.org/pdf/1810.09948'),
@@ -426,7 +427,7 @@ publications = [
        title='Graph Drawing by Stochastic Gradient Descent',
        journal=' IEEE Transactions on Visualization and Computer Graphics',
        doi='10.1109/TVCG.2018.2859997',
-       categories=['Visualisation', 'Machine learning'],
+       categories=['Visualisation', 'Machine learning', 'Software'],
        urls=[('Journal', 'https://ieeexplore.ieee.org/document/8419285'),
              ('Preprint', 'https://arxiv.org/abs/1710.04626'),
              ('PDF (preprint)', 'https://arxiv.org/pdf/1710.04626'),

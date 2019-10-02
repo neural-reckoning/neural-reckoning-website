@@ -201,6 +201,8 @@ if os.system('{algo} -Tsvg temp/categories_spontaneous.dot -o temp/categories_sp
     svg = open('temp/categories_spontaneous.svg', 'r').read()
     svg = svg.replace('<svg', '<svg class="img-fluid"')
     open('temp/categories_spontaneous.svg', 'w').write(svg)
+else:
+    print "Couldn't run categories spontaneous dot"
 
 
 # wordcloud: explicitly delete docs/wordcloud.png to recalculate
