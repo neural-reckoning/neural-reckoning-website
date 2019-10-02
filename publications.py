@@ -20,6 +20,7 @@ category_inclusions = {
     'Learning': ['Neuroscience'],
     'Modelling': ['Neuroscience'],
     'Visual': ['Sensory'],
+    'Virtual reality': ['Sensory'],
     }
 
 category_detail_links = {
@@ -248,13 +249,35 @@ publications = [
        ''',
        ),
     Publication(
+       name='auditory_anchors', #selected=True,
+       year=2019, # set year to 'Preprints' if not published yet
+       authors='Engel I, Goodman DFM, Picinali L',
+       title='The Effect of Auditory Anchors on Sound Localization: A Preliminary Study',
+       conference='Immersive and Interactive Audio ', # for a conference paper (use short name here, and long name under additional_detail)
+       additional='', # goes after Journal (Year)
+       doi='', # linked to on detail page only
+       additional_detail='2019 AES International Conference on Immersive and Interactive Audio (March 2019)', # only shown on detail page
+       categories=['Sound localisation', 'Virtual reality'],
+       urls=[('Conference', 'http://www.aes.org/e-lib/browse.cfm?elib=20388'),
+             ],
+       abstract='Traditional sound localization studies are often performed in anechoic chambers and in complete '
+                'darkness. In our daily life, however, we are exposed to rich auditory scenes with multiple sound '
+                'sources and complementary visual information. Although it is understood that the presence of maskers '
+                'hinders auditory spatial awareness, it is not known whether competing sound sources can provide '
+                'spatial information that helps in localizing a target stimulus. In this study, we explore the effect '
+                'of presenting controlled auditory scenes with different amounts of visual and spatial cues during a '
+                'sound localization task. A novel, gamified localization task is also presented. Preliminary results '
+                'suggest that subjects who are exposed to audio-visual anchors show faster improvements than those '
+                'who are not.',
+       ),
+    Publication(
        name='gamification_sound_localisation', #selected=True,
        year='Preprints', # set year to 'Preprints' if not published yet
        authors='Steadman MA, Kim C, Lestang JH, Goodman DFM, Picinali L',
        title='Short-term effects of sound localization training in virtual reality',
        #journal='',
        #additional='',
-       categories=['Auditory', 'Sound localisation', 'Learning'],
+       categories=['Auditory', 'Sound localisation', 'Learning', 'Virtual reality'],
        urls=[('Preprint', 'https://www.biorxiv.org/content/10.1101/207753v3'),
              ('PDF (preprint)', 'https://www.biorxiv.org/content/biorxiv/early/2019/07/10/207753.full-text.pdf'),
              ],
