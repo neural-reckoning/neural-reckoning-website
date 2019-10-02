@@ -96,6 +96,11 @@ members = [
         and <a href="dan_goodman.html">Dan Goodman</a>.
         </p>
         ''',
+        social_media='''
+            <ul class="list-unstyled">
+                <li><a href="https://www.imperial.ac.uk/people/isaac.engel">Imperial College website</a></li>
+            </ul>
+        '''
     ),
     Member(
         id='pamela_hathway',

@@ -46,11 +46,12 @@ publications = [
 #        additional_detail='', # only shown on detail page
 #        categories=[],
 #        urls=[('Journal', ''),
+#              ('Conference', ''),
 #              ('PDF', ''),
 #              ],
-#        abstract='''
-#        ''',
+#        abstract="",
 #        ),
+############################### 2019 ###########################################################
     Publication(
         name='comments_on_edge_bundling',  # selected=True,
         year=2019,
@@ -324,6 +325,39 @@ publications = [
        activity.
        ''',
        ),
+############################### 2018 ###########################################################
+    Publication(
+       name='vr_mobile_binaural', #selected=True,
+       year=2018, # set year to 'Preprints' if not published yet
+       authors='Chungeuun K, Steadman M, Lestang JH, Goodman DFM, Picinali L',
+       title='A VR-Based Mobile Platform for Training to Non-Individualized Binaural 3D Audio',
+       conference='Audio Engineering Society ', # for a conference paper (use short name here, and long name under additional_detail)
+       additional='', # goes after Journal (Year)
+       doi='', # linked to on detail page only
+       additional_detail='AES Convention: 144 (May 2018)', # only shown on detail page
+       categories=['Sound localisation', 'Virtual reality'],
+       urls=[('Conference', 'http://www.aes.org/e-lib/browse.cfm?elib=19406'),
+             ],
+       abstract="Delivery of immersive 3D audio with arbitrarily-positioned sound sources over headphones often "
+                "requires processing of individual source signals through a set of Head-Related Transfer Functions ("
+                "HRTFs), the direction-dependent filters that describe the propagation of sound in an anechoic "
+                "environment from the source to the listener's ears. The individual morphological differences and the "
+                "impracticality of HRTF measurement make it difficult to deliver completely individualized 3D audio "
+                "in this manner, and instead lead to the use of previously-measured non-individual sets of HRTFs. In "
+                "this study a VR-based mobile sound localization training prototype system is introduced that uses "
+                "HRTF sets for audio. It consists of a mobile phone as a head-mounted device, a hand-held Bluetooth "
+                "controller, and a network-enabled PC with a USB audio interface and a pair of headphones. The "
+                "virtual environment was developed on the mobile phone such that the user can listen-to/navigate-in "
+                "an acoustically neutral scene and locate invisible target sound sources presented at random "
+                "directions using non-individualized HRTFs in repetitive sessions. Various training paradigms can be "
+                "designed with this system, with performance-related feedback provided according to the user's "
+                "localization accuracy, including visual indication of the target location, and some aspects of a "
+                "typical first-person shooting game, such as enemies, scoring, and level advancement. An experiment "
+                "was conducted using this system in which 11 subjects went through multiple training sessions, "
+                "using non-individualized HRTF sets. The localization performance evaluations showed reduction of "
+                "overall localization angle error over repeated training sessions, reflecting lower front-back "
+                "confusion rates.",
+       ),
     Publication(
        name='confluent_hierarchical_gd2018', #selected=True,
        year=2018, # set year to 'Preprints' if not published yet
@@ -512,6 +546,93 @@ publications = [
        version of this paper in which all the model parameters can be changed is available online.
        ''',
        ),
+############################### 2017 ###########################################################
+    Publication(
+       name='roles_inhibition_adaptation_spatial_hearing', #selected=True,
+       year=2017, # set year to 'Preprints' if not published yet
+       authors='Lestang JH, Goodman DF',
+       title='The roles of inhibition and adaptation for spatial hearing in difficult listening conditions',
+       conference='Acoustical Society of America', # for a conference paper (use short name here, and long name under additional_detail)
+       additional='', # goes after Journal (Year)
+       doi='10.1121/1.4987838 ', # linked to on detail page only
+       additional_detail='Acoustical Society of America meeting 2017', # only shown on detail page
+       categories=['Auditory', 'Modelling'],
+       urls=[('Conference', 'https://asa.scitation.org/doi/abs/10.1121/1.4987838'),
+             ],
+       abstract=u"The computation of binaural cues such as the Interaural Time Difference (ITD) and Interaural Level "
+                u"Difference (ILD) by the auditory system is known to play an important role in spatial hearing. It is "
+                u"not yet understood how such computations are performed in realistic acoustic environments where "
+                u"noise and reverberations are present. It has been hypothesized that robust sound localization is "
+                u"achieved through the extraction of the ITD information in the rising part of amplitude modulated ("
+                u"AM) sounds. Dietz et al. (2013) tested this hypothesis using psychoacoustics and MEG experiments. "
+                u"They presented AM sounds with ITDs varying during the course of one AM cycle. Their results showed "
+                u"that participants preferentially extracted the ITD information in the rising portion of the AM "
+                u"cycle. We designed a computational model of the auditory pathway to investigate the neural "
+                u"mechanisms involved in this process. Two mechanisms were tested. The first one corresponds to the "
+                u"adaptation in the auditory nerve fibers. The second mechanism occurs after coincidence detection and "
+                u"involves a winner-take-all network of ITD sensitive neurons. Both mechanisms qualitatively accounted "
+                u"for the data, consequently we suggest further experiments based on similar stimuli to distinguish "
+                u"between the two mechanisms. Dietz et al. (2013), “Emphasis of spatial cues in the temporal fine "
+                u"structure during the rising segments of amplitude-modulated sounds,” Proc. Natl. Acad. Sci. 110(37), "
+                u"15151-15156.",
+       ),
+    Publication(
+        name='model_initiative_asa2017',  # selected=True,
+        year=2017,  # set year to 'Preprints' if not published yet
+        authors='Dietz M, Marquardt T, Majdak P, Stern RM, Hartmann WM, Goodman DF, Ewert SD',
+        title='An initiative for testability and comparability of binaural models',
+        conference='Acoustical Society of America',
+        # for a conference paper (use short name here, and long name under additional_detail)
+        additional='',  # goes after Journal (Year)
+        doi='10.1121/1.4987810',  # linked to on detail page only
+        additional_detail='Acoustical Society of America meeting 2017',  # only shown on detail page
+        categories=['Auditory', 'Neuroinformatics'],
+        urls=[('Conference', 'https://asa.scitation.org/doi/abs/10.1121/1.4987810'),
+              ],
+        abstract=u"A framework aimed at improving the testability and comparability of binaural models will be "
+                 u"presented. The framework consists of two key elements: (1) a repository of testing software that "
+                 u"evaluates the models against published data and (2) a model repository. While the framework is "
+                 u"also intended for physiological data, the planned initial contribution will be psychoacoustical "
+                 u"data together with their psychoacoustical testing protocols, as well as existing binaural models "
+                 u"from available auditory toolboxes. Researchers will be invited to provide their established as "
+                 u"well as newly developed models in whatever programming language they prefer, given the models are "
+                 u"compatibility with the proposed interface to the testing software. This entails that the models "
+                 u"act as artificial observers, testable with exactly the same procedure as the human subjects. A "
+                 u"simple communication protocol based on wav and txt-files is proposed because these are supported "
+                 u"by every programming environment, and are able connect models and testing software of any "
+                 u"programming language. Examples will illustrate the principle of testing models with unaltered "
+                 u"signal processing stages on various seminal data sets such as tone detection in so-called "
+                 u"double-delayed masking noise, or lateralization of ¾-period delayed noise and sounds with "
+                 u"temporally asymmetric envelopes.",
+    ),
+    Publication(
+        name='hypothesis_driven_asa2017',  # selected=True,
+        year=2017,  # set year to 'Preprints' if not published yet
+        authors='Goodman DF',
+        title='On the use of hypothesis-driven reduced models in auditory neuroscience',
+        conference='Acoustical Society of America',
+        # for a conference paper (use short name here, and long name under additional_detail)
+        additional='',  # goes after Journal (Year)
+        doi='10.1121/1.4987594',  # linked to on detail page only
+        additional_detail='Acoustical Society of America meeting 2017',  # only shown on detail page
+        categories=['Auditory', 'Modelling'],
+        urls=[('Conference', 'https://asa.scitation.org/doi/abs/10.1121/1.4987594'),
+              ],
+        abstract=u"There are a number of detailed models of auditory neurons that are able to reproduce a wide range "
+                 u"of phenomena. However, using these models to test hypotheses can be challenging, as they have many "
+                 u"parameters and complex interacting subsystems. This makes it difficult to investigate the function "
+                 u"of a mechanism by varying just one parameter in isolation, or to assess the robustness of a model "
+                 u"by systematically varying many parameters. In some cases, by limiting the scope of a model to "
+                 u"testing a specific hypothesis using a particular set of stimuli, it is possible to create a "
+                 u"reduced mathematical model with relatively few, independent parameters. This has considerable "
+                 u"advantages with respect to the problems above. In particular, if a certain behavior is robust and "
+                 u"does not depend on finely tuned parameters, then different implementations are more likely to "
+                 u"produce the same results—a key property for reproducible research. In addition, the code for these "
+                 u"models is typically simpler and therefore more readable, and can often run faster, enabling us to "
+                 u"carry out systematic parameter exploration. I will illustrate these points with a reduced model of "
+                 u"chopper cells in the ventral cochlear nucleus.",
+    ),
+    ############################### 2016 ###########################################################
    Publication(
        name='spikesorting', selected=True,
        year=2016,
@@ -538,6 +659,87 @@ publications = [
        of rat, mouse, macaque and marmoset, demonstrating error rates as low as 5%.
        ''',
        ),
+    Publication(
+        name='model_initiative_asa2016',  # selected=True,
+        year=2016,  # set year to 'Preprints' if not published yet
+        authors='Dietz M, Marquardt T, Majdak P, Stern RM, Hartmann WM, Goodman DF, Ewert SD',
+        title='A framework for auditory model comparability and applicability',
+        conference='Acoustical Society of America',
+        # for a conference paper (use short name here, and long name under additional_detail)
+        additional='',  # goes after Journal (Year)
+        doi='10.1121/1.4970386',  # linked to on detail page only
+        additional_detail='Acoustical Society of America meeting 2016',  # only shown on detail page
+        categories=['Auditory', 'Modelling', 'Neuroinformatics'],
+        urls=[('Conference', 'https://asa.scitation.org/doi/abs/10.1121/1.4970386'),
+              ],
+        abstract=u"Many computational models of the auditory system exist, most of which can predict a variety of "
+                 u"psychoacoustical, physiological, or other experimental data. However, it is often challenging to "
+                 u"apply existing third party models to own experimental paradigms, even if the model code is "
+                 u"available. It will be demonstrated that model applicability is increased by providing a framework "
+                 u"where the model acts as artificial observer performing exactly the same task as the subject (e.g., "
+                 u"adaptive staircase procedure). A possible separation of the actual auditory processing of the "
+                 u"model from the decision making stage will be discussed, which allows for testing the auditory "
+                 u"processing of one model in a variety of experimental paradigms. The framework will consist of a "
+                 u"citable data repository providing the required data for the models as well as toolboxes "
+                 u"implementing both the auditory models and a variety of experimental paradigms. The model framework "
+                 u"will be demonstrated with exemplary binaural models applied to the three most common binaural "
+                 u"psychoacoustic paradigms: just noticeable difference (e.g., interaural time difference), "
+                 u"tone in noise detection (e.g., binaural masking level difference), and absolute judgment (e.g., "
+                 u"sound source localization). Further development of the framework will be discussed.",
+    ),
+############################### 2015 ###########################################################
+    Publication(
+        name='downstream_cns2015',  # selected=True,
+        year=2015,  # set year to 'Preprints' if not published yet
+        authors=u'Goodman DFM, de Cheveigné A, Winter IM, Lorenzi C',
+        title='Downstream changes in firing regularity following damage to the early auditory system',
+        conference='Computational Neuroscience',
+        # for a conference paper (use short name here, and long name under additional_detail)
+        additional='',  # goes after Journal (Year)
+        doi='10.1186/1471-2202-16-S1-O11',  # linked to on detail page only
+        additional_detail='24th Annual Computational Neuroscience Meeting: CNS*2015',  # only shown on detail page
+        categories=['Auditory', 'Modelling'],
+        urls=[('Conference', 'https://bmcneurosci.biomedcentral.com/articles/10.1186/1471-2202-16-S1-O11'),
+              ],
+        abstract=u'''<p>We demonstrate how an abstract mathematical model that approximates a wide range of more 
+        detailed models can be used to make predictions about hearing loss-related changes in neural behaviour.</p> 
+
+        <p>One consequence of neurosensory hearing loss (noise-induced and aging-related) is a reduced ability to 
+        understand speech, particularly in noisy environments, and sometimes beyond what would be predicted from 
+        reduced audibility. Indeed, this type of speech deficit can occur in listeners with near-normal hearing 
+        thresholds [1]. A promising avenue of investigation to explain this comes from experimental results in mice 
+        showing that there can be a permanent loss of auditory nerve fibres (ANFs) following "temporary" 
+        noise-induced hearing loss (i.e. when thresholds return to normal after a few weeks) [2]. The downstream 
+        consequences of this loss of fibres has not yet been systematically investigated (although see [3]). We 
+        predict, using a theoretical analysis that applies to a wide range of neural models, that the regularity of 
+        the spike trains of many neurons in the cochlear nucleus (the next structure after the auditory nerve) will 
+        decrease following a reduction in the number of input cells. </p>
+
+        <p>We present a mathematical analysis of the stationary behaviour of "chopper" cells in the ventral cochlear 
+        nucleus, approximating them by a stochastic process that is entirely characterised by its mean, 
+        standard deviation and time constants. Furthermore, these constants can be straightforwardly related to 
+        physiologically significant parameters including the number of inputs and their average firing rates. From 
+        this approximation, we can compute the regularity of the chopper cell spike trains measured as the 
+        coefficient of variation of their interspike intervals (CV). </p>
+
+        <p>One simple prediction of this model is that when the intensity of a stimulus changes, leading to a change in 
+        the average firing rate of the ANF inputs, there will be a corresponding change in the regularity of the 
+        chopper cell spike train. This prediction poses problems for the widely used scheme for classifying chopper 
+        cells as sustained or transient based on their ongoing CVs as it implies that the classification could be 
+        level-dependent. We present a re-analysis of an existing experimental data set that demonstrates that ongoing 
+        CV is indeed level-dependent in the majority of chopper cells, and that in some cells (>7%) this leads to a 
+        level-dependence in their classification. </p>
+
+        <p>Assuming a homeostatic regulation of long term firing rates, a loss of ANFs will lead to an increase in the 
+        standard deviation of the stochastic process and a consequent increase in the CV of the chopper cell. Some 
+        choppers that were previously classified as sustained will become transient, a substantial change in their 
+        behaviour that is highly likely to disrupt auditory processing. While the function of chopper cells is still 
+        debated, one suggested role is in the coding of temporal envelope [4], which is widely agreed to be essential 
+        for understanding speech. Loss of ANFs could therefore lead to a disruption of the processing of temporal 
+        envelope, and consequently degrade speech intelligibility. We briefly conclude by discussing the challenges 
+        of testing this hypothesis experimentally.</p>''',
+    ),
+############################### 2014 ###########################################################
     Publication(
         name='equations',
         year=2014,
@@ -602,7 +804,7 @@ publications = [
         data and to real-world high-channel-count spike sorting data.        
         ''',
         ),
-                
+############################### 2013 ###########################################################
     Publication(
         name='decoding_soundloc', selected=True,
         year=2013,
@@ -716,7 +918,7 @@ publications = [
         computers into a small cluster at no cost.
         ''',
         ),
-                
+############################### 2012 ###########################################################
     Publication(
         name='snn_gpu',
         year=2012,
@@ -737,7 +939,7 @@ publications = [
         goal, and we outline the main difficulties.
         ''',
         ),
-                
+############################### 2011 ###########################################################
     Publication(
         name='rat_barrel_cortex',
         year=2011,
@@ -859,7 +1061,7 @@ publications = [
         reduced to a simple effective spiking model.
         ''',
         ),
-                
+############################### 2010 ###########################################################
     Publication(
         name='learning_localisation',
         year=2010,
@@ -889,7 +1091,6 @@ publications = [
         difficult task of distinguishing sounds coming from the front and back.
         ''',
         ),
-                
     Publication(
         name='qr',
         year=2010,
@@ -1011,7 +1212,7 @@ publications = [
         a number of neuron spiking models. 
         ''',
         ),
-                
+############################### 2009 ###########################################################
     Publication(
         name='brian_focussed_review', selected=False,
         year=2009,
@@ -1053,7 +1254,7 @@ publications = [
               ],
         categories=['Brian'],
         ),
-                
+############################### 2008 ###########################################################
     Publication(
         name='brian',
         year=2008,
@@ -1081,7 +1282,8 @@ publications = [
         computational neuroscience. 
         ''',
         ),
-                
+############################### 2007 ###########################################################
+############################### 2006 ###########################################################
     Publication(
         name='spirals',
         year=2006,
