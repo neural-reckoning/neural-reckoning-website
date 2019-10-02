@@ -22,7 +22,7 @@
         {% if hasattr(member, 'email') %}
             <div>
                 <img class="img-fluid mb-3"
-                     src="{{ generate_email(member.name, member.email) }}"
+                     src="{{ generate_email(member.name, member.email, cached) }}"
                      style="height:1em; vertical-align: text-top;"/>
             </div>
         {% endif %}

@@ -13,17 +13,19 @@ def trim(im):
     if bbox:
         return im.crop(bbox)
 
-def generate_email(name, address):
-    fname = os.path.join('docs', name+'.jpg')
-    if os.path.exists(fname):
-        return name+'.jpg'
+def generate_email(name, address, cached):
+    basefname = name+'.jpg'
+    fname = os.path.join('docs', basefname)
+    if basefname in cached and cached[basefname]==address and os.path.exists(fname):
+        return basefname
     # addresses are obfuscated as source code is open
-    address = base64.b64decode(address)
+    decoded_address = base64.b64decode(address)
     img = Image.new('RGB', (800, 40), 'white')
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("arial.ttf", 24)
-    draw.text((20, 5), address, (0, 0, 0), font=font)
+    draw.text((20, 5), decoded_address, (0, 0, 0), font=font)
     img = trim(img)
-    img.save(os.path.join('docs', name+'.jpg'))
-    return name+'.jpg'
+    img.save(os.path.join('docs', basefname))
+    cached[basefname] = address
+    return basefname
 

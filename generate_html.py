@@ -9,6 +9,8 @@ import time
 import re
 import codecs
 from wordcloud import WordCloud
+import json
+import hashlib
 
 from publications import publications, category_inclusions, category_detail_links
 from members import members, member_types
@@ -21,6 +23,11 @@ if os.path.exists('last_checked_links.pkl'):
     last_checked_links = pickle.load(open('last_checked_links.pkl', 'rb'))
 else:
     last_checked_links = {}
+
+if os.path.exists('cached.json'):
+    cached = json.load(open('cached.json', 'r'))
+else:
+    cached = {}
 
 today = time.strftime('%d/%m/%Y')
 last_checked_links = dict((url, day) for url, day in last_checked_links.iteritems() if day==today)
@@ -202,8 +209,6 @@ def make_wordcloud(member=None, width=350, height=350):
         fname = 'docs/wordcloud.png'
     else:
         fname = 'docs/wordcloud_{author}.png'.format(author=member.id)
-    if os.path.exists(fname):
-        return
     if member is None:
         mpubs = publications
     else:
@@ -211,8 +216,15 @@ def make_wordcloud(member=None, width=350, height=350):
     if len(mpubs)==0:
         return
     all_abstracts = ' '.join(getattr(pub, 'abstract', '') for pub in mpubs)
+    m = hashlib.md5()
+    m.update(all_abstracts.encode("utf-8"))
+    abstract_hash = m.hexdigest()
+    if os.path.exists(fname) and fname in cached and cached[fname]==abstract_hash:
+        return
+    print 'recomputing wordcloud', (member.name if member is not None else 'all')
     wordcloud = WordCloud(background_color="white", width=width, height=height).generate(all_abstracts)
     wordcloud.to_file(fname)
+    cached[fname] = abstract_hash
 
 make_wordcloud(width=1000, height=400)
 for member in members:
@@ -225,7 +237,8 @@ env_globals = dict(pages=pages, publications=publications, hasattr=hasattr,
                    generate_email=generate_email, os=os,
                    category_id_names=category_id_names,
                    category_publications=category_publications,
-                   category_id=category_id)
+                   category_id=category_id,
+                   cached=cached)
 
 env = Environment(loader=FileSystemLoader(['templates', 'temp']),
                   trim_blocks=True,
@@ -317,5 +330,6 @@ if check_links:
         check_link(url, "page "+pagename)
 
 pickle.dump(last_checked_links, open('last_checked_links.pkl', 'wb'))
+json.dump(cached, open('cached.json', 'w'), sort_keys=True, indent=4)
 
 print 'Finished.'
