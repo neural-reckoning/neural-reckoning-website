@@ -330,7 +330,7 @@ publications = [
     Publication(
        name='vr_mobile_binaural', #selected=True,
        year=2018, # set year to 'Preprints' if not published yet
-       authors='Chungeuun K, Steadman M, Lestang JH, Goodman DFM, Picinali L',
+       authors='Chungeun K, Steadman M, Lestang JH, Goodman DFM, Picinali L',
        title='A VR-Based Mobile Platform for Training to Non-Individualized Binaural 3D Audio',
        conference='Audio Engineering Society ', # for a conference paper (use short name here, and long name under additional_detail)
        additional='', # goes after Journal (Year)
