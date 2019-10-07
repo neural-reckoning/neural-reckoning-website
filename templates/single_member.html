@@ -26,6 +26,11 @@
                      style="height:1em; vertical-align: text-top;"/>
             </div>
         {% endif %}
+        {% if hasattr(member, 'dates') %}
+            <div>
+                <font color="#aaaaaa">Lab member: {{ member.dates }}</font>
+            </div>
+        {% endif %}
         {% if hasattr(member, 'telephone') %}
             <div>
                 {{ member.telephone }}
