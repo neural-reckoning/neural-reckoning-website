@@ -3,6 +3,12 @@ class Member(object):
     def __init__(self, **args):
         for k, v in args.items():
             setattr(self, k, v)
+    @property
+    def dates_string(self):
+        if len(self.dates)==1:
+            return str(self.dates[0])+'-'
+        else:
+            return '-'.join(map(str, self.dates))
 
 
 # Positions: 1_pi, 2_postdoc, 3_phd, 4_other, 5_former
@@ -81,7 +87,7 @@ members = [
         name='Isaac Engel',
         author_names=['Engel I'],
         position='3_phd',
-        dates='2016-',
+        dates=[2016],
         associate=False,
         show_publications=True,
         # generate this by import base64; base64.b64encode('address')
@@ -108,7 +114,7 @@ members = [
         name='Pamela Hathway',
         author_names=['Hathway P'],
         position='3_phd',
-        dates='2016-',
+        dates=[2016],
         associate=False,
         show_publications=True,
         address=sk_address(1008),
@@ -130,13 +136,14 @@ members = [
         id='jean_hugues_lestang',
         name='Jean-Hugues Lestang',
         author_names=['Lestang JH', 'Lestang J-H', 'Lestang J'],
-        position='3_phd',
-        dates='2015-2019',
+        position='5_former',
+        former_position='PhD',
+        dates=[2015, 2019],
         associate=False,
         show_publications=True,
-        address=sk_address(1008),
+        #address=sk_address(1008),
         # generate this by import base64; base64.b64encode('address')
-        email='ai5sZXN0YW5nMTVAaW1wZXJpYWwuYWMudWs=',
+        #email='ai5sZXN0YW5nMTVAaW1wZXJpYWwuYWMudWs=',
         social_media='''
             <ul class="list-unstyled">
                 <li><a href="https://scholar.google.com/citations?user=j9wUAigAAAAJ&hl=en">Google Scholar</a></li>
@@ -149,12 +156,12 @@ members = [
         ''',
         long='''
         <p>
-        Jean-Hugues Lestang is a PhD student, looking at the role of neural adaptation
-        in sound localisation in realistic acoustic environments.
+            Jean-Hugues Lestang was a PhD student, looking at the role of neural adaptation
+            in sound localisation in realistic acoustic environments.
         </p>
         <p>
-        Jean is also the Python developer for the
-        <a href="https://github.com/model-initiative/model_initiative">Auditory Model Initiative</a>.
+            Jean is also the Python developer for the
+            <a href="https://github.com/model-initiative/model_initiative">Auditory Model Initiative</a>.
         </p>
         ''',
     ),
@@ -163,7 +170,7 @@ members = [
         name='Nicolas Perez',
         author_names=['Perez N', 'Perez-Nieves N'],
         position='3_phd',
-        dates='2018-',
+        dates=[2018],
         associate=False,
         show_publications=True,
         address=sk_address(1008),
@@ -185,7 +192,7 @@ members = [
         name='Lotte Weerts',
         author_names=['Weerts L'],
         position='3_phd',
-        dates='2016-',
+        dates=[2016],
         associate=False,
         show_publications=True,
         address=sk_address(1008),
@@ -210,7 +217,7 @@ members = [
         name='Yang Chu',
         author_names=['Chu Y'],
         position='3_phd',
-        dates='2016-',
+        dates=[2016],
         associate=False,
         show_publications=True,
         address=sk_address(1008),
@@ -234,7 +241,7 @@ members = [
         name='Jonathan Zheng',
         author_names=['Zheng JX', 'Zheng J'],
         position='3_phd',
-        dates='2016-',
+        dates=[2016],
         associate=False,
         show_publications=True,
         address=sk_address(1008),
@@ -259,7 +266,7 @@ members = [
         name='Tom Clegg',
         author_names=['Clegg T'],
         position='3_phd',
-        dates='2017-',
+        dates=[2017],
         associate=False,
         show_publications=True,
         # generate this by import base64; base64.b64encode('address')

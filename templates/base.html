@@ -45,7 +45,7 @@
                             {% if member_types[group.grouper] %}
                                 <h6 class="dropdown-header">{{member_types[group.grouper]}}</h6>
                             {% endif %}
-                            {% for member in group.list %}
+                            {% for member in group.list | sort(attribute='author_names') | sort(attribute='dates')  %}
                                 <a class="dropdown-item" href="{{member.id}}.html">{{member.name}}</a>
                             {% endfor %}
                         {% endfor %}
