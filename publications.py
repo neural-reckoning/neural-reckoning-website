@@ -1163,7 +1163,7 @@ publications = [
         journal='Neuroinformatics',
         additional='8, no. 3 (9).',
         doi='10.1007/s12021-010-9082-x',
-        urls=[('Journal', 'http://www.springerlink.com/content/12614h7817602680/'),
+        urls=[('Journal', 'https://link.springer.com/article/10.1007/s12021-010-9082-x'),
               ('PDF (preprint)', 'https://www.dropbox.com/s/si4uaau33csqejk/codegen.pdf?dl=1'),
               ],
         categories=['Brian'],
