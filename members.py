@@ -250,6 +250,13 @@ members = [
         short='''
         Interactive systems for ecosystems and neuroscience
         ''',
+        social_media='''
+            <ul class="list-unstyled">
+                <li><a href="https://scholar.google.co.uk/citations?user=rwiyjioAAAAJ&hl=en&oi=sra">Google Scholar</a></li>
+                <li><a href="https://github.com/jxz12">GitHub</a></li>
+                <li><a href="https://twitter.com/terracotta_jz">Twitter</a></li>
+            </ul>
+            ''',
         long='''
         <p>
         Jonathan Zheng is a PhD student, working on interactive systems for
