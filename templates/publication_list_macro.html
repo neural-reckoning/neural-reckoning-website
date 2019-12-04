@@ -46,13 +46,12 @@
     <div>&nbsp;</div>
     <div><b>Links:</b>
     {% for url_title, url in publication.urls %}
-        <a href="{{ url }}">{{ url_title }}</a>{% if not loop.last %},{% endif %}
+        <button type="button" class="btn btn-light"><a href="{{ url }}">{{ url_title }}</a></button>
     {% endfor %}
     </div>
-    <div>&nbsp;</div>
     <div><b>Categories:</b>
     {% for catid in publication.category_ids | sort %}
-        <a href="publication_category_{{ catid }}.html">{{ category_id_names[catid] }}</a>{% if not loop.last %},{% endif %}
+        <button type="button" class="btn btn-light"><a href="publication_category_{{ catid }}.html">{{ category_id_names[catid] }}</a></button>
     {% endfor %}
     </div>
 {% endmacro %}
