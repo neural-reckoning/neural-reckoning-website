@@ -222,7 +222,7 @@ publications = [
        name='brian2', selected=True,
        year=2019, # set year to 'Preprints' if not published yet
        authors='Stimberg M, Brette R, Goodman DFM',
-       title='Brian 2: an intuitive and efficient neural simulator',
+       title='Brian 2, an intuitive and efficient neural simulator',
        journal='eLife', # for an article
        # publisher='', # for a book
        additional='8:e47314', # goes after Journal (Year)
