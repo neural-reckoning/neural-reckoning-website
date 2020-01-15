@@ -52,6 +52,7 @@ publications = [
 #              ],
 #        abstract="",
 #        ),
+    ############################### 2020 ###########################################################
     Publication(
         name='brian2genn',  # selected=True,
         year=2020,  # set year to 'Preprints' if not published yet
