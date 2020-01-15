@@ -52,7 +52,35 @@ publications = [
 #              ],
 #        abstract="",
 #        ),
-############################### 2019 ###########################################################
+    Publication(
+        name='brian2genn',  # selected=True,
+        year=2020,  # set year to 'Preprints' if not published yet
+        authors='Stimberg M, Goodman DFM, Nowotny T',
+        title='Brian2GeNN: a system for accelerating a large variety of spiking neural networks with graphics hardware',
+        journal='Scientific Reports',
+        additional='10, 410',
+        doi='10.1038/s41598-019-54957-7',
+        categories=['Brian', 'Neuroinformatics', 'Neural simulation'],
+        urls=[('Journal', 'https://www.nature.com/articles/s41598-019-54957-7'),
+              ('Journal (PDF)', 'https://www.nature.com/articles/s41598-019-54957-7.pdf'),
+              ('Code (GitHub)', 'https://github.com/brian-team/brian2genn'),
+              ('Documentation', 'https://brian2genn.readthedocs.io/en/stable/'),
+              ('Preprint', 'https://www.biorxiv.org/content/early/2018/10/20/448050'),
+              ('Preprint (PDF)', 'https://www.biorxiv.org/content/early/2018/10/20/448050.full.pdf'),
+              ],
+        abstract='"Brian" is a popular Python-based simulator for spiking neural networks, commonly used in '
+                 'computational neuroscience. GeNN is a C++-based meta-compiler for accelerating spiking neural '
+                 'network simulations using consumer or high performance grade graphics processing units (GPUs). Here '
+                 'we introduce a new software package, Brian2GeNN, that connects the two systems so that users can '
+                 'make use of GeNN GPU acceleration when developing their models in Brian, without requiring any '
+                 'technical knowledge about GPUs, C++ or GeNN. The new Brian2GeNN software uses a pipeline of code '
+                 'generation to translate Brian scripts into C++ code that can be used as input to GeNN, '
+                 "and subsequently can be run on suitable NVIDIA GPU accelerators. From the user's perspective, "
+                 'the entire pipeline is invoked by adding two simple lines to their Brian scripts. We have shown '
+                 'that using Brian2GeNN, two non-trivial models from the literature can run tens to hundreds of times '
+                 'faster than on CPU.',
+        ),
+    ############################### 2019 ###########################################################
     Publication(
        name='gamification_sound_localisation', #selected=True,
        year=2019, # set year to 'Preprints' if not published yet
@@ -446,29 +474,6 @@ publications = [
        how the unique properties of SGD make it easier to produce constrained layouts than previous
        approaches. We also show how SGD can be directly applied within the sparse stress approximation of
        Ortmann et al. [1], making the algorithm scalable up to large graphs.
-       ''',
-       ),
-    Publication(
-       name='brian2genn', #selected=True,
-       year='Preprints', # set year to 'Preprints' if not published yet
-       authors='Stimberg M, Goodman DFM, Nowotny T',
-       title='Brian2GeNN: a system for accelerating a large variety of spiking neural networks with graphics hardware',
-       #journal='',
-       #additional='',
-       categories=['Brian', 'Neuroinformatics', 'Neural simulation'],
-       urls=[('Preprint', 'https://www.biorxiv.org/content/early/2018/10/20/448050'),
-             ('Preprint (PDF)', 'https://www.biorxiv.org/content/early/2018/10/20/448050.full.pdf'),
-             ],
-       abstract='''
-       "Brian" is a popular Python-based simulator for spiking neural networks, commonly used in computational
-       neuroscience. GeNN is a C++-based meta-compiler for accelerating spiking neural network simulations using
-       consumer or high performance grade graphics processing units (GPUs). Here we introduce a new software package,
-       Brian2GeNN, that connects the two systems so that users can make use of GeNN GPU acceleration when developing
-       their models in Brian, without requiring any technical knowledge about GPUs, C++ or GeNN. The new Brian2GeNN
-       software uses a pipeline of code generation to translate Brian scripts into C++ code that can be used as input to
-       GeNN, and subsequently can be run on suitable NVIDIA GPU accelerators. From the user's perspective, the entire
-       pipeline is invoked by adding two simple lines to their Brian scripts. We have shown that using Brian2GeNN,
-       typical models can run tens to hundreds of times faster than on CPU.
        ''',
        ),
     Publication(
