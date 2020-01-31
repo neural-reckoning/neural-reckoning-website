@@ -43,11 +43,12 @@ pages = OrderedDict([
     ('location.html', 'Location'),
     ])
 
-unindexed_pages = {
-    'neuroinformatics.html': 'Neuroinformatics',
-    'sensory.html': 'Sensory neuroscience',
-    'mathematics.html': 'Mathematics',
-    }
+unindexed_pages = OrderedDict([
+    ('neuroinformatics.html', 'Neuroinformatics'),
+    ('sensory.html', 'Sensory neuroscience'),
+    ('comp-neuro-resources.html', 'Computational neuroscience resources'),
+    ('mathematics.html', 'Mathematics'),
+    ])
 
 
 def member_publications(member):
@@ -240,7 +241,8 @@ env_globals = dict(pages=pages, publications=publications, hasattr=hasattr,
                    category_id_names=category_id_names,
                    category_publications=category_publications,
                    category_id=category_id,
-                   cached=cached)
+                   cached=cached,
+                   unindexed_pages=unindexed_pages)
 
 env = Environment(loader=FileSystemLoader(['templates', 'temp']),
                   trim_blocks=True,

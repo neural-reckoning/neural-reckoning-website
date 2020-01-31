@@ -42,12 +42,14 @@
                         <a class="dropdown-item" href="members.html">Everyone</a>
                         <div class="dropdown-divider"></div>
                         {% for group in members | groupby('position') %}
-                            {% if member_types[group.grouper] %}
-                                <h6 class="dropdown-header">{{member_types[group.grouper]}}</h6>
+                            {% if group.grouper!="5_former" %}
+                                {% if member_types[group.grouper] %}
+                                    <h6 class="dropdown-header">{{member_types[group.grouper]}}</h6>
+                                {% endif %}
+                                {% for member in group.list | sort(attribute='author_names') | sort(attribute='dates')  %}
+                                    <a class="dropdown-item" href="{{member.id}}.html">{{member.name}}</a>
+                                {% endfor %}
                             {% endif %}
-                            {% for member in group.list | sort(attribute='author_names') | sort(attribute='dates')  %}
-                                <a class="dropdown-item" href="{{member.id}}.html">{{member.name}}</a>
-                            {% endfor %}
                         {% endfor %}
                     </div>
                 </li>
@@ -57,6 +59,15 @@
                 </li>
             {% endif %}
         {% endfor %}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarMiscDropdown" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Misc</a>
+                <div class="dropdown-menu" aria-labelledby="navbarMiscDropdown">
+                    {% for miscurl, misctitle in unindexed_pages.items() %}
+                        <a class="dropdown-item" href="{{miscurl}}">{{misctitle}}</a>
+                    {% endfor %}
+                </div>
+            </li>
         </ul>
     </div>
 </div></nav>
