@@ -302,8 +302,12 @@ def check_link(url, msg):
     # first try just getting the header (quick)
     p = urlparse(url)
     conn = httplib.HTTPConnection(p.netloc)
-    conn.request('HEAD', p.path)
-    resp = conn.getresponse()
+    try:
+        conn.request('HEAD', p.path)
+        resp = conn.getresponse()
+    except Exception as ex:
+        print 'Failed: {msg}, URL {url}, exception {ex}'.format(msg=msg, url=url, ex=ex)
+        return
     if resp.status >= 400:
         try:
             # Pretend we are a browser because some journals refuse connections otherwise
