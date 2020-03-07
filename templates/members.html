@@ -29,7 +29,7 @@
         <div class="col">
             <a href="{{member.id}}.html"><b>{{member.name}}</b></a>
             {% if hasattr(member, 'dates') %}
-                <font color="#aaaaaa">({% if hasattr(member, 'former_position') %}{{member.former_position}} {% endif %}{{ member.dates_string }})</font>
+                <font color="#aaaaaa">({% if hasattr(member, 'former_position') %}{{member.former_position}}&nbsp;{% endif %}{{ member.dates_string }})</font>
             {% endif %}<br/>
             {{ member.short }}
         </div>

@@ -19,7 +19,7 @@ from members import members, member_types
 from email_addresses import generate_email
 from link_exceptions import link_exceptions
 
-check_links = True
+check_links = False
 
 if os.path.exists('last_checked_links.pkl'):
     last_checked_links = pickle.load(open('last_checked_links.pkl', 'rb'))

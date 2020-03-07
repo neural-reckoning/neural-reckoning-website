@@ -52,7 +52,7 @@ members = [
         short='''
         Head of lab.
         ''',
-        int='''
+        long='''
         I am a lecturer in the
         <a href="http://www3.imperial.ac.uk/intellisysnetworks">Intelligent
         Systems and Networks group</a> in the
@@ -95,7 +95,7 @@ members = [
         short='''
         Auditory augmented reality
         ''',
-        int='''
+        long='''
         <p>
         Isaac Engel is a PhD student working on Auditory Augmented Reality
         (AAR) and spatial hearing. He is supervised by
@@ -123,7 +123,7 @@ members = [
         short='''
         Large scale neural data analysis.
         ''',
-        int='''
+        long='''
         <p>
         Pamela Hathway is a PhD student working on the problem of large
         scale neural data analysis. With new techniques to record from
@@ -154,7 +154,7 @@ members = [
         short='''
         Auditory neuroscience: sound localisation, neural adaptation.
         ''',
-        int='''
+        long='''
         <p>
             Jean-Hugues Lestang was a PhD student, looking at the role of neural adaptation
             in sound localisation in realistic acoustic environments.
@@ -179,7 +179,7 @@ members = [
         short='''
         Multiresolution processing with heterogeneous spiking neural networks
         ''',
-        int='''
+        long='''
         <p>
         Nicolas Perez is a PhD student working on understanding how
         spiking neural networks can use heterogeneous neuron properties
@@ -202,7 +202,7 @@ members = [
         short='''
         Auditory neuroscience, information theory and machine learning
         ''',
-        int='''
+        long='''
         <p>
         Lotte Weerts is a PhD student in the
         <a href="http://www.imperial.ac.uk/neurotechnology/cdt/">Neurotechnology CDT</a>,
@@ -226,7 +226,7 @@ members = [
         short='''
         Principles of neural computation and simulation techniques
         ''',
-        int='''
+        long='''
         <p>
         Yang Chu is a PhD student, working on principles of neural computation,
         and high performance implementations using spiking neural
@@ -257,7 +257,7 @@ members = [
                 <li><a href="https://twitter.com/terracotta_jz">Twitter</a></li>
             </ul>
             ''',
-        int='''
+        long='''
         <p>
         Jonathan Zheng is a PhD student, working on interactive systems for
         visualising the behaviour of ecosystems and neural networks. He is
@@ -281,7 +281,7 @@ members = [
         short='''
         Effects of temperature on the structure and dynamics of ecological networks
         ''',
-        int='''
+        long='''
         <p>
         Tom Clegg is a PhD student, supervised by
         <a href="http://www.imperial.ac.uk/people/s.pawar">Samraat Pawar</a>,
