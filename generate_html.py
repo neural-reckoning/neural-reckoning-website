@@ -2,7 +2,9 @@
 import os, sys
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from collections import OrderedDict, defaultdict
-import urllib2
+import urllib.request
+import urllib.error
+import urllib.parse
 from copy import copy
 import pickle
 import time
@@ -14,7 +16,7 @@ import hashlib
 
 from publications import publications, category_inclusions, category_detail_links
 from members import members, member_types
-from email import generate_email
+from email_addresses import generate_email
 from link_exceptions import link_exceptions
 
 check_links = True
@@ -30,7 +32,7 @@ else:
     cached = {}
 
 today = time.strftime('%d/%m/%Y')
-last_checked_links = dict((url, day) for url, day in last_checked_links.iteritems() if day==today)
+last_checked_links = dict((url, day) for url, day in last_checked_links.items() if day==today)
 last_updated = time.strftime('%Y/%m/%d')
 
 pages = OrderedDict([
@@ -64,6 +66,7 @@ def member_publications(member):
 # Generate links to member pages in publications
 for member in members:
     for publication in publications:
+        publication.year = str(publication.year)
         pubauths = [a.strip() for a in publication.authors.split(',')]
         newpubauths = []
         for pubauth in pubauths:
@@ -86,7 +89,7 @@ def category_id(name):
 
 
 # generate inclusions and category ids for publications
-all_categories = set(category_inclusions.keys()+[cat for inc in category_inclusions.values() for cat in inc])
+all_categories = set(list(category_inclusions.keys())+[cat for inc in list(category_inclusions.values()) for cat in inc])
 for pub in publications:
     for cat in pub.categories:
         all_categories.add(cat)
@@ -112,7 +115,7 @@ for pub in publications:
         if catid in category_id_inclusions:
             for cid in category_id_inclusions[catid]:
                 pub.category_ids.add(cid)
-for k, v in category_detail_links.items():
+for k, v in list(category_detail_links.items()):
     category_detail_links[category_id(k)] = v
                 
 
@@ -138,7 +141,7 @@ max_connections = max(category_connections.values())
 min_connections = min(category_connections.values())
 max_num_papers = max(numpapers.values())
 min_num_papers = min(numpapers.values())
-for catname, inclusions in category_inclusions.items():
+for catname, inclusions in list(category_inclusions.items()):
     tgt_id = category_id(catname)
     for inclusion in inclusions:
         src_id = category_id(inclusion)
@@ -146,7 +149,7 @@ for catname, inclusions in category_inclusions.items():
 # Generate hierarchical categories
 category_dot_lines = []
 category_colours = {}
-for cat_id in category_graph.keys():
+for cat_id in list(category_graph.keys()):
     cat_name = category_id_names[cat_id]
     col = 0.7-0.7*(numpapers[cat_id]-min_num_papers)/(1.0*(max_num_papers-min_num_papers))
     col = int(255.0*col)
@@ -155,7 +158,7 @@ for cat_id in category_graph.keys():
     category_colours[cat_id] = col
     category_dot_lines.append('{cat_id} [URL="publication_category_{cat_id}.html", label="{cat_name}", color="{col}", fontcolor="{col}", '
                               'shape=box];'.format(cat_id=cat_id, cat_name=cat_name, col=col))
-for src_id, target_ids in category_graph.items():
+for src_id, target_ids in list(category_graph.items()):
     for tgt_id in target_ids:
         category_dot_lines.append('{src_id} -> {tgt_id} [color="{col}"];'.format(src_id=src_id, tgt_id=tgt_id,
                                                                                  col=category_colours[tgt_id]))
@@ -175,7 +178,7 @@ if os.system('{algo} -Tsvg temp/categories_hierarchy.dot -o temp/categories_hier
     open('temp/categories_hierarchy.svg', 'w').write(svg)
 # Spontaneous category graph
 category_dot_lines = []
-for (cat_id_1, cat_id_2), nc in category_connections.items():
+for (cat_id_1, cat_id_2), nc in list(category_connections.items()):
     col = 0.9-0.9*(nc-min_connections)/(1.0*(max_connections-min_connections))
     col = int(255.0*col)
     col = ('%.02X' % col)*3
@@ -183,7 +186,7 @@ for (cat_id_1, cat_id_2), nc in category_connections.items():
     category_dot_lines.append(
         '    {cat_id_1} -- {cat_id_2} [len={edgelen}, color="{col}"]'.format(cat_id_1=cat_id_1, cat_id_2=cat_id_2, nc=nc,
                                                                              col=col, edgelen=1.0/(max_connections/2+nc)))
-for cat_id in category_graph.keys():
+for cat_id in list(category_graph.keys()):
     cat_name = category_id_names[cat_id]
     col = category_colours[cat_id]
     category_dot_lines.append(
@@ -203,7 +206,7 @@ if os.system('{algo} -Tsvg temp/categories_spontaneous.dot -o temp/categories_sp
     svg = svg.replace('<svg', '<svg class="img-fluid"')
     open('temp/categories_spontaneous.svg', 'w').write(svg)
 else:
-    print "Couldn't run categories spontaneous dot"
+    print("Couldn't run categories spontaneous dot")
 
 
 # wordcloud: explicitly delete docs/wordcloud.png to recalculate
@@ -224,7 +227,7 @@ def make_wordcloud(member=None, width=350, height=350):
     abstract_hash = m.hexdigest()
     if os.path.exists(fname) and fname in cached and cached[fname]==abstract_hash:
         return
-    print 'recomputing wordcloud', (member.name if member is not None else 'all')
+    print('recomputing wordcloud', (member.name if member is not None else 'all'))
     wordcloud = WordCloud(background_color="white", width=width, height=height).generate(all_abstracts)
     wordcloud.to_file(fname)
     cached[fname] = abstract_hash
@@ -257,7 +260,7 @@ def scan_html_for_links(page, name):
     return page
 
 # Generate index pages
-for filename, title in pages.items()+unindexed_pages.items():
+for filename, title in list(pages.items())+list(unindexed_pages.items()):
     if os.path.exists(os.path.join('templates', filename)):
         page = env.get_template(filename).render(title=title, filename=filename)
         codecs.open(os.path.join('docs', filename), 'w', encoding='utf-8').write(scan_html_for_links(page, filename))
@@ -271,7 +274,7 @@ for publication in publications:
     codecs.open(os.path.join('docs', filename), 'w', encoding='utf-8').write(scan_html_for_links(page, filename))
     
 # Generate publication categories
-for catid, catname in category_id_names.items():
+for catid, catname in list(category_id_names.items()):
     filename = 'publication_category_%s.html' % catid
     page = env.get_template('publication_category.html').render(
                 publications=category_publications(catid),
@@ -293,21 +296,21 @@ for member in members:
 # Copy static files to docs directory
 os.system(r'copy files\* docs >nul')
 
-import httplib
-from urlparse import urlparse
+import http.client
+from urllib.parse import urlparse
 
 def check_link(url, msg):
     if url in last_checked_links or url in link_exceptions:
         return
     # first try just getting the header (quick)
     p = urlparse(url)
-    conn = httplib.HTTPConnection(p.netloc)
+    conn = http.client.HTTPConnection(p.netloc)
     conn.request('HEAD', p.path)
     resp = conn.getresponse()
     if resp.status >= 400:
         try:
             # Pretend we are a browser because some journals refuse connections otherwise
-            urllib2.urlopen(urllib2.Request(url, headers={ 'User-Agent': 'Mozilla/5.0' }))
+            urllib.request.urlopen(urllib.request.Request(url, headers={ 'User-Agent': 'Mozilla/5.0' }))
             last_checked_links[url] = today
         except Exception as ex:
             try:
@@ -316,13 +319,13 @@ def check_link(url, msg):
                 else:
                     raise
             except Exception as ex:
-                print 'Failed: {msg}, URL {url}, exception {ex}'.format(msg=msg, url=url, ex=ex)
+                print('Failed: {msg}, URL {url}, exception {ex}'.format(msg=msg, url=url, ex=ex))
     else:
         last_checked_links[url] = today
 
 
 if check_links:
-    print 'Finished generating HTML, now checking links.'
+    print('Finished generating HTML, now checking links.')
     
     # Check publication URLs are OK
     for publication in publications:
@@ -336,4 +339,4 @@ if check_links:
 pickle.dump(last_checked_links, open('last_checked_links.pkl', 'wb'))
 json.dump(cached, open('cached.json', 'w'), sort_keys=True, indent=4)
 
-print 'Finished.'
+print('Finished.')

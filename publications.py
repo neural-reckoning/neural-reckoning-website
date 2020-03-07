@@ -1,11 +1,11 @@
 # coding=utf-8
 class Publication(object):
     def __init__(self, **args):
-        for k, v in args.items():
+        for k, v in list(args.items()):
             setattr(self, k, v)
     @property
     def is_preprint(self):
-        return isinstance(self.year, basestring) and self.year=="Preprints"
+        return isinstance(self.year, str) and self.year=="Preprints"
 
 category_inclusions = {
     'Brian': ['Neural simulation', 'Spiking'],
@@ -335,12 +335,12 @@ publications = [
     Publication(
        name='astrocytes', #selected=True,
        year=2019,
-       authors=u'Stimberg M, Goodman DFM, Brette R, De Pittà M',
+       authors='Stimberg M, Goodman DFM, Brette R, De Pittà M',
        title='Modeling neuron-glia interactions with the Brian 2 simulator',
        publisher='Springer',
        book_chapter=True,
-       book=u'Computational Glioscience',
-       book_editors=u'De Pittà M, Berry H',
+       book='Computational Glioscience',
+       book_editors='De Pittà M, Berry H',
        categories=['Brian', 'Modelling'],
        urls=[('Book', 'https://link.springer.com/book/10.1007/978-3-030-00817-8'),
              ('Chapter', 'https://link.springer.com/chapter/10.1007/978-3-030-00817-8_18'),
@@ -418,10 +418,10 @@ publications = [
     Publication(
        name='codegen_review', #selected=True,
        year=2018,
-       authors=(u'Blundell I, Brette R, Cleland TA, Close TG, Coca D, Davison AP, Diaz-Pier S, Musoles CF, '
-                u'Gleeson P, Goodman DFM, Hines M, Hopkins MW, Kumbhar P, Lester DR, Marin B, Morrison A, '
-                u'Müller E, Nowotny T, Peyser A, Plotnikov D, Richmond P, Rowley A, Rumpe B, Stimberg M, '
-                u'Stokes AB, Tomkins A, Trensch G, Woodman M, Eppler JM'),
+       authors=('Blundell I, Brette R, Cleland TA, Close TG, Coca D, Davison AP, Diaz-Pier S, Musoles CF, '
+                'Gleeson P, Goodman DFM, Hines M, Hopkins MW, Kumbhar P, Lester DR, Marin B, Morrison A, '
+                'Müller E, Nowotny T, Peyser A, Plotnikov D, Richmond P, Rowley A, Rumpe B, Stimberg M, '
+                'Stokes AB, Tomkins A, Trensch G, Woodman M, Eppler JM'),
        title='Code Generation in Computational Neuroscience: A Review of Tools and Techniques',
        journal='Frontiers in Neuroinformatics',
        doi='10.3389/fninf.2018.00068',
@@ -529,7 +529,7 @@ publications = [
     Publication(
        name='vcn_regularity', selected=True,
        year=2018,
-       authors=u'Goodman DFM, Winter IM, Léger AC, de Cheveigné A, Lorenzi C',
+       authors='Goodman DFM, Winter IM, Léger AC, de Cheveigné A, Lorenzi C',
        title='Modelling firing regularity in the ventral cochlear nucleus: mechanisms, and effects of stimulus level and synaptopathy',
        journal='Hearing Research',
        doi='10.1016/j.heares.2017.09.010',
@@ -570,22 +570,22 @@ publications = [
        categories=['Auditory', 'Modelling'],
        urls=[('Conference', 'https://asa.scitation.org/doi/abs/10.1121/1.4987838'),
              ],
-       abstract=u"The computation of binaural cues such as the Interaural Time Difference (ITD) and Interaural Level "
-                u"Difference (ILD) by the auditory system is known to play an important role in spatial hearing. It is "
-                u"not yet understood how such computations are performed in realistic acoustic environments where "
-                u"noise and reverberations are present. It has been hypothesized that robust sound localization is "
-                u"achieved through the extraction of the ITD information in the rising part of amplitude modulated ("
-                u"AM) sounds. Dietz et al. (2013) tested this hypothesis using psychoacoustics and MEG experiments. "
-                u"They presented AM sounds with ITDs varying during the course of one AM cycle. Their results showed "
-                u"that participants preferentially extracted the ITD information in the rising portion of the AM "
-                u"cycle. We designed a computational model of the auditory pathway to investigate the neural "
-                u"mechanisms involved in this process. Two mechanisms were tested. The first one corresponds to the "
-                u"adaptation in the auditory nerve fibers. The second mechanism occurs after coincidence detection and "
-                u"involves a winner-take-all network of ITD sensitive neurons. Both mechanisms qualitatively accounted "
-                u"for the data, consequently we suggest further experiments based on similar stimuli to distinguish "
-                u"between the two mechanisms. Dietz et al. (2013), “Emphasis of spatial cues in the temporal fine "
-                u"structure during the rising segments of amplitude-modulated sounds,” Proc. Natl. Acad. Sci. 110(37), "
-                u"15151-15156.",
+       abstract="The computation of binaural cues such as the Interaural Time Difference (ITD) and Interaural Level "
+                "Difference (ILD) by the auditory system is known to play an important role in spatial hearing. It is "
+                "not yet understood how such computations are performed in realistic acoustic environments where "
+                "noise and reverberations are present. It has been hypothesized that robust sound localization is "
+                "achieved through the extraction of the ITD information in the rising part of amplitude modulated ("
+                "AM) sounds. Dietz et al. (2013) tested this hypothesis using psychoacoustics and MEG experiments. "
+                "They presented AM sounds with ITDs varying during the course of one AM cycle. Their results showed "
+                "that participants preferentially extracted the ITD information in the rising portion of the AM "
+                "cycle. We designed a computational model of the auditory pathway to investigate the neural "
+                "mechanisms involved in this process. Two mechanisms were tested. The first one corresponds to the "
+                "adaptation in the auditory nerve fibers. The second mechanism occurs after coincidence detection and "
+                "involves a winner-take-all network of ITD sensitive neurons. Both mechanisms qualitatively accounted "
+                "for the data, consequently we suggest further experiments based on similar stimuli to distinguish "
+                "between the two mechanisms. Dietz et al. (2013), “Emphasis of spatial cues in the temporal fine "
+                "structure during the rising segments of amplitude-modulated sounds,” Proc. Natl. Acad. Sci. 110(37), "
+                "15151-15156.",
        ),
     Publication(
         name='model_initiative_asa2017',  # selected=True,
@@ -600,21 +600,21 @@ publications = [
         categories=['Auditory', 'Neuroinformatics'],
         urls=[('Conference', 'https://asa.scitation.org/doi/abs/10.1121/1.4987810'),
               ],
-        abstract=u"A framework aimed at improving the testability and comparability of binaural models will be "
-                 u"presented. The framework consists of two key elements: (1) a repository of testing software that "
-                 u"evaluates the models against published data and (2) a model repository. While the framework is "
-                 u"also intended for physiological data, the planned initial contribution will be psychoacoustical "
-                 u"data together with their psychoacoustical testing protocols, as well as existing binaural models "
-                 u"from available auditory toolboxes. Researchers will be invited to provide their established as "
-                 u"well as newly developed models in whatever programming language they prefer, given the models are "
-                 u"compatibility with the proposed interface to the testing software. This entails that the models "
-                 u"act as artificial observers, testable with exactly the same procedure as the human subjects. A "
-                 u"simple communication protocol based on wav and txt-files is proposed because these are supported "
-                 u"by every programming environment, and are able connect models and testing software of any "
-                 u"programming language. Examples will illustrate the principle of testing models with unaltered "
-                 u"signal processing stages on various seminal data sets such as tone detection in so-called "
-                 u"double-delayed masking noise, or lateralization of ¾-period delayed noise and sounds with "
-                 u"temporally asymmetric envelopes.",
+        abstract="A framework aimed at improving the testability and comparability of binaural models will be "
+                 "presented. The framework consists of two key elements: (1) a repository of testing software that "
+                 "evaluates the models against published data and (2) a model repository. While the framework is "
+                 "also intended for physiological data, the planned initial contribution will be psychoacoustical "
+                 "data together with their psychoacoustical testing protocols, as well as existing binaural models "
+                 "from available auditory toolboxes. Researchers will be invited to provide their established as "
+                 "well as newly developed models in whatever programming language they prefer, given the models are "
+                 "compatibility with the proposed interface to the testing software. This entails that the models "
+                 "act as artificial observers, testable with exactly the same procedure as the human subjects. A "
+                 "simple communication protocol based on wav and txt-files is proposed because these are supported "
+                 "by every programming environment, and are able connect models and testing software of any "
+                 "programming language. Examples will illustrate the principle of testing models with unaltered "
+                 "signal processing stages on various seminal data sets such as tone detection in so-called "
+                 "double-delayed masking noise, or lateralization of ¾-period delayed noise and sounds with "
+                 "temporally asymmetric envelopes.",
     ),
     Publication(
         name='hypothesis_driven_asa2017',  # selected=True,
@@ -629,26 +629,26 @@ publications = [
         categories=['Auditory', 'Modelling'],
         urls=[('Conference', 'https://asa.scitation.org/doi/abs/10.1121/1.4987594'),
               ],
-        abstract=u"There are a number of detailed models of auditory neurons that are able to reproduce a wide range "
-                 u"of phenomena. However, using these models to test hypotheses can be challenging, as they have many "
-                 u"parameters and complex interacting subsystems. This makes it difficult to investigate the function "
-                 u"of a mechanism by varying just one parameter in isolation, or to assess the robustness of a model "
-                 u"by systematically varying many parameters. In some cases, by limiting the scope of a model to "
-                 u"testing a specific hypothesis using a particular set of stimuli, it is possible to create a "
-                 u"reduced mathematical model with relatively few, independent parameters. This has considerable "
-                 u"advantages with respect to the problems above. In particular, if a certain behavior is robust and "
-                 u"does not depend on finely tuned parameters, then different implementations are more likely to "
-                 u"produce the same results—a key property for reproducible research. In addition, the code for these "
-                 u"models is typically simpler and therefore more readable, and can often run faster, enabling us to "
-                 u"carry out systematic parameter exploration. I will illustrate these points with a reduced model of "
-                 u"chopper cells in the ventral cochlear nucleus.",
+        abstract="There are a number of detailed models of auditory neurons that are able to reproduce a wide range "
+                 "of phenomena. However, using these models to test hypotheses can be challenging, as they have many "
+                 "parameters and complex interacting subsystems. This makes it difficult to investigate the function "
+                 "of a mechanism by varying just one parameter in isolation, or to assess the robustness of a model "
+                 "by systematically varying many parameters. In some cases, by limiting the scope of a model to "
+                 "testing a specific hypothesis using a particular set of stimuli, it is possible to create a "
+                 "reduced mathematical model with relatively few, independent parameters. This has considerable "
+                 "advantages with respect to the problems above. In particular, if a certain behavior is robust and "
+                 "does not depend on finely tuned parameters, then different implementations are more likely to "
+                 "produce the same results—a key property for reproducible research. In addition, the code for these "
+                 "models is typically simpler and therefore more readable, and can often run faster, enabling us to "
+                 "carry out systematic parameter exploration. I will illustrate these points with a reduced model of "
+                 "chopper cells in the ventral cochlear nucleus.",
     ),
     ############################### 2016 ###########################################################
    Publication(
        name='spikesorting', selected=True,
        year=2016,
-       authors=(u'Rossant C, Kadir SN, Goodman DFM, Schulman J, Hunter MLD, Saleem AB, Grosmark A, Belluscio M, '
-                u'Denfield GH, Ecker AS, Tolias AS, Solomon S, Buzsáki G, Carandini M, Harris KD'),
+       authors=('Rossant C, Kadir SN, Goodman DFM, Schulman J, Hunter MLD, Saleem AB, Grosmark A, Belluscio M, '
+                'Denfield GH, Ecker AS, Tolias AS, Solomon S, Buzsáki G, Carandini M, Harris KD'),
        title='Spike sorting for large, dense electrode arrays',
        journal='Nature Neuroscience',
        doi='10.1038/nn.4268',
@@ -683,26 +683,26 @@ publications = [
         categories=['Auditory', 'Modelling', 'Neuroinformatics'],
         urls=[('Conference', 'https://asa.scitation.org/doi/abs/10.1121/1.4970386'),
               ],
-        abstract=u"Many computational models of the auditory system exist, most of which can predict a variety of "
-                 u"psychoacoustical, physiological, or other experimental data. However, it is often challenging to "
-                 u"apply existing third party models to own experimental paradigms, even if the model code is "
-                 u"available. It will be demonstrated that model applicability is increased by providing a framework "
-                 u"where the model acts as artificial observer performing exactly the same task as the subject (e.g., "
-                 u"adaptive staircase procedure). A possible separation of the actual auditory processing of the "
-                 u"model from the decision making stage will be discussed, which allows for testing the auditory "
-                 u"processing of one model in a variety of experimental paradigms. The framework will consist of a "
-                 u"citable data repository providing the required data for the models as well as toolboxes "
-                 u"implementing both the auditory models and a variety of experimental paradigms. The model framework "
-                 u"will be demonstrated with exemplary binaural models applied to the three most common binaural "
-                 u"psychoacoustic paradigms: just noticeable difference (e.g., interaural time difference), "
-                 u"tone in noise detection (e.g., binaural masking level difference), and absolute judgment (e.g., "
-                 u"sound source localization). Further development of the framework will be discussed.",
+        abstract="Many computational models of the auditory system exist, most of which can predict a variety of "
+                 "psychoacoustical, physiological, or other experimental data. However, it is often challenging to "
+                 "apply existing third party models to own experimental paradigms, even if the model code is "
+                 "available. It will be demonstrated that model applicability is increased by providing a framework "
+                 "where the model acts as artificial observer performing exactly the same task as the subject (e.g., "
+                 "adaptive staircase procedure). A possible separation of the actual auditory processing of the "
+                 "model from the decision making stage will be discussed, which allows for testing the auditory "
+                 "processing of one model in a variety of experimental paradigms. The framework will consist of a "
+                 "citable data repository providing the required data for the models as well as toolboxes "
+                 "implementing both the auditory models and a variety of experimental paradigms. The model framework "
+                 "will be demonstrated with exemplary binaural models applied to the three most common binaural "
+                 "psychoacoustic paradigms: just noticeable difference (e.g., interaural time difference), "
+                 "tone in noise detection (e.g., binaural masking level difference), and absolute judgment (e.g., "
+                 "sound source localization). Further development of the framework will be discussed.",
     ),
 ############################### 2015 ###########################################################
     Publication(
         name='downstream_cns2015',  # selected=True,
         year=2015,  # set year to 'Preprints' if not published yet
-        authors=u'Goodman DFM, de Cheveigné A, Winter IM, Lorenzi C',
+        authors='Goodman DFM, de Cheveigné A, Winter IM, Lorenzi C',
         title='Downstream changes in firing regularity following damage to the early auditory system',
         conference='Computational Neuroscience',
         # for a conference paper (use short name here, and long name under additional_detail)
@@ -712,7 +712,7 @@ publications = [
         categories=['Auditory', 'Modelling'],
         urls=[('Conference', 'https://bmcneurosci.biomedcentral.com/articles/10.1186/1471-2202-16-S1-O11'),
               ],
-        abstract=u'''<p>We demonstrate how an abstract mathematical model that approximates a wide range of more 
+        abstract='''<p>We demonstrate how an abstract mathematical model that approximates a wide range of more 
         detailed models can be used to make predictions about hearing loss-related changes in neural behaviour.</p> 
 
         <p>One consequence of neurosensory hearing loss (noise-induced and aging-related) is a reduced ability to 
@@ -954,7 +954,7 @@ publications = [
     Publication(
         name='rat_barrel_cortex',
         year=2011,
-        authors=u'Kremer Y, Léger J-F, Goodman D, Brette R, Bourdieu L',
+        authors='Kremer Y, Léger J-F, Goodman D, Brette R, Bourdieu L',
         title='Late emergence of the vibrissa direction selectivity map in the rat barrel cortex',
         journal='Journal of Neuroscience',
         additional='31(29)',
