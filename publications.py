@@ -54,6 +54,36 @@ publications = [
 #        ),
     ############################### 2020 ###########################################################
     Publication(
+       name='learning_sound_loc_limited_sup', #selected=True,
+       year='Preprints', # set year to 'Preprints' if not published yet
+       authors='Chu Y, Luk W, Goodman D',
+       title='Learning Absolute Sound Source Localisation With Limited Supervisions',
+       #journal='', # for an article
+       #conference='', # for a conference paper (use short name here, and long name under additional_detail)
+       #additional='', # goes after Journal (Year)
+       #doi='', # linked to on detail page only
+       #additional_detail='', # only shown on detail page
+       categories=['Machine learning', 'Auditory', 'Sound localisation', 'Modelling', 'Neuroscience', 'Learning'],
+       urls=[('Preprint', 'https://arxiv.org/abs/2001.10605'),
+             ('Preprint (PDF)', 'https://arxiv.org/pdf/2001.10605'),
+             ],
+       abstract="An accurate auditory space map can be learned from auditory experience, for example during "
+                "development or in response to altered auditory cues such as a modified pinna. We studied neural "
+                "network models that learn to localise a single sound source in the horizontal plane using binaural "
+                "cues based on limited supervisions. These supervisions can be unreliable or sparse in real life. "
+                "First, a simple model that has unreliable estimation of the sound source location is built, "
+                "in order to simulate the unreliable auditory orienting response of newborns. It is used as a Teacher "
+                "that acts as a source of unreliable supervisions. Then we show that it is possible to learn a "
+                "continuous auditory space map based only on noisy left or right feedbacks from the Teacher. "
+                "Furthermore, reinforcement rewards from the environment are used as a source of sparse supervision. "
+                "By combining the unreliable innate response and the sparse reinforcement rewards, an accurate "
+                "auditory space map, which is hard to be achieved by either one of these two kind of supervisions, "
+                "can eventually be learned. Our results show that the auditory space mapping can be calibrated even "
+                "without explicit supervision. Moreover, this study implies a possibly more general neural mechanism "
+                "where multiple sub-modules can be coordinated to facilitate each other's learning process under "
+                "limited supervisions. ",
+       ),
+    Publication(
         name='brian2genn',  # selected=True,
         year=2020,  # set year to 'Preprints' if not published yet
         authors='Stimberg M, Goodman DFM, Nowotny T',
