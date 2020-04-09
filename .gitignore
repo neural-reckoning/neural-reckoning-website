@@ -92,3 +92,4 @@ ENV/
 # Temporary files
 temp/
 .idea/
+.vscode/settings.json
