@@ -1,5 +1,6 @@
 # coding=utf-8
 class Publication(object):
+    peer_reviewed = True # by default
     def __init__(self, **args):
         for k, v in list(args.items()):
             setattr(self, k, v)
@@ -35,7 +36,7 @@ category_detail_links = {
 publications = [
 #    Publication(
 #        name='', #selected=True,
-#        year=2014, # set year to 'Preprints' if not published yet
+#        year=2020, # set year to 'Preprints' if not published yet
 #        authors='',
 #        title='',
 #        journal='', # for an article
@@ -53,6 +54,30 @@ publications = [
 #        abstract="",
 #        ),
     ############################### 2020 ###########################################################
+    Publication(
+       name='elife_neuromatch', #selected=True,
+       year=2020, # set year to 'Preprints' if not published yet
+       authors='Achakulvisut T, Ruangrong T, Bilgin I, Van Den Bossche S, Wyble B, Goodman DFM, Kording KP',
+       title='Point of View: Improving on legacy conferences by moving online',
+       journal='eLife', # for an article
+       additional='9:e57892', # goes after Journal (Year)
+       doi='10.7554/eLife.57892', # linked to on detail page only
+       categories=['Neuroscience', 'Machine learning'],
+       urls=[('Journal', 'https://elifesciences.org/articles/57892'),
+             ],
+       abstract="""Scientific conferences and meetings have an important role in research, but they
+            also suffer from a number of disadvantages: in particular, they can have a massive
+            carbon footprint, they are time-consuming, and the high costs involved in attending can
+            exclude many potential participants. The COVID-19 pandemic has led to the cancellation
+            of many conferences, forcing the scientific community to explore online alternatives.
+            Here, we report on our experiences of organizing an online neuroscience conference,
+            neuromatch, that attracted some 3000 participants and featured two days of talks,
+            debates, panel discussions, and one-on-one meetings facilitated by a matching algorithm.
+            By offering most of the benefits of traditional conferences, several clear advantages,
+            and with fewer of the downsides, we feel that online conferences have the potential to
+            replace many legacy conferences.""",
+       peer_reviewed=False,
+       ),
     Publication(
        name='learning_sound_loc_limited_sup', #selected=True,
        year='Preprints', # set year to 'Preprints' if not published yet
@@ -1294,6 +1319,7 @@ publications = [
         urls=[('PDF', 'https://www.dropbox.com/s/ri7yhwzqk318ff4/brian-neuromorphic-engineer.pdf?dl=0')
               ],
         categories=['Brian'],
+        peer_reviewed=False,
         ),
 ############################### 2008 ###########################################################
     Publication(
