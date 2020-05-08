@@ -14,7 +14,31 @@
 
 {% macro detailed_publication(publication) %}
     <h2>{{ publication.title }}</h2>
-    <div>{{ publication.authors }}</div>
+        {% if publication.author_names_and_ids|length<=8 %}
+            <div class="d-none d-sm-block">
+                <ul class="list-inline author-list">
+                {% for (authname, authid) in publication.author_names_and_ids %}
+                    <li>
+                        {% if authid!='placeholder' %}
+                        <a href="{{authid}}.html">
+                        {% endif %}
+                        <div><img src="photo_{{authid}}.s.circ.png"/></div>
+                        <div>{{authname}}</div>
+                        {% if authid!='placeholder' %}
+                        </a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
+            <div class="d-block d-sm-none">
+                {{ publication.authors }}
+            </div>
+        {% else %}
+        <div>{{ publication.authors }}</div>
+        {% endif %}
+    </div>
+    <!--<div>{{ publication.authors }}</div>-->
     {% if publication.year!='Preprints' %}
         <div>
             <i>{{ publication.journal }}</i>
@@ -44,16 +68,16 @@
         <div><b>Abstract.</b> {{ publication.abstract }}</div>
     {% endif %}
     <div>&nbsp;</div>
-    <div><b>Links:</b>
+    <p><b>Links:</b>
     {% for url_title, url in publication.urls %}
         <button type="button" class="btn btn-light"><a href="{{ url }}">{{ url_title }}</a></button>
     {% endfor %}
-    </div>
-    <div><b>Categories:</b>
+    </p>
+    <p><b>Categories:</b>
     {% for catid in publication.category_ids | sort %}
         <button type="button" class="btn btn-light"><a href="publication_category_{{ catid }}.html">{{ category_id_names[catid] }}</a></button>
     {% endfor %}
-    </div>
+    </p>
 {% endmacro %}
 
 {% macro grouped_publications(member=None, cat=None) %}

@@ -13,6 +13,7 @@ import codecs
 from wordcloud import WordCloud
 import json
 import hashlib
+from PIL import Image, ImageDraw
 
 from publications import publications, category_inclusions, category_detail_links
 from members import members, member_types
@@ -62,6 +63,52 @@ def member_publications(member):
                 break
     return newpubs
 
+# Generate member thumbnails
+medium = 100
+small = 75
+def add_transparent_circle(im):
+    w, h = im.size
+    mask = Image.new("L", (w*5, h*5), 0)
+    draw = ImageDraw.Draw(mask)
+    draw.ellipse((0, 0, w*5, h*5), fill=255)
+    mask = mask.resize((w, h))
+    im.putalpha(mask)
+photo_fnames = [
+    #('files/portrait_placeholder', '.png')
+    ]
+for member in members:
+    photo_fnames.append(('files/photo_'+member.id, '.jpg'))
+for base, ext in photo_fnames:
+    if os.path.exists(base+ext):
+        try:
+            with Image.open(base+ext) as im:
+                # medium size thumbnail is just square
+                im_medium = im.copy()
+                im_medium.thumbnail((medium, medium))
+                #im_medium.save(base+'.m.jpg')
+                add_transparent_circle(im_medium)
+                im_medium.save(base+'.m.circ.png')
+                # small thumbnail is circle
+                im_small = im.copy()
+                im_small.thumbnail((small, small))
+                #im_small.save(base+'.s.jpg')
+                add_transparent_circle(im_small)
+                im_small.save(base+'.s.circ.png')
+        except OSError:
+            print('Cannot create thumbnail for', base)
+
+# Generate list of publication author names and ids
+authname_to_member_id = {}
+for member in members:
+    for memname in member.author_names:
+        authname_to_member_id[memname] = member.id
+for publication in publications:
+    pubauths = [a.strip() for a in publication.authors.split(',')]
+    author_names_and_ids = []
+    for pubauth in pubauths:
+        authid = authname_to_member_id.get(pubauth, 'placeholder')
+        author_names_and_ids.append((pubauth, authid))
+    publication.author_names_and_ids = author_names_and_ids
 
 # Generate links to member pages in publications
 for member in members:
