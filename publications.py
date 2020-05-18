@@ -55,6 +55,19 @@ publications = [
 #        ),
     ############################### 2020 ###########################################################
     Publication(
+       name='elife_labs_matching', #selected=True,
+       year=2020, # set year to 'Preprints' if not published yet
+       authors='Achakulvisut T, Ruangrong T, Acuna DE, Wyble B, Goodman D, Kording K',
+       title='neuromatch: Algorithms to match scientists',
+       journal='eLife Labs', # for an article
+       categories=['Neuroscience', 'Machine learning'],
+       urls=[('Journal', 'https://elifesciences.org/labs/5ed408f4/neuromatch-algorithms-to-match-scientists'),
+             ],
+       abstract="""We developed machine-learning algorithms to help connect scientists during online
+                   research conferences. """,
+       peer_reviewed=False,
+       ),
+    Publication(
        name='elife_neuromatch', #selected=True,
        year=2020, # set year to 'Preprints' if not published yet
        authors='Achakulvisut T, Ruangrong T, Bilgin I, Van Den Bossche S, Wyble B, Goodman DFM, Kording KP',
