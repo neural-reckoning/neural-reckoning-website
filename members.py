@@ -53,7 +53,7 @@ members = [
         Head of lab.
         ''',
         long='''
-        I am a lecturer in the
+        I am a (senior) lecturer (US equivalent: associate professor) in the
         <a href="http://www3.imperial.ac.uk/intellisysnetworks">Intelligent
         Systems and Networks group</a> in the
         <a href="http://www3.imperial.ac.uk/electricalengineering">Department
