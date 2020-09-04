@@ -51,6 +51,7 @@ unindexed_pages = OrderedDict([
     ('sensory.html', 'Sensory neuroscience'),
     ('comp-neuro-resources.html', 'Computational neuroscience resources'),
     ('mathematics.html', 'Mathematics'),
+    ('accessibility.html', 'Accessibility statement'),
     ])
 
 
