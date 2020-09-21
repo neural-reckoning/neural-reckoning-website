@@ -250,7 +250,8 @@ members = [
         and high performance implementations using spiking neural
         network (in particular, using non-standard computational
         hardware such as FPGAs). He is jointly supervised by
-        <a href="http://www.imperial.ac.uk/people/w.luk">Wayne Luk</a>.
+        <a href="http://www.imperial.ac.uk/people/w.luk">Wayne Luk</a> and
+        <a href="https://tbrx.github.io/">Brooks Paige</a>.
         </p>
         ''',
     ),
