@@ -22,11 +22,24 @@
 </head>
 <body>
 
-</div></div></div>
-<nav class="navbar navbar-light bg-light"><div class="container" style="height: 100px; background-image: url('banner-wide.png'); background-repeat: no-repeat; background-size: 460px 100px;">
-</div></nav>
+{% if filename=="index.html" %}
+    <!--<nav class="navbar navbar-light bg-light"><div class="container">
+        <img src="nr-logo.png" class="img-fluid" style="width: 300px;">
+    </div></nav>-->
+    <nav class="navbar navbar-light bg-light" style="background-image: url(banner-code.png); background-position: center bottom; background-repeat: no-repeat; background-size: auto; border-bottom: 1px solid #cecece;">
+        <div class="container">
+            <img src="nr-logo.png" class="img-fluid" style="width: 300px;">
+        </div>
+    </nav>
+{% endif %}
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light"><div class="container">
-    <a class="navbar-brand" href="index.html">Neural Reckoning</a>
+    <a class="navbar-brand" href="index.html">
+        {% if filename!="index.html" %}
+            <img src="nr-logo.png" class="img-fluid" style="width: 4em;">
+        {% else %}
+            Neural Reckoning
+        {% endif %}
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
