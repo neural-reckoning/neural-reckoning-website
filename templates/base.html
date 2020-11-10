@@ -23,9 +23,6 @@
 <body>
 
 {% if filename=="index.html" %}
-    <!--<nav class="navbar navbar-light bg-light"><div class="container">
-        <img src="nr-logo.png" class="img-fluid" style="width: 300px;">
-    </div></nav>-->
     <nav class="navbar navbar-light bg-light" style="background-image: url(banner-code.png); background-position: center bottom; background-repeat: no-repeat; background-size: auto; border-bottom: 1px solid #cecece;">
         <div class="container">
             <img src="nr-logo.png" class="img-fluid" style="width: 300px;">
@@ -35,7 +32,7 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light"><div class="container">
     <a class="navbar-brand" href="index.html">
         {% if filename!="index.html" %}
-            <img src="nr-logo.png" class="img-fluid" style="width: 4em;">
+            <img src="nr-logo-small.png" class="img-fluid" style="width: 4em;">
         {% else %}
             Neural Reckoning
         {% endif %}
