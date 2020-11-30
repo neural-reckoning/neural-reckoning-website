@@ -42,15 +42,16 @@ pages = OrderedDict([
     ('publications.html', 'Publications'),
     ('themes.html', 'Themes'),
     ('software.html', 'Software'),
-    ('openings.html', 'Openings'),
+    ('openings.html', 'Join us'),
     ('location.html', 'Location'),
     ])
 
 unindexed_pages = OrderedDict([
+    ('comp-neuro-resources.html', 'Computational neuroscience resources'),
     ('neuroinformatics.html', 'Neuroinformatics'),
     ('sensory.html', 'Sensory neuroscience'),
-    ('comp-neuro-resources.html', 'Computational neuroscience resources'),
     ('mathematics.html', 'Mathematics'),
+    ('apply_phd.html', 'PhD application process'),
     ('accessibility.html', 'Accessibility statement'),
     ])
 
