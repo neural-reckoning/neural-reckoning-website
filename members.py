@@ -101,6 +101,27 @@ members = [
     ############# PHD STUDENTS ################################
     # Alphabetical order
     Member(
+        id='gabriel_bena',
+        name='Gabriel Béna',
+        author_names=['Béna G'],
+        position='3_phd',
+        dates=[2021],
+        associate=False,
+        show_publications=True,
+        address=sk_address(1008),
+        # generate this by import base64; base64.b64encode('address')
+        #email='',
+        short='''
+        Machine learning and neuroscience
+        ''',
+        long='''
+        <p>
+        Gabriel Béna will work on machine learning and neuroscience, with a particular interest
+        in spiking neural networks.
+        </p>
+        ''',
+    ),
+    Member(
         id='isaac_engel',
         name='Isaac Engel',
         author_names=['Engel I'],
@@ -131,22 +152,24 @@ members = [
         id='pamela_hathway',
         name='Pamela Hathway',
         author_names=['Hathway P'],
-        position='3_phd',
-        dates=[2016],
+        position='5_former',
+        former_position='PhD',
+        dates=[2016, 2020],
         associate=False,
         show_publications=True,
-        address=sk_address(1008),
+        #address=sk_address(1008),
         # generate this by import base64; base64.b64encode('address')
-        email='cC5oYXRod2F5MTZAaW1wZXJpYWwuYWMudWs=',
+        #email='cC5oYXRod2F5MTZAaW1wZXJpYWwuYWMudWs=',
         short='''
         Large scale neural data analysis.
         ''',
         long='''
         <p>
-        Pamela Hathway is a PhD student working on the problem of large
-        scale neural data analysis. With new techniques to record from
-        huge numbers of neurons simultaneously, we need new methods to
-        make sense of this data.
+        Pamela Hathway was a PhD student working on the problem of large
+        scale neural data analysis, primarily on Neuropixels data. She
+        developed a new technique called "neural topic modelling",
+        adapting topic modelling methods from machine learning originally
+        designed for finding topics in sets of text documents automatically.
         </p>
         ''',
     ),
@@ -259,15 +282,16 @@ members = [
         id='jonathan_zheng',
         name='Jonathan Zheng',
         author_names=['Zheng JX', 'Zheng J'],
-        position='3_phd',
-        dates=[2016],
+        position='5_former',
+        former_position='PhD',
+        dates=[2016, 2020],
         associate=False,
         show_publications=True,
-        address=sk_address(1008),
+        #address=sk_address(1008),
         # generate this by import base64; base64.b64encode('address')
-        email='am9uYXRoYW4uemhlbmcxMkBpbXBlcmlhbC5hYy51aw==',
+        #email='am9uYXRoYW4uemhlbmcxMkBpbXBlcmlhbC5hYy51aw==',
         short='''
-        Interactive systems for ecosystems and neuroscience
+        Interactive systems for ecosystems and neuroscience.
         ''',
         social_media='''
             <ul class="list-unstyled">
@@ -278,11 +302,11 @@ members = [
             ''',
         long='''
         <p>
-        Jonathan Zheng is a PhD student, working on interactive systems for
-        visualising the behaviour of ecosystems and neural networks. He is
+        Jonathan Zheng was a PhD student, working on interactive systems for
+        visualising the behaviour of ecosystems and neural networks. He was
         jointly supervised by
         <a href="http://www.imperial.ac.uk/people/s.pawar">Samraat Pawar</a>.
-        You can see an early prototype of our work in ecosystems at the
+        You can download the ecosystems game he designed at the
         <a href="http://ecobuildergame.org/">EcoBuilder</a> website.
         </p>
         ''',
