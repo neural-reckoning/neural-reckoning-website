@@ -351,31 +351,29 @@ publications = [
        name='canonical_ambb', #selected=True,
        year='Preprints', # set year to 'Preprints' if not published yet
        authors='Lestang J-H, Goodman DFM',
-       title='Canonical brain computations account for perceived sound source location',
+       title='General neural mechanisms can account for rising slope preference in localization of ambiguous sounds',
        #journal='', # for an article
        #additional='', # goes after Journal (Year)
        #doi='', # linked to on detail page only
        #additional_detail='', # only shown on detail page
        categories=['Auditory', 'Sound localisation', 'Modelling'],
-       urls=[('Preprint', 'https://www.biorxiv.org/content/10.1101/687178v1'),
-             ('Preprint (PDF)', 'https://www.biorxiv.org/content/biorxiv/early/2019/06/29/687178.full-text.pdf'),
+       urls=[('Preprint', 'https://www.biorxiv.org/content/10.1101/687178v2'),
+             ('Preprint (PDF)', 'https://www.biorxiv.org/content/10.1101/687178v2.full.pdf'),
              ('Code (GitHub)', 'https://github.com/neural-reckoning/simple_ambb_modelling'),
              ('Live code (Binder)', 'https://mybinder.org/v2/gh/neural-reckoning/simple_ambb_modelling/master?filepath=index.ipynb'),
              ],
        abstract='''
        Sound localization in reverberant environments is a difficult task that human listeners perform effortlessly.
-       Many neural mechanisms have been proposed to account for this behavior. Generally they rely on emphasizing
-       localization information at the onset of the incoming sound while discarding localization cues that arrive later.
-       We modelled several of these mechanisms using neural circuits commonly found in the brain and tested their
-       performance in the context of experiments showing that, in the dominant frequency region for sound localisation,
-       we have a preference for auditory cues arriving during the rising slope of the sound energy (Dietz et al. 2013).
-       We found that both single cell mechanisms (onset and adaptation) and population mechanisms (lateral inhibition)
-       were easily able to reproduce the results across a very wide range of parameter settings. This suggests that
-       sound localization in reverberant environments may not require specialised mechanisms specific to that task, but
-       may instead rely on common neural circuits in the brain. This is in line with the theory that the brain consists
-       of functionally overlapping general purpose mechanisms rather than a collection of mechanisms each highly
-       specialised to specific tasks. This research is fully reproducible, and we made our code available to edit and
-       run online via interactive live notebooks.
+       Many neural mechanisms have been proposed to account for this behavior. Generally they rely on emphasizing localization
+       information at the onset of the incoming sound while discarding localization cues that arrive later. We modelled several
+       of these mechanisms using neural circuits commonly found in the brain and tested their performance in the context of
+       experiments showing that, in the dominant frequency region for sound localisation, we have a preference for auditory cues
+       arriving during the rising slope of the sound energy (Dietz et al., 2013). We found that both single cell mechanisms (onset
+       and adaptation) and population mechanisms (lateral inhibition) were easily able to reproduce the results across a very wide
+       range of parameter settings. This suggests that sound localization in reverberant environments may not require specialised
+       mechanisms specific to perform that task, but could instead rely on common neural circuits in the brain. This would allow
+       for the possibility of individual differences in learnt strategies or neuronal parameters. This research is fully
+       reproducible, and we made our code available to edit and run online via interactive live notebooks.
        ''',
        ),
     Publication(
