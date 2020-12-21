@@ -53,6 +53,33 @@ publications = [
 #              ],
 #        abstract="",
 #        ),
+    ############################### 2021 ###########################################################
+      Publication(
+            name='heterogeneity', selected=True,
+            year='Preprints', # set year to 'Preprints' if not published yet
+            authors='Perez-Nieves N, Leung VCH, Dragotti PL, Goodman DFM',
+            title='Neural heterogeneity promotes robust learning',
+            # journal='', # for an article
+            # additional='', # goes after Journal (Year)
+            # doi='', # linked to on detail page only
+            # additional_detail='', # only shown on detail page
+            categories=['Neuroscience', 'Learning', 'Visual', 'Auditory', 'Spiking', 'Machine learning', 'Modelling'],
+            urls=[('Preprint', 'https://www.biorxiv.org/content/10.1101/2020.12.18.423468v1'),
+                  ('Preprint (PDF)', 'https://www.biorxiv.org/content/10.1101/2020.12.18.423468v1.full.pdf'),
+                  ],
+            abstract='''
+            The brain has a hugely diverse, heterogeneous structure. By contrast, many functional
+            neural models are homogeneous. We compared the performance of spiking neural networks
+            trained to carry out difficult tasks, with varying degrees of heterogeneity. Introducing
+            heterogeneity in membrane and synapse time constants substantially improved task performance,
+            and made learning more stable and robust across multiple training methods, particularly for
+            tasks with a rich temporal structure. In addition, the distribution of time constants in the
+            trained networks closely matches those observed experimentally. We suggest that the
+            heterogeneity observed in the brain may be more than just the byproduct of noisy processes,
+            but rather may serve an active and important role in allowing animals to learn in changing
+            environments.
+            ''',
+            ),
     ############################### 2020 ###########################################################
     Publication(
        name='elife_labs_matching', #selected=True,
