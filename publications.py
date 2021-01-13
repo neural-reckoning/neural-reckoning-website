@@ -64,8 +64,8 @@ publications = [
             # doi='', # linked to on detail page only
             # additional_detail='', # only shown on detail page
             categories=['Neuroscience', 'Learning', 'Visual', 'Auditory', 'Spiking', 'Machine learning', 'Modelling'],
-            urls=[('Preprint', 'https://www.biorxiv.org/content/10.1101/2020.12.18.423468v1'),
-                  ('Preprint (PDF)', 'https://www.biorxiv.org/content/10.1101/2020.12.18.423468v1.full.pdf'),
+            urls=[('Preprint', 'https://www.biorxiv.org/content/10.1101/2020.12.18.423468v2'),
+                  ('Preprint (PDF)', 'https://www.biorxiv.org/content/10.1101/2020.12.18.423468v2.full.pdf'),
                   ],
             abstract='''
             The brain has a hugely diverse, heterogeneous structure. By contrast, many functional
