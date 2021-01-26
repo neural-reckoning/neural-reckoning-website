@@ -82,20 +82,17 @@
     {% endif %}
     {% if hasattr(publication, 'video_embed') %}
         <div>&nbsp;</div>
-        <div>
+        <div class="embed-responsive embed-responsive-16by9">
             {{publication.video_embed}}
         </div>
     {% endif %}
     <div>&nbsp;</div>
-    <p><b>Links:</b>
-    {% for url_title, url in publication.urls %}
-        <button type="button" class="btn btn-light"><a href="{{ url }}">{{ url_title }}</a></button>
-    {% endfor %}
+    <p>
+        <b style="vertical-align: middle;">Links:</b>
+    {% for url_title, url in publication.urls %}<button type="button" class="btn btn-light" style="margin: 2px;"><a href="{{ url }}">{{ url_title }}</a></button>{% endfor %}
     </p>
-    <p><b>Categories:</b>
-    {% for catid in publication.category_ids | sort %}
-        <button type="button" class="btn btn-light"><a href="publication_category_{{ catid }}.html">{{ category_id_names[catid] }}</a></button>
-    {% endfor %}
+    <p><b style="vertical-align: middle;">Categories:</b>
+    {% for catid in publication.category_ids | sort %}<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_{{ catid }}.html">{{ category_id_names[catid] }}</a></button>{% endfor %}
     </p>
 {% endmacro %}
 

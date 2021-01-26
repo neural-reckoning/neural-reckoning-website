@@ -109,7 +109,7 @@ publications = [
             environments.
             ''',
             video_embed='''
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/V2HFqVfeTPg"
+            <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/V2HFqVfeTPg"
              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
              gyroscope; picture-in-picture" allowfullscreen></iframe>
             ''',
