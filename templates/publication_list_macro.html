@@ -8,7 +8,12 @@
     <a href="pub_{{publication.name}}.html">
         <b>{{publication.title}}.</b><br/>
     </a>
-    <i>{{publication.journal}}{{publication.publisher}}{{publication.conference}}</i>
+    <i>
+        {{publication.journal}}
+        {% if publication.phd_thesis %}PhD thesis, {% endif %}
+        {{publication.publisher}}
+        {{publication.conference}}
+    </i>
     {% if publication.conference %}</div>{% endif %}</li>
 {% endmacro %}
 
@@ -42,6 +47,7 @@
     {% if publication.year!='Preprints' %}
         <div>
             <i>{{ publication.journal }}</i>
+            {% if publication.phd_thesis %}<i>PhD thesis, </i>{% endif %}
             <i>{{ publication.publisher }}</i>
             <i>{{ publication.conference }}</i>
             ({{ publication.year }}) <font color="#aaaaaa">{{ publication.additional }}</font>

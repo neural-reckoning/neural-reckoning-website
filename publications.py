@@ -42,6 +42,7 @@ publications = [
 #        journal='', # for an article
 #        publisher='', # for a book
 #        conference='', # for a conference paper (use short name here, and long name under additional_detail)
+#        phd_thesis=True, publisher='Imperial College London',
 #        additional='', # goes after Journal (Year)
 #        doi='', # linked to on detail page only
 #        book='', book_editors='', # if it's a book chapter, fill this in
@@ -54,6 +55,32 @@ publications = [
 #        abstract="",
 #        ),
     ############################### 2021 ###########################################################
+      Publication(
+            name='zheng_thesis',
+            year=2021, # set year to 'Preprints' if not published yet
+            authors='Zheng JX',
+            title='Advances in network visualisation with an application to serious games',
+            phd_thesis=True, publisher='Imperial College London',
+            # doi='', # linked to on detail page only
+            # additional_detail='', # only shown on detail page
+            categories=['Machine learning', 'Visualisation', 'Software', 'Ecology'],
+            urls=[('Thesis (PDF)', 'https://imperialcollegelondon.box.com/s/n2osvtt8exnturc5mzemzuou27vrb5i9')],
+            abstract='''
+            This thesis concerns the visualisation of networks, through an in-depth study into
+            the node-link diagram representation. Three subtopics are explored within this
+            space. The first is the problem of node layout, where the optimisation of a popular
+            energy function, known as stress, is improved through an algorithm known
+            as stochastic gradient descent. The second is the method of edge bundling, where
+            the idea of hierarchical edge bundling is explored in the absence of a known ground
+            truth hierarchy. Its similarity to a topologically lossless bundling method known
+            as power-confluent drawing is then leveraged, in order to improve technical problems
+            with the underlying algorithms. The final topic is an engineering application
+            in the form of a serious game called EcoBuilder, which utilises the node-link diagram
+            to visualise the dynamical behaviour of food webs. Its purpose is to crowdsource
+            research through a citizen science approach, with outcomes in both visualisation
+            and mathematical ecology.
+            ''',
+            ),
       Publication(
             name='heterogeneity', selected=True,
             year='Preprints', # set year to 'Preprints' if not published yet
@@ -81,6 +108,51 @@ publications = [
             ''',
             ),
     ############################### 2020 ###########################################################
+      Publication(
+            name='hathway_thesis',
+            year=2020, # set year to 'Preprints' if not published yet
+            authors='Hathway P',
+            title='Biologically-inspired machine learning approaches to large-scale neural data analysis',
+            phd_thesis=True, publisher='Imperial College London',
+            # doi='', # linked to on detail page only
+            # additional_detail='', # only shown on detail page
+            categories=['Machine learning', 'Visualisation', 'Software', 'Neuroscience', 'Neuroinformatics', 'Neural data analysis', 'Learning', 'Spiking', 'Plasticity'],
+            urls=[('Thesis (PDF)', 'https://imperialcollegelondon.box.com/s/2n8psmtrlxs5ymmus6vailh7i5x2wqmn')],
+            abstract='''
+            <p>Recent progress in recording techniques now allows researchers to record
+            from hundreds and even thousands of neurons simultaneously. New, scalable
+            methods need to be developed to handle such large data sets. Ideally
+            these methods should not only analyse the multi-dimensional data, but also
+            provide results which could be interpreted by the brain.</p>
+
+            <p>One key problem in neuronal data analysis is to identify neuronal assemblies
+            i.e. groups of neurons displaying coordinated neuronal activity. Currently
+            available methods either search for assemblies whose neurons participate
+            in repeated spike sequences or search for assemblies whose neurons display
+            similar firing rate modulations. In this thesis, I present two approaches
+            to the search for neuronal assemblies.</p>
+
+            <p>I investigate whether a spiking neural network equipped with biologically
+            plausible synaptic learning rules can provide a biologically interpretable way
+            of finding repeating spike patterns in neuronal data. Due to the similarities
+            between spiking neural networks to how brains function, this might be very
+            close to how the brain itself detects such repeated activity.</p>
+
+            <p>Furthermore, I present neural topic modelling – a new data analysis method
+            for large neuronal data sets. Based on a machine learning method from text
+            mining, neural topic modelling is scalable and produces interpretable results.
+            By including multiple features of neuronal spike trains and even other
+            data types such as local field potentials into the analysis, I can expand the
+            definition of neuronal assemblies to any type of neuronal activity features
+            which are co-modulated. The application of neural topic modelling to neuronal
+            recordings reveals interactions between features of neuronal activity
+            which have previously not been identified.</p>
+
+            <p>Since both approaches are biologically plausible, the results from both
+            methods can be used to generate hypotheses about how the brain processes
+            information and may reveal hitherto unknown information processing pathways.</p>
+            ''',
+            ),
     Publication(
        name='elife_labs_matching', #selected=True,
        year=2020, # set year to 'Preprints' if not published yet
@@ -177,6 +249,42 @@ publications = [
                  'faster than on CPU.',
         ),
     ############################### 2019 ###########################################################
+      Publication(
+            name='lestang_thesis',
+            year=2019, # set year to 'Preprints' if not published yet
+            authors='Lestang J-H',
+            title='The role of canonical neural computations in sound localization',
+            phd_thesis=True, publisher='Imperial College London',
+            # doi='', # linked to on detail page only
+            # additional_detail='', # only shown on detail page
+            categories=['Neuroscience', 'Modelling', 'Auditory', 'Sound localisation'],
+            urls=[('Thesis', 'https://spiral.imperial.ac.uk/handle/10044/1/76509'),
+                  ('Thesis (PDF)', 'https://spiral.imperial.ac.uk/bitstream/10044/1/76509/1/Lestang-J-2019-PhD-Thesis.pdf')],
+            abstract='''
+            Localizing sounds is an important ability for many species. However, reverberative sounds
+            present a signicant challenge to the auditory system as later arriving reverberations may carry
+            confounding localization cues. The 'precedence eect' refers to a set of perceptual behaviours
+            related to this situation. Studies investigating the precedence eect observed that the auditory
+            system tends to focus the core of the localization process on the computation of localization
+            cues carried by the rst arriving sound. Doing so relieves the auditory system from dealing
+            with contradictory localization cues in later arriving sounds. A recent study by Dietz et al.
+            (2013) conrmed that human listeners use this approach to deal with dynamic localization
+            cues. In order to provide an explanation for this nding, we rst tested several auditory models
+            on the specic task described in Dietz et al. (2013) in order to shortlist possible mechanisms
+            capable of accounting for the early extraction of temporal binaural cues. We found that the
+            best candidates to account for this data are single cell mechanisms, such as adaptation and
+            onset ring, as well as inhibitory population mechanisms. To further understand how each
+            mechanism contributes to the suppression of lagging sounds, we designed more general models
+            capable of demonstrating the principal features of each mechanism. We tested these models
+            thoroughly and found that all mechanisms were able to reproduce the results over a wide range
+            of parameters. This nding suggests that mechanisms responsible for the precedence eect
+            may not be specialized to perform this specic task but instead may be the results of more
+            commonly found neural circuits in the brain. Finally, to facilitate comparing the performance
+            of auditory models on psychoacoustical data, we also designed and implemented an auditory
+            modelling framework capable of addressing many challenges existing in the eld of auditory
+            modelling.
+            ''',
+            ),
     Publication(
        name='gamification_sound_localisation', #selected=True,
        year=2019, # set year to 'Preprints' if not published yet
