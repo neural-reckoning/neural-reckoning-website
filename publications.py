@@ -53,6 +53,7 @@ publications = [
 #              ('PDF', ''),
 #              ],
 #        abstract="",
+#        video_embed='',
 #        ),
     ############################### 2021 ###########################################################
       Publication(
@@ -93,6 +94,7 @@ publications = [
             categories=['Neuroscience', 'Learning', 'Visual', 'Auditory', 'Spiking', 'Machine learning', 'Modelling'],
             urls=[('Preprint', 'https://www.biorxiv.org/content/10.1101/2020.12.18.423468v2'),
                   ('Preprint (PDF)', 'https://www.biorxiv.org/content/10.1101/2020.12.18.423468v2.full.pdf'),
+                  ('Neurotheory talk (video)', 'https://www.youtube.com/watch?v=V2HFqVfeTPg&feature=youtu.be'),
                   ],
             abstract='''
             The brain has a hugely diverse, heterogeneous structure. By contrast, many functional
@@ -105,6 +107,11 @@ publications = [
             heterogeneity observed in the brain may be more than just the byproduct of noisy processes,
             but rather may serve an active and important role in allowing animals to learn in changing
             environments.
+            ''',
+            video_embed='''
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/V2HFqVfeTPg"
+             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+             gyroscope; picture-in-picture" allowfullscreen></iframe>
             ''',
             ),
     ############################### 2020 ###########################################################

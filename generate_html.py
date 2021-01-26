@@ -132,6 +132,31 @@ for member in members:
             publication.authors_short = pubauths[0]+', et al.'
             publication.authors_short_list_text = [pubauths[0], 'et al.']
 
+# generate icons for links in publications
+for publication in publications:
+    new_urls = []
+    icons = {}
+    for (name, url) in publication.urls:
+        if re.search(r'\bvideo\b', name, flags=re.IGNORECASE):
+            name = '<i class="fa fa-video-camera"></i> '+name
+            if 'video' not in icons: # only use the first video link
+                icons['video'] = f'''
+                    <a href="{url}" target="_blank">
+                        <i class="fa fa-video-camera"></i>
+                    </a>
+                    '''
+        if re.search(r'\bpdf\b', name, flags=re.IGNORECASE):
+            name = '<i class="fa fa-file-pdf-o"></i> '+name
+            if 'pdf' not in icons or 'preprint' in name.lower(): # use first pdf link or preprint version
+                icons['pdf'] = f'''
+                    <a href="{url}" target="_blank">
+                        <i class="fa fa-file-pdf-o"></i>
+                    </a>
+                    '''
+        new_urls.append((name, url))
+    publication.urls = new_urls
+    publication.icons = ''.join([icon_html for icon_type, icon_html in sorted(icons.items(), reverse=True)])
+
 
 def category_id(name):
     return name.lower().replace(' ', '')

@@ -1,19 +1,26 @@
 {% macro li_publication(publication) %}
     <li>{% if publication.conference %}<div class="{{collapse_conference_papers_default}} conference_paper">{% endif %}
-    {{publication.authors_short}}
-        {% if publication.year!='Preprints' %}
-            ({{publication.year}})
+        <div class="publication_list_text">
+            {{publication.authors_short}}
+                {% if publication.year!='Preprints' %}
+                    ({{publication.year}})
+                {% endif %}
+                <br/>
+            <a href="pub_{{publication.name}}.html">
+                <b>{{publication.title}}.</b><br/>
+            </a>
+            <i>
+                {{publication.journal}}
+                {% if publication.phd_thesis %}PhD thesis, {% endif %}
+                {{publication.publisher}}
+                {{publication.conference}}
+            </i>
+        </div>
+        {% if publication.icons %}
+            <div class="publication_list_icons">
+                {{ publication.icons }}
+            </div>
         {% endif %}
-        <br/>
-    <a href="pub_{{publication.name}}.html">
-        <b>{{publication.title}}.</b><br/>
-    </a>
-    <i>
-        {{publication.journal}}
-        {% if publication.phd_thesis %}PhD thesis, {% endif %}
-        {{publication.publisher}}
-        {{publication.conference}}
-    </i>
     {% if publication.conference %}</div>{% endif %}</li>
 {% endmacro %}
 
@@ -72,6 +79,12 @@
     <div>&nbsp;</div>
     {% if hasattr(publication, 'abstract') %}
         <div><b>Abstract.</b> {{ publication.abstract }}</div>
+    {% endif %}
+    {% if hasattr(publication, 'video_embed') %}
+        <div>&nbsp;</div>
+        <div>
+            {{publication.video_embed}}
+        </div>
     {% endif %}
     <div>&nbsp;</div>
     <p><b>Links:</b>

@@ -3,6 +3,21 @@
     list-style-type: none;
     text-indent: -2em;
     margin-bottom: 0.5em;
+    display: flex;
+    flex-direction: row;
+}
+
+.publication_list_text
+{
+    flex: 1 1 auto;
+}
+
+.publication_list_icons
+{
+    flex: 0 1 auto;
+    text-indent: 0px;
+    font-size: 150%;
+    padding-left: 5px;
 }
 
 .publication_list li a
