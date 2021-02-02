@@ -56,6 +56,28 @@ publications = [
 #        video_embed='',
 #        ),
     ############################### 2021 ###########################################################
+    Publication(
+        name='comments_on_edge_bundling',  # selected=True,
+        year=2021,
+        authors='Zheng JX, Pawar S, Goodman DFM',
+        title='Further Towards Unambiguous Edge Bundling: Investigating Power-Confluent Drawings for Network Visualization',
+        journal='IEEE Transactions on Visualization and Computer Graphics',
+        doi='10.1109/TVCG.2019.2944619',
+        categories=['Visualisation', 'Software'],
+        urls=[('Journal', 'https://ieeexplore.ieee.org/document/8852738'),
+              ('Preprint', 'https://arxiv.org/abs/1810.09948'),
+              ('Preprint (PDF)', 'https://arxiv.org/pdf/1810.09948'),
+              ('Code (GitHub)', 'https://github.com/jxz12/pconfluent'),
+              ],
+        abstract='''
+           Bach et al. [1] recently presented an algorithm for constructing confluent drawings, by leveraging power graph
+           decomposition to generate an auxiliary routing graph. We identify two problems with their method and offer a
+           single solution to solve both. We also classify the exact type of confluent drawings that the algorithm can
+           produce as 'power-confluent', and prove that it is a subclass of the previously studied 'strict confluent'
+           drawing. A description and source code of our implementation is also provided, which additionally includes an
+           improved method for power graph construction.
+           ''',
+            ),
       Publication(
             name='zheng_thesis',
             year=2021, # set year to 'Preprints' if not published yet
@@ -323,28 +345,6 @@ publications = [
                 'observed in polar angle judgement for the active listening group. The implications of this on the '
                 'putative mechanisms of the adaptation process are discussed.',
        ),
-    Publication(
-        name='comments_on_edge_bundling',  # selected=True,
-        year=2019,
-        authors='Zheng JX, Pawar S, Goodman DFM',
-        title='Further Towards Unambiguous Edge Bundling: Investigating Power-Confluent Drawings for Network Visualization',
-        journal='IEEE Transactions on Visualization and Computer Graphics',
-        doi='10.1109/TVCG.2019.2944619',
-        categories=['Visualisation', 'Software'],
-        urls=[('Journal', 'https://ieeexplore.ieee.org/document/8852738'),
-              ('Preprint', 'https://arxiv.org/abs/1810.09948'),
-              ('Preprint (PDF)', 'https://arxiv.org/pdf/1810.09948'),
-              ('Code (GitHub)', 'https://github.com/jxz12/pconfluent'),
-              ],
-        abstract='''
-           Bach et al. [1] recently presented an algorithm for constructing confluent drawings, by leveraging power graph
-           decomposition to generate an auxiliary routing graph. We identify two problems with their method and offer a
-           single solution to solve both. We also classify the exact type of confluent drawings that the algorithm can
-           produce as 'power-confluent', and prove that it is a subclass of the previously studied 'strict confluent'
-           drawing. A description and source code of our implementation is also provided, which additionally includes an
-           improved method for power graph construction.
-           ''',
-            ),
     Publication(
        name='attention_ccn2019', #selected=True,
        year=2019, # set year to 'Preprints' if not published yet
