@@ -36,7 +36,7 @@ category_detail_links = {
 publications = [
 #    Publication(
 #        name='', #selected=True,
-#        year=2020, # set year to 'Preprints' if not published yet
+#        year=2021, # set year to 'Preprints' if not published yet
 #        authors='',
 #        title='',
 #        journal='', # for an article
@@ -56,6 +56,25 @@ publications = [
 #        video_embed='',
 #        ),
     ############################### 2021 ###########################################################
+      Publication(
+            name='nmc3', #selected=True,
+            year=2021, # set year to 'Preprints' if not published yet
+            authors='Achakulvisut T, Ruangrong T, Mineault P, Vogels TP, Peters MAK, Poirazi P, Rozell C, Wyble B, Goodman DFM, Kording KP',
+            title='Towards democratizing and automating online conferences: lessons from the Neuromatch conferences',
+            journal='Trends in Cognitive Sciences', # for an article
+            #doi='', # linked to on detail page only
+            categories=['Neuroscience', 'Machine learning'],
+            urls=[('Preprint (PDF)', 'https://www.dropbox.com/s/snqgeuyt38vekfx/nmc3.pdf?dl=1'),
+                  ('Neuromatch', 'https://www.neuromatch.io/'),
+                  ],
+            abstract="""
+                  Legacy conferences are costly, time-consuming, and exclude scientists lacking various resources
+                  or abilities. During the 2020 pandemic, we created an online conference platform, Neuromatch
+                  Conferences, aimed at developing technological and cultural changes to make conferences more
+                  democratic, scalable, and accessible. We discuss the lessons we learned.
+                  """,
+            peer_reviewed=False,
+            ),
     Publication(
         name='comments_on_edge_bundling',  # selected=True,
         year=2021,
@@ -190,6 +209,7 @@ publications = [
        journal='eLife Labs', # for an article
        categories=['Neuroscience', 'Machine learning'],
        urls=[('Journal', 'https://elifesciences.org/labs/5ed408f4/neuromatch-algorithms-to-match-scientists'),
+             ('Neuromatch', 'https://www.neuromatch.io/'),
              ],
        abstract="""We developed machine-learning algorithms to help connect scientists during online
                    research conferences. """,
@@ -205,6 +225,7 @@ publications = [
        doi='10.7554/eLife.57892', # linked to on detail page only
        categories=['Neuroscience', 'Machine learning'],
        urls=[('Journal', 'https://elifesciences.org/articles/57892'),
+             ('Neuromatch', 'https://www.neuromatch.io/'),
              ],
        abstract="""Scientific conferences and meetings have an important role in research, but they
             also suffer from a number of disadvantages: in particular, they can have a massive
