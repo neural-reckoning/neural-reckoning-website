@@ -57,7 +57,27 @@ publications = [
 #        ),
     ############################### 2021 ###########################################################
       Publication(
-            name='nmc3', #selected=True,
+            name='snufa_review', selected=True,
+            year=2021, # set year to 'Preprints' if not published yet
+            authors='Zenke F, Bohté SM, Clopath C, Comşa IM, Göltz J, Maass W, Masquelier T, Naud R, Neftci EO, Petrovici MA, Scherr F, Goodman DFM',
+            title='Visualizing a joint future of neuroscience and neuromorphic engineering',
+            journal='Neuron', # for an article
+            #additional='', # goes after Journal (Year)
+            doi='10.1016/j.neuron.2021.01.009', # linked to on detail page only
+            categories=['Neuroscience', 'Spiking', 'Machine learning', 'Plasticity', 'Learning', 'Neuroinformatics'],
+            urls=[('Journal', 'https://www.sciencedirect.com/science/article/pii/S089662732100009X?dgcid=author'),
+                  ('Preprint (PDF)', 'https://www.dropbox.com/s/942rf97l80wyya5/snufa-meeting-report.pdf?dl=1'),
+                  ('Workshop', 'https://neural-reckoning.github.io/snn_workshop_2020/'),
+                  ('Workshop talk recordings', 'https://www.youtube.com/playlist?list=PL09WqqDbQWHFvM9DFYkM_GfnrVnIdLRhy'),
+                  ],
+            abstract='''
+                  Recent research resolves the challenging problem of building biophysically plausible spiking neural models that
+                  are also capable of complex information processing. This advance creates new opportunities in neuroscience and
+                  neuromorphic engineering, which we discussed at an online focus meeting.
+                  ''',
+            ),
+      Publication(
+            name='nmc3', selected=True,
             year=2021, # set year to 'Preprints' if not published yet
             authors='Achakulvisut T, Ruangrong T, Mineault P, Vogels TP, Peters MAK, Poirazi P, Rozell C, Wyble B, Goodman DFM, Kording KP',
             title='Towards democratizing and automating online conferences: lessons from the Neuromatch conferences',
@@ -756,7 +776,7 @@ publications = [
        ''',
        ),
     Publication(
-       name='vcn_regularity', selected=True,
+       name='vcn_regularity', #selected=True,
        year=2018,
        authors='Goodman DFM, Winter IM, Léger AC, de Cheveigné A, Lorenzi C',
        title='Modelling firing regularity in the ventral cochlear nucleus: mechanisms, and effects of stimulus level and synaptopathy',
@@ -1354,7 +1374,7 @@ publications = [
         ),
                 
     Publication(
-        name='spike_timing_sound_loc', selected=True,
+        name='spike_timing_sound_loc',# selected=True,
         year=2010,
         authors='Goodman DFM, Brette R',
         title='Spike-timing-based computation in sound localization',
