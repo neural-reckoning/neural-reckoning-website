@@ -82,9 +82,11 @@ publications = [
             authors='Achakulvisut T, Ruangrong T, Mineault P, Vogels TP, Peters MAK, Poirazi P, Rozell C, Wyble B, Goodman DFM, Kording KP',
             title='Towards democratizing and automating online conferences: lessons from the Neuromatch conferences',
             journal='Trends in Cognitive Sciences', # for an article
-            #doi='', # linked to on detail page only
+            doi='10.1016/j.tics.2021.01.007', # linked to on detail page only
             categories=['Neuroscience', 'Machine learning'],
-            urls=[('Preprint (PDF)', 'https://www.dropbox.com/s/snqgeuyt38vekfx/nmc3.pdf?dl=1'),
+            urls=[('Journal', 'https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(21)00009-7'),
+
+                  ('Preprint (PDF)', 'https://www.dropbox.com/s/snqgeuyt38vekfx/nmc3.pdf?dl=1'),
                   ('Neuromatch', 'https://www.neuromatch.io/'),
                   ],
             abstract="""
