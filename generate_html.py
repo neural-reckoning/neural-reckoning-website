@@ -14,6 +14,9 @@ from wordcloud import WordCloud
 import json
 import hashlib
 from PIL import Image, ImageDraw
+import tweepy
+from twitter_secrets import api_key, api_secret_key
+import shelve
 
 from publications import publications, category_inclusions, category_detail_links
 from members import members, member_types
@@ -153,14 +156,50 @@ for publication in publications:
                         <i class="fa fa-file-pdf-o"></i>
                     </a>
                     '''
+        if re.search(r'\b(twitter|tweeprint)\b', name, flags=re.IGNORECASE):
+            name = '<i class="fa fa-twitter"></i> '+name
+            if 'twitter' not in icons: # use first twitter link
+                icons['twitter'] = f'''
+                    <a href="{url}" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    '''
         new_urls.append((name, url))
     publication.urls = new_urls
+    publication.icons_dict = icons
     publication.icons = ''.join([icon_html for icon_type, icon_html in sorted(icons.items(), reverse=True)])
+
+
+# generate twitter threads for papers that have them
+twitter_api = None
+def get_twitter_api():
+    global twitter_api
+    if twitter_api is None:
+        auth = tweepy.AppAuthHandler(api_key, api_secret_key)
+        twitter_api = tweepy.API(auth)
+with shelve.open('twitter_threads_cache') as twitter_threads:
+    for publication in publications:
+        if hasattr(publication, 'last_tweet_in_thread'):
+            if publication.last_tweet_in_thread in twitter_threads:
+                publication.twitter_thread = twitter_threads[publication.last_tweet_in_thread]
+            else:
+                get_twitter_api()
+                i = publication.last_tweet_in_thread
+                tweets = []
+                omit = 0
+                while i is not None:
+                    s = twitter_api.get_status(i)
+                    embed = twitter_api.get_oembed('https://twitter.com/twitter/statuses/'+s.id_str, hide_thread=1, omit_script=omit, dnt=1, maxwidth=400)
+                    tweets.append(embed)
+                    i = s.in_reply_to_status_id
+                    omit = 1
+                html = ''.join(embed['html'] for embed in tweets[::-1])
+                publication.twitter_thread = html
+                twitter_threads[publication.last_tweet_in_thread] = html
 
 
 def category_id(name):
     return name.lower().replace(' ', '')
-
 
 # generate inclusions and category ids for publications
 all_categories = set(list(category_inclusions.keys())+[cat for inc in list(category_inclusions.values()) for cat in inc])

@@ -93,3 +93,7 @@ ENV/
 temp/
 .idea/
 .vscode/settings.json
+
+# secrets
+twitter_secrets.py
+twitter_threads_cache.*

@@ -69,12 +69,14 @@ publications = [
                   ('Preprint (PDF)', 'https://www.dropbox.com/s/942rf97l80wyya5/snufa-meeting-report.pdf?dl=1'),
                   ('Workshop', 'https://neural-reckoning.github.io/snn_workshop_2020/'),
                   ('Workshop talk recordings', 'https://www.youtube.com/playlist?list=PL09WqqDbQWHFvM9DFYkM_GfnrVnIdLRhy'),
+                  ('Twitter', 'https://twitter.com/neuralreckoning/status/1362107086017036289'),
                   ],
             abstract='''
                   Recent research resolves the challenging problem of building biophysically plausible spiking neural models that
                   are also capable of complex information processing. This advance creates new opportunities in neuroscience and
                   neuromorphic engineering, which we discussed at an online focus meeting.
                   ''',
+            last_tweet_in_thread='1362107103998062594',
             ),
       Publication(
             name='nmc3', selected=True,
@@ -85,7 +87,6 @@ publications = [
             doi='10.1016/j.tics.2021.01.007', # linked to on detail page only
             categories=['Neuroscience', 'Machine learning'],
             urls=[('Journal', 'https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(21)00009-7'),
-
                   ('Preprint (PDF)', 'https://www.dropbox.com/s/snqgeuyt38vekfx/nmc3.pdf?dl=1'),
                   ('Neuromatch', 'https://www.neuromatch.io/'),
                   ],
@@ -158,6 +159,7 @@ publications = [
             urls=[('Preprint', 'https://www.biorxiv.org/content/10.1101/2020.12.18.423468v2'),
                   ('Preprint (PDF)', 'https://www.biorxiv.org/content/10.1101/2020.12.18.423468v2.full.pdf'),
                   ('Neurotheory talk (video)', 'https://www.youtube.com/watch?v=V2HFqVfeTPg&feature=youtu.be'),
+                  ('Twitter', 'https://twitter.com/neuralreckoning/status/1341011316975218695'),
                   ],
             abstract='''
             The brain has a hugely diverse, heterogeneous structure. By contrast, many functional
@@ -176,6 +178,7 @@ publications = [
              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
              gyroscope; picture-in-picture" allowfullscreen></iframe>
             ''',
+            last_tweet_in_thread='1341011376299511809',
             ),
     ############################### 2020 ###########################################################
       Publication(
