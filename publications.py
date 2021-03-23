@@ -57,6 +57,39 @@ publications = [
 #        ),
     ############################### 2021 ###########################################################
       Publication(
+            name='heterogeneity', selected=True,
+            year='Preprints', # set year to 'Preprints' if not published yet
+            authors='Perez-Nieves N, Leung VCH, Dragotti PL, Goodman DFM',
+            title='Neural heterogeneity promotes robust learning',
+            # journal='', # for an article
+            # additional='', # goes after Journal (Year)
+            # doi='', # linked to on detail page only
+            # additional_detail='', # only shown on detail page
+            categories=['Neuroscience', 'Learning', 'Visual', 'Auditory', 'Spiking', 'Machine learning', 'Modelling'],
+            urls=[('Preprint', 'https://www.biorxiv.org/content/10.1101/2020.12.18.423468v3'),
+                  ('Preprint (PDF)', 'https://www.biorxiv.org/content/10.1101/2020.12.18.423468v3.full.pdf'),
+                  ('Neurotheory talk (video)', 'https://www.youtube.com/watch?v=V2HFqVfeTPg&feature=youtu.be'),
+                  ('Twitter', 'https://twitter.com/neuralreckoning/status/1341011316975218695'),
+                  ],
+            abstract='''
+            The brain has a hugely diverse, heterogeneous structure. Whether or not heterogeneity at the neural level
+            plays a functional role remains unclear, and has been relatively little explored in models which are often
+            highly homogeneous. We compared the performance of spiking neural networks trained to carry out tasks of
+            real-world difficulty, with varying degrees of heterogeneity, and found that it substantially improved task
+            performance. Learning was more stable and robust, particularly for tasks with a rich temporal structure. In
+            addition, the distribution of neuronal parameters in the trained networks closely matches those observed
+            experimentally. We suggest that the heterogeneity observed in the brain may be more than just the byproduct
+            of noisy processes, but rather may serve an active and important role in allowing animals to learn in
+            changing environments.
+            ''',
+            video_embed='''
+            <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/V2HFqVfeTPg"
+             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+             gyroscope; picture-in-picture" allowfullscreen></iframe>
+            ''',
+            last_tweet_in_thread='1341011376299511809',
+            ),
+      Publication(
             name='snufa_review', selected=True,
             year=2021, # set year to 'Preprints' if not published yet
             authors='Zenke F, Bohté SM, Clopath C, Comşa IM, Göltz J, Maass W, Masquelier T, Naud R, Neftci EO, Petrovici MA, Scherr F, Goodman DFM',
@@ -145,40 +178,6 @@ publications = [
             research through a citizen science approach, with outcomes in both visualisation
             and mathematical ecology.
             ''',
-            ),
-      Publication(
-            name='heterogeneity', selected=True,
-            year='Preprints', # set year to 'Preprints' if not published yet
-            authors='Perez-Nieves N, Leung VCH, Dragotti PL, Goodman DFM',
-            title='Neural heterogeneity promotes robust learning',
-            # journal='', # for an article
-            # additional='', # goes after Journal (Year)
-            # doi='', # linked to on detail page only
-            # additional_detail='', # only shown on detail page
-            categories=['Neuroscience', 'Learning', 'Visual', 'Auditory', 'Spiking', 'Machine learning', 'Modelling'],
-            urls=[('Preprint', 'https://www.biorxiv.org/content/10.1101/2020.12.18.423468v2'),
-                  ('Preprint (PDF)', 'https://www.biorxiv.org/content/10.1101/2020.12.18.423468v2.full.pdf'),
-                  ('Neurotheory talk (video)', 'https://www.youtube.com/watch?v=V2HFqVfeTPg&feature=youtu.be'),
-                  ('Twitter', 'https://twitter.com/neuralreckoning/status/1341011316975218695'),
-                  ],
-            abstract='''
-            The brain has a hugely diverse, heterogeneous structure. By contrast, many functional
-            neural models are homogeneous. We compared the performance of spiking neural networks
-            trained to carry out difficult tasks, with varying degrees of heterogeneity. Introducing
-            heterogeneity in membrane and synapse time constants substantially improved task performance,
-            and made learning more stable and robust across multiple training methods, particularly for
-            tasks with a rich temporal structure. In addition, the distribution of time constants in the
-            trained networks closely matches those observed experimentally. We suggest that the
-            heterogeneity observed in the brain may be more than just the byproduct of noisy processes,
-            but rather may serve an active and important role in allowing animals to learn in changing
-            environments.
-            ''',
-            video_embed='''
-            <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/V2HFqVfeTPg"
-             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-             gyroscope; picture-in-picture" allowfullscreen></iframe>
-            ''',
-            last_tweet_in_thread='1341011376299511809',
             ),
     ############################### 2020 ###########################################################
       Publication(
