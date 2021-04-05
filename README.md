@@ -2,6 +2,8 @@
 
 http://neural-reckoning.org
 
+Install GraphViz https://graphviz.org/
+
 Create an environment with
 
     conda create --name nrweb python=3 jinja2 pillow wordcloud
