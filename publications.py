@@ -57,6 +57,24 @@ publications = [
 #        ),
     ############################### 2021 ###########################################################
       Publication(
+            name='humanlikehearing', #selected=True,
+            year='Preprints', # set year to 'Preprints' if not published yet
+            authors='Weerts L, Clopath C, Goodman DFM',
+            title='The Psychoacoustics of Automatic Speech Recognition',
+            # journal='', # for an article
+            # additional='', # goes after Journal (Year)
+            # doi='', # linked to on detail page only
+            # additional_detail='', # only shown on detail page
+            categories=['Neuroscience', 'Auditory', 'Machine learning', 'Modelling', 'Software', 'Neuroinformatics'],
+            urls=[('Preprint', 'https://www.biorxiv.org/content/10.1101/2021.04.19.440438v1'),
+                  ('Preprint (PDF)', 'https://www.biorxiv.org/content/10.1101/2021.04.19.440438v1.full.pdf'),
+                  ],
+            abstract='''
+            Automatic speech recognition (ASR) software has been suggested as a candidate model of the human auditory system thanks to dramatic improvements in performance in recent years. To test this hypothesis, we compared several state-of-the-art ASR systems to results from humans on a barrage of standard psychoacoustic experiments. While some systems showed qualitative agreement with humans in some tests, in others all tested systems diverged markedly from humans. In particular, none of the models used spectral invariance, temporal fine structure or speech periodicity in a similar way to humans. We conclude that none of the tested ASR systems are yet ready to act as a strong proxy for human speech recognition. However, we note that the more recent systems with better performance also tend to better match human results, suggesting that continued cross-fertilisation of ideas between human and automatic speech recognition may be fruitful. Our software is released as an open-source toolbox to allow researchers to assess future ASR systems or add additional psychoacoustic measures.
+            ''',
+            #last_tweet_in_thread='1341011376299511809',
+            ),
+      Publication(
             name='heterogeneity', selected=True,
             year='Preprints', # set year to 'Preprints' if not published yet
             authors='Perez-Nieves N, Leung VCH, Dragotti PL, Goodman DFM',
