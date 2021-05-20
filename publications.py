@@ -57,6 +57,22 @@ publications = [
 #        ),
     ############################### 2021 ###########################################################
       Publication(
+            name='sparse_spiking_gradient_descent', #selected=True,
+            year='Preprints', # set year to 'Preprints' if not published yet
+            authors='Perez-Nieves N, Goodman DFM',
+            title='Sparse Spiking Gradient Descent',
+            # journal='', # for an article
+            # conference='', # for a conference paper (use short name here, and long name under additional_detail)
+            # additional='', # goes after Journal (Year)
+            # doi='', # linked to on detail page only
+            # additional_detail='', # only shown on detail page
+            categories=['Neuroscience', 'Learning', 'Spiking', 'Modelling', 'Machine learning', 'Neural simulation'],
+            urls=[('Preprint', 'https://arxiv.org/abs/2105.08810'),
+                  ('Preprint (PDF)', 'https://arxiv.org/pdf/2105.08810'),
+                  ],
+            abstract="There is an increasing interest in emulating Spiking Neural Networks (SNNs) on neuromorphic computing devices due to their low energy consumption. Recent advances have allowed training SNNs to a point where they start to compete with traditional Artificial Neural Networks (ANNs) in terms of accuracy, while at the same time being energy efficient when run on neuromorphic hardware. However, the process of training SNNs is still based on dense tensor operations originally developed for ANNs which do not leverage the spatiotemporally sparse nature of SNNs. We present here the first sparse SNN backpropagation algorithm which achieves the same or better accuracy as current state of the art methods while being significantly faster and more memory efficient. We show the effectiveness of our method on real datasets of varying complexity (Fashion-MNIST, Neuromophic-MNIST and Spiking Heidelberg Digits) achieving a speedup in the backward pass of up to 70x, and 40% more memory efficient, without losing accuracy.",
+            ),
+      Publication(
             name='jitter', #selected=True,
             year=2021, # set year to 'Preprints' if not published yet
             authors='Su Y, Chung Y, Goodman DFM, Hancock KE, Delgutte B',
@@ -81,6 +97,7 @@ publications = [
             categories=['Neuroscience', 'Auditory', 'Machine learning', 'Modelling', 'Software', 'Neuroinformatics'],
             urls=[('Preprint', 'https://www.biorxiv.org/content/10.1101/2021.04.19.440438v1'),
                   ('Preprint (PDF)', 'https://www.biorxiv.org/content/10.1101/2021.04.19.440438v1.full.pdf'),
+                  ('Code', 'https://github.com/neural-reckoning/HumanlikeHearing'),
                   ],
             abstract='''
             Automatic speech recognition (ASR) software has been suggested as a candidate model of the human auditory system thanks to dramatic improvements in performance in recent years. To test this hypothesis, we compared several state-of-the-art ASR systems to results from humans on a barrage of standard psychoacoustic experiments. While some systems showed qualitative agreement with humans in some tests, in others all tested systems diverged markedly from humans. In particular, none of the models used spectral invariance, temporal fine structure or speech periodicity in a similar way to humans. We conclude that none of the tested ASR systems are yet ready to act as a strong proxy for human speech recognition. However, we note that the more recent systems with better performance also tend to better match human results, suggesting that continued cross-fertilisation of ideas between human and automatic speech recognition may be fruitful. Our software is released as an open-source toolbox to allow researchers to assess future ASR systems or add additional psychoacoustic measures.
