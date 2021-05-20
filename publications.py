@@ -57,6 +57,25 @@ publications = [
 #        ),
     ############################### 2021 ###########################################################
       Publication(
+            name='humanlikehearing', #selected=True,
+            year='Preprints', # set year to 'Preprints' if not published yet
+            authors='Weerts L, Rosen S, Clopath C, Goodman DFM',
+            title='The Psychometrics of Automatic Speech Recognition',
+            # journal='', # for an article
+            # additional='', # goes after Journal (Year)
+            # doi='', # linked to on detail page only
+            # additional_detail='', # only shown on detail page
+            categories=['Neuroscience', 'Auditory', 'Machine learning', 'Modelling', 'Software', 'Neuroinformatics'],
+            urls=[('Preprint', 'https://www.biorxiv.org/content/10.1101/2021.04.19.440438v2'),
+                  ('Preprint (PDF)', 'https://www.biorxiv.org/content/10.1101/2021.04.19.440438v2.full.pdf'),
+                  ('Code', 'https://github.com/neural-reckoning/HumanlikeHearing'),
+                  ],
+            abstract='''
+             Automatic speech recognition (ASR) software has been suggested as a candidate model of the human auditory system thanks to dramatic improvements in performance in recent years. To test this hypothesis, we compared several state-of-the-art ASR systems to results from humans on a barrage of standard psychoacoustic experiments. While some systems showed qualitative agreement with humans in some tests, in others all tested systems diverged markedly from humans. In particular, none of the models used spectral invariance, temporal fine structure or speech periodicity in a similar way to humans. We conclude that none of the tested ASR systems are yet ready to act as a strong proxy for human speech recognition. However, we note that the more recent systems with better performance also tend to better match human results, suggesting that continued cross-fertilisation of ideas between human and automatic speech recognition may be fruitful. Our software is released as an open-source toolbox to allow researchers to assess future ASR systems or add additional psychoacoustic measures.
+            ''',
+            #last_tweet_in_thread='1341011376299511809',
+            ),
+      Publication(
             name='sparse_spiking_gradient_descent', #selected=True,
             year='Preprints', # set year to 'Preprints' if not published yet
             authors='Perez-Nieves N, Goodman DFM',
@@ -84,25 +103,6 @@ publications = [
                   ('Preprint (PDF)', 'https://www.dropbox.com/s/jy45giagrffkm9j/jitter-preprint.pdf?dl=1'),
                   ],
             abstract="Although pitch is closely related to temporal periodicity, stimuli with a degree of temporal irregularity can evoke a pitch sensation in human listeners. However, the neural mechanisms underlying pitch perception for irregular sounds are poorly understood. Here, we recorded responses of single units in the inferior colliculus (IC) of normal hearing (NH) rabbits to acoustic pulse trains with different amounts of random jitter in the inter-pulse intervals and compared with responses to electric pulse trains delivered through a cochlear implant (CI) in a different group of rabbits. In both NH and CI animals, many IC neurons demonstrated tuning of firing rate to the average pulse rate (APR) that was robust against temporal jitter, although jitter tended to increase the firing rates for APRs ≥ 1280 Hz. Strength and limiting frequency of spike synchronization to stimulus pulses were also comparable between periodic and irregular pulse trains, although there was a slight increase in synchronization at high APRs with CI stimulation. There were clear differences between CI and NH animals in both the range of APRs over which firing rate tuning was observed and the prevalence of synchronized responses. These results suggest that the pitches of regular and irregular pulse trains are coded differently by IC neurons depending on the APR, the degree of irregularity, and the mode of stimulation. In particular, the temporal pitch produced by periodic pulse trains lacking spectral cues may be based on a rate code rather than a temporal code at higher APRs.",
-            ),
-      Publication(
-            name='humanlikehearing', #selected=True,
-            year='Preprints', # set year to 'Preprints' if not published yet
-            authors='Weerts L, Clopath C, Goodman DFM',
-            title='The Psychoacoustics of Automatic Speech Recognition',
-            # journal='', # for an article
-            # additional='', # goes after Journal (Year)
-            # doi='', # linked to on detail page only
-            # additional_detail='', # only shown on detail page
-            categories=['Neuroscience', 'Auditory', 'Machine learning', 'Modelling', 'Software', 'Neuroinformatics'],
-            urls=[('Preprint', 'https://www.biorxiv.org/content/10.1101/2021.04.19.440438v1'),
-                  ('Preprint (PDF)', 'https://www.biorxiv.org/content/10.1101/2021.04.19.440438v1.full.pdf'),
-                  ('Code', 'https://github.com/neural-reckoning/HumanlikeHearing'),
-                  ],
-            abstract='''
-            Automatic speech recognition (ASR) software has been suggested as a candidate model of the human auditory system thanks to dramatic improvements in performance in recent years. To test this hypothesis, we compared several state-of-the-art ASR systems to results from humans on a barrage of standard psychoacoustic experiments. While some systems showed qualitative agreement with humans in some tests, in others all tested systems diverged markedly from humans. In particular, none of the models used spectral invariance, temporal fine structure or speech periodicity in a similar way to humans. We conclude that none of the tested ASR systems are yet ready to act as a strong proxy for human speech recognition. However, we note that the more recent systems with better performance also tend to better match human results, suggesting that continued cross-fertilisation of ideas between human and automatic speech recognition may be fruitful. Our software is released as an open-source toolbox to allow researchers to assess future ASR systems or add additional psychoacoustic measures.
-            ''',
-            #last_tweet_in_thread='1341011376299511809',
             ),
       Publication(
             name='heterogeneity', selected=True,
