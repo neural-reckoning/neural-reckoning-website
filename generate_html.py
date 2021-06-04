@@ -164,6 +164,14 @@ for publication in publications:
                         <i class="fa fa-twitter"></i>
                     </a>
                     '''
+        if re.search(r'\bhtml\b', name, flags=re.IGNORECASE):
+            name = '<i class="fa fa-file-text-o"></i> '+name
+            if 'html' not in icons: # use first html link
+                icons['html'] = f'''
+                    <a href="{url}" target="_blank">
+                        <i class="fa fa-file-text-o"></i>
+                    </a>
+                    '''
         new_urls.append((name, url))
     publication.urls = new_urls
     publication.icons_dict = icons

@@ -18,7 +18,7 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta name="twitter:widgets:csp" content="on">
     <meta name="twitter:dnt" content="on">
-    <title>Brian simulator</title>
+    <title>Extreme sparsity gives rise to functional specialization</title>
     <link rel="STYLESHEET" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -91,54 +91,36 @@
 <div class="main">
 
 
-    <h2>Brian simulator</h2>
+    <h2>Extreme sparsity gives rise to functional specialization</h2>
             <div class="d-none d-sm-block">
                 <ul class="list-inline author-list">
+                    <li>
+                        <a href="gabriel_bena.html">
+                        <div><img src="photo_gabriel_bena.s.circ.png"/></div>
+                        <div>Béna G</div>
+                        </a>
+                    </li>
                     <li>
                         <a href="dan_goodman.html">
                         <div><img src="photo_dan_goodman.s.circ.png"/></div>
                         <div>Goodman DFM</div>
                         </a>
                     </li>
-                    <li>
-                        <div><img src="photo_placeholder.s.circ.png"/></div>
-                        <div>Brette R</div>
-                    </li>
                 </ul>
             </div>
             <div class="d-block d-sm-none">
-                <a href="dan_goodman.html">Goodman DFM</a>, Brette R
+                <a href="gabriel_bena.html">Béna G</a>, <a href="dan_goodman.html">Goodman DFM</a>
             </div>
-    <!--<div><a href="dan_goodman.html">Goodman DFM</a>, Brette R</div>-->
-        <div>
-            <i>Scholarpedia</i>
-            <i></i>
-            <i></i>
-            (2013) <font color="#aaaaaa">8(1):10883</font>
-        </div>
+    <!--<div><a href="gabriel_bena.html">Béna G</a>, <a href="dan_goodman.html">Goodman DFM</a></div>-->
+        <div><i>Preprint</i></div>
     <div>&nbsp;</div>
-        <div><b>Abstract.</b> 
-        Brian is an open source Python package for developing simulations of
-        networks of spiking neurons. The design is aimed at minimizing users'
-        development time, with execution speed a secondary goal. Users specify
-        neuron and synapse models by giving their equations in standard
-        mathematical form, create groups of neurons and connect them via
-        synapses. The intent is to make the process as flexible as possible, so
-        that researchers are not restricted to using neuron and synapse models
-        already built in to the simulator. The entire simulator is written in
-        Python, using the NumPy and SciPy numerical and scientific computing
-        packages. Parts of the simulator can optionally be run using C++ code
-        generated on the fly (Goodman 2010). Computationally, Brian uses
-        vectorization techniques (Brette and Goodman 2011), so that for large
-        numbers of neurons, execution speed is of the same order of magnitude
-        as C++ code (Goodman and Brette 2008, 2009).         
-        </div>
+        <div><b>Abstract.</b> Modularity of neural networks – both biological and artificial – can be thought of either structurally or functionally, and the relationship between these is an open question. We show that enforcing structural modularity via sparse connectivity between two dense sub-networks which need to communicate to solve the task leads to functional specialization of the sub-networks, but only at extreme levels of sparsity. With even a moderate number of interconnections, the sub-networks become functionally entangled. Defining functional specialization is in itself a challenging problem without a universally agreed solution. To address this, we designed three different measures of specialization (based on weight masks, retraining and correlation) and found them to qualitatively agree. Our results have implications in both neuroscience and machine learning. For neuroscience, it shows that we cannot conclude that there is functional modularity simply by observing moderate levels of structural modularity: knowing the brain’s connectome is not sufficient for understanding how it breaks down into functional modules. For machine learning, using structure to promote functional modularity – which may be important for robustness and generalization – may require extremely narrow bottlenecks between modules.</div>
     <div>&nbsp;</div>
     <p>
         <b style="vertical-align: middle;">Links:</b>
-<button type="button" class="btn btn-light" style="margin: 2px;"><a href="http://www.scholarpedia.org/article/Brian_simulator"><i class="fa fa-file-text-o"></i> Full text (HTML)</a></button>    </p>
+<button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://neural-reckoning.github.io/preprints/sparsity-specialization/"><i class="fa fa-file-text-o"></i> Preprint (HTML)</a></button>    </p>
     <p><b style="vertical-align: middle;">Categories:</b>
-<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_brian.html">Brian</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuralsimulation.html">Neural simulation</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuroinformatics.html">Neuroinformatics</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuroscience.html">Neuroscience</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_software.html">Software</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_spiking.html">Spiking</a></button>    </p>
+<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_learning.html">Learning</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_machinelearning.html">Machine learning</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_modelling.html">Modelling</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuroscience.html">Neuroscience</a></button>    </p>
 
 
 

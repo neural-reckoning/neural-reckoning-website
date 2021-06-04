@@ -57,6 +57,21 @@ publications = [
 #        ),
     ############################### 2021 ###########################################################
       Publication(
+            name='sparsity_specialization', #selected=True,
+            year='Preprints', # set year to 'Preprints' if not published yet
+            authors='Béna G, Goodman DFM',
+            title='Extreme sparsity gives rise to functional specialization',
+            # journal='', # for an article
+            # conference='', # for a conference paper (use short name here, and long name under additional_detail)
+            # additional='', # goes after Journal (Year)
+            # doi='', # linked to on detail page only
+            # additional_detail='', # only shown on detail page
+            categories=['Neuroscience', 'Learning', 'Modelling', 'Machine learning'],
+            urls=[('Preprint (HTML)', 'https://neural-reckoning.github.io/preprints/sparsity-specialization/'),
+                  ],
+            abstract="Modularity of neural networks – both biological and artificial – can be thought of either structurally or functionally, and the relationship between these is an open question. We show that enforcing structural modularity via sparse connectivity between two dense sub-networks which need to communicate to solve the task leads to functional specialization of the sub-networks, but only at extreme levels of sparsity. With even a moderate number of interconnections, the sub-networks become functionally entangled. Defining functional specialization is in itself a challenging problem without a universally agreed solution. To address this, we designed three different measures of specialization (based on weight masks, retraining and correlation) and found them to qualitatively agree. Our results have implications in both neuroscience and machine learning. For neuroscience, it shows that we cannot conclude that there is functional modularity simply by observing moderate levels of structural modularity: knowing the brain’s connectome is not sufficient for understanding how it breaks down into functional modules. For machine learning, using structure to promote functional modularity – which may be important for robustness and generalization – may require extremely narrow bottlenecks between modules.",
+            ),
+      Publication(
             name='humanlikehearing', #selected=True,
             year='Preprints', # set year to 'Preprints' if not published yet
             authors='Weerts L, Rosen S, Clopath C, Goodman DFM',
@@ -281,7 +296,7 @@ publications = [
        title='neuromatch: Algorithms to match scientists',
        journal='eLife Labs', # for an article
        categories=['Neuroscience', 'Machine learning'],
-       urls=[('Journal', 'https://elifesciences.org/labs/5ed408f4/neuromatch-algorithms-to-match-scientists'),
+       urls=[('Journal (HTML)', 'https://elifesciences.org/labs/5ed408f4/neuromatch-algorithms-to-match-scientists'),
              ('Neuromatch', 'https://www.neuromatch.io/'),
              ],
        abstract="""We developed machine-learning algorithms to help connect scientists during online
@@ -297,7 +312,7 @@ publications = [
        additional='9:e57892', # goes after Journal (Year)
        doi='10.7554/eLife.57892', # linked to on detail page only
        categories=['Neuroscience', 'Machine learning'],
-       urls=[('Journal', 'https://elifesciences.org/articles/57892'),
+       urls=[('Journal (HTML)', 'https://elifesciences.org/articles/57892'),
              ('Neuromatch', 'https://www.neuromatch.io/'),
              ],
        abstract="""Scientific conferences and meetings have an important role in research, but they
@@ -563,7 +578,7 @@ publications = [
        # book='', book_editors='', # if it's a book chapter, fill this in
        # additional_detail='', # only shown on detail page
        categories=['Brian'],
-       urls=[('Journal', 'https://elifesciences.org/articles/47314'),
+       urls=[('Journal (HTML)', 'https://elifesciences.org/articles/47314'),
              ('Code', 'https://github.com/brian-team/brian2'),
              ('Documentation', 'https://brian2.readthedocs.io/en/stable/'),
              ('Examples code', 'https://github.com/brian-team/brian2_paper_examples'),
@@ -1061,7 +1076,7 @@ publications = [
         journal='Frontiers in Neuroinformatics',
         additional='8:6',
         doi='10.3389/fninf.2014.00006',
-        urls=[('Journal', 'http://www.frontiersin.org/Journal/abstract/69453'),
+        urls=[('Journal (HTML)', 'http://www.frontiersin.org/Journal/abstract/69453'),
               ],
         categories=['Brian'],
         abstract='''
@@ -1125,7 +1140,7 @@ publications = [
         title='Decoding neural responses to temporal cues for sound localization',
         journal='eLife',
         additional='2013;2:e01312',
-        urls=[('Journal', 'http://elifesciences.org/content/2/e01312'),
+        urls=[('Journal (HTML)', 'http://elifesciences.org/content/2/e01312'),
               ('Code on GitHub', 'https://github.com/neural-reckoning/decoding_sound_location'),
               ],
         categories=['Sound localisation', 'Modelling', 'Machine learning'],
@@ -1155,7 +1170,7 @@ publications = [
         title='Brian simulator',
         journal='Scholarpedia',
         additional='8(1):10883',
-        urls=[('Full text', 'http://www.scholarpedia.org/article/Brian_simulator'),
+        urls=[('Full text (HTML)', 'http://www.scholarpedia.org/article/Brian_simulator'),
               ],
         categories=['Brian'],
         abstract='''
@@ -1295,7 +1310,7 @@ publications = [
         journal='Frontiers in Neuroinformatics',
         additional='5:9',
         doi='10.3389/fninf.2011.00009',
-        urls=[('Journal', 'http://journal.frontiersin.org/Journal/10.3389/fninf.2011.00009/abstract'),
+        urls=[('Journal (HTML)', 'http://journal.frontiersin.org/Journal/10.3389/fninf.2011.00009/abstract'),
               ],
         categories=['Brian', 'Auditory'],
         abstract='''
@@ -1352,7 +1367,7 @@ publications = [
         journal='Frontiers in Neuroscience',
         additional='5:9',
         doi='10.3389/fnins.2011.00009',
-        urls=[('Journal', 'http://www.frontiersin.org/Neuroscience/10.3389/fnins.2011.00009/abstract'),
+        urls=[('Journal (HTML)', 'http://www.frontiersin.org/Neuroscience/10.3389/fnins.2011.00009/abstract'),
               ],
         categories=['Brian'],
         abstract='''
@@ -1434,7 +1449,7 @@ publications = [
         journal='PLoS Computational Biology',
         additional='6(11): e1000993',
         doi='10.1371/journal.pcbi.1000993',
-        urls=[('Journal', 'http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1000993'),
+        urls=[('Journal (HTML)', 'http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1000993'),
               ('PDF', 'http://www.ploscompbiol.org/article/fetchObject.action?uri=info%3Adoi%2F10.1371%2Fjournal.pcbi.1000993&representation=PDF'),
               ('Code on ModelDB', 'http://senselab.med.yale.edu/ModelDB/ShowModel.asp?model=126465'),
               ],
@@ -1502,7 +1517,7 @@ publications = [
         title='Automatic fitting of spiking neuron models to electrophysiological recordings',
         journal='Frontiers in Neuroinformatics',
         doi='10.3389/neuro.11.002.2010',
-        urls=[('Journal', 'http://journal.frontiersin.org/Journal/10.3389/neuro.11.002.2010/abstract'),
+        urls=[('Journal (HTML)', 'http://journal.frontiersin.org/Journal/10.3389/neuro.11.002.2010/abstract'),
               ],
         categories=['Brian'],
         abstract='''
@@ -1534,7 +1549,7 @@ publications = [
         journal='Frontiers in Neuroscience',
         additional='3(2)',
         doi='10.3389/neuro.01.026.2009',
-        urls=[('Journal', 'http://journal.frontiersin.org/Journal/10.3389/neuro.01.026.2009/abstract'),
+        urls=[('Journal (HTML)', 'http://journal.frontiersin.org/Journal/10.3389/neuro.01.026.2009/abstract'),
               ],
         categories=['Brian'],
         abstract='''
@@ -1577,7 +1592,7 @@ publications = [
         journal='Frontiers in Neuroinformatics',
         additional='2(5)',
         doi='10.3389/neuro.11.005.2008',
-        urls=[('Journal', 'http://journal.frontiersin.org/Journal/10.3389/neuro.11.005.2008/abstract'),
+        urls=[('Journal (HTML)', 'http://journal.frontiersin.org/Journal/10.3389/neuro.11.005.2008/abstract'),
               ],
         categories=['Brian'],
         abstract='''
