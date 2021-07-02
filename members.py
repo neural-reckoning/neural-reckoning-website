@@ -14,7 +14,7 @@ class Member(object):
 # Positions: 1_pi, 2_postdoc, 3_phd, 4_other, 5_former
 
 member_types = {'1_pi': '',
-                '2_postdoc': 'Postdocs',
+                '2_postdoc': 'Postdocs and Fellows',
                 '3_phd': 'PhD students',
                 '4_other': 'Others',
                 '5_former': 'Former members',
@@ -97,6 +97,35 @@ members = [
             <a href="mathematics.html">former career as a mathematician</a>.
         </p>
         ''',
+    ),
+    ############# POSTDOCS AND FELLOWS ################################
+    # Alphabetical order
+    Member(
+        id='marcus_ghosh',
+        name='Marcus Ghosh',
+        author_names=['Ghosh M'],
+        position='2_postdoc',
+        dates=[2021],
+        associate=False,
+        show_publications=True,
+        address=sk_address(1008),
+        # generate this by import base64; base64.b64encode('address')
+        #email='',
+        short='''
+        Multisensory integration in biological and simulated neural networks
+        ''',
+        long='''
+        <p>
+            Marcus Ghosh is a Research Fellow funded by the <a href="https://parisregion.eu/parisregionfp.html">Paris Region Fellowship Programme</a>. He works on spiking neural network models of multisensory integration in larval zebrafish. He carries out corresponding experimental work in the group of <a href="http://www.paris-neuroscience.fr/en/volker-bormuth">Volker Bormuth</a>.
+        </p>
+        ''',
+        social_media='''
+            <p>
+                <a href="https://twitter.com/marcusghosh">@MarcusGhosh</a><br/>
+                <a href="https://scholar.google.com/citations?user=__03svoAAAAJ&hl=en">Google Scholar</a><br/>
+                <a href="https://orcid.org/0000-0002-2428-4605">ORCID</a>
+            </p>
+            ''',
     ),
     ############# PHD STUDENTS ################################
     # Alphabetical order
