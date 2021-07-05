@@ -141,6 +141,7 @@ members = [
         address=sk_address(1008),
         # generate this by import base64; base64.b64encode('address')
         #email='',
+        semantic_scholar=2107033449,
         short='''
         Machine learning and neuroscience
         ''',
@@ -161,6 +162,7 @@ members = [
         show_publications=True,
         # generate this by import base64; base64.b64encode('address')
         email='aXNhYWMuZW5nZWxAaW1wZXJpYWwuYWMudWs=',
+        semantic_scholar=2051731561,
         short='''
         Auditory augmented reality
         ''',
@@ -190,6 +192,7 @@ members = [
         #address=sk_address(1008),
         # generate this by import base64; base64.b64encode('address')
         #email='cC5oYXRod2F5MTZAaW1wZXJpYWwuYWMudWs=',
+        semantic_scholar=8781017,
         short='''
         Large scale neural data analysis.
         ''',
@@ -215,6 +218,7 @@ members = [
         #address=sk_address(1008),
         # generate this by import base64; base64.b64encode('address')
         #email='ai5sZXN0YW5nMTVAaW1wZXJpYWwuYWMudWs=',
+        semantic_scholar=30444266,
         social_media='''
             <ul class="list-unstyled">
                 <li><a href="https://scholar.google.com/citations?user=j9wUAigAAAAJ&hl=en">Google Scholar</a></li>
@@ -247,6 +251,7 @@ members = [
         address=sk_address(1008),
         # generate this by import base64; base64.b64encode('address')
         email='bmljb2xhcy5wZXJlejE0QGltcGVyaWFsLmFjLnVr',
+        semantic_scholar=1999879303,
         short='''
         Multiresolution processing with heterogeneous spiking neural networks
         ''',
@@ -294,6 +299,7 @@ members = [
         address=sk_address(1008),
         # generate this by import base64; base64.b64encode('address')
         email='eS5jaHUxNkBpbXBlcmlhbC5hYy51aw==',
+        semantic_scholar=2070014411,
         short='''
         Principles of neural computation and simulation techniques
         ''',
@@ -320,6 +326,7 @@ members = [
         #address=sk_address(1008),
         # generate this by import base64; base64.b64encode('address')
         #email='am9uYXRoYW4uemhlbmcxMkBpbXBlcmlhbC5hYy51aw==',
+        semantic_scholar=27620389,
         short='''
         Interactive systems for ecosystems and neuroscience.
         ''',
@@ -350,7 +357,8 @@ members = [
         associate=False,
         show_publications=True,
         # generate this by import base64; base64.b64encode('address')
-        email='dC5jbGVnZzE3QGltcGVyaWFsLmFjLnVr',
+        #email='dC5jbGVnZzE3QGltcGVyaWFsLmFjLnVr',
+        semantic_scholar=48055309,
         short='''
         Effects of temperature on the structure and dynamics of ecological networks
         ''',

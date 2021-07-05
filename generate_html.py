@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from get_semantic_scholar_data import get_semantic_scholar_publications
 import os, sys
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from collections import OrderedDict, defaultdict
@@ -23,6 +24,7 @@ from members import members, member_types
 from email_addresses import generate_email
 from link_exceptions import link_exceptions
 from get_orcid_data import get_orcid_publications
+from get_semantic_scholar_data import get_semantic_scholar_publications
 
 check_links = True
 
@@ -103,10 +105,12 @@ for base, ext in photo_fnames:
         except OSError:
             print('Cannot create thumbnail for', base)
 
-# Get ORCID publications
+# Get ORCID/SemanticScholar publications
 for member in members:
     if hasattr(member, 'orcid'):
-        member.orcid_publications = get_orcid_publications(member.orcid)
+        member.external_publications = get_orcid_publications(member.orcid)
+    elif hasattr(member, 'semantic_scholar'):
+        member.external_publications = get_semantic_scholar_publications(member.semantic_scholar)
 
 # Generate list of publication author names and ids
 authname_to_member_id = {}

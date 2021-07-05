@@ -1,5 +1,6 @@
 import requests
 import json
+from diskcache import Cache
 
 __all__ = ['ORCIDPublication', 'get_orcid_publications']
 
@@ -8,7 +9,13 @@ class ORCIDPublication:
         for k, v in kwds.items():
             setattr(self, k, v)
 
+
+orcid_cache = Cache('temp/orcid_cache')
+
+
 def get_orcid_publications(user_id):
+    if user_id in orcid_cache:
+        return orcid_cache[user_id]
     resp = requests.get(f"https://pub.orcid.org/v2.0/{user_id}/works",
                         headers={'Accept':'application/orcid+json'})
     results = resp.json()
@@ -41,5 +48,6 @@ def get_orcid_publications(user_id):
         if not dup:
             publications.append(pub)
         titles.add(title.lower())
-        dois.add(doi.lower())                
+        dois.add(doi.lower())
+    orcid_cache.set(user_id, publications, expire=24*60*60)
     return publications

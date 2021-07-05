@@ -71,20 +71,19 @@
         {{ publist.grouped_publications(member) }}
         {% endif %}
 
-        {% if member.orcid %}
-        <h2>Publications from ORCID</h2>
+        {% if member.external_publications %}
+        <h2>External publications</h2>
         <p>
-            This is a short preview of the publications from the
-            <a href="http://orcid.org/{{member.orcid}}">ORCID profile of {{member.name}}</a>.
+            This is a short preview of the publications from other sources (ORCID, Semantic Scholar).
             {% if member.id!="dan_goodman" %}
             Note that publications from work done outside the Neural Reckoning group are included.
             {% endif %}
         </p>
         <ul class="list-group">
-            {% for pub in member.orcid_publications %}
+            {% for pub in member.external_publications | sort(attribute='date') | reverse %}
             <li class="list-group-item">
                 {{pub.date}}
-                ({{pub.type.lower()}})
+                {% if pub.type %} ({{pub.type.lower()}}) {% endif %}
                 <br/>
                 {% if pub.url %}<a href="{{pub.url}}">{% endif %}
                 {{pub.title}}
