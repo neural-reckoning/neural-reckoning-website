@@ -126,6 +126,7 @@ members = [
                 <a href="https://orcid.org/0000-0002-2428-4605">ORCID</a>
             </p>
             ''',
+        orcid='0000-0002-2428-4605',
     ),
     ############# PHD STUDENTS ################################
     # Alphabetical order

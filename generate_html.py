@@ -22,6 +22,7 @@ from publications import publications, category_inclusions, category_detail_link
 from members import members, member_types
 from email_addresses import generate_email
 from link_exceptions import link_exceptions
+from get_orcid_data import get_orcid_publications
 
 check_links = True
 
@@ -101,6 +102,11 @@ for base, ext in photo_fnames:
                 im_small.save(base+'.s.circ.png')
         except OSError:
             print('Cannot create thumbnail for', base)
+
+# Get ORCID publications
+for member in members:
+    if hasattr(member, 'orcid'):
+        member.orcid_publications = get_orcid_publications(member.orcid)
 
 # Generate list of publication author names and ids
 authname_to_member_id = {}
