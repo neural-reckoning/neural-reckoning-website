@@ -47,6 +47,7 @@ members = [
                 <a href="https://scholar.google.com/citations?user=2HiNqI4AAAAJ">Google Scholar</a>
             </p>
             ''',
+        twitter='neuralreckoning',
         short='''
         Head of lab.
         ''',
@@ -87,9 +88,10 @@ members = [
             available computational neuroscience resources</a>. I co-founded
             <a href="https://neuromatch.io">Neuromatch</a> with
             <a href="http://kordinglab.com/">Konrad Kording</a>. I'm an editor
-            for the open access journal
-            <a href="https://nbdt.scholasticahq.com/">Neurons, Behavior, Data
-            analysis, and Theory</a>.
+            for the open access journals
+            <a href="https://elifesciences.org">eLife</a>, 
+            <a href="https://nbdt.scholasticahq.com/">Neurons, Behavior, Data analysis, and Theory</a>, and
+            <a href="https://cneuro.peercommunityin.org/">PCI Circuit Neuroscience</a>.
         </p>
 
         <p>
@@ -126,6 +128,7 @@ members = [
                 <a href="https://orcid.org/0000-0002-2428-4605">ORCID</a>
             </p>
             ''',
+        twitter='MarcusGhosh',
         orcid='0000-0002-2428-4605',
     ),
     ############# PHD STUDENTS ################################

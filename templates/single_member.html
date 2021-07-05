@@ -51,6 +51,14 @@
                 {% endfor %}
             </div>
         {% endif %}
+        {% if hasattr(member, 'twitter') %}
+            <a class="twitter-timeline" data-width="400" data-height="1000" data-show-replies="true"
+            href="https://twitter.com/{{member.twitter}}">
+                Tweets by {{member.twitter}}
+            </a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        {% endif %}
+        
 
     </div>
     <div class="col-sm-8 order-sm-1">
