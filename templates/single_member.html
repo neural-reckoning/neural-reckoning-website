@@ -72,7 +72,7 @@
         <h2>Publications</h2>
 
         {% if member.id!="dan_goodman" %}
-            <p>Note that only publications as part of the Neural Reckoning group are included.</p>
+            <p>Note that only publications as part of the Neural Reckoning group are included here{% if member.external_publications %} (see <a href="#external_publications">external publications below</a> for full list){% endif %}.</p>
         {% else %}
             {% set collapse_conference_papers_default = "collapse" %}
             {{ publist.show_conference_papers() }}
@@ -82,26 +82,17 @@
         {% endif %}
 
         {% if member.external_publications %}
-        <h2>External publications</h2>
+        <h2 id="external_publications">External publications</h2>
         <p>
-            This is a short preview of the publications from other sources (ORCID, Semantic Scholar).
+            This is a short preview of the publications from other sources (<a href="https://orcid.org/">ORCID</a>,
+            <a href="https://www.semanticscholar.org/">Semantic Scholar</a>).
             {% if member.id!="dan_goodman" %}
-            Note that publications from work done outside the Neural Reckoning group are included.
+            Note that publications from work done outside the Neural Reckoning group are included in this list.
             {% endif %}
         </p>
-        <ul class="list-group">
-            {% for pub in member.external_publications | sort(attribute='date') | reverse %}
-            <li class="list-group-item">
-                {{pub.date}}
-                {% if pub.type %} ({{pub.type.lower()}}) {% endif %}
-                <br/>
-                {% if pub.url %}<a href="{{pub.url}}">{% endif %}
-                {{pub.title}}
-                {% if pub.url %}</a>{% endif %}
-                {% if pub.journal %}<br/><i>{{pub.journal}}</i>{% endif %}
-            </li>
-            {% endfor %}
-        </ul>
+
+        {{ publist.external_publications(member) }}
+
         {% endif %}
 
         <p>&nbsp;</p>

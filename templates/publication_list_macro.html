@@ -157,3 +157,29 @@
         </label>
     </div>-->
 {% endmacro %}
+
+{% macro li_external_publication(pub) %}
+    <li><div class="publication_list_text">
+        {% if pub.authors %}
+        {{ pub.authors }} ({{pub.date}})
+        <br/>
+        {% endif %}
+        {% if pub.url %}<a href="{{pub.url}}">{% endif %}
+        <b>{{pub.title}}</b>
+        {% if pub.url %}</a>{% endif %}
+        {% if pub.journal %}<br/><i>{{pub.journal}}</i>{% endif %}
+    </div></li>
+{% endmacro %}
+
+{% macro external_publications(member) %}
+    <div class="publication_list">
+        {% for group in member.external_publications | groupby('date') | reverse %}
+            <h5>{{group.grouper}}</h5>
+            <ul>
+            {% for publication in group.list %}
+                {{ li_external_publication(publication) }}
+            {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+{% endmacro %}

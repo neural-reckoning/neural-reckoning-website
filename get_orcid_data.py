@@ -39,6 +39,13 @@ def get_orcid_publications(user_id):
             if eid['external-id-type'].lower()=='doi':
                 doi = eid['external-id-value']
                 pub.url = "http://dx.doi.org/"+doi
+        if 'contributors' in work and 'contributor' in work['contributors'] and len(work['contributors']['contributor']):
+            authors = []
+            for contrib in work['contributors']['contributor']:
+                authors.append(contrib['credit-name']['value'])
+            if len(authors)>6:
+                authors = [authors[0], 'et al.']
+            pub.authors = ', '.join(authors)
         # Try to minimize duplicate entries that are found
         dup = False
         if title.lower() in titles:

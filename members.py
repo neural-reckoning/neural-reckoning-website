@@ -276,6 +276,7 @@ members = [
         show_publications=True,
         address=sk_address(1008),
         social_media='''<a href="http://lotteweerts.com/">lotteweerts.com</a>''',
+        semantic_scholar=101496339,
         # generate this by import base64; base64.b64encode('address')
         email='bG90dGUud2VlcnRzMTVAaW1wZXJpYWwuYWMudWs=',
         short='''
