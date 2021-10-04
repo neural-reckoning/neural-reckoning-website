@@ -8,7 +8,7 @@
     {% if member_types[group.grouper] %}
         <h3>{{member_types[group.grouper]}}</h3>
     {% endif %}
-    {% for member in group.list | sort(attribute='author_names') | sort(attribute='dates') %}
+    {% for member in group.list | sort(attribute='author_names') | sort(attribute='dates', reverse=(group.grouper=='5_former')) %}
     <div class="row mb-3 align-items-center">
         <div style="flex: 0 0 125px;">
             <a href="{{member.id}}.html">

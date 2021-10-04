@@ -57,6 +57,27 @@ publications = [
 #        ),
     ############################### 2021 ###########################################################
       Publication(
+            name='heterogeneity', selected=True,
+            year=2021, # set year to 'Preprints' if not published yet
+            authors='Perez-Nieves N, Leung VCH, Dragotti PL, Goodman DFM',
+            title='Neural heterogeneity promotes robust learning',
+            journal='Nature Communications', # for an article
+            additional='12, 5791', # goes after Journal (Year)
+            doi='10.1038/s41467-021-26022-3', # linked to on detail page only
+            # additional_detail='', # only shown on detail page
+            categories=['Neuroscience', 'Learning', 'Visual', 'Auditory', 'Spiking', 'Machine learning', 'Modelling'],
+            urls=[('Journal (HTML)', 'https://www.nature.com/articles/s41467-021-26022-3'),
+                  ('Journal (PDF)', 'https://www.nature.com/articles/s41467-021-26022-3.pdf'),
+                  ('Preprint', 'https://www.biorxiv.org/content/10.1101/2020.12.18.423468v3'),
+                  ('Neurotheory talk (video)', 'https://www.youtube.com/watch?v=V2HFqVfeTPg&feature=youtu.be'),
+                  ('Twitter', 'https://twitter.com/neuralreckoning/status/1341011316975218695'),
+                  ],
+            abstract='''
+            The brain is a hugely diverse, heterogeneous structure. Whether or not heterogeneity at the neural level plays a functional role remains unclear, and has been relatively little explored in models which are often highly homogeneous. We compared the performance of spiking neural networks trained to carry out tasks of real-world difficulty, with varying degrees of heterogeneity, and found that heterogeneity substantially improved task performance. Learning with heterogeneity was more stable and robust, particularly for tasks with a rich temporal structure. In addition, the distribution of neuronal parameters in the trained networks is similar to those observed experimentally. We suggest that the heterogeneity observed in the brain may be more than just the byproduct of noisy processes, but rather may serve an active and important role in allowing animals to learn in changing environments.
+            ''',
+            last_tweet_in_thread='1341011376299511809',
+            ),
+      Publication(
             name='sparsity_specialization', #selected=True,
             year='Preprints', # set year to 'Preprints' if not published yet
             authors='Béna G, Goodman DFM',
@@ -123,39 +144,6 @@ publications = [
                   ('Preprint (PDF)', 'https://www.dropbox.com/s/jy45giagrffkm9j/jitter-preprint.pdf?dl=1'),
                   ],
             abstract="Although pitch is closely related to temporal periodicity, stimuli with a degree of temporal irregularity can evoke a pitch sensation in human listeners. However, the neural mechanisms underlying pitch perception for irregular sounds are poorly understood. Here, we recorded responses of single units in the inferior colliculus (IC) of normal hearing (NH) rabbits to acoustic pulse trains with different amounts of random jitter in the inter-pulse intervals and compared with responses to electric pulse trains delivered through a cochlear implant (CI) in a different group of rabbits. In both NH and CI animals, many IC neurons demonstrated tuning of firing rate to the average pulse rate (APR) that was robust against temporal jitter, although jitter tended to increase the firing rates for APRs ≥ 1280 Hz. Strength and limiting frequency of spike synchronization to stimulus pulses were also comparable between periodic and irregular pulse trains, although there was a slight increase in synchronization at high APRs with CI stimulation. There were clear differences between CI and NH animals in both the range of APRs over which firing rate tuning was observed and the prevalence of synchronized responses. These results suggest that the pitches of regular and irregular pulse trains are coded differently by IC neurons depending on the APR, the degree of irregularity, and the mode of stimulation. In particular, the temporal pitch produced by periodic pulse trains lacking spectral cues may be based on a rate code rather than a temporal code at higher APRs.",
-            ),
-      Publication(
-            name='heterogeneity', selected=True,
-            year='Preprints', # set year to 'Preprints' if not published yet
-            authors='Perez-Nieves N, Leung VCH, Dragotti PL, Goodman DFM',
-            title='Neural heterogeneity promotes robust learning',
-            # journal='', # for an article
-            # additional='', # goes after Journal (Year)
-            # doi='', # linked to on detail page only
-            # additional_detail='', # only shown on detail page
-            categories=['Neuroscience', 'Learning', 'Visual', 'Auditory', 'Spiking', 'Machine learning', 'Modelling'],
-            urls=[('Preprint', 'https://www.biorxiv.org/content/10.1101/2020.12.18.423468v3'),
-                  ('Preprint (PDF)', 'https://www.biorxiv.org/content/10.1101/2020.12.18.423468v3.full.pdf'),
-                  ('Neurotheory talk (video)', 'https://www.youtube.com/watch?v=V2HFqVfeTPg&feature=youtu.be'),
-                  ('Twitter', 'https://twitter.com/neuralreckoning/status/1341011316975218695'),
-                  ],
-            abstract='''
-            The brain has a hugely diverse, heterogeneous structure. Whether or not heterogeneity at the neural level
-            plays a functional role remains unclear, and has been relatively little explored in models which are often
-            highly homogeneous. We compared the performance of spiking neural networks trained to carry out tasks of
-            real-world difficulty, with varying degrees of heterogeneity, and found that it substantially improved task
-            performance. Learning was more stable and robust, particularly for tasks with a rich temporal structure. In
-            addition, the distribution of neuronal parameters in the trained networks closely matches those observed
-            experimentally. We suggest that the heterogeneity observed in the brain may be more than just the byproduct
-            of noisy processes, but rather may serve an active and important role in allowing animals to learn in
-            changing environments.
-            ''',
-            video_embed='''
-            <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/V2HFqVfeTPg"
-             frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-             gyroscope; picture-in-picture" allowfullscreen></iframe>
-            ''',
-            last_tweet_in_thread='1341011376299511809',
             ),
       Publication(
             name='snufa_review', selected=True,

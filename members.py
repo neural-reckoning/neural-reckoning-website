@@ -118,7 +118,7 @@ members = [
         ''',
         long='''
         <p>
-            Marcus Ghosh is a Research Fellow funded by the <a href="https://parisregion.eu/parisregionfp.html">Paris Region Fellowship Programme</a>. He works on spiking neural network models of multisensory integration in larval zebrafish. He carries out corresponding experimental work in the group of <a href="http://www.paris-neuroscience.fr/en/volker-bormuth">Volker Bormuth</a>.
+            Marcus Ghosh is a Research Fellow funded by the <a href="https://parisregion.eu/parisregionfp.html">Paris Region Fellowship Programme</a>. He works on spiking neural network models of multisensory integration in larval zebrafish. He carries out corresponding experimental work in the group of <a href="https://zenith-etn.com/partners/bormuth">Volker Bormuth</a>.
         </p>
         ''',
         social_media='''
@@ -159,8 +159,9 @@ members = [
         id='isaac_engel',
         name='Isaac Engel',
         author_names=['Engel I'],
-        position='3_phd',
-        dates=[2016],
+        position='5_former',
+        former_position='PhD',
+        dates=[2016, 2021],
         associate=False,
         show_publications=True,
         # generate this by import base64; base64.b64encode('address')
@@ -171,8 +172,8 @@ members = [
         ''',
         long='''
         <p>
-        Isaac Engel is a PhD student working on Auditory Augmented Reality
-        (AAR) and spatial hearing. He is supervised by
+        Isaac Engel was a PhD student working on Auditory Augmented Reality
+        (AAR) and spatial hearing. He was supervised by
         <a href="http://www.imperial.ac.uk/people/l.picinali">Lorenzo Picinali</a>
         and <a href="dan_goodman.html">Dan Goodman</a>.
         </p>
@@ -270,8 +271,9 @@ members = [
         id='lotte_weerts',
         name='Lotte Weerts',
         author_names=['Weerts L'],
-        position='3_phd',
-        dates=[2016],
+        position='5_former',
+        former_position='PhD',
+        dates=[2016, 2021],
         associate=False,
         show_publications=True,
         address=sk_address(1008),
@@ -284,10 +286,10 @@ members = [
         ''',
         long='''
         <p>
-        Lotte Weerts is a PhD student in the
+        Lotte Weerts was a PhD student in the
         <a href="http://www.imperial.ac.uk/neurotechnology/cdt/">Neurotechnology CDT</a>,
         working on a combined information theory and machine learning approach to
-        understanding the auditory system. She is jointly supervised by
+        understanding the auditory system. She was jointly supervised by
         <a href="http://www.bg.ic.ac.uk/research/c.clopath/members/claudia_clopath/">Claudia Clopath</a>.
         </p>
         ''',
