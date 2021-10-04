@@ -175,11 +175,11 @@ for publication in publications:
                     </a>
                     '''
         if re.search(r'\bhtml\b', name, flags=re.IGNORECASE):
-            name = '<i class="fa fa-file-text-o"></i> '+name
+            name = '<i class="fa fa-newspaper-o"></i> '+name
             if 'html' not in icons: # use first html link
                 icons['html'] = f'''
                     <a href="{url}" target="_blank">
-                        <i class="fa fa-file-text-o"></i>
+                        <i class="fa fa-newspaper-o"></i>
                     </a>
                     '''
         new_urls.append((name, url))
