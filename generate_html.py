@@ -20,7 +20,8 @@ from twitter_secrets import api_key, api_secret_key
 import shelve
 
 from publications import publications, category_inclusions, category_detail_links
-from members import members, member_types
+from software import software
+from members import members, member_types, member_dict
 from email_addresses import generate_email
 from link_exceptions import link_exceptions
 from get_orcid_data import get_orcid_publications
@@ -120,10 +121,13 @@ for member in members:
 for publication in publications:
     pubauths = [a.strip() for a in publication.authors.split(',')]
     author_names_and_ids = []
+    author_ids = []
     for pubauth in pubauths:
         authid = authname_to_member_id.get(pubauth, 'placeholder')
         author_names_and_ids.append((pubauth, authid))
+        author_ids.append(authid)
     publication.author_names_and_ids = author_names_and_ids
+    publication.author_ids = author_ids
 
 # Generate links to member pages in publications
 for member in members:
@@ -367,9 +371,25 @@ make_wordcloud(width=1000, height=400)
 for member in members:
     make_wordcloud(member)
 
+# Process software page data
+for sw in software:
+    if not hasattr(sw, 'urls'):
+        sw.urls = []
+    sw.urls = [('Homepage', sw.url)]+sw.urls
+    sw.team_ids = []
+    for auth in sw.team:
+        authid = authname_to_member_id.get(auth, 'placeholder')
+        sw.team_ids.append(authid)
+        if authid!="placeholder":
+            mem = member_dict[authid]
+            if not hasattr(mem, 'software'):
+                mem.software = []
+            mem.software.append(sw)
+
 env_globals = dict(pages=pages, publications=publications, hasattr=hasattr,
+                   software=software,
                    last_updated=last_updated,
-                   members=members, member_types=member_types,
+                   members=members, member_types=member_types, member_dict=member_dict,
                    member_publications=member_publications,
                    generate_email=generate_email, os=os,
                    category_id_names=category_id_names,
@@ -423,7 +443,13 @@ for member in members:
                                 member=member,
                                 title=member.name, filename=filename)
     codecs.open(os.path.join('docs', filename), 'w', encoding='utf-8').write(scan_html_for_links(page, filename))
-    
+
+# Generate software pages
+for sw in software:
+    filename = "sw_"+sw.name+".html"
+    page = env.get_template('single_software.html').render(sw=sw, filename=filename)
+    codecs.open(os.path.join('docs', filename), 'w', encoding='utf-8').write(scan_html_for_links(page, filename))
+
 # Copy static files to docs directory
 os.system(r'copy files\* docs >nul')
 

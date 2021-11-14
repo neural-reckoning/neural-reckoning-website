@@ -71,6 +71,21 @@
             {{ publist.selected_publications() }}
         </div></div>
 
+        <div class="row"><div class="col bg-light mt-3 mb-3 pt-2">
+            <h2>Software packages</h2>
+            <div class="row flex-row flex-nowrap" style="overflow-x: auto;">
+                {% for sw in software %}
+                <div class="col-6 col-md-4 p-2" style="width: 500px;">
+                    <a href="sw_{{sw.name}}.html">
+                        <img class="img-fluid" src="{{sw.logo}}" style="max-height: 100px;">
+                        <h5>{{sw.title}}</h5>
+                    </a>
+                    <p>{{sw.short}}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div></div>
+
     </div>
 </div>
 

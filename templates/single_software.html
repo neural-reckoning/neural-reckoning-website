@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<h2><a href="{{sw.url}}">{{sw.title}}</a></h2>
+
+<div class="row">
+    <div class="col-sm-4 order-sm-12">
+        <img class="img-fluid" src="{{sw.logo}}" style="width: 250px; max-width: 100%">
+    </div>
+    <div class="col-sm-8 order-sm-1">
+        {{sw.long}}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <h3>Links</h3>
+        <p>
+            {% for url_title, url in sw.urls %}<button type="button" class="btn btn-light" style="margin: 2px;"><a href="{{ url }}">{{ url_title }}</a></button>{% endfor %}
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <h3>Neural Reckoning team members</h3>
+        <p>Note that this list does not include external team members.</p>
+        <ul class="list-inline author-list">
+        {% for authid in sw.team_ids %}
+            <li>
+                {% if authid!='placeholder' %}
+                <a href="{{authid}}.html">
+                {% endif %}
+                <div><img src="photo_{{authid}}.s.circ.png"/></div>
+                <div>{{member_dict[authid].name}}</div>
+                {% if authid!='placeholder' %}
+                </a>
+                {% endif %}
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

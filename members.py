@@ -382,3 +382,5 @@ members = [
     ),
 
 ]
+
+member_dict = dict((member.id, member) for member in members)
