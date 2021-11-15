@@ -14,7 +14,7 @@ env = Environment(loader=FileSystemLoader(['templates', 'temp']),
                   trim_blocks=True,
                   lstrip_blocks=True,
                   )
-env.globals.update(dict(os=os, hasattr=hasattr))
+env.globals.update(dict(os=os, hasattr=hasattr, isinstance=isinstance, str=str))
 
 def apply_template(name, filename, keys=None, keys_from=None):
     if keys is None:

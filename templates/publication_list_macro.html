@@ -6,7 +6,7 @@
                     ({{publication.year}})
                 {% endif %}
                 <br/>
-            <a href="pub_{{publication.name}}.html">
+            <a href="pub_{{publication.key}}.html">
                 <b>{{publication.title}}.</b><br/>
             </a>
             <i>
@@ -95,17 +95,11 @@
     </p>
 {% endmacro %}
 
-{% macro grouped_publications(member=None, cat=None) %}
+{% macro grouped_publications(publications) %}
     {% if collapse_conference_papers_default=='collapse' %}
         {% set not_collapse_conference_papers_default='show' %}
     {% else %}
         {% set not_collapse_conference_papers_default='collapse' %}
-    {% endif %}
-    {% if member %}
-    {% set publications = member_publications(member) %}
-    {% endif %}
-    {% if cat %}
-    {% set publications = category_publications(category_id(cat)) %}
     {% endif %}
     <div class="publication_list">
     {% for group in publications | groupby('year') | reverse %}

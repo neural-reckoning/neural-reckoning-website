@@ -5,13 +5,16 @@ from templater import apply_template
 
 
 class Paper(Thing):
-    pass
+    def validate(self):
+        self.year = str(self.year)
 
 
 def get_papers():
     papers = {}
     fnames = Path('papers').rglob('*.yaml')
     for fname in fnames:
+        if 'paper_template' in str(fname):
+            continue
         paper = Paper(fname)
         papers[paper.key] = paper
     return papers

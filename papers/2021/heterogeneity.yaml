@@ -20,8 +20,10 @@ urls:
   - https://www.nature.com/articles/s41467-021-26022-3.pdf
 - - Preprint
   - https://www.biorxiv.org/content/10.1101/2020.12.18.423468v3
-- - Neurotheory talk (video)
+- - Neurotheory talk by Dan Goodman (video)
   - https://www.youtube.com/watch?v=V2HFqVfeTPg&feature=youtu.be
+- - SNUFA 2021 talk by Nicolas Perez (video)
+  - https://youtu.be/aLNGcs_zYsY
 - - Twitter
   - https://twitter.com/neuralreckoning/status/1341011316975218695
 abstract: The brain is a hugely diverse, heterogeneous structure. Whether or not heterogeneity
@@ -36,3 +38,4 @@ abstract: The brain is a hugely diverse, heterogeneous structure. Whether or not
   byproduct of noisy processes, but rather may serve an active and important role
   in allowing animals to learn in changing environments.
 last_tweet_in_thread: '1341011376299511809'
+video_embed: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/aLNGcs_zYsY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

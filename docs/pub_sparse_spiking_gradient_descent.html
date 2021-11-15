@@ -83,7 +83,25 @@
 <div class="main">
 
 <h2>Sparse Spiking Gradient Descent</h2>
-<div>Perez-Nieves N, Goodman DFM</div>
+    <div class="d-none d-sm-block">
+        <ul class="list-inline author-list">
+            <li>
+                <a href="nicolas_perez.html">
+                <div><img src="photo_nicolas_perez.s.circ.png"/></div>
+                <div>Nicolas Perez</div>
+                </a>
+            </li>
+            <li>
+                <a href="dan_goodman.html">
+                <div><img src="photo_dan_goodman.s.circ.png"/></div>
+                <div>Dan Goodman</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="d-block d-sm-none">
+        <a href="nicolas_perez.html">Perez-Nieves N</a>, <a href="dan_goodman.html">Goodman DFM</a>
+    </div>
 <div><i>Preprint</i></div>
 <div>&nbsp;</div>
 <div><b>Abstract.</b> There is an increasing interest in emulating Spiking Neural Networks (SNNs) on neuromorphic computing devices due to their low energy consumption. Recent advances have allowed training SNNs to a point where they start to compete with traditional Artificial Neural Networks (ANNs) in terms of accuracy, while at the same time being energy efficient when run on neuromorphic hardware. However, the process of training SNNs is still based on dense tensor operations originally developed for ANNs which do not leverage the spatiotemporally sparse nature of SNNs. We present here the first sparse SNN backpropagation algorithm which achieves the same or better accuracy as current state of the art methods while being significantly faster and more memory efficient. We show the effectiveness of our method on real datasets of varying complexity (Fashion-MNIST, Neuromophic-MNIST and Spiking Heidelberg Digits) achieving a speedup in the backward pass of up to 70x, and 40% more memory efficient, without losing accuracy.</div>

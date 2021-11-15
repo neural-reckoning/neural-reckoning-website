@@ -3,18 +3,19 @@
 {% block main %}
 
 <h2>{{ title }}</h2>
-{% if 0 and author_names_and_ids|length<=8 %}
+{% if author_objects|length<=8 %}
     <div class="d-none d-sm-block">
         <ul class="list-inline author-list">
-        {% for (authname, authid) in author_names_and_ids %}
+        {% for author in author_objects %}
             <li>
-                {% if authid!='placeholder' %}
-                <a href="{{authid}}.html">
-                {% endif %}
-                <div><img src="photo_{{authid}}.s.circ.png"/></div>
-                <div>{{authname}}</div>
-                {% if authid!='placeholder' %}
+                {% if not isinstance(author, str) %}
+                <a href="{{ author.key }}.html">
+                <div><img src="photo_{{ author.key }}.s.circ.png"/></div>
+                <div>{{ author.name }}</div>
                 </a>
+                {% else %}
+                <div><img src="photo_placeholder.s.circ.png"/></div>
+                <div>{{ author }}</div>
                 {% endif %}
             </li>
         {% endfor %}
