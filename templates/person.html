@@ -83,6 +83,20 @@
         {{ publist.grouped_publications(papers) }}
         {% endif %}
 
+        {% if external_publications %}
+        <h2 id="external_publications">External publications</h2>
+        <p>
+            This is a short preview of the publications from other sources (<a href="https://orcid.org/">ORCID</a>,
+            <a href="https://www.semanticscholar.org/">Semantic Scholar</a>).
+            {% if key!="dan_goodman" %}
+            Note that publications from work done outside the Neural Reckoning group are included in this list.
+            {% endif %}
+        </p>
+
+        {{ publist.external_publications(person) }}
+
+        {% endif %}
+
     </div>
 </div>
 

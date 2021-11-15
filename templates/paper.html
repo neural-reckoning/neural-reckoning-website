@@ -2,6 +2,16 @@
 
 {% block main %}
 
+{% if twitter_thread %}
+<div class="row">
+    <div class="col-lg-4 d-none d-lg-block order-lg-12">
+        <div style="height: 90vh; overflow-y: scroll;">
+            {{ twitter_thread }}
+        </div>
+    </div>
+    <div class="col-lg-8 order-lg-1">
+{% endif %}
+
 <h2>{{ title }}</h2>
 {% if author_objects|length<=8 %}
     <div class="d-none d-sm-block">

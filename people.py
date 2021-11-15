@@ -2,6 +2,8 @@ import codecs, glob, os
 
 from PIL import Image, ImageDraw
 
+from get_orcid_data import get_orcid_publications
+from get_semantic_scholar_data import get_semantic_scholar_publications
 from things import Thing
 from email_addresses import generate_email
 from templater import apply_template
@@ -37,6 +39,11 @@ class Person(Thing):
             self.show_publications = True
         if not hasattr(self, 'external_publications'):
             self.external_publications = False
+        # load external publications if desired
+        if hasattr(self, 'orcid'):
+            self.external_publications = get_orcid_publications(self.orcid)
+        elif hasattr(self, 'semantic_scholar'):
+            self.external_publications = get_semantic_scholar_publications(self.semantic_scholar)
 
 
 def get_people():
@@ -51,7 +58,7 @@ def get_people():
 def write_people(people):
     for key, person in people.items():
         filename = f'{key}.html'
-        apply_template('person.html', filename, keys_from=person)
+        apply_template('person.html', filename, keys=dict(person=person), keys_from=person)
 
 
 def make_people_thumbnails(people):
