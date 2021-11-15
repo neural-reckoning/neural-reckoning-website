@@ -1,0 +1,14 @@
+title: EcoBuilder
+url: http://ecobuildergame.org
+logo: ecobuilder.jpg
+short: Educational game about building ecosystems.
+long: |-
+  <p>
+      A game for exploring the development and maintenance of ecosystems
+      for both education and research purposes. The game was written by
+      Jonathan Zheng, with ecosystems modelling by Orestes Gutierrez
+      and <a href="http://www.imperial.ac.uk/people/s.pawar">Samraat Pawar</a>.
+  </p>
+team:
+- Goodman DFM
+- Zheng J

@@ -1,0 +1,12 @@
+title: Conference Timer
+url: conference-timer.html
+logo: conference-timer-screenshot.png
+short: HTML/JavaScript conference timer.
+long: |-
+  <p>
+      A handy little HTML/Javascript page that can be used as a timer at conferences or workshops.
+      It gives you the option to set a length of time for the talk and for questions, and shows a visual
+      display of the remaining time. Works with Firefox and some versions of Internet Explorer.
+  </p>
+team:
+- Goodman DFM

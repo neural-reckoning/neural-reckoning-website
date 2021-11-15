@@ -12,6 +12,7 @@ from categories import build_categories, write_categories
 from people import get_people, write_people, make_people_thumbnails
 from papers import get_papers, write_papers
 from related import find_paper_authors
+from software import get_software, write_software
 from templater import update_template_globals
 from twitter import generate_twitter_threads
 
@@ -22,6 +23,7 @@ update_template_globals(**nav)
 # Load all the people, papers
 people = get_people()
 papers = get_papers()
+software = get_software()
 
 # Generate thumbnails
 make_people_thumbnails(people)
@@ -37,6 +39,7 @@ categories = build_categories(papers)
 write_people(people)
 write_papers(papers)
 write_categories(categories)
+write_software(software)
 
 # Copy static files to docs directory
 os.system(r'copy files\* docs >nul')
@@ -61,19 +64,18 @@ print('Finished.')
 
 # yaml.add_representer(str, repr_str, Dumper=yaml.SafeDumper)
 
-# from publications import publications
-# for pub in publications:
-#     year = str(pub.year).lower()
+# from software import software
+# for pub in software:
 #     key = pub.name
 #     md = {}
-#     for k in ['selected', 'year', 'authors', 'title', 'journal', 'publisher', 'conference', 'phd_thesis', 'additional', 'doi', 'additional_detail', 'categories', 'urls', 'abstract', 'last_tweet_in_thread', 'video_embed']:
+#     for k in ['title', 'url', 'logo', 'short', 'long', 'team']:
 #         if k in pub.__dict__:
 #             md[k] = getattr(pub, k)
 #     for k, v in pub.__dict__.items():
 #         if not k.startswith('_') and k not in md:
 #             md[k] = v
 #     del md['name']
-#     basedir = os.path.join('papers', year)
+#     basedir = 'software'
 #     if not os.path.exists(basedir):
 #         os.makedirs(basedir)
 #     fname = os.path.join(basedir, key+'.yaml')
@@ -120,156 +122,6 @@ print('Finished.')
 # last_checked_links = dict((url, day) for url, day in last_checked_links.items() if day==today)
 # last_updated = time.strftime('%Y/%m/%d')
 
-# def category_id(name):
-#     return name.lower().replace(' ', '')
-
-# # generate inclusions and category ids for publications
-# all_categories = set(list(category_inclusions.keys())+[cat for inc in list(category_inclusions.values()) for cat in inc])
-# for pub in publications:
-#     for cat in pub.categories:
-#         all_categories.add(cat)
-# category_id_inclusions = defaultdict(list)
-# category_id_names = {}
-# # recursively fill in all inclusions
-# def recursive_inclusions(name):
-#     inc = set(category_inclusions.get(name, []))
-#     for name in inc:
-#         inc = inc.union(recursive_inclusions(name))
-#     return inc
-# for name in all_categories:
-#     catid = category_id(name)
-#     category_id_names[catid] = name
-#     category_id_inclusions[catid] = set([category_id(n) for n in recursive_inclusions(name)])
-# for pub in publications:
-#     names = pub.categories
-#     pub.category_ids = set([])
-#     for name in names:
-#         catid = category_id(name)
-#         category_id_names[catid] = name
-#         pub.category_ids.add(catid)
-#         if catid in category_id_inclusions:
-#             for cid in category_id_inclusions[catid]:
-#                 pub.category_ids.add(cid)
-# for k, v in list(category_detail_links.items()):
-#     category_detail_links[category_id(k)] = v
-                
-
-# def category_publications(catid):
-#     pubs = []
-#     for pub in publications:
-#         if catid in pub.category_ids:
-#             pubs.append(pub)
-#     return pubs
-
-# # Generate category graphs and HTML maps
-# numpapers = defaultdict(int)
-# category_graph = defaultdict(set)
-# category_connections = defaultdict(int)
-# for pub in publications:
-#     for cat in pub.category_ids:
-#         category_graph[cat] = set([])
-#         numpapers[cat] += 1
-#         for cat2 in pub.category_ids:
-#             if cat2<cat:
-#                 category_connections[cat, cat2] += 1
-# max_connections = max(category_connections.values())
-# min_connections = min(category_connections.values())
-# max_num_papers = max(numpapers.values())
-# min_num_papers = min(numpapers.values())
-# for catname, inclusions in list(category_inclusions.items()):
-#     tgt_id = category_id(catname)
-#     for inclusion in inclusions:
-#         src_id = category_id(inclusion)
-#         category_graph[src_id].add(tgt_id)
-# # Generate hierarchical categories
-# category_dot_lines = []
-# category_colours = {}
-# for cat_id in list(category_graph.keys()):
-#     cat_name = category_id_names[cat_id]
-#     col = 0.7-0.7*(numpapers[cat_id]-min_num_papers)/(1.0*(max_num_papers-min_num_papers))
-#     col = int(255.0*col)
-#     col = ('%.02X' % col)*3
-#     col = '#'+col
-#     category_colours[cat_id] = col
-#     category_dot_lines.append('{cat_id} [URL="publication_category_{cat_id}.html", label="{cat_name}", color="{col}", fontcolor="{col}", '
-#                               'shape=box];'.format(cat_id=cat_id, cat_name=cat_name, col=col))
-# for src_id, target_ids in list(category_graph.items()):
-#     for tgt_id in target_ids:
-#         category_dot_lines.append('{src_id} -> {tgt_id} [color="{col}"];'.format(src_id=src_id, tgt_id=tgt_id,
-#                                                                                  col=category_colours[tgt_id]))
-# category_dot = '''
-# digraph categories_hierarchy {{
-#     rankdir = LR;
-# {graphspec}
-# }}
-# '''.format(graphspec='\n'.join(category_dot_lines))
-# if not os.path.exists('temp'):
-#     os.mkdir('temp')
-# open('temp/categories_hierarchy.dot', 'w').write(category_dot)
-# layout_algo = 'dot'
-# if os.system('{algo} -Tsvg temp/categories_hierarchy.dot -o temp/categories_hierarchy.svg'.format(algo=layout_algo))==0:
-#     svg = open('temp/categories_hierarchy.svg', 'r').read()
-#     svg = svg.replace('<svg', '<svg class="img-fluid"')
-#     open('temp/categories_hierarchy.svg', 'w').write(svg)
-# # Spontaneous category graph
-# category_dot_lines = []
-# for (cat_id_1, cat_id_2), nc in list(category_connections.items()):
-#     col = 0.9-0.9*(nc-min_connections)/(1.0*(max_connections-min_connections))
-#     col = int(255.0*col)
-#     col = ('%.02X' % col)*3
-#     col = '#'+col
-#     category_dot_lines.append(
-#         '    {cat_id_1} -- {cat_id_2} [len={edgelen}, color="{col}"]'.format(cat_id_1=cat_id_1, cat_id_2=cat_id_2, nc=nc,
-#                                                                              col=col, edgelen=1.0/(max_connections/2+nc)))
-# for cat_id in list(category_graph.keys()):
-#     cat_name = category_id_names[cat_id]
-#     col = category_colours[cat_id]
-#     category_dot_lines.append(
-#         '    {cat_id} [URL="publication_category_{cat_id}.html", label="{cat_name}", color="{col}", fontcolor="{col}", shape=box];'.format(
-#             cat_id=cat_id, cat_name=cat_name, col=col))
-# category_dot = '''
-# graph categories_spontaneous {{
-#     overlap=scale; splines=true;
-# {graphspec}
-# }}
-# '''.format(graphspec='\n'.join(category_dot_lines))
-# category_dot.replace('<svg', '<svg class="img-fluid" ')
-# open('temp/categories_spontaneous.dot', 'w').write(category_dot)
-# layout_algo = 'neato'
-# if os.system('{algo} -Tsvg temp/categories_spontaneous.dot -o temp/categories_spontaneous.svg'.format(algo=layout_algo))==0:
-#     svg = open('temp/categories_spontaneous.svg', 'r').read()
-#     svg = svg.replace('<svg', '<svg class="img-fluid"')
-#     open('temp/categories_spontaneous.svg', 'w').write(svg)
-# else:
-#     print("Couldn't run categories spontaneous dot")
-
-
-# # wordcloud: explicitly delete docs/wordcloud.png to recalculate
-# def make_wordcloud(member=None, width=350, height=350):
-#     if member is None:
-#         fname = 'docs/wordcloud.png'
-#     else:
-#         fname = 'docs/wordcloud_{author}.png'.format(author=member.id)
-#     if member is None:
-#         mpubs = publications
-#     else:
-#         mpubs = member_publications(member)
-#     if len(mpubs)==0:
-#         return
-#     all_abstracts = ' '.join(getattr(pub, 'abstract', '') for pub in mpubs)
-#     m = hashlib.md5()
-#     m.update(all_abstracts.encode("utf-8"))
-#     abstract_hash = m.hexdigest()
-#     if os.path.exists(fname) and fname in cached and cached[fname]==abstract_hash:
-#         return
-#     print('recomputing wordcloud', (member.name if member is not None else 'all'))
-#     wordcloud = WordCloud(background_color="white", width=width, height=height).generate(all_abstracts)
-#     wordcloud.to_file(fname)
-#     cached[fname] = abstract_hash
-
-# make_wordcloud(width=1000, height=400)
-# for member in members:
-#     make_wordcloud(member)
 
 # # Process software page data
 # for sw in software:
