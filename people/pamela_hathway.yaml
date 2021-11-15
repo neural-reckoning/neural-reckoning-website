@@ -1,0 +1,18 @@
+associate: false
+author_names:
+- Hathway P
+dates:
+- 2016
+- 2020
+former_position: PhD
+long: "\n        <p>\n        Pamela Hathway was a PhD student working on the problem\
+  \ of large\n        scale neural data analysis, primarily on Neuropixels data. She\n\
+  \        developed a new technique called \"neural topic modelling\",\n        adapting\
+  \ topic modelling methods from machine learning originally\n        designed for\
+  \ finding topics in sets of text documents automatically.\n        </p>\n      \
+  \  "
+name: Pamela Hathway
+position: 5_former
+semantic_scholar: 8781017
+short: "\n        Large scale neural data analysis.\n        "
+show_publications: true

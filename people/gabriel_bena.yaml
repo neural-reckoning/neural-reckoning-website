@@ -1,0 +1,15 @@
+address: "\n    Room 1008\n    Department of Electrical and Electronic Engineering\n\
+  \    Imperial College\n    Exhibition Road\n    London SW7 2AZ\n    "
+associate: false
+author_names:
+- "B\xE9na G"
+dates:
+- 2021
+long: "\n        <p>\n        Gabriel B\xE9na will work on machine learning and neuroscience,\
+  \ with a particular interest\n        in spiking neural networks.\n        </p>\n\
+  \        "
+name: "Gabriel B\xE9na"
+position: 3_phd
+semantic_scholar: 2107033449
+short: "\n        Machine learning and neuroscience\n        "
+show_publications: true

@@ -1,0 +1,20 @@
+address: "\n    Room 1008\n    Department of Electrical and Electronic Engineering\n\
+  \    Imperial College\n    Exhibition Road\n    London SW7 2AZ\n    "
+associate: false
+author_names:
+- Chu Y
+dates:
+- 2016
+email: eS5jaHUxNkBpbXBlcmlhbC5hYy51aw==
+long: "\n        <p>\n        Yang Chu is a PhD student, working on principles of\
+  \ neural computation,\n        and high performance implementations using spiking\
+  \ neural\n        network (in particular, using non-standard computational\n   \
+  \     hardware such as FPGAs). He is jointly supervised by\n        <a href=\"http://www.imperial.ac.uk/people/w.luk\"\
+  >Wayne Luk</a> and\n        <a href=\"https://tbrx.github.io/\">Brooks Paige</a>.\n\
+  \        </p>\n        "
+name: Yang Chu
+position: 3_phd
+semantic_scholar: 2070014411
+short: "\n        Principles of neural computation and simulation techniques\n   \
+  \     "
+show_publications: true
