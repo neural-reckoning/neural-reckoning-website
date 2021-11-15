@@ -78,7 +78,7 @@
 {% for url_title, url in urls %}<button type="button" class="btn btn-light" style="margin: 2px;"><a href="{{ url }}">{{ url_title }}</a></button>{% endfor %}
 </p>
 <p><b style="vertical-align: middle;">Categories:</b>
-{% for catid in category_ids | sort %}<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_{{ catid }}.html">{{ category_id_names[catid] }}</a></button>{% endfor %}
+{% for cat in category_objects | sort(attribute='key') %}<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_{{ cat.key }}.html">{{ cat.name }}</a></button>{% endfor %}
 </p>
 
 {% endblock %}

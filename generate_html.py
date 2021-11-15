@@ -8,6 +8,7 @@ import yaml
 
 # Local imports
 from cache import save_cache
+from categories import build_categories
 from people import get_people, write_people, make_people_thumbnails
 from papers import get_papers, write_papers
 from related import find_paper_authors
@@ -30,6 +31,7 @@ generate_twitter_threads(papers)
 
 # Find relationships
 find_paper_authors(people, papers)
+categories = build_categories(papers)
 
 # Write all the people pages
 write_people(people)
@@ -301,14 +303,6 @@ print('Finished.')
 #         page = env.get_template(filename).render(title=title, filename=filename)
 #         codecs.open(os.path.join('docs', filename), 'w', encoding='utf-8').write(scan_html_for_links(page, filename))
 
-# # Generate publications
-# for publication in publications:
-#     filename = 'pub_'+publication.name+'.html'
-#     page = env.get_template('single_publication.html').render(
-#                                 publication=publication,
-#                                 title=publication.title, filename=filename)
-#     codecs.open(os.path.join('docs', filename), 'w', encoding='utf-8').write(scan_html_for_links(page, filename))
-    
 # # Generate publication categories
 # for catid, catname in list(category_id_names.items()):
 #     filename = 'publication_category_%s.html' % catid
