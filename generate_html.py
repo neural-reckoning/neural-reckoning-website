@@ -10,6 +10,7 @@ import yaml
 from cache import save_cache
 from categories import build_categories, write_categories
 from people import get_people, write_people, make_people_thumbnails
+from pages import write_pages
 from papers import get_papers, write_papers
 from related import find_paper_authors
 from software import get_software, write_software
@@ -40,6 +41,7 @@ write_people(people)
 write_papers(papers)
 write_categories(categories)
 write_software(software)
+write_pages(nav, people, papers, software, categories)
 
 # Copy static files to docs directory
 os.system(r'copy files\* docs >nul')
@@ -123,21 +125,6 @@ print('Finished.')
 # last_updated = time.strftime('%Y/%m/%d')
 
 
-# # Process software page data
-# for sw in software:
-#     if not hasattr(sw, 'urls'):
-#         sw.urls = []
-#     sw.urls = [('Homepage', sw.url)]+sw.urls
-#     sw.team_ids = []
-#     for auth in sw.team:
-#         authid = authname_to_member_id.get(auth, 'placeholder')
-#         sw.team_ids.append(authid)
-#         if authid!="placeholder":
-#             mem = member_dict[authid]
-#             if not hasattr(mem, 'software'):
-#                 mem.software = []
-#             mem.software.append(sw)
-
 # env_globals = dict(pages=pages, publications=publications, hasattr=hasattr,
 #                    software=software,
 #                    last_updated=last_updated,
@@ -155,25 +142,8 @@ print('Finished.')
 #     if os.path.exists(os.path.join('templates', filename)):
 #         page = env.get_template(filename).render(title=title, filename=filename)
 #         codecs.open(os.path.join('docs', filename), 'w', encoding='utf-8').write(scan_html_for_links(page, filename))
-
-# # Generate publication categories
-# for catid, catname in list(category_id_names.items()):
-#     filename = 'publication_category_%s.html' % catid
-#     page = env.get_template('publication_category.html').render(
-#                 publications=category_publications(catid),
-#                 category_name=catname,
-#                 title=catname, filename=filename,
-#                 detail_link=category_detail_links.get(catid, None),
-#                 )
-#     codecs.open(os.path.join('docs', filename), 'w', encoding='utf-8').write(scan_html_for_links(page, filename))
+  
     
-    
-# # Generate software pages
-# for sw in software:
-#     filename = "sw_"+sw.name+".html"
-#     page = env.get_template('single_software.html').render(sw=sw, filename=filename)
-#     codecs.open(os.path.join('docs', filename), 'w', encoding='utf-8').write(scan_html_for_links(page, filename))
-
 # import http.client
 # from urllib.parse import urlparse
 

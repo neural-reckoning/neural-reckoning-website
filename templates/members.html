@@ -4,7 +4,7 @@
 
 <h2>Lab members</h2>
 
-{% for group in members | groupby('position') %}
+{% for group in members | groupby('position_order') %}
     {% if member_types[group.grouper] %}
         <h3>{{member_types[group.grouper]}}</h3>
     {% endif %}

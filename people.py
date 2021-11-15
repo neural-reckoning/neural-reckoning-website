@@ -19,6 +19,9 @@ def sk_address(room):
     London SW7 2AZ
     '''.format(room=room)
 
+positions_in_order = ['pi', 'postdoc', 'phd', 'former']
+position_order_map = dict(zip(positions_in_order, range(len(positions_in_order))))
+
 
 class Person(Thing):
     def validate(self):
@@ -39,6 +42,7 @@ class Person(Thing):
             self.show_publications = True
         if not hasattr(self, 'external_publications'):
             self.external_publications = False
+        self.position_order = position_order_map[self.position.lower()]
         # load external publications if desired
         if hasattr(self, 'orcid'):
             self.external_publications = get_orcid_publications(self.orcid)
