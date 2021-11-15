@@ -8,7 +8,7 @@ import yaml
 
 # Local imports
 from cache import save_cache
-from categories import build_categories
+from categories import build_categories, write_categories
 from people import get_people, write_people, make_people_thumbnails
 from papers import get_papers, write_papers
 from related import find_paper_authors
@@ -36,6 +36,7 @@ categories = build_categories(papers)
 # Write all the people pages
 write_people(people)
 write_papers(papers)
+write_categories(categories)
 
 # Copy static files to docs directory
 os.system(r'copy files\* docs >nul')

@@ -1,6 +1,7 @@
 from collections import defaultdict
 
 from things import Thing
+from templater import apply_template
 
 
 category_inclusions = {
@@ -31,7 +32,7 @@ category_detail_links = {
 
 class Category(Thing):
     def validate(self):
-        self.things = defaultdict(list) # mapping self.things[classname] = list of things with that classname
+        self.things = defaultdict(set) # mapping self.things[classname] = list of things with that classname
 
 
 def category_id(name):
@@ -74,8 +75,9 @@ def build_categories(things):
             if catid in category_id_inclusions:
                 for cid in category_id_inclusions[catid]:
                     pub.category_ids.add(cid)
-            cat = categories[catid]
-            cat.things[pub.__class__.__name__].append(pub)
+            for cid in pub.category_ids:
+                cat = categories[cid]
+                cat.things[pub.__class__.__name__].add(pub)
         pub.category_objects = set([categories[catid] for catid in pub.category_ids])
 
     for k, v in list(category_detail_links.items()):
@@ -83,3 +85,9 @@ def build_categories(things):
         categories[category_id(k)].detail_link = v
 
     return categories
+
+
+def write_categories(categories):
+    for key, cat in categories.items():
+        filename = f'publication_category_{key}.html'
+        apply_template('category.html', filename, keys_from=cat)

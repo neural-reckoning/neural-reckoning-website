@@ -4,16 +4,16 @@
 
 {% block main %}
 
-<h2>Publications: {{ category_name }}</h2>
+<h2>Category: {{ name }}</h2>
 
 {% if detail_link %}
 <p>
-For more details on this category, click <a href="{{detail_link}}">here</a>.
+For more details on this category, click <a href="{{ detail_link }}">here</a>.
 </p>
 {% endif %}
 
 {{ publist.show_conference_papers() }}
 
-{{ publist.grouped_publications() }}
+{{ publist.grouped_publications(things['Paper']) }}
 
 {% endblock %}
