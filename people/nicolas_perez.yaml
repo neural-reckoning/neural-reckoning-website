@@ -1,19 +1,16 @@
-address: "\n    Room 1008\n    Department of Electrical and Electronic Engineering\n\
-  \    Imperial College\n    Exhibition Road\n    London SW7 2AZ\n    "
-associate: false
+name: Nicolas Perez
 author_names:
 - Perez N
 - Perez-Nieves N
+position: phd
+email: bmljb2xhcy5wZXJlejE0QGltcGVyaWFsLmFjLnVr
+short: Multiresolution processing with heterogeneous spiking neural networks
+long: |-
+  <p>
+  Nicolas Perez is a PhD student working on understanding how
+  spiking neural networks can use heterogeneous neuron properties
+  to carry out multiresolution processing of sensory data.
+  </p>
 dates:
 - 2018
-email: bmljb2xhcy5wZXJlejE0QGltcGVyaWFsLmFjLnVr
-long: "\n        <p>\n        Nicolas Perez is a PhD student working on understanding\
-  \ how\n        spiking neural networks can use heterogeneous neuron properties\n\
-  \        to carry out multiresolution processing of sensory data.\n        </p>\n\
-  \        "
-name: Nicolas Perez
-position: 3_phd
 semantic_scholar: 1999879303
-short: "\n        Multiresolution processing with heterogeneous spiking neural networks\n\
-  \        "
-show_publications: true

@@ -1,0 +1,19 @@
+year: 2010
+authors: Fletcher A, Goodman DFM
+title: Quasiregular mappings of polynomial type in R<sup>2</sup>
+journal: Conformal Geometry and Dynamics
+additional: '14'
+categories:
+- Mathematics
+urls:
+- - Journal
+  - http://www.ams.org/journals/ecgd/2010-14-17/S1088-4173-2010-00219-5/home.html
+- - PDF (preprint)
+  - https://www.dropbox.com/s/v6h2bex5y09uqej/quadqr.pdf?dl=1
+abstract: "Complex dynamics deals with the iteration of holomorphic functions. As\n\
+  is well known, the first functions to be studied which gave non-trivial\ndynamics\
+  \ were quadratic polynomials, which produced beautiful computer\ngenerated pictures\
+  \ of Julia sets and the Mandelbrot set. In the same\nspirit, this article aims to\
+  \ study the dynamics of the simplest\nnon-trivial quasiregular mappings. These are\
+  \ mappings in R<sup>2</sup>\nwhich are a composition of a quadratic polynomial and\
+  \ an affine stretch. "

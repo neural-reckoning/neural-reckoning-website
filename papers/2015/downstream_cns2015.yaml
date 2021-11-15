@@ -1,0 +1,56 @@
+year: 2015
+authors: Goodman DFM, de Cheveigné A, Winter IM, Lorenzi C
+title: Downstream changes in firing regularity following damage to the early auditory
+  system
+conference: Computational Neuroscience
+additional: ''
+doi: 10.1186/1471-2202-16-S1-O11
+additional_detail: '24th Annual Computational Neuroscience Meeting: CNS*2015'
+categories:
+- Auditory
+- Modelling
+urls:
+- - Conference
+  - https://bmcneurosci.biomedcentral.com/articles/10.1186/1471-2202-16-S1-O11
+abstract: "<p>We demonstrate how an abstract mathematical model that approximates\
+  \ a wide range of more \ndetailed models can be used to make predictions about hearing\
+  \ loss-related changes in neural behaviour.</p> \n\n<p>One consequence of neurosensory\
+  \ hearing loss (noise-induced and aging-related) is a reduced ability to \nunderstand\
+  \ speech, particularly in noisy environments, and sometimes beyond what would be\
+  \ predicted from \nreduced audibility. Indeed, this type of speech deficit can occur\
+  \ in listeners with near-normal hearing \nthresholds [1]. A promising avenue of\
+  \ investigation to explain this comes from experimental results in mice \nshowing\
+  \ that there can be a permanent loss of auditory nerve fibres (ANFs) following \"\
+  temporary\" \nnoise-induced hearing loss (i.e. when thresholds return to normal\
+  \ after a few weeks) [2]. The downstream \nconsequences of this loss of fibres has\
+  \ not yet been systematically investigated (although see [3]). We \npredict, using\
+  \ a theoretical analysis that applies to a wide range of neural models, that the\
+  \ regularity of \nthe spike trains of many neurons in the cochlear nucleus (the\
+  \ next structure after the auditory nerve) will \ndecrease following a reduction\
+  \ in the number of input cells. </p>\n\n<p>We present a mathematical analysis of\
+  \ the stationary behaviour of \"chopper\" cells in the ventral cochlear \nnucleus,\
+  \ approximating them by a stochastic process that is entirely characterised by its\
+  \ mean, \nstandard deviation and time constants. Furthermore, these constants can\
+  \ be straightforwardly related to \nphysiologically significant parameters including\
+  \ the number of inputs and their average firing rates. From \nthis approximation,\
+  \ we can compute the regularity of the chopper cell spike trains measured as the\
+  \ \ncoefficient of variation of their interspike intervals (CV). </p>\n\n<p>One\
+  \ simple prediction of this model is that when the intensity of a stimulus changes,\
+  \ leading to a change in \nthe average firing rate of the ANF inputs, there will\
+  \ be a corresponding change in the regularity of the \nchopper cell spike train.\
+  \ This prediction poses problems for the widely used scheme for classifying chopper\
+  \ \ncells as sustained or transient based on their ongoing CVs as it implies that\
+  \ the classification could be \nlevel-dependent. We present a re-analysis of an\
+  \ existing experimental data set that demonstrates that ongoing \nCV is indeed level-dependent\
+  \ in the majority of chopper cells, and that in some cells (>7%) this leads to a\
+  \ \nlevel-dependence in their classification. </p>\n\n<p>Assuming a homeostatic\
+  \ regulation of long term firing rates, a loss of ANFs will lead to an increase\
+  \ in the \nstandard deviation of the stochastic process and a consequent increase\
+  \ in the CV of the chopper cell. Some \nchoppers that were previously classified\
+  \ as sustained will become transient, a substantial change in their \nbehaviour\
+  \ that is highly likely to disrupt auditory processing. While the function of chopper\
+  \ cells is still \ndebated, one suggested role is in the coding of temporal envelope\
+  \ [4], which is widely agreed to be essential \nfor understanding speech. Loss of\
+  \ ANFs could therefore lead to a disruption of the processing of temporal \nenvelope,\
+  \ and consequently degrade speech intelligibility. We briefly conclude by discussing\
+  \ the challenges \nof testing this hypothesis experimentally.</p>"

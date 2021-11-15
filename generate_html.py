@@ -8,6 +8,7 @@ import yaml
 
 # Local imports
 from people import get_people, write_people
+from papers import get_papers, write_papers
 from cache import save_cache
 from templater import update_template_globals
 
@@ -15,11 +16,13 @@ from templater import update_template_globals
 nav = yaml.safe_load(open('navigation.yaml', 'r'))
 update_template_globals(**nav)
 
-# Load all the people
+# Load all the people, papers
 people = get_people()
+papers = get_papers()
 
 # Write all the people pages
 write_people(people)
+write_papers(papers)
 
 # Copy static files to docs directory
 os.system(r'copy files\* docs >nul')
@@ -30,14 +33,35 @@ save_cache()
 # And we're done
 print('Finished.')
 
-# from members import members
-# for member in members:
-#     if member.id=="dan_goodman":
-#         continue
-#     md = dict((k, v) for k, v in member.__dict__.items() if not k.startswith('_'))
-#     key = member.id
-#     del md['id']
-#     yaml.dump(md, open(os.path.join('people', key+'.yaml'), 'w'))
+# import inspect, codecs
+# yaml.SafeDumper.org_represent_str = yaml.SafeDumper.represent_str
+
+# def repr_str(dumper, data):
+#     if '\n' in data:
+#         data = inspect.cleandoc(data)
+#         if '\n' in data:
+#             return dumper.represent_scalar(u'tag:yaml.org,2002:str', data, style='|')
+#     return dumper.org_represent_str(data)
+
+# yaml.add_representer(str, repr_str, Dumper=yaml.SafeDumper)
+
+# from publications import publications
+# for pub in publications:
+#     year = str(pub.year).lower()
+#     key = pub.name
+#     md = {}
+#     for k in ['selected', 'year', 'authors', 'title', 'journal', 'publisher', 'conference', 'phd_thesis', 'additional', 'doi', 'additional_detail', 'categories', 'urls', 'abstract', 'last_tweet_in_thread', 'video_embed']:
+#         if k in pub.__dict__:
+#             md[k] = getattr(pub, k)
+#     for k, v in pub.__dict__.items():
+#         if not k.startswith('_') and k not in md:
+#             md[k] = v
+#     del md['name']
+#     basedir = os.path.join('papers', year)
+#     if not os.path.exists(basedir):
+#         os.makedirs(basedir)
+#     fname = os.path.join(basedir, key+'.yaml')
+#     yaml.safe_dump(md, codecs.open(fname, 'w', encoding='utf-8'), allow_unicode=True, encoding='utf-8', sort_keys=False)
 
 
 #################### OLD VERSION ############################################

@@ -1,0 +1,40 @@
+year: 2019
+authors: Lestang J-H
+title: The role of canonical neural computations in sound localization
+publisher: Imperial College London
+phd_thesis: true
+categories:
+- Neuroscience
+- Modelling
+- Auditory
+- Sound localisation
+urls:
+- - Thesis
+  - https://spiral.imperial.ac.uk/handle/10044/1/76509
+- - Thesis (PDF)
+  - https://spiral.imperial.ac.uk/bitstream/10044/1/76509/1/Lestang-J-2019-PhD-Thesis.pdf
+abstract: "Localizing sounds is an important ability for many species. However, reverberative\
+  \ sounds\npresent a signi\fcant challenge to the auditory system as later arriving\
+  \ reverberations may carry\nconfounding localization cues. The 'precedence e\vect'\
+  \ refers to a set of perceptual behaviours\nrelated to this situation. Studies investigating\
+  \ the precedence e\vect observed that the auditory\nsystem tends to focus the core\
+  \ of the localization process on the computation of localization\ncues carried by\
+  \ the \frst arriving sound. Doing so relieves the auditory system from dealing\n\
+  with contradictory localization cues in later arriving sounds. A recent study by\
+  \ Dietz et al.\n(2013) con\frmed that human listeners use this approach to deal\
+  \ with dynamic localization\ncues. In order to provide an explanation for this \f\
+  nding, we \frst tested several auditory models\non the speci\fc task described in\
+  \ Dietz et al. (2013) in order to shortlist possible mechanisms\ncapable of accounting\
+  \ for the early extraction of temporal binaural cues. We found that the\nbest candidates\
+  \ to account for this data are single cell mechanisms, such as adaptation and\n\
+  onset \fring, as well as inhibitory population mechanisms. To further understand\
+  \ how each\nmechanism contributes to the suppression of lagging sounds, we designed\
+  \ more general models\ncapable of demonstrating the principal features of each mechanism.\
+  \ We tested these models\nthoroughly and found that all mechanisms were able to\
+  \ reproduce the results over a wide range\nof parameters. This \fnding suggests\
+  \ that mechanisms responsible for the precedence e\vect\nmay not be specialized\
+  \ to perform this speci\fc task but instead may be the results of more\ncommonly\
+  \ found neural circuits in the brain. Finally, to facilitate comparing the performance\n\
+  of auditory models on psychoacoustical data, we also designed and implemented an\
+  \ auditory\nmodelling framework capable of addressing many challenges existing in\
+  \ the \feld of auditory\nmodelling."

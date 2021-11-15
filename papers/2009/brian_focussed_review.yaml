@@ -1,0 +1,22 @@
+selected: false
+year: 2009
+authors: Goodman DFM, Brette R
+title: The Brian simulator
+journal: Frontiers in Neuroscience
+additional: 3(2)
+doi: 10.3389/neuro.01.026.2009
+categories:
+- Brian
+urls:
+- - Journal (HTML)
+  - http://journal.frontiersin.org/Journal/10.3389/neuro.01.026.2009/abstract
+abstract: "\"Brian\" is a simulator for spiking neural networks\n(http://www.briansimulator.org\
+  \ ). The focus is on making the writing of\nsimulation code as quick and easy as\
+  \ possible for the user, and on\nflexibility: new and non-standard models are no\
+  \ more difficult to define\nthan standard ones. This allows scientists to spend\
+  \ more time on the\ndetails of their models, and less on their implementation. Neuron\
+  \ models\nare defined by writing differential equations in standard mathematical\n\
+  notation, facilitating scientific communication. Brian is written in the\nPython\
+  \ programming language, and uses vector-based computation to allow\nfor efficient\
+  \ simulations. It is particularly useful for neuroscientific\nmodelling at the systems\
+  \ level, and for teaching computational\nneuroscience. "

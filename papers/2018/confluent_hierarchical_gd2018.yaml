@@ -1,0 +1,27 @@
+year: 2018
+authors: Zheng JX, Pawar S, Goodman DFM
+title: Confluent* Drawings by Hierarchical Clustering
+conference: Graph Drawing and Network Visualization
+additional: ''
+doi: 10.1007/978-3-030-04414-5
+additional_detail: 26th International Symposium, GD 2018, Barcelona, Spain, September
+  26-28, 2018, Proceedings
+categories:
+- Visualisation
+- Machine learning
+urls:
+- - Proceedings
+  - https://link.springer.com/book/10.1007/978-3-030-04414-5
+- - Proceedings PDF (see p. 640)
+  - https://link.springer.com/content/pdf/10.1007%2F978-3-030-04414-5.pdf
+abstract: "Recently an edge bundling technique known as confluent\x02* drawing was\
+  \ applied to general graphs by Bach et al. (2017) by leveraging power graph decomposition\
+  \ (a form of edge compression that groups similar vertices together, merging edges\
+  \ shared among group members). We explore the technique further by demonstrating\
+  \ the equivalence between confluent drawing and the hierarchical edge bundling of\
+  \ Holten (2006), thereby opening the door for existing hierarchical clustering algorithms\
+  \ to be used instead of power graphs to produce confluent drawings for general graphs.\
+  \ We investigate various popular hierarchical clustering methods, and present a\
+  \ qualitative experimental comparison between them. We also introduce a new distance\
+  \ measure for agglomerative clustering that outperforms previous measures, and make\
+  \ recommendations for using the method in practice."

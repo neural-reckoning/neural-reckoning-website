@@ -1,4 +1,4 @@
-import os
+import codecs, os
 import yaml
 
 __all__ = ['Thing']
@@ -12,7 +12,7 @@ class Thing(object):
         self._fname = fname
         _, tail = os.path.split(fname)
         self.key, _ = os.path.splitext(tail)
-        self._yaml_obj = yaml.safe_load(open(fname, 'r'))
+        self._yaml_obj = yaml.safe_load(codecs.open(fname, 'r', encoding='utf-8'))
         for k, v in self._yaml_obj.items():
             setattr(self, k, v)
         self.validate()

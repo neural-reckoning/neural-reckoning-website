@@ -1,0 +1,13 @@
+year: 2009
+authors: Brette R, Goodman D
+title: 'Brian: a simple and flexible simulator for spiking neural networks'
+journal: The Neuromorphic Engineer
+additional_detail: |-
+  Note: The Neuromorphic Engineer journal appears to have closed down, so only a direct link to a
+  PDF of the original article is included below.
+categories:
+- Brian
+urls:
+- - PDF
+  - https://www.dropbox.com/s/ri7yhwzqk318ff4/brian-neuromorphic-engineer.pdf?dl=0
+peer_reviewed: false

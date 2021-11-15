@@ -1,0 +1,28 @@
+year: 2019
+authors: Chu Y, Goodman DFM
+title: An Inference Network Model for Goal-directed Attentional Selection
+conference: Cognitive Computational Neuroscience
+additional: ''
+doi: 10.32470/CCN.2019.1431-0
+additional_detail: 2019 Conference on Cognitive Computational Neuroscience, 13-16
+  September 2019, Berlin, Germany
+categories:
+- Machine learning
+- Modelling
+- Visual
+urls:
+- - Abstract
+  - https://ccneuro.org/2019/Papers/ViewPapers.asp?PaperNum=1431
+- - PDF
+  - https://ccneuro.org/2019/showDoc.php?s=W&pn=1431
+abstract: |-
+  "Listen to the cello in this symphony!" How can we direct selective attention according to different goals, even
+  in distracting environments which we haven't experienced before? It is an essential cognitive ability of the
+  brain, but remains challenging for machines. We developed a computational model that can identify individual
+  digits in images containing multiple overlapping digits, without ever having seen overlapping digits during
+  training. The goal-driven attentional selection is modelled as inferring the posterior distribution of latent
+  variables (the attended target) in a generative model, conditioned on both sensory input and different semantic
+  goals. A neural network model has been build to efficiently carry out the the inference process by predicting the
+  most likely results, instead of using classic per-sample based iterative optimization methods which may not
+  naturally map onto neural structures. Our model also help to understand how top-down and bottom-up attention are
+  combined during perception in the brain.

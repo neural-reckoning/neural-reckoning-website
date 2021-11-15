@@ -1,0 +1,28 @@
+year: Preprints
+authors: Perez-Nieves N, Goodman DFM
+title: Sparse Spiking Gradient Descent
+categories:
+- Neuroscience
+- Learning
+- Spiking
+- Modelling
+- Machine learning
+- Neural simulation
+urls:
+- - Preprint
+  - https://arxiv.org/abs/2105.08810
+- - Preprint (PDF)
+  - https://arxiv.org/pdf/2105.08810
+abstract: There is an increasing interest in emulating Spiking Neural Networks (SNNs)
+  on neuromorphic computing devices due to their low energy consumption. Recent advances
+  have allowed training SNNs to a point where they start to compete with traditional
+  Artificial Neural Networks (ANNs) in terms of accuracy, while at the same time being
+  energy efficient when run on neuromorphic hardware. However, the process of training
+  SNNs is still based on dense tensor operations originally developed for ANNs which
+  do not leverage the spatiotemporally sparse nature of SNNs. We present here the
+  first sparse SNN backpropagation algorithm which achieves the same or better accuracy
+  as current state of the art methods while being significantly faster and more memory
+  efficient. We show the effectiveness of our method on real datasets of varying complexity
+  (Fashion-MNIST, Neuromophic-MNIST and Spiking Heidelberg Digits) achieving a speedup
+  in the backward pass of up to 70x, and 40% more memory efficient, without losing
+  accuracy.

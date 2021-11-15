@@ -1,0 +1,39 @@
+year: 2018
+authors: Blundell I, Brette R, Cleland TA, Close TG, Coca D, Davison AP, Diaz-Pier
+  S, Musoles CF, Gleeson P, Goodman DFM, Hines M, Hopkins MW, Kumbhar P, Lester DR,
+  Marin B, Morrison A, Müller E, Nowotny T, Peyser A, Plotnikov D, Richmond P, Rowley
+  A, Rumpe B, Stimberg M, Stokes AB, Tomkins A, Trensch G, Woodman M, Eppler JM
+title: 'Code Generation in Computational Neuroscience: A Review of Tools and Techniques'
+journal: Frontiers in Neuroinformatics
+doi: 10.3389/fninf.2018.00068
+categories:
+- Neuroinformatics
+- Neural simulation
+- Brian
+urls:
+- - Journal
+  - https://www.frontiersin.org/articles/10.3389/fninf.2018.00068/full
+- - PDF
+  - https://www.frontiersin.org/articles/10.3389/fninf.2018.00068/pdf
+abstract: |-
+  Advances in experimental techniques and computational power allowing researchers to gather anatomical and
+  electrophysiological data at unprecedented levels of detail have fostered the development of increasingly complex
+  models in computational neuroscience. Large-scale, biophysically detailed cell models pose a particular set of
+  computational challenges, and this has led to the development of a number of domain-specific simulators. At the
+  other level of detail, the ever growing variety of point neuron models increases the implementation barrier even
+  for those based on the relatively simple integrate-and-fire neuron model. Independently of the model complexity,
+  all modeling methods crucially depend on an efficient and accurate transformation of mathematical model
+  descriptions into efficiently executable code. Neuroscientists usually publish model descriptions in terms of the
+  mathematical equations underlying them. However, actually simulating them requires they be translated into code.
+  This can cause problems because errors may be introduced if this process is carried out by hand, and code written
+  by neuroscientists may not be very computationally efficient. Furthermore, the translated code might be generated
+  for different hardware platforms, operating system variants or even written in different languages and thus
+  cannot easily be combined or even compared. Two main approaches to addressing this issues have been followed. The
+  first is to limit users to a fixed set of optimized models, which limits flexibility. The second is to allow
+  model definitions in a high level interpreted language, although this may limit performance. Recently, a third
+  approach has become increasingly popular: using code generation to automatically translate high level
+  descriptions into efficient low level code to combine the best of previous approaches. This approach also greatly
+  enriches efforts to standardize simulator-independent model description languages. In the past few years, a
+  number of code generation pipelines have been developed in the computational neuroscience community, which differ
+  considerably in aim, scope and functionality. This article provides an overview of existing pipelines currently
+  used within the community and contrasts their capabilities and the technologies and concepts behind them.

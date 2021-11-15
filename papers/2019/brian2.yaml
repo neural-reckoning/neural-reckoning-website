@@ -1,0 +1,33 @@
+selected: true
+year: 2019
+authors: Stimberg M, Brette R, Goodman DFM
+title: Brian 2, an intuitive and efficient neural simulator
+journal: eLife
+additional: 8:e47314
+doi: 10.7554/eLife.47314
+categories:
+- Brian
+urls:
+- - Journal (HTML)
+  - https://elifesciences.org/articles/47314
+- - Code
+  - https://github.com/brian-team/brian2
+- - Documentation
+  - https://brian2.readthedocs.io/en/stable/
+- - Examples code
+  - https://github.com/brian-team/brian2_paper_examples
+- - Interactive examples
+  - https://mybinder.org/v2/gh/brian-team/brian2_paper_examples/master?filepath=index.ipynb
+- - Website
+  - http://briansimulator.org/
+abstract: |-
+  Brian 2 allows scientists to simply and efficiently simulate spiking neural network models. These models can
+  feature novel dynamical equations, their interactions with the environment, and experimental protocols. To
+  preserve high performance when defining new models, most simulators offer two options: low-level programming or
+  description languages. The first option requires expertise, is prone to errors, and is problematic for
+  reproducibility. The second option cannot describe all aspects of a computational experiment, such as the
+  potentially complex logic of a stimulation protocol. Brian addresses these issues using runtime code generation.
+  Scientists write code with simple and concise high-level descriptions, and Brian transforms them into efficient
+  low-level code that can run interleaved with their code. We illustrate this with several challenging examples: a
+  plastic model of the pyloric network, a closed-loop sensorimotor model, a programmatic exploration of a neuron
+  model, and an auditory model with real-time input.

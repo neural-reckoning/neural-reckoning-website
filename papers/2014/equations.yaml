@@ -1,0 +1,28 @@
+year: 2014
+authors: Stimberg M, Goodman DFM, Benichoux V, Brette R
+title: Equation-oriented specification of neural models for simulations
+journal: Frontiers in Neuroinformatics
+additional: '8:6'
+doi: 10.3389/fninf.2014.00006
+categories:
+- Brian
+urls:
+- - Journal (HTML)
+  - http://www.frontiersin.org/Journal/abstract/69453
+abstract: "Simulating biological neuronal networks is a core method of research in\n\
+  computational neuroscience. A full specification of such a network model\nincludes\
+  \ a description of the dynamics and state changes of neurons and\nsynapses, as well\
+  \ as the synaptic connectivity patterns and the initial\nvalues of all parameters.\
+  \ A standard approach in neuronal modeling\nsoftware is to build network models\
+  \ based on a library of pre-defined\ncomponents and mechanisms; if a model component\
+  \ does not yet exist, it\nhas to be defined in a special-purpose or general low-level\
+  \ language and\npotentially be compiled and linked with the simulator. Here we propose\n\
+  an alternative approach that allows flexible definition of models by\nwriting textual\
+  \ descriptions based on mathematical notation. We\ndemonstrate that this approach\
+  \ allows the definition of a wide range of\nmodels with minimal syntax. Furthermore,\
+  \ such explicit model\ndescriptions allow the generation of executable code for\
+  \ various target\nlanguages and devices, since the description is not tied to an\n\
+  implementation. Finally, this approach also has advantages for\nreadability and\
+  \ reproducibility, because the model description is fully\nexplicit, and because\
+  \ it can be automatically parsed and transformed\ninto formatted descriptions. The\
+  \ presented approach has been implemented\nin the Brian2 simulator.        "

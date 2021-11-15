@@ -1,0 +1,42 @@
+year: 2010
+authors: Goodman DFM, Brette R
+title: Spike-timing-based computation in sound localization
+journal: PLoS Computational Biology
+additional: '6(11): e1000993'
+doi: 10.1371/journal.pcbi.1000993
+categories:
+- Sound localisation
+- Modelling
+- Spiking
+urls:
+- - Journal (HTML)
+  - http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1000993
+- - PDF
+  - http://www.ploscompbiol.org/article/fetchObject.action?uri=info%3Adoi%2F10.1371%2Fjournal.pcbi.1000993&representation=PDF
+- - Code on ModelDB
+  - http://senselab.med.yale.edu/ModelDB/ShowModel.asp?model=126465
+abstract: |-
+  Spike timing is precise in the auditory system and it has been argued
+  that it conveys information about auditory stimuli, in particular about
+  the location of a sound source. However, beyond simple time differences,
+  the way in which neurons might extract this information is unclear and
+  the potential computational advantages are unknown. The computational
+  difficulty of this task for an animal is to locate the source of an
+  unexpected sound from two monaural signals that are highly dependent on
+  the unknown source signal. In neuron models consisting of
+  spectro-temporal filtering and spiking nonlinearity, we found that the
+  binaural structure induced by spatialized sounds is mapped to synchrony
+  patterns that depend on source location rather than on source signal.
+  Location-specific synchrony patterns would then result in the activation
+  of location-specific assemblies of postsynaptic neurons. We designed a
+  spiking neuron model which exploited this principle to locate a variety
+  of sound sources in a virtual acoustic environment using measured human
+  head-related transfer functions. The model was able to accurately
+  estimate the location of previously unknown sounds in both azimuth and
+  elevation (including front/back discrimination) in a known acoustic
+  environment. We found that multiple representations of different
+  acoustic environments could coexist as sets of overlapping neural
+  assemblies which could be associated with spatial locations by Hebbian
+  learning. The model demonstrates the computational relevance of relative
+  spike timing to extract spatial information about sources independently
+  of the source signal.

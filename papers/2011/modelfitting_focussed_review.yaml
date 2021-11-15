@@ -1,0 +1,28 @@
+year: 2011
+authors: Rossant C, Goodman DFM, Fontaine B, Platkiewicz J, Magnusson AK, Brette R
+title: Fitting neuron models to spike trains
+journal: Frontiers in Neuroscience
+additional: '5:9'
+doi: 10.3389/fnins.2011.00009
+categories:
+- Brian
+urls:
+- - Journal (HTML)
+  - http://www.frontiersin.org/Neuroscience/10.3389/fnins.2011.00009/abstract
+abstract: |-
+  Computational modeling is increasingly used to understand the function
+  of neural circuits in systems neuroscience. These studies require
+  models of individual neurons with realistic input-output properties.
+  Recently, it was found that spiking models can accurately predict the
+  precisely timed spike trains produced by cortical neurons in response to
+  somatically injected currents, if properly fitted. This requires fitting
+  techniques that are efficient and flexible enough to easily test
+  different candidate models. We present a generic solution, based on the
+  Brian simulator (a neural network simulator in Python), which allows the
+  user to define and fit arbitrary neuron models to electrophysiological
+  recordings. It relies on vectorization and parallel computing techniques
+  to achieve efficiency. We demonstrate its use on neural recordings in
+  the barrel cortex and in the auditory brainstem, and confirm that simple
+  adaptive spiking models can accurately predict the response of cortical
+  neurons. Finally, we show how a complex multicompartmental model can be
+  reduced to a simple effective spiking model.

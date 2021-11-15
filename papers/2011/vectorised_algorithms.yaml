@@ -1,0 +1,23 @@
+year: 2011
+authors: Brette R, Goodman DFM
+title: Vectorised algorithms for spiking neural network simulation
+journal: Neural Computation
+additional: '23:6'
+categories:
+- Brian
+urls:
+- - Journal
+  - http://www.mitpressjournals.org/doi/abs/10.1162/NECO_a_00123?journalCode=neco
+- - PDF (preprint)
+  - https://www.dropbox.com/s/okq0bywihietbgr/algorithms-preprint.pdf?dl=1
+abstract: |-
+  High-level languages (Matlab, Python) are popular in neuroscience
+  because they are flexible and accelerate development. However, for
+  simulating spiking neural networks, the cost of interpretation is a
+  bottleneck. We describe a set of algorithms to simulate large spiking
+  neural networks efficiently with high-level languages using vector-based
+  operations. These algorithms constitute the core of Brian, a spiking
+  neural network simulator written in the Python language. Vectorized
+  simulation makes it possible to combine the flexibility of high-level
+  languages with the computational efficiency usually associated with
+  compiled languages.
