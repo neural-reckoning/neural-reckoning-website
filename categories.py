@@ -103,9 +103,6 @@ def build_categories(things):
                 if cat2.key<cat.key:
                     category_connections[cat.key, cat2.key] += 1
 
-    for k, v in category_graph.items():
-        print(k, v)
-    
     max_connections = max(category_connections.values())
     min_connections = min(category_connections.values())
     max_num_papers = max(numpapers.values())
