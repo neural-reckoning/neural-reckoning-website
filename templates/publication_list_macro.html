@@ -24,77 +24,6 @@
     </li>
 {% endmacro %}
 
-{% macro detailed_publication(publication) %}
-    <h2>{{ publication.title }}</h2>
-        {% if publication.author_names_and_ids|length<=8 %}
-            <div class="d-none d-sm-block">
-                <ul class="list-inline author-list">
-                {% for (authname, authid) in publication.author_names_and_ids %}
-                    <li>
-                        {% if authid!='placeholder' %}
-                        <a href="{{authid}}.html">
-                        {% endif %}
-                        <div><img src="photo_{{authid}}.s.circ.png"/></div>
-                        <div>{{authname}}</div>
-                        {% if authid!='placeholder' %}
-                        </a>
-                        {% endif %}
-                    </li>
-                {% endfor %}
-                </ul>
-            </div>
-            <div class="d-block d-sm-none">
-                {{ publication.authors }}
-            </div>
-        {% else %}
-        <div>{{ publication.authors }}</div>
-        {% endif %}
-    <!--<div>{{ publication.authors }}</div>-->
-    {% if publication.year!='Preprints' %}
-        <div>
-            <i>{{ publication.journal }}</i>
-            {% if publication.phd_thesis %}<i>PhD thesis, </i>{% endif %}
-            <i>{{ publication.publisher }}</i>
-            <i>{{ publication.conference }}</i>
-            ({{ publication.year }}) <font color="#aaaaaa">{{ publication.additional }}</font>
-            {% if publication.book_editors %}
-                <br/>
-                In: {{publication.book}}. {{publication.book_editors}} (eds)
-            {% endif %}
-        </div>
-    {% else %}
-        <div><i>Preprint</i></div>
-    {% endif %}
-    {% if publication.doi %}
-        <div>
-            <a href="http://dx.doi.org/{{publication.doi}}" style="color: #aaaaaa">doi: {{publication.doi}}</a>
-        </div>
-    {% endif %}
-    {% if publication.additional_detail %}
-        <div>
-            {{ publication.additional_detail }}
-        </div>
-    {% endif %}
-    <div>&nbsp;</div>
-    {% if hasattr(publication, 'abstract') %}
-        <div><b>Abstract.</b> {{ publication.abstract }}</div>
-    {% endif %}
-    {% if hasattr(publication, 'video_embed') %}
-        <div>&nbsp;</div>
-        <div class="embed-responsive embed-responsive-16by9">
-            {{publication.video_embed}}
-        </div>
-    {% endif %}
-    <div>&nbsp;</div>
-    <p>
-        <b style="vertical-align: middle;">Links:</b>
-    {% for url_title, url in publication.urls %}<button type="button" class="btn btn-light" style="margin: 2px;"><a href="{{ url }}">{{ url_title }}</a></button>{% endfor %}
-    </p>
-    <p><b style="vertical-align: middle;">Categories:</b>
-    {% for catid in publication.category_ids | sort %}<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_{{ catid }}.html">{{ category_id_names[catid] }}</a></button>{% endfor %}
-    </p>
-{% endmacro %}
-
 {% macro grouped_publications(publications) %}
     {% if collapse_conference_papers_default=='collapse' %}
         {% set not_collapse_conference_papers_default='show' %}
@@ -124,10 +53,8 @@
 {% macro selected_publications() %}
     <div class="publication_list">
     <ul>
-    {% for publication in publications %}
-        {% if hasattr(publication, 'selected') and publication.selected %}
-            {{ li_publication(publication) }}
-        {% endif %}
+    {% for publication in  publications | selectattr('selected') | selectattr('last_updated') | sort(attribute='last_updated', reverse=True) %}
+        {{ li_publication(publication) }}
     {% endfor %}
     </ul>
     </div>
@@ -136,7 +63,7 @@
 {% macro recent_publications(n) %}
     <div class="publication_list">
     <ul>
-    {% for publication in publications[:n] %}
+    {% for publication in (publications|selectattr('last_updated')|sort(attribute='last_updated', reverse=True))[:n] %}
         {{ li_publication(publication) }}
     {% endfor %}
     </ul>

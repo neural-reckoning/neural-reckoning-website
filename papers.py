@@ -1,3 +1,4 @@
+import datetime
 from pathlib import Path
 import re
 
@@ -8,6 +9,11 @@ from templater import apply_template
 class Paper(Thing):
     def validate(self):
         self.year = str(self.year)
+        if hasattr(self, 'last_updated'):
+            d, m, y = list(map(int, self.last_updated.split('-')))
+            self.last_updated = datetime.datetime(y, m, d)
+        elif self.year!="Preprints":
+            self.last_updated = datetime.datetime(int(self.year), 1, 1)
         self.generate_link_icons()
     
     def generate_link_icons(self):

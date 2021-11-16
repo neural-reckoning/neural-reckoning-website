@@ -26,7 +26,7 @@
                 {% for category in categories.values() | sort(attribute="name") %}
                 {% set catpubs = category.things['Paper'] %}
                 {% set fill_percent = int(100*category.paper_count/max_count) %}
-                <li class="list-group-item" style="background: linear-gradient(to right, rgba(0, 0, 0, 0.03) {{fill_percent}}%, rgba(0, 0, 0, 0.0) {{fill_percent}}%);">
+                <li class="list-group-item" style="background: linear-gradient(to right, rgba(0, 0, 0, 0.05) {{fill_percent}}%, rgba(0, 0, 0, 0.0) {{fill_percent}}%);">
                     <a href="publication_category_{{ category.key }}.html">{{ category.name }}</a>
                     <span style="color: #aaaaaa;">({{catpubs|length}} paper{% if catpubs|length!=1 %}s{% endif %})</span>
                 </li>
