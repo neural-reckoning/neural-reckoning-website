@@ -60,12 +60,3 @@ check_links()
 
 # And we're done
 print('Finished.')
-
-#################### OLD VERSION ############################################
-
-# import urllib.request
-# import urllib.error
-# import urllib.parse
-# from wordcloud import WordCloud
-# import hashlib
-# from PIL import Image, ImageDraw
