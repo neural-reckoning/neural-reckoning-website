@@ -1,14 +1,22 @@
 import codecs, os
+from collections import defaultdict
 
+from people import positions_in_order, position_headers
 from templater import apply_template
 
 def write_pages(nav, people, papers, software, categories):
     pages = nav['pages']
     unindexed_pages = nav['unindexed_pages']
+    members = list(people.values())
+    grouped_members = defaultdict(list)
+    for member in members:
+        grouped_members[member.position].append(member)
     extra_keys = dict(
         publications=list(papers.values()),
         software=list(software.values()),
-        members=list(people.values()),
+        categories=categories,
+        # for index page and members page
+        members=members, grouped_members=grouped_members, positions_in_order=positions_in_order, position_headers=position_headers,
     )
 
     # Generate index pages
@@ -16,5 +24,3 @@ def write_pages(nav, people, papers, software, categories):
         extra_keys[title] = title
         extra_keys[filename] = filename
         apply_template(filename, filename, keys=extra_keys)
-        print(filename)
-

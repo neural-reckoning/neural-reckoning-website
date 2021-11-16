@@ -4,32 +4,33 @@
 
 <h2>Lab members</h2>
 
-{% for group in members | groupby('position_order') %}
-    {% if member_types[group.grouper] %}
-        <h3>{{member_types[group.grouper]}}</h3>
+{% for position in positions_in_order %}
+    {% if not grouped_members[position] %}{% continue %}{% endif %}
+    {% if position_headers[position] %}
+        <h3>{{position_headers[position]}}</h3>
     {% endif %}
-    {% for member in group.list | sort(attribute='author_names') | sort(attribute='dates', reverse=(group.grouper=='5_former')) %}
+    {% for member in grouped_members[position] | sort(attribute='author_names') | sort(attribute='dates', reverse=(position=='former')) %}
     <div class="row mb-3 align-items-center">
         <div style="flex: 0 0 125px;">
-            <a href="{{member.id}}.html">
-                {% if os.path.exists('files/photo_'+member.id+'.jpg') %}
-                    <img src="photo_{{member.id}}.m.circ.png" style="max-height: 100px; max-width: 100px;"/>
+            <a href="{{member.key}}.html">
+                {% if os.path.exists('files/photo_'+member.key+'.jpg') %}
+                    <img src="photo_{{member.key}}.m.circ.png" style="max-height: 100px; max-width: 100px;"/>
                 {% else %}
                     <img src="portrait_placeholder.png" style="max-height: 100px; max-width: 100px;"/>
                 {% endif %}
             </a>
         </div>
         <div style="flex: 0 0 125px;" class="d-none d-md-block">
-            <a href="{{member.id}}.html">
-                {% if os.path.exists('docs/wordcloud_'+member.id+'.png') %}
-                    <img src="wordcloud_{{member.id}}.png" style="max-height: 100px; max-width: 100px;"/>
+            <a href="{{member.key}}.html">
+                {% if os.path.exists('docs/wordcloud_'+member.key+'.png') %}
+                    <img src="wordcloud_{{member.key}}.png" style="max-height: 100px; max-width: 100px;"/>
                 {% endif %}
             </a>
         </div>
         <div class="col">
-            <a href="{{member.id}}.html"><b>{{member.name}}</b></a>
+            <a href="{{member.key}}.html"><b>{{member.name}}</b></a>
             {% if hasattr(member, 'dates') %}
-                <font color="#aaaaaa">({% if hasattr(member, 'former_position') %}{{member.former_position}}&nbsp;{% endif %}{{ member.dates_string }})</font>
+                <span style="color: #aaaaaa;">({% if hasattr(member, 'former_position') %}{{member.former_position}}&nbsp;{% endif %}{{ member.dates_string }})</span>
             {% endif %}<br/>
             {{ member.short }}
         </div>

@@ -3,7 +3,7 @@ author_names:
   - Goodman DFM
   - Goodman DF
   - Goodman D
-position: PI
+position: pi
 room: 1001
 email: 'ZC5nb29kbWFuQGltcGVyaWFsLmFjLnVr' # generate this by import base64; base64.b64encode(b'address')
 telephone: '+44 (0)20 7594 6264'

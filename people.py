@@ -21,7 +21,13 @@ def sk_address(room):
 
 positions_in_order = ['pi', 'postdoc', 'phd', 'former']
 position_order_map = dict(zip(positions_in_order, range(len(positions_in_order))))
-
+position_headers = {
+    'pi': '',
+    'postdoc': 'Postdocs and Fellows',
+    'phd': 'PhD students',
+    'other': 'Others',
+    'former': 'Former members',
+    }
 
 class Person(Thing):
     def validate(self):

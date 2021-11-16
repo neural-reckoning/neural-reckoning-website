@@ -33,6 +33,9 @@ category_detail_links = {
 class Category(Thing):
     def validate(self):
         self.things = defaultdict(set) # mapping self.things[classname] = list of things with that classname
+    @property
+    def paper_count(self):
+        return len(self.things['Paper'])
 
 
 def category_id(name):

@@ -125,25 +125,7 @@ print('Finished.')
 # last_updated = time.strftime('%Y/%m/%d')
 
 
-# env_globals = dict(pages=pages, publications=publications, hasattr=hasattr,
-#                    software=software,
-#                    last_updated=last_updated,
-#                    members=members, member_types=member_types, member_dict=member_dict,
-#                    member_publications=member_publications,
-#                    generate_email=generate_email, os=os,
-#                    category_id_names=category_id_names,
-#                    category_publications=category_publications,
-#                    category_id=category_id,
-#                    cached=cached,
-#                    unindexed_pages=unindexed_pages)
 
-# # Generate index pages
-# for filename, title in list(pages.items())+list(unindexed_pages.items()):
-#     if os.path.exists(os.path.join('templates', filename)):
-#         page = env.get_template(filename).render(title=title, filename=filename)
-#         codecs.open(os.path.join('docs', filename), 'w', encoding='utf-8').write(scan_html_for_links(page, filename))
-  
-    
 # import http.client
 # from urllib.parse import urlparse
 

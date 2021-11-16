@@ -13,8 +13,9 @@ def scan_html_for_links(page, name):
 env = Environment(loader=FileSystemLoader(['templates', 'temp']),
                   trim_blocks=True,
                   lstrip_blocks=True,
+                  extensions=['jinja2.ext.loopcontrols'],
                   )
-env.globals.update(dict(os=os, hasattr=hasattr, isinstance=isinstance, str=str))
+env.globals.update(dict(os=os, hasattr=hasattr, isinstance=isinstance, str=str, int=int))
 
 def apply_template(name, filename, keys=None, keys_from=None):
     if keys is None:
