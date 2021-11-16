@@ -17,6 +17,7 @@ from related import find_paper_authors
 from software import get_software, write_software
 from templater import update_template_globals
 from twitter import generate_twitter_threads
+from wordclouds import make_wordclouds
 
 # Load the basic navigational structure and put it into the template engine
 nav = yaml.safe_load(open('navigation.yaml', 'r'))
@@ -36,6 +37,9 @@ generate_twitter_threads(papers)
 # Find relationships
 find_paper_authors(people, papers)
 categories = build_categories(papers)
+
+# Generate wordclouds
+make_wordclouds(people, papers)
 
 # Write all the people pages
 write_people(people)
