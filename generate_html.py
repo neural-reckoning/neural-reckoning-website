@@ -11,9 +11,9 @@ from cache import save_cache
 from categories import build_categories, write_categories
 from links import check_links
 from people import get_people, write_people, make_people_thumbnails
-from pages import write_pages
+from pages import write_pages, make_members_global_for_navigation
 from papers import get_papers, write_papers
-from related import find_paper_authors
+from related import find_thing_authors
 from software import get_software, write_software
 from templater import update_template_globals
 from twitter import generate_twitter_threads
@@ -35,11 +35,17 @@ make_people_thumbnails(people)
 generate_twitter_threads(papers)
 
 # Find relationships
-find_paper_authors(people, papers)
-categories = build_categories(papers)
+find_thing_authors(people, papers)
+find_thing_authors(people, software)
+categories = build_categories({**papers, **software})
+
+print([p.key for p in people['nicolas_perez'].things['Paper']])
 
 # Generate wordclouds
 make_wordclouds(people, papers)
+
+# Add members to global environment for navigation bar
+make_members_global_for_navigation(people)
 
 # Write all the people pages
 write_people(people)

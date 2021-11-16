@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% import 'category_macro.html' as catmacro with context %}
+{% import 'authors_list_macro.html' as authmacro with context %}
 
 {% block main %}
 
@@ -15,21 +17,7 @@
 <h2>{{ title }}</h2>
 {% if author_objects|length<=8 %}
     <div class="d-none d-sm-block">
-        <ul class="list-inline author-list">
-        {% for author in author_objects %}
-            <li>
-                {% if not isinstance(author, str) %}
-                <a href="{{ author.key }}.html">
-                <div><img src="photo_{{ author.key }}.s.circ.png"/></div>
-                <div>{{ author.name }}</div>
-                </a>
-                {% else %}
-                <div><img src="photo_placeholder.s.circ.png"/></div>
-                <div>{{ author }}</div>
-                {% endif %}
-            </li>
-        {% endfor %}
-        </ul>
+        {{ authmacro.authors_list(author_objects) }}
     </div>
     <div class="d-block d-sm-none">
         {{ authors }}
@@ -77,8 +65,9 @@
 <b style="vertical-align: middle;">Links:</b>
 {% for url_title, url in urls %}<button type="button" class="btn btn-light" style="margin: 2px;"><a href="{{ url }}">{{ url_title }}</a></button>{% endfor %}
 </p>
-<p><b style="vertical-align: middle;">Categories:</b>
-{% for cat in category_objects | sort(attribute='key') %}<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_{{ cat.key }}.html">{{ cat.name }}</a></button>{% endfor %}
-</p>
 
+<p><b style="vertical-align: middle;">Categories:</b>
+    {{ catmacro.category_buttons(category_objects) }}
+</p>
+    
 {% endblock %}

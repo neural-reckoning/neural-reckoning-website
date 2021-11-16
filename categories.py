@@ -33,11 +33,7 @@ category_detail_links = {
 
 
 class Category(Thing):
-    def validate(self):
-        self.things = defaultdict(set) # mapping self.things[classname] = list of things with that classname
-    @property
-    def paper_count(self):
-        return len(self.things['Paper'])
+    pass
 
 
 def category_id(name):
@@ -82,7 +78,7 @@ def build_categories(things):
                     pub.category_ids.add(cid)
             for cid in pub.category_ids:
                 cat = categories[cid]
-                cat.things[pub.__class__.__name__].add(pub)
+                cat.add_thing(pub)
         pub.category_objects = set([categories[catid] for catid in pub.category_ids])
 
     for k, v in list(category_detail_links.items()):

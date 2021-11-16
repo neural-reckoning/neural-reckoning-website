@@ -1,3 +1,4 @@
+from collections import defaultdict
 import codecs, os
 import yaml
 
@@ -24,8 +25,25 @@ class Thing(object):
         for k, v in kwds.items():
             setattr(self, k, v)
 
-        self.validate()
+        self.things = defaultdict(set)
 
+        self.validate()
 
     def validate(self):
         pass
+
+    def add_thing(self, thing):
+        self.things[thing.__class__.__name__].add(thing)
+        self.things['all'].add(thing)
+
+    @property
+    def paper_count(self):
+        return len(self.things['Paper'])
+
+    @property
+    def software_count(self):
+        return len(self.things['Software'])
+
+    @property
+    def thing_count(self):
+        return len(self.things['all'])

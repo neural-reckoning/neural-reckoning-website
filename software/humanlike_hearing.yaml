@@ -11,3 +11,7 @@ long: |-
 team:
 - Goodman DFM
 - Weerts L
+categories:
+  - Neuroinformatics
+  - Auditory
+  - Machine learning

@@ -20,3 +20,6 @@ long: |-
   </p>
 team:
 - Goodman DFM
+categories:
+  - Spike sorting
+  - Machine learning

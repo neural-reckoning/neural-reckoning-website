@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% import 'publication_list_macro.html' as publist with context %}
 
 {% block main %}
 
@@ -7,7 +6,7 @@
 
 {% for sw in software %}
 <div class="border rounded p-3 miniboxed">
-    <h4><a href="sw_{{sw.name}}.html">{{sw.title}}</a></h4>
+    <h4><a href="sw_{{sw.key}}.html">{{sw.title}}</a></h4>
     <div class="row">
         <div class="col-sm-4 order-sm-12">
             <img class="img-fluid" src="{{sw.logo}}" style="width: 250px; max-width: 100%">

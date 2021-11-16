@@ -1,0 +1,13 @@
+{% macro software_card_list(software) %}
+<div class="row flex-row flex-nowrap" style="overflow-x: auto;">
+    {% for sw in software %}
+    <div class="col-5 col-md-4 p-2" style="width: 500px;">
+        <a href="sw_{{sw.key}}.html">
+            <img class="img-fluid" src="{{sw.logo}}" style="max-height: 100px;">
+            <h5>{{sw.title}}</h5>
+        </a>
+        <p>{{sw.short}}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endmacro %}

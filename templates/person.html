@@ -5,6 +5,7 @@
     {% set collapse_conference_papers_default = "collapse" %}
 {% endif %}
 {% import 'publication_list_macro.html' as publist with context %}
+{% import 'software_list_macro.html' as swmacro with context %}
 
 {% block main %}
 
@@ -70,7 +71,13 @@
         {{ long }}
         </div>
 
-        {% if show_publications and papers %}
+        {% if things['Software'] %}
+        <h2>Software</h2>
+        {{ swmacro.software_card_list(things['Software']) }}
+        <p>&nbsp;</p>
+        {% endif %}
+
+        {% if show_publications and things['Paper'] %}
         <h2>Publications</h2>
 
         {% if key!="dan_goodman" %}
@@ -80,7 +87,7 @@
             {{ publist.show_conference_papers() }}
         {% endif %}
 
-        {{ publist.grouped_publications(papers) }}
+        {{ publist.grouped_publications(things['Paper']) }}
         {% endif %}
 
         {% if external_publications %}

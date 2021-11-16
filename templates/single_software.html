@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% import 'category_macro.html' as catmacro with context %}
+{% import 'authors_list_macro.html' as authmacro with context %}
 
 {% block main %}
 
@@ -15,31 +17,21 @@
 
 <div class="row">
     <div class="col">
+
         <h3>Links</h3>
         <p>
             {% for url_title, url in urls %}<button type="button" class="btn btn-light" style="margin: 2px;"><a href="{{ url }}">{{ url_title }}</a></button>{% endfor %}
         </p>
-    </div>
-</div>
 
-<div class="row">
-    <div class="col">
         <h3>Neural Reckoning team members</h3>
         <p>Note that this list does not include external team members.</p>
-        <ul class="list-inline author-list">
-        {% for authid in team_ids %}
-            <li>
-                {% if authid!='placeholder' %}
-                <a href="{{authid}}.html">
-                {% endif %}
-                <div><img src="photo_{{authid}}.s.circ.png"/></div>
-                <div>{{member_dict[authid].name}}</div>
-                {% if authid!='placeholder' %}
-                </a>
-                {% endif %}
-            </li>
-        {% endfor %}
-        </ul>
+        {{ authmacro.authors_list(author_objects) }}
+
+        <h3>Categories</h3>
+        <p>
+            {{ catmacro.category_buttons(category_objects) }}
+        </p>
+
     </div>
 </div>
 

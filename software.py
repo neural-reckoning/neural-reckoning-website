@@ -24,16 +24,3 @@ def write_software(software):
     for key, sw in software.items():
         filename = f'sw_{key}.html'
         apply_template('single_software.html', filename, keys_from=sw)
-
-
-# # Process software page data
-# for sw in software:
-#     sw.team_ids = []
-#     for auth in sw.team:
-#         authid = authname_to_member_id.get(auth, 'placeholder')
-#         sw.team_ids.append(authid)
-#         if authid!="placeholder":
-#             mem = member_dict[authid]
-#             if not hasattr(mem, 'software'):
-#                 mem.software = []
-#             mem.software.append(sw)
