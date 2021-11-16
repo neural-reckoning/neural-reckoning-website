@@ -1,3 +1,6 @@
+import hashlib
+from wordcloud import WordCloud
+
 # # wordcloud: explicitly delete docs/wordcloud.png to recalculate
 # def make_wordcloud(member=None, width=350, height=350):
 #     if member is None:

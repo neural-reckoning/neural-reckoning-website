@@ -17,6 +17,7 @@ env = Environment(loader=FileSystemLoader(['templates', 'temp']),
                   )
 env.globals.update(dict(os=os, hasattr=hasattr, isinstance=isinstance, str=str, int=int))
 
+
 def apply_template(name, filename, keys=None, keys_from=None):
     if keys is None:
         keys = {}
