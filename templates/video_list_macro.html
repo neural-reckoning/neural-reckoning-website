@@ -1,10 +1,6 @@
 {% macro short_video_list_item(vid) %}
 <li class="list-group-item">
     <a href="video_{{vid.key}}.html">{{vid.name}}</a>
-    <!-- <a href="{{vid.url}}" target="_blank">
-        ({{ vid.type}}
-        <i class="fa fa-video-camera"></i>)
-    </a> -->
 </li>
 {% endmacro %}
 
@@ -33,7 +29,9 @@
 
 {% macro video_highlight(videos, show=0) %}
 {% set videos = videos | sort(attribute='last_updated', reverse=True) %}
-{{ videos[0].embed }}
+<div class="embed-responsive embed-responsive-16by9">
+    {{ videos[0].embed }}
+</div>
 {% if show!="all" %}
 {% set videos = videos[1:1+show] %}
 {% else %}

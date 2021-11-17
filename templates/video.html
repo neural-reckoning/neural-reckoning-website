@@ -15,8 +15,10 @@
             {{ long }}
         </p>
 
-        {{ embed }}
-
+        <div class="embed-responsive embed-responsive-16by9">
+            {{ embed }}
+        </div>
+        
         {% if things['Person'] %}
         <h3>Related people</h3>
         {{ authmacro.authors_list(things['Person']) }}
