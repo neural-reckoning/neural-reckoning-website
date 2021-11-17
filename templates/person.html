@@ -73,13 +73,12 @@
         </div>
 
         {% if things['Software'] %}
-        <h2>Software</h2>
+        <h2 class="pt-3 pb-3">Software</h2>
         {{ swmacro.software_card_list(things['Software']) }}
-        <p>&nbsp;</p>
         {% endif %}
 
         {% if show_publications and things['Paper'] %}
-        <h2>Publications</h2>
+        <h2 class="pt-3 pb-3">Publications</h2>
 
         {% if key!="dan_goodman" %}
             <p>Note that only publications as part of the Neural Reckoning group are included here{% if external_publications %} (see <a href="#external_publications">external publications below</a> for full list){% endif %}.</p>
@@ -92,12 +91,12 @@
         {% endif %}
 
         {% if things['Video'] %}
-        <h2>Videos</h2>
+        <h2 class="pt-3 pb-3">Videos</h2>
         {{ vidlist.video_highlight(things['Video'], show='all') }}
         {% endif %}
 
         {% if external_publications %}
-        <h2 id="external_publications">External publications</h2>
+        <h2 class="pt-3 pb-3" id="external_publications">External publications</h2>
         <p>
             This is a short preview of the publications from other sources (<a href="https://orcid.org/">ORCID</a>,
             <a href="https://www.semanticscholar.org/">Semantic Scholar</a>).
