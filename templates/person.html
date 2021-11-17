@@ -6,6 +6,7 @@
 {% endif %}
 {% import 'publication_list_macro.html' as publist with context %}
 {% import 'software_list_macro.html' as swmacro with context %}
+{% import 'video_list_macro.html' as vidlist with context %}
 
 {% block main %}
 
@@ -88,6 +89,11 @@
         {% endif %}
 
         {{ publist.grouped_publications(things['Paper']) }}
+        {% endif %}
+
+        {% if things['Video'] %}
+        <h2>Videos</h2>
+        {{ vidlist.video_highlight(things['Video'], show='all') }}
         {% endif %}
 
         {% if external_publications %}

@@ -1,0 +1,18 @@
+name: Understanding the role of neural heterogeneity in learning
+type: Talk
+url: https://youtu.be/aLNGcs_zYsY
+embed: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/aLNGcs_zYsY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+short: Talk on neural heterogeneity by Nicolas Perez.
+long: >
+  Talk on neural heterogeneity by <a href="nicolas_perez.html">Nicolas Perez</a> given
+  at the <a href="http://snufa.net/2021/">SNUFA-2021</a> workshop.
+related:
+  - heterogeneity
+  - dan_goodman
+  - nicolas_perez
+categories:
+  - Spiking
+  - Learning
+  - Sensory
+  - Machine learning
+last_updated: 4-11-2021

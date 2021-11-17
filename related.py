@@ -53,6 +53,17 @@ class RelatedSoftwareGetter:
         return related
 
 
+class RelatedThingGetter:
+    def __init__(self, things):
+        self.things = things
+    def __call__(self, thing):
+        related = []
+        if hasattr(thing, 'related'):
+            for tgt_str in thing.related:
+                related.append(self.things[tgt_str.lower()])
+        return related
+
+
 def find_related(things, get_related_things):
     if isinstance(things, dict):
         things = things.values()

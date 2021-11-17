@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% import 'publication_list_macro.html' as publist with context %}
 {% import 'software_list_macro.html' as swmacro with context %}
+{% import 'video_list_macro.html' as vidlist with context %}
 
 {% block title %}Neural Reckoning Group{% endblock %}
 
@@ -75,6 +76,11 @@
         <div class="row"><div class="col bg-light mt-3 mb-3 pt-2">
             <h2>Software packages</h2>
             {{ swmacro.software_card_list(software) }}
+        </div></div>
+
+        <div class="row"><div class="col bg-light mt-3 mb-3 pt-2">
+            <h2>Latest <a href="videos.html">video</a></h2>
+            {{ vidlist.video_highlight(videos) }}
         </div></div>
 
     </div>

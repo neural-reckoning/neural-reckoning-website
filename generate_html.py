@@ -13,10 +13,11 @@ from links import check_links
 from people import get_people, write_people, make_people_thumbnails
 from pages import write_pages, make_members_global_for_navigation
 from papers import get_papers, write_papers
-from related import find_thing_authors, find_related, RelatedSoftwareGetter
+from related import find_thing_authors, find_related, RelatedSoftwareGetter, RelatedThingGetter
 from software import get_software, write_software
 from templater import update_template_globals
 from twitter import generate_twitter_threads
+from videos import get_videos, write_videos
 from wordclouds import make_wordclouds
 
 # Load the basic navigational structure and put it into the template engine
@@ -27,6 +28,7 @@ update_template_globals(**nav)
 people = get_people()
 papers = get_papers()
 software = get_software()
+videos = get_videos()
 
 # Generate thumbnails
 make_people_thumbnails(people)
@@ -37,8 +39,9 @@ generate_twitter_threads(papers)
 # Find relationships
 find_thing_authors(people, papers)
 find_thing_authors(people, software)
-categories = build_categories({**papers, **software})
+categories = build_categories({**papers, **software, **videos})
 find_related(papers, RelatedSoftwareGetter(software))
+find_related(videos, RelatedThingGetter({**people, **papers, **software}))
 
 # print([p.key for p in software['auditory_model_initiative'].things['Paper']])
 
@@ -53,7 +56,8 @@ write_people(people)
 write_papers(papers)
 write_categories(categories)
 write_software(software)
-write_pages(nav, people, papers, software, categories)
+write_videos(videos)
+write_pages(nav, people, papers, software, categories, videos)
 
 # Copy static files to docs directory
 os.system(r'copy files\* docs >nul')

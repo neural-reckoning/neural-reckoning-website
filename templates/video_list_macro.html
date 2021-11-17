@@ -1,0 +1,45 @@
+{% macro short_video_list_item(vid) %}
+<li class="list-group-item">
+    <a href="video_{{vid.key}}.html">{{vid.name}}</a>
+    <a href="{{vid.url}}" target="_blank">
+        ({{ vid.type}}
+        <i class="fa fa-video-camera"></i>)
+    </a>
+</li>
+{% endmacro %}
+
+{% macro grouped_video_list(videos) %}
+<div>
+    {% for group in videos | groupby('year') | reverse %}
+        <h5>{{group.grouper}}</h5>
+        <ul class="list-group">
+        {% for vid in group.list | sort(attribute='last_updated', reverse=True) %}
+            {{ short_video_list_item(vid) }}
+        {% endfor %}
+        </ul>
+    {% endfor %}
+</div>
+{% endmacro %}
+
+{% macro flat_video_list(videos) %}
+<div>
+    <ul class="list-group">
+    {% for vid in videos | sort(attribute='last_updated', reverse=True) %}
+        {{ short_video_list_item(vid) }}
+    {% endfor %}
+    </ul>
+</div>
+{% endmacro %}
+
+{% macro video_highlight(videos, show=0) %}
+{% set videos = videos | sort(attribute='last_updated', reverse=True) %}
+{{ videos[0].embed }}
+{% if show!="all" %}
+{% set videos = videos[1:1+show] %}
+{% else %}
+{% set videos = videos[1:] %}
+{% endif %}
+{% if videos %}
+{{ flat_video_list(videos) }}
+{% endif %}
+{% endmacro %}

@@ -1,5 +1,5 @@
 from collections import defaultdict
-import codecs, os
+import codecs, os, datetime
 import yaml
 
 __all__ = ['Thing']
@@ -26,6 +26,12 @@ class Thing(object):
             setattr(self, k, v)
 
         self.things = defaultdict(set)
+
+        if hasattr(self, 'last_updated'):
+            d, m, y = list(map(int, self.last_updated.split('-')))
+            self.last_updated = datetime.datetime(y, m, d)
+            if not hasattr(self, 'year'):
+                self.year = y
 
         self.validate()
 

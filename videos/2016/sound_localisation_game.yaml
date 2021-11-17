@@ -1,0 +1,17 @@
+name: Binaural sound localisation game demo
+type: Demo
+url: https://youtu.be/Wd30p7UfMtA
+embed: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Wd30p7UfMtA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+short: Demo of binaural sound localisation virtual reality game.
+long: >
+  Demo of a virtual reality sound localisation game build using Unity 5.2.4 and the google cardboard Unity SDK.
+  Players have to find an invisible floating robot using only the sound.
+related:
+  - gamification_sound_localisation
+  - dan_goodman
+  - jean_hugues_lestang
+categories:
+  - Virtual reality
+  - Sound localisation
+  - Software
+last_updated: 1-1-2016

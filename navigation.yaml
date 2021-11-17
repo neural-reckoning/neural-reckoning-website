@@ -8,6 +8,7 @@ pages:
     'location.html': Location
 
 unindexed_pages:
+    'videos.html': 'Videos'
     'comp-neuro-resources.html': 'Computational neuroscience resources'
     'neuroinformatics.html': 'Neuroinformatics'
     'sensory.html': 'Sensory neuroscience'

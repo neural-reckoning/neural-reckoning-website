@@ -2,6 +2,7 @@
 {% import 'category_macro.html' as catmacro with context %}
 {% import 'authors_list_macro.html' as authmacro with context %}
 {% import 'software_list_macro.html' as swmacro with context %}
+{% import 'video_list_macro.html' as vidlist with context %}
 
 {% block main %}
 
@@ -77,5 +78,10 @@
 <h3>Related software</h3>
 {{ swmacro.software_card_list(things['Software']) }}
 {% endif %}
-    
+
+{% if things['Video'] %}
+<h3>Related videos</h3>
+{{ vidlist.flat_video_list(things['Video']) }}
+{% endif %}
+
 {% endblock %}

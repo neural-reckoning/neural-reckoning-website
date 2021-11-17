@@ -1,0 +1,13 @@
+name: Tuesday lake MI
+type: Demo
+url: https://youtu.be/copuZ9o5Diw
+embed: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/copuZ9o5Diw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+short: Visualisation of the network of an ecosystem in a lake in Michigan.
+long: >
+  A visualisation of an ecosystem in a lake in Michigan. The edge bundling technique used is from the paper
+  "Towards Unambiguous Edge Bundling: Investigating Confluent Drawings for Network Visualization" by Benjamin Bach et al.
+related:
+  - jonathan_zheng
+categories:
+  - Visualisation
+last_updated: 1-1-2017

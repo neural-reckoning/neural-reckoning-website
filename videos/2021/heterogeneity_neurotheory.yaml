@@ -1,0 +1,18 @@
+name: Neural heterogeneity promotes robust learning
+type: Talk
+url: https://youtu.be/V2HFqVfeTPg
+embed: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/V2HFqVfeTPg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+short: Talk on neural heterogeneity by Dan Goodman.
+long: >
+  Talk on neural heterogeneity by <a href="dan_goodman.html">Dan Goodman</a> given
+  at the <a href="https://www.world-wide.org/Neuro/The-Neurotheory-Forum/">WorldWideNeuro NeuroTheory forum</a>.
+related:
+  - heterogeneity
+  - dan_goodman
+  - nicolas_perez
+categories:
+  - Spiking
+  - Learning
+  - Sensory
+  - Machine learning
+last_updated: 22-1-2021
