@@ -34,7 +34,7 @@
     {% for group in publications | groupby('year') | reverse %}
         <h5>{{group.grouper}}</h5>
         <ul>
-        {% for publication in group.list %}
+        {% for publication in group.list | sort(attribute='key') | sort(attribute='sort_date', reverse=True) %}
             {{ li_publication(publication) }}
         {% endfor %}
         {% set num_conferences = group.list|selectattr('conference')|list|length %}
