@@ -1,0 +1,54 @@
+year: 2020
+authors: Hathway P
+title: Biologically-inspired machine learning approaches to large-scale neural data
+  analysis
+publisher: Imperial College London
+phd_thesis: true
+categories:
+- Machine learning
+- Visualisation
+- Software
+- Neuroscience
+- Neuroinformatics
+- Neural data analysis
+- Learning
+- Spiking
+- Plasticity
+urls:
+- - Thesis (PDF)
+  - https://imperialcollegelondon.box.com/s/2n8psmtrlxs5ymmus6vailh7i5x2wqmn
+abstract: |-
+  <p>Recent progress in recording techniques now allows researchers to record
+  from hundreds and even thousands of neurons simultaneously. New, scalable
+  methods need to be developed to handle such large data sets. Ideally
+  these methods should not only analyse the multi-dimensional data, but also
+  provide results which could be interpreted by the brain.</p>
+
+  <p>One key problem in neuronal data analysis is to identify neuronal assemblies
+  i.e. groups of neurons displaying coordinated neuronal activity. Currently
+  available methods either search for assemblies whose neurons participate
+  in repeated spike sequences or search for assemblies whose neurons display
+  similar firing rate modulations. In this thesis, I present two approaches
+  to the search for neuronal assemblies.</p>
+
+  <p>I investigate whether a spiking neural network equipped with biologically
+  plausible synaptic learning rules can provide a biologically interpretable way
+  of finding repeating spike patterns in neuronal data. Due to the similarities
+  between spiking neural networks to how brains function, this might be very
+  close to how the brain itself detects such repeated activity.</p>
+
+  <p>Furthermore, I present neural topic modelling – a new data analysis method
+  for large neuronal data sets. Based on a machine learning method from text
+  mining, neural topic modelling is scalable and produces interpretable results.
+  By including multiple features of neuronal spike trains and even other
+  data types such as local field potentials into the analysis, I can expand the
+  definition of neuronal assemblies to any type of neuronal activity features
+  which are co-modulated. The application of neural topic modelling to neuronal
+  recordings reveals interactions between features of neuronal activity
+  which have previously not been identified.</p>
+
+  <p>Since both approaches are biologically plausible, the results from both
+  methods can be used to generate hypotheses about how the brain processes
+  information and may reveal hitherto unknown information processing pathways.</p>
+software:
+  - Brian

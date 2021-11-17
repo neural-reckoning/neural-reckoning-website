@@ -1,0 +1,25 @@
+title: KlustaSuite
+url: http://klusta-team.github.io/
+logo: spikedetekt.png
+short: Spike sorting.
+long: |-
+  <p>
+      A collection of programs for "spike sorting". That is, for
+      extracting spike trains from a set of simultaneously recorded
+      extracellular traces. This problem involves preprocessing data to
+      remove noise, clustering to identify patterns across channels
+      that correspond to spikes, and finally manually inspecting and
+      refining the output. This software is currently undergoing a
+      massive redesign to make it possible to sort spikes using
+      enormous electrode arrays with hundreds to thousands of channels.
+  </p>
+  <p>
+      The KlustaSuite team is led by
+      <a href="http://iris.ucl.ac.uk/iris/browse/profile?upi=KDHAR02">Kenneth Harris</a>
+      at UCL.
+  </p>
+team:
+- Goodman DFM
+categories:
+  - Spike sorting
+  - Machine learning

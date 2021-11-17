@@ -1,0 +1,31 @@
+selected: true
+year: 2016
+authors: Rossant C, Kadir SN, Goodman DFM, Schulman J, Hunter MLD, Saleem AB, Grosmark
+  A, Belluscio M, Denfield GH, Ecker AS, Tolias AS, Solomon S, Buzsáki G, Carandini
+  M, Harris KD
+title: Spike sorting for large, dense electrode arrays
+journal: Nature Neuroscience
+doi: 10.1038/nn.4268
+categories:
+- Spike sorting
+- Machine learning
+urls:
+- - Journal
+  - http://dx.doi.org/10.1038/nn.4268
+- - PDF
+  - http://www.nature.com/neuro/journal/vaop/ncurrent/pdf/nn.4268.pdf
+- - PDF (preprint)
+  - https://www.dropbox.com/s/emnup6d0aoyjccs/spikesorting-preprint.pdf?dl=1
+abstract: |-
+  Developments in microfabrication technology have enabled the production of
+  neural electrode arrays with hundreds of closely spaced recording sites, and
+  electrodes with thousands of sites are under development. These probes in
+  principle allow the simultaneous recording of very large numbers of neurons.
+  However, use of this technology requires the development of techniques for
+  decoding the spike times of the recorded neurons from the raw data captured
+  from the probes. Here we present a set of tools to solve this problem,
+  implemented in a suite of practical, user-friendly, open-source software.
+  We validate these methods on data from the cortex, hippocampus and thalamus
+  of rat, mouse, macaque and marmoset, demonstrating error rates as low as 5%.
+software:
+  - klusta

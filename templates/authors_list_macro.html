@@ -1,0 +1,17 @@
+{% macro authors_list(author_objects) %}
+<ul class="list-inline author-list">
+{% for author in author_objects %}
+    <li>
+        {% if not isinstance(author, str) %}
+        <a href="{{ author.key }}.html">
+        <div><img src="photo_{{ author.key }}.s.circ.png"/></div>
+        <div>{{ author.name }}</div>
+        </a>
+        {% else %}
+        <div><img src="photo_placeholder.s.circ.png"/></div>
+        <div>{{ author }}</div>
+        {% endif %}
+    </li>
+{% endfor %}
+</ul>
+{% endmacro %}

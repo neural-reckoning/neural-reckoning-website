@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% import 'video_list_macro.html' as vidlist with context %}
+
+{% block main %}
+
+<h2>Latest video</h2>
+
+{{ vidlist.video_highlight(videos) }}
+
+<h2>All videos</h2>
+
+{{ vidlist.grouped_video_list(videos) }}
+
+{% endblock %}

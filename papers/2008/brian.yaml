@@ -1,0 +1,24 @@
+year: 2008
+authors: Goodman D, Brette R
+title: 'Brian: a simulator for spiking neural networks in Python'
+journal: Frontiers in Neuroinformatics
+additional: 2(5)
+doi: 10.3389/neuro.11.005.2008
+categories:
+- Brian
+urls:
+- - Journal (HTML)
+  - http://journal.frontiersin.org/Journal/10.3389/neuro.11.005.2008/abstract
+abstract: "\"Brian\" is a new simulator for spiking neural networks, written in\n\
+  Python (http://www.briansimulator.org ). It is an intuitive and highly\nflexible\
+  \ tool for rapidly developing new models, especially networks of\nsingle-compartment\
+  \ neurons. In addition to using standard types of\nneuron models, users can define\
+  \ models by writing arbitrary differential\nequations in ordinary mathematical notation.\
+  \ Python scientific libraries\ncan also be used for defining models and analysing\
+  \ data. Vectorisation\ntechniques allow efficient simulations despite the overheads\
+  \ of an\ninterpreted language. Brian will be especially valuable for working on\n\
+  non-standard neuron models not easily covered by existing software, and\nas an alternative\
+  \ to using Matlab or C for simulations. With its easy\nand intuitive syntax, Brian\
+  \ is also very well suited for teaching\ncomputational neuroscience. "
+software:
+  - Brian

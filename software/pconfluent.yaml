@@ -1,0 +1,17 @@
+title: '<tt>pconfluent</tt>: power confluent drawings'
+url: https://github.com/jxz12/pconfluent
+logo: power-confluent.png
+short: Package for power confluent graph drawings.
+long: |-
+  <p>
+      Software for power-confluent drawings, accompanying the paper
+      <a href="pub_comments_on_edge_bundling.html">Further Towards Unambiguous Edge Bundling: Investigating
+          Power-Confluent Drawings for Network Visualization (Zheng et al. 2019)</a>
+      written by <a href="jonathan_zheng.html">Jonny Zheng</a>.
+  </p>
+team:
+- Goodman DFM
+- Zheng J
+categories:
+  - Visualisation
+  - Software

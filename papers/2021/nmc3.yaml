@@ -1,0 +1,25 @@
+selected: true
+year: 2021
+authors: Achakulvisut T, Ruangrong T, Mineault P, Vogels TP, Peters MAK, Poirazi P,
+  Rozell C, Wyble B, Goodman DFM, Kording KP
+title: 'Towards democratizing and automating online conferences: lessons from the
+  Neuromatch conferences'
+journal: Trends in Cognitive Sciences
+doi: 10.1016/j.tics.2021.01.007
+categories:
+- Neuroscience
+- Machine learning
+- Metascience
+urls:
+- - Journal
+  - https://www.cell.com/trends/cognitive-sciences/fulltext/S1364-6613(21)00009-7
+- - Preprint (PDF)
+  - https://www.dropbox.com/s/snqgeuyt38vekfx/nmc3.pdf?dl=1
+- - Neuromatch
+  - https://www.neuromatch.io/
+abstract: |-
+  Legacy conferences are costly, time-consuming, and exclude scientists lacking various resources
+  or abilities. During the 2020 pandemic, we created an online conference platform, Neuromatch
+  Conferences, aimed at developing technological and cultural changes to make conferences more
+  democratic, scalable, and accessible. We discuss the lessons we learned.
+peer_reviewed: false

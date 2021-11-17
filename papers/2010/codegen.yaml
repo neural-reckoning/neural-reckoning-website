@@ -1,0 +1,28 @@
+year: 2010
+authors: Goodman DFM
+title: 'Code Generation: A Strategy for Neural Network Simulators'
+journal: Neuroinformatics
+additional: 8, no. 3 (9).
+doi: 10.1007/s12021-010-9082-x
+categories:
+- Brian
+urls:
+- - Journal
+  - https://link.springer.com/article/10.1007/s12021-010-9082-x
+- - PDF (preprint)
+  - https://www.dropbox.com/s/si4uaau33csqejk/codegen.pdf?dl=1
+abstract: |-
+  We demonstrate a technique for the design of neural network simulation
+  software, runtime code generation. This technique can be used to give
+  the user complete flexibility in specifying the mathematical model for
+  their simulation in a high level way, along with the speed of code
+  written in a low level language such as C++. It can also be used to
+  write code only once but target different hardware platforms, including
+  inexpensive high performance graphics processing units (GPUs). Code
+  generation can be naturally combined with computer algebra systems to
+  provide further simplification and optimisation of the generated code.
+  The technique is quite general and could be applied to any simulation
+  package. We demonstrate it with the "Brian" simulator
+  (http://www.briansimulator.org).
+software:
+  - Brian

@@ -18,7 +18,7 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta name="twitter:widgets:csp" content="on">
     <meta name="twitter:dnt" content="on">
-    <title>Jonathan Zheng</title>
+    <title></title>
     <link rel="STYLESHEET" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -44,11 +44,10 @@
                         <a class="dropdown-item" href="members.html">Everyone</a>
                         <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="dan_goodman.html">Dan Goodman</a>
-                                    <h6 class="dropdown-header">Postdocs and Fellows</h6>
+                                <h6 class="dropdown-header">Postdocs and Fellows</h6>
                                     <a class="dropdown-item" href="marcus_ghosh.html">Marcus Ghosh</a>
-                                    <h6 class="dropdown-header">PhD students</h6>
+                                <h6 class="dropdown-header">PhD students</h6>
                                     <a class="dropdown-item" href="chu_yang.html">Yang Chu</a>
-                                    <a class="dropdown-item" href="tom_clegg.html">Tom Clegg</a>
                                     <a class="dropdown-item" href="nicolas_perez.html">Nicolas Perez</a>
                                     <a class="dropdown-item" href="gabriel_bena.html">Gabriel Béna</a>
                     </div>
@@ -72,6 +71,7 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarMiscDropdown" role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Misc</a>
                 <div class="dropdown-menu" aria-labelledby="navbarMiscDropdown">
+                        <a class="dropdown-item" href="videos.html">Videos</a>
                         <a class="dropdown-item" href="comp-neuro-resources.html">Computational neuroscience resources</a>
                         <a class="dropdown-item" href="neuroinformatics.html">Neuroinformatics</a>
                         <a class="dropdown-item" href="sensory.html">Sensory neuroscience</a>
@@ -95,36 +95,63 @@
 
 <div class="row">
     <div class="col-sm-4 order-sm-12">
-        <img src="photo_jonathan_zheng.jpg" class="img-fluid mb-3" style="width: 200px; max-width: 100%;">
-            <div>
-                <font color="#aaaaaa">Lab member: 2016-2020</font>
-            </div>
-            <div>
-            
-            <ul class="list-unstyled">
-                <li><a href="https://scholar.google.co.uk/citations?user=rwiyjioAAAAJ&hl=en&oi=sra">Google Scholar</a></li>
-                <li><a href="https://github.com/jxz12">GitHub</a></li>
-                <li><a href="https://twitter.com/terracotta_jz">Twitter</a></li>
-            </ul>
-            
-            </div>
-            <img src="wordcloud_jonathan_zheng.png" class="img-fluid mb-3" style="max-width: 100%;">
-        
-
+        <img src="photo_jonathan_zheng.jpg" class="img-fluid"><!--  style="width: 200px; max-width: 100%;" -->
+        <!--         <img src="wordcloud_jonathan_zheng.png" class="img-fluid">
+ -->
+        <ul class="list-group">
+            <li class="list-group-item" style="color: #aaaaaa;">
+                Lab member: 2016-2020
+            </li>
+            <li class="list-group-item">
+                <a href="https://scholar.google.co.uk/citations?user=rwiyjioAAAAJ&hl=en&oi=sra">Google Scholar</a>
+            </li>
+            <li class="list-group-item">
+                <a href="https://github.com/jxz12">GitHub</a>
+            </li>
+            <li class="list-group-item">
+                <a href="https://twitter.com/terracotta_jz">Twitter</a>
+            </li>
+        </ul>
     </div>
+
     <div class="col-sm-8 order-sm-1">
         <div>
-        
         <p>
-        Jonathan Zheng was a PhD student, working on interactive systems for
-        visualising the behaviour of ecosystems and neural networks. He was
-        jointly supervised by
-        <a href="http://www.imperial.ac.uk/people/s.pawar">Samraat Pawar</a>.
-        You can download the ecosystems game he designed at the
-        <a href="http://ecobuildergame.org/">EcoBuilder</a> website.
-        </p>
-        
+Jonathan Zheng was a PhD student, working on interactive systems for
+visualising the behaviour of ecosystems and neural networks. He was
+jointly supervised by
+<a href="http://www.imperial.ac.uk/people/s.pawar">Samraat Pawar</a>.
+You can download the ecosystems game he designed at the
+<a href="http://ecobuildergame.org/">EcoBuilder</a> website.
+</p>
         </div>
+
+        <h2>Software</h2>
+        <div class="row flex-row flex-nowrap" style="overflow-x: auto;">
+    <div class="col-5 col-md-4 p-2" style="width: 500px;">
+        <a href="sw_pconfluent.html">
+            <img class="img-fluid" src="power-confluent.png" style="max-height: 100px;">
+            <h5><tt>pconfluent</tt>: power confluent drawings</h5>
+        </a>
+        <p>Package for power confluent graph drawings.</p>
+    </div>
+    <div class="col-5 col-md-4 p-2" style="width: 500px;">
+        <a href="sw_sgd2.html">
+            <img class="img-fluid" src="https://media.giphy.com/media/JoaboGdTq1sXNnnIND/giphy.gif" style="max-height: 100px;">
+            <h5>s(gd)<sup>2</sup></h5>
+        </a>
+        <p>Graph layout using stochastic gradient descent.</p>
+    </div>
+    <div class="col-5 col-md-4 p-2" style="width: 500px;">
+        <a href="sw_ecobuilder.html">
+            <img class="img-fluid" src="ecobuilder.jpg" style="max-height: 100px;">
+            <h5>EcoBuilder</h5>
+        </a>
+        <p>Educational game about building ecosystems.</p>
+    </div>
+</div>
+
+        <p>&nbsp;</p>
 
         <h2>Publications</h2>
 
@@ -133,29 +160,6 @@
             <div class="publication_list">
         <h5>2021</h5>
         <ul>
-                <li>
-        <div class="publication_list_text">
-            <a href="jonathan_zheng.html">Zheng JX</a>, Pawar S, <a href="dan_goodman.html">Goodman DFM</a>
-                    (2021)
-                <br/>
-            <a href="pub_comments_on_edge_bundling.html">
-                <b>Further Towards Unambiguous Edge Bundling: Investigating Power-Confluent Drawings for Network Visualization.</b><br/>
-            </a>
-            <i>
-                IEEE Transactions on Visualization and Computer Graphics
-                
-                
-            </i>
-        </div>
-            <div class="publication_list_icons">
-                
-                    <a href="https://arxiv.org/pdf/1810.09948" target="_blank">
-                        <i class="fa fa-file-pdf-o"></i>
-                    </a>
-                    
-            </div>
-    </li>
-
                 <li>
         <div class="publication_list_text">
             <a href="jonathan_zheng.html">Zheng JX</a>
@@ -172,39 +176,39 @@ PhD thesis,                 Imperial College London
         </div>
             <div class="publication_list_icons">
                 
-                    <a href="https://imperialcollegelondon.box.com/s/n2osvtt8exnturc5mzemzuou27vrb5i9" target="_blank">
-                        <i class="fa fa-file-pdf-o"></i>
-                    </a>
-                    
+                        <a href="https://imperialcollegelondon.box.com/s/n2osvtt8exnturc5mzemzuou27vrb5i9" target="_blank">
+                            <i class="fa fa-file-pdf-o"></i>
+                        </a>
+                        
+            </div>
+    </li>
+
+                <li>
+        <div class="publication_list_text">
+            <a href="jonathan_zheng.html">Zheng JX</a>, Pawar S, <a href="dan_goodman.html">Goodman DFM</a>
+                    (2021)
+                <br/>
+            <a href="pub_comments_on_edge_bundling.html">
+                <b>Further Towards Unambiguous Edge Bundling: Investigating Power-Confluent Drawings for Network Visualization.</b><br/>
+            </a>
+            <i>
+                IEEE Transactions on Visualization and Computer Graphics
+                
+                
+            </i>
+        </div>
+            <div class="publication_list_icons">
+                
+                        <a href="https://arxiv.org/pdf/1810.09948" target="_blank">
+                            <i class="fa fa-file-pdf-o"></i>
+                        </a>
+                        
             </div>
     </li>
 
         </ul>
         <h5>2018</h5>
         <ul>
-                <li class="show conference_paper">
-        <div class="publication_list_text">
-            <a href="jonathan_zheng.html">Zheng JX</a>, Pawar S, <a href="dan_goodman.html">Goodman DFM</a>
-                    (2018)
-                <br/>
-            <a href="pub_confluent_hierarchical_gd2018.html">
-                <b>Confluent* Drawings by Hierarchical Clustering.</b><br/>
-            </a>
-            <i>
-                
-                
-                Graph Drawing and Network Visualization
-            </i>
-        </div>
-            <div class="publication_list_icons">
-                
-                    <a href="https://link.springer.com/content/pdf/10.1007%2F978-3-030-04414-5.pdf" target="_blank">
-                        <i class="fa fa-file-pdf-o"></i>
-                    </a>
-                    
-            </div>
-    </li>
-
                 <li>
         <div class="publication_list_text">
             <a href="jonathan_zheng.html">Zheng JX</a>, Pawar S, <a href="dan_goodman.html">Goodman DFM</a>
@@ -221,10 +225,33 @@ PhD thesis,                 Imperial College London
         </div>
             <div class="publication_list_icons">
                 
-                    <a href="https://arxiv.org/pdf/1710.04626" target="_blank">
-                        <i class="fa fa-file-pdf-o"></i>
-                    </a>
-                    
+                        <a href="https://arxiv.org/pdf/1710.04626" target="_blank">
+                            <i class="fa fa-file-pdf-o"></i>
+                        </a>
+                        
+            </div>
+    </li>
+
+                <li class="show conference_paper">
+        <div class="publication_list_text">
+            <a href="jonathan_zheng.html">Zheng JX</a>, Pawar S, <a href="dan_goodman.html">Goodman DFM</a>
+                    (2018)
+                <br/>
+            <a href="pub_confluent_hierarchical_gd2018.html">
+                <b>Confluent* Drawings by Hierarchical Clustering.</b><br/>
+            </a>
+            <i>
+                
+                
+                Graph Drawing and Network Visualization
+            </i>
+        </div>
+            <div class="publication_list_icons">
+                
+                        <a href="https://link.springer.com/content/pdf/10.1007%2F978-3-030-04414-5.pdf" target="_blank">
+                            <i class="fa fa-file-pdf-o"></i>
+                        </a>
+                        
             </div>
     </li>
 
@@ -234,6 +261,10 @@ PhD thesis,                 Imperial College London
         </small></li>
         </ul>
     </div>
+
+
+        <h2>Videos</h2>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/copuZ9o5Diw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
         <h2 id="external_publications">External publications</h2>
@@ -295,35 +326,6 @@ PhD thesis,                 Imperial College London
     </div>
 
 
-
-        <h2>Software packages</h2>
-        <div class="row flex-row flex-nowrap" style="overflow-x: auto;">
-            <div class="col-6 col-md-4 p-2" style="width: 500px;">
-                <a href="sw_sgd2.html">
-                    <img class="img-fluid" src="https://media.giphy.com/media/JoaboGdTq1sXNnnIND/giphy.gif" style="max-height: 100px;">
-                    <h5>s(gd)<sup>2</sup></h5>
-                </a>
-                <p>Graph layout using stochastic gradient descent.</p>
-            </div>
-            <div class="col-6 col-md-4 p-2" style="width: 500px;">
-                <a href="sw_ecobuilder.html">
-                    <img class="img-fluid" src="ecobuilder.jpg" style="max-height: 100px;">
-                    <h5>EcoBuilder</h5>
-                </a>
-                <p>Educational game about building ecosystems.</p>
-            </div>
-            <div class="col-6 col-md-4 p-2" style="width: 500px;">
-                <a href="sw_pconfluent.html">
-                    <img class="img-fluid" src="power-confluent.png" style="max-height: 100px;">
-                    <h5><tt>pconfluent</tt>: power confluent drawings</h5>
-                </a>
-                <p>Package for power confluent graph drawings.</p>
-            </div>
-        </div>
-
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
 
     </div>
 </div>

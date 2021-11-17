@@ -1,0 +1,24 @@
+year: 2013
+authors: Rossant C, Fontaine B, Goodman DFM
+title: 'Playdoh: a lightweight Python package for distributed computing and optimisation'
+journal: Journal of Computational Science
+additional: 4(5):352-259
+doi: 10.1016/j.jocs.2011.06.002
+categories:
+- Neuroinformatics
+urls:
+- - Journal
+  - http://www.sciencedirect.com/science/article/pii/S1877750311000561
+- - PDF (preprint)
+  - https://www.dropbox.com/s/d2v1dvfu5xv1i9q/playdoh-preprint.pdf?dl=1
+abstract: |-
+  Parallel computing is now an essential paradigm for high performance
+  scientific computing. Most existing hardware and software solutions are
+  expensive or difficult to use. We developed Playdoh, a Python library
+  for distributing computations across the free computing units available
+  in a small network of multicore computers. Playdoh supports independent
+  and loosely coupled parallel problems such as global optimisations,
+  Monte Carlo simulations and numerical integration of partial
+  differential equations. It is designed to be lightweight and easy to use
+  and should be of interest to scientists wanting to turn their lab
+  computers into a small cluster at no cost.

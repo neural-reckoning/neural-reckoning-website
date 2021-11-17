@@ -1,0 +1,17 @@
+pages:
+    'index.html': Home
+    'members.html': Members
+    'publications.html': Publications
+    'themes.html': Themes
+    'software.html': Software
+    'openings.html': Join us
+    'location.html': Location
+
+unindexed_pages:
+    'videos.html': 'Videos'
+    'comp-neuro-resources.html': 'Computational neuroscience resources'
+    'neuroinformatics.html': 'Neuroinformatics'
+    'sensory.html': 'Sensory neuroscience'
+    'mathematics.html': 'Mathematics'
+    'apply_phd.html': 'PhD application process'
+    'accessibility.html': 'Accessibility statement'

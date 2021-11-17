@@ -1,0 +1,31 @@
+year: 2019
+authors: Stimberg M, Goodman DFM, Brette R, De Pittà M
+title: Modeling neuron-glia interactions with the Brian 2 simulator
+publisher: Springer
+categories:
+- Brian
+- Modelling
+urls:
+- - Book
+  - https://link.springer.com/book/10.1007/978-3-030-00817-8
+- - Chapter
+  - https://link.springer.com/chapter/10.1007/978-3-030-00817-8_18
+- - Preprint
+  - https://www.biorxiv.org/content/early/2017/10/05/198366
+- - PDF (preprint)
+  - https://www.biorxiv.org/content/early/2017/10/05/198366.full.pdf
+abstract: |-
+  Despite compelling evidence that glial cells could crucially regulate neural network activity, the vast majority
+  of available neural simulators ignores the possible contribution of glia to neuronal physiology. Here, we show
+  how to model glial physiology and neuron-glia interactions in the Brian 2 simulator. Brian 2 offers facilities to
+  explicitly describe any model in mathematical terms with limited and simple simulator-specific syntax,
+  automatically generating high-performance code from the user-provided descriptions. The flexibility of this
+  approach allows us to model not only networks of neurons, but also individual glial cells, electrical coupling of
+  glial cells, and the interaction between glial cells and synapses. We therefore conclude that Brian 2 provides an
+  ideal platform to efficiently simulate glial physiology, and specifically, the influence of astrocytes on neural
+  activity.
+book_chapter: true
+book: Computational Glioscience
+book_editors: De Pittà M, Berry H
+software:
+  - Brian

@@ -1,0 +1,19 @@
+title: Auditory Model Initiative
+url: https://github.com/model-initiative/model_initiative
+logo: model-initiative.png
+short: Python/Matlab package for comparing binaural auditory models.
+long: |-
+  <p>
+      A set of Python and Matlab software packages for comparing
+      auditory models. The package is still in an early stage of development.
+      The initiative is led by
+      <a href="http://www.uwo.ca/fhs/csd/people/faculty/dietz_m.html">Mathias Dietz</a>,
+      with Python contributions from
+      <a href="jean_hugues_lestang.html">Jean-Hugues Lestang</a>.
+  </p>
+team:
+- Goodman DFM
+- Lestang J-H
+categories:
+  - Auditory
+  - Neuroinformatics

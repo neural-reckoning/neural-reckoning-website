@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% set collapse_conference_papers_default = "collapse" %}
+{% import 'publication_list_macro.html' as publist with context %}
+{% import 'software_list_macro.html' as swmacro with context %}
+{% import 'video_list_macro.html' as vidlist with context %}
+
+{% block main %}
+
+<h2>Category: {{ name }}</h2>
+
+{% if detail_link %}
+<p>
+For more details on this category, click <a href="{{ detail_link }}">here</a>.
+</p>
+{% endif %}
+
+{% if things['Software'] | length %}
+<h3>Software</h3>
+{{ swmacro.software_card_list(things['Software']) }}
+<p>&nbsp;</p>
+{% endif %}
+
+{% if things['Paper'] | length %}
+<h3>Publications</h3>
+{{ publist.show_conference_papers() }}
+{{ publist.grouped_publications(things['Paper']) }}
+{% endif %}
+
+{% if things['Video'] | length %}
+<h3>Videos</h3>
+{{ vidlist.video_highlight(things['Video'], show='all') }}
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% import 'category_macro.html' as catmacro with context %}
+{% import 'authors_list_macro.html' as authmacro with context %}
+{% import 'software_list_macro.html' as swmacro with context %}
+{% import 'video_list_macro.html' as vidlist with context %}
+
+{% block main %}
+
+{% if twitter_thread %}
+<div class="row">
+    <div class="col-lg-4 d-none d-lg-block order-lg-12">
+        <div style="height: 90vh; overflow-y: scroll;">
+            {{ twitter_thread }}
+        </div>
+    </div>
+    <div class="col-lg-8 order-lg-1">
+{% endif %}
+
+<h2>{{ title }}</h2>
+{% if author_objects|length<=8 %}
+    <div class="d-none d-sm-block">
+        {{ authmacro.authors_list(author_objects) }}
+    </div>
+    <div class="d-block d-sm-none">
+        {{ authors }}
+    </div>
+{% else %}
+<div>{{ authors }}</div>
+{% endif %}
+{% if year!='Preprints' %}
+<div>
+    <i>{{ journal }}</i>
+    {% if phd_thesis %}<i>PhD thesis, </i>{% endif %}
+    <i>{{ publisher }}</i>
+    <i>{{ conference }}</i>
+    ({{ year }}) <font color="#aaaaaa">{{ additional }}</font>
+    {% if book_editors %}
+        <br/>
+        In: {{book}}. {{book_editors}} (eds)
+    {% endif %}
+</div>
+{% else %}
+<div><i>Preprint</i></div>
+{% endif %}
+{% if doi %}
+<div>
+    <a href="http://dx.doi.org/{{doi}}" style="color: #aaaaaa">doi: {{doi}}</a>
+</div>
+{% endif %}
+{% if additional_detail %}
+<div>
+    {{ additional_detail }}
+</div>
+{% endif %}
+<div>&nbsp;</div>
+{% if abstract %}
+<h3>Abstract</h3>
+<div>{{ abstract }}</div>
+{% endif %}
+{% if video_embed %}
+<div>&nbsp;</div>
+<div class="embed-responsive embed-responsive-16by9">
+    {{video_embed}}
+</div>
+{% endif %}
+<div>&nbsp;</div>
+<h3>Links</h3>
+<p>
+    {% for url_title, url in urls %}<button type="button" class="btn btn-light" style="margin: 2px;"><a href="{{ url }}">{{ url_title }}</a></button>{% endfor %}
+</p>
+
+<h3>Categories</h3>
+<p>
+    {{ catmacro.category_buttons(category_objects) }}
+</p>
+
+{% if things['Software'] %}
+<h3>Related software</h3>
+{{ swmacro.software_card_list(things['Software']) }}
+{% endif %}
+
+{% if things['Video'] %}
+<h3>Related videos</h3>
+{{ vidlist.flat_video_list(things['Video']) }}
+{% endif %}
+
+{% endblock %}

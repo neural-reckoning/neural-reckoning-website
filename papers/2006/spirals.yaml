@@ -1,0 +1,16 @@
+year: 2006
+authors: Goodman D
+title: Spirals in the boundaries of slices of quasifuchsian space
+journal: Conformal Geometry and Dynamics
+additional: '10'
+categories:
+- Mathematics
+urls:
+- - Journal
+  - http://www.ams.org/journals/ecgd/2006-10-08/S1088-4173-06-00133-0/home.html
+- - PDF (preprint)
+  - https://www.dropbox.com/s/ygz9demdn5n5l19/spirals-paper.pdf?dl=1
+abstract: |-
+  We prove that the Bers and Maskit slices of the quasi-Fuchsian space of
+  a once-punctured torus have a dense, uncountable set of points in their
+  boundaries about which the boundary spirals infinitely.

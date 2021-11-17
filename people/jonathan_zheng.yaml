@@ -1,0 +1,24 @@
+name: Jonathan Zheng
+author_names:
+- Zheng JX
+- Zheng J
+position: former
+short: Interactive systems for ecosystems and neuroscience.
+long: |-
+  <p>
+  Jonathan Zheng was a PhD student, working on interactive systems for
+  visualising the behaviour of ecosystems and neural networks. He was
+  jointly supervised by
+  <a href="http://www.imperial.ac.uk/people/s.pawar">Samraat Pawar</a>.
+  You can download the ecosystems game he designed at the
+  <a href="http://ecobuildergame.org/">EcoBuilder</a> website.
+  </p>
+former_position: PhD
+dates:
+- 2016
+- 2020
+semantic_scholar: 27620389
+links:
+  - ["Google Scholar", "https://scholar.google.co.uk/citations?user=rwiyjioAAAAJ&hl=en&oi=sra"]
+  - ["GitHub", "https://github.com/jxz12"]
+  - ["Twitter", "https://twitter.com/terracotta_jz"]

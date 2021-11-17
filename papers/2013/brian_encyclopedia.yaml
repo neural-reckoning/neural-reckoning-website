@@ -1,0 +1,25 @@
+year: 2013
+authors: Goodman DFM, Brette R
+title: Brian Spiking Neural Network Simulator
+publisher: SpringerReference
+categories:
+- Brian
+urls:
+- - Full text (paywall)
+  - http://www.springerreference.com/docs/html/chapterdbid/348318.html
+abstract: "Brian (http://briansimulator.org) is an open source Python package for\n\
+  developing simulations of networks of spiking neurons (Goodman and\nBrette 2008,\
+  \ 2009). The design is aimed at minimizing users' development\n\ntime, with execution\
+  \ speed as secondary goal. Users specify neuron and\nsynapse models by giving their\
+  \ equations in standard mathematical form,\ncreate groups of neurons, and connect\
+  \ them via synapses. The intent is\nto make the process as flexible as possible\
+  \ so that researchers are not\nrestricted to using neuron and synapse models already\
+  \ built into the\nsimulator. The entire simulator is written in Python, using the\
+  \ NumPy\nand SciPy numerical and scientific computing packages. Parts of the\nsimulator\
+  \ can optionally be run using C++ code generated on the fly\n(Goodman 2010). Computationally,\
+  \ Brian uses vectorization techniques\n(Brette and Goodman 2011) so that for large\
+  \ numbers of neurons,\nexecution speed is of the same order of magnitude ... "
+book: Encyclopedia of Computational Neuroscience
+book_editors: Jaeger D, Jung R
+software:
+  - Brian

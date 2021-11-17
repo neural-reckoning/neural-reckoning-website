@@ -1,0 +1,26 @@
+year: 2010
+authors: Rossant C, Goodman DFM, Platkiewicz J, Brette R
+title: Automatic fitting of spiking neuron models to electrophysiological recordings
+journal: Frontiers in Neuroinformatics
+doi: 10.3389/neuro.11.002.2010
+categories:
+- Brian
+urls:
+- - Journal (HTML)
+  - http://journal.frontiersin.org/Journal/10.3389/neuro.11.002.2010/abstract
+abstract: "Spiking models can accurately predict the spike trains produced by\ncortical\
+  \ neurons in response to somatically injected currents. Since the\nspecific characteristics\
+  \ of the model depend on the neuron, a\ncomputational method is required to fit\
+  \ models to electrophysiological\nrecordings. The fitting procedure can be very\
+  \ time consuming both in\nterms of computer simulations and in terms of code writing.\
+  \ We present\nalgorithms to fit spiking models to electrophysiological data\n(time-varying\
+  \ input and spike trains) that can run in parallel on\ngraphics processing units\
+  \ (GPUs). The model fitting library is\ninterfaced with Brian, a neural network\
+  \ simulator in Python. If a GPU is\npresent it uses just-in-time compilation to\
+  \ translate model equations\ninto optimized code. Arbitrary models can then be defined\
+  \ at script\nlevel and run on the graphics card. This tool can be used to obtain\n\
+  empirically validated spiking models of neurons in various systems. We\ndemonstrate\
+  \ its use on public data from the INCF Quantitative\nSingle-Neuron Modeling 2009\
+  \ competition by comparing the performance of\na number of neuron spiking models. "
+software:
+  - Brian

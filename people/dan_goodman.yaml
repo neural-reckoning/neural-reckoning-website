@@ -1,0 +1,61 @@
+name: Dan Goodman
+author_names:
+  - Goodman DFM
+  - Goodman DF
+  - Goodman D
+position: pi
+room: 1001
+email: 'ZC5nb29kbWFuQGltcGVyaWFsLmFjLnVr' # generate this by import base64; base64.b64encode(b'address')
+telephone: '+44 (0)20 7594 6264'
+links:
+  - ['@neuralreckoning', 'https://twitter.com/neuralreckoning']
+  - ['Google Scholar', 'https://scholar.google.com/citations?user=2HiNqI4AAAAJ']
+twitter: neuralreckoning
+short: Head of group.
+long: >
+  <p>
+  I am a (senior) lecturer (US equivalent: associate professor) in the
+  <a href="http://www3.imperial.ac.uk/intellisysnetworks">Intelligent
+  Systems and Networks group</a> in the
+  <a href="http://www3.imperial.ac.uk/electricalengineering">Department
+  of Electrical and Electronic Engineering</a> at
+  <a href="http://www3.imperial.ac.uk/">Imperial College London</a>.</p>
+
+  <p>
+      The aim of my research is to uncover the principles underlying
+      neural computation. My approach is to look at tasks that are
+      complex and difficult enough to require a brain to solve them,
+      but simple enough to be tractable. This includes things like
+      understanding how we
+      <a href="publication_category_soundlocalisation.html">localise
+      sounds</a>, make sense of speech in noisy backgrounds, etc. I am
+      particularly interested in neural computations with precisely
+      timed spiking neural networks. This is a form of computation
+      specific to the brain, being radically different to both digital and
+      analogue computation.
+  </p>
+
+  <p>
+      I have developed several
+      <a href="software.html">software tools</a> for
+      working with spiking neurons, notably the
+      <a href="http://briansimulator.org">&quot;Brian&quot; spiking neural
+      network simulator</a>.
+  </p>
+
+  <p>
+      I am also interested in open science and making science better.
+      I host a list of <a href="comp-neuro-resources.html">freely
+      available computational neuroscience resources</a>. I co-founded
+      <a href="https://neuromatch.io">Neuromatch</a> with
+      <a href="http://kordinglab.com/">Konrad Kording</a>. I'm an editor
+      for the open access journals
+      <a href="https://elifesciences.org">eLife</a>, 
+      <a href="https://nbdt.scholasticahq.com/">Neurons, Behavior, Data analysis, and Theory</a>, and
+      <a href="https://cneuro.peercommunityin.org/">PCI Circuit Neuroscience</a>.
+  </p>
+
+  <p>
+      A few people may also be interested in my
+      <a href="mathematics.html">former career as a mathematician</a>.
+  </p>

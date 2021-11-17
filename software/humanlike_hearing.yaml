@@ -1,0 +1,17 @@
+title: HumanlikeHearing
+url: https://github.com/neural-reckoning/HumanlikeHearing
+logo: humanlike-hearing.png
+short: Python package for psychophysical tests of automatic speech recognition systems.
+long: |-
+  <p>
+      A Python package for applying a range of psychometric tests on automatic speech recognition (ASR) systems.
+      Accompanying <a href="pub_humanlikehearing.html">paper</a>.
+      Developed by <a href="lotte_weerts.html">Lotte Weerts</a>.
+  </p>
+team:
+- Goodman DFM
+- Weerts L
+categories:
+  - Neuroinformatics
+  - Auditory
+  - Machine learning

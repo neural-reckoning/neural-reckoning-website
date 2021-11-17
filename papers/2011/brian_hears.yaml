@@ -1,0 +1,32 @@
+year: 2011
+authors: Fontaine B, Goodman DFM, Benichoux V, Brette R
+title: 'Brian Hears: online auditory processing using vectorisation over channels'
+journal: Frontiers in Neuroinformatics
+additional: '5:9'
+doi: 10.3389/fninf.2011.00009
+categories:
+- Brian
+- Auditory
+urls:
+- - Journal (HTML)
+  - http://journal.frontiersin.org/Journal/10.3389/fninf.2011.00009/abstract
+abstract: |-
+  The human cochlea includes about 3000 inner hair cells which filter
+  sounds at frequencies between 20 Hz and 20 kHz. This massively parallel
+  frequency analysis is reflected in models of auditory processing, which
+  are often based on banks of filters. However, existing implementations
+  do not exploit this parallelism. Here we propose algorithms to simulate
+  these models by vectorizing computation over frequency channels, which
+  are implemented in "Brian Hears," a library for the spiking neural
+  network simulator package "Brian." This approach allows us to use
+  high-level programming languages such as Python, because with vectorized
+  operations, the computational cost of interpretation represents a small
+  fraction of the total cost. This makes it possible to define and
+  simulate complex models in a simple way, while all previous
+  implementations were model-specific. In addition, we show that these
+  algorithms can be naturally parallelized using graphics processing
+  units, yielding substantial speed improvements. We demonstrate these
+  algorithms with several state-of-the-art cochlear models, and show that
+  they compare favorably with existing, less flexible, implementations.
+software:
+  - Brian

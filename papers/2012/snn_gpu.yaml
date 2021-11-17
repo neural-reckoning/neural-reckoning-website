@@ -1,0 +1,19 @@
+year: 2012
+authors: Brette R, Goodman DFM
+title: Simulating spiking neural networks on GPU
+journal: 'Network: Computation in Neural Systems'
+additional: 23(4)
+categories:
+- Neural simulation
+urls:
+- - Journal
+  - http://informahealthcare.com/doi/abs/10.3109/0954898X.2012.730170
+- - PDF (preprint)
+  - https://www.dropbox.com/s/2rxybu315p0tclq/gpureview-preprint.pdf?dl=1
+abstract: |-
+  Modern graphics cards contain hundreds of cores that can be programmed
+  for intensive calculations. They are beginning to be used for spiking
+  neural network simulations. The goal is to make parallel simulation of
+  spiking neural networks available to a large audience, without the
+  requirements of a cluster. We review the ongoing efforts towards this
+  goal, and we outline the main difficulties.

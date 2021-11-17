@@ -1,0 +1,34 @@
+year: 2011
+authors: Kremer Y, Léger J-F, Goodman D, Brette R, Bourdieu L
+title: Late emergence of the vibrissa direction selectivity map in the rat barrel
+  cortex
+journal: Journal of Neuroscience
+additional: 31(29)
+doi: 10.1523/JNEUROSCI.6541-10.2011
+categories:
+- Sensory
+- Modelling
+- Spiking
+- Plasticity
+urls:
+- - Journal
+  - http://www.jneurosci.org/content/31/29/10689.abstract
+- - PDF (preprint)
+  - https://www.dropbox.com/s/ypos545ptv0blf4/barrelcortex-preprint.pdf?dl=1
+abstract: "In the neocortex, neuronal selectivities for multiple sensorimotor\nmodalities\
+  \ are often distributed in topographical maps thought to emerge\nduring a restricted\
+  \ period in early postnatal development. Rodent barrel\ncortex contains a somatotopic\
+  \ map for vibrissa identity, but the\nexistence of maps representing other tactile\
+  \ features has not been\nclearly demonstrated. We addressed the issue of the existence\
+  \ in the rat\ncortex of an intrabarrel map for vibrissa movement direction using\
+  \ in\nvivo two-photon imaging. We discovered that the emergence of a direction\n\
+  map in rat barrel cortex occurs long after all known critical periods\nin the somatosensory\
+  \ system. This map is remarkably specific, taking a\npinwheel-like form centered\
+  \ near the barrel center and aligned to the\nbarrel cortex somatotopy. We suggest\
+  \ that this map may arise from\nintracortical mechanisms and demonstrate by simulation\
+  \ that the\ncombination of spike-timing-dependent plasticity at synapses between\n\
+  layer 4 and layer 2/3 and realistic pad stimulation is sufficient to\nproduce such\
+  \ a map. Its late emergence long after other classical maps\nsuggests that experience-dependent\
+  \ map formation and refinement continue\nthroughout adult life. "
+software:
+  - Brian

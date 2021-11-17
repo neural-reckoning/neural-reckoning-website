@@ -1,0 +1,35 @@
+year: Preprints
+last_updated: 4-6-2021
+authors: Béna G, Goodman DFM
+title: Extreme sparsity gives rise to functional specialization
+categories:
+- Neuroscience
+- Learning
+- Modelling
+- Machine learning
+urls:
+- - Preprint
+  - https://arxiv.org/abs/2106.02626
+- - Preprint (PDF)
+  - https://arxiv.org/pdf/2106.02626
+- - Preprint (HTML)
+  - https://neural-reckoning.github.io/preprints/sparsity-specialization/
+- - Twitter
+  - https://twitter.com/neuralreckoning/status/1405131198834282499
+abstract: 'Modularity of neural networks – both biological and artificial – can be
+  thought of either structurally or functionally, and the relationship between these
+  is an open question. We show that enforcing structural modularity via sparse connectivity
+  between two dense sub-networks which need to communicate to solve the task leads
+  to functional specialization of the sub-networks, but only at extreme levels of
+  sparsity. With even a moderate number of interconnections, the sub-networks become
+  functionally entangled. Defining functional specialization is in itself a challenging
+  problem without a universally agreed solution. To address this, we designed three
+  different measures of specialization (based on weight masks, retraining and correlation)
+  and found them to qualitatively agree. Our results have implications in both neuroscience
+  and machine learning. For neuroscience, it shows that we cannot conclude that there
+  is functional modularity simply by observing moderate levels of structural modularity:
+  knowing the brain’s connectome is not sufficient for understanding how it breaks
+  down into functional modules. For machine learning, using structure to promote functional
+  modularity – which may be important for robustness and generalization – may require
+  extremely narrow bottlenecks between modules.'
+last_tweet_in_thread: '1405131238160179201'

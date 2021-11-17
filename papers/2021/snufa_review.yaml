@@ -1,0 +1,30 @@
+selected: true
+year: 2021
+authors: Zenke F, Bohté SM, Clopath C, Comşa IM, Göltz J, Maass W, Masquelier T, Naud
+  R, Neftci EO, Petrovici MA, Scherr F, Goodman DFM
+title: Visualizing a joint future of neuroscience and neuromorphic engineering
+journal: Neuron
+doi: 10.1016/j.neuron.2021.01.009
+categories:
+- Neuroscience
+- Spiking
+- Machine learning
+- Plasticity
+- Learning
+- Neuroinformatics
+urls:
+- - Journal
+  - https://www.sciencedirect.com/science/article/pii/S089662732100009X?dgcid=author
+- - Preprint (PDF)
+  - https://www.dropbox.com/s/942rf97l80wyya5/snufa-meeting-report.pdf?dl=1
+- - Workshop
+  - https://neural-reckoning.github.io/snn_workshop_2020/
+- - Workshop talk recordings
+  - https://www.youtube.com/playlist?list=PL09WqqDbQWHFvM9DFYkM_GfnrVnIdLRhy
+- - Twitter
+  - https://twitter.com/neuralreckoning/status/1362107086017036289
+abstract: |-
+  Recent research resolves the challenging problem of building biophysically plausible spiking neural models that
+  are also capable of complex information processing. This advance creates new opportunities in neuroscience and
+  neuromorphic engineering, which we discussed at an online focus meeting.
+last_tweet_in_thread: '1362107103998062594'

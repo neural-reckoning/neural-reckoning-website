@@ -1,0 +1,26 @@
+year: 2018
+authors: Hathway P, Goodman DFM
+title: '[Re] Spike Timing Dependent Plasticity Finds the Start of Repeating Patterns
+  in Continuous Spike Trains'
+journal: ReScience
+doi: 10.5281/zenodo.1327348
+categories:
+- Modelling
+- Learning
+- Plasticity
+- Spiking
+urls:
+- - PDF
+  - https://github.com/ReScience-Archives/Hathway-Goodman-2018/raw/master/article/Hathway-Goodman-2018.pdf
+- - Code (GitHub)
+  - https://github.com/pamelahathway/ReScience-submission/tree/Hathway-Goodman/code
+- - Code (Zenodo)
+  - https://doi.org/10.5281/zenodo.1327348
+- - Review
+  - https://github.com/ReScience/ReScience-submission/pull/51
+abstract: |-
+  This article is a replication of
+  <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0001377">Masquelier et al. (2008)
+  "Spike Timing Dependent Plasticity Finds the Start of Repeating Patterns in Continuous Spike Trains"</a>.
+software:
+  - Brian

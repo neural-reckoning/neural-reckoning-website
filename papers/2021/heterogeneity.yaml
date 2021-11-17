@@ -1,0 +1,42 @@
+selected: true
+year: 2021
+last_updated: 4-10-2021
+authors: Perez-Nieves N, Leung VCH, Dragotti PL, Goodman DFM
+title: Neural heterogeneity promotes robust learning
+journal: Nature Communications
+additional: 12, 5791
+doi: 10.1038/s41467-021-26022-3
+categories:
+- Neuroscience
+- Learning
+- Visual
+- Auditory
+- Spiking
+- Machine learning
+- Modelling
+urls:
+- - Journal (HTML)
+  - https://www.nature.com/articles/s41467-021-26022-3
+- - Journal (PDF)
+  - https://www.nature.com/articles/s41467-021-26022-3.pdf
+- - Preprint
+  - https://www.biorxiv.org/content/10.1101/2020.12.18.423468v3
+- - Neurotheory talk by Dan Goodman (video)
+  - https://www.youtube.com/watch?v=V2HFqVfeTPg&feature=youtu.be
+- - SNUFA 2021 talk by Nicolas Perez (video)
+  - https://youtu.be/aLNGcs_zYsY
+- - Twitter
+  - https://twitter.com/neuralreckoning/status/1341011316975218695
+abstract: The brain is a hugely diverse, heterogeneous structure. Whether or not heterogeneity
+  at the neural level plays a functional role remains unclear, and has been relatively
+  little explored in models which are often highly homogeneous. We compared the performance
+  of spiking neural networks trained to carry out tasks of real-world difficulty,
+  with varying degrees of heterogeneity, and found that heterogeneity substantially
+  improved task performance. Learning with heterogeneity was more stable and robust,
+  particularly for tasks with a rich temporal structure. In addition, the distribution
+  of neuronal parameters in the trained networks is similar to those observed experimentally.
+  We suggest that the heterogeneity observed in the brain may be more than just the
+  byproduct of noisy processes, but rather may serve an active and important role
+  in allowing animals to learn in changing environments.
+last_tweet_in_thread: '1341011376299511809'
+video_embed: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/aLNGcs_zYsY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

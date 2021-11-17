@@ -1,0 +1,29 @@
+selected: true
+year: 2013
+authors: Goodman DFM, Benichoux V, Brette R
+title: Decoding neural responses to temporal cues for sound localization
+journal: eLife
+additional: 2013;2:e01312
+categories:
+- Sound localisation
+- Modelling
+- Machine learning
+urls:
+- - Journal (HTML)
+  - http://elifesciences.org/content/2/e01312
+- - Code on GitHub
+  - https://github.com/neural-reckoning/decoding_sound_location
+abstract: "The activity of sensory neural populations carries information about the\n\
+  environment. This may be extracted from neural activity using different\nstrategies.\
+  \ In the auditory brainstem, a recent theory proposes that\nsound location in the\
+  \ horizontal plane is decoded from the relative\nsummed activity of two populations\
+  \ in each hemisphere, whereas earlier\ntheories hypothesized that the location was\
+  \ decoded from the identity of\nthe most active cells. We tested the performance\
+  \ of various decoders of\nneural responses in increasingly complex acoustical situations,\
+  \ including\nspectrum variations, noise, and sound diffraction. We demonstrate that\n\
+  there is insufficient information in the pooled activity of each\nhemisphere to\
+  \ estimate sound direction in a reliable way consistent with\nbehavior, whereas\
+  \ robust estimates can be obtained from neural activity\nby taking into account\
+  \ the heterogeneous tuning of cells. These\nestimates can still be obtained when\
+  \ only contralateral neural responses\nare used, consistently with unilateral lesion\
+  \ studies.        "

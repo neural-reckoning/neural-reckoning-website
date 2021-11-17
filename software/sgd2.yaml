@@ -1,0 +1,18 @@
+title: s(gd)<sup>2</sup>
+url: https://github.com/jxz12/s_gd2
+logo: https://media.giphy.com/media/JoaboGdTq1sXNnnIND/giphy.gif
+short: Graph layout using stochastic gradient descent.
+long: |-
+  <p>
+      A package for graph layout based on a stochastic gradient descent algorithm (available for C++ and Python).
+      The package is described in the paper
+      <a href="pub_graph_drawing_wcr.html">Graph Drawing by Stochastic Gradient Descent (Zheng et al. 2018)</a>
+      and was written by <a href="jonathan_zheng.html">Jonny Zheng</a>.
+  </p>
+team:
+- Goodman DFM
+- Zheng J
+categories:
+  - Visualisation
+  - Software
+  - Machine learning

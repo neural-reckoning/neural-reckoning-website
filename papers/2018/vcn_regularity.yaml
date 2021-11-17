@@ -1,0 +1,38 @@
+year: 2018
+authors: Goodman DFM, Winter IM, Léger AC, de Cheveigné A, Lorenzi C
+title: 'Modelling firing regularity in the ventral cochlear nucleus: mechanisms, and
+  effects of stimulus level and synaptopathy'
+journal: Hearing Research
+doi: 10.1016/j.heares.2017.09.010
+categories:
+- Auditory
+- Spiking
+- Modelling
+urls:
+- - Journal
+  - https://doi.org/10.1016/j.heares.2017.09.010
+- - Preprint
+  - https://www.biorxiv.org/content/early/2017/09/19/121707
+- - PDF (preprint)
+  - https://www.biorxiv.org/content/early/2017/09/19/121707.full.pdf
+- - Code (GitHub)
+  - https://github.com/neural-reckoning/vcn_regularity
+- - Code (Binder, interactive)
+  - http://mybinder.org/repo/neural-reckoning/vcn_regularity
+abstract: |-
+  The auditory system processes temporal information at multiple scales, and disruptions to this temporal
+  processing may lead to deficits in auditory tasks such as detecting and discriminating sounds in a noisy
+  environment. Here, a modelling approach is used to study the temporal regularity of firing by chopper cells in
+  the ventral cochlear nucleus, in both the normal and impaired auditory system. Chopper cells, which have a
+  strikingly regular firing response, divide into two classes, sustained and transient, based on the time course of
+  this regularity. Several hypotheses have been proposed to explain the behaviour of chopper cells, and the
+  difference between sustained and transient cells in particular. However, there is no conclusive evidence so far.
+  Here, a reduced mathematical model is developed and used to compare and test a wide range of hypotheses with a
+  limited number of parameters. Simulation results show a continuum of cell types and behaviours: chopper-like
+  behaviour arises for a wide range of parameters, suggesting that multiple mechanisms may underlie this behaviour.
+  The model accounts for systematic trends in regularity as a function of stimulus level that have previously only
+  been reported anecdotally. Finally, the model is used to predict the effects of a reduction in the number of
+  auditory nerve fibres (deafferentation due to, for example, cochlear synaptopathy). An interactive
+  version of this paper in which all the model parameters can be changed is available online.
+software:
+  - Brian

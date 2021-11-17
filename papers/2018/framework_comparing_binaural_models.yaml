@@ -1,0 +1,35 @@
+year: 2018
+authors: Dietz M, Lestang J-H, Majdak P, Stern RM, Marquardt T, Ewert SD, Hartmann
+  WH, Goodman DFM
+title: A framework for testing and comparing binaural models
+journal: Hearing Research
+doi: 10.1016/j.heares.2017.11.010
+categories:
+- Auditory
+- Neuroinformatics
+- Sound localisation
+urls:
+- - Journal
+  - https://doi.org/10.1016/j.heares.2017.11.010
+- - PDF (preprint)
+  - https://www.dropbox.com/s/v64783umlei7448/framework-for-testing-and-comparing-binaural-models.pdf?dl=1
+- - Code (GitHub)
+  - https://github.com/model-initiative/model_initiative
+abstract: |-
+  Auditory research has a rich history of combining experimental evidence with computational simulations of
+  auditory processing in order to deepen our theoretical understanding of how sound is processed in the ears and in
+  the brain. Despite significant progress in the amount of detail and breadth covered by auditory models, for many
+  components of the auditory pathway there are still different model approaches that are often not equivalent but
+  rather in conflict with each other. Similarly, some experimental studies yield conflicting results which has led
+  to controversies. This can be best resolved by a systematic comparison of multiple experimental data sets and
+  model approaches. Binaural processing is a prominent example of how the development of quantitative theories can
+  advance our understanding of the phenomena, but there remain several unresolved questions for which competing
+  model approaches exist. This article discusses a number of current unresolved or disputed issues in binaural
+  modeling, as well as some of the significant challenges in comparing binaural models with each other and with the
+  experimental data. We introduce an auditory model framework, which we believe can become a useful infrastructure
+  for resolving some of the current controversies. It operates models over the same paradigms that are used
+  experimentally. The core of the proposed framework is an interface that connects three components irrespective of
+  their underlying programming language: The experiment software, an auditory pathway model, and task-dependent
+  decision stages called artificial observers that provide the same output format as the test subject.
+software:
+  - auditory_model_initiative

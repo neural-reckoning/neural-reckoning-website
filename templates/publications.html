@@ -22,10 +22,13 @@
         </div>
         <div id="catcollapse" class="panel-collapse collapse">
             <ul class="list-group">
-                {% for catid, catname in category_id_names.items() | sort %}
-                {% set catpubs = category_publications(catid) %}
-                <li class="list-group-item"><a href="publication_category_{{ catid }}.html">{{ catname }}</a>
-                    <font color="#aaaaaa">({{catpubs|length}} paper{% if catpubs|length!=1 %}s{% endif %})</font>
+                {% set max_count = (categories.values()|sort(attribute="paper_count")|last).paper_count %}
+                {% for category in categories.values() | sort(attribute="name") %}
+                {% set catpubs = category.things['Paper'] %}
+                {% set fill_percent = int(100*category.paper_count/max_count) %}
+                <li class="list-group-item" style="background: linear-gradient(to right, rgba(0, 0, 0, 0.05) {{fill_percent}}%, rgba(0, 0, 0, 0.0) {{fill_percent}}%);">
+                    <a href="publication_category_{{ category.key }}.html">{{ category.name }}</a>
+                    <span style="color: #aaaaaa;">({{catpubs|length}} paper{% if catpubs|length!=1 %}s{% endif %})</span>
                 </li>
                 {% endfor %}
             </ul>
@@ -35,6 +38,6 @@
 
 <h3>All publications</h3>
 
-{{ publist.grouped_publications() }}
+{{ publist.grouped_publications(publications) }}
 
 {% endblock %}

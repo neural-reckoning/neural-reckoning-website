@@ -1,0 +1,29 @@
+title: Brian
+url: http://briansimulator.org
+logo: brian.png
+short: A Python simulator for spiking neural networks.
+long: |-
+  <p>
+      A simulator for spiking neural networks. It is written in Python for rapid
+      development and ease-of-use, and generates code in several different
+      languages for a variety of computational devices for efficient
+      execution (for example on GPU via the
+      <a href="https://genn-team.github.io/genn/">GeNN</a> simulator using the
+      <a href="http://brian2genn.readthedocs.io/en/latest/">Brian2GeNN</a> package).
+      It includes packages for
+      <a href="pub_modelfitting_focussed_review.html">automatically
+      fitting neuron models to experimental data</a> and for
+      <a href="pub_brian_hears.html">modelling the auditory system</a>.
+  </p>
+  <p>
+      The core Brian team consists of
+      <a href="dan_goodman.html">Dan Goodman</a> at Imperial, and
+      <a href="http://romainbrette.fr/">Romain Brette</a> and
+      <a href="http://scholar.google.co.uk/citations?user=KJs3XswAAAAJ&hl=en">Marcel Stimberg</a>
+      at l'Institut de la Vision in Paris.
+  </p>
+team:
+- Goodman DFM
+categories:
+  - Neuroinformatics
+  - Brian

@@ -1,0 +1,16 @@
+year: 2020
+authors: Achakulvisut T, Ruangrong T, Acuna DE, Wyble B, Goodman D, Kording K
+title: 'neuromatch: Algorithms to match scientists'
+journal: eLife Labs
+categories:
+- Neuroscience
+- Machine learning
+- Metascience
+urls:
+- - Journal (HTML)
+  - https://elifesciences.org/labs/5ed408f4/neuromatch-algorithms-to-match-scientists
+- - Neuromatch
+  - https://www.neuromatch.io/
+abstract: "We developed machine-learning algorithms to help connect scientists during\
+  \ online\nresearch conferences. "
+peer_reviewed: false

@@ -1,0 +1,47 @@
+# selected: True
+year: 2021
+authors:
+  - Goodman DFM
+title: 
+# for an article
+journal: 
+# for a book
+# publisher: 
+# for a conference paper (use short name here, and long name under additional detail)
+# conference: 
+
+# Uncomment for PhD thesis
+# phd_thesis: True
+# publisher: Imperial College London
+
+# Goes after Journal (Year)
+# additional: 
+
+doi: 
+
+# If it's a book, fill this in
+# book: 
+# book_editors: 
+
+# only shown on detail page
+# additional_detail: 
+
+categories:
+  - Neuroscience
+
+urls:
+  - - Journal
+    - 
+  - - Conference
+    -
+  - - PDF
+    -
+
+abstract: >
+  Multiline
+
+# if you have one
+# video_embed: 
+
+# Tweet ID of last tweet in thread (long number)
+last_tweet_in_thread: ''

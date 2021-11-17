@@ -1,0 +1,18 @@
+name: Yang Chu
+author_names:
+- Chu Y
+position: phd
+email: eS5jaHUxNkBpbXBlcmlhbC5hYy51aw==
+short: Principles of neural computation and simulation techniques
+long: |-
+  <p>
+  Yang Chu is a PhD student, working on principles of neural computation,
+  and high performance implementations using spiking neural
+  network (in particular, using non-standard computational
+  hardware such as FPGAs). He is jointly supervised by
+  <a href="http://www.imperial.ac.uk/people/w.luk">Wayne Luk</a> and
+  <a href="https://tbrx.github.io/">Brooks Paige</a>.
+  </p>
+dates:
+- 2016
+semantic_scholar: 2070014411

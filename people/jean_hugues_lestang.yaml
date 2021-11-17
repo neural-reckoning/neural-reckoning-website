@@ -1,0 +1,25 @@
+name: Jean-Hugues Lestang
+author_names:
+- Lestang JH
+- Lestang J-H
+- Lestang J
+position: former
+short: 'Auditory neuroscience: sound localisation, neural adaptation.'
+long: |-
+  <p>
+      Jean-Hugues Lestang was a PhD student, looking at the role of neural adaptation
+      in sound localisation in realistic acoustic environments.
+  </p>
+  <p>
+      Jean is also the Python developer for the
+      <a href="https://github.com/model-initiative/model_initiative">Auditory Model Initiative</a>.
+  </p>
+former_position: PhD
+dates:
+- 2015
+- 2019
+semantic_scholar: 30444266
+links:
+  - ["Google Scholar", "https://scholar.google.com/citations?user=j9wUAigAAAAJ&hl=en"]
+  - ["LinkedIn", "https://uk.linkedin.com/in/jean-hugues-lestang-90b70073"]
+  - ["GitHub", "https://github.com/jylls"]

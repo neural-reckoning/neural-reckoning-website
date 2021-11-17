@@ -54,13 +54,13 @@
         			<div class="dropdown-menu" aria-labelledby="navbarMembersDropdown">
                         <a class="dropdown-item" href="members.html">Everyone</a>
                         <div class="dropdown-divider"></div>
-                        {% for group in members | groupby('position') %}
-                            {% if group.grouper!="5_former" %}
-                                {% if member_types[group.grouper] %}
-                                    <h6 class="dropdown-header">{{member_types[group.grouper]}}</h6>
+                        {% for position in positions_in_order %}
+                            {% if grouped_members[position] and position!="former" %}
+                                {% if position_headers[position] %}
+                                <h6 class="dropdown-header">{{ position_headers[position] }}</h6>
                                 {% endif %}
-                                {% for member in group.list | sort(attribute='author_names') | sort(attribute='dates')  %}
-                                    <a class="dropdown-item" href="{{member.id}}.html">{{member.name}}</a>
+                                {% for member in grouped_members[position] | sort(attribute='author_names') | sort(attribute='dates')  %}
+                                    <a class="dropdown-item" href="{{member.key}}.html">{{member.name}}</a>
                                 {% endfor %}
                             {% endif %}
                         {% endfor %}

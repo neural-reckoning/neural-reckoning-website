@@ -1,0 +1,35 @@
+year: 2021
+last_updated: 23-4-2021
+authors: Su Y, Chung Y, Goodman DFM, Hancock KE, Delgutte B
+title: Rate and Temporal Coding of Regular and Irregular Pulse Trains in Auditory
+  Midbrain of Normal‑Hearing and Cochlear‑Implanted Rabbits
+journal: Journal of the Association for Research in Otolaryngology
+doi: 10.1007/s10162-021-00792-5
+categories:
+- Auditory
+- Neuroscience
+urls:
+- - Journal
+  - https://link.springer.com/article/10.1007/s10162-021-00792-5
+- - Preprint (PDF)
+  - https://www.dropbox.com/s/jy45giagrffkm9j/jitter-preprint.pdf?dl=1
+abstract: Although pitch is closely related to temporal periodicity, stimuli with
+  a degree of temporal irregularity can evoke a pitch sensation in human listeners.
+  However, the neural mechanisms underlying pitch perception for irregular sounds
+  are poorly understood. Here, we recorded responses of single units in the inferior
+  colliculus (IC) of normal hearing (NH) rabbits to acoustic pulse trains with different
+  amounts of random jitter in the inter-pulse intervals and compared with responses
+  to electric pulse trains delivered through a cochlear implant (CI) in a different
+  group of rabbits. In both NH and CI animals, many IC neurons demonstrated tuning
+  of firing rate to the average pulse rate (APR) that was robust against temporal
+  jitter, although jitter tended to increase the firing rates for APRs ≥ 1280 Hz.
+  Strength and limiting frequency of spike synchronization to stimulus pulses were
+  also comparable between periodic and irregular pulse trains, although there was
+  a slight increase in synchronization at high APRs with CI stimulation. There were
+  clear differences between CI and NH animals in both the range of APRs over which
+  firing rate tuning was observed and the prevalence of synchronized responses. These
+  results suggest that the pitches of regular and irregular pulse trains are coded
+  differently by IC neurons depending on the APR, the degree of irregularity, and
+  the mode of stimulation. In particular, the temporal pitch produced by periodic
+  pulse trains lacking spectral cues may be based on a rate code rather than a temporal
+  code at higher APRs.

@@ -18,7 +18,7 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta name="twitter:widgets:csp" content="on">
     <meta name="twitter:dnt" content="on">
-    <title></title>
+    <title>KlustaSuite</title>
     <link rel="STYLESHEET" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -44,11 +44,10 @@
                         <a class="dropdown-item" href="members.html">Everyone</a>
                         <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="dan_goodman.html">Dan Goodman</a>
-                                    <h6 class="dropdown-header">Postdocs and Fellows</h6>
+                                <h6 class="dropdown-header">Postdocs and Fellows</h6>
                                     <a class="dropdown-item" href="marcus_ghosh.html">Marcus Ghosh</a>
-                                    <h6 class="dropdown-header">PhD students</h6>
+                                <h6 class="dropdown-header">PhD students</h6>
                                     <a class="dropdown-item" href="chu_yang.html">Yang Chu</a>
-                                    <a class="dropdown-item" href="tom_clegg.html">Tom Clegg</a>
                                     <a class="dropdown-item" href="nicolas_perez.html">Nicolas Perez</a>
                                     <a class="dropdown-item" href="gabriel_bena.html">Gabriel Béna</a>
                     </div>
@@ -72,6 +71,7 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarMiscDropdown" role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Misc</a>
                 <div class="dropdown-menu" aria-labelledby="navbarMiscDropdown">
+                        <a class="dropdown-item" href="videos.html">Videos</a>
                         <a class="dropdown-item" href="comp-neuro-resources.html">Computational neuroscience resources</a>
                         <a class="dropdown-item" href="neuroinformatics.html">Neuroinformatics</a>
                         <a class="dropdown-item" href="sensory.html">Sensory neuroscience</a>
@@ -94,49 +94,108 @@
 
 <div class="row">
     <div class="col-sm-4 order-sm-12">
-        <img class="img-fluid" src="spikedetekt.png" style="width: 250px; max-width: 100%">
+        <img class="img-fluid" src="spikedetekt.png">
     </div>
     <div class="col-sm-8 order-sm-1">
-        
         <p>
-            A collection of programs for "spike sorting". That is, for
-            extracting spike trains from a set of simultaneously recorded
-            extracellular traces. This problem involves preprocessing data to
-            remove noise, clustering to identify patterns across channels
-            that correspond to spikes, and finally manually inspecting and
-            refining the output. This software is currently undergoing a
-            massive redesign to make it possible to sort spikes using
-            enormous electrode arrays with hundreds to thousands of channels.
-        </p>
-        <p>
-            The KlustaSuite team is led by
-            <a href="http://iris.ucl.ac.uk/iris/browse/profile?upi=KDHAR02">Kenneth Harris</a>
-            at UCL.
-        </p>
-        
+    A collection of programs for "spike sorting". That is, for
+    extracting spike trains from a set of simultaneously recorded
+    extracellular traces. This problem involves preprocessing data to
+    remove noise, clustering to identify patterns across channels
+    that correspond to spikes, and finally manually inspecting and
+    refining the output. This software is currently undergoing a
+    massive redesign to make it possible to sort spikes using
+    enormous electrode arrays with hundreds to thousands of channels.
+</p>
+<p>
+    The KlustaSuite team is led by
+    <a href="http://iris.ucl.ac.uk/iris/browse/profile?upi=KDHAR02">Kenneth Harris</a>
+    at UCL.
+</p>
     </div>
 </div>
 
 <div class="row">
     <div class="col">
+
         <h3>Links</h3>
         <p>
 <button type="button" class="btn btn-light" style="margin: 2px;"><a href="http://klusta-team.github.io/">Homepage</a></button>        </p>
-    </div>
-</div>
 
-<div class="row">
-    <div class="col">
         <h3>Neural Reckoning team members</h3>
         <p>Note that this list does not include external team members.</p>
         <ul class="list-inline author-list">
-            <li>
-                <a href="dan_goodman.html">
-                <div><img src="photo_dan_goodman.s.circ.png"/></div>
-                <div>Dan Goodman</div>
-                </a>
-            </li>
+    <li>
+        <a href="dan_goodman.html">
+        <div><img src="photo_dan_goodman.s.circ.png"/></div>
+        <div>Dan Goodman</div>
+        </a>
+    </li>
+</ul>
+
+
+        <h3>Related publications</h3>
+            <div class="publication_list">
+        <h5>2016</h5>
+        <ul>
+                <li>
+        <div class="publication_list_text">
+            Rossant C, et al.
+                    (2016)
+                <br/>
+            <a href="pub_spikesorting.html">
+                <b>Spike sorting for large, dense electrode arrays.</b><br/>
+            </a>
+            <i>
+                Nature Neuroscience
+                
+                
+            </i>
+        </div>
+            <div class="publication_list_icons">
+                
+                        <a href="https://www.dropbox.com/s/emnup6d0aoyjccs/spikesorting-preprint.pdf?dl=1" target="_blank">
+                            <i class="fa fa-file-pdf-o"></i>
+                        </a>
+                        
+            </div>
+    </li>
+
         </ul>
+        <h5>2014</h5>
+        <ul>
+                <li>
+        <div class="publication_list_text">
+            Kadir SN, <a href="dan_goodman.html">Goodman DFM</a>, Harris KD
+                    (2014)
+                <br/>
+            <a href="pub_mkk.html">
+                <b>High-dimensional cluster analysis with the masked EM algorithm.</b><br/>
+            </a>
+            <i>
+                Neural Computation
+                
+                
+            </i>
+        </div>
+            <div class="publication_list_icons">
+                
+                        <a href="https://arxiv.org/pdf/1309.2848" target="_blank">
+                            <i class="fa fa-file-pdf-o"></i>
+                        </a>
+                        
+            </div>
+    </li>
+
+        </ul>
+    </div>
+
+
+        <h3>Categories</h3>
+        <p>
+            <button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_machinelearning.html">Machine learning</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuraldataanalysis.html">Neural data analysis</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuroinformatics.html">Neuroinformatics</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuroscience.html">Neuroscience</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_software.html">Software</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_spikesorting.html">Spike sorting</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_spiking.html">Spiking</a></button>
+        </p>
+
     </div>
 </div>
 

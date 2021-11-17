@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% if key!="dan_goodman" %}
+    {% set collapse_conference_papers_default = "show" %}
+{% else %}
+    {% set collapse_conference_papers_default = "collapse" %}
+{% endif %}
+{% import 'publication_list_macro.html' as publist with context %}
+{% import 'software_list_macro.html' as swmacro with context %}
+{% import 'video_list_macro.html' as vidlist with context %}
+
+{% block main %}
+
+<h2>{{ name }}</h2>
+
+{% if os.path.exists('files/photo_'+key+'.jpg') %}
+{% set photo_filename = 'photo_'+key+'.jpg' %}
+{% else %}
+{% set photo_filename = 'portrait_placeholder.png' %}
+{% endif %}
+
+<div class="row">
+    <div class="col-sm-4 order-sm-12">
+        <img src="{{photo_filename}}" class="img-fluid"><!--  style="width: 200px; max-width: 100%;" -->
+        <!-- {% if os.path.exists('docs/wordcloud_'+key+'.png') %}
+        <img src="wordcloud_{{key}}.png" class="img-fluid">
+        {% endif %} -->
+        <ul class="list-group">
+        {% if email_img %}
+            <li class="list-group-item">
+                <img class="img-fluid" src="{{ email_img }}" style="height:1em;"/>
+            </li>
+        {% endif %}
+        {% if dates_string %}
+            <li class="list-group-item" style="color: #aaaaaa;">
+                Lab member: {{ dates_string }}
+            </li>
+        {% endif %}
+        {% if telephone %}
+            <li class="list-group-item">
+                {{ telephone }}
+            </li>
+        {% endif %}
+        {% if links %}
+            {% for text, url in links %}
+            <li class="list-group-item">
+                <a href="{{ url }}">{{ text }}</a>
+            </li>
+            {% endfor %}
+        {% endif %}
+        {% if address %}
+            <li class="list-group-item" style="color: #aaaaaa;">
+                {% for line in address.split('\n') if line.strip() %}
+                {{ line }}<br/>
+                {% endfor %}
+            </li>
+        {% endif %}
+        </ul>
+        {% if twitter %}
+            <p>&nbsp;</p>
+            <div class="d-none d-sm-block">
+                <a class="twitter-timeline" data-width="400" data-height="1000" data-show-replies="true"
+                href="https://twitter.com/{{twitter}}">
+                    Tweets by {{twitter}}
+                </a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="col-sm-8 order-sm-1">
+        <div>
+        {{ long }}
+        </div>
+
+        {% if things['Software'] %}
+        <h2>Software</h2>
+        {{ swmacro.software_card_list(things['Software']) }}
+        <p>&nbsp;</p>
+        {% endif %}
+
+        {% if show_publications and things['Paper'] %}
+        <h2>Publications</h2>
+
+        {% if key!="dan_goodman" %}
+            <p>Note that only publications as part of the Neural Reckoning group are included here{% if external_publications %} (see <a href="#external_publications">external publications below</a> for full list){% endif %}.</p>
+        {% else %}
+            {% set collapse_conference_papers_default = "collapse" %}
+            {{ publist.show_conference_papers() }}
+        {% endif %}
+
+        {{ publist.grouped_publications(things['Paper']) }}
+        {% endif %}
+
+        {% if things['Video'] %}
+        <h2>Videos</h2>
+        {{ vidlist.video_highlight(things['Video'], show='all') }}
+        {% endif %}
+
+        {% if external_publications %}
+        <h2 id="external_publications">External publications</h2>
+        <p>
+            This is a short preview of the publications from other sources (<a href="https://orcid.org/">ORCID</a>,
+            <a href="https://www.semanticscholar.org/">Semantic Scholar</a>).
+            {% if key!="dan_goodman" %}
+            Note that publications from work done outside the Neural Reckoning group are included in this list.
+            {% endif %}
+        </p>
+
+        {{ publist.external_publications(person) }}
+
+        {% endif %}
+
+    </div>
+</div>
+
+{% endblock %}
