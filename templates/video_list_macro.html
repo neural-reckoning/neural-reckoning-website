@@ -1,10 +1,10 @@
 {% macro short_video_list_item(vid) %}
 <li class="list-group-item">
     <a href="video_{{vid.key}}.html">{{vid.name}}</a>
-    <a href="{{vid.url}}" target="_blank">
+    <!-- <a href="{{vid.url}}" target="_blank">
         ({{ vid.type}}
         <i class="fa fa-video-camera"></i>)
-    </a>
+    </a> -->
 </li>
 {% endmacro %}
 
