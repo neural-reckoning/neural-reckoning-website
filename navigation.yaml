@@ -2,13 +2,13 @@ pages:
     'index.html': Home
     'members.html': Members
     'publications.html': Publications
-    'themes.html': Themes
     'software.html': Software
+    'videos.html': 'Videos'
+    'themes.html': Themes
     'openings.html': Join us
     'location.html': Location
 
 unindexed_pages:
-    'videos.html': 'Videos'
     'comp-neuro-resources.html': 'Computational neuroscience resources'
     'neuroinformatics.html': 'Neuroinformatics'
     'sensory.html': 'Sensory neuroscience'
