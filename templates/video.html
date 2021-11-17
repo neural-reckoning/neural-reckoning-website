@@ -21,7 +21,7 @@
         
         {% if things['Person'] %}
         <h3>Related people</h3>
-        {{ authmacro.authors_list(things['Person']) }}
+        {{ authmacro.authors_list(things['Person']|sort(attribute='key')) }}
         {% endif %}
 
         {% if things['Paper'] %}
