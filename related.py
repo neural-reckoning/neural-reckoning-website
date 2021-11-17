@@ -40,3 +40,24 @@ def find_thing_authors(people, things, attr='authors'):
         for author in thing.author_objects:
             if not isinstance(author, str):
                 author.add_thing(thing)
+
+
+class RelatedSoftwareGetter:
+    def __init__(self, software):
+        self.software = software
+    def __call__(self, thing):
+        related = []
+        if hasattr(thing, 'software'):
+            for tgt_str in thing.software:
+                related.append(self.software[tgt_str.lower()])
+        return related
+
+
+def find_related(things, get_related_things):
+    if isinstance(things, dict):
+        things = things.values()
+    for src in things:
+        targets = get_related_things(src)
+        for tgt in targets:
+            src.add_thing(tgt)
+            tgt.add_thing(src)

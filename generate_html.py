@@ -13,7 +13,7 @@ from links import check_links
 from people import get_people, write_people, make_people_thumbnails
 from pages import write_pages, make_members_global_for_navigation
 from papers import get_papers, write_papers
-from related import find_thing_authors
+from related import find_thing_authors, find_related, RelatedSoftwareGetter
 from software import get_software, write_software
 from templater import update_template_globals
 from twitter import generate_twitter_threads
@@ -38,8 +38,9 @@ generate_twitter_threads(papers)
 find_thing_authors(people, papers)
 find_thing_authors(people, software)
 categories = build_categories({**papers, **software})
+find_related(papers, RelatedSoftwareGetter(software))
 
-print([p.key for p in people['nicolas_perez'].things['Paper']])
+# print([p.key for p in software['auditory_model_initiative'].things['Paper']])
 
 # Generate wordclouds
 make_wordclouds(people, papers)

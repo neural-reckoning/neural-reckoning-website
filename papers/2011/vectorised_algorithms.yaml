@@ -21,3 +21,5 @@ abstract: |-
   simulation makes it possible to combine the flexibility of high-level
   languages with the computational efficiency usually associated with
   compiled languages.
+software:
+  - Brian

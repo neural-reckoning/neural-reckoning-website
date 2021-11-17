@@ -37,3 +37,5 @@ abstract: |-
   number of code generation pipelines have been developed in the computational neuroscience community, which differ
   considerably in aim, scope and functionality. This article provides an overview of existing pipelines currently
   used within the community and contrasts their capabilities and the technologies and concepts behind them.
+software:
+  - Brian

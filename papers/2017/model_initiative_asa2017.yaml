@@ -29,3 +29,5 @@ abstract: 'A framework aimed at improving the testability and comparability of b
   seminal data sets such as tone detection in so-called double-delayed masking noise,
   or lateralization of ¾-period delayed noise and sounds with temporally asymmetric
   envelopes.'
+software:
+  - auditory_model_initiative

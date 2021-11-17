@@ -20,3 +20,5 @@ abstract: "\"Brian\" is a simulator for spiking neural networks\n(http://www.bri
   \ programming language, and uses vector-based computation to allow\nfor efficient\
   \ simulations. It is particularly useful for neuroscientific\nmodelling at the systems\
   \ level, and for teaching computational\nneuroscience. "
+software:
+  - Brian

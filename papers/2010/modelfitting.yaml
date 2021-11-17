@@ -22,3 +22,5 @@ abstract: "Spiking models can accurately predict the spike trains produced by\nc
   empirically validated spiking models of neurons in various systems. We\ndemonstrate\
   \ its use on public data from the INCF Quantitative\nSingle-Neuron Modeling 2009\
   \ competition by comparing the performance of\na number of neuron spiking models. "
+software:
+  - Brian

@@ -11,3 +11,5 @@ urls:
 - - PDF
   - https://www.dropbox.com/s/ri7yhwzqk318ff4/brian-neuromorphic-engineer.pdf?dl=0
 peer_reviewed: false
+software:
+  - Brian

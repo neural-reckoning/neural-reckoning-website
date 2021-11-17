@@ -31,3 +31,5 @@ abstract: |-
   experimentally. The core of the proposed framework is an interface that connects three components irrespective of
   their underlying programming language: The experiment software, an auditory pathway model, and task-dependent
   decision stages called artificial observers that provide the same output format as the test subject.
+software:
+  - auditory_model_initiative

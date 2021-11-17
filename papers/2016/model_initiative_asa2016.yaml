@@ -29,3 +29,5 @@ abstract: 'Many computational models of the auditory system exist, most of which
   difference (e.g., interaural time difference), tone in noise detection (e.g., binaural
   masking level difference), and absolute judgment (e.g., sound source localization).
   Further development of the framework will be discussed.'
+software:
+  - auditory_model_initiative

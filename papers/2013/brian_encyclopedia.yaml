@@ -21,3 +21,5 @@ abstract: "Brian (http://briansimulator.org) is an open source Python package fo
   \ numbers of neurons,\nexecution speed is of the same order of magnitude ... "
 book: Encyclopedia of Computational Neuroscience
 book_editors: Jaeger D, Jung R
+software:
+  - Brian

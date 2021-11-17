@@ -27,3 +27,5 @@ abstract: |-
   mechanisms specific to perform that task, but could instead rely on common neural circuits in the brain. This would allow
   for the possibility of individual differences in learnt strategies or neuronal parameters. This research is fully
   reproducible, and we made our code available to edit and run online via interactive live notebooks.
+software:
+  - Brian

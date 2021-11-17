@@ -23,3 +23,5 @@ abstract: |-
   produce as 'power-confluent', and prove that it is a subclass of the previously studied 'strict confluent'
   drawing. A description and source code of our implementation is also provided, which additionally includes an
   improved method for power graph construction.
+software:
+  - pconfluent

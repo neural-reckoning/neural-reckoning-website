@@ -31,3 +31,5 @@ abstract: |-
   knowledge of HRTFs. After learning, our model was able to accurately
   localise new sounds in both azimuth and elevation, including the
   difficult task of distinguishing sounds coming from the front and back.
+software:
+  - Brian

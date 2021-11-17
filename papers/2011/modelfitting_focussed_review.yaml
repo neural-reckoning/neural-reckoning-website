@@ -26,3 +26,5 @@ abstract: |-
   adaptive spiking models can accurately predict the response of cortical
   neurons. Finally, we show how a complex multicompartmental model can be
   reduced to a simple effective spiking model.
+software:
+  - Brian

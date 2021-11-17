@@ -27,3 +27,5 @@ abstract: |-
 book_chapter: true
 book: Computational Glioscience
 book_editors: De Pittà M, Berry H
+software:
+  - Brian

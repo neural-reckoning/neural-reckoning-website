@@ -50,3 +50,5 @@ abstract: |-
   <p>Since both approaches are biologically plausible, the results from both
   methods can be used to generate hypotheses about how the brain processes
   information and may reveal hitherto unknown information processing pathways.</p>
+software:
+  - Brian

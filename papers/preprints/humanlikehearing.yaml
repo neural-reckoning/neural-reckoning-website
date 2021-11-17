@@ -33,3 +33,5 @@ abstract: Automatic speech recognition (ASR) software has been suggested as a ca
   to allow researchers to assess future ASR systems or add additional psychoacoustic
   measures.
 last_tweet_in_thread: '1395704552519839746'
+software:
+  - humanlike_hearing

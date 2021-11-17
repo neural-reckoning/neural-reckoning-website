@@ -24,3 +24,5 @@ abstract: |-
   The technique is quite general and could be applied to any simulation
   package. We demonstrate it with the "Brian" simulator
   (http://www.briansimulator.org).
+software:
+  - Brian

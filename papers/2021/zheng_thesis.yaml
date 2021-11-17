@@ -25,3 +25,7 @@ abstract: |-
   to visualise the dynamical behaviour of food webs. Its purpose is to crowdsource
   research through a citizen science approach, with outcomes in both visualisation
   and mathematical ecology.
+software:
+  - ecobuilder
+  - sgd2
+  - pconfluent

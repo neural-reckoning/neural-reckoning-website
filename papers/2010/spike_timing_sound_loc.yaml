@@ -40,3 +40,5 @@ abstract: |-
   learning. The model demonstrates the computational relevance of relative
   spike timing to extract spatial information about sources independently
   of the source signal.
+software:
+  - Brian

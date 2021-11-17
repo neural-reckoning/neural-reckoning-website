@@ -28,3 +28,5 @@ abstract: |-
   units, yielding substantial speed improvements. We demonstrate these
   algorithms with several state-of-the-art cochlear models, and show that
   they compare favorably with existing, less flexible, implementations.
+software:
+  - Brian

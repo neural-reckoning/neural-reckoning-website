@@ -4,7 +4,7 @@
 
 <h2 class="pb-3">Software</h2>
 
-{% for sw in software %}
+{% for sw in software | sort(attribute='thing_count', reverse=True) %}
 <div class="border rounded p-3 miniboxed">
     <h4><a href="sw_{{sw.key}}.html">{{sw.title}}</a></h4>
     <div class="row">

@@ -25,3 +25,5 @@ abstract: |-
   how the unique properties of SGD make it easier to produce constrained layouts than previous
   approaches. We also show how SGD can be directly applied within the sparse stress approximation of
   Ortmann et al. [1], making the algorithm scalable up to large graphs.
+software:
+  - sgd2

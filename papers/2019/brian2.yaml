@@ -31,3 +31,5 @@ abstract: |-
   low-level code that can run interleaved with their code. We illustrate this with several challenging examples: a
   plastic model of the pyloric network, a closed-loop sensorimotor model, a programmatic exploration of a neuron
   model, and an auditory model with real-time input.
+software:
+  - Brian

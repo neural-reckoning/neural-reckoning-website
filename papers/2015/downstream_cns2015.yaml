@@ -54,3 +54,5 @@ abstract: "<p>We demonstrate how an abstract mathematical model that approximate
   \ ANFs could therefore lead to a disruption of the processing of temporal \nenvelope,\
   \ and consequently degrade speech intelligibility. We briefly conclude by discussing\
   \ the challenges \nof testing this hypothesis experimentally.</p>"
+software:
+  - Brian

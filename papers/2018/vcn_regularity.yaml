@@ -34,3 +34,5 @@ abstract: |-
   been reported anecdotally. Finally, the model is used to predict the effects of a reduction in the number of
   auditory nerve fibres (deafferentation due to, for example, cochlear synaptopathy). An interactive
   version of this paper in which all the model parameters can be changed is available online.
+software:
+  - Brian

@@ -20,3 +20,5 @@ abstract: "\"Brian\" is a new simulator for spiking neural networks, written in\
   non-standard neuron models not easily covered by existing software, and\nas an alternative\
   \ to using Matlab or C for simulations. With its easy\nand intuitive syntax, Brian\
   \ is also very well suited for teaching\ncomputational neuroscience. "
+software:
+  - Brian

@@ -34,3 +34,5 @@ abstract: '"Brian" is a popular Python-based simulator for spiking neural networ
   user''s perspective, the entire pipeline is invoked by adding two simple lines to
   their Brian scripts. We have shown that using Brian2GeNN, two non-trivial models
   from the literature can run tens to hundreds of times faster than on CPU.'
+software:
+  - Brian

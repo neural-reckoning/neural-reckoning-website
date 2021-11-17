@@ -29,3 +29,5 @@ abstract: "Cluster analysis faces two problems in high dimensions: the \"curse o
   \ time-efficient clustering of up to millions of points in\nthousands of dimensions.\
   \ We demonstrate its applicability to synthetic\ndata and to real-world high-channel-count\
   \ spike sorting data.        "
+software:
+  - klusta

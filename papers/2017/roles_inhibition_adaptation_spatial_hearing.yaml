@@ -30,3 +30,5 @@ abstract: The computation of binaural cues such as the Interaural Time Differenc
   based on similar stimuli to distinguish between the two mechanisms. Dietz et al.
   (2013), “Emphasis of spatial cues in the temporal fine structure during the rising
   segments of amplitude-modulated sounds,” Proc. Natl. Acad. Sci. 110(37), 15151-15156.
+software:
+  - Brian

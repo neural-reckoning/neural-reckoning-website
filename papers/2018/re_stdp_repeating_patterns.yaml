@@ -22,3 +22,5 @@ abstract: |-
   This article is a replication of
   <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0001377">Masquelier et al. (2008)
   "Spike Timing Dependent Plasticity Finds the Start of Repeating Patterns in Continuous Spike Trains"</a>.
+software:
+  - Brian

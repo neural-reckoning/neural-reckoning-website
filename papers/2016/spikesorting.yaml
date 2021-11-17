@@ -27,3 +27,5 @@ abstract: |-
   implemented in a suite of practical, user-friendly, open-source software.
   We validate these methods on data from the cortex, hippocampus and thalamus
   of rat, mouse, macaque and marmoset, demonstrating error rates as low as 5%.
+software:
+  - klusta

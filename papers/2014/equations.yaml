@@ -26,3 +26,5 @@ abstract: "Simulating biological neuronal networks is a core method of research 
   \ reproducibility, because the model description is fully\nexplicit, and because\
   \ it can be automatically parsed and transformed\ninto formatted descriptions. The\
   \ presented approach has been implemented\nin the Brian2 simulator.        "
+software:
+  - Brian
