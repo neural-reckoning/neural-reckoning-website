@@ -1,4 +1,5 @@
 title: Brian
+selected: True
 url: http://briansimulator.org
 logo: brian.png
 short: A Python simulator for spiking neural networks.

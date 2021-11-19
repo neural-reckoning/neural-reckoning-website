@@ -1,6 +1,6 @@
 pages:
     'index.html': Home
-    'members.html': Members
+    'members.html': People
     'publications.html': Publications
     'software.html': Software
     'videos.html': 'Videos'
@@ -15,3 +15,14 @@ unindexed_pages:
     'mathematics.html': 'Mathematics'
     'apply_phd.html': 'PhD application process'
     'accessibility.html': 'Accessibility statement'
+
+external_icon_links:
+    - name: Twitter
+      fa: fa-twitter
+      url: https://twitter.com/neuralreckoning
+    - name: GitHub
+      fa: fa-github
+      url: https://github.com/neural-reckoning
+    - name: YouTube
+      fa: fa-youtube-play
+      url: https://www.youtube.com/channel/UCfJdfQGtvv7IN8YAIz4yfGw

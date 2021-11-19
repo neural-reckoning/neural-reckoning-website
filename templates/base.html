@@ -32,7 +32,7 @@
         </div>
     </nav>
 {% endif %}
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light"><div class="container">
+<nav class="navbar sticky-top navbar-expand-xl navbar-light bg-light"><div class="container">
     <a class="navbar-brand" href="index.html">
         {% if filename!="index.html" %}
             <img src="nr-logo-small.png" class="img-fluid" style="width: 4em;">
@@ -50,7 +50,7 @@
             {% if page_filename=="members.html" %}
                 <li class="nav-item dropdown{{" active" if page_filename==filename}}">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarMembersDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Members</a>
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">People</a>
         			<div class="dropdown-menu" aria-labelledby="navbarMembersDropdown">
                         <a class="dropdown-item" href="members.html">Everyone</a>
                         <div class="dropdown-divider"></div>
@@ -81,6 +81,11 @@
                     {% endfor %}
                 </div>
             </li>
+            {% for icon_link in external_icon_links %}
+            <li class="nav item">
+                <a class="nav-link" href="{{ icon_link.url }}"><i class="fa {{ icon_link.fa }}"></i><span class="d-inline d-xl-none"> {{ icon_link.name }}</span></a>
+            </li>
+            {% endfor %}
         </ul>
     </div>
 </div></nav>

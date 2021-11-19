@@ -1,4 +1,5 @@
 title: s(gd)<sup>2</sup>
+selected: True
 url: https://github.com/jxz12/s_gd2
 logo: https://media.giphy.com/media/JoaboGdTq1sXNnnIND/giphy.gif
 short: Graph layout using stochastic gradient descent.

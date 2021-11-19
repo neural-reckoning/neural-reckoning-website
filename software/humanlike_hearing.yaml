@@ -1,4 +1,5 @@
 title: HumanlikeHearing
+selected: True
 url: https://github.com/neural-reckoning/HumanlikeHearing
 logo: humanlike-hearing.png
 short: Python package for psychophysical tests of automatic speech recognition systems.
