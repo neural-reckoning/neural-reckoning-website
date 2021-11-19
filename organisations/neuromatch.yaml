@@ -1,0 +1,18 @@
+name: Neuromatch
+url: https://neuromatch.io/
+short: Inclusive networking and education for neuroscience.
+long: >
+  Neuromatch is a non-profit organisation aimed at widening participation in neuroscience
+  as far as possible. We focus on online or hybrid events with low or zero cost, and using
+  algorithmic matching for networking. It was co-founded by
+  <a href="dan_goodman.html">Dan Goodman</a> in 2020 in response to the covid pandemic.
+logo: https://neuromatch.io/svgs/logos/neuromatch-light.svg
+related:
+  - dan_goodman
+  - nmc3
+  - elife_labs_matching
+  - elife_neuromatch
+categories:
+  - Neuroscience
+  - Metascience
+  - Machine learning

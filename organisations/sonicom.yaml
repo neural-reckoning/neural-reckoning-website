@@ -1,0 +1,15 @@
+name: SONICOM
+url: https://www.sonicom.eu/
+short: European network for immersive audio.
+long: >
+  SONICOM is a European H2020 FET Proactive research project headed by
+  <a href="https://www.imperial.ac.uk/people/l.picinali">Lorenzo Picinali</a>.
+  The aim is to build immersive audio for spatial hearing in AR/VR
+  environments. <a href="dan_goodman.html">Dan Goodman</a> is part of the
+  Imperial College team.
+logo: https://www.sonicom.eu/wp-content/themes/sonicom/library/images/logo.png
+related:
+  - dan_goodman
+categories:
+  - Sound localisation
+  - Virtual reality

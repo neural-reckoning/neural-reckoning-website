@@ -2,6 +2,8 @@
 {% import 'category_macro.html' as catmacro with context %}
 {% import 'authors_list_macro.html' as authmacro with context %}
 {% import 'publication_list_macro.html' as publist with context %}
+{% import 'organisation_list_macro.html' as orglist with context %}
+
 
 {% block main %}
 
@@ -27,6 +29,11 @@
         <h3>Neural Reckoning team members</h3>
         <p>Note that this list does not include external team members.</p>
         {{ authmacro.authors_list(author_objects) }}
+
+        {% if things['Organisation'] %}
+        <h3>Related organisations</h3>
+        {{ orglist.organisation_card_list(things['Organisation']) }}
+        {% endif %}
 
         {% if things['Paper'] %}
         <h3>Related publications</h3>

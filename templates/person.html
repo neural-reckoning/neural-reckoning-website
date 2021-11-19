@@ -7,6 +7,8 @@
 {% import 'publication_list_macro.html' as publist with context %}
 {% import 'software_list_macro.html' as swmacro with context %}
 {% import 'video_list_macro.html' as vidlist with context %}
+{% import 'organisation_list_macro.html' as orglist with context %}
+
 
 {% block main %}
 
@@ -76,6 +78,11 @@
         <h2 class="pt-3 pb-3">Software</h2>
         {{ swmacro.software_card_list(things['Software']) }}
         {% endif %}
+
+        {% if things['Organisation'] %}
+        <h2 class="pt-3 pb-3">Organisations</h2>
+        {{ orglist.organisation_card_list(things['Organisation']) }}
+        {% endif %}        
 
         {% if show_publications and things['Paper'] %}
         <h2 class="pt-3 pb-3">Publications</h2>

@@ -3,6 +3,8 @@
 {% import 'publication_list_macro.html' as publist with context %}
 {% import 'software_list_macro.html' as swmacro with context %}
 {% import 'video_list_macro.html' as vidlist with context %}
+{% import 'organisation_list_macro.html' as orglist with context %}
+
 
 {% block main %}
 
@@ -24,6 +26,11 @@ For more details on this category, click <a href="{{ detail_link }}">here</a>.
 <h3>Publications</h3>
 {{ publist.show_conference_papers() }}
 {{ publist.grouped_publications(things['Paper']) }}
+{% endif %}
+
+{% if things['Organisation'] %}
+<h3>Organisations</h3>
+{{ orglist.organisation_card_list(things['Organisation']) }}
 {% endif %}
 
 {% if things['Video'] | length %}

@@ -59,9 +59,6 @@
                     <a class="nav-link" href="software.html">Software</a>
                 </li>
                 <li class="nav item">
-                    <a class="nav-link" href="videos.html">Videos</a>
-                </li>
-                <li class="nav item">
                     <a class="nav-link" href="themes.html">Themes</a>
                 </li>
                 <li class="nav item">
@@ -72,8 +69,10 @@
                 </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarMiscDropdown" role="button"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Misc</a>
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
                 <div class="dropdown-menu" aria-labelledby="navbarMiscDropdown">
+                        <a class="dropdown-item" href="videos.html">Videos</a>
+                        <a class="dropdown-item" href="organisations.html">Organisations</a>
                         <a class="dropdown-item" href="comp-neuro-resources.html">Computational neuroscience resources</a>
                         <a class="dropdown-item" href="neuroinformatics.html">Neuroinformatics</a>
                         <a class="dropdown-item" href="sensory.html">Sensory neuroscience</a>
@@ -181,65 +180,103 @@
         </div>
 
         <h2 class="pt-3 pb-3">Software</h2>
-        <div class="row flex-row flex-nowrap" style="overflow-x: auto;">
-    <div class="col-5 col-md-4 p-2" style="width: 500px;">
-        <a href="sw_brian.html">
-            <img class="img-fluid" src="brian.png" style="max-height: 100px;">
-            <h5>Brian</h5>
-        </a>
-        <p>A Python simulator for spiking neural networks.</p>
+        <div class="d-flex flex-row flex-nowrap" style="overflow-x: auto;">
+    <div class="card col-5 col-md-4 p-1 border-0">
+        <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('brian.png'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
+        </div>
+        <div class="card-body p-1 border-0">
+            <h5 class="card-title"><a href="sw_brian.html">Brian</a></h5>
+            <p class="card-text">A Python simulator for spiking neural networks.</p>
+        </div>
     </div>
-    <div class="col-5 col-md-4 p-2" style="width: 500px;">
-        <a href="sw_auditory_model_initiative.html">
-            <img class="img-fluid" src="model-initiative.png" style="max-height: 100px;">
-            <h5>Auditory Model Initiative</h5>
-        </a>
-        <p>Python/Matlab package for comparing binaural auditory models.</p>
+    <div class="card col-5 col-md-4 p-1 border-0">
+        <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('model-initiative.png'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
+        </div>
+        <div class="card-body p-1 border-0">
+            <h5 class="card-title"><a href="sw_auditory_model_initiative.html">Auditory Model Initiative</a></h5>
+            <p class="card-text">Python/Matlab package for comparing binaural auditory models.</p>
+        </div>
     </div>
-    <div class="col-5 col-md-4 p-2" style="width: 500px;">
-        <a href="sw_klusta.html">
-            <img class="img-fluid" src="spikedetekt.png" style="max-height: 100px;">
-            <h5>KlustaSuite</h5>
-        </a>
-        <p>Spike sorting.</p>
+    <div class="card col-5 col-md-4 p-1 border-0">
+        <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('spikedetekt.png'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
+        </div>
+        <div class="card-body p-1 border-0">
+            <h5 class="card-title"><a href="sw_klusta.html">KlustaSuite</a></h5>
+            <p class="card-text">Spike sorting.</p>
+        </div>
     </div>
-    <div class="col-5 col-md-4 p-2" style="width: 500px;">
-        <a href="sw_pconfluent.html">
-            <img class="img-fluid" src="power-confluent.png" style="max-height: 100px;">
-            <h5><tt>pconfluent</tt>: power confluent drawings</h5>
-        </a>
-        <p>Package for power confluent graph drawings.</p>
+    <div class="card col-5 col-md-4 p-1 border-0">
+        <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('power-confluent.png'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
+        </div>
+        <div class="card-body p-1 border-0">
+            <h5 class="card-title"><a href="sw_pconfluent.html"><tt>pconfluent</tt>: power confluent drawings</a></h5>
+            <p class="card-text">Package for power confluent graph drawings.</p>
+        </div>
     </div>
-    <div class="col-5 col-md-4 p-2" style="width: 500px;">
-        <a href="sw_sgd2.html">
-            <img class="img-fluid" src="https://media.giphy.com/media/JoaboGdTq1sXNnnIND/giphy.gif" style="max-height: 100px;">
-            <h5>s(gd)<sup>2</sup></h5>
-        </a>
-        <p>Graph layout using stochastic gradient descent.</p>
+    <div class="card col-5 col-md-4 p-1 border-0">
+        <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('https://media.giphy.com/media/JoaboGdTq1sXNnnIND/giphy.gif'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
+        </div>
+        <div class="card-body p-1 border-0">
+            <h5 class="card-title"><a href="sw_sgd2.html">s(gd)<sup>2</sup></a></h5>
+            <p class="card-text">Graph layout using stochastic gradient descent.</p>
+        </div>
     </div>
-    <div class="col-5 col-md-4 p-2" style="width: 500px;">
-        <a href="sw_ecobuilder.html">
-            <img class="img-fluid" src="ecobuilder.jpg" style="max-height: 100px;">
-            <h5>EcoBuilder</h5>
-        </a>
-        <p>Educational game about building ecosystems.</p>
+    <div class="card col-5 col-md-4 p-1 border-0">
+        <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('ecobuilder.jpg'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
+        </div>
+        <div class="card-body p-1 border-0">
+            <h5 class="card-title"><a href="sw_ecobuilder.html">EcoBuilder</a></h5>
+            <p class="card-text">Educational game about building ecosystems.</p>
+        </div>
     </div>
-    <div class="col-5 col-md-4 p-2" style="width: 500px;">
-        <a href="sw_humanlike_hearing.html">
-            <img class="img-fluid" src="humanlike-hearing.png" style="max-height: 100px;">
-            <h5>HumanlikeHearing</h5>
-        </a>
-        <p>Python package for psychophysical tests of automatic speech recognition systems.</p>
+    <div class="card col-5 col-md-4 p-1 border-0">
+        <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('humanlike-hearing.png'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
+        </div>
+        <div class="card-body p-1 border-0">
+            <h5 class="card-title"><a href="sw_humanlike_hearing.html">HumanlikeHearing</a></h5>
+            <p class="card-text">Python package for psychophysical tests of automatic speech recognition systems.</p>
+        </div>
     </div>
-    <div class="col-5 col-md-4 p-2" style="width: 500px;">
-        <a href="sw_conference_timer.html">
-            <img class="img-fluid" src="conference-timer-screenshot.png" style="max-height: 100px;">
-            <h5>Conference Timer</h5>
-        </a>
-        <p>HTML/JavaScript conference timer.</p>
+    <div class="card col-5 col-md-4 p-1 border-0">
+        <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('conference-timer-screenshot.png'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
+        </div>
+        <div class="card-body p-1 border-0">
+            <h5 class="card-title"><a href="sw_conference_timer.html">Conference Timer</a></h5>
+            <p class="card-text">HTML/JavaScript conference timer.</p>
+        </div>
     </div>
 </div>
 
+
+        <h2 class="pt-3 pb-3">Organisations</h2>
+        <div class="d-flex flex-row flex-nowrap" style="overflow-x: auto;">
+    <div class="card col-5 col-md-4 p-1 border-0">
+        <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('https://neuromatch.io/svgs/logos/neuromatch-light.svg'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
+        </div>
+        <div class="card-body p-1 border-0">
+            <h5 class="card-title"><a href="org_neuromatch.html">Neuromatch</a></h5>
+            <p class="card-text">Inclusive networking and education for neuroscience.</p>
+        </div>
+    </div>
+    <div class="card col-5 col-md-4 p-1 border-0">
+        <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('default_org.png'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
+        </div>
+        <div class="card-body p-1 border-0">
+            <h5 class="card-title"><a href="org_snufa.html">SNUFA</a></h5>
+            <p class="card-text">Organisation for neuroscientists interested in spiking neural networks.</p>
+        </div>
+    </div>
+    <div class="card col-5 col-md-4 p-1 border-0">
+        <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('https://www.sonicom.eu/wp-content/themes/sonicom/library/images/logo.png'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
+        </div>
+        <div class="card-body p-1 border-0">
+            <h5 class="card-title"><a href="org_sonicom.html">SONICOM</a></h5>
+            <p class="card-text">European network for immersive audio.</p>
+        </div>
+    </div>
+</div>
+
+        
 
         <h2 class="pt-3 pb-3">Publications</h2>
 

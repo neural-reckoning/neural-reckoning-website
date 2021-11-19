@@ -3,6 +3,8 @@
 {% import 'authors_list_macro.html' as authmacro with context %}
 {% import 'software_list_macro.html' as swmacro with context %}
 {% import 'video_list_macro.html' as vidlist with context %}
+{% import 'organisation_list_macro.html' as orglist with context %}
+
 
 {% block main %}
 
@@ -77,6 +79,11 @@
 {% if things['Software'] %}
 <h3>Related software</h3>
 {{ swmacro.software_card_list(things['Software']) }}
+{% endif %}
+
+{% if things['Organisation'] %}
+<h3>Related organisations</h3>
+{{ orglist.organisation_card_list(things['Organisation']) }}
 {% endif %}
 
 {% if things['Video'] %}

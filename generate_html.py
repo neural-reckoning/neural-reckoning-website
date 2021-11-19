@@ -10,6 +10,7 @@ import yaml
 from cache import save_cache
 from categories import build_categories, write_categories
 from links import check_links
+from organisations import get_organisations, write_organisations
 from people import get_people, write_people, make_people_thumbnails
 from pages import write_pages, make_members_global_for_navigation
 from papers import get_papers, write_papers
@@ -29,6 +30,7 @@ people = get_people()
 papers = get_papers()
 software = get_software()
 videos = get_videos()
+organisations = get_organisations()
 
 # Generate thumbnails
 make_people_thumbnails(people)
@@ -39,11 +41,10 @@ generate_twitter_threads(papers)
 # Find relationships
 find_thing_authors(people, papers)
 find_thing_authors(people, software)
-categories = build_categories({**papers, **software, **videos})
+categories = build_categories({**papers, **software, **videos, **organisations})
 find_related(papers, RelatedSoftwareGetter(software))
-find_related(videos, RelatedThingGetter({**people, **papers, **software}))
-
-# print([p.key for p in software['auditory_model_initiative'].things['Paper']])
+find_related(videos, RelatedThingGetter({**people, **papers, **software, **organisations}))
+find_related(organisations, RelatedThingGetter({**people, **papers, **software}))
 
 # Generate wordclouds
 make_wordclouds(people, papers)
@@ -57,7 +58,8 @@ write_papers(papers)
 write_categories(categories)
 write_software(software)
 write_videos(videos)
-write_pages(nav, people, papers, software, categories, videos)
+write_organisations(organisations)
+write_pages(nav, people, papers, software, categories, videos, organisations)
 
 # Copy static files to docs directory
 os.system(r'copy files\* docs >nul')

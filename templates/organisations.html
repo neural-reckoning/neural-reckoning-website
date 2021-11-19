@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<h2 class="pb-3">Organisations</h2>
+
+{% for org in organisations | sort(attribute='thing_count', reverse=True) %}
+<div class="border rounded p-3 miniboxed">
+    <h4><a href="org_{{org.key}}.html">{{org.name}}</a></h4>
+    <div class="row">
+        <div class="col-sm-4 order-sm-12">
+            <img class="img-fluid" src="{{org.logo}}" style="width: 250px; max-width: 100%">
+        </div>
+        <div class="col-sm-8 order-sm-1">
+            {{org.long}}
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

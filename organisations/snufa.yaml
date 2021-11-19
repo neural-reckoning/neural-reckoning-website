@@ -1,0 +1,15 @@
+name: SNUFA
+url: http://snufa.net/
+short: Organisation for neuroscientists interested in spiking neural networks.
+long: >
+  SNUFA (Spiking Neural networks as Universal Function Approximators) started as
+  a workshop run in 2020 by <a href="dan_goodman.html">Dan Goodman</a> and
+  <a href="https://fzenke.net/">Friedemann Zenke</a>. It now runs an annual
+  workshop and will organise challenge events, etc.
+related:
+  - dan_goodman
+  - snufa_review
+categories:
+  - Spiking
+  - Machine learning
+  - Metascience
