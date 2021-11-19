@@ -1,9 +1,5 @@
 {% extends 'base.html' %}
-{% import 'category_macro.html' as catmacro with context %}
-{% import 'authors_list_macro.html' as authmacro with context %}
-{% import 'publication_list_macro.html' as publist with context %}
-{% import 'software_list_macro.html' as swmacro with context %}
-{% import 'organisation_list_macro.html' as orglist with context %}
+{% import 'related_list_macro.html' as relist with context %}
 
 {% block main %}
 
@@ -16,37 +12,12 @@
             {{ long }}
         </p>
 
-        <div class="embed-responsive embed-responsive-16by9">
+        <div class="embed-responsive embed-responsive-16by9 pt-3 pb-3">
             {{ embed }}
         </div>
+
+        {{ relist.related_by_class(things, categories=category_objects) }}
         
-        {% if things['Person'] %}
-        <h3>Related people</h3>
-        {{ authmacro.authors_list(things['Person']|sort(attribute='key')) }}
-        {% endif %}
-
-        {% if things['Paper'] %}
-        <h3>Related publications</h3>
-        {{ publist.grouped_publications(things['Paper']) }}
-        {% endif %}
-
-        {% if things['Software'] %}
-        <h3>Related software</h3>
-        {{ swmacro.software_card_list(things['Software']) }}
-        {% endif %}
-
-        {% if things['Organisation'] %}
-        <h3>Related organisations</h3>
-        {{ orglist.organisation_card_list(things['Organisation']) }}
-        {% endif %}
-
-        {% if category_objects %}
-        <h3>Categories</h3>
-        <p>
-            {{ catmacro.category_buttons(category_objects) }}
-        </p>
-        {% endif %}
-
     </div>
 </div>
 

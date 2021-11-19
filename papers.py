@@ -7,6 +7,7 @@ from templater import apply_template
 
 
 class Paper(Thing):
+    page_prefix = "pub_"
     def validate(self):
         self.year = str(self.year)
         if not hasattr(self, 'last_updated') and self.year!="Preprints":

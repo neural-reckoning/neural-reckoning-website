@@ -8,6 +8,7 @@ class Thing(object):
     short = ""
     long = ""
     icon = ""
+    page_prefix = ""
 
     def __init__(self, fname=None, key=None, **kwds):
         if (fname is not None and key is not None) or (fname is None and key is None):
@@ -32,6 +33,13 @@ class Thing(object):
             self.last_updated = datetime.datetime(y, m, d)
             if not hasattr(self, 'year'):
                 self.year = y
+
+        if hasattr(self, 'name') and not hasattr(self, 'title'):
+            self.title = self.name
+        if hasattr(self, 'title') and not hasattr(self, 'name'):
+            self.name = self.title
+
+        self.page = f'{self.page_prefix}{self.key}.html'
 
         self.validate()
 

@@ -31,9 +31,14 @@ category_detail_links = {
     'Software': 'software.html',
     }
 
+category_descendants = defaultdict(set)
+for descendant, parents in category_inclusions.items():
+    for parent in parents:
+        category_descendants[parent].add(descendant)
+
 
 class Category(Thing):
-    pass
+    page_prefix = "publication_category_"
 
 
 def category_id(name):
@@ -175,5 +180,8 @@ def build_categories(things):
 
 def write_categories(categories):
     for key, cat in categories.items():
+        parents = [categories[c] for c in sorted([category_id(name) for name in category_inclusions.get(cat.name, [])])]
+        subcats = [categories[c] for c in sorted([category_id(name) for name in category_descendants.get(cat.name, [])])]
         filename = f'publication_category_{key}.html'
-        apply_template('category.html', filename, keys_from=cat)
+        apply_template('category.html', filename, keys_from=cat,
+            keys=dict(subcats=subcats, parents=parents, categories=categories))

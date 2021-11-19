@@ -5,6 +5,7 @@ from templater import apply_template
 
 
 class Organisation(Thing):
+    page_prefix = "org_"
     def validate(self):
         if not hasattr(self, 'logo'):
             self.logo = 'default_org.png'

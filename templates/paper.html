@@ -1,9 +1,6 @@
 {% extends 'base.html' %}
-{% import 'category_macro.html' as catmacro with context %}
 {% import 'authors_list_macro.html' as authmacro with context %}
-{% import 'software_list_macro.html' as swmacro with context %}
-{% import 'video_list_macro.html' as vidlist with context %}
-{% import 'organisation_list_macro.html' as orglist with context %}
+{% import 'related_list_macro.html' as relist with context %}
 
 
 {% block main %}
@@ -65,30 +62,7 @@
     {{video_embed}}
 </div>
 {% endif %}
-<div>&nbsp;</div>
-<h3>Links</h3>
-<p>
-    {% for url_title, url in urls %}<button type="button" class="btn btn-light" style="margin: 2px;"><a href="{{ url }}">{{ url_title }}</a></button>{% endfor %}
-</p>
 
-<h3>Categories</h3>
-<p>
-    {{ catmacro.category_buttons(category_objects) }}
-</p>
-
-{% if things['Software'] %}
-<h3>Related software</h3>
-{{ swmacro.software_card_list(things['Software']) }}
-{% endif %}
-
-{% if things['Organisation'] %}
-<h3>Related organisations</h3>
-{{ orglist.organisation_card_list(things['Organisation']) }}
-{% endif %}
-
-{% if things['Video'] %}
-<h3>Related videos</h3>
-{{ vidlist.flat_video_list(things['Video']) }}
-{% endif %}
+{{ relist.related_by_class(things, categories=category_objects, urls=urls, exclude=['Person']) }}
 
 {% endblock %}

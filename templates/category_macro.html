@@ -1,3 +1,0 @@
-{% macro category_buttons(category_objects) %}
-{% for cat in category_objects | sort(attribute='key') %}<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_{{ cat.key }}.html">{{ cat.name }}</a></button>{% endfor %}
-{% endmacro %}

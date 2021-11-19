@@ -49,6 +49,8 @@ class Person(Thing):
         if not hasattr(self, 'external_publications'):
             self.external_publications = False
         self.position_order = position_order_map[self.position.lower()]
+        # "logo" used for display
+        self.logo = f"photo_{self.key}.s.circ.png"
         # load external publications if desired
         if hasattr(self, 'orcid'):
             self.external_publications = get_orcid_publications(self.orcid)

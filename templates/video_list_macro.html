@@ -1,17 +1,20 @@
-{% macro short_video_list_item(vid) %}
-<li class="list-group-item">
-    <a href="video_{{vid.key}}.html">{{vid.name}}</a><br/>
-    {{ vid.short }}
+{% macro short_video_list_item(vid, show_date=True) %}
+<li class="list-group-item d-flex justify-content-between align-items-center">
+    <div>
+        <a href="video_{{vid.key}}.html">{{vid.name}}</a><br/>
+        {{ vid.short }}    
+    </div>
+    <span>{{ vid.type }}{% if show_date %}<span style="color: #aaaaaa;"> / {{ vid.last_updated.year }}</span>{% endif %}</span>
 </li>
 {% endmacro %}
 
 {% macro grouped_video_list(videos) %}
 <div>
     {% for group in videos | groupby('year') | reverse %}
-        <h5>{{group.grouper}}</h5>
+        <h5 class="pt-1">{{group.grouper}}</h5>
         <ul class="list-group">
         {% for vid in group.list | sort(attribute='last_updated', reverse=True) %}
-            {{ short_video_list_item(vid) }}
+            {{ short_video_list_item(vid, show_date=False) }}
         {% endfor %}
         </ul>
     {% endfor %}

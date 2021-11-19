@@ -1,41 +1,28 @@
 {% extends 'base.html' %}
-{% set collapse_conference_papers_default = "collapse" %}
-{% import 'publication_list_macro.html' as publist with context %}
-{% import 'software_list_macro.html' as swmacro with context %}
-{% import 'video_list_macro.html' as vidlist with context %}
-{% import 'organisation_list_macro.html' as orglist with context %}
-
+{% import 'related_list_macro.html' as relist with context %}
 
 {% block main %}
 
+{% if parents %}
+    <div>
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        {% for cat in parents %}<a href="{{cat.page}}">{{cat.name}}</a>{{ " | " if not loop.last else "" }}{% endfor %}
+    </div>
+{% endif %}
 <h2>Category: {{ name }}</h2>
+{% if subcats %}
+<div>
+    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+    {% for cat in subcats %}<a href="{{cat.page}}">{{cat.name}}</a>{{ " | " if not loop.last else "" }}{% endfor %}
+</div>
+{% endif %}
 
 {% if detail_link %}
-<p>
+<p class="pt-3">
 For more details on this category, click <a href="{{ detail_link }}">here</a>.
 </p>
 {% endif %}
 
-{% if things['Software'] | length %}
-<h3>Software</h3>
-{{ swmacro.software_card_list(things['Software']) }}
-<p>&nbsp;</p>
-{% endif %}
-
-{% if things['Paper'] | length %}
-<h3>Publications</h3>
-{{ publist.show_conference_papers() }}
-{{ publist.grouped_publications(things['Paper']) }}
-{% endif %}
-
-{% if things['Organisation'] %}
-<h3>Organisations</h3>
-{{ orglist.organisation_card_list(things['Organisation']) }}
-{% endif %}
-
-{% if things['Video'] | length %}
-<h3>Videos</h3>
-{{ vidlist.video_highlight(things['Video'], show='all') }}
-{% endif %}
+{{ relist.related_by_class(things) }}
 
 {% endblock %}

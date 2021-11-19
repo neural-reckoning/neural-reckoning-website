@@ -5,6 +5,7 @@ from templater import apply_template
 
 
 class Software(Thing):
+    page_prefix = "sw_"
     def validate(self):
         if not hasattr(self, 'urls'):
             self.urls = []

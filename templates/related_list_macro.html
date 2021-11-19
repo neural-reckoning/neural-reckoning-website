@@ -1,0 +1,56 @@
+{% import 'video_list_macro.html' as vidlist with context %}
+{% import 'publication_list_macro.html' as publist with context %}
+{% import 'authors_list_macro.html' as authmacro with context %}
+{% import 'publication_list_macro.html' as publist with context %}
+
+{% macro card_list(things) %}
+<div class="d-flex flex-row flex-nowrap" style="overflow-x: auto;">
+    {% for thing in things %}
+    <div class="card col-5 col-md-4 p-1 border-0">
+        <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('{{thing.logo}}'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
+        </div>
+        <div class="card-body p-1 border-0 text-center">
+            <h5 class="card-title"><a href="{{thing.page}}">{{thing.name}}</a></h5>
+            <p class="card-text">{{thing.short}}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endmacro %}
+
+{% macro related_by_class(things, categories=None, urls=None, classes=None, exclude=[], h=3, person_page=False) %}
+    {% if not classes %}
+        {% set classes=['Person', 'Organisation', 'Software', 'Video', 'Paper'] %}
+    {% endif %}
+    {% if urls %}
+        <h3 class="pt-3">Links</h3>
+        <p>
+            {% for url_title, url in urls %}<button type="button" class="btn btn-light" style="margin: 2px;"><a href="{{ url }}">{{ url_title }}</a></button>{% endfor %}
+        </p>
+    {% endif %}
+    {% for cls in classes %}
+        {% if cls not in things or cls in exclude or not things[cls] %}
+            {% continue %}
+        {% endif %}
+        {% set header = {'Software': 'Software', 'Person': 'People', 'Organisation': 'Organisations', 'Video': 'Videos', 'Paper': 'Publications'}[cls] %}
+        {% if not person_page %}
+        {% set header = "Related "+header.lower() %}
+        {% endif %}
+        <h{{h}} class="pt-3">{{ header }}</h{{h}}>
+        {% if cls=="Software" or cls=="Organisation" %}
+            {{ card_list(things[cls]) }}
+        {% elif cls=="Video" %}
+            {{ vidlist.video_highlight(things['Video'], show='all') }}
+        {% elif cls=="Person" %}
+            {{ authmacro.authors_list(things['Person']) }}
+        {% elif cls=="Paper" %}
+            {{ publist.grouped_publications(things['Paper']) }}
+        {% endif %}
+    {% endfor %}
+    {% if categories %}
+    <h{{h}} class="pt-3">Categories</h{{h}}>
+    <p>
+        {% for cat in category_objects | sort(attribute='key') %}<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_{{ cat.key }}.html">{{ cat.name }}</a></button>{% endfor %}
+    </p>
+    {% endif %}
+{% endmacro %}
