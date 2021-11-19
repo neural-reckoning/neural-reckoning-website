@@ -11,7 +11,7 @@
 
         <h2><a href="{{ url }}">{{ name }}</a></h2>
 
-        {% if logo %}
+        {% if logo!="default_org.png" %}
         <div class="row pb-3">
             <div class="col-sm-4 order-sm-12">
                 <img class="img-fluid" src="{{logo}}">
