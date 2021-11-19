@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% import 'publication_list_macro.html' as publist with context %}
+{% import 'related_list_macro.html' as relist with context %}
 
 {% block main %}
 
@@ -49,9 +49,6 @@ We are interested in both fundamental research into these problems, and
 applications in areas such as robotics and automatic speech recognition.
 </p>
 
-<h3>Publications in sensory neuroscience</h3>
-
-{{ publist.grouped_publications(categories['sensory'].things['Paper']) }}
-
+{{ relist.related_by_class(categories['sensory'].things) }}
 
 {% endblock %}

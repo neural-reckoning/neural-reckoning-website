@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% import 'publication_list_macro.html' as publist with context %}
+{% import 'related_list_macro.html' as relist with context %}
 
 {% block main %}
 
@@ -51,9 +51,6 @@
     of the sort of research we have done in this field in the past.
 </p>
 
-<h3>Publications in neuroinformatics</h3>
-
-{{ publist.grouped_publications(categories['neuroinformatics'].things['Paper']) }}
-
+{{ relist.related_by_class(categories['sensory'].things) }}
 
 {% endblock %}
