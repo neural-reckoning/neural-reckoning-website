@@ -2,12 +2,12 @@
 
 {% block main %}
 
-<h2>Lab members</h2>
+<h2 class="mb-3">Lab members</h2>
 
 {% for position in positions_in_order %}
     {% if not grouped_members[position] %}{% continue %}{% endif %}
     {% if position_headers[position] %}
-        <h3>{{position_headers[position]}}</h3>
+        <h3 class="mb-3 mt-3">{{position_headers[position]}}</h3>
     {% endif %}
     {% for member in grouped_members[position] | sort(attribute='author_names') | sort(attribute='dates', reverse=(position=='former')) %}
     <div class="row mb-3 align-items-center">
