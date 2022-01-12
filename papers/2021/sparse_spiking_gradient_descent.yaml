@@ -14,6 +14,10 @@ urls:
   - https://proceedings.neurips.cc/paper/2021/hash/61f2585b0ebcf1f532c4d1ec9a7d51aa-Abstract.html
 - - PDF
   - https://proceedings.neurips.cc/paper/2021/file/61f2585b0ebcf1f532c4d1ec9a7d51aa-Paper.pdf
+- - Preprint
+  - https://arxiv.org/abs/2105.08810
+- - Preprint (PDF)
+  - https://arxiv.org/pdf/2105.08810
 abstract: |-
   There is an increasing interest in emulating Spiking Neural Networks (SNNs) on neuromorphic
   computing devices due to their low energy consumption. Recent advances have allowed training
