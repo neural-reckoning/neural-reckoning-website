@@ -18,7 +18,7 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta name="twitter:widgets:csp" content="on">
     <meta name="twitter:dnt" content="on">
-    <title>Advances in network visualisation with an application to serious games</title>
+    <title>Sparse spiking gradient descent</title>
     <link rel="STYLESHEET" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -102,77 +102,53 @@
 <div class="main">
 
 
-<h2>Advances in network visualisation with an application to serious games</h2>
+<h2>Sparse spiking gradient descent</h2>
     <div class="d-none d-sm-block">
         <ul class="list-inline author-list">
     <li>
-        <a href="jonathan_zheng.html">
-        <div><img src="photo_jonathan_zheng.s.circ.png"/></div>
-        <div>Jonathan Zheng</div>
+        <a href="nicolas_perez.html">
+        <div><img src="photo_nicolas_perez.s.circ.png"/></div>
+        <div>Nicolas Perez</div>
+        </a>
+    </li>
+    <li>
+        <a href="dan_goodman.html">
+        <div><img src="photo_dan_goodman.s.circ.png"/></div>
+        <div>Dan Goodman</div>
         </a>
     </li>
 </ul>
 
     </div>
     <div class="d-block d-sm-none">
-        <a href="jonathan_zheng.html">Zheng JX</a>
+        <a href="nicolas_perez.html">Perez-Nieves N</a>, <a href="dan_goodman.html">Goodman DFM</a>
     </div>
 <div>
+    <i>Advances in Neural Information Processing Systems</i>
     <i></i>
-<i>PhD thesis, </i>    <i>Imperial College London</i>
     <i></i>
-    (2021) <font color="#aaaaaa"></font>
+    (2021) <font color="#aaaaaa">34</font>
 </div>
 <div>&nbsp;</div>
 <h3>Abstract</h3>
-<div>This thesis concerns the visualisation of networks, through an in-depth study into
-the node-link diagram representation. Three subtopics are explored within this
-space. The first is the problem of node layout, where the optimisation of a popular
-energy function, known as stress, is improved through an algorithm known
-as stochastic gradient descent. The second is the method of edge bundling, where
-the idea of hierarchical edge bundling is explored in the absence of a known ground
-truth hierarchy. Its similarity to a topologically lossless bundling method known
-as power-confluent drawing is then leveraged, in order to improve technical problems
-with the underlying algorithms. The final topic is an engineering application
-in the form of a serious game called EcoBuilder, which utilises the node-link diagram
-to visualise the dynamical behaviour of food webs. Its purpose is to crowdsource
-research through a citizen science approach, with outcomes in both visualisation
-and mathematical ecology.</div>
+<div>There is an increasing interest in emulating Spiking Neural Networks (SNNs) on neuromorphic
+computing devices due to their low energy consumption. Recent advances have allowed training
+SNNs to a point where they start to compete with traditional Artificial Neural Networks (ANNs)
+in terms of accuracy, while at the same time being energy efficient when run on neuromorphic
+hardware. However, the process of training SNNs is still based on dense tensor operations
+originally developed for ANNs which do not leverage the spatiotemporally sparse nature of SNNs.
+We present here the first sparse SNN backpropagation algorithm which achieves the same or better
+accuracy as current state of the art methods while being significantly faster and more memory
+efficient. We show the effectiveness of our method on real datasets of varying complexity
+(Fashion-MNIST, Neuromophic-MNIST and Spiking Heidelberg Digits) achieving a speedup in the
+backward pass of up to 150x, and 85% more memory efficient, without losing accuracy.</div>
 
         <h3 class="pt-3">Links</h3>
         <p>
-<button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://imperialcollegelondon.box.com/s/n2osvtt8exnturc5mzemzuou27vrb5i9"><i class="fa fa-file-pdf-o"></i> Thesis (PDF)</a></button>        </p>
-        <h3 class="pt-3">Related software</h3>
-            <div class="d-flex flex-row flex-nowrap" style="overflow-x: auto;">
-    <div class="card col-5 col-md-4 p-1 border-0">
-        <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('power-confluent.png'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
-        </div>
-        <div class="card-body p-1 border-0 text-center">
-            <h5 class="card-title"><a href="sw_pconfluent.html"><tt>pconfluent</tt>: power confluent drawings</a></h5>
-            <p class="card-text">Package for power confluent graph drawings.</p>
-        </div>
-    </div>
-    <div class="card col-5 col-md-4 p-1 border-0">
-        <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('ecobuilder.jpg'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
-        </div>
-        <div class="card-body p-1 border-0 text-center">
-            <h5 class="card-title"><a href="sw_ecobuilder.html">EcoBuilder</a></h5>
-            <p class="card-text">Educational game about building ecosystems.</p>
-        </div>
-    </div>
-    <div class="card col-5 col-md-4 p-1 border-0">
-        <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('https://media.giphy.com/media/JoaboGdTq1sXNnnIND/giphy.gif'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
-        </div>
-        <div class="card-body p-1 border-0 text-center">
-            <h5 class="card-title"><a href="sw_sgd2.html">s(gd)<sup>2</sup></a></h5>
-            <p class="card-text">Graph layout using stochastic gradient descent.</p>
-        </div>
-    </div>
-</div>
-
+<button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://proceedings.neurips.cc/paper/2021/hash/61f2585b0ebcf1f532c4d1ec9a7d51aa-Abstract.html">Journal</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://proceedings.neurips.cc/paper/2021/file/61f2585b0ebcf1f532c4d1ec9a7d51aa-Paper.pdf"><i class="fa fa-file-pdf-o"></i> PDF</a></button>        </p>
     <h3 class="pt-3">Categories</h3>
     <p>
-<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_ecology.html">Ecology</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_machinelearning.html">Machine learning</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_software.html">Software</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_visualisation.html">Visualisation</a></button>    </p>
+<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_learning.html">Learning</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_machinelearning.html">Machine learning</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuralsimulation.html">Neural simulation</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuroinformatics.html">Neuroinformatics</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuroscience.html">Neuroscience</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_software.html">Software</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_spiking.html">Spiking</a></button>    </p>
 
 
 
