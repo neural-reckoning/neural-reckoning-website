@@ -18,7 +18,7 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta name="twitter:widgets:csp" content="on">
     <meta name="twitter:dnt" content="on">
-    <title>Understanding the role of neural heterogeneity in learning</title>
+    <title>Assessing HRTF preprocessing methods for Ambisonics rendering through perceptual models</title>
     <link rel="STYLESHEET" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -101,22 +101,16 @@
 
 <div class="main">
 
-<div class="row">
-    <div class="col">
 
-        <h2><a href="https://youtu.be/aLNGcs_zYsY">Understanding the role of neural heterogeneity in learning</a></h2>
-
-        <p>
-            Talk on neural heterogeneity by <a href="nicolas_perez.html">Nicolas Perez</a> given at the <a href="http://snufa.net/2021/">SNUFA-2021</a> workshop.
-
-        </p>
-
-        <div class="embed-responsive embed-responsive-16by9 pt-3 pb-3">
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/aLNGcs_zYsY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-                <h3 class="pt-3">Related people</h3>
-            <ul class="list-inline author-list">
+<h2>Assessing HRTF preprocessing methods for Ambisonics rendering through perceptual models</h2>
+    <div class="d-none d-sm-block">
+        <ul class="list-inline author-list">
+    <li>
+        <a href="isaac_engel.html">
+        <div><img src="photo_isaac_engel.s.circ.png"/></div>
+        <div>Isaac Engel</div>
+        </a>
+    </li>
     <li>
         <a href="dan_goodman.html">
         <div><img src="photo_dan_goodman.s.circ.png"/></div>
@@ -124,74 +118,51 @@
         </a>
     </li>
     <li>
-        <a href="nicolas_perez.html">
-        <div><img src="photo_nicolas_perez.s.circ.png"/></div>
-        <div>Nicolas Perez</div>
-        </a>
+        <div><img src="photo_placeholder.s.circ.png"/></div>
+        <div>Picinali L</div>
     </li>
 </ul>
 
-        <h3 class="pt-3">Related organisations</h3>
-            <div class="d-flex flex-row flex-nowrap" style="overflow-x: auto;">
-    <div class="card col-5 col-md-4 p-1 border-0">
-        <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('default_org.png'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
-        </div>
-        <div class="card-body p-1 border-0 text-center">
-            <h5 class="card-title"><a href="org_snufa.html">SNUFA</a></h5>
-            <p class="card-text">Organisation for neuroscientists interested in spiking neural networks.</p>
-        </div>
     </div>
+    <div class="d-block d-sm-none">
+        <a href="isaac_engel.html">Engel I</a>, <a href="dan_goodman.html">Goodman DFM</a>, Picinali L
+    </div>
+<div>
+    <i>Acta Acustica</i>
+    <i></i>
+    <i></i>
+    (2022) <font color="#aaaaaa"></font>
 </div>
+<div>
+    <a href="http://dx.doi.org/10.1051/aacus/2021055" style="color: #aaaaaa">doi: 10.1051/aacus/2021055</a>
+</div>
+<div>&nbsp;</div>
+<h3>Abstract</h3>
+<div>Binaural rendering of Ambisonics signals is a common way to reproduce spatial audio content.
+Processing Ambisonics signals at low spatial orders is desirable in order to reduce complexity,
+although it may degrade the perceived quality, in part due to the mismatch that occurs when a
+low-order Ambisonics signal is paired with a spatially dense head-related transfer function (HRTF).
+In order to alleviate this issue, the HRTF may be preprocessed so its spatial order is reduced.
+Several preprocessing methods have been proposed, but they have not been thoroughly compared yet.
+In this study, nine HRTF preprocessing methods were used to render anechoic binaural signals from
+Ambisonics representations of orders 1 to 44, and these were compared through perceptual hearing
+models in terms of localisation performance, externalisation and speech reception. This assessment
+was supported by numerical analyses of HRTF interpolation errors, interaural differences,
+perceptually-relevant spectral differences, and loudness stability. Models predicted that the
+binaural renderings’ accuracy increased with spatial order, as expected. A notable effect of the
+preprocessing method was observed: whereas all methods performed similarly at the highest spatial
+orders, some were considerably better at lower orders. A newly proposed method, BiMagLS, displayed
+the best performance overall and is recommended for the rendering of bilateral Ambisonics signals.
+The results, which were in line with previous literature, indirectly validate the perceptual models’
+ability to predict listeners’ responses in a consistent and explicable manner.</div>
 
-        <h3 class="pt-3">Related publications</h3>
-                <div class="publication_list">
-        <h5>2021</h5>
-        <ul>
-                <li>
-        <div class="publication_list_text">
-            <a href="nicolas_perez.html">Perez-Nieves N</a>, Leung VCH, Dragotti PL, <a href="dan_goodman.html">Goodman DFM</a>
-                    (2021)
-                <br/>
-            <a href="pub_heterogeneity.html">
-                <b>Neural heterogeneity promotes robust learning.</b><br/>
-            </a>
-            <i>
-                Nature Communications
-                
-                
-            </i>
-        </div>
-            <div class="publication_list_icons">
-                
-                        <a href="https://www.youtube.com/watch?v=V2HFqVfeTPg&feature=youtu.be" target="_blank">
-                            <i class="fa fa-video-camera"></i>
-                        </a>
-                        
-                        <a href="https://twitter.com/neuralreckoning/status/1341011316975218695" target="_blank">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                        
-                        <a href="https://www.nature.com/articles/s41467-021-26022-3.pdf" target="_blank">
-                            <i class="fa fa-file-pdf-o"></i>
-                        </a>
-                        
-                        <a href="https://www.nature.com/articles/s41467-021-26022-3" target="_blank">
-                            <i class="fa fa-newspaper-o"></i>
-                        </a>
-                        
-            </div>
-    </li>
-
-        </ul>
-    </div>
-
+        <h3 class="pt-3">Links</h3>
+        <p>
+<button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://acta-acustica.edpsciences.org/articles/aacus/abs/2022/01/aacus210029/aacus210029.html">Journal</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://acta-acustica.edpsciences.org/articles/aacus/pdf/2022/01/aacus210029.pdf"><i class="fa fa-file-pdf-o"></i> Journal (PDF)</a></button>        </p>
     <h3 class="pt-3">Categories</h3>
     <p>
-<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_learning.html">Learning</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_machinelearning.html">Machine learning</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuroscience.html">Neuroscience</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_sensory.html">Sensory</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_spiking.html">Spiking</a></button>    </p>
+<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_auditory.html">Auditory</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_sensory.html">Sensory</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_virtualreality.html">Virtual reality</a></button>    </p>
 
-        
-    </div>
-</div>
 
 
     <p>&nbsp;</p>
