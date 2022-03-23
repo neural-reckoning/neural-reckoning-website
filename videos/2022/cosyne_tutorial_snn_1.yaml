@@ -1,0 +1,19 @@
+name: Cosyne tutorial on spiking neural networks (1/2)
+type: Talk
+url: https://youtu.be/GTXTQ_sOxak
+embed: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/GTXTQ_sOxak" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+short: Part 1 - "Classical" SNNs
+long: >
+  First part of a two-part tutorial series on spiking neural networks given
+  at <a href="https://www.cosyne.org/">Cosyne</a> 2022.
+  <a href="https://neural-reckoning.github.io/cosyne-tutorial-2022/">Full
+  course materials available</a>. Covers "Classical" spiking neural networks.
+related:
+  - dan_goodman
+  - brian
+  - snufa
+categories:
+  - Spiking
+  - Learning
+  - Machine learning
+last_updated: 23-03-2022
