@@ -46,29 +46,29 @@
         </p>
 
         <div class="row"><div class="col bg-light mt-3 mb-3 pt-2">
-            <h2>Recent publications</h2>
+            <h2 class="pb-3">Recent publications</h2>
             {{ publist.recent_publications(5) }}
         </div></div>
 
         <div class="row"><div class="col bg-light mt-3 mb-3 pt-2">
-            <h2>Selected publications</h2>
+            <h2 class="pb-3">Selected publications</h2>
             {{ publist.selected_publications() }}
         </div></div>
 
         <div class="row"><div class="col mt-3 mb-3 pt-2">
-            <h2>Selected software packages</h2>
+            <h2 class="pb-1 mb-3">Selected software packages</h2>
             {{ relist.card_list(software | selectattr('selected')) }}
         </div></div>
 
         <div class="row"><div class="col mt-3 mb-3 pt-2">
-            <h2>Organisations</h2>
+            <h2 class="pb-1 mb-3">Organisations</h2>
             {{ relist.card_list(organisations) }}
         </div></div>
 
         <div class="row"><div class="col mt-3 mb-3 pt-2">
-            <h2>Latest video</h2>
-            {{ vidlist.video_highlight(videos) }}
+            <h2 class="pb-1 mb-3">Latest video</h2>
             <p>See <a href="videos.html">more videos here</a>.</p>
+            {{ vidlist.video_highlight(videos) }}
         </div></div>
 
     </div>

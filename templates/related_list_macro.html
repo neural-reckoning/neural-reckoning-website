@@ -10,7 +10,7 @@
         <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('{{thing.logo}}'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
         </div>
         <div class="card-body p-1 border-0 text-center">
-            <h5 class="card-title"><a href="{{thing.page}}">{{thing.name}}</a></h5>
+            <p class="card-title"><a href="{{thing.page}}">{{thing.name}}</a></p>
             <p class="card-text">{{thing.short}}</p>
         </div>
     </div>
@@ -36,7 +36,7 @@
         {% if not person_page %}
         {% set header = "Related "+header.lower() %}
         {% endif %}
-        <h{{h}} class="pt-3">{{ header }}</h{{h}}>
+        <h{{h}} class="pt-5 pb-3">{{ header }}</h{{h}}>
         {% if cls=="Software" or cls=="Organisation" %}
             {{ card_list(things[cls]) }}
         {% elif cls=="Video" %}

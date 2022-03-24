@@ -42,7 +42,7 @@
         {% if links %}
             {% for text, url in links %}
             <li class="list-group-item">
-                <a href="{{ url }}">{{ text }}</a>
+                <a href="{{ url }}">{% if 'twitter.com' in url %}<i class="fa fa-twitter"></i> {% endif %}{{ text }}</a>
             </li>
             {% endfor %}
         {% endif %}
@@ -74,7 +74,7 @@
         {{ relist.related_by_class(things, exclude=['Paper'], person_page=True) }}
 
         {% if show_publications and things['Paper'] %}
-        <h2 class="pt-3 pb-3">Publications</h2>
+        <h2 class="pt-5 pb-3">Publications</h2>
 
         {% if key!="dan_goodman" %}
             <p>Note that only publications as part of the Neural Reckoning group are included here{% if external_publications %} (see <a href="#external_publications">external publications below</a> for full list){% endif %}.</p>
@@ -87,7 +87,7 @@
         {% endif %}
 
         {% if external_publications %}
-        <h2 class="pt-3 pb-3" id="external_publications">External publications</h2>
+        <h2 class="pt-5 pb-3" id="external_publications">External publications</h2>
         <p>
             This is a short preview of the publications from other sources (<a href="https://orcid.org/">ORCID</a>,
             <a href="https://www.semanticscholar.org/">Semantic Scholar</a>).
