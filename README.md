@@ -8,7 +8,7 @@ Create an environment with
 
     conda create --name nrweb python=3 jinja2 pillow wordcloud
     conda activate nrweb
-    pip install tweepy diskcache semanticscholar
+    pip install tweepy diskcache semanticscholar pyyaml
 
 Create a file ``twitter_secrets.py`` with ``api_key = '...'`` and ``api_secret_key = '...'``. Do not commit this file!
 
