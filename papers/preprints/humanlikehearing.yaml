@@ -1,5 +1,5 @@
 year: Preprints
-last_updated: 1-5-2021
+last_updated: 21-04-2022
 authors: Weerts L, Rosen S, Clopath C, Goodman DFM
 title: The Psychometrics of Automatic Speech Recognition
 categories:
@@ -11,27 +11,14 @@ categories:
 - Neuroinformatics
 urls:
 - - Preprint
-  - https://www.biorxiv.org/content/10.1101/2021.04.19.440438v2
+  - https://www.biorxiv.org/content/10.1101/2021.04.19.440438v3
 - - Preprint (PDF)
-  - https://www.biorxiv.org/content/10.1101/2021.04.19.440438v2.full.pdf
+  - https://www.biorxiv.org/content/10.1101/2021.04.19.440438v3.full.pdf
 - - Code
   - https://github.com/neural-reckoning/HumanlikeHearing
 - - Twitter
   - https://twitter.com/neuralreckoning/status/1395704493753479168
-abstract: Automatic speech recognition (ASR) software has been suggested as a candidate
-  model of the human auditory system thanks to dramatic improvements in performance
-  in recent years. To test this hypothesis, we compared several state-of-the-art ASR
-  systems to results from humans on a barrage of standard psychoacoustic experiments.
-  While some systems showed qualitative agreement with humans in some tests, in others
-  all tested systems diverged markedly from humans. In particular, none of the models
-  used spectral invariance, temporal fine structure or speech periodicity in a similar
-  way to humans. We conclude that none of the tested ASR systems are yet ready to
-  act as a strong proxy for human speech recognition. However, we note that the more
-  recent systems with better performance also tend to better match human results,
-  suggesting that continued cross-fertilisation of ideas between human and automatic
-  speech recognition may be fruitful. Our software is released as an open-source toolbox
-  to allow researchers to assess future ASR systems or add additional psychoacoustic
-  measures.
+abstract: Deep neural networks have had considerable success in neuroscience as models of the visual system, and recent work has suggested this may also extend to the auditory system. We tested the behaviour of a range of state of the art deep learning-based automatic speech recognition systems on a wide collection of manipulated sounds used in standard human psychometric experiments. While some systems showed qualitative agreement with humans in certain tests, in others all tested systems diverged markedly from humans. In particular, all systems used spectral invariance, temporal fine structure and speech periodicity differently from humans. We conclude that despite some promising results, none of the tested automatic speech recognition systems can yet act as a strong proxy for human speech recognition. However, we note that the more recent systems with better performance also tend to better match human results, suggesting that continued cross-fertilisation of ideas between human and automatic speech recognition may be fruitful. Our open source toolbox allows researchers to assess future automatic speech recognition systems or add additional psychoacoustic measures.
 last_tweet_in_thread: '1395704552519839746'
 software:
   - humanlike_hearing
