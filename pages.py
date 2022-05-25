@@ -26,6 +26,6 @@ def write_pages(nav, people, papers, software, categories, videos, organisations
 
     # Generate index pages
     for filename, title in list(pages.items())+list(unindexed_pages.items()):
-        extra_keys[title] = title
-        extra_keys[filename] = filename
+        extra_keys['title'] = title
+        extra_keys['filename'] = filename
         apply_template(filename, filename, keys=extra_keys)

@@ -11,6 +11,7 @@ unindexed_pages:
     'videos.html': 'Videos'
     'organisations.html': 'Organisations'
     'comp-neuro-resources.html': 'Computational neuroscience resources'
+    'reviewing.html': 'Ending support for legacy academic publishing'
     'neuroinformatics.html': 'Neuroinformatics'
     'sensory.html': 'Sensory neuroscience'
     'mathematics.html': 'Mathematics'
