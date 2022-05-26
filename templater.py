@@ -2,6 +2,8 @@ import codecs, os, re
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from twitter import generate_single_twitter_thread
+
 additional_urls = []
 
 def scan_html_for_links(page, name):
@@ -15,7 +17,7 @@ env = Environment(loader=FileSystemLoader(['templates', 'temp']),
                   lstrip_blocks=True,
                   extensions=['jinja2.ext.loopcontrols'],
                   )
-env.globals.update(dict(os=os, hasattr=hasattr, isinstance=isinstance, str=str, int=int))
+env.globals.update(dict(os=os, hasattr=hasattr, isinstance=isinstance, str=str, int=int, generate_single_twitter_thread=generate_single_twitter_thread))
 
 
 def apply_template(name, filename, keys=None, keys_from=None):
