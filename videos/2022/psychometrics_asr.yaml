@@ -1,0 +1,22 @@
+name: The Psychometrics of Automatic Speech Recognition
+type: Talk
+url: https://www.youtube.com/watch?v=TnTphoFWsrE
+embed: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TnTphoFWsrE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+short: Talk on applying psychometric testing to automatic speech recognition systems.
+long: >
+  Talk on applying psychometric testing to automatic speech recognition systems.
+  Given by <a href="dan_goodman.html">Dan Goodman</a>, lead author
+  <a href="lotte_weerts.html">Lotte Weerts</a>. Talk given at a workshop on
+  acoustics and metamaterials.
+related:
+  - humanlikehearing
+  - humanlike_hearing
+  - dan_goodman
+  - lotte_weerts
+categories:
+  - Auditory
+  - Machine learning
+  - Neuroscience
+  - Modelling
+  - Software
+last_updated: 27-07-2022
