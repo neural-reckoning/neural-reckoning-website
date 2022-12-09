@@ -13,9 +13,19 @@ class ORCIDPublication:
 orcid_cache = Cache('temp/orcid_cache')
 
 
+# adapted from https://chrisholdgraf.com/blog/2022/orcid-auto-update/
+def get_metadata_from_doi(doi):
+    url = "https://dx.doi.org/" + str(doi)
+    header = {'accept': 'application/citeproc+json'}
+    r = requests.get(url, headers=header)
+    if r.status_code!=200:
+        return {}
+    return json.loads(r.text)
+
+
 def get_orcid_publications(user_id):
-    if user_id in orcid_cache:
-        return orcid_cache[user_id]
+    # if user_id in orcid_cache:
+    #     return orcid_cache[user_id]
     resp = requests.get(f"https://pub.orcid.org/v2.0/{user_id}/works",
                         headers={'Accept':'application/orcid+json'})
     results = resp.json()
@@ -46,6 +56,25 @@ def get_orcid_publications(user_id):
             if len(authors)>6:
                 authors = [authors[0], 'et al.']
             pub.authors = ', '.join(authors)
+        # get metadata from the DOI and use that in preference if available
+        if doi is not None:
+            md = get_metadata_from_doi(doi)
+            if 'title' in md:
+                pub.title = title
+            if 'container-title' in md:
+                pub.journal = md['container-title']
+            if 'issued' in md:
+                pub.date = md["issued"]["date-parts"][0][0]
+            if 'author' in md and len(md['author']):
+                authors = []
+                for auth in md['author']:
+                    if 'ORCID' in auth:
+                        authors.append(f'''<a href="{auth['ORCID']}">{auth['given']} {auth['family']}</a>''')
+                    else:
+                        authors.append(f'''{auth['given']} {auth['family']}''')
+                if len(authors)>6:
+                    authors = [authors[0], 'et al.']
+                pub.authors = ', '.join(authors)
         # Try to minimize duplicate entries that are found
         dup = False
         if title.lower() in titles:
