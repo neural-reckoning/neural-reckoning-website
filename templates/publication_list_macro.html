@@ -10,6 +10,9 @@
                 <b>{{publication.title}}.</b><br/>
             </a>
             <i>
+                {% if publication.year=='Preprints' %}
+                    Preprint
+                {% endif %}
                 {{publication.journal}}
                 {% if publication.phd_thesis %}PhD thesis, {% endif %}
                 {{publication.publisher}}
@@ -31,7 +34,7 @@
         {% set not_collapse_conference_papers_default='collapse' %}
     {% endif %}
     <div class="publication_list">
-    {% for group in publications | groupby('year') | reverse %}
+    {% for group in publications | groupby('publication_list_year') | reverse %}
         <h5>{{group.grouper}}</h5>
         <ul>
         {% for publication in group.list | sort(attribute='key') | sort(attribute='sort_date', reverse=True) %}

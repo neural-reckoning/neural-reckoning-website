@@ -64,6 +64,15 @@ class Paper(Thing):
             return datetime.datetime(int(self.year), 1, 1)
         return datetime.datetime.now()
 
+    @property
+    def publication_list_year(self):
+        if hasattr(self, 'year') and self.year!='Preprints':
+            return int(self.year)
+        elif hasattr(self, 'last_updated'):
+            return int(self.last_updated.year)
+        else:
+            raise ValueError("Cannot assign a publication list year to "+self.name)
+
 
 def get_papers():
     papers = {}

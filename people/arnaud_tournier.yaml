@@ -2,17 +2,18 @@ name: Arnaud Tournier
 author_names:
 - Tournier A
 email: 'YXJuYXVkLnRvdXJuaWVyMTdAaW1wZXJpYWwuYWMudWs=' # generate this by import base64; base64.b64encode(b'address')
-room: 1008
 dates:
+- 2022
 - 2022
 long: >
   <p>
-    Arnaud Tournier is a postdoc working on meta-learning, synthetic head-related transfer functions and spatial
+    Arnaud Tournier was a postdoc working on meta-learning, synthetic head-related transfer functions and spatial
     audio more generally. He is part of the <a href="org_sonicom.html">SONICOM</a> project led by
     <a href="http://www.imperial.ac.uk/people/l.picinali">Lorenzo Picinali</a>.
   </p>
 orcid: 0000-0003-3822-5742
-position: postdoc
+former_position: Postdoc
+position: former
 short: Meta-learning and spatial audio
 links:
   - ['Website', 'https://ajtournier.github.io/']

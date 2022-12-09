@@ -1,0 +1,18 @@
+name: How to build a better science
+type: Talk
+url: https://youtu.be/UYtcvzjmM_8?t=5189
+embed: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/UYtcvzjmM_8?start=5189" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+short: MRI Together talk on reform of academic institutions and publications
+long: >
+  Talk given as part of a discussion panel on institutional reform at
+  <a href="https://mritogether.esmrmb.org/">MRI Together 2022</a>.
+  I discussed institutional problems in science and how they are
+  exacerbated by the for-profit academic publishers. I gave concrete
+  recommendations for what we could do to make things better, and
+  discussed <a href="https://nmop.io">Neuromatch Open Publishing</a>.
+related:
+  - dan_goodman
+  - neuromatch
+categories:
+  - Metascience
+last_updated: 07-12-2022
