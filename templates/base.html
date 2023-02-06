@@ -83,7 +83,7 @@
             </li>
             {% for icon_link in external_icon_links %}
             <li class="nav item">
-                <a class="nav-link" href="{{ icon_link.url }}"><i class="{{ icon_link.fa }}"></i><span class="d-inline d-xl-none"> {{ icon_link.name }}</span></a>
+                <a class="nav-link" href="{{ icon_link.url }}" rel="me"><i class="{{ icon_link.fa }}"></i><span class="d-inline d-xl-none"> {{ icon_link.name }}</span></a>
             </li>
             {% endfor %}
         </ul>
