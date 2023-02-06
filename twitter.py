@@ -12,11 +12,12 @@ def get_twitter_api():
         auth = tweepy.AppAuthHandler(api_key, api_secret_key)
         twitter_api = tweepy.API(auth)
 
+
 def generate_twitter_threads(papers):
     # generate twitter threads for papers that have them
     with shelve.open('twitter_threads_cache') as twitter_threads:
         for publication in papers.values():
-            if hasattr(publication, 'last_tweet_in_thread'):
+            if hasattr(publication, 'last_tweet_in_thread') and not hasattr(publication, 'twitter_thread'):
                 publication.twitter_thread = generate_single_twitter_thread(publication.last_tweet_in_thread, twitter_threads)
 
 

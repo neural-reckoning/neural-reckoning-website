@@ -21,7 +21,7 @@
     <meta name="twitter:dnt" content="on">
     <title>{% block title %}{{title}}{% endblock %}</title>
     <link rel="STYLESHEET" href="style.css" type="text/css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
 
@@ -83,7 +83,7 @@
             </li>
             {% for icon_link in external_icon_links %}
             <li class="nav item">
-                <a class="nav-link" href="{{ icon_link.url }}"><i class="fa {{ icon_link.fa }}"></i><span class="d-inline d-xl-none"> {{ icon_link.name }}</span></a>
+                <a class="nav-link" href="{{ icon_link.url }}"><i class="{{ icon_link.fa }}"></i><span class="d-inline d-xl-none"> {{ icon_link.name }}</span></a>
             </li>
             {% endfor %}
         </ul>

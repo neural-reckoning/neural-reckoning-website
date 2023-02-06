@@ -20,35 +20,35 @@ class Paper(Thing):
         icons = {}
         for (name, url) in self.urls:
             if re.search(r'\bvideo\b', name, flags=re.IGNORECASE):
-                name = '<i class="fa fa-video-camera"></i> '+name
+                name = '<i class="fa-solid fa-video"></i> '+name
                 if 'video' not in icons: # only use the first video link
                     icons['video'] = f'''
                         <a href="{url}" target="_blank">
-                            <i class="fa fa-video-camera"></i>
+                            <i class="fa-solid fa-video"></i>
                         </a>
                         '''
             if re.search(r'\bpdf\b', name, flags=re.IGNORECASE):
-                name = '<i class="fa fa-file-pdf-o"></i> '+name
+                name = '<i class="fa-regular fa-file-pdf"></i> '+name
                 if 'pdf' not in icons or 'preprint' in name.lower(): # use first pdf link or preprint version
                     icons['pdf'] = f'''
                         <a href="{url}" target="_blank">
-                            <i class="fa fa-file-pdf-o"></i>
+                            <i class="fa-regular fa-file-pdf"></i>
                         </a>
                         '''
             if re.search(r'\b(twitter|tweeprint)\b', name, flags=re.IGNORECASE):
-                name = '<i class="fa fa-twitter"></i> '+name
+                name = '<i class="fa-brands fa-twitter"></i> '+name
                 if 'twitter' not in icons: # use first twitter link
                     icons['twitter'] = f'''
                         <a href="{url}" target="_blank">
-                            <i class="fa fa-twitter"></i>
+                            <i class="fa-brands fa-twitter"></i>
                         </a>
                         '''
             if re.search(r'\bhtml\b', name, flags=re.IGNORECASE):
-                name = '<i class="fa fa-newspaper-o"></i> '+name
+                name = '<i class="fa-regular fa-file-lines"></i> '+name
                 if 'html' not in icons: # use first html link
                     icons['html'] = f'''
                         <a href="{url}" target="_blank">
-                            <i class="fa fa-newspaper-o"></i>
+                            <i class="fa-regular fa-file-lines"></i>
                         </a>
                         '''
             new_urls.append((name, url))

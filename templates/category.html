@@ -5,14 +5,14 @@
 
 {% if parents %}
     <div>
-        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
         {% for cat in parents %}<a href="{{cat.page}}">{{cat.name}}</a>{{ " | " if not loop.last else "" }}{% endfor %}
     </div>
 {% endif %}
 <h2>Category: {{ name }}</h2>
 {% if subcats %}
 <div>
-    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+    <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
     {% for cat in subcats %}<a href="{{cat.page}}">{{cat.name}}</a>{{ " | " if not loop.last else "" }}{% endfor %}
 </div>
 {% endif %}

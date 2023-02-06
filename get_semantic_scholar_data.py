@@ -1,9 +1,10 @@
 from diskcache import Cache
-import semanticscholar as sch
+import semanticscholar
 import re
 
 cache = Cache('temp/semantic_scholar_cache')
 
+sch = semanticscholar.SemanticScholar(timeout=2)
 
 class SemanticScholarPublication:
     def __init__(self, **kwds):
@@ -15,19 +16,19 @@ def get_semantic_scholar_publications(user_id):
     if user_id in cache:
         return cache[user_id]
 
-    author = sch.author(user_id, timeout=2)
+    author = sch.get_author(user_id)
 
     publications = []
     for paper in author['papers']:
-        paper = sch.paper(paper['paperId'], timeout=2)
+        paper = sch.get_paper(paper['paperId'])
         pub = SemanticScholarPublication(
             title=paper['title'], date=paper['year']
             )
-        if 'url' in paper:
+        if paper.url is not None:
             pub.url = paper['url']
-        if 'venue' in paper:
+        if paper.venue is not None:
             pub.journal = paper['venue']
-        if 'authors' in paper:
+        if paper.authors is not None:
             authors = []
             for author in paper['authors']:
                 authurl = author['url']
