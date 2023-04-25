@@ -2,15 +2,18 @@ name: Nicolas Perez
 author_names:
 - Perez N
 - Perez-Nieves N
-position: phd
+position: former
+former_position: PhD
 email: bmljb2xhcy5wZXJlejE0QGltcGVyaWFsLmFjLnVr
 short: Multiresolution processing with heterogeneous spiking neural networks
 long: |-
   <p>
-  Nicolas Perez is a PhD student working on understanding how
+  Nicolas Perez was a PhD student working on understanding how
   spiking neural networks can use heterogeneous neuron properties
-  to carry out multiresolution processing of sensory data.
+  to carry out multiresolution processing of sensory data. After his
+  PhD he moved to <a href="https://www.deepmind.com/">DeepMind</a>.
   </p>
 dates:
 - 2018
+- 2023
 semantic_scholar: 1999879303
