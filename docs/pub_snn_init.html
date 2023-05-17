@@ -18,7 +18,7 @@
     <meta http-equiv="pragma" content="no-cache" />
     <meta name="twitter:widgets:csp" content="on">
     <meta name="twitter:dnt" content="on">
-    <title>The role of canonical neural computations in sound localization</title>
+    <title>Spiking Network Initialisation and Firing Rate Collapse</title>
     <link rel="STYLESHEET" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
@@ -104,78 +104,53 @@
 <div class="main">
 
 
-<h2>The role of canonical neural computations in sound localization</h2>
+<h2>Spiking Network Initialisation and Firing Rate Collapse</h2>
     <div class="d-none d-sm-block">
         <ul class="list-inline author-list">
     <li>
-        <a href="jean_hugues_lestang.html">
-        <div><img src="photo_jean_hugues_lestang.s.circ.png"/></div>
-        <div>Jean-Hugues Lestang</div>
+        <a href="nicolas_perez.html">
+        <div><img src="photo_nicolas_perez.s.circ.png"/></div>
+        <div>Nicolas Perez</div>
+        </a>
+    </li>
+    <li>
+        <a href="dan_goodman.html">
+        <div><img src="photo_dan_goodman.s.circ.png"/></div>
+        <div>Dan Goodman</div>
         </a>
     </li>
 </ul>
 
     </div>
     <div class="d-block d-sm-none">
-        <a href="jean_hugues_lestang.html">Lestang J-H</a>
+        <a href="nicolas_perez.html">Perez N</a>, <a href="dan_goodman.html">Goodman DFM</a>
     </div>
-<div>
-    <i></i>
-<i>PhD thesis, </i>    <i>Imperial College London</i>
-    <i></i>
-    (2019) <font color="#aaaaaa"></font>
-</div>
+<div><i>Preprint</i></div>
 <div>&nbsp;</div>
 <h3>Abstract</h3>
-<div>Localizing sounds is an important ability for many species. However, reverberative sounds
-present a signicant challenge to the auditory system as later arriving reverberations may carry
-confounding localization cues. The 'precedence eect' refers to a set of perceptual behaviours
-related to this situation. Studies investigating the precedence eect observed that the auditory
-system tends to focus the core of the localization process on the computation of localization
-cues carried by the rst arriving sound. Doing so relieves the auditory system from dealing
-with contradictory localization cues in later arriving sounds. A recent study by Dietz et al.
-(2013) conrmed that human listeners use this approach to deal with dynamic localization
-cues. In order to provide an explanation for this nding, we rst tested several auditory models
-on the specic task described in Dietz et al. (2013) in order to shortlist possible mechanisms
-capable of accounting for the early extraction of temporal binaural cues. We found that the
-best candidates to account for this data are single cell mechanisms, such as adaptation and
-onset ring, as well as inhibitory population mechanisms. To further understand how each
-mechanism contributes to the suppression of lagging sounds, we designed more general models
-capable of demonstrating the principal features of each mechanism. We tested these models
-thoroughly and found that all mechanisms were able to reproduce the results over a wide range
-of parameters. This nding suggests that mechanisms responsible for the precedence eect
-may not be specialized to perform this specic task but instead may be the results of more
-commonly found neural circuits in the brain. Finally, to facilitate comparing the performance
-of auditory models on psychoacoustical data, we also designed and implemented an auditory
-modelling framework capable of addressing many challenges existing in the eld of auditory
-modelling.</div>
+<div>In recent years, newly developed methods to train spiking neural networks (SNNs) have rendered them as a
+plausible alternative to Artificial Neural Networks (ANNs) in terms of accuracy, while at the same time
+being much more energy efficient at inference and potentially at training time. However, it is still unclear
+what constitutes a good initialisation for an SNN. We often use initialisation schemes developed for ANN
+training which are often inadequate and require manual tuning. In this paper, we attempt to tackle this
+issue by using techniques from the ANN initialisation literature as well as computational neuroscience
+results. We show that the problem of weight initialisation for ANNs is a more nuanced problem than it is
+for ANNs due to the spike-and-reset non-linearity of SNNs and the firing rate collapse problem. We firstly
+identify and propose several solutions to the firing rate collapse problem under different sets of
+assumptions which successfully solve the issue by leveraging classical random walk and Wiener processes
+results. Secondly, we devise a general strategy for SNN initialisation which combines variance propagation
+techniques from ANNs and different methods to obtain the expected firing rate and membrane potential
+distribution based on diffusion and shot-noise approximations. Altogether, we obtain theoretical results
+to solve the SNN initialisation which consider the membrane potential distribution in the presence of a
+threshold. Yet, to what extent can these methods be successfully applied to SNNs on real datasets remains
+an open question. </div>
 
         <h3 class="pt-3">Links</h3>
         <p>
-<button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://spiral.imperial.ac.uk/handle/10044/1/76509">Thesis</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://spiral.imperial.ac.uk/bitstream/10044/1/76509/1/Lestang-J-2019-PhD-Thesis.pdf"><i class="fa-regular fa-file-pdf"></i> Thesis (PDF)</a></button>        </p>
-        <h3 class="pt-5 pb-3">Related software</h3>
-            <div class="d-flex flex-row flex-nowrap" style="overflow-x: auto;">
-    <div class="card col-5 col-md-4 p-1 border-0">
-        <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('brian.png'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
-        </div>
-        <div class="card-body p-1 border-0 text-center">
-            <p class="card-title"><a href="sw_brian.html">Brian</a></p>
-            <p class="card-text">A Python simulator for spiking neural networks.</p>
-        </div>
-    </div>
-    <div class="card col-5 col-md-4 p-1 border-0">
-        <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('model-initiative.png'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
-        </div>
-        <div class="card-body p-1 border-0 text-center">
-            <p class="card-title"><a href="sw_auditory_model_initiative.html">Auditory Model Initiative</a></p>
-            <p class="card-text">Python/Matlab package for comparing binaural auditory models.</p>
-        </div>
-    </div>
-</div>
-
+<button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://arxiv.org/abs/2305.08879">Preprint</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://arxiv.org/pdf/2305.08879"><i class="fa-regular fa-file-pdf"></i> Preprint (PDF)</a></button>        </p>
     <h3 class="pt-3">Categories</h3>
     <p>
-<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_auditory.html">Auditory</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_modelling.html">Modelling</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuroscience.html">Neuroscience</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_sensory.html">Sensory</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_soundlocalisation.html">Sound localisation</a></button>    </p>
+<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_machinelearning.html">Machine learning</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuralsimulation.html">Neural simulation</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuroinformatics.html">Neuroinformatics</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuroscience.html">Neuroscience</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_software.html">Software</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_spiking.html">Spiking</a></button>    </p>
 
 
 

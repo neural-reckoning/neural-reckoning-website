@@ -1,0 +1,29 @@
+year: Preprints
+last_updated: 17-05-2023
+authors: Perez N, Goodman DFM
+title: Spiking Network Initialisation and Firing Rate Collapse
+categories:
+- Neural simulation
+- Machine learning
+urls:
+- - Preprint
+  - https://arxiv.org/abs/2305.08879
+- - Preprint (PDF)
+  - https://arxiv.org/pdf/2305.08879
+abstract: |-
+  In recent years, newly developed methods to train spiking neural networks (SNNs) have rendered them as a
+  plausible alternative to Artificial Neural Networks (ANNs) in terms of accuracy, while at the same time
+  being much more energy efficient at inference and potentially at training time. However, it is still unclear
+  what constitutes a good initialisation for an SNN. We often use initialisation schemes developed for ANN
+  training which are often inadequate and require manual tuning. In this paper, we attempt to tackle this
+  issue by using techniques from the ANN initialisation literature as well as computational neuroscience
+  results. We show that the problem of weight initialisation for ANNs is a more nuanced problem than it is
+  for ANNs due to the spike-and-reset non-linearity of SNNs and the firing rate collapse problem. We firstly
+  identify and propose several solutions to the firing rate collapse problem under different sets of
+  assumptions which successfully solve the issue by leveraging classical random walk and Wiener processes
+  results. Secondly, we devise a general strategy for SNN initialisation which combines variance propagation
+  techniques from ANNs and different methods to obtain the expected firing rate and membrane potential
+  distribution based on diffusion and shot-noise approximations. Altogether, we obtain theoretical results
+  to solve the SNN initialisation which consider the membrane potential distribution in the presence of a
+  threshold. Yet, to what extent can these methods be successfully applied to SNNs on real datasets remains
+  an open question. 

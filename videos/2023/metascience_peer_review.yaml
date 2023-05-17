@@ -1,0 +1,19 @@
+name: The end of standard peer review
+type: Talk
+url: https://youtu.be/1G2btEDb0j0?t=3176
+embed: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1G2btEDb0j0?start=3176" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+short: Talk on problems and solutions with peer review given at Metascience 2023 symposium
+long: >
+  Talk on problems and solutions with pre-publication peer review. This was was part of the
+  <a href="https://metascience.info/virtual-symposia/">2023 Metascience symposium "Academic Journals are Broken"</a>.
+  I discuss issues with pre-publication peer review that I discuss in more detail in
+  <a href="reviewing.html">my article on why I no longer do pre-publication peer review</a> and
+  <a href="https://thesamovar.github.io/zavarka/future-of-peer-review/">the future of peer review</a>.
+  I also discuss our ongoing work as part of <a href="org_neuromatch.html">Neuromatch's</a>
+  <a href="https://nmop.io/">open publishing initiative</a>.
+related:
+  - dan_goodman
+  - neuromatch
+categories:
+  - Metascience
+last_updated: 5-05-2023

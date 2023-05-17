@@ -5,6 +5,8 @@ from collections import defaultdict
 from things import Thing
 from templater import apply_template
 
+from matplotlib import cm, colors
+
 
 category_inclusions = {
     'Brian': ['Neural simulation', 'Spiking'],
@@ -118,17 +120,16 @@ def build_categories(things):
     category_colours = {}
     for cat_id in list(category_graph.keys()):
         cat_name = category_id_names[cat_id]
-        col = 0.7-0.7*(numpapers[cat_id]-min_num_papers)/(1.0*(max_num_papers-min_num_papers))
-        col = int(255.0*col)
-        col = ('%.02X' % col)*3
-        col = '#'+col
+        col = (numpapers[cat_id]-min_num_papers)/(1.0*(max_num_papers-min_num_papers))
+        col = cm.YlGn(0.1+0.6*col)
+        col = colors.to_hex(col)#+'ee' # last bit is alpha
         category_colours[cat_id] = col
-        category_dot_lines.append('{cat_id} [URL="publication_category_{cat_id}.html", label="{cat_name}", color="{col}", fontcolor="{col}", '
+        category_dot_lines.append('{cat_id} [URL="publication_category_{cat_id}.html", label="{cat_name}", fillcolor="{col}", color="{col}", style="filled", fontcolor="#000000", '
                                 'shape=box];'.format(cat_id=cat_id, cat_name=cat_name, col=col))
     for src_id, target_ids in list(category_graph.items()):
         for tgt_id in target_ids:
-            category_dot_lines.append('{src_id} -> {tgt_id} [color="{col}"];'.format(src_id=src_id, tgt_id=tgt_id,
-                                                                                    col=category_colours[tgt_id]))
+            category_dot_lines.append('{src_id} -> {tgt_id} [color="#bbbbbb"];'.format(src_id=src_id, tgt_id=tgt_id,
+                                                                                    col=category_colours[src_id]))
     category_dot = '''
     digraph categories_hierarchy {{
         rankdir = LR;
@@ -143,37 +144,37 @@ def build_categories(things):
         svg = open('temp/categories_hierarchy.svg', 'r').read()
         svg = svg.replace('<svg', '<svg class="img-fluid"')
         open('temp/categories_hierarchy.svg', 'w').write(svg)
-    # Spontaneous category graph
-    category_dot_lines = []
-    for (cat_id_1, cat_id_2), nc in list(category_connections.items()):
-        col = 0.9-0.9*(nc-min_connections)/(1.0*(max_connections-min_connections))
-        col = int(255.0*col)
-        col = ('%.02X' % col)*3
-        col = '#'+col
-        category_dot_lines.append(
-            '    {cat_id_1} -- {cat_id_2} [len={edgelen}, color="{col}"]'.format(cat_id_1=cat_id_1, cat_id_2=cat_id_2, nc=nc,
-                                                                                col=col, edgelen=1.0/(max_connections/2+nc)))
-    for cat_id in list(category_graph.keys()):
-        cat_name = category_id_names[cat_id]
-        col = category_colours[cat_id]
-        category_dot_lines.append(
-            '    {cat_id} [URL="publication_category_{cat_id}.html", label="{cat_name}", color="{col}", fontcolor="{col}", shape=box];'.format(
-                cat_id=cat_id, cat_name=cat_name, col=col))
-    category_dot = '''
-    graph categories_spontaneous {{
-        overlap=scale; splines=true;
-    {graphspec}
-    }}
-    '''.format(graphspec='\n'.join(category_dot_lines))
-    category_dot.replace('<svg', '<svg class="img-fluid" ')
-    open('temp/categories_spontaneous.dot', 'w').write(category_dot)
-    layout_algo = 'neato'
-    if os.system('{algo} -Tsvg temp/categories_spontaneous.dot -o temp/categories_spontaneous.svg'.format(algo=layout_algo))==0:
-        svg = open('temp/categories_spontaneous.svg', 'r').read()
-        svg = svg.replace('<svg', '<svg class="img-fluid"')
-        open('temp/categories_spontaneous.svg', 'w').write(svg)
-    else:
-        print("Couldn't run categories spontaneous dot")
+    # # Spontaneous category graph
+    # category_dot_lines = []
+    # for (cat_id_1, cat_id_2), nc in list(category_connections.items()):
+    #     col = 0.9-0.9*(nc-min_connections)/(1.0*(max_connections-min_connections))
+    #     col = int(255.0*col)
+    #     col = ('%.02X' % col)*3
+    #     col = '#'+col
+    #     category_dot_lines.append(
+    #         '    {cat_id_1} -- {cat_id_2} [len={edgelen}, color="{col}"]'.format(cat_id_1=cat_id_1, cat_id_2=cat_id_2, nc=nc,
+    #                                                                             col=col, edgelen=1.0/(max_connections/2+nc)))
+    # for cat_id in list(category_graph.keys()):
+    #     cat_name = category_id_names[cat_id]
+    #     col = category_colours[cat_id]
+    #     category_dot_lines.append(
+    #         '    {cat_id} [URL="publication_category_{cat_id}.html", label="{cat_name}", fillcolor="{col}", fontcolor="black", color="{col}", style="filled", shape=box];'.format(
+    #             cat_id=cat_id, cat_name=cat_name, col=col))
+    # category_dot = '''
+    # graph categories_spontaneous {{
+    #     overlap=scale; splines=true;
+    # {graphspec}
+    # }}
+    # '''.format(graphspec='\n'.join(category_dot_lines))
+    # category_dot.replace('<svg', '<svg class="img-fluid" ')
+    # open('temp/categories_spontaneous.dot', 'w').write(category_dot)
+    # layout_algo = 'neato'
+    # if os.system('{algo} -Tsvg temp/categories_spontaneous.dot -o temp/categories_spontaneous.svg'.format(algo=layout_algo))==0:
+    #     svg = open('temp/categories_spontaneous.svg', 'r').read()
+    #     svg = svg.replace('<svg', '<svg class="img-fluid"')
+    #     open('temp/categories_spontaneous.svg', 'w').write(svg)
+    # else:
+    #     print("Couldn't run categories spontaneous dot")
 
     return categories
 
