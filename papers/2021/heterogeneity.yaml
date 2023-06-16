@@ -21,6 +21,10 @@ urls:
   - https://www.nature.com/articles/s41467-021-26022-3.pdf
 - - Preprint
   - https://www.biorxiv.org/content/10.1101/2020.12.18.423468v3
+- - Code (GitHub)
+  - https://github.com/npvoid/neural_heterogeneity
+- - Code (Zenodo)
+  - https://zenodo.org/record/5413181
 - - Neurotheory talk by Dan Goodman (video)
   - https://www.youtube.com/watch?v=V2HFqVfeTPg&feature=youtu.be
 - - SNUFA 2021 talk by Nicolas Perez (video)
