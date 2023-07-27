@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="twitter:widgets:csp" content="on">
+    <meta name="twitter:dnt" content="on">
+    <title>Multimodal units fuse-then-accumulate evidence across channels</title>
+    <link rel="STYLESHEET" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+
+<nav class="navbar sticky-top navbar-expand-xl navbar-light bg-light"><div class="container">
+    <a class="navbar-brand" href="index.html">
+            <img src="nr-logo-small.png" class="img-fluid" style="width: 4em;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+                <li class="nav item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarMembersDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">People</a>
+        			<div class="dropdown-menu" aria-labelledby="navbarMembersDropdown">
+                        <a class="dropdown-item" href="members.html">Everyone</a>
+                        <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="dan_goodman.html">Dan Goodman</a>
+                                <h6 class="dropdown-header">Postdocs and Fellows</h6>
+                                    <a class="dropdown-item" href="marcus_ghosh.html">Marcus Ghosh</a>
+                                <h6 class="dropdown-header">PhD students</h6>
+                                    <a class="dropdown-item" href="chu_yang.html">Yang Chu</a>
+                                    <a class="dropdown-item" href="gabriel_bena.html">Gabriel Béna</a>
+                    </div>
+                </li>
+                <li class="nav item">
+                    <a class="nav-link" href="publications.html">Publications</a>
+                </li>
+                <li class="nav item">
+                    <a class="nav-link" href="software.html">Software</a>
+                </li>
+                <li class="nav item">
+                    <a class="nav-link" href="themes.html">Themes</a>
+                </li>
+                <li class="nav item">
+                    <a class="nav-link" href="openings.html">Join us</a>
+                </li>
+                <li class="nav item">
+                    <a class="nav-link" href="location.html">Location</a>
+                </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarMiscDropdown" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+                <div class="dropdown-menu" aria-labelledby="navbarMiscDropdown">
+                        <a class="dropdown-item" href="videos.html">Videos</a>
+                        <a class="dropdown-item" href="organisations.html">Organisations</a>
+                        <a class="dropdown-item" href="comp-neuro-resources.html">Computational neuroscience resources</a>
+                        <a class="dropdown-item" href="reviewing.html">Ending support for legacy academic publishing</a>
+                        <a class="dropdown-item" href="neuroinformatics.html">Neuroinformatics</a>
+                        <a class="dropdown-item" href="sensory.html">Sensory neuroscience</a>
+                        <a class="dropdown-item" href="mathematics.html">Mathematics</a>
+                        <a class="dropdown-item" href="apply_phd.html">PhD application process</a>
+                        <a class="dropdown-item" href="accessibility.html">Accessibility statement</a>
+                </div>
+            </li>
+            <li class="nav item">
+                <a class="nav-link" href="https://twitter.com/neuralreckoning" rel="me"><i class="fa-brands fa-twitter"></i><span class="d-inline d-xl-none"> Twitter</span></a>
+            </li>
+            <li class="nav item">
+                <a class="nav-link" href="https://neuromatch.social/@neuralreckoning" rel="me"><i class="fa-brands fa-mastodon"></i><span class="d-inline d-xl-none"> Mastodon</span></a>
+            </li>
+            <li class="nav item">
+                <a class="nav-link" href="https://github.com/neural-reckoning" rel="me"><i class="fa-brands fa-github"></i><span class="d-inline d-xl-none"> GitHub</span></a>
+            </li>
+            <li class="nav item">
+                <a class="nav-link" href="https://www.youtube.com/@neuralreckoning" rel="me"><i class="fa-brands fa-youtube"></i><span class="d-inline d-xl-none"> YouTube</span></a>
+            </li>
+        </ul>
+    </div>
+</div></nav>
+
+<div class="container">
+
+    <p>&nbsp;</p>
+
+<div class="main">
+
+<div class="row">
+    <div class="col-lg-4 d-none d-lg-block order-lg-12">
+        <div style="height: 90vh; overflow-y: scroll;">
+            <blockquote class="twitter-tweet" data-conversation="none" data-dnt="true"><p lang="en" dir="ltr">New preprint! A simple way to extend the classical evidence weighting model of multimodal integration to solve a much wider range of naturalistic tasks. Spoiler: it&#39;s nonlinearity. Works for SNNs/ANNs. 🧵 with <a href="https://twitter.com/MarcusGhosh?ref_src=twsrc%5Etfw">@MarcusGhosh</a> <a href="https://twitter.com/GabrielBna1?ref_src=twsrc%5Etfw">@GabrielBna1</a> <a href="https://twitter.com/BormuthVolker?ref_src=twsrc%5Etfw">@BormuthVolker</a> <a href="https://t.co/4to71pOfsd">https://t.co/4to71pOfsd</a> <a href="https://t.co/E3ty5nlyp1">pic.twitter.com/E3ty5nlyp1</a></p>&mdash; Dan Goodman (@neuralreckoning) <a href="https://twitter.com/neuralreckoning/status/1684525463530528768?ref_src=twsrc%5Etfw">July 27, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  <blockquote class="twitter-tweet" data-conversation="none" data-dnt="true"><p lang="en" dir="ltr">Think about the infamous &#39;cocktail party&#39;: you use synchrony between lip movements and sounds to help you hear in a noisy environment. But the classical model throws away that temporal structure, instead just linearly weighting visual and auditory evidence.</p>&mdash; Dan Goodman (@neuralreckoning) <a href="https://twitter.com/neuralreckoning/status/1684525465912975361?ref_src=twsrc%5Etfw">July 27, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  <blockquote class="twitter-tweet" data-conversation="none" data-dnt="true"><p lang="en" dir="ltr">We call this algorithm accumulate-then-fuse because first you accumulate evidence over time within a modality, followed by linearly fusing across modalities. We propose instead to (nonlinearly) fuse-then-accumulate. This works much better with pretty much any nonlinearity. <a href="https://t.co/caUnKVqNW6">pic.twitter.com/caUnKVqNW6</a></p>&mdash; Dan Goodman (@neuralreckoning) <a href="https://twitter.com/neuralreckoning/status/1684525467649409024?ref_src=twsrc%5Etfw">July 27, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  <blockquote class="twitter-tweet" data-conversation="none" data-dnt="true"><p lang="en" dir="ltr">This work started when we were training spiking neural networks with surrogate gradient descent (thanks <a href="https://twitter.com/hisspikeness?ref_src=twsrc%5Etfw">@hisspikeness</a>) to solve the classical multimodal task where multimodal signals are independent. To our surprise, we didn&#39;t need a multimodal area to solve this task! <a href="https://t.co/1RxQ5lxG1d">pic.twitter.com/1RxQ5lxG1d</a></p>&mdash; Dan Goodman (@neuralreckoning) <a href="https://twitter.com/neuralreckoning/status/1684525469666795520?ref_src=twsrc%5Etfw">July 27, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  <blockquote class="twitter-tweet" data-conversation="none" data-dnt="true"><p lang="en" dir="ltr">In our comodulation tasks the evidence within a modality is forced to be balanced, and only the joint temporal structure carries information. Sure enough, we found you need a multimodal area to do this task (and in unpublished pilot data, the humans in our lab can do this task). <a href="https://t.co/1eTeK1CnRc">pic.twitter.com/1eTeK1CnRc</a></p>&mdash; Dan Goodman (@neuralreckoning) <a href="https://twitter.com/neuralreckoning/status/1684525471764041732?ref_src=twsrc%5Etfw">July 27, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  <blockquote class="twitter-tweet" data-conversation="none" data-dnt="true"><p lang="en" dir="ltr">But this task is kind of unrealistic so we designed a &quot;detection task&quot; where the signal is only on at unknown times, the rest of the time you get noise. You can do this with or without a multimodal area, but there are big differences in performance when the signal is sparse. <a href="https://t.co/CVkzKKpjOM">pic.twitter.com/CVkzKKpjOM</a></p>&mdash; Dan Goodman (@neuralreckoning) <a href="https://twitter.com/neuralreckoning/status/1684525473760432128?ref_src=twsrc%5Etfw">July 27, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  <blockquote class="twitter-tweet" data-conversation="none" data-dnt="true"><p lang="en" dir="ltr">This seems likely to be important in natural settings because fast and accurate reactions to sparse information could make all the difference in a predator-prey interaction. 🐈🐁 And the more complex the task, the bigger the performance difference.</p>&mdash; Dan Goodman (@neuralreckoning) <a href="https://twitter.com/neuralreckoning/status/1684525475866071040?ref_src=twsrc%5Etfw">July 27, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  <blockquote class="twitter-tweet" data-conversation="none" data-dnt="true"><p lang="en" dir="ltr">The optimal nonlinearity is softplus(x)=log(1+be^cx) but training artificial neural networks with different nonlinearities like ReLU or sigmoid is just as good in practice. The solution extends to continuous observations, eg. for Gaussian noise you need softplus and quadratic.</p>&mdash; Dan Goodman (@neuralreckoning) <a href="https://twitter.com/neuralreckoning/status/1684525477514428417?ref_src=twsrc%5Etfw">July 27, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  <blockquote class="twitter-tweet" data-conversation="none" data-dnt="true"><p lang="en" dir="ltr">Can we relate this to experimental data? One measure used is additivity: how much neurons respond to multimodal signals than you&#39;d guess from unimodal responses. We found high additivity was more important in tasks where FtA did better than AtF, largely due to time constants. <a href="https://t.co/2jtBGtAgpZ">pic.twitter.com/2jtBGtAgpZ</a></p>&mdash; Dan Goodman (@neuralreckoning) <a href="https://twitter.com/neuralreckoning/status/1684525479242387458?ref_src=twsrc%5Etfw">July 27, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  <blockquote class="twitter-tweet" data-conversation="none" data-dnt="true"><p lang="en" dir="ltr">Plus, we can look at behaviour. In our sparse detection task we can predict which trials subjects are likely to make mistakes on if they use AtF rather than FtA (by plotting trials based on weight of evidence assuming AtF=x or FtA=y). <a href="https://t.co/6JNUEQvNms">pic.twitter.com/6JNUEQvNms</a></p>&mdash; Dan Goodman (@neuralreckoning) <a href="https://twitter.com/neuralreckoning/status/1684525481205407747?ref_src=twsrc%5Etfw">July 27, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  <blockquote class="twitter-tweet" data-conversation="none" data-dnt="true"><p lang="en" dir="ltr">We haven&#39;t done the experiments to prove this is what we do (yet), but:<br>⭐ It&#39;s consistent with previous experiments (as it is a generalisation of AtF)<br>⭐ It&#39;s the solution found when training spiking or artificial NNs<br>⭐ It gives better performance with few extra parameters</p>&mdash; Dan Goodman (@neuralreckoning) <a href="https://twitter.com/neuralreckoning/status/1684525483248029696?ref_src=twsrc%5Etfw">July 27, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  <blockquote class="twitter-tweet" data-conversation="none" data-dnt="true"><p lang="en" dir="ltr">For more details check out the beautiful HTML version of the preprint on <a href="https://twitter.com/curvenote?ref_src=twsrc%5Etfw">@curvenote</a> (many thanks for the support!):<a href="https://t.co/aSclRRJQzn">https://t.co/aSclRRJQzn</a><br><br>or the good old PDF at <a href="https://twitter.com/biorxivpreprint?ref_src=twsrc%5Etfw">@biorxivpreprint</a>:<a href="https://t.co/4to71pOfsd">https://t.co/4to71pOfsd</a><br><br>Let us know what you think!</p>&mdash; Dan Goodman (@neuralreckoning) <a href="https://twitter.com/neuralreckoning/status/1684525485882068992?ref_src=twsrc%5Etfw">July 27, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+        </div>
+    </div>
+    <div class="col-lg-8 order-lg-1">
+
+<h2>Multimodal units fuse-then-accumulate evidence across channels</h2>
+    <div class="d-none d-sm-block">
+        <ul class="list-inline author-list">
+    <li>
+        <a href="marcus_ghosh.html">
+        <div><img src="photo_marcus_ghosh.s.circ.png"/></div>
+        <div>Marcus Ghosh</div>
+        </a>
+    </li>
+    <li>
+        <a href="gabriel_bena.html">
+        <div><img src="photo_gabriel_bena.s.circ.png"/></div>
+        <div>Gabriel Béna</div>
+        </a>
+    </li>
+    <li>
+        <div><img src="photo_placeholder.s.circ.png"/></div>
+        <div>Bormuth V</div>
+    </li>
+    <li>
+        <a href="dan_goodman.html">
+        <div><img src="photo_dan_goodman.s.circ.png"/></div>
+        <div>Dan Goodman</div>
+        </a>
+    </li>
+</ul>
+
+    </div>
+    <div class="d-block d-sm-none">
+        <a href="marcus_ghosh.html">Ghosh M</a>, <a href="gabriel_bena.html">Béna G</a>, Bormuth V, <a href="dan_goodman.html">Goodman DFM</a>
+    </div>
+<div><i>Preprint</i></div>
+<div>&nbsp;</div>
+<h3>Abstract</h3>
+<div>We continuously detect sensory data, like sights and sounds, and use this information to guide our behaviour.
+However, rather than relying on single sensory channels, which are noisy and can be ambiguous alone, we merge
+information across our senses and leverage this combined signal. In biological networks, this process
+(multisensory integration) is implemented by multimodal neurons which are often thought to receive the
+information accumulated by unimodal areas, and to fuse this across channels; an algorithm we term
+accumulate-then-fuse. However, it remains an open question how well this theory generalises beyond the
+classical tasks used to test multimodal integration. Here, we explore this by developing novel multimodal
+tasks and deploying probabilistic, artificial and spiking neural network models. Using these models we
+demonstrate that multimodal units are not necessary for accuracy or balancing speed/accuracy in classical
+multimodal tasks, but are critical in a novel set of tasks in which we comodulate signals across channels.
+We show that these comodulation tasks require multimodal units to implement an alternative fuse-then-accumulate
+algorithm, which excels in naturalistic settings and is optimal for a wide class of multimodal problems.
+Finally, we link our findings to experimental results at multiple levels; from single neurons to behaviour.
+Ultimately, our work suggests that multimodal neurons may fuse-then-accumulate evidence across channels, and
+provides novel tasks and models for exploring this in biological systems.</div>
+
+        <h3 class="pt-3">Links</h3>
+        <p>
+<button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://gabrielbenz-multimodal.curve.space/multimodal"><i class="fa-regular fa-file-lines"></i> Preprint (curvenote html)</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://www.biorxiv.org/content/10.1101/2023.07.24.550311v1">Preprint (biorxiv)</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://www.biorxiv.org/content/10.1101/2023.07.24.550311v1.full.pdf"><i class="fa-regular fa-file-pdf"></i> Preprint (PDF)</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://neuromatch.social/@neuralreckoning/110785811144218374"><i class="fa-brands fa-mastodon"></i> Mastodon</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://twitter.com/neuralreckoning/status/1684525463530528768"><i class="fa-brands fa-twitter"></i> Twitter</a></button>        </p>
+    <h3 class="pt-3">Categories</h3>
+    <p>
+<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_modelling.html">Modelling</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuroscience.html">Neuroscience</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_sensory.html">Sensory</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_spiking.html">Spiking</a></button>    </p>
+
+
+
+    <p>&nbsp;</p>
+
+</div>
+
+<!-- Optional JavaScript for Bootstrap -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

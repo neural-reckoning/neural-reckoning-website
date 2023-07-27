@@ -42,7 +42,7 @@ def get_orcid_publications(user_id):
             date=int(work['publication-date']['year']['value']),
             type=work['type'],
             )
-        if 'journal-title' in work:
+        if 'journal-title' in work and work['journal-title'] is not None and 'value' in work['journal-title']:
             pub.journal = work['journal-title']['value']
         doi = None
         for eid in work['external-ids']['external-id']:

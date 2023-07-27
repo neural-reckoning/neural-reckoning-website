@@ -13,7 +13,7 @@ def make_wordcloud(papers=None, member=None, width=350, height=350):
     if member is None:
         mpubs = papers.values()
     else:
-        mpubs = member.papers
+        mpubs = member.things['Paper']
     if len(mpubs)==0:
         return
     all_abstracts = ' '.join(getattr(pub, 'abstract', '') for pub in mpubs)
