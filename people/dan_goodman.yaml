@@ -8,7 +8,8 @@ room: 1001
 email: 'ZC5nb29kbWFuQGltcGVyaWFsLmFjLnVr' # generate this by import base64; base64.b64encode(b'address')
 telephone: '+44 (0)20 7594 6264'
 links:
-  - ['@neuralreckoning', 'https://twitter.com/neuralreckoning']
+  - ['Twitter', 'https://twitter.com/neuralreckoning']
+  - ['Mastodon', 'https://neuromatch.social/@neuralreckoning']
   - ['Google Scholar', 'https://scholar.google.com/citations?user=2HiNqI4AAAAJ']
 twitter: neuralreckoning
 short: Head of group.

@@ -8,6 +8,9 @@ long: |-
   Gabriel Béna will work on machine learning and neuroscience, with a particular interest
   in spiking neural networks.
   </p>
+links:
+  - ['Twitter', 'https://twitter.com/GabrielBna1']
+  - ['Mastodon', 'https://neuromatch.social/@GabrielBena']
 dates:
 - 2021
 semantic_scholar: 2107033449

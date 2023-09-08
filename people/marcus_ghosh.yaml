@@ -7,17 +7,17 @@ dates:
 - 2021
 long: >
   <p>
-    Marcus Ghosh is a Research Fellow funded by the
-    <a href="https://parisregion.eu/parisregionfp.html">Paris Region Fellowship
-    Programme</a>. He works on spiking neural network models of multisensory integration
-    in larval zebrafish. He carries out corresponding experimental work in the group
-    of <a href="https://zenith-etn.com/partners/bormuth">Volker Bormuth</a>.
+    Marcus Ghosh is an Eric and Wendy Schmidt AI in Science Postdoctoral Fellow,
+    funded by <a href="https://www.schmidtfutures.com/">Schmidt Futures</a>.
+    In his work he uses neural network models to explore how the brain combines
+    information from multiple senses (multimodal integration). 
   </p>
 orcid: 0000-0002-2428-4605
 position: postdoc
 short: Multisensory integration in biological and simulated neural networks
 links:
-  - ['@MarcusGhosh', 'https://twitter.com/marcusghosh'] 
+  - ['Twitter', 'https://twitter.com/marcusghosh'] 
+  - ['Mastodon', 'https://neuromatch.social/@marcusghosh']
   - ['Google Scholar', 'https://scholar.google.com/citations?user=__03svoAAAAJ&hl=en']
   - ['ORCID', 'https://orcid.org/0000-0002-2428-4605']
 twitter: MarcusGhosh

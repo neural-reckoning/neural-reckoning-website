@@ -16,6 +16,8 @@ def make_wordcloud(papers=None, member=None, width=350, height=350):
         mpubs = member.things['Paper']
     if len(mpubs)==0:
         return
+    mpubs = list(mpubs)
+    mpubs.sort(key=lambda x: getattr(x, 'abstract', ''))
     all_abstracts = ' '.join(getattr(pub, 'abstract', '') for pub in mpubs)
     m = hashlib.md5()
     m.update(all_abstracts.encode("utf-8"))

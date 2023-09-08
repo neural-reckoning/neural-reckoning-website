@@ -4,7 +4,7 @@ import re
 
 cache = Cache('temp/semantic_scholar_cache')
 
-sch = semanticscholar.SemanticScholar(timeout=2)
+sch = semanticscholar.SemanticScholar(timeout=25)
 
 class SemanticScholarPublication:
     def __init__(self, **kwds):
