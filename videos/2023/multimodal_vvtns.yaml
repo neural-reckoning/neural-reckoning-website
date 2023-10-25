@@ -1,0 +1,23 @@
+name: Multimodal units fuse-then-accumulate evidence across channels
+type: Talk
+url: https://youtu.be/jnQpnyASJe8?si=GjHexxGmtGWt2Aa8
+embed: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jnQpnyASJe8?si=8pHtBiv40vKGKdbs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+short: Talk on multimodal processing given at VVTNS 2023 seminar series
+long: >
+  We continuously detect sensory data, like sights and sounds, and use this information to guide our behaviour. However, rather than relying on single sensory channels, which are noisy and can be ambiguous alone, we merge information across our senses and leverage this combined signal. In biological networks, this process (multisensory integration) is implemented by multimodal neurons which are often thought to receive the information accumulated by unimodal areas, and to fuse this across channels; an algorithm we term accumulate-then-fuse. However, it remains an open question how well this theory generalises beyond the classical tasks used to test multimodal integration. Here, we explore this by developing novel multimodal tasks and deploying probabilistic, artificial and spiking neural network models. Using these models we demonstrate that multimodal units are not necessary for accuracy or balancing speed/accuracy in classical multimodal tasks, but are critical in a novel set of tasks in which we comodulate signals across channels. We show that these comodulation tasks require multimodal units to implement an alternative fuse-then-accumulate algorithm, which excels in naturalistic settings and is optimal for a wide class of multimodal problems. Finally, we link our findings to experimental results at multiple levels; from single neurons to behaviour. Ultimately, our work suggests that multimodal neurons may fuse-then-accumulate evidence across channels, and provides novel tasks and models for exploring this in biological systems.
+related:
+  - dan_goodman
+  - marcus_ghosh
+  - gabriel_bena
+  - multimodal
+categories:
+  - Sensory
+  - Spiking
+  - Modelling
+  - Neural simulation
+  - Learning
+  - Auditory
+  - Visual
+last_updated: 25-10-2023
+
+
