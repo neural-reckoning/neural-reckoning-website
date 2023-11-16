@@ -5,7 +5,7 @@
 
 {% macro card_list(things) %}
 <div class="d-flex flex-row flex-nowrap" style="overflow-x: auto;">
-    {% for thing in things %}
+    {% for thing in things | sort(attribute='key') %}
     <div class="card col-5 col-md-4 p-1 border-0">
         <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('{{thing.logo}}'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
         </div>

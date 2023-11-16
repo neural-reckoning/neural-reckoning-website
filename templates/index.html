@@ -17,7 +17,46 @@
     </div>
     <div class="col-sm-8 order-sm-1">
 
-        <img class="img-fluid mb-3" src="group_photo.jpg" alt="Group photo"/>
+        <!-- <img class="img-fluid mb-3" src="group_photo.jpg" alt="Group photo"/> -->
+
+        <div class="bg-light p-3 mb-3">
+            {% set active_members = [] %}
+            {% for position in positions_in_order %}
+                {% if not grouped_members[position] %}{% continue %}{% endif %}
+                {% for member in grouped_members[position] | sort(attribute='author_names') | sort(attribute='dates', reverse=(position=='former')) %}
+                    {% if member.position!='former' %}
+                        {% set _ = active_members.append(member) %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+            <div id="membersCarousel" class="carousel slide" date-ride="carousel" data-interval="5000">
+                <div class="carousel-inner">
+                    {% for member in active_members %}                    
+                        <div class="carousel-item{% if loop.first %} active{% endif %}" style="max-height: 100px;">
+                            <a href="{{member.key}}.html">
+                                {% if os.path.exists('files/photo_'+member.key+'.jpg') %}
+                                    <img src="photo_{{member.key}}.m.circ.png" style="max-height: 100px; max-width: 100px;" class="float-left mr-3"/>
+                                {% else %}
+                                    <img src="portrait_placeholder.png" style="max-height: 100px; max-width: 100px;" class="float-left mr-3"/>
+                                {% endif %}
+                            </a>
+                            <h4 class="pt-3">{{ member.name }}</h4>
+                            <div class="text-secondary">
+                                {{ member.short }}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <!-- <a class="carousel-control-prev" href="#membersCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a> -->
+                <a class="carousel-control-next" href="#membersCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>                    
+            </div>
+        </div>
 
         <p>
             The Neural Reckoning Group is led by
