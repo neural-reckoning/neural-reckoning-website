@@ -1,7 +1,8 @@
-import os
+import os, hashlib
 
 from collections import defaultdict
 
+from cache import cached
 from things import Thing
 from templater import apply_template
 
@@ -66,7 +67,7 @@ def build_categories(things):
             inc = inc.union(recursive_inclusions(name))
         return inc
 
-    for name in all_categories:
+    for name in sorted(all_categories):
         catid = category_id(name)
         cat = Category(key=catid, name=name)
         categories[catid] = cat
@@ -76,14 +77,14 @@ def build_categories(things):
     for pub in things:
         names = pub.categories
         pub.category_ids = set([])
-        for name in names:
+        for name in sorted(names):
             catid = category_id(name)
             category_id_names[catid] = name
             pub.category_ids.add(catid)
             if catid in category_id_inclusions:
-                for cid in category_id_inclusions[catid]:
+                for cid in sorted(category_id_inclusions[catid]):
                     pub.category_ids.add(cid)
-            for cid in pub.category_ids:
+            for cid in sorted(pub.category_ids):
                 cat = categories[cid]
                 cat.add_thing(pub)
         pub.category_objects = set([categories[catid] for catid in pub.category_ids])
@@ -102,7 +103,7 @@ def build_categories(things):
         for cat in pub.category_objects:
             category_graph[cat.key] = set([])
             numpapers[cat.key] += 1
-            for cat2 in pub.category_objects:
+            for cat2 in sorted(pub.category_objects, key=lambda cat: cat.key):
                 if cat2.key<cat.key:
                     category_connections[cat.key, cat2.key] += 1
 
@@ -112,13 +113,13 @@ def build_categories(things):
     min_num_papers = min(numpapers.values())
     for catname, inclusions in list(category_inclusions.items()):
         tgt_id = category_id(catname)
-        for inclusion in inclusions:
+        for inclusion in sorted(inclusions):
             src_id = category_id(inclusion)
             category_graph[src_id].add(tgt_id)
     # Generate hierarchical categories
     category_dot_lines = []
     category_colours = {}
-    for cat_id in list(category_graph.keys()):
+    for cat_id in sorted(list(category_graph.keys())):
         cat_name = category_id_names[cat_id]
         col = (numpapers[cat_id]-min_num_papers)/(1.0*(max_num_papers-min_num_papers))
         col = cm.YlGn(0.1+0.6*col)
@@ -126,8 +127,8 @@ def build_categories(things):
         category_colours[cat_id] = col
         category_dot_lines.append('{cat_id} [URL="publication_category_{cat_id}.html", label="{cat_name}", fillcolor="{col}", color="{col}", style="filled", fontcolor="#000000", '
                                 'shape=box];'.format(cat_id=cat_id, cat_name=cat_name, col=col))
-    for src_id, target_ids in list(category_graph.items()):
-        for tgt_id in target_ids:
+    for src_id, target_ids in sorted(list(category_graph.items())):
+        for tgt_id in sorted(target_ids):
             category_dot_lines.append('{src_id} -> {tgt_id} [color="#bbbbbb"];'.format(src_id=src_id, tgt_id=tgt_id,
                                                                                     col=category_colours[src_id]))
     category_dot = '''
@@ -136,6 +137,15 @@ def build_categories(things):
     {graphspec}
     }}
     '''.format(graphspec='\n'.join(category_dot_lines))
+
+    m = hashlib.md5()
+    m.update(category_dot.encode("utf-8"))
+    cat_hash = m.hexdigest()
+    fname = 'temp/categories_hierarchy.dot'
+    if os.path.exists(fname) and fname in cached and cached[fname]==cat_hash:
+        return categories
+    print('recomputing category map')
+
     if not os.path.exists('temp'):
         os.mkdir('temp')
     open('temp/categories_hierarchy.dot', 'w').write(category_dot)
@@ -144,37 +154,8 @@ def build_categories(things):
         svg = open('temp/categories_hierarchy.svg', 'r').read()
         svg = svg.replace('<svg', '<svg class="img-fluid"')
         open('temp/categories_hierarchy.svg', 'w').write(svg)
-    # # Spontaneous category graph
-    # category_dot_lines = []
-    # for (cat_id_1, cat_id_2), nc in list(category_connections.items()):
-    #     col = 0.9-0.9*(nc-min_connections)/(1.0*(max_connections-min_connections))
-    #     col = int(255.0*col)
-    #     col = ('%.02X' % col)*3
-    #     col = '#'+col
-    #     category_dot_lines.append(
-    #         '    {cat_id_1} -- {cat_id_2} [len={edgelen}, color="{col}"]'.format(cat_id_1=cat_id_1, cat_id_2=cat_id_2, nc=nc,
-    #                                                                             col=col, edgelen=1.0/(max_connections/2+nc)))
-    # for cat_id in list(category_graph.keys()):
-    #     cat_name = category_id_names[cat_id]
-    #     col = category_colours[cat_id]
-    #     category_dot_lines.append(
-    #         '    {cat_id} [URL="publication_category_{cat_id}.html", label="{cat_name}", fillcolor="{col}", fontcolor="black", color="{col}", style="filled", shape=box];'.format(
-    #             cat_id=cat_id, cat_name=cat_name, col=col))
-    # category_dot = '''
-    # graph categories_spontaneous {{
-    #     overlap=scale; splines=true;
-    # {graphspec}
-    # }}
-    # '''.format(graphspec='\n'.join(category_dot_lines))
-    # category_dot.replace('<svg', '<svg class="img-fluid" ')
-    # open('temp/categories_spontaneous.dot', 'w').write(category_dot)
-    # layout_algo = 'neato'
-    # if os.system('{algo} -Tsvg temp/categories_spontaneous.dot -o temp/categories_spontaneous.svg'.format(algo=layout_algo))==0:
-    #     svg = open('temp/categories_spontaneous.svg', 'r').read()
-    #     svg = svg.replace('<svg', '<svg class="img-fluid"')
-    #     open('temp/categories_spontaneous.svg', 'w').write(svg)
-    # else:
-    #     print("Couldn't run categories spontaneous dot")
+
+    cached[fname] = cat_hash
 
     return categories
 

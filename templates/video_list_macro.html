@@ -37,9 +37,7 @@
     {{ videos[0].embed }}
 </div>
 {% if show!="all" %}
-{% set videos = videos[1:1+show] %}
-{% else %}
-{% set videos = videos[1:] %}
+{% set videos = videos[0:show] %}
 {% endif %}
 {% if videos %}
 {{ flat_video_list(videos) }}
