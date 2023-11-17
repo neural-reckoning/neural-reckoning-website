@@ -18,18 +18,9 @@
     <div class="col-sm-8 order-sm-1">
 
         <div class="bg-light p-3 mb-3">
-            {% set active_members = [] %}
-            {% for position in positions_in_order %}
-                {% if not grouped_members[position] %}{% continue %}{% endif %}
-                {% for member in grouped_members[position] | sort(attribute='author_names') | sort(attribute='dates', reverse=(position=='former')) %}
-                    {% if member.position!='former' %}
-                        {% set _ = active_members.append(member) %}
-                    {% endif %}
-                {% endfor %}
-            {% endfor %}
             <div id="membersCarousel" class="carousel slide auto" data-ride="carousel" data-interval="4000">
                 <div class="carousel-inner">
-                    {% for member in active_members %}                    
+                    {% for member in members | rejectattr('position', 'eq', 'former') | sort(attribute='author_names') | sort(attribute='dates') | sort(attribute='position_order') %}
                         <div class="carousel-item{% if loop.first %} active{% endif %}" style="max-height: 100px;">
                             <a href="{{member.key}}.html">
                                 {% if os.path.exists('files/photo_'+member.key+'.jpg') %}
@@ -37,11 +28,11 @@
                                 {% else %}
                                     <img src="portrait_placeholder.png" style="max-height: 100px; max-width: 100px;" class="float-left mr-3"/>
                                 {% endif %}
+                                <h4 class="pt-3 text-dark">{{ member.name }}</h4>
+                                <div class="text-secondary">
+                                    {{ member.short }}
+                                </div>
                             </a>
-                            <h4 class="pt-3">{{ member.name }}</h4>
-                            <div class="text-secondary">
-                                {{ member.short }}
-                            </div>
                         </div>
                     {% endfor %}
                 </div>
