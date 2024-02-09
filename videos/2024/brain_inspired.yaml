@@ -1,0 +1,18 @@
+name: Brain Inspired interview
+type: Interview
+url: https://www.youtube.com/watch?v=kIM44Gnq9Qc
+embed: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/kIM44Gnq9Qc?si=SGcjVIgEuzSouBK6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+short: Dan Goodman interview on Brain Inspired podcast
+long: >
+  <a href="dan_goodman.html">Dan</a> was interviewed by Paul Middlebrooks for the <a href="https://braininspired.co/">Brain Inspired</a> podcast. He talks neuroscience, spiking
+  neural networks, machine learning and metascience. You can watch the linked video, or check out other audio podcast options at
+  <a href="https://braininspired.co/podcast/183/">Brain Inspired episode 183</a>.
+related:
+  - dan_goodman
+categories:
+  - Spiking
+  - Modelling
+  - Neuroscience
+  - Metascience
+  - Machine learning
+last_updated: 6-2-2024
