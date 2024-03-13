@@ -19,8 +19,9 @@ def get_semantic_scholar_publications(user_id):
     author = sch.get_author(user_id)
 
     publications = []
-    for paper in author['papers']:
-        paper = sch.get_paper(paper['paperId'])
+    all_papers = sch.get_papers([paper['paperId'] for paper in author['papers']])
+    for paper in all_papers:
+        # paper = sch.get_paper(paper['paperId'])
         pub = SemanticScholarPublication(
             title=paper['title'], date=paper['year']
             )
@@ -31,7 +32,8 @@ def get_semantic_scholar_publications(user_id):
         if paper.authors is not None:
             authors = []
             for author in paper['authors']:
-                authurl = author['url']
+                #authurl = author['url']
+                authurl = f"https://www.semanticscholar.org/author/{author['authorId']}"
                 authname = author['name']
                 authors.append(f'<a href="{authurl}">{authname}</a>')
             if len(authors)>6:

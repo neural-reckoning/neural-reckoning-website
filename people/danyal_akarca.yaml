@@ -1,0 +1,25 @@
+name: Danyal Akarca
+author_names:
+- Akarca D
+email: 'ZC5ha2FyY2FAaW1wZXJpYWwuYWMudWs=' # generate this by import base64; base64.b64encode(b'address')
+dates:
+- 2024
+long: >
+  <p>
+    I am an Imperial College Research Fellow (supported by Schmidt Futures) in the Intelligent Systems and Networks Group in the Department of Electrical and Electronic Engineering at Imperial College London. I'm also a Visiting Scientist at the MRC Cognition and Brain Sciences Unit at the University of Cambridge.
+  </p>
+  <p>
+    My work focuses on understanding the shared underlying principles of biological and artificial cognitive systems. To do this, I use a range of techniques borrowed from diverse fields of neuroscience, network science, applied-maths and systems biology. Most of my work involves tying ideas across neurophysiology, developmental biology and AI. I'm particularly interested in how biological systems make trade-offs (that may be implementational, algorithmic and/or computational) in order to solve difficult multi-objective problems they encounter. These ideas are encompassed quite nicely within the growing filed of Neuroscience and AI (Neuro-AI).
+  </p>
+  <p>
+    I completed my PhD at Pembroke College in Cambridge under the supervision of Prof Duncan Astle and advised by Prof Petra Vertes. Over this time I've been very fortunate to have numerous national and international collaborations, with colleagues at ETH Zürich, Harvard, Google DeepMind and Intel Labs. I previously trained as a Medical Doctor at the University of Southampton, with a particular focus on Neurology, Neurosurgery and Psychiatry.    
+  </p>
+orcid: 0000-0002-5931-0295
+position: postdoc
+short: Principles of biological and artificial cognition.
+links:
+  - ['Website', 'https://www.danakarca.com/']
+  - ['Twitter', 'https://twitter.com/DanAkarca'] 
+  - ['Google Scholar', 'https://scholar.google.com/citations?user=eQuCV80AAAAJ&hl=en']
+  - ['ORCID', 'https://orcid.org/0000-0002-5931-0295']
+twitter: DanAkarca

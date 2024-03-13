@@ -24,8 +24,8 @@ def get_metadata_from_doi(doi):
 
 
 def get_orcid_publications(user_id):
-    # if user_id in orcid_cache:
-    #     return orcid_cache[user_id]
+    if user_id in orcid_cache:
+        return orcid_cache[user_id]
     resp = requests.get(f"https://pub.orcid.org/v2.0/{user_id}/works",
                         headers={'Accept':'application/orcid+json'})
     results = resp.json()
@@ -70,8 +70,10 @@ def get_orcid_publications(user_id):
                 for auth in md['author']:
                     if 'ORCID' in auth:
                         authors.append(f'''<a href="{auth['ORCID']}">{auth['given']} {auth['family']}</a>''')
-                    else:
+                    elif 'given' in auth and 'family' in auth:
                         authors.append(f'''{auth['given']} {auth['family']}''')
+                    else:
+                        authors.append(f'''{auth['name']}''')
                 if len(authors)>6:
                     authors = [authors[0], 'et al.']
                 pub.authors = ', '.join(authors)
