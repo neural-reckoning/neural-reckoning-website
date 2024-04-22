@@ -1,40 +1,24 @@
 selected: true
 year: Preprints
-last_updated: 27-07-2023
+last_updated: 22-04-2024
 authors: Ghosh M, Béna G, Bormuth V, Goodman DFM
-title: Multimodal units fuse-then-accumulate evidence across channels
+title: Nonlinear fusion is optimal for a wide class of multisensory tasks
 categories:
 - Sensory
 - Neuroscience
 - Modelling
 - Spiking
 urls:
-- - Preprint (curvenote html)
-  - https://gabrielbenz-multimodal.curve.space/multimodal
 - - Preprint (biorxiv)
-  - https://www.biorxiv.org/content/10.1101/2023.07.24.550311v1
+  - https://www.biorxiv.org/content/10.1101/2023.07.24.550311v2
 - - Preprint (PDF)
-  - https://www.biorxiv.org/content/10.1101/2023.07.24.550311v1.full.pdf
+  - https://www.biorxiv.org/content/10.1101/2023.07.24.550311v2.full.pdf
 - - Mastodon
   - https://neuromatch.social/@neuralreckoning/110785811144218374
 - - Twitter
   - https://twitter.com/neuralreckoning/status/1684525463530528768
 abstract: |-
-  We continuously detect sensory data, like sights and sounds, and use this information to guide our behaviour.
-  However, rather than relying on single sensory channels, which are noisy and can be ambiguous alone, we merge
-  information across our senses and leverage this combined signal. In biological networks, this process
-  (multisensory integration) is implemented by multimodal neurons which are often thought to receive the
-  information accumulated by unimodal areas, and to fuse this across channels; an algorithm we term
-  accumulate-then-fuse. However, it remains an open question how well this theory generalises beyond the
-  classical tasks used to test multimodal integration. Here, we explore this by developing novel multimodal
-  tasks and deploying probabilistic, artificial and spiking neural network models. Using these models we
-  demonstrate that multimodal units are not necessary for accuracy or balancing speed/accuracy in classical
-  multimodal tasks, but are critical in a novel set of tasks in which we comodulate signals across channels.
-  We show that these comodulation tasks require multimodal units to implement an alternative fuse-then-accumulate
-  algorithm, which excels in naturalistic settings and is optimal for a wide class of multimodal problems.
-  Finally, we link our findings to experimental results at multiple levels; from single neurons to behaviour.
-  Ultimately, our work suggests that multimodal neurons may fuse-then-accumulate evidence across channels, and
-  provides novel tasks and models for exploring this in biological systems.
+  Animals continuously detect information via multiple sensory channels, like vision and hearing, and integrate these signals to realise faster and more accurate decisions; a fundamental neural computation known as multisensory integration. A widespread view of this process is that multimodal neurons linearly fuse information across sensory channels. However, does linear fusion generalise beyond the classical tasks used to explore multisensory integration? Here, we develop novel multisensory tasks, which focus on the underlying statistical relationships between channels, and deploy models at three levels of abstraction: from probabilistic ideal observers to artificial and spiking neural networks. Using these models, we demonstrate that when information provided by different channels is not independent, linear fusion performs sub-optimally and even fails in extreme cases. This leads us to propose a simple nonlinear algorithm for multisensory integration which is compatible with our current knowledge of multimodal circuits, excels in naturalistic settings and is optimal for a wide class of multisensory tasks. Thus, our work emphasises the role of nonlinear fusion in multisensory integration, and provides testable hypotheses for the field to explore at multiple levels: from single neurons to behaviour.
 twitter_thread: >
   <blockquote class="twitter-tweet" data-conversation="none" data-dnt="true"><p lang="en" dir="ltr">New preprint! A simple way to extend the classical evidence weighting model of multimodal integration to solve a much wider range of naturalistic tasks. Spoiler: it&#39;s nonlinearity. Works for SNNs/ANNs. 🧵 with <a href="https://twitter.com/MarcusGhosh?ref_src=twsrc%5Etfw">@MarcusGhosh</a> <a href="https://twitter.com/GabrielBna1?ref_src=twsrc%5Etfw">@GabrielBna1</a> <a href="https://twitter.com/BormuthVolker?ref_src=twsrc%5Etfw">@BormuthVolker</a> <a href="https://t.co/4to71pOfsd">https://t.co/4to71pOfsd</a> <a href="https://t.co/E3ty5nlyp1">pic.twitter.com/E3ty5nlyp1</a></p>&mdash; Dan Goodman (@neuralreckoning) <a href="https://twitter.com/neuralreckoning/status/1684525463530528768?ref_src=twsrc%5Etfw">July 27, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
   <blockquote class="twitter-tweet" data-conversation="none" data-dnt="true"><p lang="en" dir="ltr">Think about the infamous &#39;cocktail party&#39;: you use synchrony between lip movements and sounds to help you hear in a noisy environment. But the classical model throws away that temporal structure, instead just linearly weighting visual and auditory evidence.</p>&mdash; Dan Goodman (@neuralreckoning) <a href="https://twitter.com/neuralreckoning/status/1684525465912975361?ref_src=twsrc%5Etfw">July 27, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
