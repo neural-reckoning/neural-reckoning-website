@@ -1,0 +1,17 @@
+year: 2022
+last_updated: 2-9-2022
+authors: Goodman D, Fiers T, Gao R, Ghosh M, Perez N
+journal: Zenodo
+title: Spiking Neural Network Models in Neuroscience - Cosyne Tutorial 2022
+categories:
+- Spiking
+- Machine learning
+- Modelling
+urls:
+- - Tutorial website
+  - https://neural-reckoning.github.io/cosyne-tutorial-2022/
+- - Tutorial videos (YouTube)
+  - https://www.youtube.com/playlist?list=PL09WqqDbQWHGJd7Il3yVxiBts5nRSxvJ4
+doi: 10.5281/zenodo.7044500
+abstract: Tutorial given at Cosyne 2022, on spiking neural networks from a classical and machine learning perspective.
+peer_reviewed: false
