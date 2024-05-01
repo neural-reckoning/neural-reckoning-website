@@ -1,5 +1,6 @@
 name: SNUFA
 url: http://snufa.net/
+logo: snufa_mascot.png
 short: Organisation for neuroscientists interested in spiking neural networks.
 long: >
   SNUFA (Spiking Neural networks as Universal Function Approximators) started as

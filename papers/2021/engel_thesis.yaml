@@ -1,0 +1,16 @@
+year: 2021
+authors: Engel I
+title: Improving binaural audio techniques for augmented reality
+publisher: Imperial College London
+phd_thesis: true
+categories:
+- Machine learning
+- Auditory
+- Virtual reality
+- Sound localisation
+urls:
+- - Thesis
+  - https://spiral.imperial.ac.uk/handle/10044/1/92700
+- - Thesis (PDF)
+  - https://spiral.imperial.ac.uk/bitstream/10044/1/92700/4/Engel-AM-JIE-2021-PhD-Thesis.pdf
+abstract: Audio augmented reality (AAR) is defined as the extension of a real auditory environment through virtual sound sources. A successful AAR system should create the illusion that virtual sounds actually come from the user's environment, for which several technical challenges must be overcome. First, room acoustics must be simulated accurately to predict the reverberant sound field produced by the virtual source as sound wavefronts reach the user. Second, said sound field must be translated into a pair of sound pressure signals at the user's ears. Finally, this binaural signal must be delivered to the user through an acoustically transparent system without limiting their ability to hear real sources. This process should be able to adapt in real time to user movements in a computationally efficient way, considering that resources may be limited in practice and most of them will likely be allocated to graphics processing (e.g. in a pair of augmented reality glasses). This Thesis aims to improve current techniques for binaural audio rendering in AAR by exploring the trade-off between computational complexity and perceived quality. Several perception-focused studies were proposed to explore the different parts of the rendering process. First, a prototype AAR system with hear-through functionality was proposed and a pilot experiment was conducted to investigate how users could adapt to it over time. A second study assessed the effect of non-individualised equalisation on the perceived quality of binaural renderings reproduced with open-ear headphones. A third study evaluated several state-of-the-art methods for the binaural rendering of sound fields of limited resolution in the spherical harmonics (Ambisonics) domain. Finally, a fourth study assessed the perceptual effect of simplifying Ambisonics-based binaural reverberation in various ways. Even though this Thesis focuses on the AAR scenario, the findings herein may be helpful for any application that would benefit from a computationally efficient implementation of binaural audio rendering methods.
