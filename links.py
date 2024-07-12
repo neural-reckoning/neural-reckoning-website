@@ -10,6 +10,7 @@ do_check_links = True
 link_exceptions = set([
     'https://uk.linkedin.com/in/jean-hugues-lestang-90b70073', # LinkedIn doesn't like links... in...?
     'https://uk.linkedin.com/in/greta-horvathova-5a22961b1',
+    'https://uk.linkedin.com/in/swathi-anillink',
     ])
 
 

@@ -52,7 +52,11 @@ def get_orcid_publications(user_id):
         if 'contributors' in work and 'contributor' in work['contributors'] and len(work['contributors']['contributor']):
             authors = []
             for contrib in work['contributors']['contributor']:
-                authors.append(contrib['credit-name']['value'])
+                if 'credit-name' not in contrib or contrib['credit-name'] is None:
+                    authors.append("Name Missing")
+                    print(f"Missing author name in ORCID data for {title}")
+                else:
+                    authors.append(contrib['credit-name']['value'])
             if len(authors)>6:
                 authors = [authors[0], 'et al.']
             pub.authors = ', '.join(authors)
@@ -72,8 +76,12 @@ def get_orcid_publications(user_id):
                         authors.append(f'''<a href="{auth['ORCID']}">{auth['given']} {auth['family']}</a>''')
                     elif 'given' in auth and 'family' in auth:
                         authors.append(f'''{auth['given']} {auth['family']}''')
-                    else:
+                    elif 'name' in auth:
                         authors.append(f'''{auth['name']}''')
+                    elif 'literal' in auth:
+                        authors.append(f'''{auth['literal']}''')
+                    else:
+                        authors.append("Name Missing")
                 if len(authors)>6:
                     authors = [authors[0], 'et al.']
                 pub.authors = ', '.join(authors)

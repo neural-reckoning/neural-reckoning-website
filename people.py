@@ -19,7 +19,7 @@ def sk_address(room):
     London SW7 2AZ
     '''.format(room=room)
 
-positions_in_order = ['pi', 'postdoc', 'phd', 'former']
+positions_in_order = ['pi', 'postdoc', 'phd', 'other', 'former']
 position_order_map = dict(zip(positions_in_order, range(len(positions_in_order))))
 position_headers = {
     'pi': '',
