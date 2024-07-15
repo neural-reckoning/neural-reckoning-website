@@ -40,6 +40,11 @@ def find_thing_authors(people, things, attr='authors'):
         for author in thing.author_objects:
             if not isinstance(author, str):
                 author.add_thing(thing)
+        # add PhD thesis to authors
+        if hasattr(thing, 'phd_thesis') and thing.phd_thesis:
+            assert len(thing.author_objects)==1
+            author = thing.author_objects[0]
+            author.phd_thesis = thing
 
 
 class RelatedSoftwareGetter:

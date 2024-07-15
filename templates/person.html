@@ -34,6 +34,12 @@
                 Lab member: {{ dates_string }}
             </li>
         {% endif %}
+        {% if phd_thesis %}
+        <li class="list-group-item">
+            <i class="fa-solid fa-graduation-cap"></i> PhD thesis<br/>
+            <a href="{{phd_thesis.page}}">{{ phd_thesis.title }}</a>
+        </li>
+        {% endif %}
         {% if telephone %}
             <li class="list-group-item">
                 {{ telephone }}
