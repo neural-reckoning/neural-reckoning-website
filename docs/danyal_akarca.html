@@ -22,8 +22,20 @@
     <title>Danyal Akarca</title>
     <link rel="STYLESHEET" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script lang="javascript">
+        function hideAfterDeadline() {
+            var now = new Date();
+            var elements = document.getElementsByClassName("hideAfterDeadline");
+            for (var i = 0; i < elements.length; i++) {
+                var deadline = new Date(elements[i].getAttribute("data-deadline"));
+                if(now > deadline) {
+                    elements[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </head>
-<body>
+<body onload="hideAfterDeadline()">
 
 <nav class="navbar sticky-top navbar-expand-xl navbar-light bg-light"><div class="container">
     <a class="navbar-brand" href="index.html">
@@ -101,6 +113,10 @@
     </div>
 </div></nav>
 
+<div class="hideAfterDeadline alert alert-success" data-deadline="2024-10-01" style="text-align: center">
+    <a href="https://www.imperial.ac.uk/jobs/search-jobs/description/index.php?jobId=20479&jobTitle=Research+Associate+in+Computational+Neuroscience%2FNeuroAI%2FNeuromorphic+Systems" style="color: black">We have a postdoctoral position available (deadline Sept 30). Click for details.</a>
+</div>
+
 <div class="container">
 
     <p>&nbsp;</p>
@@ -176,7 +192,7 @@
 </a><br/><i>Developmental Science</i>    </div></li>
 
                     <li><div class="publication_list_text">
-        <a href="http://orcid.org/0000-0002-1283-9845">Alicja Monaghan</a>, <a href="http://orcid.org/0000-0002-0714-0685">Richard. A.I. Bethlehem</a>, <a href="http://orcid.org/0000-0002-5931-0295">Danyal Akarca</a>, <a href="http://orcid.org/0000-0002-8880-9204">Daniel Margulies</a>, <a href="http://orcid.org/0000-0002-7042-5392">Duncan E. Astle</a>, the Team CALM (2024)
+        <a href="http://orcid.org/0000-0002-1283-9845">Alicja Monaghan</a>, <a href="http://orcid.org/0000-0002-0714-0685">Richard. A.I. Bethlehem</a>, <a href="http://orcid.org/0000-0002-5931-0295">Danyal Akarca</a>, <a href="http://orcid.org/0000-0002-8880-9204">Daniel Margulies</a>, the Team CALM, <a href="http://orcid.org/0000-0002-7042-5392">Duncan E. Astle</a> (2024)
         <br/>
 <a href="http://dx.doi.org/10.1101/2024.05.20.594657">        <b>Canonical neurodevelopmental trajectories of structural and functional manifolds</b>
 </a>    </div></li>
@@ -242,7 +258,7 @@
             <h5>2022</h5>
             <ul>
                     <li><div class="publication_list_text">
-        <a href="http://orcid.org/0000-0002-1728-9811">Silvana Mareva</a>, <a href="http://orcid.org/0000-0002-5931-0295">Danyal Akarca</a>, <a href="http://orcid.org/0000-0002-6821-2793">Joni Holmes</a>, The CALM Team (2022)
+        <a href="http://orcid.org/0000-0002-1728-9811">Silvana Mareva</a>, <a href="http://orcid.org/0000-0002-5931-0295">Danyal Akarca</a>, The CALM Team, <a href="http://orcid.org/0000-0002-6821-2793">Joni Holmes</a> (2022)
         <br/>
 <a href="http://dx.doi.org/10.1111/jcpp.13685">        <b>Transdiagnostic profiles of behaviour and communication relate to academic and socioemotional functioning and neural white matter organisation</b>
 </a><br/><i>Journal of Child Psychology and Psychiatry</i>    </div></li>
@@ -254,7 +270,7 @@
 </a>    </div></li>
 
                     <li><div class="publication_list_text">
-        <a href="http://orcid.org/0000-0002-3092-9545">Natalia Zdorovtsova</a>, <a href="http://orcid.org/0000-0003-0333-5212">Jonathan Jones</a>, <a href="http://orcid.org/0000-0002-5931-0295">Danyal Akarca</a>, Elia Benhamou, <a href="http://orcid.org/0000-0002-7042-5392">Duncan E. Astle</a>, The CALM Team (2022)
+        <a href="http://orcid.org/0000-0002-3092-9545">Natalia Zdorovtsova</a>, <a href="http://orcid.org/0000-0003-0333-5212">Jonathan Jones</a>, <a href="http://orcid.org/0000-0002-5931-0295">Danyal Akarca</a>, Elia Benhamou, The CALM Team, <a href="http://orcid.org/0000-0002-7042-5392">Duncan E. Astle</a> (2022)
         <br/>
 <a href="http://dx.doi.org/10.1101/2022.07.26.501508">        <b>Exploring Neural Heterogeneity in Inattention and Hyperactivity</b>
 </a>    </div></li>

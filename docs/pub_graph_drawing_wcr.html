@@ -22,8 +22,20 @@
     <title>Graph Drawing by Stochastic Gradient Descent</title>
     <link rel="STYLESHEET" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <script lang="javascript">
+        function hideAfterDeadline() {
+            var now = new Date();
+            var elements = document.getElementsByClassName("hideAfterDeadline");
+            for (var i = 0; i < elements.length; i++) {
+                var deadline = new Date(elements[i].getAttribute("data-deadline"));
+                if(now > deadline) {
+                    elements[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </head>
-<body>
+<body onload="hideAfterDeadline()">
 
 <nav class="navbar sticky-top navbar-expand-xl navbar-light bg-light"><div class="container">
     <a class="navbar-brand" href="index.html">
@@ -100,6 +112,10 @@
         </ul>
     </div>
 </div></nav>
+
+<div class="hideAfterDeadline alert alert-success" data-deadline="2024-10-01" style="text-align: center">
+    <a href="https://www.imperial.ac.uk/jobs/search-jobs/description/index.php?jobId=20479&jobTitle=Research+Associate+in+Computational+Neuroscience%2FNeuroAI%2FNeuromorphic+Systems" style="color: black">We have a postdoctoral position available (deadline Sept 30). Click for details.</a>
+</div>
 
 <div class="container">
 
