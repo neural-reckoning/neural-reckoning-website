@@ -1,0 +1,14 @@
+name: Nonlinearity and network topology in multimodal circuits
+type: Talk
+url: https://www.youtube.com/watch?v=duzTIn63WTs
+embed: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/duzTIn63WTs?si=PGaQmauJM9ovAoNJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+short: Marcus Ghosh talk at ICNS
+long: Animals continuously detect information via multiple sensory channels, like vision and hearing, and integrate these signals to realise faster and more accurate decisions; a fundamental neural process termed multisensory integration. The canonical view of this computation is that unimodal areas, like primary visual or auditory cortex, send feedforward connections to multimodal neurons, which linearly fuse information across channels. However, does this view extend beyond the laboratory? In this talk I will present two projects which explore this question at multiple levels from probabilistic models to artificial and spiking neural networks. First, using these models and a family of novel tasks with varied statistical relationships between sensory channels, I will demonstrate that linear fusion performs sub-optimally in many tasks and even fails in extreme cases. This leads me to propose a novel nonlinear algorithm for multimodal integration which is optimal for a wide class of multimodal problems. Second, using in silico evolutionary algorithms, I will show how more naturalistic tasks, like navigation and prey-capture in multimodal environments, quickly demand more complex network architectures. Overall, my work provides new perspectives on multisensory integration, and testable hypotheses for the field to explore at multiple levels, from single neurons to behaviour.
+related:
+  - marcus_ghosh
+categories:
+  - Modelling
+  - Neuroscience
+  - Machine learning
+  - Multimodal
+last_updated: 11-09-2024

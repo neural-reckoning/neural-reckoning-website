@@ -22,7 +22,8 @@ category_inclusions = {
     'Learning': ['Neuroscience'],
     'Modelling': ['Neuroscience'],
     'Visual': ['Sensory'],
-    'Virtual reality': ['Sensory']
+    'Virtual reality': ['Sensory'],
+    'Multimodal': ['Sensory'],
     }
 
 category_detail_links = {
