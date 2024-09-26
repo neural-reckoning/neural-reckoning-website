@@ -1,176 +1,206 @@
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<title>Workshop timer</title>
-<script type="text/javascript">
-talktime_mins = 15;
-warningtime_mins = 2;
-questiontime_mins = 10;
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Workshop timer</title>
+  <script type="text/javascript">
+    talktime_mins = 15;
+    warningtime_mins = 2;
+    questiontime_mins = 10;
 
-lightgreen = "#00aa00";
-darkgreen = "#007700";
-lightorange = "#ffaa00";
-darkorange = "#aa7700";
-lightblue = "#0000ff";
-darkblue = "#000077";
-lightred = "#ff0000";
-darkred = "#aa0000";
+    lightgreen = "#00aa00";
+    darkgreen = "#007700";
+    lightorange = "#ffaa00";
+    darkorange = "#aa7700";
+    lightblue = "#0000ff";
+    darkblue = "#000077";
+    lightred = "#ff0000";
+    darkred = "#aa0000";
 
-totaltime_mins = talktime_mins+questiontime_mins;
-totaltime = totaltime_mins*1000*60;
-talktime = 1000*60*talktime_mins;
-warningtime = 1000*60*warningtime_mins;
-questiontime = 1000*60*questiontime_mins;
+    totaltime_mins = talktime_mins+questiontime_mins;
+    totaltime = totaltime_mins*1000*60;
+    talktime = 1000*60*talktime_mins;
+    warningtime = 1000*60*warningtime_mins;
+    questiontime = 1000*60*questiontime_mins;
 
-updatefrequency = 1000;
-timeremaining = 0;
-timervar = null;
+    updatefrequency = 1000;
+    timeremaining = 0;
+    timervar = null;
 
-function start_talk()
-{
- talktime_mins = parseInt(document.getElementById('inp_talktime').value);
- warningtime_mins = parseInt(document.getElementById('inp_warningtime').value);
- questiontime_mins = parseInt(document.getElementById('inp_questiontime').value);
- totaltime_mins = talktime_mins+questiontime_mins;
- totaltime = totaltime_mins*1000*60;
- talktime = 1000*60*talktime_mins;
- warningtime = 1000*60*warningtime_mins;
- questiontime = 1000*60*questiontime_mins;
- if(timeremaining>0)
- {
-  clearTimeout(timervar);
- }
- timeremaining = totaltime;
- timervar = setTimeout("tick()", updatefrequency);
- set_bars(1, lightgreen, darkgreen, 1, talktime);
-}
+    function start_talk()
+    {
+      talktime_mins = parseInt(document.getElementById('inp_talktime').value);
+      warningtime_mins = parseInt(document.getElementById('inp_warningtime').value);
+      questiontime_mins = parseInt(document.getElementById('inp_questiontime').value);
+      totaltime_mins = talktime_mins+questiontime_mins;
+      totaltime = totaltime_mins*1000*60;
+      talktime = 1000*60*talktime_mins;
+      warningtime = 1000*60*warningtime_mins;
+      questiontime = 1000*60*questiontime_mins;
+      if(timeremaining>0)
+      {
+        clearTimeout(timervar);
+      }
+      timeremaining = totaltime;
+      timervar = setTimeout("tick()", updatefrequency);
+      set_bars(1, lightgreen, darkgreen, 1, talktime);
+    }
 
-function set_bars(width, light, dark, istalk, rem)
-{
- rem_min = Math.floor((rem+1)/(60*1000));
- rem_sec = Math.floor(rem/1000)-60*rem_min;
- document.getElementById('timeremaining').innerHTML = "Time remaining: "+rem_min+"m "+rem_sec+"s";
- if(istalk) {
-  document.getElementById('section').innerHTML = "Talk";
-  document.getElementById('talk').style.display = "block";
-  document.getElementById('questions').style.display = "none";
-  document.getElementById('talk_warning').style.width = (warningtime/talktime)*100+"%";
-  document.getElementById('talk_rest').style.width = (1-warningtime/talktime)*100+"%";
- } else {
-  document.getElementById('section').innerHTML = "Questions";
-  document.getElementById('talk').style.display = "none";
-  document.getElementById('questions').style.display = "block";
- }
- document.getElementById('bar_remaining').style.backgroundColor = light;
- document.getElementById('bar_elapsed').style.backgroundColor = dark;
- document.getElementById('bar_remaining').style.width = width*100+"%";
- document.getElementById('bar_elapsed').style.width = (1-width)*100+"%";
-}
+    function set_bars(width, light, dark, istalk, rem)
+    {
+      rem_min = Math.floor((rem+1)/(60*1000));
+      rem_sec = Math.floor(rem/1000)-60*rem_min;
+      document.getElementById('timeremaining').innerHTML = "Time remaining: "+rem_min+"m "+rem_sec+"s";
+      if(istalk) {
+        document.getElementById('section').innerHTML = "Talk";
+        document.getElementById('talk').style.display = "block";
+        document.getElementById('questions').style.display = "none";
+        document.getElementById('talk_warning').style.width = (warningtime/talktime)*100+"%";
+        document.getElementById('talk_rest').style.width = (1-warningtime/talktime)*100+"%";
+      } else {
+        document.getElementById('section').innerHTML = "Questions";
+        document.getElementById('talk').style.display = "none";
+        document.getElementById('questions').style.display = "block";
+      }
+      document.getElementById('bar_remaining').style.backgroundColor = light;
+      document.getElementById('bar_elapsed').style.backgroundColor = dark;
+      document.getElementById('bar_remaining').style.width = width*100+"%";
+      document.getElementById('bar_elapsed').style.width = (1-width)*100+"%";
+    }
 
-function tick()
-{
- if(!document.getElementById('paused').checked)
- {
-  timeremaining = timeremaining-updatefrequency;
- }
- if(timeremaining>0)
- {
-  timervar = setTimeout('tick()', updatefrequency);
- } else
- {
-  timeremaining = 0;
-  set_bars(1, lightred, darkred, 0, 0);
-  return;  
- }
- var light, dark, w, istalk, rem;
- if(timeremaining>questiontime)
- {
-   var talktime_rem = timeremaining-questiontime;
-   if(talktime_rem>warningtime)
-   {
-     light = lightgreen;
-     dark = darkgreen;
-   } else
-   {
-     light = lightorange;
-     dark = darkorange;
-   }
-   w = talktime_rem/talktime;
-   istalk = 1;
-   rem = talktime_rem;
- } else {
-   light = lightblue;
-   dark = darkblue;
-   w = timeremaining/questiontime;
-   istalk = 0;
-   rem = timeremaining;
- }
- set_bars(w, light, dark, istalk, rem);
-}
+    function tick()
+    {
+      if(!document.getElementById('paused').checked)
+      {
+        timeremaining = timeremaining-updatefrequency;
+      }
+      if(timeremaining>0)
+      {
+        timervar = setTimeout('tick()', updatefrequency);
+      } else
+      {
+        timeremaining = 0;
+        set_bars(1, lightred, darkred, 0, 0);
+        return;  
+      }
+      var light, dark, w, istalk, rem;
+      if(timeremaining>questiontime)
+      {
+        var talktime_rem = timeremaining-questiontime;
+        if(talktime_rem>warningtime)
+        {
+          light = lightgreen;
+          dark = darkgreen;
+        } else
+        {
+          light = lightorange;
+          dark = darkorange;
+        }
+        w = talktime_rem/talktime;
+        istalk = 1;
+        rem = talktime_rem;
+      } else {
+        light = lightblue;
+        dark = darkblue;
+        w = timeremaining/questiontime;
+        istalk = 0;
+        rem = timeremaining;
+      }
+      set_bars(w, light, dark, istalk, rem);
+    }
 
-function jump_questions()
-{
-  clearTimeout(timervar);
-  timeremaining = questiontime;
-  tick();
-}
+    function jump_questions()
+    {
+      clearTimeout(timervar);
+      timeremaining = questiontime;
+      tick();
+    }
 
-function end_talk()
-{
-  clearTimeout(timervar);
-  timeremaining = 0;
-  tick();
-}
+    function end_talk()
+    {
+      clearTimeout(timervar);
+      timeremaining = 0;
+      tick();
+    }
 
-function forwardmin()
-{
-  clearTimeout(timervar);
-  timeremaining = timeremaining-1000*60;
-  tick();
-}
-</script>
-
+    function forwardmin()
+    {
+      clearTimeout(timervar);
+      timeremaining = timeremaining-1000*60;
+      tick();
+    }
+  </script>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+    }
+    #section
+    {
+        font-size: 36pt;
+    }
+    #timeremaining
+    {
+      font-size: 24pt;
+    }
+    @media ((min-width: 768px) and (orientation: portrait)) or (min-width: 992px)
+    {
+      #section
+      {
+        font-size: 100pt;
+      }
+      #timeremaining
+      {
+        font-size: 72pt;
+      }
+    }
+  </style>
 </head>
-<body bgcolor="#000000" text="white">
+<body>
 
-<div id="section" style="font-size: 100pt;">Talk</div>
+  <div id="section">Talk</div>
 
-<div id="timeremaining" style="font-size: 72pt;">Time remaining: 15m 0s</div>
+  <div id="timeremaining"">Time remaining: 15m 0s</div>
 
-<div id="talk">
-<table width="100%" cellpadding="0px" cellspacing="2px">
-<tr>
-<td id="talk_warning" width="13.33333%" height="10px" style="background: #ffaa00;"></td>
-<td id="talk_rest" width="86.66666%" height="10px" style="background: #00aa00;"></td>
-</tr>
-</table>
-</div>
-<div id="questions" style="display:none;">
-<table width="100%" cellpadding="0px" cellspacing="2px">
-<tr>
-<td width="100%" height="10px" style="background: #0000ff;"></td>
-</tr>
-</table>
-</div>
-<table width="100%" cellpadding="0px" cellspacing="0px" id="timetable">
-<tr>
-<td id='bar_remaining' width="100%" height="200px" style="background: #00aa00;"></td>
-<td id='bar_elapsed' width="0%" height="200px" style="background: #000000;"></td>
-</tr>
-</table>
+  <div id="talk">
+    <table width="100%" cellpadding="0px" cellspacing="2px">
+      <tr>
+        <td id="talk_warning" width="13.33333%" height="10px" style="background: #ffaa00;"></td>
+        <td id="talk_rest" width="86.66666%" height="10px" style="background: #00aa00;"></td>
+      </tr>
+    </table>
+  </div>
 
-<p> </p>
+  <div id="questions" style="display:none;">
+    <table width="100%" cellpadding="0px" cellspacing="2px">
+      <tr>
+        <td width="100%" height="10px" style="background: #0000ff;"></td>
+      </tr>
+    </table>
+  </div>
 
-<form>
-<input type="button" value="Start talk" onclick='start_talk()'/>
-<input type="button" value="Jump to questions" onclick='jump_questions()'/>
-<input type="button" value="End talk" onclick='end_talk()'/>
-<input type="button" value="Forward one minute" onclick='forwardmin()'/>
-Pause: <input type="checkbox" id="paused"/>
-<br/>
-Time in minutes for talk <input type="text" id="inp_talktime" value="15" size="5"/>
-warning <input type="text" id="inp_warningtime" value="2" size="5"/>
-questions <input type="text" id="inp_questiontime" value="10" size="5"/>
-</form>
+  <table width="100%" cellpadding="0px" cellspacing="0px" id="timetable">
+    <tr>
+      <td id='bar_remaining' width="100%" height="200px" style="background: #00aa00;"></td>
+      <td id='bar_elapsed' width="0%" height="200px" style="background: #000000;"></td>
+    </tr>
+  </table>
 
-</body>
+  <p> </p>
+
+  <form>
+    <input type="button" value="Start talk" onclick='start_talk()'/>
+    <input type="button" value="Jump to questions" onclick='jump_questions()'/>
+    <input type="button" value="End talk" onclick='end_talk()'/>
+    <input type="button" value="Forward one minute" onclick='forwardmin()'/>
+    Pause: <input type="checkbox" id="paused"/>
+    <br/>
+    Time in minutes for talk <input type="text" id="inp_talktime" value="15" size="5"/>
+    warning <input type="text" id="inp_warningtime" value="2" size="5"/>
+    questions <input type="text" id="inp_questiontime" value="10" size="5"/>
+  </form>
+
+  </body>
 </html>
