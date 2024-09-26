@@ -29,6 +29,28 @@
     timeremaining = 0;
     timervar = null;
 
+    let is_running = false;
+
+    let wake_lock = null;
+    const requestWakeLock = async () => {
+      try {
+        wake_lock = await navigator.wakeLock.request('screen');
+      } catch (err) {
+      }
+    };
+    const releaseWakeLock = async () => {
+      if (wake_lock !== null) {
+        await wake_lock.release();
+        wake_lock = null;
+      }
+    };
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'visible' && timeremaining>0 && is_running) {
+        requestWakeLock();
+      }
+    }
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
     function start_talk()
     {
       talktime_mins = parseInt(document.getElementById('inp_talktime').value);
@@ -46,6 +68,8 @@
       timeremaining = totaltime;
       timervar = setTimeout("tick()", updatefrequency);
       set_bars(1, lightgreen, darkgreen, 1, talktime);
+      requestWakeLock();
+      is_running = true;
     }
 
     function set_bars(width, light, dark, istalk, rem)
@@ -83,6 +107,8 @@
       {
         timeremaining = 0;
         set_bars(1, lightred, darkred, 0, 0);
+        is_running = false;
+        releaseWakeLock();
         return;  
       }
       var light, dark, w, istalk, rem;
@@ -115,6 +141,8 @@
     {
       clearTimeout(timervar);
       timeremaining = questiontime;
+      is_running = true;
+      requestWakeLock();
       tick();
     }
 
@@ -122,6 +150,8 @@
     {
       clearTimeout(timervar);
       timeremaining = 0;
+      is_running = false;
+      releaseWakeLock();
       tick();
     }
 
@@ -132,6 +162,7 @@
       tick();
     }
   </script>
+
   <style>
     body {
       background-color: black;
@@ -145,6 +176,10 @@
     {
       font-size: 24pt;
     }
+    .main_progress_bar
+    {
+      height: 100px;
+    }
     @media ((min-width: 768px) and (orientation: portrait)) or (min-width: 992px)
     {
       #section
@@ -154,6 +189,10 @@
       #timeremaining
       {
         font-size: 72pt;
+      }
+      .main_progress_bar
+      {
+        height: 200px;
       }
     }
   </style>
@@ -183,8 +222,8 @@
 
   <table width="100%" cellpadding="0px" cellspacing="0px" id="timetable">
     <tr>
-      <td id='bar_remaining' width="100%" height="200px" style="background: #00aa00;"></td>
-      <td id='bar_elapsed' width="0%" height="200px" style="background: #000000;"></td>
+      <td class="main_progress_bar" id='bar_remaining' width="100%" style="background: #00aa00;"></td>
+      <td class="main_progress_bar" id='bar_elapsed' width="0%" style="background: #000000;"></td>
     </tr>
   </table>
 
