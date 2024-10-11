@@ -59,6 +59,17 @@
                 {% endfor %}
             </li>
         {% endif %}
+        {% if formatted_relationships %}
+            <li class="list-group-item">
+                {% for relationship, targets in formatted_relationships.items() %}
+                    {{ relationship }}:
+                    {% for target in targets %}
+                        <a href="{{target.key}}.html">{{ target.name }}</a>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                    {% if not loop.last %}<br>{% endif %}
+                {% endfor %}
+            </li>
+        {% endif %}
         </ul>
         {% if twitter %}
             <p>&nbsp;</p>

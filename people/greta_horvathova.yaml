@@ -12,3 +12,6 @@ links:
   - ['LinkedIn', 'https://uk.linkedin.com/in/greta-horvathova-5a22961b1']
 dates:
 - 2023
+relationships:
+  supervisor:
+    - dan_goodman

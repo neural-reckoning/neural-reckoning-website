@@ -14,3 +14,7 @@ long: |-
   </p>
 dates:
 - 2024
+relationships:
+  supervisor:
+    - danyal_akarca
+    - dan_goodman

@@ -21,3 +21,6 @@ links:
   - ['Google Scholar', 'https://scholar.google.com/citations?user=__03svoAAAAJ&hl=en']
   - ['ORCID', 'https://orcid.org/0000-0002-2428-4605']
 twitter: MarcusGhosh
+relationships:
+  mentor:
+    - dan_goodman

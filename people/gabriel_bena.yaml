@@ -16,3 +16,6 @@ dates:
 - 2021
 semantic_scholar: 2107033449
 orcid: 0009-0009-2802-4702
+relationships:
+  supervisor:
+    - dan_goodman

@@ -1,4 +1,5 @@
 import codecs, glob, os
+from collections import defaultdict
 
 from PIL import Image, ImageDraw
 
@@ -27,6 +28,12 @@ position_headers = {
     'phd': 'PhD students',
     'other': 'Others',
     'former': 'Former members',
+    }
+
+relationship_types = {
+    'mentor': ('Mentored by', 'Mentor to'),
+    'supervisor': ('Supervised by', 'Supervises'),
+    'collaborator': ('Works with', 'Works with'),
     }
 
 class Person(Thing):
@@ -64,6 +71,16 @@ def get_people():
     for fname in fnames:
         person = Person(fname)
         people[person.key] = person
+        if not hasattr(person, 'relationships'):
+            person.relationships = {}
+        person.formatted_relationships = defaultdict(list)
+    for person in people.values():
+        for relationship_type, target_keys in person.relationships.items():
+            rel_forward, rel_backward = relationship_types[relationship_type]
+            person.formatted_relationships[rel_forward] = [people[target_key] for target_key in target_keys]
+            for target_key in target_keys:
+                target = people[target_key]
+                target.formatted_relationships[rel_backward].append(person)
     return people
 
 

@@ -18,3 +18,7 @@ links:
   - ['ORCID', 'https://orcid.org/0009-0004-5976-1717']
   - ['LinkedIn', 'https://uk.linkedin.com/in/swathi-anillink']
 twitter: Swathi_Anil_
+relationships:
+  mentor:
+    - dan_goodman
+    - marcus_ghosh

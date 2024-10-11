@@ -16,3 +16,6 @@ long: |-
 dates:
 - 2016
 semantic_scholar: 2070014411
+relationships:
+  supervisor:
+    - dan_goodman
