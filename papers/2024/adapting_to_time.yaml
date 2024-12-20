@@ -1,0 +1,25 @@
+year: 2024
+last_updated: 13-12-2024
+authors: Habashy KG, Evans BD, Goodman DFM, Bowers JS
+title: "Adapting to time: why nature may have evolved a diverse set of neurons"
+journal: PLoS Computational Biology
+doi: 10.1371/journal.pcbi.1012673
+additional: "20(12): e1012673"
+categories:
+- Neuroscience
+- Learning
+- Modelling
+- Machine learning
+- Spiking
+urls:
+- - Journal (HTML)
+  - https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012673
+- - Journal (PDF)
+  - https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1012673&type=printable
+- - Code (GitHub)
+  - https://github.com/biocomplab/Neuro-morphology
+- - Preprint
+  - https://arxiv.org/abs/2404.14325
+- - Preprint (PDF)
+  - https://arxiv.org/pdf/2404.14325
+abstract: Brains have evolved diverse neurons with varying morphologies and dynamics that impact temporal information processing. In contrast, most neural network models use homogeneous units that vary only in spatial parameters (weights and biases). To explore the importance of temporal parameters, we trained spiking neural networks on tasks with varying temporal complexity, holding different parameter subsets constant. We found that adapting conduction delays is crucial for solving all test conditions under tight resource constraints. Remarkably, these tasks can be solved using only temporal parameters (delays and time constants) with constant weights. In more complex spatio-temporal tasks, an adaptable bursting parameter was essential. Overall, allowing adaptation of both temporal and spatial parameters enhances network robustness to noise, a vital feature for biological brains and neuromorphic computing systems. Our findings suggest that rich and adaptable dynamics may be the key for solving temporally structured tasks efficiently in evolving organisms, which would help explain the diverse physiological properties of biological neurons.
