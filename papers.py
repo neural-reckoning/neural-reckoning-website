@@ -96,4 +96,9 @@ def get_papers():
 def write_papers(papers):
     for key, paper in papers.items():
         filename = f'pub_{key}.html'
+        if not hasattr(paper, 'socialcard') and hasattr(paper, 'abstract'):
+            shortabs = paper.abstract
+            if len(shortabs) > 160:
+                shortabs = shortabs[:160] + '...'
+            paper.socialcard = {'description': shortabs}
         apply_template('paper.html', filename, keys_from=paper)

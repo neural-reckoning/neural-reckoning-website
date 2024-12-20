@@ -28,6 +28,12 @@ def apply_template(name, filename, keys=None, keys_from=None):
             if not k.startswith('_'):
                 keys[k] = v
     keys['filename'] = filename
+    if 'socialcard' not in keys:
+        keys['socialcard'] = {}
+    if 'description' not in keys['socialcard']:
+        keys['socialcard']['description'] = ""
+    if 'image' not in keys['socialcard']:
+        keys['socialcard']['image'] = "default-social-media-card.png"
     page = env.get_template(name).render(**keys)
     codecs.open(os.path.join('docs', filename), 'w', encoding='utf-8').write(scan_html_for_links(page, filename))
 
