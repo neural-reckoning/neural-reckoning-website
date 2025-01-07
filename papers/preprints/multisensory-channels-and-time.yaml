@@ -1,0 +1,21 @@
+year: Preprints
+last_updated: 20-12-2024
+authors: Anil S, Ghosh M, Goodman DFM
+title: Fusing multisensory signals across channels and time
+categories:
+- Sensory
+- Neuroscience
+- Modelling
+- Spiking
+- Multimodal
+urls:
+- - Preprint (biorxiv)
+  - https://www.biorxiv.org/content/10.1101/2024.12.19.629348v1
+- - Preprint (HTML)
+  - https://www.biorxiv.org/content/10.1101/2024.12.19.629348v1.full
+- - Preprint (PDF)
+  - https://www.biorxiv.org/content/10.1101/2024.12.19.629348v1.full.pdf
+- - Code (GitHub)
+  - https://github.com/swathianil/Temporal_Nonlinear_fusion
+abstract: |-
+  Animals continuously combine information across sensory modalities and time, and use these combined signals to guide their behaviour. Picture a predator watching their prey sprint and screech through a field. To date, a range of multisensory algorithms have been proposed to model this process including linear and nonlinear fusion, which combine the inputs from multiple sensory channels via either a sum or nonlinear function. However, many multisensory algorithms treat successive observations independently, and so cannot leverage the temporal structure inherent to naturalistic stimuli. To investigate this, we introduce a novel multisensory task in which we provide the same number of task-relevant signals per trial but vary how this information is presented: from many short bursts to a few long sequences. We demonstrate that multisensory algorithms that treat different time steps as independent, perform sub-optimally on this task. However, simply augmenting these algorithms to integrate across sensory channels and short temporal windows allows them to perform surprisingly well, and comparably to fully recurrent neural networks. Overall, our work: highlights the benefits of fusing multisensory information across channels and time, shows that small increases in circuit/model complexity can lead to significant gains in performance, and provides a novel multisensory task for testing the relevance of this in biological systems.
