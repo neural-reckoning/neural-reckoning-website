@@ -1,0 +1,12 @@
+year: 2006
+authors: Goodman DFM
+title: "Boundaries of slices of quasifuchsian space"
+publisher: University of Warwick
+phd_thesis: true
+categories:
+- Mathematics
+- Software
+urls:
+- - Thesis (PDF)
+  - https://neural-reckoning.org/dan-goodman-thesis.pdf
+abstract: We prove that the boundaries of the Maskit and Bers slices contain an uncountable, dense set of points about which the boundary spirals infinitely. The set of points about which we prove the boundary spirals infinitely has zero measure and is akin to a countable union of Cantor sets. On the basis of strong numerical evidence, we conjecture that in fact the boundary spirals infinitely at almost all points in the boundary. We further conjecture that the Hausdorff dimension of the Maskit slice is less than 1.25.
