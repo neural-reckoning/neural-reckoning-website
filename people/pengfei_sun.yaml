@@ -1,0 +1,23 @@
+name: Pengfei Sun
+author_names:
+- Sun P
+position: postdoc
+short: Brain-inspired neural networks.
+long: |-
+  <p>
+    Pengfei Sun works on developing brain-inspired neural networks, with a particular focus on delay learning, neuromorphic applications, and EEG decoding.
+  </p>
+  <p>
+    Pengfei is supervised by <a href="danyal_akarca.html">Dan Akarca</a> and co-supervised
+    by <a href="dan_goodman.html">Dan Goodman</a>.
+  </p>
+dates:
+- 2025
+relationships:
+  supervisor:
+    - danyal_akarca
+    - dan_goodman
+orcid: 0000-0002-1855-5974
+links:
+  - ['Google Scholar', 'https://scholar.google.com/citations?user=WfR4AVAAAAAJ&hl=en']
+  - ['ORCID', 'https://orcid.org/0000-0002-1855-5974']
