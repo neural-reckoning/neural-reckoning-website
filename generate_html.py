@@ -7,6 +7,7 @@ import os
 import yaml
 
 # Local imports
+from bluesky import generate_bluesky_threads
 from cache import save_cache
 from categories import build_categories, write_categories
 from links import check_links
@@ -35,8 +36,9 @@ organisations = get_organisations()
 # Generate thumbnails
 make_people_thumbnails(people)
 
-# Generate twitter threads
+# Generate social media threads
 generate_twitter_threads(papers)
+generate_bluesky_threads(papers)
 
 # Find relationships
 find_thing_authors(people, papers)

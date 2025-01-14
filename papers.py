@@ -51,6 +51,14 @@ class Paper(Thing):
                             <i class="fa-brands fa-mastodon"></i>
                         </a>
                         '''
+            if re.search(r'\b(bluesky)\b', name, flags=re.IGNORECASE):
+                name = '<i class="fa-brands fa-bluesky"></i> '+name
+                if 'bluesky' not in icons: # use first bluesky link
+                    icons['bluesky'] = f'''
+                        <a href="{url}" target="_blank">
+                            <i class="fa-brands fa-bluesky"></i>
+                        </a>
+                        '''
             if re.search(r'\bhtml\b', name, flags=re.IGNORECASE):
                 name = '<i class="fa-regular fa-file-lines"></i> '+name
                 if 'html' not in icons: # use first html link
