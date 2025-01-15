@@ -109,4 +109,10 @@ def write_papers(papers):
             if len(shortabs) > 160:
                 shortabs = shortabs[:160] + '...'
             paper.socialcard = {'description': shortabs}
+        if hasattr(paper.author_objects[0], 'links'):
+            linkvaldict = dict((k.lower(), v) for k, v in paper.author_objects[0].links)
+            if 'mastodon' in linkvaldict:
+                if not hasattr(paper, 'socialcard'):
+                    paper.socialcard = {}
+                paper.socialcard['fediverse_creator'] = linkvaldict['mastodon']
         apply_template('paper.html', filename, keys_from=paper)
