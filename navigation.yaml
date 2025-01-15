@@ -19,12 +19,15 @@ unindexed_pages:
     'accessibility.html': 'Accessibility statement'
 
 external_icon_links:
-    - name: Twitter
-      fa: fa-brands fa-twitter
-      url: https://twitter.com/neuralreckoning
     - name: Mastodon
       fa: fa-brands fa-mastodon
       url: https://neuromatch.social/@neuralreckoning
+    - name: Bluesky
+      fa: fa-brands fa-bluesky
+      url: https://bsky.app/profile/neuralreckoning.bsky.social
+    - name: Twitter
+      fa: fa-brands fa-twitter
+      url: https://twitter.com/neuralreckoning
     - name: GitHub
       fa: fa-brands fa-github
       url: https://github.com/neural-reckoning
