@@ -34,6 +34,7 @@
     <meta name="twitter:title" content="{{title}}">
     <meta name="twitter:description" content="{{socialcard.description}}">
     <meta name="twitter:image" content="https://neural-reckoning.org/{{socialcard.image}}">
+    <meta name="fediverse:creator" content="{% if socialcard.fediverse_creator %}{{socialcard.fediverse_creator}}{% else %}@neuralreckoning@neuromatch.social{% endif %}"/>
 
     <title>{% block title %}{{title}}{% endblock %}</title>
     <link rel="STYLESHEET" href="style.css" type="text/css"/>
