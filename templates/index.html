@@ -7,12 +7,12 @@
 
 {% block main %}
 
-<!-- <div class="row"> -->
-    <!-- Twitter timeline currently broken it seems -->
-    <!-- <div class="col-sm-4 d-none d-sm-block order-sm-12">
-        <a class="twitter-timeline" data-width="400" data-height="1000" data-dnt="true" data-show-replies="true" href="https://twitter.com/neuralreckoning?ref_src=twsrc%5Etfw">Tweets by neuralreckoning</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-    </div> -->
-    <!-- <div class="col-sm-8 order-sm-1"> -->
+<div class="row">
+    <div class="col-lg-4 d-none d-lg-block order-lg-12">
+        <h4 class="pb-1">Latest from Bluesky</h4>
+        <bsky-embed username="neuralreckoning.bsky.social" limit="5" load-more="true" custom-styles="img.rounded-full { display: none; } .flex > div { max-width: 100%; } .whitespace-pre-wrap { word-wrap: break-word;}"></bsky-embed>
+    </div>
+    <div class="col-lg-8 order-lg-1">
 
         <div class="bg-light p-3 mb-3">
             <div id="membersCarousel" class="carousel slide auto" data-ride="carousel" data-interval="4000">
@@ -91,7 +91,7 @@
             {{ vidlist.video_highlight(videos) }}
         </div></div>
 
-    <!-- </div> -->
-<!-- </div> -->
+    </div>
+</div>
 
 {% endblock %}

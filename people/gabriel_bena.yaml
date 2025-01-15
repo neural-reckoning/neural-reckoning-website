@@ -13,6 +13,7 @@ links:
   - ['Mastodon', 'https://neuromatch.social/@GabrielBena']
   - ['Bluesky', 'https://bsky.app/profile/solarpunkgabs.bsky.social']
   - ['ORCiD', 'https://orcid.org/0009-0009-2802-4702']
+social_feed: ['Bluesky', 'solarpunkgabs.bsky.social']
 dates:
 - 2021
 semantic_scholar: 2107033449

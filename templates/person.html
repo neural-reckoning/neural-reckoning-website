@@ -18,7 +18,7 @@
 {% endif %}
 
 <div class="row">
-    <div class="col-sm-4 order-sm-12">
+    <div class="col-lg-4 order-lg-12">
         <img src="{{photo_filename}}" class="img-fluid"><!--  style="width: 200px; max-width: 100%;" -->
         <!-- {% if os.path.exists('docs/wordcloud_'+key+'.png') %}
         <img src="wordcloud_{{key}}.png" class="img-fluid">
@@ -71,19 +71,24 @@
             </li>
         {% endif %}
         </ul>
-        {% if twitter %}
+        {% if social_feed %}
             <p>&nbsp;</p>
-            <div class="d-none d-sm-block">
-                <a class="twitter-timeline" data-width="400" data-height="1000" data-show-replies="true"
-                href="https://twitter.com/{{twitter}}">
-                    Tweets by {{twitter}}
-                </a>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <div class="d-none d-lg-block">
+                {% if social_feed[0].lower()=='twitter' %}
+                    <a class="twitter-timeline" data-width="400" data-height="1000" data-show-replies="true"
+                    href="https://twitter.com/{{social_feed[1]}}">
+                        Tweets by {{twitter}}
+                    </a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                {% elif social_feed[0].lower()=='bluesky' %}
+                    <h4 class="pt-1 pb-1">Bluesky feed</h4>
+                    <bsky-embed username="{{ social_feed[1] }}" limit="5" load-more="true" custom-styles="img.rounded-full { display: none; } .flex > div { max-width: 100%; } .whitespace-pre-wrap { word-wrap: break-word;}"></bsky-embed>
+                {% endif %}
             </div>
         {% endif %}
     </div>
 
-    <div class="col-sm-8 order-sm-1">
+    <div class="col-lg-8 order-lg-1">
         <div>
         {{ long }}
         </div>
