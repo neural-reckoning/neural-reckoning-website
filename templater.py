@@ -7,7 +7,7 @@ from twitter import generate_single_twitter_thread
 additional_urls = []
 
 def scan_html_for_links(page, name):
-    for url in re.findall('''href\s*=\s*["']\s*(http.*?)\s*["']''', page):
+    for url in re.findall(r'''href\s*=\s*["']\s*(http.*?)\s*["']''', page):
         additional_urls.append((url, name))
     return page
 
