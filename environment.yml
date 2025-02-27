@@ -1,0 +1,12 @@
+name: nrweb
+dependencies:
+- python=3
+- jinja2
+- pillow
+- wordcloud
+- pip
+- pip:
+    - tweepy
+    - diskcache
+    - semanticscholar
+    - pyyaml
