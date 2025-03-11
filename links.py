@@ -24,10 +24,13 @@ today = time.strftime('%d/%m/%Y')
 last_checked_links = dict((url, day) for url, day in last_checked_links.items() if day==today)
 last_updated = time.strftime('%Y/%m/%d')
 
+checked_this_run = set()
+
 
 def check_link(url, msg):
-    if url in last_checked_links or url in link_exceptions:
+    if url in last_checked_links or url in link_exceptions or url in checked_this_run:
         return
+    checked_this_run.add(url)
     # first try just getting the header (quick)
     p = urlparse(url)
     conn = http.client.HTTPConnection(p.netloc)

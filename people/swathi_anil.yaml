@@ -4,12 +4,14 @@ author_names:
 email: 'cy5hbmlsMjNAaW1wZXJpYWwuYWMudWs=' # generate this by import base64; base64.b64encode(b'address')
 dates:
 - 2023
+- 2024
 long: >
   <p>
-    Swathi Anil is a visiting PhD student, working with non-linear algorithms and artificial neural networks to describe temporal multisensory processing in the brain.
+    Swathi Anil visited the lab as a PhD student, working with non-linear algorithms and artificial neural networks to describe temporal multisensory processing in the brain.
   </p>
 orcid: 0009-0004-5976-1717
-position: phd
+position: former
+former_position: Visiting PhD student
 short: Models of temporal multisensory processing (visiting PhD student).
 links:
   - ['University of Freiburg site', 'https://www.bcf.uni-freiburg.de/about/people/anil']
