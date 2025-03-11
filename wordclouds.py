@@ -15,10 +15,13 @@ def make_wordcloud(papers=None, member=None, width=350, height=350):
     else:
         mpubs = member.things['Paper']
     if len(mpubs)==0:
-        return
-    mpubs = list(mpubs)
-    mpubs.sort(key=lambda x: getattr(x, 'abstract', ''))
-    all_abstracts = ' '.join(getattr(pub, 'abstract', '') for pub in mpubs)
+        if not hasattr(member, 'external_publications') or not member.external_publications or len(member.external_publications)==0:
+            return
+        all_abstracts = ' '.join(pub.title for pub in member.external_publications if hasattr(pub, 'title'))
+    else:
+        mpubs = list(mpubs)
+        mpubs.sort(key=lambda x: getattr(x, 'abstract', ''))
+        all_abstracts = ' '.join(getattr(pub, 'abstract', '') for pub in mpubs)
     m = hashlib.md5()
     m.update(all_abstracts.encode("utf-8"))
     abstract_hash = m.hexdigest()
