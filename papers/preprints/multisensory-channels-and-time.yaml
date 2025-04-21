@@ -1,6 +1,6 @@
 year: Preprints
-last_updated: 20-12-2024
-authors: Anil S, Ghosh M, Goodman DFM
+last_updated: 10-04-2025
+authors: Anil S, Goodman DFM, Ghosh M
 title: Fusing multisensory signals across channels and time
 categories:
 - Sensory
@@ -10,11 +10,11 @@ categories:
 - Multimodal
 urls:
 - - Preprint (biorxiv)
-  - https://www.biorxiv.org/content/10.1101/2024.12.19.629348v1
+  - https://www.biorxiv.org/content/10.1101/2024.12.19.629348v2
 - - Preprint (HTML)
-  - https://www.biorxiv.org/content/10.1101/2024.12.19.629348v1.full
+  - https://www.biorxiv.org/content/10.1101/2024.12.19.629348v2.full
 - - Preprint (PDF)
-  - https://www.biorxiv.org/content/10.1101/2024.12.19.629348v1.full.pdf
+  - https://www.biorxiv.org/content/10.1101/2024.12.19.629348v2.full.pdf
 - - Code (GitHub)
   - https://github.com/swathianil/Temporal_Nonlinear_fusion
 - - Bluesky

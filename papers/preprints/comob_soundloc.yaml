@@ -1,7 +1,7 @@
 year: Preprints
-last_updated: 23-07-2024
-authors: Ghosh M, Habashy KG, De Santis F, Erçelik DF, Friedenberger Z, Béna G, Hong M, Abubacar U, Byrne RT, Riquelme JL, Liu YH, Aizenbud I, Bicknell BA, Bormuth V, Antonietti A, Goodman DFM
-title: Spiking neural network models of sound localisation via a massively collaborative process
+last_updated: 13-03-2025
+authors: Ghosh M, Habashy KG, De Santis F, Fiers T, Erçelik DF, Mészáros B, Friedenberger Z, Béna G, Hong M, Abubacar U, Byrne RT, Riquelme JL, Liu YH, Aizenbud I, Bicknell BA, Bormuth V, Antonietti A, Goodman DFM
+title: Spiking neural network models of interaural time difference extraction via a massively collaborative process
 categories:
 - Machine learning
 - Auditory
@@ -13,11 +13,11 @@ categories:
 - Metascience
 urls:
 - - Working preprint (HTML)
-  - https://comob-project.github.io/snn-sound-localization/paper-1
+  - https://comob-project.github.io/snn-sound-localization/paper
 - - Preprint
   - https://www.biorxiv.org/content/10.1101/2024.07.19.604252v1
 - - Preprint (PDF)
   - https://www.biorxiv.org/content/10.1101/2024.07.19.604252v1.full.pdf
 - - GitHub repository
   - https://github.com/comob-project/snn-sound-localization
-abstract: Neuroscientists are increasingly initiating large-scale collaborations which bring together tens to hundreds of researchers. However, while these projects represent a step-change in scale, they retain a traditional structure with centralised funding, participating laboratories and data sharing on publication. Inspired by an open-source project in pure mathematics, we set out to test the feasibility of an alternative structure by running a grassroots, massively collaborative project in computational neuroscience. To do so, we launched a public Git repository, with code for training spiking neural networks to solve a sound localisation task via surrogate gradient descent. We then invited anyone, anywhere to use this code as a springboard for exploring questions of interest to them, and encouraged participants to share their work both asynchronously through Git and synchronously at monthly online workshops. At a scientific level, our work investigated how a range of biologically-relevant parameters, from time delays to membrane time constants and levels of inhibition, could impact sound localisation in networks of spiking units. At a more macro-level, our project brought together 31 researchers from multiple countries, provided hands-on research experience to early career participants, and opportunities for supervision and teaching to later career participants. Looking ahead, our project provides a glimpse of what open, collaborative science could look like and provides a necessary, tentative step towards it.
+abstract: Neuroscientists are increasingly initiating large-scale collaborations which bring together tens to hundreds of researchers. At this scale, such projects can tackle large-scale challenges and engage a wide range of participants. Inspired by projects in pure mathematics, we set out to test the feasibility of widening access to such projects even further, by running a massively collaborative project in computational neuroscience. The key difference, with prior neuroscientific efforts, being that our entire project (code, results, writing) was public from the outset, and that anyone could participate. To achieve this, we launched a public Git repository, with code for training spiking neural networks to solve a sound localisation task via surrogate gradient descent. We then invited anyone, anywhere to use this code as a springboard for exploring questions of interest to them, and encouraged participants to share their work both asynchronously through Git and synchronously at monthly online workshops. Our hope was that the resulting range of participants would allow us to make discoveries that a single team would have been unlikely to find. At a scientific level, our work investigated how a range of biologically-relevant parameters, from time delays to membrane time constants and levels of inhibition, could impact sound localisation in networks of spiking units. At a more macro-level, our project brought together 31 researchers from multiple countries, provided hands-on research experience to early career participants, and opportunities for supervision and teaching to later career participants. While our scientific results were not groundbreaking, our project demonstrates the potential for massively collaborative projects to transform neuroscience.
