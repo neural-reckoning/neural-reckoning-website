@@ -2,17 +2,17 @@ name: Gabriel Béna
 author_names:
 - Béna G
 position: phd
-short: Modularity of neural systems.
+short: Modular neural systems, spiking neural networks and neuromorphic computing
 long: |-
   <p>
-  Gabriel Béna will work on machine learning and neuroscience, with a particular interest
-  in spiking neural networks.
-  </p>
+  My interests are broad but have lately aligned with the field of neuromorphic engineering. I study the structure-function relationship in neural-networks, understanding how structural modularity relates to functional specialization and compositional knowledge abilities, especially in resource-constrained architectures. I’ve also studied Spiking Neural Networks (SNNs), especially the topic of multimodal integration, and I am currently an active developer of the <a href="https://gitlab.com/spinnaker2/py-spinnaker2">SNN software stack for SpiNNaker2</a>. Finally, I am fascinated by self-organising systems and have recently been trying to understand how continuous neural cellular automata can be harnessed as a <a href="https://gabrielbena.github.io/blog/2025/bena2025unca/">universal computational medium</a>.  </p>
 links:
+  - ['Website', 'https://gabrielbena.github.io/']
   - ['Twitter', 'https://twitter.com/GabrielBna1']
   - ['Mastodon', 'https://neuromatch.social/@GabrielBena']
   - ['Bluesky', 'https://bsky.app/profile/solarpunkgabs.bsky.social']
   - ['ORCiD', 'https://orcid.org/0009-0009-2802-4702']
+  - ['Google Scholar', 'https://scholar.google.com/citations?user=cFKO_vQAAAAJ&hl']
 social_feed: ['Bluesky', 'solarpunkgabs.bsky.social']
 dates:
 - 2021
