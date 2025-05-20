@@ -1,0 +1,18 @@
+year: Preprints
+last_updated: 20-05-2025
+authors: Béna G, Faldor M, Goodman DFM, Cully A
+title: A Path to Universal Neural Cellular Automata
+categories:
+- Neuroscience
+- Machine learning
+- Learning
+- Modelling
+urls:
+- - Preprint
+  - https://arxiv.org/abs/2505.13058
+- - Preprint (PDF)
+  - https://arxiv.org/pdf/2505.13058
+- - Preprint (HTML)
+  - https://arxiv.org/html/2505.13058v1
+abstract: |-
+  Cellular automata have long been celebrated for their ability to generate complex behaviors from simple, local rules, with well-known discrete models like Conway's Game of Life proven capable of universal computation. Recent advancements have extended cellular automata into continuous domains, raising the question of whether these systems retain the capacity for universal computation. In parallel, neural cellular automata have emerged as a powerful paradigm where rules are learned via gradient descent rather than manually designed. This work explores the potential of neural cellular automata to develop a continuous Universal Cellular Automaton through training by gradient descent. We introduce a cellular automaton model, objective functions and training strategies to guide neural cellular automata toward universal computation in a continuous setting. Our experiments demonstrate the successful training of fundamental computational primitives - such as matrix multiplication and transposition - culminating in the emulation of a neural network solving the MNIST digit classification task directly within the cellular automata state. These results represent a foundational step toward realizing analog general-purpose computers, with implications for understanding universal computation in continuous dynamics and advancing the automated discovery of complex cellular automata behaviors via machine learning. 
