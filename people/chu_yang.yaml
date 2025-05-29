@@ -3,15 +3,10 @@ author_names:
 - Chu Y
 position: phd
 email: eS5jaHUxNkBpbXBlcmlhbC5hYy51aw==
-short: Principles of neural computation and simulation techniques
+short: Robust and flexible perception under distribution shift
 long: |-
   <p>
-  Yang Chu is a PhD student, working on principles of neural computation,
-  and high performance implementations using spiking neural
-  network (in particular, using non-standard computational
-  hardware such as FPGAs). He is jointly supervised by
-  <a href="http://www.imperial.ac.uk/people/w.luk">Wayne Luk</a> and
-  <a href="https://tbrx.github.io/">Brooks Paige</a>.
+  Yang Chu is a PhD student, working on understanding how the brain achieves robust perception and flexible behaviour in a constantly changing world. He has a particular interest in brain-inspired machine learning models that can handle "distribution shift". He is jointly supervised by <a href="http://www.imperial.ac.uk/people/w.luk">Wayne Luk</a> and <a href="https://tbrx.github.io/">Brooks Paige</a>.
   </p>
 dates:
 - 2016
