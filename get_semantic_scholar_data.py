@@ -18,7 +18,7 @@ def get_papers(paper_ids):
     papers_not_in_cache = set(paper_ids).difference(list(cache.iterkeys()))
     if papers_not_in_cache:
         time.sleep(3)
-        print(f"Getting papers from semantic scholar with ids: {paper_ids}")
+        # print(f"Getting papers from semantic scholar with ids: {paper_ids}")
         try:
             papers = sch.get_papers(list(papers_not_in_cache))
             for paper in papers:
@@ -39,7 +39,7 @@ def get_semantic_scholar_publications(user_id):
 
     if f'scholar_{user_id}' not in cache:
         time.sleep(3)
-        print(f"Getting data for semantic scholar user {user_id}")
+        # print(f"Getting data for semantic scholar user {user_id}")
         author = sch.get_author(user_id)
         cache.set(f'scholar_{user_id}', author, expire=24*60*60)
     else:

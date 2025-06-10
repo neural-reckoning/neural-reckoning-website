@@ -1,7 +1,10 @@
-year: Preprints
-last_updated: 10-04-2025
+year: 2025
+last_updated: 10-06-2025
 authors: Anil S, Goodman DFM, Ghosh M
 title: Fusing multisensory signals across channels and time
+journal: PLoS Computational Biology
+doi: 10.1371/journal.pcbi.1013125
+additional: " 21(6): e1013125"
 categories:
 - Sensory
 - Neuroscience
@@ -9,6 +12,8 @@ categories:
 - Spiking
 - Multimodal
 urls:
+- - Journal (HTML)
+  - https://doi.org/10.1371/journal.pcbi.1013125
 - - Preprint (biorxiv)
   - https://www.biorxiv.org/content/10.1101/2024.12.19.629348v2
 - - Preprint (HTML)
