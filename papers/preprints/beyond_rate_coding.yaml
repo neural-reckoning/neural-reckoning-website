@@ -1,0 +1,29 @@
+# selected: True
+year: Preprints
+last_updated: 21-07-2025
+authors: Yu Z, Sun P, Goodman DFM
+title: "Beyond Rate Coding: Surrogate Gradients Enable Spike Timing Learning in Spiking Neural Networks"
+# journal: 
+# Goes after Journal (Year)
+# additional: 
+# doi: 
+
+categories:
+  - Neuroscience
+  - Spiking
+  - Machine learning
+  - Auditory
+  - Neuroinformatics
+
+urls:
+  - - Preprint
+    - https://arxiv.org/abs/2507.16043
+  - - Preprint (PDF)
+    - https://arxiv.org/pdf/2507.16043
+  - - Code (GitHub)
+    - https://github.com/neural-reckoning/temporal-shd
+  - - Data (Zenodo)
+    - https://zenodo.org/records/16153275
+
+abstract: We investigate the extent to which Spiking Neural Networks (SNNs) trained with Surrogate Gradient Descent (Surrogate GD), with and without delay learning, can learn from precise spike timing beyond firing rates. We first design synthetic tasks isolating intra-neuron inter-spike intervals and cross-neuron synchrony under matched spike counts. On more complex spike-based speech recognition datasets (Spiking Heidelberg Digits (SHD) and Spiking Speech Commands (SSC), we construct variants where spike count information is eliminated and only timing information remains, and show that Surrogate GD-trained SNNs are able to perform significantly above chance whereas purely rate-based models perform at chance level. We further evaluate robustness under biologically inspired perturbations -- including Gaussian jitter per spike or per-neuron, and spike deletion -- revealing consistent but perturbation-specific degradation. Networks show a sharp performance drop when spike sequences are reversed in time, with a larger drop in performance from SNNs trained with delays, indicating that these networks are more human-like in terms of behaviour. To facilitate further studies of temporal coding, we have released our modified SHD and SSC datasets. 
+
