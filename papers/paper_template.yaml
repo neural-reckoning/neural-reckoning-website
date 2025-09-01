@@ -1,5 +1,7 @@
 # selected: True
 year: 2021
+# year: Preprints
+last_updated: 21-06-2024
 authors:
   - Goodman DFM
 title: 
@@ -43,5 +45,6 @@ abstract: >
 # if you have one
 # video_embed: 
 
-# Tweet ID of last tweet in thread (long number)
-last_tweet_in_thread: ''
+# bluesky_thread:
+# - ...
+# - ...

@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <META http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <!-- social media stuff -->
+    <meta name="twitter:widgets:csp" content="on">
+    <meta name="twitter:dnt" content="on">
+    <meta name="description" content="Neural circuits are sparse and bidirectional. Meaning that signals flow from early sensory areas to later regions and back. Yet, between connected areas there e...">
+    <meta property="og:url" content="https://neural-reckoning.org/pub_partial_recurrence.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Partial recurrence enables robust and efficient computation">
+    <meta property="og:description" content="Neural circuits are sparse and bidirectional. Meaning that signals flow from early sensory areas to later regions and back. Yet, between connected areas there e...">
+    <meta property="og:image" content="https://neural-reckoning.org/default-social-media-card.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="neural-reckoning.org">
+    <meta property="twitter:url" content="https://neural-reckoning.org/pub_partial_recurrence.html">
+    <meta name="twitter:title" content="Partial recurrence enables robust and efficient computation">
+    <meta name="twitter:description" content="Neural circuits are sparse and bidirectional. Meaning that signals flow from early sensory areas to later regions and back. Yet, between connected areas there e...">
+    <meta name="twitter:image" content="https://neural-reckoning.org/default-social-media-card.png">
+    <meta name="fediverse:creator" content="https://neuromatch.social/@marcusghosh"/>
+    <!-- bsky embed feed -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js" async></script>
+
+
+    <title>Partial recurrence enables robust and efficient computation</title>
+    <link rel="STYLESHEET" href="style.css" type="text/css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script lang="javascript">
+        function hideAfterDeadline() {
+            var now = new Date();
+            var elements = document.getElementsByClassName("hideAfterDeadline");
+            for (var i = 0; i < elements.length; i++) {
+                var deadline = new Date(elements[i].getAttribute("data-deadline"));
+                if(now > deadline) {
+                    elements[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="hideAfterDeadline()">
+
+<nav class="navbar sticky-top navbar-expand-xl navbar-light bg-light"><div class="container">
+    <a class="navbar-brand" href="index.html">
+            <img src="nr-logo-small.png" class="img-fluid" style="width: 4em;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+                <li class="nav item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarMembersDropdown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">People</a>
+        			<div class="dropdown-menu" aria-labelledby="navbarMembersDropdown">
+                        <a class="dropdown-item" href="members.html">Everyone</a>
+                        <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="dan_goodman.html">Dan Goodman</a>
+                                <h6 class="dropdown-header">Postdocs and Fellows</h6>
+                                    <a class="dropdown-item" href="marcus_ghosh.html">Marcus Ghosh</a>
+                                    <a class="dropdown-item" href="danyal_akarca.html">Danyal Akarca</a>
+                                    <a class="dropdown-item" href="pengfei_sun.html">Pengfei Sun</a>
+                                <h6 class="dropdown-header">PhD students</h6>
+                                    <a class="dropdown-item" href="chu_yang.html">Yang Chu</a>
+                                    <a class="dropdown-item" href="gabriel_bena.html">Gabriel Béna</a>
+                                    <a class="dropdown-item" href="greta_horvathova.html">Greta Horvathova</a>
+                                    <a class="dropdown-item" href="jatin_sharma.html">Jatin Sharma</a>
+                    </div>
+                </li>
+                <li class="nav item">
+                    <a class="nav-link" href="publications.html">Publications</a>
+                </li>
+                <li class="nav item">
+                    <a class="nav-link" href="software.html">Software</a>
+                </li>
+                <li class="nav item">
+                    <a class="nav-link" href="themes.html">Themes</a>
+                </li>
+                <li class="nav item">
+                    <a class="nav-link" href="openings.html">Join us</a>
+                </li>
+                <li class="nav item">
+                    <a class="nav-link" href="location.html">Location</a>
+                </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarMiscDropdown" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+                <div class="dropdown-menu" aria-labelledby="navbarMiscDropdown">
+                        <a class="dropdown-item" href="videos.html">Videos</a>
+                        <a class="dropdown-item" href="organisations.html">Organisations</a>
+                        <a class="dropdown-item" href="comp-neuro-resources.html">Computational neuroscience resources</a>
+                        <a class="dropdown-item" href="reviewing.html">Ending support for legacy academic publishing</a>
+                        <a class="dropdown-item" href="neuroinformatics.html">Neuroinformatics</a>
+                        <a class="dropdown-item" href="sensory.html">Sensory neuroscience</a>
+                        <a class="dropdown-item" href="mathematics.html">Mathematics</a>
+                        <a class="dropdown-item" href="apply_phd.html">PhD application process</a>
+                        <a class="dropdown-item" href="accessibility.html">Accessibility statement</a>
+                </div>
+            </li>
+            <li class="nav item">
+                <a class="nav-link" href="https://neuromatch.social/@neuralreckoning" rel="me"><i class="fa-brands fa-mastodon"></i><span class="d-inline d-xl-none"> Mastodon</span></a>
+            </li>
+            <li class="nav item">
+                <a class="nav-link" href="https://bsky.app/profile/neuralreckoning.bsky.social" rel="me"><i class="fa-brands fa-bluesky"></i><span class="d-inline d-xl-none"> Bluesky</span></a>
+            </li>
+            <li class="nav item">
+                <a class="nav-link" href="https://twitter.com/neuralreckoning" rel="me"><i class="fa-brands fa-twitter"></i><span class="d-inline d-xl-none"> Twitter</span></a>
+            </li>
+            <li class="nav item">
+                <a class="nav-link" href="https://github.com/neural-reckoning" rel="me"><i class="fa-brands fa-github"></i><span class="d-inline d-xl-none"> GitHub</span></a>
+            </li>
+            <li class="nav item">
+                <a class="nav-link" href="https://www.youtube.com/@neuralreckoning" rel="me"><i class="fa-brands fa-youtube"></i><span class="d-inline d-xl-none"> YouTube</span></a>
+            </li>
+        </ul>
+    </div>
+</div></nav>
+
+<!-- <div class="hideAfterDeadline alert alert-success" data-deadline="2024-10-01" style="text-align: center">
+    <a href="https://www.imperial.ac.uk/jobs/search-jobs/description/index.php?jobId=20479&jobTitle=Research+Associate+in+Computational+Neuroscience%2FNeuroAI%2FNeuromorphic+Systems" style="color: black">We have a postdoctoral position available (deadline Sept 30). Click for details.</a>
+</div> -->
+
+<div class="container">
+
+    <p>&nbsp;</p>
+
+<div class="main">
+
+<div class="row">
+    <div class="col-lg-4 d-none d-lg-block order-lg-12">
+        <div style="height: 90vh; overflow-y: scroll;">
+            
+            <blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:rxu72ge3mblizpo2vimbrqtm/app.bsky.feed.post/3lvda4r4urk26" data-bluesky-cid="bafyreihrykowesjnzpdhxk4nuy3wrc45pnspkut3bmsinbxvrdrhzn2bym"><p lang="en">How does the structure of a neural circuit shape its function?
+
+@neuralreckoning.bsky.social &amp; I explore this in our new preprint: 
+
+doi.org/10.1101/2025... 
+
+🤖🧠🧪
+
+🧵1/9</p>&mdash; <a href="https://bsky.app/profile/did:plc:rxu72ge3mblizpo2vimbrqtm?ref_src=embed">Marcus Ghosh (@marcusghosh.bsky.social)</a> <a href="https://bsky.app/profile/did:plc:rxu72ge3mblizpo2vimbrqtm/post/3lvda4r4urk26?ref_src=embed">2025-08-01T08:26:57.716Z</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:rxu72ge3mblizpo2vimbrqtm/app.bsky.feed.post/3lvda4uh37k26" data-bluesky-cid="bafyreia47pbemvxiqmawu57r2wcfzzihsx7bzfl4shtn6yljqkjtdthkte"><p lang="en">We start from an artificial neural network with 3 sets of units and 9 possible weight matrices (or pathways).
+
+By keeping the two feedforward pathways (W_ih, W_ho) and adding the other 7 in any combination,
+
+we can generate 2^7 distinct architectures. 
+
+All 128 are shown in the post above. 
+
+🧵2/9</p>&mdash; <a href="https://bsky.app/profile/did:plc:rxu72ge3mblizpo2vimbrqtm?ref_src=embed">Marcus Ghosh (@marcusghosh.bsky.social)</a> <a href="https://bsky.app/profile/did:plc:rxu72ge3mblizpo2vimbrqtm/post/3lvda4uh37k26?ref_src=embed">2025-08-01T08:26:57.717Z</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:rxu72ge3mblizpo2vimbrqtm/app.bsky.feed.post/3lvda4vg6dc26" data-bluesky-cid="bafyreifo4tflg4v7qoidlnph42c45zzxoearqxcyc5jsoa57pu7son6wqu"><p lang="en">This allows us to interpolate between: 
+
+Feedforward - with no additional pathways.
+Fully recurrent - with all nine pathways. 
+
+We term the 126 architectures between these two extremes *partially recurrent neural networks* (pRNNs), as signal propagation can be bidirectional, yet sparse.  
+
+🧵3/9</p>&mdash; <a href="https://bsky.app/profile/did:plc:rxu72ge3mblizpo2vimbrqtm?ref_src=embed">Marcus Ghosh (@marcusghosh.bsky.social)</a> <a href="https://bsky.app/profile/did:plc:rxu72ge3mblizpo2vimbrqtm/post/3lvda4vg6dc26?ref_src=embed">2025-08-01T08:26:57.718Z</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:rxu72ge3mblizpo2vimbrqtm/app.bsky.feed.post/3lvda4xl3fs26" data-bluesky-cid="bafyreie2s2hd4g3t4dk7yrykee4kc4vfpbie7tniig4omkiuokme6tvw5i"><p lang="en">To compare pRNN function, we introduce a set of multisensory navigation tasks we call *multimodal mazes*. 
+
+In these tasks, we simulate networks as agents with noisy sensors, which provide local clues about the shortest path through each maze. 
+
+We add complexity by removing cues or walls.
+
+🧵4/9</p>&mdash; <a href="https://bsky.app/profile/did:plc:rxu72ge3mblizpo2vimbrqtm?ref_src=embed">Marcus Ghosh (@marcusghosh.bsky.social)</a> <a href="https://bsky.app/profile/did:plc:rxu72ge3mblizpo2vimbrqtm/post/3lvda4xl3fs26?ref_src=embed">2025-08-01T08:26:57.719Z</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:rxu72ge3mblizpo2vimbrqtm/app.bsky.feed.post/3lvda4zjcmk26" data-bluesky-cid="bafyreiguo6u4v4jqb7lspfuhh5lvltlovt4jaijjrc6btqe3u3gjnxbora"><p lang="en">We trained over 25,000 pRNNs on these tasks. 
+
+And measured their:
+📈 Fitness (task performance)
+💹 Learning speed 
+📉 Robustness to various perturbations (e.g. increasing sensor noise)
+
+From these data, we reach three main conclusions. 
+
+🧵5/9</p>&mdash; <a href="https://bsky.app/profile/did:plc:rxu72ge3mblizpo2vimbrqtm?ref_src=embed">Marcus Ghosh (@marcusghosh.bsky.social)</a> <a href="https://bsky.app/profile/did:plc:rxu72ge3mblizpo2vimbrqtm/post/3lvda4zjcmk26?ref_src=embed">2025-08-01T08:26:57.720Z</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:rxu72ge3mblizpo2vimbrqtm/app.bsky.feed.post/3lvda4zjdls26" data-bluesky-cid="bafyreid2smuwknpyesb7bozcvxbrtzfwhdchjgqnseewyqbp6cuqxnbmyu"><p lang="en">First, across tasks and functional metrics, many pRNN architectures perform as well as the fully recurrent architecture. 
+
+Despite having less pathways and as few as ¼ the number of parameters. 
+
+This shows that pRNNs are efficient, yet performant. 
+
+ 🧵6/9</p>&mdash; <a href="https://bsky.app/profile/did:plc:rxu72ge3mblizpo2vimbrqtm?ref_src=embed">Marcus Ghosh (@marcusghosh.bsky.social)</a> <a href="https://bsky.app/profile/did:plc:rxu72ge3mblizpo2vimbrqtm/post/3lvda4zjdls26?ref_src=embed">2025-08-01T08:26:57.721Z</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:rxu72ge3mblizpo2vimbrqtm/app.bsky.feed.post/3lvda52ipis26" data-bluesky-cid="bafyreicnde6hngbtip4bkwt4mdjskcipnscg5vo2va4x4nna7ct2lwqnxq"><p lang="en">Second, to isolate how each pathway changes network function, we compare pairs of circuits which differ by one pathway. 
+
+Across pairs, we find that pathways have context dependent effects. 
+
+E.g. here hidden-hidden connections decrease learning speed in one task but accelerate it in another.
+
+🧵7/9</p>&mdash; <a href="https://bsky.app/profile/did:plc:rxu72ge3mblizpo2vimbrqtm?ref_src=embed">Marcus Ghosh (@marcusghosh.bsky.social)</a> <a href="https://bsky.app/profile/did:plc:rxu72ge3mblizpo2vimbrqtm/post/3lvda52ipis26?ref_src=embed">2025-08-01T08:26:57.722Z</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:rxu72ge3mblizpo2vimbrqtm/app.bsky.feed.post/3lvda53ewt226" data-bluesky-cid="bafyreietiex3mflyanddfm24fk67andw5tsawtcmisyndd6zuqo6fotjyu"><p lang="en">Third, to explore why different circuits function differently, we measured 3 traits from every network. 
+
+We find that different architectures learn distinct sensitivities and memory dynamics which shape their function. 
+
+E.g. we can predict a network’s robustness to noise from its memory.
+
+🧵8/9</p>&mdash; <a href="https://bsky.app/profile/did:plc:rxu72ge3mblizpo2vimbrqtm?ref_src=embed">Marcus Ghosh (@marcusghosh.bsky.social)</a> <a href="https://bsky.app/profile/did:plc:rxu72ge3mblizpo2vimbrqtm/post/3lvda53ewt226?ref_src=embed">2025-08-01T08:26:57.723Z</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:rxu72ge3mblizpo2vimbrqtm/app.bsky.feed.post/3lvda54eark26" data-bluesky-cid="bafyreied2ftfmghpeworhic33mh5p7gagsemkzazv2el4mtst3pmyemlqa"><p lang="en">We’re excited about this work as it: 
+
+⭐ Explores a fundamental question: how does structure sculpt function in artificial and biological networks? 
+
+⭐ Provides new models (pRNNs), tasks (Multimodal mazes) and tools, in a pip-installable package: 
+
+github.com/ghoshm/Multi... 
+
+🧵9/9</p>&mdash; <a href="https://bsky.app/profile/did:plc:rxu72ge3mblizpo2vimbrqtm?ref_src=embed">Marcus Ghosh (@marcusghosh.bsky.social)</a> <a href="https://bsky.app/profile/did:plc:rxu72ge3mblizpo2vimbrqtm/post/3lvda54eark26?ref_src=embed">2025-08-01T08:26:57.724Z</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
+        </div>
+    </div>
+    <div class="col-lg-8 order-lg-1">
+
+<h2>Partial recurrence enables robust and efficient computation</h2>
+    <div class="d-none d-sm-block">
+        <ul class="list-inline author-list">
+    <li>
+        <a href="marcus_ghosh.html">
+        <div><img src="photo_marcus_ghosh.s.circ.png"/></div>
+        <div>Marcus Ghosh</div>
+        </a>
+    </li>
+    <li>
+        <a href="dan_goodman.html">
+        <div><img src="photo_dan_goodman.s.circ.png"/></div>
+        <div>Dan Goodman</div>
+        </a>
+    </li>
+</ul>
+
+    </div>
+    <div class="d-block d-sm-none">
+        <a href="marcus_ghosh.html">Ghosh M</a>, <a href="dan_goodman.html">Goodman DFM</a>
+    </div>
+<div><i>Preprint</i></div>
+<div>&nbsp;</div>
+<h3>Abstract</h3>
+<div>Neural circuits are sparse and bidirectional. Meaning that signals flow from early sensory areas to later regions and back. Yet, between connected areas there exist some but not all pathways. How does this structure, somewhere between feedforward and fully recurrent, shape circuit function? To address this question, we designed a new recurrent neural network model in which a set of weight matrices (i.e. pathways) can be combined to generate every network structure between feedforward and fully recurrent. We term these architectures partially recurrent neural networks (pRNNs). We trained over 25,000 pRNNs on a novel set of reinforcement learning tasks, designed to mimic multisensory navigation, and compared their performance across multiple functional metrics. Our findings reveal three key insights. First, many architectures match or exceed the performance of fully recurrent networks, despite using as few as one-quarter the number of parameters; demonstrating that partial recurrence enables energy efficient, yet performant solutions. Second, each pathway’s functional impact is both task and circuit dependent. For instance, feedback connections enhance robustness to noise in some, but not all contexts. Third, different pRNN architectures learn solutions with distinct input sensitivities and memory dynamics, and these computational traits help to explain their functional capabilities. Overall, our results demonstrate that partial recurrence enables robust and efficient computation - a finding that helps to explain why neural circuits are sparse and bidirectional, and how these principles could inform the design of artificial systems.
+</div>
+
+        <h3 class="pt-3">Links</h3>
+        <p>
+<button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://www.biorxiv.org/content/10.1101/2025.07.28.667142v1">Preprint</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://www.biorxiv.org/content/10.1101/2025.07.28.667142v1.full.pdf"><i class="fa-regular fa-file-pdf"></i> Preprint (PDF)</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://github.com/ghoshm/Multimodal_mazes">Code (GitHub)</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4r4urk26"><i class="fa-brands fa-bluesky"></i> Bluesky</a></button>        </p>
+    <h3 class="pt-3">Categories</h3>
+    <p>
+<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_machinelearning.html">Machine learning</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_modelling.html">Modelling</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_multimodal.html">Multimodal</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuroscience.html">Neuroscience</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_sensory.html">Sensory</a></button>    </p>
+
+
+
+    <p>&nbsp;</p>
+
+</div>
+
+<!-- Optional JavaScript for Bootstrap -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+</body>
+</html>

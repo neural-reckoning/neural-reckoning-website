@@ -1,0 +1,44 @@
+# selected: True
+year: Preprints
+last_updated: 31-07-2025
+authors:
+  - Ghosh M
+  - Goodman DFM
+title: Partial recurrence enables robust and efficient computation
+# for an article
+# journal: 
+# Goes after Journal (Year)
+# additional: 
+doi: 
+# only shown on detail page
+# additional_detail: 
+categories:
+  - Neuroscience
+  - Multimodal
+  - Machine learning
+  - Modelling
+urls:
+  - - Preprint
+    - https://www.biorxiv.org/content/10.1101/2025.07.28.667142v1
+  - - Preprint (PDF)
+    - https://www.biorxiv.org/content/10.1101/2025.07.28.667142v1.full.pdf
+  - - Code (GitHub)
+    - https://github.com/ghoshm/Multimodal_mazes
+  - - Bluesky
+    - https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4r4urk26
+abstract: >
+  Neural circuits are sparse and bidirectional. Meaning that signals flow from early sensory areas to later regions and back. Yet, between connected areas there exist some but not all pathways. How does this structure, somewhere between feedforward and fully recurrent, shape circuit function? To address this question, we designed a new recurrent neural network model in which a set of weight matrices (i.e. pathways) can be combined to generate every network structure between feedforward and fully recurrent. We term these architectures partially recurrent neural networks (pRNNs). We trained over 25,000 pRNNs on a novel set of reinforcement learning tasks, designed to mimic multisensory navigation, and compared their performance across multiple functional metrics. Our findings reveal three key insights. First, many architectures match or exceed the performance of fully recurrent networks, despite using as few as one-quarter the number of parameters; demonstrating that partial recurrence enables energy efficient, yet performant solutions. Second, each pathway’s functional impact is both task and circuit dependent. For instance, feedback connections enhance robustness to noise in some, but not all contexts. Third, different pRNN architectures learn solutions with distinct input sensitivities and memory dynamics, and these computational traits help to explain their functional capabilities. Overall, our results demonstrate that partial recurrence enables robust and efficient computation - a finding that helps to explain why neural circuits are sparse and bidirectional, and how these principles could inform the design of artificial systems.
+
+# if you have one
+# video_embed: 
+
+bluesky_thread:
+- https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4r4urk26
+- https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4uh37k26
+- https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4vg6dc26
+- https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4xl3fs26
+- https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4zjcmk26
+- https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4zjdls26
+- https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda52ipis26
+- https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda53ewt226
+- https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda54eark26
