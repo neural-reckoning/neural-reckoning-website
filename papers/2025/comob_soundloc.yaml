@@ -1,7 +1,9 @@
-year: Preprints
-last_updated: 13-03-2025
+year: 2025
+last_updated: 26-06-2025
 authors: Ghosh M, Habashy KG, De Santis F, Fiers T, Erçelik DF, Mészáros B, Friedenberger Z, Béna G, Hong M, Abubacar U, Byrne RT, Riquelme JL, Liu YH, Aizenbud I, Bicknell BA, Bormuth V, Antonietti A, Goodman DFM
 title: Spiking neural network models of interaural time difference extraction via a massively collaborative process
+journal: eNeuro
+additional: 12 (7) ENEURO.0383-24.2025
 categories:
 - Machine learning
 - Auditory
@@ -11,7 +13,12 @@ categories:
 - Learning
 - Spiking
 - Metascience
+doi: https://doi.org/10.1523/ENEURO.0383-24.2025
 urls:
+- - Journal (HTML)
+  - https://doi.org/10.1523/ENEURO.0383-24.2025
+- - Journal (PDF)
+  - https://www.eneuro.org/content/eneuro/12/7/ENEURO.0383-24.2025.full.pdf
 - - Working preprint (HTML)
   - https://comob-project.github.io/snn-sound-localization/paper
 - - Preprint
