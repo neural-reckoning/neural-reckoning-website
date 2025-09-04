@@ -1,13 +1,19 @@
-year: Preprints
-last_updated: 20-05-2025
+year: 2025
+last_updated: 11-08-2025
 authors: Béna G, Faldor M, Goodman DFM, Cully A
 title: A Path to Universal Neural Cellular Automata
+conference: GECCO
+additional_detail: Proceedings of the Genetic and Evolutionary Computation Conference Companion
 categories:
 - Neuroscience
 - Machine learning
 - Learning
 - Modelling
 urls:
+- - Conference (abstract)
+  - https://dl.acm.org/doi/10.1145/3712255.3734310
+- - Conference (PDF)
+  - https://dl.acm.org/doi/pdf/10.1145/3712255.3734310
 - - Preprint
   - https://arxiv.org/abs/2505.13058
 - - Preprint (PDF)
