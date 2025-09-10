@@ -20,13 +20,14 @@ def sk_address(room):
     London SW7 2AZ
     '''.format(room=room)
 
-positions_in_order = ['pi', 'postdoc', 'phd', 'other', 'former']
+positions_in_order = ['pi', 'postdoc', 'phd', 'other', 'affiliated','former']
 position_order_map = dict(zip(positions_in_order, range(len(positions_in_order))))
 position_headers = {
     'pi': '',
     'postdoc': 'Postdocs and Fellows',
     'phd': 'PhD students',
     'other': 'Others',
+    'affiliated': 'Affiliated members',
     'former': 'Former members',
     }
 
@@ -38,6 +39,23 @@ relationship_types = {
 
 class Person(Thing):
     def validate(self):
+        if hasattr(self, 'positions'):
+            earliest = min(p['start'] for p in self.positions)
+            end_times = [p['end'] for p in self.positions if 'end' in p]
+            if len(end_times)==len(self.positions):
+                latest = max(end_times)
+                self.lab_member_dates = [earliest, latest]
+            else:
+                self.lab_member_dates = [earliest]
+            if not hasattr(self, 'dates'):
+                self.dates = self.lab_member_dates
+            if 'end' in self.positions[0]:
+                current_position = 'former'
+            else:
+                current_position = self.current_position = self.positions[0]
+                self.position = current_position['type']
+                if 'relationships' in current_position:
+                    self.relationships = current_position['relationships']
         self.papers = []
         if not hasattr(self, 'address'):
             if hasattr(self, 'room'):
@@ -63,7 +81,6 @@ class Person(Thing):
             self.external_publications = get_orcid_publications(self.orcid)
         elif hasattr(self, 'semantic_scholar'):
             self.external_publications = get_semantic_scholar_publications(self.semantic_scholar)
-
 
 def get_people():
     people = {}

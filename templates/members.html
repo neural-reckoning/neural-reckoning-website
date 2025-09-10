@@ -30,7 +30,15 @@
         <div class="col">
             <a href="{{member.key}}.html"><b>{{member.name}}</b></a>
             {% if hasattr(member, 'dates') %}
-                <span style="color: #aaaaaa;">({% if hasattr(member, 'former_position') %}{{member.former_position}}&nbsp;{% endif %}{{ member.dates_string }})</span>
+                {% if hasattr(member, 'positions') and member.positions|length>1 %}
+                    {% if hasattr(member, 'current_position') %}
+                        <span style="color: #aaaaaa;">(current role since {{ member.current_position.start }}, member since {{ member.lab_member_dates[0] }} )</span>
+                    {% else %}
+                        <span style="color: #aaaaaa;">(lab member {{ member.lab_member_dates[0] }}-{{ member.lab_member_dates[1] }})</span>
+                    {% endif %}
+                {% else %}
+                    <span style="color: #aaaaaa;">({% if hasattr(member, 'former_position') %}{{member.former_position}}&nbsp;{% endif %}{{ member.dates_string }})</span>
+                {% endif %}
             {% endif %}<br/>
             {{ member.short }}
         </div>

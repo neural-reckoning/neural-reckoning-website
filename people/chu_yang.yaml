@@ -1,16 +1,28 @@
 name: Yang Chu
 author_names:
 - Chu Y
-position: phd
+positions:
+ - type: postdoc
+   short: Postdoc
+   start: 2025
+   relationships:
+     supervisor:
+       - danyal_akarca
+       - dan_goodman
+ - type: phd
+   short: PhD Student
+   start: 2016
+   end: 2025
+   relationships:
+     supervisor:
+       - dan_goodman
 email: eS5jaHUxNkBpbXBlcmlhbC5hYy51aw==
 short: Robust and flexible perception under distribution shift
 long: |-
   <p>
-  Yang Chu is a PhD student, working on understanding how the brain achieves robust perception and flexible behaviour in a constantly changing world. He has a particular interest in brain-inspired machine learning models that can handle "distribution shift". He is jointly supervised by <a href="http://www.imperial.ac.uk/people/w.luk">Wayne Luk</a> and <a href="https://tbrx.github.io/">Brooks Paige</a>.
+    Yang Chu is a postdoctoral researcher supervised by <a href="danyal_akarca.html">Danyal Akarca</a>, <a href="dan_goodman.html">Dan Goodman</a> and Jascha Achterberg.
   </p>
-dates:
-- 2016
+  <p>
+    Previously, Yang did his PhD in the lab, working on understanding how the brain achieves robust perception and flexible behaviour in a constantly changing world. He had a particular interest in brain-inspired machine learning models that can handle "distribution shift". He was jointly supervised by <a href="http://www.imperial.ac.uk/people/w.luk">Wayne Luk</a> and <a href="https://tbrx.github.io/">Brooks Paige</a>.
+  </p>
 semantic_scholar: 2070014411
-relationships:
-  supervisor:
-    - dan_goodman

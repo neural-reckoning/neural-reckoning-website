@@ -29,6 +29,14 @@
                 <img class="img-fluid" src="{{ email_img }}" style="height:1em;"/>
             </li>
         {% endif %}
+        {% if positions %}
+            <li class="list-group-item">
+                {% for position in positions %}
+                    {{ position.short }} ({{ position.start }}-{% if position.end %}{{ position.end }}{% endif %})
+                    {% if not loop.last %}<br>{% endif %}
+                {% endfor %}
+            </li>
+        {% endif %}
         {% if dates_string %}
             <li class="list-group-item" style="color: #aaaaaa;">
                 Lab member: {{ dates_string }}
