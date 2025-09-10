@@ -72,7 +72,7 @@ save_cache()
 
 # Check links
 print('Finished generating HTML, now checking links.')
-# check_links()
+check_links()
 
 # And we're done
 print('Finished.')
