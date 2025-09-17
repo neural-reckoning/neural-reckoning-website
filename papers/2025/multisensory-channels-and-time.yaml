@@ -30,13 +30,13 @@ abstract: |-
   Animals continuously combine information across sensory modalities and time, and use these combined signals to guide their behaviour. Picture a predator watching their prey sprint and screech through a field. To date, a range of multisensory algorithms have been proposed to model this process including linear and nonlinear fusion, which combine the inputs from multiple sensory channels via either a sum or nonlinear function. However, many multisensory algorithms treat successive observations independently, and so cannot leverage the temporal structure inherent to naturalistic stimuli. To investigate this, we introduce a novel multisensory task in which we provide the same number of task-relevant signals per trial but vary how this information is presented: from many short bursts to a few long sequences. We demonstrate that multisensory algorithms that treat different time steps as independent, perform sub-optimally on this task. However, simply augmenting these algorithms to integrate across sensory channels and short temporal windows allows them to perform surprisingly well, and comparably to fully recurrent neural networks. Overall, our work: highlights the benefits of fusing multisensory information across channels and time, shows that small increases in circuit/model complexity can lead to significant gains in performance, and provides a novel multisensory task for testing the relevance of this in biological systems.
 bluesky_thread:
 - https://bsky.app/profile/did:plc:niqde7rkzo7ua3scet2rzyt7/post/3lfpcgulazs2y
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lfpcgw3pss2y
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lfpcgwh4322y
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lfpcgx32qk2y
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lfpcgxicl22y
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lfpcgxup2k2y
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lfpcgyders2y
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lfpcgypcmk2y
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lfpclblmk22y
+- https://bsky.app/profile/neural-reckoning.org/post/3lfpcgw3pss2y
+- https://bsky.app/profile/neural-reckoning.org/post/3lfpcgwh4322y
+- https://bsky.app/profile/neural-reckoning.org/post/3lfpcgx32qk2y
+- https://bsky.app/profile/neural-reckoning.org/post/3lfpcgxicl22y
+- https://bsky.app/profile/neural-reckoning.org/post/3lfpcgxup2k2y
+- https://bsky.app/profile/neural-reckoning.org/post/3lfpcgyders2y
+- https://bsky.app/profile/neural-reckoning.org/post/3lfpcgypcmk2y
+- https://bsky.app/profile/neural-reckoning.org/post/3lfpclblmk22y
 related:
 - multimodal

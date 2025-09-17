@@ -25,27 +25,27 @@ urls:
 - - Preprint (PDF)
   - https://arxiv.org/pdf/2106.02626
 - - Bluesky
-  - https://bsky.app/profile/neuralreckoning.bsky.social/post/3lggcx2k2522f
+  - https://bsky.app/profile/neural-reckoning.org/post/3lggcx2k2522f
 - - Mastodon
   - https://neuromatch.social/@neuralreckoning/113878770587575972
 abstract: The brain is structurally and functionally modular, although recent evidence has raised questions about the extent of both types of modularity. Using a simple, toy artificial neural network setup that allows for precise control, we find that structural modularity does not in general guarantee functional specialization (across multiple measures of specialization). Further, in this setup (1) specialization only emerges when features of the environment are meaningfully separable, (2) specialization preferentially emerges when the network is strongly resource-constrained, and (3) these findings are qualitatively similar across several different variations of network architectures. Finally, we show that functional specialization varies dynamically across time, and these dynamics depend on both the timing and bandwidth of information flow in the network. We conclude that a static notion of specialization is likely too simple a framework for understanding intelligence in situations of real-world complexity, from biology to brain-inspired neuromorphic systems.
 bluesky_thread:
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lggcx2k2522f
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lggcx6hmos2f
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lggcx6hno22f
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lggcx6hno32f
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lggcx6hond2f
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lggcx7dai32f
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lggcx7dbhd2f
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lggcx7dcgl2f
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lggcx7ddft2f
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lggcxajsu32f
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lggcxajusl2f
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lggcxbeiel2f
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lggcxbeiem2f
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lggcxbenau2f
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lggcxcn27u2f
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lggcxcn3742f
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lggcxcn3752f
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lggcxcn3762f
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lggcxcn46g2f
+- https://bsky.app/profile/neural-reckoning.org/post/3lggcx2k2522f
+- https://bsky.app/profile/neural-reckoning.org/post/3lggcx6hmos2f
+- https://bsky.app/profile/neural-reckoning.org/post/3lggcx6hno22f
+- https://bsky.app/profile/neural-reckoning.org/post/3lggcx6hno32f
+- https://bsky.app/profile/neural-reckoning.org/post/3lggcx6hond2f
+- https://bsky.app/profile/neural-reckoning.org/post/3lggcx7dai32f
+- https://bsky.app/profile/neural-reckoning.org/post/3lggcx7dbhd2f
+- https://bsky.app/profile/neural-reckoning.org/post/3lggcx7dcgl2f
+- https://bsky.app/profile/neural-reckoning.org/post/3lggcx7ddft2f
+- https://bsky.app/profile/neural-reckoning.org/post/3lggcxajsu32f
+- https://bsky.app/profile/neural-reckoning.org/post/3lggcxajusl2f
+- https://bsky.app/profile/neural-reckoning.org/post/3lggcxbeiel2f
+- https://bsky.app/profile/neural-reckoning.org/post/3lggcxbeiem2f
+- https://bsky.app/profile/neural-reckoning.org/post/3lggcxbenau2f
+- https://bsky.app/profile/neural-reckoning.org/post/3lggcxcn27u2f
+- https://bsky.app/profile/neural-reckoning.org/post/3lggcxcn3742f
+- https://bsky.app/profile/neural-reckoning.org/post/3lggcxcn3752f
+- https://bsky.app/profile/neural-reckoning.org/post/3lggcxcn3762f
+- https://bsky.app/profile/neural-reckoning.org/post/3lggcxcn46g2f

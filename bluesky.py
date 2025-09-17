@@ -10,7 +10,12 @@ def get_bluesky_embed(url):
         return bluesky_cache[url]
     resp = requests.get(f"https://embed.bsky.app/oembed",
                         params={'url': url, 'maxwidth': 400})
-    results = resp.json()
+    try:
+        results = resp.json()
+    except:
+        print(resp.status_code, resp.text)
+        print(url)
+        raise
     bluesky_cache.set(url, results['html'])
     return results['html']    
 
@@ -25,3 +30,4 @@ def generate_bluesky_threads(papers):
 
 if __name__=='__main__':
     print(get_bluesky_thread(['https://bsky.app/profile/did:plc:niqde7rkzo7ua3scet2rzyt7/post/3lfpcgulazs2y']))
+    print(get_bluesky_embed(['https://bsky.app/profile/did:plc:niqde7rkzo7ua3scet2rzyt7/post/3lfpcgulazs2y']))

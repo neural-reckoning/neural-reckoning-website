@@ -25,18 +25,18 @@ urls:
   - - Data (Zenodo)
     - https://zenodo.org/records/16153275
   - - Bluesky 
-    - https://bsky.app/profile/neuralreckoning.bsky.social/post/3lupzbfiakk2m
+    - https://bsky.app/profile/neural-reckoning.org/post/3lupzbfiakk2m
   - - Mastodon
     - https://neuromatch.social/@neuralreckoning/114909302481345141
 
 abstract: We investigate the extent to which Spiking Neural Networks (SNNs) trained with Surrogate Gradient Descent (Surrogate GD), with and without delay learning, can learn from precise spike timing beyond firing rates. We first design synthetic tasks isolating intra-neuron inter-spike intervals and cross-neuron synchrony under matched spike counts. On more complex spike-based speech recognition datasets (Spiking Heidelberg Digits (SHD) and Spiking Speech Commands (SSC), we construct variants where spike count information is eliminated and only timing information remains, and show that Surrogate GD-trained SNNs are able to perform significantly above chance whereas purely rate-based models perform at chance level. We further evaluate robustness under biologically inspired perturbations -- including Gaussian jitter per spike or per-neuron, and spike deletion -- revealing consistent but perturbation-specific degradation. Networks show a sharp performance drop when spike sequences are reversed in time, with a larger drop in performance from SNNs trained with delays, indicating that these networks are more human-like in terms of behaviour. To facilitate further studies of temporal coding, we have released our modified SHD and SSC datasets. 
 
 bluesky_thread:
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lupzbfiakk2m
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lupzbgxp4c2m
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lupzbjcio22m
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lupzbk3v622m
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lupzbld4zk2m
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lupzbnotus2m
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lupzborwwc2m
-- https://bsky.app/profile/neuralreckoning.bsky.social/post/3lupzbqqa3k2m
+- https://bsky.app/profile/neural-reckoning.org/post/3lupzbfiakk2m
+- https://bsky.app/profile/neural-reckoning.org/post/3lupzbgxp4c2m
+- https://bsky.app/profile/neural-reckoning.org/post/3lupzbjcio22m
+- https://bsky.app/profile/neural-reckoning.org/post/3lupzbk3v622m
+- https://bsky.app/profile/neural-reckoning.org/post/3lupzbld4zk2m
+- https://bsky.app/profile/neural-reckoning.org/post/3lupzbnotus2m
+- https://bsky.app/profile/neural-reckoning.org/post/3lupzborwwc2m
+- https://bsky.app/profile/neural-reckoning.org/post/3lupzbqqa3k2m

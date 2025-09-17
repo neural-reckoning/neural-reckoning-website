@@ -1,0 +1,17 @@
+year: 2025
+last_updated: 17-09-2025
+authors: Goodman D
+title: "This paper changed my life: Dan Goodman on a paper that reignited the field of spiking neural networks"
+journal: The Transmitter
+categories:
+- Neuroscience
+- Spiking
+- Learning
+- Machine learning
+- Neuroinformatics
+- Neural simulation
+urls:
+- - Journal (HTML)
+  - https://www.thetransmitter.org/this-paper-changed-my-life/this-paper-changed-my-life-dan-goodman-on-a-paper-that-reignited-the-field-of-spiking-neural-networks/
+abstract: Friedemann Zenke’s 2019 paper, and its related coding tutorial SpyTorch, made it possible to apply modern machine learning to spiking neural networks. The innovation reinvigorated the field.
+peer_reviewed: false

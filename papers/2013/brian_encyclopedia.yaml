@@ -6,7 +6,7 @@ categories:
 - Brian
 urls:
 - - Full text (paywall)
-  - http://www.springerreference.com/docs/html/chapterdbid/348318.html
+  - https://doi.org/10.1007/978-1-0716-1006-0_253
 abstract: "Brian (http://briansimulator.org) is an open source Python package for\n\
   developing simulations of networks of spiking neurons (Goodman and\nBrette 2008,\
   \ 2009). The design is aimed at minimizing users' development\n\ntime, with execution\
