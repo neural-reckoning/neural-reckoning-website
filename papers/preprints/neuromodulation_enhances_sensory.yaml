@@ -25,12 +25,24 @@ urls:
     - https://www.biorxiv.org/content/10.1101/2025.07.25.666748v1.full.pdf
   - - Code (GitHub)
     - https://github.com/abdalalkilani/NeuromodulationSNN
+  - - Bluesky
+    - https://bsky.app/profile/neural-reckoning.org/post/3lz4rihm2622e
+  - - Mastodon
+    - https://neuromatch.social/@neuralreckoning/115226255243849089
 abstract: >
   Neuromodulators allow circuits to dynamically change their biophysical properties in a context-sensitive way. In addition to their role in learning, neuromodulators have been suggested to play a role in sensory processing at relatively fast timescales (less than a second), although the precise mechanisms at play are still not well understood. To assess the potential computational role of neuromodulators in sensory processing, we added a simple but flexible model of neuromodulation to spiking neural networks. These networks were then trained - with methods from machine learning - to carry out challenging sensory processing tasks. We find that this addition leads to a dramatic improvement in sensory processing in every task and configuration we tested. In particular, we find that without explicitly training for this, it decreases reaction times, a role that has been discussed for the cholinergic system. In a particularly challenging speech recognition in noise task, we find that the networks learn to make use of rapid dynamic gain control via excitability, an attentional mechanism akin to the “listening in the dips” strategy. This has been hypothesised to be a key element of human hearing allowing us to perform better in these conditions than even state-of-the-art machine learning systems. We conclude that neuromodulation does have the potential to play a significant computational role in fast sensory processing. In addition, our neuromodulated spiking neural networks are able to substantially increase performance at only a small cost to computational complexity, and may therefore be valuable for applications in energy-efficient “neuromorphic” computing devices.
 
 # if you have one
 # video_embed: 
 
-# bluesky_thread:
-# - ...
-# - ...
+bluesky_thread:
+- https://bsky.app/profile/neural-reckoning.org/post/3lz4rihm2622e
+- https://bsky.app/profile/neural-reckoning.org/post/3lz4rijevis2e
+- https://bsky.app/profile/neural-reckoning.org/post/3lz4rily4lk2e
+- https://bsky.app/profile/neural-reckoning.org/post/3lz4rimo7mk2e
+- https://bsky.app/profile/neural-reckoning.org/post/3lz4ringzks2e
+- https://bsky.app/profile/neural-reckoning.org/post/3lz4riowvs22e
+- https://bsky.app/profile/neural-reckoning.org/post/3lz4ripmvvc2e
+- https://bsky.app/profile/neural-reckoning.org/post/3lz4riqzybk2e
+- https://bsky.app/profile/neural-reckoning.org/post/3lz4rituomk2e
+- https://bsky.app/profile/neural-reckoning.org/post/3lz4riuhfas2e
