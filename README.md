@@ -26,3 +26,9 @@ Because of the pip installed parts, to upgrade just delete the existing environm
 
     conda remove -n nrweb --all
     conda env create -f environment.yml
+
+## Local server when testing search
+
+For the search functionality, the local copy needs to be run on a server using [http-server](https://www.npmjs.com/package/http-server) npm package. You can run
+
+    http-server . --cors

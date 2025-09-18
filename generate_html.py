@@ -16,6 +16,7 @@ from people import get_people, write_people, make_people_thumbnails
 from pages import write_pages, make_members_global_for_navigation
 from papers import get_papers, write_papers
 from related import find_thing_authors, find_related, RelatedSoftwareGetter, RelatedThingGetter
+from search import generate_json_for_search
 from software import get_software, write_software
 from templater import update_template_globals
 from twitter import generate_twitter_threads
@@ -32,6 +33,7 @@ papers = get_papers()
 software = get_software()
 videos = get_videos()
 organisations = get_organisations()
+generate_json_for_search(papers)
 
 # Generate thumbnails
 make_people_thumbnails(people)

@@ -2,6 +2,23 @@
 {% set collapse_conference_papers_default = "collapse" %}
 {% import 'publication_list_macro.html' as publist with context %}
 
+{% block extrahead %}
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
+<script lang="javascript">
+    var searchData = [];
+    fetch('./search_data.json')
+        .then((response) => response.json())
+        .then((json) => {
+            //searchData = json;
+            for(var key in json) {
+                const item = json[key];
+                item.id = key;
+                searchData.push(item);
+            }
+        });
+</script>
+{% endblock %}
+
 {% block main %}
 
 <h2>Publications</h2>
@@ -10,6 +27,12 @@
     For an overview of the research in the lab, see the <a href="index.html">front page</a>, or alternatively take a
     look at our <a href="themes.html">research theme visualisations</a>.
 </p>
+
+<form>
+    <div class="form-group">
+        <input type="text" class="form-control" id="searchKeywords" placeholder="Search publications">
+    </div>
+</form>
 
 {{ publist.show_conference_papers() }}
 
@@ -39,5 +62,33 @@
 <h3>All publications</h3>
 
 {{ publist.grouped_publications(publications) }}
+
+<script lang="javascript">
+    const searchKeywordsElement = document.getElementById('searchKeywords');
+    searchKeywordsElement.addEventListener('input', (event) => {
+        const keywords = event.target.value;
+        if(keywords.length>0) {
+            const options = {
+                includeScore: true,
+                threshold: 0.3,
+                keys: ['abstract', 'title', 'authors', 'year', 'journal', 'doi']
+            }
+            const fuse = new Fuse(searchData, options);
+            const searchResults = fuse.search(keywords);
+            document.querySelectorAll('li').forEach((li) => {
+                if(li.id.startsWith('pub_')) {
+                    // get thing id
+                    const thingId = li.id.substring(4);
+                    // only search in publication list items
+                    if(searchResults.some(result => result.item.id === thingId)) {
+                        li.style.display = '';
+                    } else {
+                        li.style.display = 'none';
+                    }
+                }
+            });
+        }
+    });
+</script>
 
 {% endblock %}

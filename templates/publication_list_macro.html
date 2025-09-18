@@ -1,5 +1,5 @@
 {% macro li_publication(publication) %}
-    <li{% if publication.conference %} class="{{collapse_conference_papers_default}} conference_paper"{% endif %}>
+    <li{% if publication.conference %} class="{{collapse_conference_papers_default}} conference_paper"{% endif %} id="pub_{{publication.key}}">
         <div class="publication_list_text">
             {{publication.authors_short}}
                 {% if publication.year!='Preprints' %}
