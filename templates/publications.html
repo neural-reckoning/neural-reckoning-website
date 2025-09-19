@@ -1,23 +1,5 @@
 {% extends 'base.html' %}
-{% set collapse_conference_papers_default = "collapse" %}
 {% import 'publication_list_macro.html' as publist with context %}
-
-{% block extrahead %}
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
-<script lang="javascript">
-    var searchData = [];
-    fetch('./search_data.json')
-        .then((response) => response.json())
-        .then((json) => {
-            //searchData = json;
-            for(var key in json) {
-                const item = json[key];
-                item.id = key;
-                searchData.push(item);
-            }
-        });
-</script>
-{% endblock %}
 
 {% block main %}
 
@@ -28,15 +10,41 @@
     look at our <a href="themes.html">research theme visualisations</a>.
 </p>
 
-<form>
-    <div class="form-group">
-        <input type="text" class="form-control" id="searchKeywords" placeholder="Search publications">
+<!-- <form>
+    <input type="text" class="form-control" id="publicationSearchKeywords" placeholder="Search publications">
+    <div class="form-check form-check-inline">
+        <input type="checkbox" class="form-check-input" id="showConferencePapers">
+        <label class="form-check-label" for="showConferencePapers">Conferences</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="checkbox" class="form-check-input" id="showTheses">
+        <label class="form-check-label" for="showTheses">Theses</label>
+    </div>
+</form> -->
+
+<form class="mb-3">
+    <div class="form-row align-items-center justify-content-between">
+        <div class="col-lg-6">
+            <input type="text" class="form-control" id="publicationSearchKeywords" placeholder="Search publications">
+        </div>
+        <div class="col-lg-auto">
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="showConferencePapers" checked>
+                <label class="form-check-label" for="showConferencePapers">Conferences</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="showTheses" checked>
+                <label class="form-check-label" for="showTheses">Theses</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="showOnlyPR">
+                <label class="form-check-label" for="showOnlyPR">Only peer-reviewed</label>
+            </div>
+        </div>
     </div>
 </form>
 
-{{ publist.show_conference_papers() }}
-
-<div class="panel-group">
+<div class="panel-group hide-if-searching">
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">
@@ -59,36 +67,8 @@
     </div>
 </div>
 
-<h3>All publications</h3>
+<h3 class="hide-if-searching">All publications</h3>
 
 {{ publist.grouped_publications(publications) }}
-
-<script lang="javascript">
-    const searchKeywordsElement = document.getElementById('searchKeywords');
-    searchKeywordsElement.addEventListener('input', (event) => {
-        const keywords = event.target.value;
-        if(keywords.length>0) {
-            const options = {
-                includeScore: true,
-                threshold: 0.3,
-                keys: ['abstract', 'title', 'authors', 'year', 'journal', 'doi']
-            }
-            const fuse = new Fuse(searchData, options);
-            const searchResults = fuse.search(keywords);
-            document.querySelectorAll('li').forEach((li) => {
-                if(li.id.startsWith('pub_')) {
-                    // get thing id
-                    const thingId = li.id.substring(4);
-                    // only search in publication list items
-                    if(searchResults.some(result => result.item.id === thingId)) {
-                        li.style.display = '';
-                    } else {
-                        li.style.display = 'none';
-                    }
-                }
-            });
-        }
-    });
-</script>
 
 {% endblock %}

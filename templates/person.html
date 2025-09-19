@@ -108,9 +108,6 @@
 
         {% if key!="dan_goodman" %}
             <p>Note that only publications as part of the Neural Reckoning group are included here{% if external_publications %} (see <a href="#external_publications">external publications below</a> for full list){% endif %}.</p>
-        {% else %}
-            {% set collapse_conference_papers_default = "collapse" %}
-            {{ publist.show_conference_papers() }}
         {% endif %}
 
         {{ publist.grouped_publications(things['Paper']) }}

@@ -37,35 +37,9 @@
     <title>Publications</title>
     <link rel="STYLESHEET" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <script lang="javascript">
-        function hideAfterDeadline() {
-            var now = new Date();
-            var elements = document.getElementsByClassName("hideAfterDeadline");
-            for (var i = 0; i < elements.length; i++) {
-                var deadline = new Date(elements[i].getAttribute("data-deadline"));
-                if(now > deadline) {
-                    elements[i].style.display = "none";
-                }
-            }
-        }
-    </script>
 
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
-<script lang="javascript">
-    var searchData = [];
-    fetch('./search_data.json')
-        .then((response) => response.json())
-        .then((json) => {
-            //searchData = json;
-            for(var key in json) {
-                const item = json[key];
-                item.id = key;
-                searchData.push(item);
-            }
-        });
-</script>
 </head>
-<body onload="hideAfterDeadline()">
+<body>
 
 <nav class="navbar sticky-top navbar-expand-xl navbar-light bg-light"><div class="container">
     <a class="navbar-brand" href="index.html">
@@ -165,21 +139,41 @@
     look at our <a href="themes.html">research theme visualisations</a>.
 </p>
 
-<form>
-    <div class="form-group">
-        <input type="text" class="form-control" id="searchKeywords" placeholder="Search publications">
+<!-- <form>
+    <input type="text" class="form-control" id="publicationSearchKeywords" placeholder="Search publications">
+    <div class="form-check form-check-inline">
+        <input type="checkbox" class="form-check-input" id="showConferencePapers">
+        <label class="form-check-label" for="showConferencePapers">Conferences</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input type="checkbox" class="form-check-input" id="showTheses">
+        <label class="form-check-label" for="showTheses">Theses</label>
+    </div>
+</form> -->
+
+<form class="mb-3">
+    <div class="form-row align-items-center justify-content-between">
+        <div class="col-lg-6">
+            <input type="text" class="form-control" id="publicationSearchKeywords" placeholder="Search publications">
+        </div>
+        <div class="col-lg-auto">
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="showConferencePapers" checked>
+                <label class="form-check-label" for="showConferencePapers">Conferences</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="showTheses" checked>
+                <label class="form-check-label" for="showTheses">Theses</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="checkbox" class="form-check-input" id="showOnlyPR">
+                <label class="form-check-label" for="showOnlyPR">Only peer-reviewed</label>
+            </div>
+        </div>
     </div>
 </form>
 
-    <!--<div class="form-check">
-        <input class="form-check-input" type="checkbox" data-toggle="collapse" data-target=".conference_paper" role="button" id="check_show_hide_conf" aria-expanded="false">
-        <label class="form-check-label" for="check_show_hide_conf">
-            Show conference papers
-        </label>
-    </div>-->
-
-
-<div class="panel-group">
+<div class="panel-group hide-if-searching">
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title">
@@ -281,10 +275,10 @@
     </div>
 </div>
 
-<h3>All publications</h3>
+<h3 class="hide-if-searching">All publications</h3>
 
     <div class="publication_list">
-        <h5>2025</h5>
+        <h5 class="hide-if-searching">2025</h5>
         <ul>
                 <li id="pub_spytorch_transmitter">
         <div class="publication_list_text">
@@ -297,7 +291,6 @@
             <i>
                 The Transmitter
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -309,7 +302,7 @@
             </div>
     </li>
 
-                <li class="collapse conference_paper" id="pub_path_to_universal_nca">
+                <li id="pub_path_to_universal_nca">
         <div class="publication_list_text">
             <a href="gabriel_bena.html">Béna G</a>, Faldor M, <a href="dan_goodman.html">Goodman DFM</a>, Cully A
                     (2025)
@@ -320,8 +313,7 @@
             <i>
                 
                 
-                GECCO
-            </i>
+<span class="publication-type-icon"><i class="fa-solid fa-user-group"></i></span>GECCO            </i>
         </div>
             <div class="publication_list_icons">
                 
@@ -349,7 +341,6 @@
             </a>
             <i>
                     Preprint
-                
                 
                 
             </i>
@@ -382,7 +373,6 @@
                     Preprint
                 
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -407,7 +397,6 @@
             </a>
             <i>
                     Preprint
-                
                 
                 
             </i>
@@ -439,7 +428,6 @@
             </a>
             <i>
                 eNeuro
-                
                 
             </i>
         </div>
@@ -475,7 +463,6 @@
             <i>
                 PLoS Computational Biology
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -510,7 +497,6 @@
             <i>
                 The Transmitter
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -531,7 +517,6 @@
             </a>
             <i>
                     Preprint
-                
                 
                 
             </i>
@@ -564,7 +549,6 @@
             <i>
                 The Transmitter
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -586,7 +570,6 @@
             </a>
             <i>
                 Nature Communications
-                
                 
             </i>
         </div>
@@ -611,12 +594,8 @@
             </div>
     </li>
 
-        <li class="show conference_paper"><small>
-            <a href="#" data-toggle="collapse" data-target=".conference_paper" role="button" id="check_show_hide_conf" aria-expanded="false">
-                + 1 conference paper            </a>
-        </small></li>
         </ul>
-        <h5>2024</h5>
+        <h5 class="hide-if-searching">2024</h5>
         <ul>
                 <li id="pub_adapting_to_time">
         <div class="publication_list_text">
@@ -628,7 +607,6 @@
             </a>
             <i>
                 PLoS Computational Biology
-                
                 
             </i>
         </div>
@@ -656,7 +634,6 @@
             <i>
                 PLoS Computational Biology
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -681,7 +658,7 @@
     </li>
 
         </ul>
-        <h5>2023</h5>
+        <h5 class="hide-if-searching">2023</h5>
         <ul>
                 <li id="pub_snn_init">
         <div class="publication_list_text">
@@ -692,7 +669,6 @@
             </a>
             <i>
                     Preprint
-                
                 
                 
             </i>
@@ -716,14 +692,13 @@
             </a>
             <i>
                 
-<i class="fa-solid fa-graduation-cap"></i>PhD thesis,                 Imperial College London
-                
+<span class="publication-type-icon"><i class="fa-solid fa-graduation-cap"></i></span>PhD thesis,                 Imperial College London
             </i>
         </div>
     </li>
 
         </ul>
-        <h5>2022</h5>
+        <h5 class="hide-if-searching">2022</h5>
         <ul>
                 <li id="pub_cosyne_tutorial">
         <div class="publication_list_text">
@@ -735,7 +710,6 @@
             </a>
             <i>
                 Zenodo
-                
                 
             </i>
         </div>
@@ -750,7 +724,6 @@
             </a>
             <i>
                     Preprint
-                
                 
                 
             </i>
@@ -783,7 +756,6 @@
             <i>
                 Acta Acustica
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -796,7 +768,7 @@
     </li>
 
         </ul>
-        <h5>2021</h5>
+        <h5 class="hide-if-searching">2021</h5>
         <ul>
                 <li id="pub_sparse_spiking_gradient_descent">
         <div class="publication_list_text">
@@ -808,7 +780,6 @@
             </a>
             <i>
                 Advances in Neural Information Processing Systems
-                
                 
             </i>
         </div>
@@ -831,7 +802,6 @@
             </a>
             <i>
                 Nature Communications
-                
                 
             </i>
         </div>
@@ -867,7 +837,6 @@
             <i>
                 Journal of the Association for Research in Otolaryngology
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -890,7 +859,6 @@
             <i>
                 IEEE Transactions on Visualization and Computer Graphics
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -912,8 +880,7 @@
             </a>
             <i>
                 
-<i class="fa-solid fa-graduation-cap"></i>PhD thesis,                 Imperial College London
-                
+<span class="publication-type-icon"><i class="fa-solid fa-graduation-cap"></i></span>PhD thesis,                 Imperial College London
             </i>
         </div>
             <div class="publication_list_icons">
@@ -936,7 +903,6 @@
             <i>
                 Trends in Cognitive Sciences
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -958,7 +924,6 @@
             </a>
             <i>
                 Neuron
-                
                 
             </i>
         </div>
@@ -985,8 +950,7 @@
             </a>
             <i>
                 
-<i class="fa-solid fa-graduation-cap"></i>PhD thesis,                 Imperial College London
-                
+<span class="publication-type-icon"><i class="fa-solid fa-graduation-cap"></i></span>PhD thesis,                 Imperial College London
             </i>
         </div>
     </li>
@@ -1001,14 +965,13 @@
             </a>
             <i>
                 
-<i class="fa-solid fa-graduation-cap"></i>PhD thesis,                 Imperial College London
-                
+<span class="publication-type-icon"><i class="fa-solid fa-graduation-cap"></i></span>PhD thesis,                 Imperial College London
             </i>
         </div>
     </li>
 
         </ul>
-        <h5>2020</h5>
+        <h5 class="hide-if-searching">2020</h5>
         <ul>
                 <li id="pub_brian2genn">
         <div class="publication_list_text">
@@ -1020,7 +983,6 @@
             </a>
             <i>
                 Scientific Reports
-                
                 
             </i>
         </div>
@@ -1044,7 +1006,6 @@
             <i>
                 eLife Labs
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -1067,7 +1028,6 @@
             <i>
                 eLife
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -1089,14 +1049,13 @@
             </a>
             <i>
                 
-<i class="fa-solid fa-graduation-cap"></i>PhD thesis,                 Imperial College London
-                
+<span class="publication-type-icon"><i class="fa-solid fa-graduation-cap"></i></span>PhD thesis,                 Imperial College London
             </i>
         </div>
     </li>
 
         </ul>
-        <h5>2019</h5>
+        <h5 class="hide-if-searching">2019</h5>
         <ul>
                 <li id="pub_canonical_ambb">
         <div class="publication_list_text">
@@ -1107,7 +1066,6 @@
             </a>
             <i>
                     Preprint
-                
                 
                 
             </i>
@@ -1132,7 +1090,6 @@
             <i>
                 
                 Springer
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -1144,7 +1101,7 @@
             </div>
     </li>
 
-                <li class="collapse conference_paper" id="pub_attention_ccn2019">
+                <li id="pub_attention_ccn2019">
         <div class="publication_list_text">
             <a href="chu_yang.html">Chu Y</a>, <a href="dan_goodman.html">Goodman DFM</a>
                     (2019)
@@ -1155,8 +1112,7 @@
             <i>
                 
                 
-                Cognitive Computational Neuroscience
-            </i>
+<span class="publication-type-icon"><i class="fa-solid fa-user-group"></i></span>Cognitive Computational Neuroscience            </i>
         </div>
             <div class="publication_list_icons">
                 
@@ -1167,7 +1123,7 @@
             </div>
     </li>
 
-                <li class="collapse conference_paper" id="pub_auditory_anchors">
+                <li id="pub_auditory_anchors">
         <div class="publication_list_text">
             <a href="isaac_engel.html">Engel I</a>, <a href="dan_goodman.html">Goodman DFM</a>, Picinali L
                     (2019)
@@ -1178,8 +1134,7 @@
             <i>
                 
                 
-                Immersive and Interactive Audio 
-            </i>
+<span class="publication-type-icon"><i class="fa-solid fa-user-group"></i></span>Immersive and Interactive Audio             </i>
         </div>
     </li>
 
@@ -1194,7 +1149,6 @@
             <i>
                 eLife
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -1206,7 +1160,7 @@
             </div>
     </li>
 
-                <li class="collapse conference_paper" id="pub_data_driven_auditory_ccn2019">
+                <li id="pub_data_driven_auditory_ccn2019">
         <div class="publication_list_text">
             <a href="lotte_weerts.html">Weerts L</a>, Clopath C, <a href="dan_goodman.html">Goodman DFM</a>
                     (2019)
@@ -1217,8 +1171,7 @@
             <i>
                 
                 
-                Cognitive Computational Neuroscience
-            </i>
+<span class="publication-type-icon"><i class="fa-solid fa-user-group"></i></span>Cognitive Computational Neuroscience            </i>
         </div>
             <div class="publication_list_icons">
                 
@@ -1240,7 +1193,6 @@
             <i>
                 Scientific Reports
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -1252,7 +1204,7 @@
             </div>
     </li>
 
-                <li class="collapse conference_paper" id="pub_heterogeneity_ccn2019">
+                <li id="pub_heterogeneity_ccn2019">
         <div class="publication_list_text">
             <a href="nicolas_perez.html">Perez-Nieves N</a>, Leung VCH, Dragotti PL, <a href="dan_goodman.html">Goodman DFM</a>
                     (2019)
@@ -1263,8 +1215,7 @@
             <i>
                 
                 
-                Cognitive Computational Neuroscience
-            </i>
+<span class="publication-type-icon"><i class="fa-solid fa-user-group"></i></span>Cognitive Computational Neuroscience            </i>
         </div>
             <div class="publication_list_icons">
                 
@@ -1285,13 +1236,12 @@
             </a>
             <i>
                 
-<i class="fa-solid fa-graduation-cap"></i>PhD thesis,                 Imperial College London
-                
+<span class="publication-type-icon"><i class="fa-solid fa-graduation-cap"></i></span>PhD thesis,                 Imperial College London
             </i>
         </div>
     </li>
 
-                <li class="collapse conference_paper" id="pub_neural_topic_modelling_ccn2019">
+                <li id="pub_neural_topic_modelling_ccn2019">
         <div class="publication_list_text">
             <a href="pamela_hathway.html">Hathway P</a>, <a href="dan_goodman.html">Goodman DFM</a>
                     (2019)
@@ -1302,8 +1252,7 @@
             <i>
                 
                 
-                Cognitive Computational Neuroscience
-            </i>
+<span class="publication-type-icon"><i class="fa-solid fa-user-group"></i></span>Cognitive Computational Neuroscience            </i>
         </div>
             <div class="publication_list_icons">
                 
@@ -1314,12 +1263,8 @@
             </div>
     </li>
 
-        <li class="show conference_paper"><small>
-            <a href="#" data-toggle="collapse" data-target=".conference_paper" role="button" id="check_show_hide_conf" aria-expanded="false">
-                + 5 conference papers            </a>
-        </small></li>
         </ul>
-        <h5>2018</h5>
+        <h5 class="hide-if-searching">2018</h5>
         <ul>
                 <li id="pub_codegen_review">
         <div class="publication_list_text">
@@ -1332,7 +1277,6 @@
             <i>
                 Frontiers in Neuroinformatics
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -1344,7 +1288,7 @@
             </div>
     </li>
 
-                <li class="collapse conference_paper" id="pub_confluent_hierarchical_gd2018">
+                <li id="pub_confluent_hierarchical_gd2018">
         <div class="publication_list_text">
             <a href="jonathan_zheng.html">Zheng JX</a>, Pawar S, <a href="dan_goodman.html">Goodman DFM</a>
                     (2018)
@@ -1355,8 +1299,7 @@
             <i>
                 
                 
-                Graph Drawing and Network Visualization
-            </i>
+<span class="publication-type-icon"><i class="fa-solid fa-user-group"></i></span>Graph Drawing and Network Visualization            </i>
         </div>
             <div class="publication_list_icons">
                 
@@ -1377,7 +1320,6 @@
             </a>
             <i>
                 Hearing Research
-                
                 
             </i>
         </div>
@@ -1401,7 +1343,6 @@
             <i>
                  IEEE Transactions on Visualization and Computer Graphics
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -1423,7 +1364,6 @@
             </a>
             <i>
                 ReScience
-                
                 
             </i>
         </div>
@@ -1447,7 +1387,6 @@
             <i>
                 Hearing Research
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -1459,7 +1398,7 @@
             </div>
     </li>
 
-                <li class="collapse conference_paper" id="pub_vr_mobile_binaural">
+                <li id="pub_vr_mobile_binaural">
         <div class="publication_list_text">
             Chungeun K, Steadman M, <a href="jean_hugues_lestang.html">Lestang JH</a>, <a href="dan_goodman.html">Goodman DFM</a>, Picinali L
                     (2018)
@@ -1470,19 +1409,14 @@
             <i>
                 
                 
-                Audio Engineering Society 
-            </i>
+<span class="publication-type-icon"><i class="fa-solid fa-user-group"></i></span>Audio Engineering Society             </i>
         </div>
     </li>
 
-        <li class="show conference_paper"><small>
-            <a href="#" data-toggle="collapse" data-target=".conference_paper" role="button" id="check_show_hide_conf" aria-expanded="false">
-                + 2 conference papers            </a>
-        </small></li>
         </ul>
-        <h5>2017</h5>
+        <h5 class="hide-if-searching">2017</h5>
         <ul>
-                <li class="collapse conference_paper" id="pub_hypothesis_driven_asa2017">
+                <li id="pub_hypothesis_driven_asa2017">
         <div class="publication_list_text">
             <a href="dan_goodman.html">Goodman DF</a>
                     (2017)
@@ -1493,12 +1427,11 @@
             <i>
                 
                 
-                Acoustical Society of America
-            </i>
+<span class="publication-type-icon"><i class="fa-solid fa-user-group"></i></span>Acoustical Society of America            </i>
         </div>
     </li>
 
-                <li class="collapse conference_paper" id="pub_model_initiative_asa2017">
+                <li id="pub_model_initiative_asa2017">
         <div class="publication_list_text">
             Dietz M, et al.
                     (2017)
@@ -1509,12 +1442,11 @@
             <i>
                 
                 
-                Acoustical Society of America
-            </i>
+<span class="publication-type-icon"><i class="fa-solid fa-user-group"></i></span>Acoustical Society of America            </i>
         </div>
     </li>
 
-                <li class="collapse conference_paper" id="pub_roles_inhibition_adaptation_spatial_hearing">
+                <li id="pub_roles_inhibition_adaptation_spatial_hearing">
         <div class="publication_list_text">
             <a href="jean_hugues_lestang.html">Lestang JH</a>, <a href="dan_goodman.html">Goodman DF</a>
                     (2017)
@@ -1525,19 +1457,14 @@
             <i>
                 
                 
-                Acoustical Society of America
-            </i>
+<span class="publication-type-icon"><i class="fa-solid fa-user-group"></i></span>Acoustical Society of America            </i>
         </div>
     </li>
 
-        <li class="show conference_paper"><small>
-            <a href="#" data-toggle="collapse" data-target=".conference_paper" role="button" id="check_show_hide_conf" aria-expanded="false">
-                + 3 conference papers            </a>
-        </small></li>
         </ul>
-        <h5>2016</h5>
+        <h5 class="hide-if-searching">2016</h5>
         <ul>
-                <li class="collapse conference_paper" id="pub_model_initiative_asa2016">
+                <li id="pub_model_initiative_asa2016">
         <div class="publication_list_text">
             Dietz M, et al.
                     (2016)
@@ -1548,8 +1475,7 @@
             <i>
                 
                 
-                Acoustical Society of America
-            </i>
+<span class="publication-type-icon"><i class="fa-solid fa-user-group"></i></span>Acoustical Society of America            </i>
         </div>
     </li>
 
@@ -1564,7 +1490,6 @@
             <i>
                 Nature Neuroscience
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -1576,14 +1501,10 @@
             </div>
     </li>
 
-        <li class="show conference_paper"><small>
-            <a href="#" data-toggle="collapse" data-target=".conference_paper" role="button" id="check_show_hide_conf" aria-expanded="false">
-                + 1 conference paper            </a>
-        </small></li>
         </ul>
-        <h5>2015</h5>
+        <h5 class="hide-if-searching">2015</h5>
         <ul>
-                <li class="collapse conference_paper" id="pub_downstream_cns2015">
+                <li id="pub_downstream_cns2015">
         <div class="publication_list_text">
             <a href="dan_goodman.html">Goodman DFM</a>, de Cheveigné A, Winter IM, Lorenzi C
                     (2015)
@@ -1594,17 +1515,12 @@
             <i>
                 
                 
-                Computational Neuroscience
-            </i>
+<span class="publication-type-icon"><i class="fa-solid fa-user-group"></i></span>Computational Neuroscience            </i>
         </div>
     </li>
 
-        <li class="show conference_paper"><small>
-            <a href="#" data-toggle="collapse" data-target=".conference_paper" role="button" id="check_show_hide_conf" aria-expanded="false">
-                + 1 conference paper            </a>
-        </small></li>
         </ul>
-        <h5>2014</h5>
+        <h5 class="hide-if-searching">2014</h5>
         <ul>
                 <li id="pub_equations">
         <div class="publication_list_text">
@@ -1616,7 +1532,6 @@
             </a>
             <i>
                 Frontiers in Neuroinformatics
-                
                 
             </i>
         </div>
@@ -1640,7 +1555,6 @@
             <i>
                 Neural Computation
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -1653,7 +1567,7 @@
     </li>
 
         </ul>
-        <h5>2013</h5>
+        <h5 class="hide-if-searching">2013</h5>
         <ul>
                 <li id="pub_brian_encyclopedia">
         <div class="publication_list_text">
@@ -1666,7 +1580,6 @@
             <i>
                 
                 SpringerReference
-                
             </i>
         </div>
     </li>
@@ -1681,7 +1594,6 @@
             </a>
             <i>
                 Scholarpedia
-                
                 
             </i>
         </div>
@@ -1705,7 +1617,6 @@
             <i>
                 eLife
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -1728,7 +1639,6 @@
             <i>
                 Journal of Computational Science
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -1741,7 +1651,7 @@
     </li>
 
         </ul>
-        <h5>2012</h5>
+        <h5 class="hide-if-searching">2012</h5>
         <ul>
                 <li id="pub_snn_gpu">
         <div class="publication_list_text">
@@ -1753,7 +1663,6 @@
             </a>
             <i>
                 Network: Computation in Neural Systems
-                
                 
             </i>
         </div>
@@ -1767,7 +1676,7 @@
     </li>
 
         </ul>
-        <h5>2011</h5>
+        <h5 class="hide-if-searching">2011</h5>
         <ul>
                 <li id="pub_brian_hears">
         <div class="publication_list_text">
@@ -1779,7 +1688,6 @@
             </a>
             <i>
                 Frontiers in Neuroinformatics
-                
                 
             </i>
         </div>
@@ -1803,7 +1711,6 @@
             <i>
                 Frontiers in Neuroscience
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -1825,7 +1732,6 @@
             </a>
             <i>
                 Journal of Neuroscience
-                
                 
             </i>
         </div>
@@ -1849,7 +1755,6 @@
             <i>
                 Neural Computation
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -1862,7 +1767,7 @@
     </li>
 
         </ul>
-        <h5>2010</h5>
+        <h5 class="hide-if-searching">2010</h5>
         <ul>
                 <li id="pub_codegen">
         <div class="publication_list_text">
@@ -1874,7 +1779,6 @@
             </a>
             <i>
                 Neuroinformatics
-                
                 
             </i>
         </div>
@@ -1898,7 +1802,6 @@
             <i>
                 Advances in Neural Information Processing Systems
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -1920,7 +1823,6 @@
             </a>
             <i>
                 Frontiers in Neuroinformatics
-                
                 
             </i>
         </div>
@@ -1944,7 +1846,6 @@
             <i>
                 Conformal Geometry and Dynamics
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -1967,7 +1868,6 @@
             <i>
                 PLoS Computational Biology
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -1984,7 +1884,7 @@
     </li>
 
         </ul>
-        <h5>2009</h5>
+        <h5 class="hide-if-searching">2009</h5>
         <ul>
                 <li id="pub_brian_focussed_review">
         <div class="publication_list_text">
@@ -1996,7 +1896,6 @@
             </a>
             <i>
                 Frontiers in Neuroscience
-                
                 
             </i>
         </div>
@@ -2020,7 +1919,6 @@
             <i>
                 The Neuromorphic Engineer
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -2033,7 +1931,7 @@
     </li>
 
         </ul>
-        <h5>2008</h5>
+        <h5 class="hide-if-searching">2008</h5>
         <ul>
                 <li id="pub_brian">
         <div class="publication_list_text">
@@ -2045,7 +1943,6 @@
             </a>
             <i>
                 Frontiers in Neuroinformatics
-                
                 
             </i>
         </div>
@@ -2059,7 +1956,7 @@
     </li>
 
         </ul>
-        <h5>2006</h5>
+        <h5 class="hide-if-searching">2006</h5>
         <ul>
                 <li id="pub_goodman_thesis">
         <div class="publication_list_text">
@@ -2071,8 +1968,7 @@
             </a>
             <i>
                 
-<i class="fa-solid fa-graduation-cap"></i>PhD thesis,                 University of Warwick
-                
+<span class="publication-type-icon"><i class="fa-solid fa-graduation-cap"></i></span>PhD thesis,                 University of Warwick
             </i>
         </div>
             <div class="publication_list_icons">
@@ -2095,7 +1991,6 @@
             <i>
                 Conformal Geometry and Dynamics
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -2111,34 +2006,6 @@
     </div>
 
 
-<script lang="javascript">
-    const searchKeywordsElement = document.getElementById('searchKeywords');
-    searchKeywordsElement.addEventListener('input', (event) => {
-        const keywords = event.target.value;
-        if(keywords.length>0) {
-            const options = {
-                includeScore: true,
-                threshold: 0.3,
-                keys: ['abstract', 'title', 'authors', 'year', 'journal', 'doi']
-            }
-            const fuse = new Fuse(searchData, options);
-            const searchResults = fuse.search(keywords);
-            document.querySelectorAll('li').forEach((li) => {
-                if(li.id.startsWith('pub_')) {
-                    // get thing id
-                    const thingId = li.id.substring(4);
-                    // only search in publication list items
-                    if(searchResults.some(result => result.item.id === thingId)) {
-                        li.style.display = '';
-                    } else {
-                        li.style.display = 'none';
-                    }
-                }
-            });
-        }
-    });
-</script>
-
 
     <p>&nbsp;</p>
 
@@ -2146,11 +2013,13 @@
 
 <!-- Optional JavaScript for Bootstrap -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+<script type="module">
+    import { thingsToDoOnLoad } from './nr.js';
+    thingsToDoOnLoad();
+</script>
 
 </body>
 </html>

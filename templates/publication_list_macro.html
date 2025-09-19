@@ -1,5 +1,5 @@
 {% macro li_publication(publication) %}
-    <li{% if publication.conference %} class="{{collapse_conference_papers_default}} conference_paper"{% endif %} id="pub_{{publication.key}}">
+    <li id="pub_{{publication.key}}">
         <div class="publication_list_text">
             {{publication.authors_short}}
                 {% if publication.year!='Preprints' %}
@@ -14,9 +14,9 @@
                     Preprint
                 {% endif %}
                 {{publication.journal}}
-                {% if publication.phd_thesis %}<i class="fa-solid fa-graduation-cap"></i>PhD thesis, {% endif %}
+                {% if publication.phd_thesis %}<span class="publication-type-icon"><i class="fa-solid fa-graduation-cap"></i></span>PhD thesis, {% endif %}
                 {{publication.publisher}}
-                {{publication.conference}}
+                {% if publication.conference %}<span class="publication-type-icon"><i class="fa-solid fa-user-group"></i></span>{{publication.conference}}{% endif %}
             </i>
         </div>
         {% if publication.icons %}
@@ -28,26 +28,13 @@
 {% endmacro %}
 
 {% macro grouped_publications(publications) %}
-    {% if collapse_conference_papers_default=='collapse' %}
-        {% set not_collapse_conference_papers_default='show' %}
-    {% else %}
-        {% set not_collapse_conference_papers_default='collapse' %}
-    {% endif %}
     <div class="publication_list">
     {% for group in publications | groupby('publication_list_year') | reverse %}
-        <h5>{{group.grouper}}</h5>
+        <h5 class="hide-if-searching">{{group.grouper}}</h5>
         <ul>
         {% for publication in group.list | sort(attribute='key') | sort(attribute='sort_date', reverse=True) %}
             {{ li_publication(publication) }}
         {% endfor %}
-        {% set num_conferences = group.list|selectattr('conference')|list|length %}
-        {% if num_conferences>0 %}
-        <li class="{{not_collapse_conference_papers_default}} conference_paper"><small>
-            <a href="#" data-toggle="collapse" data-target=".conference_paper" role="button" id="check_show_hide_conf" aria-expanded="false">
-                + {{ num_conferences }} conference paper{% if num_conferences>1 %}s{% endif %}
-            </a>
-        </small></li>
-        {% endif %}
         </ul>
     {% endfor %}
     </div>
@@ -71,15 +58,6 @@
     {% endfor %}
     </ul>
     </div>
-{% endmacro %}
-
-{% macro show_conference_papers() %}
-    <!--<div class="form-check">
-        <input class="form-check-input" type="checkbox" data-toggle="collapse" data-target=".conference_paper" role="button" id="check_show_hide_conf" aria-expanded="false">
-        <label class="form-check-label" for="check_show_hide_conf">
-            Show conference papers
-        </label>
-    </div>-->
 {% endmacro %}
 
 {% macro li_external_publication(pub) %}

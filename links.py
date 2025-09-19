@@ -34,7 +34,7 @@ def check_link(url, msg):
     checked_this_run.add(url)
     # first try just getting the header (quick)
     p = urlparse(url)
-    conn = http.client.HTTPConnection(p.netloc)
+    conn = http.client.HTTPConnection(p.netloc, timeout=5)
     try:
         conn.request('HEAD', p.path)
         resp = conn.getresponse()
@@ -44,7 +44,7 @@ def check_link(url, msg):
     if resp.status >= 400:
         try:
             # Pretend we are a browser because some journals refuse connections otherwise
-            urllib.request.urlopen(urllib.request.Request(url, headers={ 'User-Agent': 'Mozilla/5.0' }))
+            urllib.request.urlopen(urllib.request.Request(url, headers={ 'User-Agent': 'Mozilla/5.0' }), timeout=5)
             last_checked_links[url] = today
         except Exception as ex:
             try:

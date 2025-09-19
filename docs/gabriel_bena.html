@@ -37,21 +37,9 @@
     <title>Gabriel Béna</title>
     <link rel="STYLESHEET" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <script lang="javascript">
-        function hideAfterDeadline() {
-            var now = new Date();
-            var elements = document.getElementsByClassName("hideAfterDeadline");
-            for (var i = 0; i < elements.length; i++) {
-                var deadline = new Date(elements[i].getAttribute("data-deadline"));
-                if(now > deadline) {
-                    elements[i].style.display = "none";
-                }
-            }
-        }
-    </script>
 
 </head>
-<body onload="hideAfterDeadline()">
+<body>
 
 <nav class="navbar sticky-top navbar-expand-xl navbar-light bg-light"><div class="container">
     <a class="navbar-brand" href="index.html">
@@ -216,9 +204,9 @@ My interests are broad but have lately aligned with the field of neuromorphic en
             <p>Note that only publications as part of the Neural Reckoning group are included here (see <a href="#external_publications">external publications below</a> for full list).</p>
 
             <div class="publication_list">
-        <h5>2025</h5>
+        <h5 class="hide-if-searching">2025</h5>
         <ul>
-                <li class="show conference_paper" id="pub_path_to_universal_nca">
+                <li id="pub_path_to_universal_nca">
         <div class="publication_list_text">
             <a href="gabriel_bena.html">Béna G</a>, Faldor M, <a href="dan_goodman.html">Goodman DFM</a>, Cully A
                     (2025)
@@ -229,8 +217,7 @@ My interests are broad but have lately aligned with the field of neuromorphic en
             <i>
                 
                 
-                GECCO
-            </i>
+<span class="publication-type-icon"><i class="fa-solid fa-user-group"></i></span>GECCO            </i>
         </div>
             <div class="publication_list_icons">
                 
@@ -259,7 +246,6 @@ My interests are broad but have lately aligned with the field of neuromorphic en
             </a>
             <i>
                 eNeuro
-                
                 
             </i>
         </div>
@@ -295,7 +281,6 @@ My interests are broad but have lately aligned with the field of neuromorphic en
             <i>
                 Nature Communications
                 
-                
             </i>
         </div>
             <div class="publication_list_icons">
@@ -319,12 +304,8 @@ My interests are broad but have lately aligned with the field of neuromorphic en
             </div>
     </li>
 
-        <li class="collapse conference_paper"><small>
-            <a href="#" data-toggle="collapse" data-target=".conference_paper" role="button" id="check_show_hide_conf" aria-expanded="false">
-                + 1 conference paper            </a>
-        </small></li>
         </ul>
-        <h5>2024</h5>
+        <h5 class="hide-if-searching">2024</h5>
         <ul>
                 <li id="pub_multimodal">
         <div class="publication_list_text">
@@ -336,7 +317,6 @@ My interests are broad but have lately aligned with the field of neuromorphic en
             </a>
             <i>
                 PLoS Computational Biology
-                
                 
             </i>
         </div>
@@ -432,11 +412,13 @@ My interests are broad but have lately aligned with the field of neuromorphic en
 
 <!-- Optional JavaScript for Bootstrap -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+<script type="module">
+    import { thingsToDoOnLoad } from './nr.js';
+    thingsToDoOnLoad();
+</script>
 
 </body>
 </html>
