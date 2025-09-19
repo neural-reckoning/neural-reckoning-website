@@ -1,4 +1,4 @@
-import Fuse from 'https://cdn.jsdelivr.net/npm/fuse.js@7.1.0/dist/fuse.mjs';
+// import Fuse from 'https://cdn.jsdelivr.net/npm/fuse.js@7.1.0/dist/fuse.mjs';
 
 var searchData = [];
 var searchDataByKey = {};
@@ -15,12 +15,15 @@ function hideAfterDeadline() {
 }
 
 async function loadSearchData() {
+    const keys = ['abstract', 'title', 'authors', 'year', 'journal', 'doi'];
     await fetch('./search_data.json')
         .then((response) => response.json())
         .then((json) => {
             for(var key in json) {
                 const item = json[key];
                 item.id = key;
+                // concatenate all fields corresponding to keys into a single string for simpler searching
+                item.all_text_searchable = keys.map(k => (k in item) ? item[k] : '').join('').toLowerCase().replace(/[-']/g, '');
                 searchData.push(item);
                 searchDataByKey[key] = item;
             }
@@ -40,7 +43,7 @@ function hideOrUnhideSearching(someHidden) {
 }
 
 function updatePublicationSearch(event) {
-    const keywords = document.getElementById('publicationSearchKeywords').value.trim();
+    const keywords = document.getElementById('publicationSearchKeywords').value.toLowerCase().replace(/[-']/g, '').trim().split(' ').filter(kw => kw.length>0);
     const show_conf = document.getElementById('showConferencePapers').checked;
     const show_theses = document.getElementById('showTheses').checked;
     const show_only_pr = document.getElementById('showOnlyPR').checked;
@@ -68,18 +71,34 @@ function updatePublicationSearch(event) {
     });
     // then apply the text search on top of that
     if(keywords.length>0) {
-        const options = {
-            includeScore: true,
-            threshold: 0.3, // empirically determined, smaller is more strict
-            keys: ['abstract', 'title', 'authors', 'year', 'journal', 'doi'] // use these fields to search in
-        }
-        const fuse = new Fuse(searchData, options);
-        const searchResults = fuse.search(keywords);
+        // const options = {
+        //     includeScore: true,
+        //     includeMatches: true,
+        //     findAllMatches: true,
+        //     ignoreLocation: true,
+        //     threshold: 0.3,
+        //     keys: ['abstract', 'title', 'authors', 'year', 'journal', 'doi'] // use these fields to search in
+        // }
+        // const fuse = new Fuse(searchData, options);
+        // const searchResults = fuse.search(keywords);
+        // console.log(searchResults);
+        // var someHidden = false;
+        // document.querySelectorAll('li').forEach((li) => {
+        //     if(li.id.startsWith('pub_')) {
+        //         const thingId = li.id.substring(4);
+        //         if(!searchResults.some(result => result.item.id === thingId)) {
+        //             someHidden = true;
+        //             li.style.display = 'none';
+        //         }
+        //     }
+        // });
         var someHidden = false;
         document.querySelectorAll('li').forEach((li) => {
             if(li.id.startsWith('pub_')) {
                 const thingId = li.id.substring(4);
-                if(!searchResults.some(result => result.item.id === thingId)) {
+                const thing = searchDataByKey[thingId];
+                // test if all of the keywords are in the all_text_searchable field
+                if(!keywords.every(kw => thing.all_text_searchable.includes(kw))) {
                     someHidden = true;
                     li.style.display = 'none';
                 }
