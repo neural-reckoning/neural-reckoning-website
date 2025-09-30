@@ -2,6 +2,7 @@ name: Gabriel Béna
 author_names:
 - Béna G
 position: phd
+email: 'Zy5iZW5hMjFAaW1wZXJpYWwuYWMudWs=' # generate this by import base64; base64.b64encode(b'address')
 short: Modular neural systems, spiking neural networks and neuromorphic computing
 long: |-
   <p>

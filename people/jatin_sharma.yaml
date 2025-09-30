@@ -2,6 +2,7 @@ name: Jatin Sharma
 author_names:
 - Sharma J
 position: phd
+email: 'ai5zaGFybWEyNEBpbXBlcmlhbC5hYy51aw==' # generate this by import base64; base64.b64encode(b'address')
 short: Interpretable machine learning and neuroscience.
 long: |-
   <p>

@@ -1,0 +1,22 @@
+name: AbdelQader AlKilany
+author_names:
+- AlKilany A
+position: phd
+email: 'YWJkYWwuYWxraWxhbnkyMEBpbXBlcmlhbC5hYy51aw==' # generate this by import base64; base64.b64encode(b'address')
+short: Neuromodulation and neuromorphic computing.
+long: |-
+  <p>
+    My research focuses on simulating neuromodulation using spiking neural networks, with the broader aim of understanding cognition and the mechanisms through which intelligence emerges from algorithmic processes and their physical substrates. I am particularly interested in how computational models can capture aspects of adaptive behaviour and decision-making.
+  </p>
+  <p>
+    Beyond theoretical modelling, I am also intrigued by applications at the intersection of neuromorphic computing, robotics, and haptics, exploring how brain-inspired architectures can interact with and control embodied systems. This includes examining the role of computer architecture in enabling efficient neuromorphic technologies and their integration into real-world platforms.
+  </p>
+dates:
+- 2025
+links:
+  - ['Google Scholar', 'https://scholar.google.com/citations?hl=en&user=tGlBplQAAAAJ']
+  - ['ORCID', 'https://orcid.org/0009-0003-7220-4395']
+orcid: 0009-0003-7220-4395
+relationships:
+  supervisor:
+    - dan_goodman

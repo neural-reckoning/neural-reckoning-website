@@ -1,0 +1,19 @@
+name: Hardik Rajpal
+author_names:
+- Rajpal H
+email: 'aC5yYWpwYWwxNUBpbXBlcmlhbC5hYy51aw==' # generate this by import base64; base64.b64encode(b'address')
+dates:
+- 2025
+long: |-
+  <p>
+    I am a Schmidt Sciences Research Fellow with the Intelligent Systems and Networks group and IX at Imperial College London. Guided by a restless curiosity and a complexity science perspective, my research spans opinion dynamics, economic complexity, game theory, evolutionary biology, and computational neuroscience. I am inspired by natural phenomena across scales, which I study using tools from network science, mathematical modelling, and information theory. My current work focuses on the role of self-organization in enabling generalizable learning in artificial neural networks.
+  </p>
+position: postdoc
+short: Self-organization and generalisation in learning.
+links:
+  - ['Google Scholar', 'https://scholar.google.com/citations?user=JxVzoGQAAAAJ&hl=en']
+  - ['Semantic Scholar', 'https://www.semanticscholar.org/author/Hardik-Rajpal/51188146']
+semantic_scholar: 51188146
+relationships:
+  mentor:
+    - dan_goodman
