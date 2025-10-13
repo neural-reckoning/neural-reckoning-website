@@ -49,12 +49,14 @@ def get_orcid_publications(user_id):
             if eid['external-id-type'].lower()=='doi':
                 doi = eid['external-id-value']
                 pub.url = "http://dx.doi.org/"+doi
+        missing_author_name = False
         if 'contributors' in work and 'contributor' in work['contributors'] and len(work['contributors']['contributor']):
             authors = []
             for contrib in work['contributors']['contributor']:
                 if 'credit-name' not in contrib or contrib['credit-name'] is None:
                     authors.append("Name Missing")
-                    print(f"Missing author name in ORCID data for {title}")
+                    # print(f"Missing author name in ORCID data for {title}")
+                    missing_author_name = True
                 else:
                     authors.append(contrib['credit-name']['value'])
             if len(authors)>6:
@@ -70,6 +72,7 @@ def get_orcid_publications(user_id):
             if 'issued' in md:
                 pub.date = md["issued"]["date-parts"][0][0]
             if 'author' in md and len(md['author']):
+                missing_author_name = False
                 authors = []
                 for auth in md['author']:
                     if 'ORCID' in auth:
@@ -85,6 +88,8 @@ def get_orcid_publications(user_id):
                 if len(authors)>6:
                     authors = [authors[0], 'et al.']
                 pub.authors = ', '.join(authors)
+        if missing_author_name:
+            print(f"Missing author name in ORCID data for {title}")
         # Try to minimize duplicate entries that are found
         dup = False
         if title.lower() in titles:
