@@ -17,24 +17,24 @@
     <!-- social media stuff -->
     <meta name="twitter:widgets:csp" content="on">
     <meta name="twitter:dnt" content="on">
-    <meta name="description" content="">
-    <meta property="og:url" content="https://neural-reckoning.org/video_psychometrics_asr.html">
+    <meta name="description" content="Recent work has shown that the performance of spiking neural networks (SNNs) on temporally complex tasks improves significantly when axonal delays are treated a...">
+    <meta property="og:url" content="https://neural-reckoning.org/pub_delays_ccn.html">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="The Psychometrics of Automatic Speech Recognition">
-    <meta property="og:description" content="">
+    <meta property="og:title" content="Long delays reduce the need for precise weights in spiking neural networks">
+    <meta property="og:description" content="Recent work has shown that the performance of spiking neural networks (SNNs) on temporally complex tasks improves significantly when axonal delays are treated a...">
     <meta property="og:image" content="https://neural-reckoning.org/default-social-media-card.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="neural-reckoning.org">
-    <meta property="twitter:url" content="https://neural-reckoning.org/video_psychometrics_asr.html">
-    <meta name="twitter:title" content="The Psychometrics of Automatic Speech Recognition">
-    <meta name="twitter:description" content="">
+    <meta property="twitter:url" content="https://neural-reckoning.org/pub_delays_ccn.html">
+    <meta name="twitter:title" content="Long delays reduce the need for precise weights in spiking neural networks">
+    <meta name="twitter:description" content="Recent work has shown that the performance of spiking neural networks (SNNs) on temporally complex tasks improves significantly when axonal delays are treated a...">
     <meta name="twitter:image" content="https://neural-reckoning.org/default-social-media-card.png">
     <meta name="fediverse:creator" content="@neuralreckoning@neuromatch.social"/>
     <!-- bsky embed feed -->
     <script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js" async></script>
 
 
-    <title>The Psychometrics of Automatic Speech Recognition</title>
+    <title>Long delays reduce the need for precise weights in spiking neural networks</title>
     <link rel="STYLESHEET" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -134,22 +134,20 @@
 
 <div class="main">
 
-<div class="row">
-    <div class="col">
 
-        <h2><a href="https://www.youtube.com/watch?v=TnTphoFWsrE">The Psychometrics of Automatic Speech Recognition</a></h2>
-
-        <p>
-            Talk on applying psychometric testing to automatic speech recognition systems. Given by <a href="dan_goodman.html">Dan Goodman</a>, lead author <a href="lotte_weerts.html">Lotte Weerts</a>. Talk given at a workshop on acoustics and metamaterials.
-
-        </p>
-
-        <div class="embed-responsive embed-responsive-16by9 pt-3 pb-3">
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/TnTphoFWsrE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-                <h3 class="pt-5 pb-3">Related people</h3>
-            <ul class="list-inline author-list">
+<h2>Long delays reduce the need for precise weights in spiking neural networks</h2>
+    <div class="d-none d-sm-block">
+        <ul class="list-inline author-list">
+    <li>
+        <a href="pengfei_sun.html">
+        <div><img src="photo_pengfei_sun.s.circ.png"/></div>
+        <div>Pengfei Sun</div>
+        </a>
+    </li>
+    <li>
+        <div><img src="photo_placeholder.s.circ.png"/></div>
+        <div>Achterberg J</div>
+    </li>
     <li>
         <a href="dan_goodman.html">
         <div><img src="photo_dan_goodman.s.circ.png"/></div>
@@ -157,69 +155,37 @@
         </a>
     </li>
     <li>
-        <a href="lotte_weerts.html">
-        <div><img src="photo_lotte_weerts.s.circ.png"/></div>
-        <div>Lotte Weerts</div>
+        <a href="danyal_akarca.html">
+        <div><img src="photo_danyal_akarca.s.circ.png"/></div>
+        <div>Danyal Akarca</div>
         </a>
     </li>
 </ul>
 
-        <h3 class="pt-5 pb-3">Related software</h3>
-            <div class="d-flex flex-row flex-nowrap" style="overflow-x: auto;">
-    <div class="card col-5 col-md-4 p-1 border-0">
-        <div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('humanlike-hearing.png'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
-        </div>
-        <div class="card-body p-1 border-0 text-center">
-            <p class="card-title"><a href="sw_humanlike_hearing.html">HumanlikeHearing</a></p>
-            <p class="card-text">Python package for psychophysical tests of automatic speech recognition systems.</p>
-        </div>
     </div>
+    <div class="d-block d-sm-none">
+        <a href="pengfei_sun.html">Sun P</a>, Achterberg J, <a href="dan_goodman.html">Goodman DFM</a>, <a href="danyal_akarca.html">Akarca D</a>
+    </div>
+<div>
+    <i></i>
+    <i></i>
+    <i>Cognitive Computational Neuroscience</i>
+    (2025) <font color="#aaaaaa"></font>
 </div>
+<div>
+    2025 Conference on Cognitive Computational Neuroscience
+</div>
+<div>&nbsp;</div>
+<h3>Abstract</h3>
+<div>Recent work has shown that the performance of spiking neural networks (SNNs) on temporally complex tasks improves significantly when axonal delays are treated as learnable parameters. This raises an important question: If temporal delays improve a network's computational capacity, how precise do synaptic weights need to be? In this work, we investigate the relationship between delay-based computation and weight precision by combining quantized synaptic weights with a range of learnable delays on a challenging neuromorphic audio task. Our results reveal that short delays contribute little to performance, whereas medium to long delays are critical. Building on this insight, we introduce a learnable thresholding mechanism to suppress short delays that can be effectively compensated for by weights. These findings suggest that delays can reduce the burden on weight precision, highlighting a promising direction for energy-efficient SNN design and offering new perspectives on the role of delay in biological and neuromorphic computation.</div>
 
-        <h3 class="pt-5 pb-3">Related publications</h3>
-                <div class="publication_list">
-        <h5 class="hide-if-searching">2022</h5>
-        <ul>
-                <li id="pub_humanlikehearing">
-        <div class="publication_list_text">
-            <a href="lotte_weerts.html">Weerts L</a>, Rosen S, Clopath C, <a href="dan_goodman.html">Goodman DFM</a>
-                <br/>
-            <a href="pub_humanlikehearing.html">
-                <b>The Psychometrics of Automatic Speech Recognition.</b><br/>
-            </a>
-            <i>
-                    Preprint
-                
-                
-            </i>
-        </div>
-            <div class="publication_list_icons">
-                
-                        <a href="https://www.youtube.com/watch?v=TnTphoFWsrE" target="_blank">
-                            <i class="fa-solid fa-video"></i>
-                        </a>
-                        
-                        <a href="https://twitter.com/neuralreckoning/status/1395704493753479168" target="_blank">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        
-                        <a href="https://www.biorxiv.org/content/10.1101/2021.04.19.440438v3.full.pdf" target="_blank">
-                            <i class="fa-regular fa-file-pdf"></i>
-                        </a>
-                        
-            </div>
-    </li>
-
-        </ul>
-    </div>
-
+        <h3 class="pt-3">Links</h3>
+        <p>
+<button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://2025.ccneuro.org/poster/?id=3v2PeRv5J4">Abstract</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://2025.ccneuro.org/abstract_pdf/Sun_2025_Long_delays_reduce_need_precise_weights.pdf"><i class="fa-regular fa-file-pdf"></i> PDF</a></button>        </p>
     <h3 class="pt-3">Categories</h3>
     <p>
-<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_auditory.html">Auditory</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_machinelearning.html">Machine learning</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_modelling.html">Modelling</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuroscience.html">Neuroscience</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_sensory.html">Sensory</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_software.html">Software</a></button>    </p>
+<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_learning.html">Learning</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_machinelearning.html">Machine learning</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_modelling.html">Modelling</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuroinformatics.html">Neuroinformatics</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuroscience.html">Neuroscience</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_software.html">Software</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_spiking.html">Spiking</a></button>    </p>
 
-        
-    </div>
-</div>
 
 
     <p>&nbsp;</p>

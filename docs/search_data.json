@@ -1832,6 +1832,33 @@
       "https://bsky.app/profile/neural-reckoning.org/post/3lxzfvdyh3t2x"
     ]
   },
+  "delays_ccn": {
+    "year": 2025,
+    "authors": "Sun P, Achterberg J, Goodman DFM, Akarca D",
+    "last_updated": "12-08-2025",
+    "title": "Long delays reduce the need for precise weights in spiking neural networks",
+    "conference": "Cognitive Computational Neuroscience",
+    "additional": "",
+    "additional_detail": "2025 Conference on Cognitive Computational Neuroscience",
+    "categories": [
+      "Machine learning",
+      "Spiking",
+      "Learning",
+      "Neuroinformatics",
+      "Modelling"
+    ],
+    "urls": [
+      [
+        "Abstract",
+        "https://2025.ccneuro.org/poster/?id=3v2PeRv5J4"
+      ],
+      [
+        "PDF",
+        "https://2025.ccneuro.org/abstract_pdf/Sun_2025_Long_delays_reduce_need_precise_weights.pdf"
+      ]
+    ],
+    "abstract": "Recent work has shown that the performance of spiking neural networks (SNNs) on temporally complex tasks improves significantly when axonal delays are treated as learnable parameters. This raises an important question: If temporal delays improve a network's computational capacity, how precise do synaptic weights need to be? In this work, we investigate the relationship between delay-based computation and weight precision by combining quantized synaptic weights with a range of learnable delays on a challenging neuromorphic audio task. Our results reveal that short delays contribute little to performance, whereas medium to long delays are critical. Building on this insight, we introduce a learnable thresholding mechanism to suppress short delays that can be effectively compensated for by weights. These findings suggest that delays can reduce the burden on weight precision, highlighting a promising direction for energy-efficient SNN design and offering new perspectives on the role of delay in biological and neuromorphic computation."
+  },
   "fund_ecrs_not_moonshots": {
     "year": 2025,
     "last_updated": "26-05-2025",
@@ -2144,7 +2171,7 @@
   },
   "beyond_rate_coding": {
     "year": "Preprints",
-    "last_updated": "21-07-2025",
+    "last_updated": "13-10-2025",
     "authors": "Yu Z, Sun P, Goodman DFM",
     "title": "Beyond Rate Coding: Surrogate Gradients Enable Spike Timing Learning in Spiking Neural Networks",
     "categories": [
