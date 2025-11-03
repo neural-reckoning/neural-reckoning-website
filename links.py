@@ -31,6 +31,8 @@ checked_this_run = set()
 def check_link(url, msg):
     if url in last_checked_links or url in link_exceptions or url in checked_this_run:
         return
+    if 'https://t.co/' in url:
+        return
     checked_this_run.add(url)
     # first try just getting the header (quick)
     p = urlparse(url)
