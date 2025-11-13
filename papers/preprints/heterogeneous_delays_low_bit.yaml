@@ -19,5 +19,23 @@ urls:
     - https://arxiv.org/abs/2510.27434
   - - Preprint (PDF)
     - https://arxiv.org/pdf/2510.27434
+  - - Bluesky
+    - https://bsky.app/profile/did:plc:niqde7rkzo7ua3scet2rzyt7/post/3m5jpksani22m
+  - - Twitter
+    - https://x.com/neuralreckoning/status/1989027151522259378
+  - - Mastodon
+    - https://neuromatch.social/@neuralreckoning/115543629248037178
+  - - LinkedIn
+    - https://www.linkedin.com/posts/dan-goodman-78658b24a_exploiting-heterogeneous-delays-for-efficient-activity-7394793296428105728-evZK
 
 abstract: "Neural networks rely on learning synaptic weights. However, this overlooks other neural parameters that can also be learned and may be utilized by the brain. One such parameter is the delay: the brain exhibits complex temporal dynamics with heterogeneous delays, where signals are transmitted asynchronously between neurons. It has been theorized that this delay heterogeneity, rather than a cost to be minimized, can be exploited in embodied contexts where task-relevant information naturally sits contextually in the time domain. We test this hypothesis by training spiking neural networks to modify not only their weights but also their delays at different levels of precision. We find that delay heterogeneity enables state-of-the-art performance on temporally complex neuromorphic problems and can be achieved even when weights are extremely imprecise (1.58-bit ternary precision: just positive, negative, or absent). By enabling high performance with extremely low-precision weights, delay heterogeneity allows memory-efficient solutions that maintain state-of-the-art accuracy even when weights are compressed over an order of magnitude more aggressively than typically studied weight-only networks. We show how delays and time-constants adaptively trade-off, and reveal through ablation that task performance depends on task-appropriate delay distributions, with temporally-complex tasks requiring longer delays. Our results suggest temporal heterogeneity is an important principle for efficient computation, particularly when task-relevant information is temporal - as in the physical world - with implications for embodied intelligent systems and neuromorphic hardware."
+
+bluesky_thread:
+- https://bsky.app/profile/neural-reckoning.org/post/3m5jpksani22m
+- https://bsky.app/profile/neural-reckoning.org/post/3m5jpktqxes2m
+- https://bsky.app/profile/neural-reckoning.org/post/3m5jpkvomz22m
+- https://bsky.app/profile/neural-reckoning.org/post/3m5jpkwscmc2m
+- https://bsky.app/profile/neural-reckoning.org/post/3m5jpkxsxjs2m
+- https://bsky.app/profile/neural-reckoning.org/post/3m5jpkxsyj22m
+- https://bsky.app/profile/neural-reckoning.org/post/3m5jpkxt4g22m
+- https://bsky.app/profile/neural-reckoning.org/post/3m5jpkynk4k2m
