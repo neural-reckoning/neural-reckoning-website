@@ -2219,6 +2219,29 @@
       "https://bsky.app/profile/neural-reckoning.org/post/3lupzbqqa3k2m"
     ]
   },
+  "dual_memory_pathways": {
+    "year": "Preprints",
+    "last_updated": "09-12-2025",
+    "authors": "Sun P, Su Z, Achterberg J, Indiveri G, Goodman DFM, Akarca D",
+    "title": "Algorithm-hardware co-design of neuromorphic networks with dual memory pathways",
+    "categories": [
+      "Neuroscience",
+      "Spiking",
+      "Machine learning",
+      "Neuroinformatics"
+    ],
+    "urls": [
+      [
+        "Preprint",
+        "https://arxiv.org/abs/2512.07602"
+      ],
+      [
+        "Preprint (PDF)",
+        "https://arxiv.org/pdf/2512.07602"
+      ]
+    ],
+    "abstract": "Spiking neural networks excel at event-driven sensing yet maintaining task-relevant context over long timescales. However building these networks in hardware respecting both tight energy and memory budgets, remains a core challenge in the field. We address this challenge through novel algorithm-hardware co-design effort. At the algorithm level, inspired by the cortical fast-slow organization in the brain, we introduce a neural network with an explicit slow memory pathway that, combined with fast spiking activity, enables a dual memory pathway (DMP) architecture in which each layer maintains a compact low-dimensional state that summarizes recent activity and modulates spiking dynamics. This explicit memory stabilizes learning while preserving event-driven sparsity, achieving competitive accuracy on long-sequence benchmarks with 40-60% fewer parameters than equivalent state-of-the-art spiking neural networks. At the hardware level, we introduce a near-memory-compute architecture that fully leverages the advantages of the DMP architecture by retaining its compact shared state while optimizing dataflow, across heterogeneous sparse-spike and dense-memory pathways. We show experimental results that demonstrate more than a 4x increase in throughput and over a 5x improvement in energy efficiency compared with state-of-the-art implementations. Together, these contributions demonstrate that biological principles can guide functional abstractions that are both algorithmically effective and hardware-efficient, establishing a scalable co-design paradigm for real-time neuromorphic computation and learning."
+  },
   "heterogeneous_delays_low_bit": {
     "year": "Preprints",
     "last_updated": "31-10-2025",
