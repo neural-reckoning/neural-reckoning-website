@@ -17,17 +17,17 @@
     <!-- social media stuff -->
     <meta name="twitter:widgets:csp" content="on">
     <meta name="twitter:dnt" content="on">
-    <meta name="description" content="We investigate the extent to which Spiking Neural Networks (SNNs) trained with Surrogate Gradient Descent (Surrogate GD), with and without delay learning, can l...">
+    <meta name="description" content="The surrogate gradient descent algorithm enabled spiking neural networks to be trained to carry out challenging sensory processing tasks, an important step in u...">
     <meta property="og:url" content="https://neural-reckoning.org/pub_beyond_rate_coding.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Beyond Rate Coding: Surrogate Gradients Enable Spike Timing Learning in Spiking Neural Networks">
-    <meta property="og:description" content="We investigate the extent to which Spiking Neural Networks (SNNs) trained with Surrogate Gradient Descent (Surrogate GD), with and without delay learning, can l...">
+    <meta property="og:description" content="The surrogate gradient descent algorithm enabled spiking neural networks to be trained to carry out challenging sensory processing tasks, an important step in u...">
     <meta property="og:image" content="https://neural-reckoning.org/default-social-media-card.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="neural-reckoning.org">
     <meta property="twitter:url" content="https://neural-reckoning.org/pub_beyond_rate_coding.html">
     <meta name="twitter:title" content="Beyond Rate Coding: Surrogate Gradients Enable Spike Timing Learning in Spiking Neural Networks">
-    <meta name="twitter:description" content="We investigate the extent to which Spiking Neural Networks (SNNs) trained with Surrogate Gradient Descent (Surrogate GD), with and without delay learning, can l...">
+    <meta name="twitter:description" content="The surrogate gradient descent algorithm enabled spiking neural networks to be trained to carry out challenging sensory processing tasks, an important step in u...">
     <meta name="twitter:image" content="https://neural-reckoning.org/default-social-media-card.png">
     <meta name="fediverse:creator" content="@neuralreckoning@neuromatch.social"/>
     <!-- bsky embed feed -->
@@ -187,7 +187,7 @@ zenodo.org/records/1615...</p>&mdash; <a href="https://bsky.app/profile/did:plc:
 <div><i>Preprint</i></div>
 <div>&nbsp;</div>
 <h3>Abstract</h3>
-<div>We investigate the extent to which Spiking Neural Networks (SNNs) trained with Surrogate Gradient Descent (Surrogate GD), with and without delay learning, can learn from precise spike timing beyond firing rates. We first design synthetic tasks isolating intra-neuron inter-spike intervals and cross-neuron synchrony under matched spike counts. On more complex spike-based speech recognition datasets (Spiking Heidelberg Digits (SHD) and Spiking Speech Commands (SSC), we construct variants where spike count information is eliminated and only timing information remains, and show that Surrogate GD-trained SNNs are able to perform significantly above chance whereas purely rate-based models perform at chance level. We further evaluate robustness under biologically inspired perturbations -- including Gaussian jitter per spike or per-neuron, and spike deletion -- revealing consistent but perturbation-specific degradation. Networks show a sharp performance drop when spike sequences are reversed in time, with a larger drop in performance from SNNs trained with delays, indicating that these networks are more human-like in terms of behaviour. To facilitate further studies of temporal coding, we have released our modified SHD and SSC datasets.</div>
+<div>The surrogate gradient descent algorithm enabled spiking neural networks to be trained to carry out challenging sensory processing tasks, an important step in understanding how spikes contribute to neural computations. However, it is unclear the extent to which these algorithms fully explore the space of possible spiking solutions to problems. We investigated whether spiking networks trained with surrogate gradient descent can learn to make use of information that is only encoded in the timing and not the rate of spikes. We constructed synthetic datasets with a range of types of spike timing information (interspike intervals, spatio-temporal spike patterns or polychrony, and coincidence codes). We find that surrogate gradient descent training can extract all of these types of information. In more realistic speech-based datasets, both timing and rate information is present. We therefore constructed variants of these datasets in which all rate information is removed, and find that surrogate gradient descent can still perform well. We tested all networks both with and without trainable axonal delays. We find that delays can give a significant increase in performance, particularly for more challenging tasks. To determine what types of spike timing information are being used by the networks trained on the speech-based tasks, we test these networks on time-reversed spikes which perturb spatio-temporal spike patterns but leave interspike intervals and coincidence information unchanged. We find that when axonal delays are not used, networks perform well under time reversal, whereas networks trained with delays perform poorly. This suggests that spiking neural networks with delays are better able to exploit temporal structure. To facilitate further studies of temporal coding, we have released our modified speech-based datasets.</div>
 
         <h3 class="pt-3">Links</h3>
         <p>
