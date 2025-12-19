@@ -1,0 +1,16 @@
+name: Scholar Nexus
+selected: True
+url: https://scholar.nexus/
+short: A new approach to open research publishing.
+long: >
+   An organisation devoted to creating a modern, efficient, delightful and democratic scholarly publishing system, owned and controlled by scholars.
+   Incubated by <a href="org_neuromatch.html">Neuromatch</a>.
+extended: >
+   <p>Check out our pitch video for an idea of what we're about:</p>
+   <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/NcaSfiJ8G_o?si=TCeOoyBBQKXEQ5NM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+logo: scholar-nexus-logo-with-text.png
+related:
+  - dan_goodman
+  - neuromatch
+categories:
+  - Metascience

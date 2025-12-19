@@ -11,17 +11,28 @@
         {% if logo!="default_org.png" %}
         <div class="row pb-3">
             <div class="col-sm-4 order-sm-12">
-                <img class="img-fluid" src="{{logo}}">
+                <a href="{{ url }}"><img class="img-fluid" src="{{logo}}"></a>
             </div>
             <div class="col-sm-8 order-sm-1">
                 {{ long }}
+                {% if extended %}
+                    <div class="pt-3">
+                        {{ extended }}
+                    </div>
+                {% endif %}
             </div>
         </div>
         {% else %}
         <div class="pb-3">
             {{ long }}
         </div>
-        {% endif %} 
+        {% if extended %}
+            <div class="pb-3">
+                {{ extended }}
+            </div>
+        {% endif %}
+        {% endif %}
+
 
         {{ relist.related_by_class(things, categories=categories) }}
 

@@ -12,6 +12,7 @@ unindexed_pages:
     'organisations.html': 'Organisations'
     'comp-neuro-resources.html': 'Computational neuroscience resources'
     'reviewing.html': 'Ending support for legacy academic publishing'
+    'metascience.html': 'Metascience'
     'neuroinformatics.html': 'Neuroinformatics'
     'sensory.html': 'Sensory neuroscience'
     'mathematics.html': 'Mathematics'

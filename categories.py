@@ -33,6 +33,7 @@ category_detail_links = {
     'Neuroinformatics': 'neuroinformatics.html',
     'Sensory': 'sensory.html',
     'Software': 'software.html',
+    'Metascience': 'metascience.html',
     }
 
 category_descendants = defaultdict(set)

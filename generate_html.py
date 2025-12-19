@@ -49,7 +49,7 @@ categories = build_categories({**papers, **software, **videos, **organisations})
 find_related(papers, RelatedSoftwareGetter(software))
 find_related(papers, RelatedThingGetter({**papers, **organisations}))
 find_related(videos, RelatedThingGetter({**people, **papers, **software, **organisations}))
-find_related(organisations, RelatedThingGetter({**people, **papers, **software}))
+find_related(organisations, RelatedThingGetter({**people, **papers, **software, **organisations}))
 
 # Generate wordclouds
 make_wordclouds(people, papers)

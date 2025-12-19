@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% import 'publication_list_macro.html' as publist with context %}
+{% import 'related_list_macro.html' as relist with context %}
+
+{% block main %}
+
+<h2>Metascience</h2>
+
+<p>
+    I'm interested in reforming the way that science is done, in particular making it more open and collaborative. To that end, I have been involved in the following initiatives:
+</p>
+
+<ul class="list-group">
+    <li class="list-group-item">
+        I co-founded <a href="org_neuromatch.html">Neuromatch</a> and <a href="org_snufa.html">SNUFA</a>, two non-profit organisations that enable low or zero cost access to parts of the scientific process that are often too expensive for outsiders, such as conferences and summer schools.
+    </li>
+    <li class="list-group-item">
+        I made the complete notes and videos for my computational neuroscience course <a href="https://neuro4ml.github.io/">Neuroscience for machine learners</a> freely available online.
+    </li>
+    <li class="list-group-item">
+        I write a blog with articles on science reform called <a href="https://thesamovar.github.io/zavarka/">Zavarka</a>. I have also written editorials on how to improve the way we do science for <a href="https://www.thetransmitter.org/contributor/dan-goodman/">The Transmitter</a>.
+    </li>
+    <li class="list-group-item">
+        I withdrew all my voluntary labour from scientific publishers that use pre-publication peer review. See my <a href="reviewing.html">statement on peer review here</a>.
+    </li>
+    <li class="list-group-item">
+        I am trying to create a democratic and decentralised alternative to scientific publishing with <a href="org_scholar_nexus.html">Scholar Nexus</a>.
+    </li>
+    <li class="list-group-item">
+        I ran an open collaborative computational neuroscience project <a href="https://comob-project.github.io/snn-sound-localization/">COMOB Sound Localization</a> which resulted in a paper <a href="pub_comob_soundloc.html">(Ghosh et al. 2025)</a>. We may run this again in future under the <a href="https://comob-project.github.io/">COMOB</a> name.
+    </li>
+    <li class="list-group-item">
+        I maintain a short list of free and open <a href="comp-neuro-resources.html">resources for learning computational neuroscience</a>. 
+    </li>
+</ul>
+
+{{ relist.related_by_class(categories['metascience'].things) }}
+
+{% endblock %}

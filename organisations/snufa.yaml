@@ -1,4 +1,5 @@
 name: SNUFA
+selected: True
 url: http://snufa.net/
 logo: snufa_mascot.png
 short: Organisation for neuroscientists interested in spiking neural networks.
