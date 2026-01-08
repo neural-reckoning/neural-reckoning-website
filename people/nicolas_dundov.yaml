@@ -1,0 +1,18 @@
+name: Nicolás Dundov Muñoz
+author_names:
+- Dundov N
+position: phd
+email: 'bmljb2xhcy5kdW5kb3YyM0BpbXBlcmlhbC5hYy51aw==' # generate this by import base64; base64.b64encode(b'address')
+short: Neural architectures, information theory and neuromorphic computing.
+long: |-
+  <p>
+    Nicolás' research focusses on understanding neural architectures, particularly in the context of spiking neural networks and neuromorphic computing. He is jointly supervised by <a href="https://profiles.imperial.ac.uk/j.carter-gartside13">Jack Gartside</a>.
+  </p>
+dates:
+- 2026
+links:
+  - ['LinkedIn', 'https://www.linkedin.com/in/nicolas-dundov/']
+# orcid: 0009-0003-7220-4395
+relationships:
+  supervisor:
+    - dan_goodman
