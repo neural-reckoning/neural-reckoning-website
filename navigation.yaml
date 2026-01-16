@@ -26,9 +26,6 @@ external_icon_links:
     - name: Bluesky
       fa: fa-brands fa-bluesky
       url: https://bsky.app/profile/neural-reckoning.org
-    - name: Twitter
-      fa: fa-brands fa-twitter
-      url: https://twitter.com/neuralreckoning
     - name: GitHub
       fa: fa-brands fa-github
       url: https://github.com/neural-reckoning

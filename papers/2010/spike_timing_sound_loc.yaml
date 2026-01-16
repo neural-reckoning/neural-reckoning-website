@@ -14,7 +14,7 @@ urls:
 - - PDF
   - http://www.ploscompbiol.org/article/fetchObject.action?uri=info%3Adoi%2F10.1371%2Fjournal.pcbi.1000993&representation=PDF
 - - Code on ModelDB
-  - http://senselab.med.yale.edu/ModelDB/ShowModel.asp?model=126465
+  - https://modeldb.science/126465
 abstract: |-
   Spike timing is precise in the auditory system and it has been argued
   that it conveys information about auditory stimuli, in particular about

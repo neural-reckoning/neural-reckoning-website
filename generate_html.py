@@ -19,7 +19,6 @@ from related import find_thing_authors, find_related, RelatedSoftwareGetter, Rel
 from search import generate_json_for_search
 from software import get_software, write_software
 from templater import update_template_globals
-from twitter import generate_twitter_threads
 from videos import get_videos, write_videos
 from wordclouds import make_wordclouds
 
@@ -39,7 +38,6 @@ generate_json_for_search(papers)
 make_people_thumbnails(people)
 
 # Generate social media threads
-generate_twitter_threads(papers)
 generate_bluesky_threads(papers)
 
 # Find relationships

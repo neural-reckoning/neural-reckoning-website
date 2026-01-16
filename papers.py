@@ -35,14 +35,6 @@ class Paper(Thing):
                             <i class="fa-regular fa-file-pdf"></i>
                         </a>
                         '''
-            if re.search(r'\b(twitter|tweeprint)\b', name, flags=re.IGNORECASE):
-                name = '<i class="fa-brands fa-twitter"></i> '+name
-                if 'twitter' not in icons: # use first twitter link
-                    icons['twitter'] = f'''
-                        <a href="{url}" target="_blank">
-                            <i class="fa-brands fa-twitter"></i>
-                        </a>
-                        '''
             if re.search(r'\b(mastodon)\b', name, flags=re.IGNORECASE):
                 name = '<i class="fa-brands fa-mastodon"></i> '+name
                 if 'mastodon' not in icons: # use first mastodon link

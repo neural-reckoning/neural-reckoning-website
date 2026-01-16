@@ -56,7 +56,7 @@
         {% if links %}
             {% for text, url in links %}
             <li class="list-group-item">
-                <a href="{{ url }}">{% if 'twitter.com' in url.lower() %}<i class="fa-brands fa-twitter"></i> {% endif %}{% if 'mastodon' in text.lower() %}<i class="fa-brands fa-mastodon"></i> {% endif %}{% if 'bluesky' in text.lower() %}<i class="fa-brands fa-bluesky"></i> {% endif %}{% if 'scholar.google.com' in url.lower() %}<i class="fa-brands fa-google"></i> {% endif %}{% if 'orcid.org' in url.lower() %}<i class="fa-brands fa-orcid"></i> {% endif %}{{ text }}</a>
+                <a href="{{ url }}">{% if 'mastodon' in text.lower() %}<i class="fa-brands fa-mastodon"></i> {% endif %}{% if 'bluesky' in text.lower() %}<i class="fa-brands fa-bluesky"></i> {% endif %}{% if 'scholar.google.com' in url.lower() %}<i class="fa-brands fa-google"></i> {% endif %}{% if 'orcid.org' in url.lower() %}<i class="fa-brands fa-orcid"></i> {% endif %}{{ text }}</a>
             </li>
             {% endfor %}
         {% endif %}
@@ -82,13 +82,7 @@
         {% if social_feed %}
             <p>&nbsp;</p>
             <div class="d-none d-lg-block">
-                {% if social_feed[0].lower()=='twitter' %}
-                    <a class="twitter-timeline" data-width="400" data-height="1000" data-show-replies="true"
-                    href="https://twitter.com/{{social_feed[1]}}">
-                        Tweets by {{twitter}}
-                    </a>
-                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                {% elif social_feed[0].lower()=='bluesky' %}
+                {% if social_feed[0].lower()=='bluesky' %}
                     <h4 class="pt-1 pb-1">Bluesky feed</h4>
                     <bsky-embed username="{{ social_feed[1] }}" limit="5" load-more="true" custom-styles="img.rounded-full { display: none; } .flex > div { max-width: 100%; } .whitespace-pre-wrap { word-wrap: break-word;}"></bsky-embed>
                 {% endif %}

@@ -5,12 +5,17 @@
 
 {% block main %}
 
-{% if twitter_thread or bluesky_thread_html %}
+{% if bluesky_thread_html or explainer_html %}
 <div class="row">
     <div class="col-lg-4 d-none d-lg-block order-lg-12">
-        <div style="height: 90vh; overflow-y: scroll;">
-            {{ twitter_thread }}
+        <div><!--</div> style="height: 90vh; overflow-y: scroll;">-->
             {{ bluesky_thread_html }}
+            {% if explainer_html %}
+            <div class="explainer_html smaller_text">
+                <h5>The short version</h5>
+                {{ explainer_html }}
+            </div>
+            {% endif %}
         </div>
     </div>
     <div class="col-lg-8 order-lg-1">
@@ -65,5 +70,18 @@
 {% endif %}
 
 {{ relist.related_by_class(things, categories=category_objects, urls=urls, exclude=['Person']) }}
+
+{% if bluesky_thread_html or explainer_html %}
+<!-- bootstrap only show div on small screens -->
+<div class="d-block d-lg-none">
+    <h3>The short version</h3>
+    {{ bluesky_thread_html }}
+    {% if explainer_html %}
+    <div class="explainer_html">
+        {{ explainer_html }}
+    </div>
+    {% endif %}
+</div>
+{% endif %}
 
 {% endblock %}
