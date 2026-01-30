@@ -180,117 +180,60 @@ scheme, for example.
 <h2>Themes and suggested topics</h2>
 
 <p>
-    The main goal of the group at the moment is to understand computations based on the
-    principle of sparsity in time and space. We are interested in this in both a
-    neuroscience and machine learning setting. A key example is "spiking" neural networks
-    comprised of elements that communicate sparsely in time and are connected
-    sparsely in space. An example of the questions this brings up is: how do dynamically
-    evolving networks of spatially located neurons compute given the communication and computational
-    bottlenecks induced by that spatial arrangement?
+    Currently, the main focus of our research is on understanding how features of biological
+    brains contribute to "intelligent" behaviour. In particular, we are interested in the role
+    of resource constraints (energy, space, time). We want to solve these questions not only
+    to understand brains, but also because answers to questions about how the brain has
+    solved these problems may throw light on how we can design synthetic "intelligent" systems
+    that are able to operate with limited resources. This naturally ties in with an interest
+    in neuromorphic computing, the application of brain-like ideas to the design of new
+    energy-efficient computing devices. A thread that runs through all this work is
+    the use of spiking neural networks, both because this is the mechanism used by the brain,
+    but also because it has shown considerable potential in a neuromorphic computing setup.
 </p>
 
 <p>
-    To get a feel for this sort of work, check out the videos on my
-    <a href="https://www.youtube.com/channel/UCfJdfQGtvv7IN8YAIz4yfGw">YouTube channel</a>.
-    In particular, take a look at the
-    <a href="https://neural-reckoning.github.io/cosyne-tutorial-2022/">Cosyne tutorial</a>
-    I gave on spiking neural networks, and the longer
-    <a href="https://neuro4ml.github.io">Neuroscience for machine learners</a> course I teach.
-</p>
-
-<p>
-    The list of questions below might give you some inspiration, but if you have another
-    suggestion to make that you think I would be interested to supervise, please do get 
-    in touch because working with someone on a topic they are passionate about is always
-    the most rewarding thing.
+    Here are some examples of these types of questions that we have either worked on
+    previously or are planning on working on. But, don't let this list or the paragraph
+    above stop you from getting in contact with other related ideas!
 </p>
 
 <ul class="list-group">
     <li class="list-group-item">
-        <b>The brain as a community.</b> Different parts of the brain are locally
-        densely connected and sparsely connected to each other more globally. One
-        way to think of the brain is as a community of agents that have to reach 
-        consensus by communicating with each other through channels with limited 
-        bandwidth and tight temporal constraints. What sort of solutions does 
-        this suggest?
+        <b>Modularity and specialisation.</b>
+        Different parts of the brain have relatively sparse
+        interconnections, and yet they are able to work together as a whole. How is this
+        possible? Is it related to the way that some areas of the brain seem to have
+        specialised functions? Are there advantages to this from a learning or
+        resource efficiency point of view?
         <br/><a href="pub_sparsity_specialization.html">[Sample publication]</a>
     </li>
     <li class="list-group-item">
-        The brain is able to discover and integrate <b>multiple sources of information</b>,
-        either across or within modalities, rapidly and without supervision. How 
-        does it do this without running into a combinatorial explosion?
-        <br/><a href="pub_multimodal.html">[Sample publication]</a>
+        <b>Relating low-level mechanisms to high-level function.</b>
+        The brain uses a very rich array of different low level mechanisms, from
+        the structure of neurons, down to different types of ion channels. Which
+        of these mechanisms are important for simulating and understanding the
+        brain as a whole?
+        <br/><a href="pub_heterogeneity.html">[Sample publication on heterogeneity]</a>
+        <a href="pub_neuromodulation_enhances_sensory.html">[Sample publication on neuromodulation]</a>
+        <a href="pub_heterogeneous_delays_low_bit.html">[Sample publication on delay learning]</a>
+        <a href="pub_multimodal.html">[Sample publication on the role of nonlinearity in multimodal integration]</a>
     </li>
     <li class="list-group-item">
-        How can we <b>compare a complex brain model to experimental data</b> in a meaningful
-        way?
-        <br/><a href="pub_humanlikehearing.html">[Sample publication]</a>
+        <b>Spiking neurons.</b> The brain uses discrete but precisely timed "spikes"
+        instead of the continuous activations used in neural networks. Does this have
+        computational or resource efficiency advantages? How can we train networks with
+        these discontinuities?
+        <br/><a href="pub_beyond_rate_coding.html">[Sample publication on rate versus time in SNNs]</a>
+        <a href="pub_sparse_spiking_gradient_descent.html">[Sample publication on sparsity in training SNNs]</a>
     </li>
     <li class="list-group-item">
-        <b>Hypothesis generation.</b> The unique quality of the brain is its ability
-        to solve complex tasks in difficult environments. Modern machine learning
-        enables us for the first time to design models that can perform comparably to
-        the brain. Can we use techniques from machine learning combined with our
-        limited knowledge of the structure of the brain to suggest hypotheses for the
-        computational roles of neural components?
-        <br/><a href="pub_data_driven_auditory_ccn2019.html">[Sample publication]</a>
+        <b>Neuromorphic computing.</b> How do we use all these to design better
+        hardware that can carry out "intelligent" workloads with reduced energy
+        requirements?
+        <br/><a href="pub_dual_memory_pathways.html">[Sample publication on algorithm-hardware co-design]</a>
     </li>
-    <li class="list-group-item">
-        <b>Robustness.</b> Machine learning techniques such as deep networks are
-        often not robust in the same way as the brain (for example,
-        <a href="https://openai.com/research/attacking-machine-learning-with-adversarial-examples">adversarial images</a>).
-        Can we design more robust machine learning techniques inspired by the brain?
-        <br/><a href="pub_heterogeneity.html">[Sample publication 1]</a>
-        <a href="pub_attention_ccn2019.html">[Sample publication 2]</a>
-    </li>
-    <li class="list-group-item">
-        <b>Spiking neurons.</b> Implementing functional networks using
-        spiking neurons. Investigating the advantages of disadvantages
-        of spiking versus artificial neurons. Are there computations that
-        fundamentally require spiking neurons?
-        <br/><a href="pub_spike_timing_sound_loc.html">[Sample publication]</a>
-    </li>
-    <li class="list-group-item">
-        <b>Heterogeneity.</b> There is a great deal of theory on
-        homogeneous networks of neurons, but heterogeneity (of neuron
-        properties for example) may be functionally important.
-        <br/><a href="pub_heterogeneity.html">[Sample publication]</a>
-    </li>
-    <li class="list-group-item">
-        <b>Temporal processing.</b> The brain has to process a continuous
-        stream of sensory information which can arrive at unexpected times and
-        may need to be rapidly processed. The temporal structure of the
-        input at fast timescales may be important (particularly in the
-        auditory system).
-        <br/><a href="pub_spike_timing_sound_loc.html">[Sample publication]</a>
-    </li>
-    <li class="list-group-item">
-        <b>Multiplexing.</b> Model neurons or networks usually address only a
-        single task, however in the brain it appears neurons are involved
-        in multiple computations simultaneously and may multiplex information
-        or computations.
-        <br/><a href="pub_sparsity_specialization.html">[Sample publication]</a>
-    </li>
-    <li class="list-group-item">
-        <b>Auditory scene analysis and the cocktail party problem.</b> How
-        do we separate out multiple sound sources and either listen to them
-        all or focus on a single one? This is very relevant to the problem of
-        speech recognition in the presence of background noise or multiple
-        speakers, which is an unsolved problem.
-        <br/><a href="pub_multimodal.html">[Sample publication]</a>
-    </li>
-    <li class="list-group-item">
-        <b>Binding.</b> How do we group multiple features (auditory or across
-        modalities) into underlying objects?
-        <br/><a href="pub_multimodal.html">[Sample publication]</a>
-    </li>
-    <li class="list-group-item">
-        <b>Neural simulation.</b> I'm always interested in work on techniques
-        for neural simulation, and encourage anyone who works with me to contribute
-        to the <a href="http://briansimulator.org/">Brian simulator</a>.
-        <br/><a href="pub_brian2.html">[Sample publication 1]</a>
-        <a href="pub_sparse_spiking_gradient_descent.html">[Sample publication 2]</a>
-    </li>
+
 </ul>
 
     <p>&nbsp;</p>
