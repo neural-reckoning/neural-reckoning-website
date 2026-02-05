@@ -440,7 +440,8 @@
     "additional": "8:6",
     "doi": "10.3389/fninf.2014.00006",
     "categories": [
-      "Brian"
+      "Brian",
+      "Neuromorphic"
     ],
     "urls": [
       [
@@ -639,7 +640,8 @@
     "categories": [
       "Neuroinformatics",
       "Neural simulation",
-      "Brian"
+      "Brian",
+      "Neuromorphic"
     ],
     "urls": [
       [
@@ -926,7 +928,8 @@
     "additional": "8:e47314",
     "doi": "10.7554/eLife.47314",
     "categories": [
-      "Brian"
+      "Brian",
+      "Neuromorphic"
     ],
     "urls": [
       [
@@ -1065,7 +1068,8 @@
     "categories": [
       "Machine learning",
       "Spiking",
-      "Modelling"
+      "Modelling",
+      "Neuromorphic"
     ],
     "urls": [
       [
@@ -1138,7 +1142,8 @@
     "categories": [
       "Brian",
       "Neuroinformatics",
-      "Neural simulation"
+      "Neural simulation",
+      "Neuromorphic"
     ],
     "urls": [
       [
@@ -1320,7 +1325,8 @@
       "Auditory",
       "Spiking",
       "Machine learning",
-      "Modelling"
+      "Modelling",
+      "Neuromorphic"
     ],
     "urls": [
       [
@@ -1425,7 +1431,8 @@
       "Machine learning",
       "Plasticity",
       "Learning",
-      "Neuroinformatics"
+      "Neuroinformatics",
+      "Neuromorphic"
     ],
     "urls": [
       [
@@ -1459,7 +1466,8 @@
       "Machine learning",
       "Spiking",
       "Neural simulation",
-      "Learning"
+      "Learning",
+      "Neuromorphic"
     ],
     "urls": [
       [
@@ -1628,7 +1636,8 @@
       "Spiking",
       "Learning",
       "Modelling",
-      "Neuroinformatics"
+      "Neuroinformatics",
+      "Neuromorphic"
     ],
     "urls": [
       [
@@ -2007,7 +2016,8 @@
       "Neuroscience",
       "Machine learning",
       "Learning",
-      "Modelling"
+      "Modelling",
+      "Neuromorphic"
     ],
     "urls": [
       [
@@ -2068,7 +2078,8 @@
       "Neuroscience",
       "Learning",
       "Modelling",
-      "Machine learning"
+      "Machine learning",
+      "Neuromorphic"
     ],
     "urls": [
       [
@@ -2160,7 +2171,8 @@
       "Spiking",
       "Machine learning",
       "Auditory",
-      "Neuroinformatics"
+      "Neuroinformatics",
+      "Neuromorphic"
     ],
     "urls": [
       [
@@ -2209,7 +2221,8 @@
       "Neuroscience",
       "Spiking",
       "Machine learning",
-      "Neuroinformatics"
+      "Neuroinformatics",
+      "Neuromorphic"
     ],
     "urls": [
       [
@@ -2232,7 +2245,8 @@
       "Neuroscience",
       "Spiking",
       "Machine learning",
-      "Neuroinformatics"
+      "Neuroinformatics",
+      "Neuromorphic"
     ],
     "urls": [
       [
@@ -2282,7 +2296,8 @@
       "Spiking",
       "Machine learning",
       "Modelling",
-      "Auditory"
+      "Auditory",
+      "Neuromorphic"
     ],
     "urls": [
       [

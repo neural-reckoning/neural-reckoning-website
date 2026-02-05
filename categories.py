@@ -10,7 +10,7 @@ from matplotlib import cm, colors
 
 
 category_inclusions = {
-    'Brian': ['Neural simulation', 'Spiking'],
+    'Brian': ['Neural simulation', 'Spiking', 'Neuromorphic'],
     'Neural simulation': ['Neuroinformatics', 'Spiking'],
     'Spike sorting': ['Neuroinformatics', 'Spiking', 'Neural data analysis'],
     'Neural data analysis': ['Neuroinformatics'],
