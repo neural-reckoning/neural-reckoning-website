@@ -2162,10 +2162,12 @@
     "peer_reviewed": false
   },
   "beyond_rate_coding": {
-    "year": "Preprints",
-    "last_updated": "18-12-2025",
+    "year": 2026,
+    "last_updated": "17-02-2026",
     "authors": "Yu Z, Sun P, Goodman DFM",
-    "title": "Beyond Rate Coding: Surrogate Gradients Enable Spike Timing Learning in Spiking Neural Networks",
+    "title": "Beyond rate coding: surrogate gradients enable spike timing learning in spiking neural networks",
+    "journal": "Neuromorphic Computing and Engineering",
+    "doi": "10.1088/2634-4386/ae46d5",
     "categories": [
       "Neuroscience",
       "Spiking",
@@ -2175,6 +2177,14 @@
       "Neuromorphic"
     ],
     "urls": [
+      [
+        "Journal",
+        "https://iopscience.iop.org/article/10.1088/2634-4386/ae46d5"
+      ],
+      [
+        "Journal (PDF)",
+        "https://iopscience.iop.org/article/10.1088/2634-4386/ae46d5/pdf"
+      ],
       [
         "Preprint",
         "https://arxiv.org/abs/2507.16043"
