@@ -1,7 +1,8 @@
 name: Gabriel Béna
 author_names:
 - Béna G
-position: phd
+position: former
+former_position: PhD
 email: 'Zy5iZW5hMjFAaW1wZXJpYWwuYWMudWs=' # generate this by import base64; base64.b64encode(b'address')
 short: Modular neural systems, spiking neural networks and neuromorphic computing
 long: |-
@@ -16,6 +17,7 @@ links:
 social_feed: ['Bluesky', 'solarpunkgabs.bsky.social']
 dates:
 - 2021
+- 2026
 semantic_scholar: 2107033449
 orcid: 0009-0009-2802-4702
 relationships:

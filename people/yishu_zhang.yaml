@@ -1,0 +1,19 @@
+name: Yishu Zhang
+author_names:
+- Zhang Y
+position: phd
+email: 'eS56aGFuZzI2QGltcGVyaWFsLmFjLnVr' # generate this by import base64; base64.b64encode(b'address')
+short: Mathematical and computational techniques to understand the theoretical foundation of neural heterogeneity.
+long: |-
+  <p>
+    With an interdisciplinary background, Yishu Zhang is passionate about finding the concise and beautiful theoretical foundation that captures the essence of complex systems. Her interest in neuroscience was inspired by a curiosity about understanding how the brain is able to conduct cognitive processes, such as multiple forms of learning. She believes that neural heterogeneity is related to fundamental aspects of cognition, and is interested in applying both mathematical and computational techniques to understand the theoretical foundation of neural heterogeneity. She hopes that her research will not only contribute to understanding fundamental aspects of cognition, but also inspire more people from diverse backgrounds to contribute to neuroscience research, and find happiness from the process of discovery.
+  </p>
+dates:
+- 2026
+links:
+  - ['LinkedIn', 'https://www.linkedin.com/in/yishu-zhang-5a474913a/']
+# orcid: 0009-0003-7220-4395
+relationships:
+  supervisor:
+    - dan_goodman
+    - danyal_akarca

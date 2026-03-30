@@ -99,6 +99,7 @@ def get_orcid_publications(user_id):
         if not dup:
             publications.append(pub)
         titles.add(title.lower())
-        dois.add(doi.lower())
+        if doi is not None:
+            dois.add(doi.lower())
     orcid_cache.set(user_id, publications, expire=24*60*60)
     return publications

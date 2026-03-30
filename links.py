@@ -12,6 +12,7 @@ link_exceptions = set([
     'https://uk.linkedin.com/in/greta-horvathova-5a22961b1',
     'https://uk.linkedin.com/in/swathi-anillink',
     'https://www.linkedin.com/in/nicolas-dundov/',
+    'https://www.linkedin.com/in/yishu-zhang-5a474913a/',
     'https://www.cns.nyu.edu/malab/bayesianbook.html', # This one just seems to not respond when I check it via python, but works fine
     ])
 
