@@ -15,18 +15,18 @@
     <meta http-equiv="pragma" content="no-cache" />
 
     <!-- social media stuff -->
-    <meta name="description" content="">
-    <meta property="og:url" content="https://neural-reckoning.org/publication_category_spikesorting.html">
+    <meta name="description" content="Understanding how biological and artificial neural networks implement computation from connectivity is a central problem in neuroscience and machine learning. I...">
+    <meta property="og:url" content="https://neural-reckoning.org/pub_unifying_ds_graphs_mechanistic.html">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Spike sorting">
-    <meta property="og:description" content="">
+    <meta property="og:title" content="Unifying Dynamical Systems and Graph Theory to Mechanistically Understand Computation in Neural Networks">
+    <meta property="og:description" content="Understanding how biological and artificial neural networks implement computation from connectivity is a central problem in neuroscience and machine learning. I...">
     <meta property="og:image" content="https://neural-reckoning.org/default-social-media-card.png">
     <meta name="fediverse:creator" content="@neuralreckoning@neuromatch.social"/>
     <!-- bsky embed feed -->
     <script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js" async></script>
 
 
-    <title>Spike sorting</title>
+    <title>Unifying Dynamical Systems and Graph Theory to Mechanistically Understand Computation in Neural Networks</title>
     <link rel="STYLESHEET" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -123,79 +123,46 @@
 
 <div class="main">
 
-    <div>
-        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
-<a href="publication_category_neuraldataanalysis.html">Neural data analysis</a> | <a href="publication_category_neuroinformatics.html">Neuroinformatics</a> | <a href="publication_category_spiking.html">Spiking</a>    </div>
-<h2>Category: Spike sorting</h2>
 
-<p class="pt-3">
-For more details on this category, click <a href="software.html">here</a>.
-</p>
+<h2>Unifying Dynamical Systems and Graph Theory to Mechanistically Understand Computation in Neural Networks</h2>
+    <div class="d-none d-sm-block">
+        <ul class="list-inline author-list">
+    <li>
+        <a href="jatin_sharma.html">
+        <div><img src="photo_jatin_sharma.s.circ.png" /></div>
+        <div>Jatin Sharma</div>
+        </a>
+    </li>
+    <li>
+        <a href="dan_goodman.html">
+        <div><img src="photo_dan_goodman.s.circ.png" /></div>
+        <div>Dan Goodman</div>
+        </a>
+    </li>
+    <li>
+        <a href="danyal_akarca.html">
+        <div><img src="photo_danyal_akarca.s.circ.png" /></div>
+        <div>Danyal Akarca</div>
+        </a>
+    </li>
+</ul>
 
-        <h3 class="pt-5 pb-3">Related software</h3>
-            <div class="d-flex flex-row flex-nowrap" style="overflow-x: auto;">
-    <div class="card col-5 col-md-4 p-1 border-0">
-        <a href="sw_klusta.html"><div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('spikedetekt.png'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
-        </div></a>
-        <div class="card-body p-1 border-0 text-center">
-<p class="card-title"><a href="sw_klusta.html">KlustaSuite</a></p>            <p class="card-text">Spike sorting.</p>
-        </div>
     </div>
+    <div class="d-block d-sm-none">
+        <a href="jatin_sharma.html">Sharma J</a>, <a href="dan_goodman.html">Goodman DFM</a>, <a href="danyal_akarca.html">Akarca D</a>
+    </div>
+<div><i>Preprint</i></div>
+<div>&nbsp;</div>
+<h3>Abstract</h3>
+<div>Understanding how biological and artificial neural networks implement computation from connectivity is a central problem in neuroscience and machine learning. In neural systems, structural and functional connectivity are known to diverge, motivating approaches that move beyond direct connections alone. Here, we show that the spatial and temporal function of recurrent neural networks (RNNs) trained on hierarchically modular tasks can be recovered by modelling the network as a graph and analysing the multi-hop pathways between input and output units. In particular, decomposing these pathways by hop length reveals how the network temporally routes information. This perspective reframes regularisation: if function is implemented through multi-hop communication, then standard penalties such as L1 regularisation, which act only on individual weights, constrain single-hop structure rather than the multi-hop pathways that support computation. Motivated by this view, we introduce resolvent-RNNs (R-RNNs), which constrain multi-hop pathways and thereby induce temporal sparsity beyond that achieved by standard L1 regularisation. Compared with L1 regularisation, R-RNNs achieve improved performance by inducing temporal sparsity that matches the task structure, even when the task signal is sparse. Moreover, R-RNNs exhibit stronger sparsity-function alignment, reflected in their increased robustness under strong regularisation. Together, our results identify multi-hop communication as a key principle linking structure to function in recurrent networks, and suggest that sparsity should be defined over functional pathways rather than individual parameters.
 </div>
 
-        <h3 class="pt-5 pb-3">Related publications</h3>
-                <div class="publication_list">
-        <h5 class="hide-if-searching">2016</h5>
-        <ul>
-                <li id="pub_spikesorting">
-        <div class="publication_list_text">
-            Rossant C, et al.
-                    (2016)
-                <br/>
-            <a href="pub_spikesorting.html">
-                <b>Spike sorting for large, dense electrode arrays.</b><br/>
-            </a>
-            <i>
-                Nature Neuroscience
-                
-            </i>
-        </div>
-            <div class="publication_list_icons">
-                
-                        <a href="https://www.dropbox.com/s/emnup6d0aoyjccs/spikesorting-preprint.pdf?dl=1" target="_blank">
-                            <i class="fa-regular fa-file-pdf"></i>
-                        </a>
-                        
-            </div>
-    </li>
-
-        </ul>
-        <h5 class="hide-if-searching">2014</h5>
-        <ul>
-                <li id="pub_mkk">
-        <div class="publication_list_text">
-            Kadir SN, <a href="dan_goodman.html">Goodman DFM</a>, Harris KD
-                    (2014)
-                <br/>
-            <a href="pub_mkk.html">
-                <b>High-dimensional cluster analysis with the masked EM algorithm.</b><br/>
-            </a>
-            <i>
-                Neural Computation
-                
-            </i>
-        </div>
-            <div class="publication_list_icons">
-                
-                        <a href="https://arxiv.org/pdf/1309.2848" target="_blank">
-                            <i class="fa-regular fa-file-pdf"></i>
-                        </a>
-                        
-            </div>
-    </li>
-
-        </ul>
-    </div>
+        <h3 class="pt-3">Links</h3>
+        <p>
+<button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://arxiv.org/abs/2605.03598">Preprint</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://arxiv.org/pdf/2605.03598"><i class="fa-regular fa-file-pdf"></i> Preprint (PDF)</a></button>        </p>
+    <h3 class="pt-3">Categories</h3>
+    <p>
+<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_machinelearning.html">Machine learning</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_modelling.html">Modelling</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuroscience.html">Neuroscience</a></button>    </p>
 
 
 

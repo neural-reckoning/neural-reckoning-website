@@ -1,9 +1,10 @@
 name: Danyal Akarca
 author_names:
 - Akarca D
-email: 'ZC5ha2FyY2FAaW1wZXJpYWwuYWMudWs=' # generate this by import base64; base64.b64encode(b'address')
 dates:
 - 2024
+- 2026
+signoff: Danyal left the group in 2026 for a faculty position at Cambridge, and to run his company <a href="https://callosum.com">Callosum</a>.
 long: >
   <p>
     I am an Imperial College Research Fellow (supported by Schmidt Futures) in the Intelligent Systems and Networks Group in the Department of Electrical and Electronic Engineering at Imperial College London. I'm also a Visiting Scientist at the MRC Cognition and Brain Sciences Unit at the University of Cambridge.
@@ -15,10 +16,11 @@ long: >
     I completed my PhD at Pembroke College in Cambridge under the supervision of Prof Duncan Astle and advised by Prof Petra Vertes. Over this time I've been very fortunate to have numerous national and international collaborations, with colleagues at ETH Zürich, Harvard, Google DeepMind and Intel Labs. I previously trained as a Medical Doctor at the University of Southampton, with a particular focus on Neurology, Neurosurgery and Psychiatry.    
   </p>
 orcid: 0000-0002-5931-0295
-position: postdoc
+former_position: Postdoctoral Fellow
+position: former
 short: Principles of biological and artificial cognition.
 links:
-  - ['Website', 'https://www.danakarca.com/']
+  - ['LinkedIn', 'https://uk.linkedin.com/in/danyalakarca']
   - ['Bluesky', 'https://bsky.app/profile/danakarca.bsky.social']
   - ['Google Scholar', 'https://scholar.google.com/citations?user=eQuCV80AAAAJ&hl=en']
   - ['ORCID', 'https://orcid.org/0000-0002-5931-0295']

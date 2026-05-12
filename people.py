@@ -1,5 +1,6 @@
 import codecs, glob, os
 from collections import defaultdict
+from datetime import date
 
 from PIL import Image, ImageDraw
 
@@ -39,8 +40,11 @@ relationship_types = {
 
 class Person(Thing):
     def validate(self):
+        current_year = date.today().year
+        latest_year = 2014
         if hasattr(self, 'positions'):
             earliest = min(p['start'] for p in self.positions)
+            latest_year = max(latest_year, max(p.get('end', current_year) for p in self.positions))
             end_times = [p['end'] for p in self.positions if 'end' in p]
             if len(end_times)==len(self.positions):
                 latest = max(end_times)
@@ -66,9 +70,13 @@ class Person(Thing):
             self.email_img = generate_email(self.key, self.email)
         if hasattr(self, 'dates'):
             if len(self.dates)==1:
+                latest_year = current_year
                 self.dates_string = str(self.dates[0])+'-'
             else:
+                latest_year = max(self.dates)
                 self.dates_string = '-'.join(map(str, self.dates))
+        self.latest_year = latest_year
+        self.years_since_leaving = current_year - latest_year
         if not hasattr(self, 'show_publications'):
             self.show_publications = True
         if not hasattr(self, 'external_publications'):

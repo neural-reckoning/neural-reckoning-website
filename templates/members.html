@@ -14,7 +14,7 @@
         <div style="flex: 0 0 125px;">
             <a href="{{member.key}}.html">
                 {% if os.path.exists('files/photo_'+member.key+'.jpg') %}
-                    <img src="photo_{{member.key}}.m.circ.png" style="max-height: 100px; max-width: 100px;"/>
+                    <img src="photo_{{member.key}}.m.circ.png" {% if member.years_since_leaving>5 %} class="old-photo"{% endif %} style="max-height: 100px; max-width: 100px;"/>
                 {% else %}
                     <img src="portrait_placeholder.png" style="max-height: 100px; max-width: 100px;"/>
                 {% endif %}

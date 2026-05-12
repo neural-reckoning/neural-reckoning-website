@@ -4,7 +4,7 @@
     <li>
         {% if not isinstance(author, str) %}
         <a href="{{ author.key }}.html">
-        <div><img src="photo_{{ author.key }}.s.circ.png"/></div>
+        <div><img src="photo_{{ author.key }}.s.circ.png" {% if author.years_since_leaving>5 %} class="old-photo"{% endif %}/></div>
         <div>{{ author.name }}</div>
         </a>
         {% else %}

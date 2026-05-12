@@ -2390,5 +2390,31 @@
       "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda53ewt226",
       "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda54eark26"
     ]
+  },
+  "unifying_ds_graphs_mechanistic": {
+    "year": "Preprints",
+    "last_updated": "5-5-2026",
+    "authors": [
+      "Sharma J",
+      "Goodman DFM",
+      "Akarca D"
+    ],
+    "title": "Unifying Dynamical Systems and Graph Theory to Mechanistically Understand Computation in Neural Networks",
+    "categories": [
+      "Neuroscience",
+      "Machine learning",
+      "Modelling"
+    ],
+    "urls": [
+      [
+        "Preprint",
+        "https://arxiv.org/abs/2605.03598"
+      ],
+      [
+        "Preprint (PDF)",
+        "https://arxiv.org/pdf/2605.03598"
+      ]
+    ],
+    "abstract": "Understanding how biological and artificial neural networks implement computation from connectivity is a central problem in neuroscience and machine learning. In neural systems, structural and functional connectivity are known to diverge, motivating approaches that move beyond direct connections alone. Here, we show that the spatial and temporal function of recurrent neural networks (RNNs) trained on hierarchically modular tasks can be recovered by modelling the network as a graph and analysing the multi-hop pathways between input and output units. In particular, decomposing these pathways by hop length reveals how the network temporally routes information. This perspective reframes regularisation: if function is implemented through multi-hop communication, then standard penalties such as L1 regularisation, which act only on individual weights, constrain single-hop structure rather than the multi-hop pathways that support computation. Motivated by this view, we introduce resolvent-RNNs (R-RNNs), which constrain multi-hop pathways and thereby induce temporal sparsity beyond that achieved by standard L1 regularisation. Compared with L1 regularisation, R-RNNs achieve improved performance by inducing temporal sparsity that matches the task structure, even when the task signal is sparse. Moreover, R-RNNs exhibit stronger sparsity-function alignment, reflected in their increased robustness under strong regularisation. Together, our results identify multi-hop communication as a key principle linking structure to function in recurrent networks, and suggest that sparsity should be defined over functional pathways rather than individual parameters.\n"
   }
 }

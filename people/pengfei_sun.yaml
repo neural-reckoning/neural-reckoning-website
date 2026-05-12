@@ -1,7 +1,8 @@
 name: Pengfei Sun
 author_names:
 - Sun P
-position: postdoc
+former_position: Postdoc
+position: former
 email: 'cC5zdW5AaW1wZXJpYWwuYWMudWs=' # generate this by import base64; base64.b64encode(b'address')
 short: Brain-inspired neural networks.
 long: |-
@@ -14,6 +15,7 @@ long: |-
   </p>
 dates:
 - 2025
+- 2026
 relationships:
   supervisor:
     - danyal_akarca
