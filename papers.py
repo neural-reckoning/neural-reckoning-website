@@ -1,6 +1,8 @@
 import datetime
+import os
 from pathlib import Path
 import re
+import qrcode
 
 from things import Thing
 from templater import apply_template
@@ -12,6 +14,9 @@ class Paper(Thing):
         self.year = str(self.year)
         if not hasattr(self, 'last_updated') and self.year!="Preprints":
             self.last_updated = datetime.datetime(int(self.year), 1, 1)
+        if not hasattr(self, 'urls'):
+            self.urls = []
+        self.urls.append(('QR code', f'pub_{self.key}-qrcode.png'))
         self.generate_link_icons()
     
     def generate_link_icons(self):
@@ -108,3 +113,7 @@ def write_papers(papers):
                     paper.socialcard = {}
                 paper.socialcard['fediverse_creator'] = linkvaldict['mastodon']
         apply_template('paper.html', filename, keys_from=paper)
+        qrcode_url = f'https://neural-reckoning.org/{filename}'
+        if not os.path.exists(f'docs/pub_{paper.key}-qrcode.png'):
+            img = qrcode.make(qrcode_url)
+            img.save(f'docs/pub_{paper.key}-qrcode.png')

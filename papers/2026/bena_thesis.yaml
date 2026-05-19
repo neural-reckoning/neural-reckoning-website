@@ -1,0 +1,15 @@
+year: 2026
+authors: Béna G
+title: "Physical constraints and functional demands shape modular neuromorphic intelligence"
+publisher: Imperial College London
+phd_thesis: true
+categories:
+- Machine learning
+- Neuroscience
+- Learning
+- Modelling
+- Neuromorphic
+urls:
+- - Thesis
+  - https://hdl.handle.net/10044/1/128990
+abstract: "Modularity---the decomposition of complex systems into semi-autonomous, reusable parts---is widely regarded as a foundational organising principle of intelligence. Yet the concept remains elusive: definitions shift across fields, and the causal mechanisms linking structure to function are poorly understood. This thesis investigates modularity in neural networks from multiple angles, and in doing so, traces an arc from studying it as a measurable property to building self-organising substrates where it could emerge. We first disentangle modularity along two axes: its causal locus (physical vs. functional) and its causal role (imposed vs. emergent). Using this framework, we show that imposing structural modularity yields functional specialisation only under specific resource constraints and environmental separability. We then demonstrate that enforcing the metabolic costs of long-range connectivity via spatial embedding naturally produces sparse, modular topologies. These structurally modular networks outperform unstructured architectures on compositional tasks, proving physical wiring costs can drive functionally beneficial modularity. Pivoting to self-organisation, we demonstrate that locally-connected Neural Cellular Automata can master a wide range of computational primitives like matrix operations, and support neural network emulation. Next, we introduce a scale-free framework for self-organising digital circuits. Here, a topology-masked Transformer replaces global backpropagation with local message passing to act as a decentralised meta-optimizer. This system self-assembles functional Boolean circuits, maintains homeostasis, and dynamically re-routes logic around permanent hardware faults—exhibiting adaptive resilience that generalises from small to large circuits without retraining. Together, these investigations reveal modularity not as a single property to engineer, but as an emergent phenomenon---shaped by physical constraints, driven by functional demands, and mediated by local, self-organising rules. They suggest that the path toward robust, scalable intelligence may lie in cultivating substrates that grow, learn, and repair themselves from the ground up."

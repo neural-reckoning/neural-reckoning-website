@@ -10,3 +10,4 @@ dependencies:
     - diskcache
     - semanticscholar
     - pyyaml
+    - qrcode

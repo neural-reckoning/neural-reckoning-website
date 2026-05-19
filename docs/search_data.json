@@ -13,6 +13,10 @@
       [
         "Thesis (PDF)",
         "https://neural-reckoning.org/dan-goodman-thesis.pdf"
+      ],
+      [
+        "QR code",
+        "pub_goodman_thesis-qrcode.png"
       ]
     ],
     "abstract": "We prove that the boundaries of the Maskit and Bers slices contain an uncountable, dense set of points about which the boundary spirals infinitely. The set of points about which we prove the boundary spirals infinitely has zero measure and is akin to a countable union of Cantor sets. On the basis of strong numerical evidence, we conjecture that in fact the boundary spirals infinitely at almost all points in the boundary. We further conjecture that the Hausdorff dimension of the Maskit slice is less than 1.25."
@@ -34,6 +38,10 @@
       [
         "PDF (preprint)",
         "https://www.dropbox.com/s/ygz9demdn5n5l19/spirals-paper.pdf?dl=1"
+      ],
+      [
+        "QR code",
+        "pub_spirals-qrcode.png"
       ]
     ],
     "abstract": "We prove that the Bers and Maskit slices of the quasi-Fuchsian space of\na once-punctured torus have a dense, uncountable set of points in their\nboundaries about which the boundary spirals infinitely."
@@ -52,6 +60,10 @@
       [
         "Journal (HTML)",
         "http://journal.frontiersin.org/Journal/10.3389/neuro.11.005.2008/abstract"
+      ],
+      [
+        "QR code",
+        "pub_brian-qrcode.png"
       ]
     ],
     "abstract": "\"Brian\" is a new simulator for spiking neural networks, written in\nPython (http://www.briansimulator.org ). It is an intuitive and highly\nflexible tool for rapidly developing new models, especially networks of\nsingle-compartment neurons. In addition to using standard types of\nneuron models, users can define models by writing arbitrary differential\nequations in ordinary mathematical notation. Python scientific libraries\ncan also be used for defining models and analysing data. Vectorisation\ntechniques allow efficient simulations despite the overheads of an\ninterpreted language. Brian will be especially valuable for working on\nnon-standard neuron models not easily covered by existing software, and\nas an alternative to using Matlab or C for simulations. With its easy\nand intuitive syntax, Brian is also very well suited for teaching\ncomputational neuroscience. ",
@@ -74,6 +86,10 @@
       [
         "Journal (HTML)",
         "http://journal.frontiersin.org/Journal/10.3389/neuro.01.026.2009/abstract"
+      ],
+      [
+        "QR code",
+        "pub_brian_focussed_review-qrcode.png"
       ]
     ],
     "abstract": "\"Brian\" is a simulator for spiking neural networks\n(http://www.briansimulator.org ). The focus is on making the writing of\nsimulation code as quick and easy as possible for the user, and on\nflexibility: new and non-standard models are no more difficult to define\nthan standard ones. This allows scientists to spend more time on the\ndetails of their models, and less on their implementation. Neuron models\nare defined by writing differential equations in standard mathematical\nnotation, facilitating scientific communication. Brian is written in the\nPython programming language, and uses vector-based computation to allow\nfor efficient simulations. It is particularly useful for neuroscientific\nmodelling at the systems level, and for teaching computational\nneuroscience. ",
@@ -94,6 +110,10 @@
       [
         "PDF",
         "https://www.dropbox.com/s/ri7yhwzqk318ff4/brian-neuromorphic-engineer.pdf?dl=0"
+      ],
+      [
+        "QR code",
+        "pub_brian_neuromorphic_engineer-qrcode.png"
       ]
     ],
     "peer_reviewed": false,
@@ -119,6 +139,10 @@
       [
         "PDF (preprint)",
         "https://www.dropbox.com/s/si4uaau33csqejk/codegen.pdf?dl=1"
+      ],
+      [
+        "QR code",
+        "pub_codegen-qrcode.png"
       ]
     ],
     "abstract": "We demonstrate a technique for the design of neural network simulation\nsoftware, runtime code generation. This technique can be used to give\nthe user complete flexibility in specifying the mathematical model for\ntheir simulation in a high level way, along with the speed of code\nwritten in a low level language such as C++. It can also be used to\nwrite code only once but target different hardware platforms, including\ninexpensive high performance graphics processing units (GPUs). Code\ngeneration can be naturally combined with computer algebra systems to\nprovide further simplification and optimisation of the generated code.\nThe technique is quite general and could be applied to any simulation\npackage. We demonstrate it with the \"Brian\" simulator\n(http://www.briansimulator.org).",
@@ -151,6 +175,10 @@
       [
         "BibTeX",
         "http://papers.nips.cc/paper/4127-learning-to-localise-sounds-with-spiking-neural-networks/bibtex"
+      ],
+      [
+        "QR code",
+        "pub_learning_localisation-qrcode.png"
       ]
     ],
     "abstract": "To localise the source of a sound, we use location-specific properties\nof the signals received at the two ears caused by the asymmetric\nfiltering of the original sound by our head and pinnae, the head-related\ntransfer functions (HRTFs). These HRTFs change throughout an organism's\nlifetime, during development for example, and so the required neural\ncircuitry cannot be entirely hardwired. Since HRTFs are not directly\naccessible from perceptual experience, they can only be inferred from\nfiltered sounds. We present a spiking neural network model of sound\nlocalisation based on extracting location-specific synchrony patterns,\nand a simple supervised algorithm to learn the mapping between synchrony\npatterns and locations from a set of example sounds, with no previous\nknowledge of HRTFs. After learning, our model was able to accurately\nlocalise new sounds in both azimuth and elevation, including the\ndifficult task of distinguishing sounds coming from the front and back.",
@@ -171,6 +199,10 @@
       [
         "Journal (HTML)",
         "http://journal.frontiersin.org/Journal/10.3389/neuro.11.002.2010/abstract"
+      ],
+      [
+        "QR code",
+        "pub_modelfitting-qrcode.png"
       ]
     ],
     "abstract": "Spiking models can accurately predict the spike trains produced by\ncortical neurons in response to somatically injected currents. Since the\nspecific characteristics of the model depend on the neuron, a\ncomputational method is required to fit models to electrophysiological\nrecordings. The fitting procedure can be very time consuming both in\nterms of computer simulations and in terms of code writing. We present\nalgorithms to fit spiking models to electrophysiological data\n(time-varying input and spike trains) that can run in parallel on\ngraphics processing units (GPUs). The model fitting library is\ninterfaced with Brian, a neural network simulator in Python. If a GPU is\npresent it uses just-in-time compilation to translate model equations\ninto optimized code. Arbitrary models can then be defined at script\nlevel and run on the graphics card. This tool can be used to obtain\nempirically validated spiking models of neurons in various systems. We\ndemonstrate its use on public data from the INCF Quantitative\nSingle-Neuron Modeling 2009 competition by comparing the performance of\na number of neuron spiking models. ",
@@ -195,6 +227,10 @@
       [
         "PDF (preprint)",
         "https://www.dropbox.com/s/v6h2bex5y09uqej/quadqr.pdf?dl=1"
+      ],
+      [
+        "QR code",
+        "pub_qr-qrcode.png"
       ]
     ],
     "abstract": "Complex dynamics deals with the iteration of holomorphic functions. As\nis well known, the first functions to be studied which gave non-trivial\ndynamics were quadratic polynomials, which produced beautiful computer\ngenerated pictures of Julia sets and the Mandelbrot set. In the same\nspirit, this article aims to study the dynamics of the simplest\nnon-trivial quasiregular mappings. These are mappings in R<sup>2</sup>\nwhich are a composition of a quadratic polynomial and an affine stretch. "
@@ -223,6 +259,10 @@
       [
         "Code on ModelDB",
         "https://modeldb.science/126465"
+      ],
+      [
+        "QR code",
+        "pub_spike_timing_sound_loc-qrcode.png"
       ]
     ],
     "abstract": "Spike timing is precise in the auditory system and it has been argued\nthat it conveys information about auditory stimuli, in particular about\nthe location of a sound source. However, beyond simple time differences,\nthe way in which neurons might extract this information is unclear and\nthe potential computational advantages are unknown. The computational\ndifficulty of this task for an animal is to locate the source of an\nunexpected sound from two monaural signals that are highly dependent on\nthe unknown source signal. In neuron models consisting of\nspectro-temporal filtering and spiking nonlinearity, we found that the\nbinaural structure induced by spatialized sounds is mapped to synchrony\npatterns that depend on source location rather than on source signal.\nLocation-specific synchrony patterns would then result in the activation\nof location-specific assemblies of postsynaptic neurons. We designed a\nspiking neuron model which exploited this principle to locate a variety\nof sound sources in a virtual acoustic environment using measured human\nhead-related transfer functions. The model was able to accurately\nestimate the location of previously unknown sounds in both azimuth and\nelevation (including front/back discrimination) in a known acoustic\nenvironment. We found that multiple representations of different\nacoustic environments could coexist as sets of overlapping neural\nassemblies which could be associated with spatial locations by Hebbian\nlearning. The model demonstrates the computational relevance of relative\nspike timing to extract spatial information about sources independently\nof the source signal.",
@@ -245,6 +285,10 @@
       [
         "Journal (HTML)",
         "http://journal.frontiersin.org/Journal/10.3389/fninf.2011.00009/abstract"
+      ],
+      [
+        "QR code",
+        "pub_brian_hears-qrcode.png"
       ]
     ],
     "abstract": "The human cochlea includes about 3000 inner hair cells which filter\nsounds at frequencies between 20 Hz and 20 kHz. This massively parallel\nfrequency analysis is reflected in models of auditory processing, which\nare often based on banks of filters. However, existing implementations\ndo not exploit this parallelism. Here we propose algorithms to simulate\nthese models by vectorizing computation over frequency channels, which\nare implemented in \"Brian Hears,\" a library for the spiking neural\nnetwork simulator package \"Brian.\" This approach allows us to use\nhigh-level programming languages such as Python, because with vectorized\noperations, the computational cost of interpretation represents a small\nfraction of the total cost. This makes it possible to define and\nsimulate complex models in a simple way, while all previous\nimplementations were model-specific. In addition, we show that these\nalgorithms can be naturally parallelized using graphics processing\nunits, yielding substantial speed improvements. We demonstrate these\nalgorithms with several state-of-the-art cochlear models, and show that\nthey compare favorably with existing, less flexible, implementations.",
@@ -266,6 +310,10 @@
       [
         "Journal (HTML)",
         "http://www.frontiersin.org/Neuroscience/10.3389/fnins.2011.00009/abstract"
+      ],
+      [
+        "QR code",
+        "pub_modelfitting_focussed_review-qrcode.png"
       ]
     ],
     "abstract": "Computational modeling is increasingly used to understand the function\nof neural circuits in systems neuroscience. These studies require\nmodels of individual neurons with realistic input-output properties.\nRecently, it was found that spiking models can accurately predict the\nprecisely timed spike trains produced by cortical neurons in response to\nsomatically injected currents, if properly fitted. This requires fitting\ntechniques that are efficient and flexible enough to easily test\ndifferent candidate models. We present a generic solution, based on the\nBrian simulator (a neural network simulator in Python), which allows the\nuser to define and fit arbitrary neuron models to electrophysiological\nrecordings. It relies on vectorization and parallel computing techniques\nto achieve efficiency. We demonstrate its use on neural recordings in\nthe barrel cortex and in the auditory brainstem, and confirm that simple\nadaptive spiking models can accurately predict the response of cortical\nneurons. Finally, we show how a complex multicompartmental model can be\nreduced to a simple effective spiking model.",
@@ -294,6 +342,10 @@
       [
         "PDF (preprint)",
         "https://www.dropbox.com/s/ypos545ptv0blf4/barrelcortex-preprint.pdf?dl=1"
+      ],
+      [
+        "QR code",
+        "pub_rat_barrel_cortex-qrcode.png"
       ]
     ],
     "abstract": "In the neocortex, neuronal selectivities for multiple sensorimotor\nmodalities are often distributed in topographical maps thought to emerge\nduring a restricted period in early postnatal development. Rodent barrel\ncortex contains a somatotopic map for vibrissa identity, but the\nexistence of maps representing other tactile features has not been\nclearly demonstrated. We addressed the issue of the existence in the rat\ncortex of an intrabarrel map for vibrissa movement direction using in\nvivo two-photon imaging. We discovered that the emergence of a direction\nmap in rat barrel cortex occurs long after all known critical periods\nin the somatosensory system. This map is remarkably specific, taking a\npinwheel-like form centered near the barrel center and aligned to the\nbarrel cortex somatotopy. We suggest that this map may arise from\nintracortical mechanisms and demonstrate by simulation that the\ncombination of spike-timing-dependent plasticity at synapses between\nlayer 4 and layer 2/3 and realistic pad stimulation is sufficient to\nproduce such a map. Its late emergence long after other classical maps\nsuggests that experience-dependent map formation and refinement continue\nthroughout adult life. ",
@@ -318,6 +370,10 @@
       [
         "PDF (preprint)",
         "https://www.dropbox.com/s/okq0bywihietbgr/algorithms-preprint.pdf?dl=1"
+      ],
+      [
+        "QR code",
+        "pub_vectorised_algorithms-qrcode.png"
       ]
     ],
     "abstract": "High-level languages (Matlab, Python) are popular in neuroscience\nbecause they are flexible and accelerate development. However, for\nsimulating spiking neural networks, the cost of interpretation is a\nbottleneck. We describe a set of algorithms to simulate large spiking\nneural networks efficiently with high-level languages using vector-based\noperations. These algorithms constitute the core of Brian, a spiking\nneural network simulator written in the Python language. Vectorized\nsimulation makes it possible to combine the flexibility of high-level\nlanguages with the computational efficiency usually associated with\ncompiled languages.",
@@ -342,6 +398,10 @@
       [
         "PDF (preprint)",
         "https://www.dropbox.com/s/2rxybu315p0tclq/gpureview-preprint.pdf?dl=1"
+      ],
+      [
+        "QR code",
+        "pub_snn_gpu-qrcode.png"
       ]
     ],
     "abstract": "Modern graphics cards contain hundreds of cores that can be programmed\nfor intensive calculations. They are beginning to be used for spiking\nneural network simulations. The goal is to make parallel simulation of\nspiking neural networks available to a large audience, without the\nrequirements of a cluster. We review the ongoing efforts towards this\ngoal, and we outline the main difficulties."
@@ -358,6 +418,10 @@
       [
         "Full text (paywall)",
         "https://doi.org/10.1007/978-1-0716-1006-0_253"
+      ],
+      [
+        "QR code",
+        "pub_brian_encyclopedia-qrcode.png"
       ]
     ],
     "abstract": "Brian (http://briansimulator.org) is an open source Python package for\ndeveloping simulations of networks of spiking neurons (Goodman and\nBrette 2008, 2009). The design is aimed at minimizing users' development\n\ntime, with execution speed as secondary goal. Users specify neuron and\nsynapse models by giving their equations in standard mathematical form,\ncreate groups of neurons, and connect them via synapses. The intent is\nto make the process as flexible as possible so that researchers are not\nrestricted to using neuron and synapse models already built into the\nsimulator. The entire simulator is written in Python, using the NumPy\nand SciPy numerical and scientific computing packages. Parts of the\nsimulator can optionally be run using C++ code generated on the fly\n(Goodman 2010). Computationally, Brian uses vectorization techniques\n(Brette and Goodman 2011) so that for large numbers of neurons,\nexecution speed is of the same order of magnitude ... ",
@@ -380,6 +444,10 @@
       [
         "Full text (HTML)",
         "http://www.scholarpedia.org/article/Brian_simulator"
+      ],
+      [
+        "QR code",
+        "pub_brian_scholarpedia-qrcode.png"
       ]
     ],
     "abstract": "Brian is an open source Python package for developing simulations of\nnetworks of spiking neurons. The design is aimed at minimizing users'\ndevelopment time, with execution speed a secondary goal. Users specify\nneuron and synapse models by giving their equations in standard\nmathematical form, create groups of neurons and connect them via\nsynapses. The intent is to make the process as flexible as possible, so\nthat researchers are not restricted to using neuron and synapse models\nalready built in to the simulator. The entire simulator is written in\nPython, using the NumPy and SciPy numerical and scientific computing\npackages. Parts of the simulator can optionally be run using C++ code\ngenerated on the fly (Goodman 2010). Computationally, Brian uses\nvectorization techniques (Brette and Goodman 2011), so that for large\nnumbers of neurons, execution speed is of the same order of magnitude\nas C++ code (Goodman and Brette 2008, 2009).         ",
@@ -406,6 +474,10 @@
       [
         "Code on GitHub",
         "https://github.com/neural-reckoning/decoding_sound_location"
+      ],
+      [
+        "QR code",
+        "pub_decoding_soundloc-qrcode.png"
       ]
     ],
     "abstract": "The activity of sensory neural populations carries information about the\nenvironment. This may be extracted from neural activity using different\nstrategies. In the auditory brainstem, a recent theory proposes that\nsound location in the horizontal plane is decoded from the relative\nsummed activity of two populations in each hemisphere, whereas earlier\ntheories hypothesized that the location was decoded from the identity of\nthe most active cells. We tested the performance of various decoders of\nneural responses in increasingly complex acoustical situations, including\nspectrum variations, noise, and sound diffraction. We demonstrate that\nthere is insufficient information in the pooled activity of each\nhemisphere to estimate sound direction in a reliable way consistent with\nbehavior, whereas robust estimates can be obtained from neural activity\nby taking into account the heterogeneous tuning of cells. These\nestimates can still be obtained when only contralateral neural responses\nare used, consistently with unilateral lesion studies.        "
@@ -428,6 +500,10 @@
       [
         "PDF (preprint)",
         "https://www.dropbox.com/s/d2v1dvfu5xv1i9q/playdoh-preprint.pdf?dl=1"
+      ],
+      [
+        "QR code",
+        "pub_playdoh-qrcode.png"
       ]
     ],
     "abstract": "Parallel computing is now an essential paradigm for high performance\nscientific computing. Most existing hardware and software solutions are\nexpensive or difficult to use. We developed Playdoh, a Python library\nfor distributing computations across the free computing units available\nin a small network of multicore computers. Playdoh supports independent\nand loosely coupled parallel problems such as global optimisations,\nMonte Carlo simulations and numerical integration of partial\ndifferential equations. It is designed to be lightweight and easy to use\nand should be of interest to scientists wanting to turn their lab\ncomputers into a small cluster at no cost."
@@ -447,6 +523,10 @@
       [
         "Journal (HTML)",
         "http://www.frontiersin.org/Journal/abstract/69453"
+      ],
+      [
+        "QR code",
+        "pub_equations-qrcode.png"
       ]
     ],
     "abstract": "Simulating biological neuronal networks is a core method of research in\ncomputational neuroscience. A full specification of such a network model\nincludes a description of the dynamics and state changes of neurons and\nsynapses, as well as the synaptic connectivity patterns and the initial\nvalues of all parameters. A standard approach in neuronal modeling\nsoftware is to build network models based on a library of pre-defined\ncomponents and mechanisms; if a model component does not yet exist, it\nhas to be defined in a special-purpose or general low-level language and\npotentially be compiled and linked with the simulator. Here we propose\nan alternative approach that allows flexible definition of models by\nwriting textual descriptions based on mathematical notation. We\ndemonstrate that this approach allows the definition of a wide range of\nmodels with minimal syntax. Furthermore, such explicit model\ndescriptions allow the generation of executable code for various target\nlanguages and devices, since the description is not tied to an\nimplementation. Finally, this approach also has advantages for\nreadability and reproducibility, because the model description is fully\nexplicit, and because it can be automatically parsed and transformed\ninto formatted descriptions. The presented approach has been implemented\nin the Brian2 simulator.        ",
@@ -482,6 +562,10 @@
       [
         "PDF (preprint)",
         "https://arxiv.org/pdf/1309.2848"
+      ],
+      [
+        "QR code",
+        "pub_mkk-qrcode.png"
       ]
     ],
     "abstract": "Cluster analysis faces two problems in high dimensions: the \"curse of\ndimensionality\" that can lead to overfitting and poor generalization\nperformance and the sheer time taken for conventional algorithms to\nprocess large amounts of high-dimensional data. We describe a solution\nto these problems, designed for the application of spike sorting for\nnext-generation, high-channel-count neural probes. In this problem, only\na small subset of features provides information about the cluster\nmembership of any one data vector, but this informative feature subset\nis not the same for all data points, rendering classical feature\nselection ineffective. We introduce a \"masked EM\" algorithm that allows\naccurate and time-efficient clustering of up to millions of points in\nthousands of dimensions. We demonstrate its applicability to synthetic\ndata and to real-world high-channel-count spike sorting data.        ",
@@ -505,6 +589,10 @@
       [
         "Conference",
         "https://bmcneurosci.biomedcentral.com/articles/10.1186/1471-2202-16-S1-O11"
+      ],
+      [
+        "QR code",
+        "pub_downstream_cns2015-qrcode.png"
       ]
     ],
     "abstract": "<p>We demonstrate how an abstract mathematical model that approximates a wide range of more \ndetailed models can be used to make predictions about hearing loss-related changes in neural behaviour.</p> \n\n<p>One consequence of neurosensory hearing loss (noise-induced and aging-related) is a reduced ability to \nunderstand speech, particularly in noisy environments, and sometimes beyond what would be predicted from \nreduced audibility. Indeed, this type of speech deficit can occur in listeners with near-normal hearing \nthresholds [1]. A promising avenue of investigation to explain this comes from experimental results in mice \nshowing that there can be a permanent loss of auditory nerve fibres (ANFs) following \"temporary\" \nnoise-induced hearing loss (i.e. when thresholds return to normal after a few weeks) [2]. The downstream \nconsequences of this loss of fibres has not yet been systematically investigated (although see [3]). We \npredict, using a theoretical analysis that applies to a wide range of neural models, that the regularity of \nthe spike trains of many neurons in the cochlear nucleus (the next structure after the auditory nerve) will \ndecrease following a reduction in the number of input cells. </p>\n\n<p>We present a mathematical analysis of the stationary behaviour of \"chopper\" cells in the ventral cochlear \nnucleus, approximating them by a stochastic process that is entirely characterised by its mean, \nstandard deviation and time constants. Furthermore, these constants can be straightforwardly related to \nphysiologically significant parameters including the number of inputs and their average firing rates. From \nthis approximation, we can compute the regularity of the chopper cell spike trains measured as the \ncoefficient of variation of their interspike intervals (CV). </p>\n\n<p>One simple prediction of this model is that when the intensity of a stimulus changes, leading to a change in \nthe average firing rate of the ANF inputs, there will be a corresponding change in the regularity of the \nchopper cell spike train. This prediction poses problems for the widely used scheme for classifying chopper \ncells as sustained or transient based on their ongoing CVs as it implies that the classification could be \nlevel-dependent. We present a re-analysis of an existing experimental data set that demonstrates that ongoing \nCV is indeed level-dependent in the majority of chopper cells, and that in some cells (>7%) this leads to a \nlevel-dependence in their classification. </p>\n\n<p>Assuming a homeostatic regulation of long term firing rates, a loss of ANFs will lead to an increase in the \nstandard deviation of the stochastic process and a consequent increase in the CV of the chopper cell. Some \nchoppers that were previously classified as sustained will become transient, a substantial change in their \nbehaviour that is highly likely to disrupt auditory processing. While the function of chopper cells is still \ndebated, one suggested role is in the coding of temporal envelope [4], which is widely agreed to be essential \nfor understanding speech. Loss of ANFs could therefore lead to a disruption of the processing of temporal \nenvelope, and consequently degrade speech intelligibility. We briefly conclude by discussing the challenges \nof testing this hypothesis experimentally.</p>",
@@ -529,6 +617,10 @@
       [
         "Conference",
         "https://asa.scitation.org/doi/abs/10.1121/1.4970386"
+      ],
+      [
+        "QR code",
+        "pub_model_initiative_asa2016-qrcode.png"
       ]
     ],
     "abstract": "Many computational models of the auditory system exist, most of which can predict a variety of psychoacoustical, physiological, or other experimental data. However, it is often challenging to apply existing third party models to own experimental paradigms, even if the model code is available. It will be demonstrated that model applicability is increased by providing a framework where the model acts as artificial observer performing exactly the same task as the subject (e.g., adaptive staircase procedure). A possible separation of the actual auditory processing of the model from the decision making stage will be discussed, which allows for testing the auditory processing of one model in a variety of experimental paradigms. The framework will consist of a citable data repository providing the required data for the models as well as toolboxes implementing both the auditory models and a variety of experimental paradigms. The model framework will be demonstrated with exemplary binaural models applied to the three most common binaural psychoacoustic paradigms: just noticeable difference (e.g., interaural time difference), tone in noise detection (e.g., binaural masking level difference), and absolute judgment (e.g., sound source localization). Further development of the framework will be discussed.",
@@ -558,6 +650,10 @@
       [
         "PDF (preprint)",
         "https://www.dropbox.com/s/emnup6d0aoyjccs/spikesorting-preprint.pdf?dl=1"
+      ],
+      [
+        "QR code",
+        "pub_spikesorting-qrcode.png"
       ]
     ],
     "abstract": "Developments in microfabrication technology have enabled the production of\nneural electrode arrays with hundreds of closely spaced recording sites, and\nelectrodes with thousands of sites are under development. These probes in\nprinciple allow the simultaneous recording of very large numbers of neurons.\nHowever, use of this technology requires the development of techniques for\ndecoding the spike times of the recorded neurons from the raw data captured\nfrom the probes. Here we present a set of tools to solve this problem,\nimplemented in a suite of practical, user-friendly, open-source software.\nWe validate these methods on data from the cortex, hippocampus and thalamus\nof rat, mouse, macaque and marmoset, demonstrating error rates as low as 5%.",
@@ -581,6 +677,10 @@
       [
         "Conference",
         "https://asa.scitation.org/doi/abs/10.1121/1.4987594"
+      ],
+      [
+        "QR code",
+        "pub_hypothesis_driven_asa2017-qrcode.png"
       ]
     ],
     "abstract": "There are a number of detailed models of auditory neurons that are able to reproduce a wide range of phenomena. However, using these models to test hypotheses can be challenging, as they have many parameters and complex interacting subsystems. This makes it difficult to investigate the function of a mechanism by varying just one parameter in isolation, or to assess the robustness of a model by systematically varying many parameters. In some cases, by limiting the scope of a model to testing a specific hypothesis using a particular set of stimuli, it is possible to create a reduced mathematical model with relatively few, independent parameters. This has considerable advantages with respect to the problems above. In particular, if a certain behavior is robust and does not depend on finely tuned parameters, then different implementations are more likely to produce the same results—a key property for reproducible research. In addition, the code for these models is typically simpler and therefore more readable, and can often run faster, enabling us to carry out systematic parameter exploration. I will illustrate these points with a reduced model of chopper cells in the ventral cochlear nucleus."
@@ -601,6 +701,10 @@
       [
         "Conference",
         "https://asa.scitation.org/doi/abs/10.1121/1.4987810"
+      ],
+      [
+        "QR code",
+        "pub_model_initiative_asa2017-qrcode.png"
       ]
     ],
     "abstract": "A framework aimed at improving the testability and comparability of binaural models will be presented. The framework consists of two key elements: (1) a repository of testing software that evaluates the models against published data and (2) a model repository. While the framework is also intended for physiological data, the planned initial contribution will be psychoacoustical data together with their psychoacoustical testing protocols, as well as existing binaural models from available auditory toolboxes. Researchers will be invited to provide their established as well as newly developed models in whatever programming language they prefer, given the models are compatibility with the proposed interface to the testing software. This entails that the models act as artificial observers, testable with exactly the same procedure as the human subjects. A simple communication protocol based on wav and txt-files is proposed because these are supported by every programming environment, and are able connect models and testing software of any programming language. Examples will illustrate the principle of testing models with unaltered signal processing stages on various seminal data sets such as tone detection in so-called double-delayed masking noise, or lateralization of ¾-period delayed noise and sounds with temporally asymmetric envelopes.",
@@ -624,6 +728,10 @@
       [
         "Conference",
         "https://asa.scitation.org/doi/abs/10.1121/1.4987838"
+      ],
+      [
+        "QR code",
+        "pub_roles_inhibition_adaptation_spatial_hearing-qrcode.png"
       ]
     ],
     "abstract": "The computation of binaural cues such as the Interaural Time Difference (ITD) and Interaural Level Difference (ILD) by the auditory system is known to play an important role in spatial hearing. It is not yet understood how such computations are performed in realistic acoustic environments where noise and reverberations are present. It has been hypothesized that robust sound localization is achieved through the extraction of the ITD information in the rising part of amplitude modulated (AM) sounds. Dietz et al. (2013) tested this hypothesis using psychoacoustics and MEG experiments. They presented AM sounds with ITDs varying during the course of one AM cycle. Their results showed that participants preferentially extracted the ITD information in the rising portion of the AM cycle. We designed a computational model of the auditory pathway to investigate the neural mechanisms involved in this process. Two mechanisms were tested. The first one corresponds to the adaptation in the auditory nerve fibers. The second mechanism occurs after coincidence detection and involves a winner-take-all network of ITD sensitive neurons. Both mechanisms qualitatively accounted for the data, consequently we suggest further experiments based on similar stimuli to distinguish between the two mechanisms. Dietz et al. (2013), “Emphasis of spatial cues in the temporal fine structure during the rising segments of amplitude-modulated sounds,” Proc. Natl. Acad. Sci. 110(37), 15151-15156.",
@@ -651,6 +759,10 @@
       [
         "PDF",
         "https://www.frontiersin.org/articles/10.3389/fninf.2018.00068/pdf"
+      ],
+      [
+        "QR code",
+        "pub_codegen_review-qrcode.png"
       ]
     ],
     "abstract": "Advances in experimental techniques and computational power allowing researchers to gather anatomical and\nelectrophysiological data at unprecedented levels of detail have fostered the development of increasingly complex\nmodels in computational neuroscience. Large-scale, biophysically detailed cell models pose a particular set of\ncomputational challenges, and this has led to the development of a number of domain-specific simulators. At the\nother level of detail, the ever growing variety of point neuron models increases the implementation barrier even\nfor those based on the relatively simple integrate-and-fire neuron model. Independently of the model complexity,\nall modeling methods crucially depend on an efficient and accurate transformation of mathematical model\ndescriptions into efficiently executable code. Neuroscientists usually publish model descriptions in terms of the\nmathematical equations underlying them. However, actually simulating them requires they be translated into code.\nThis can cause problems because errors may be introduced if this process is carried out by hand, and code written\nby neuroscientists may not be very computationally efficient. Furthermore, the translated code might be generated\nfor different hardware platforms, operating system variants or even written in different languages and thus\ncannot easily be combined or even compared. Two main approaches to addressing this issues have been followed. The\nfirst is to limit users to a fixed set of optimized models, which limits flexibility. The second is to allow\nmodel definitions in a high level interpreted language, although this may limit performance. Recently, a third\napproach has become increasingly popular: using code generation to automatically translate high level\ndescriptions into efficient low level code to combine the best of previous approaches. This approach also greatly\nenriches efforts to standardize simulator-independent model description languages. In the past few years, a\nnumber of code generation pipelines have been developed in the computational neuroscience community, which differ\nconsiderably in aim, scope and functionality. This article provides an overview of existing pipelines currently\nused within the community and contrasts their capabilities and the technologies and concepts behind them.",
@@ -678,6 +790,10 @@
       [
         "Proceedings PDF (see p. 640)",
         "https://link.springer.com/content/pdf/10.1007%2F978-3-030-04414-5.pdf"
+      ],
+      [
+        "QR code",
+        "pub_confluent_hierarchical_gd2018-qrcode.png"
       ]
     ],
     "abstract": "Recently an edge bundling technique known as confluent\u0002* drawing was applied to general graphs by Bach et al. (2017) by leveraging power graph decomposition (a form of edge compression that groups similar vertices together, merging edges shared among group members). We explore the technique further by demonstrating the equivalence between confluent drawing and the hierarchical edge bundling of Holten (2006), thereby opening the door for existing hierarchical clustering algorithms to be used instead of power graphs to produce confluent drawings for general graphs. We investigate various popular hierarchical clustering methods, and present a qualitative experimental comparison between them. We also introduce a new distance measure for agglomerative clustering that outperforms previous measures, and make recommendations for using the method in practice."
@@ -705,6 +821,10 @@
       [
         "Code (GitHub)",
         "https://github.com/model-initiative/model_initiative"
+      ],
+      [
+        "QR code",
+        "pub_framework_comparing_binaural_models-qrcode.png"
       ]
     ],
     "abstract": "Auditory research has a rich history of combining experimental evidence with computational simulations of\nauditory processing in order to deepen our theoretical understanding of how sound is processed in the ears and in\nthe brain. Despite significant progress in the amount of detail and breadth covered by auditory models, for many\ncomponents of the auditory pathway there are still different model approaches that are often not equivalent but\nrather in conflict with each other. Similarly, some experimental studies yield conflicting results which has led\nto controversies. This can be best resolved by a systematic comparison of multiple experimental data sets and\nmodel approaches. Binaural processing is a prominent example of how the development of quantitative theories can\nadvance our understanding of the phenomena, but there remain several unresolved questions for which competing\nmodel approaches exist. This article discusses a number of current unresolved or disputed issues in binaural\nmodeling, as well as some of the significant challenges in comparing binaural models with each other and with the\nexperimental data. We introduce an auditory model framework, which we believe can become a useful infrastructure\nfor resolving some of the current controversies. It operates models over the same paradigms that are used\nexperimentally. The core of the proposed framework is an interface that connects three components irrespective of\ntheir underlying programming language: The experiment software, an auditory pathway model, and task-dependent\ndecision stages called artificial observers that provide the same output format as the test subject.",
@@ -739,6 +859,10 @@
       [
         "Code (GitHub)",
         "https://github.com/jxz12/s_gd2"
+      ],
+      [
+        "QR code",
+        "pub_graph_drawing_wcr-qrcode.png"
       ]
     ],
     "abstract": "A popular method of force-directed graph drawing is multidimensional scaling using graph-theoretic\ndistances as input. We present an algorithm to minimize its energy function, known as stress, by\nusing stochastic gradient descent (SGD) to move a single pair of vertices at a time. Our results\nshow that SGD can reach lower stress levels faster and more consistently than majorization, without\nneeding help from a good initialization. We then present various real-world applications to show\nhow the unique properties of SGD make it easier to produce constrained layouts than previous\napproaches. We also show how SGD can be directly applied within the sparse stress approximation of\nOrtmann et al. [1], making the algorithm scalable up to large graphs.",
@@ -774,6 +898,10 @@
       [
         "Review",
         "https://github.com/ReScience/ReScience-submission/pull/51"
+      ],
+      [
+        "QR code",
+        "pub_re_stdp_repeating_patterns-qrcode.png"
       ]
     ],
     "abstract": "This article is a replication of\n<a href=\"http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0001377\">Masquelier et al. (2008)\n\"Spike Timing Dependent Plasticity Finds the Start of Repeating Patterns in Continuous Spike Trains\"</a>.",
@@ -812,6 +940,10 @@
       [
         "Code (Binder, interactive)",
         "http://mybinder.org/repo/neural-reckoning/vcn_regularity"
+      ],
+      [
+        "QR code",
+        "pub_vcn_regularity-qrcode.png"
       ]
     ],
     "abstract": "The auditory system processes temporal information at multiple scales, and disruptions to this temporal\nprocessing may lead to deficits in auditory tasks such as detecting and discriminating sounds in a noisy\nenvironment. Here, a modelling approach is used to study the temporal regularity of firing by chopper cells in\nthe ventral cochlear nucleus, in both the normal and impaired auditory system. Chopper cells, which have a\nstrikingly regular firing response, divide into two classes, sustained and transient, based on the time course of\nthis regularity. Several hypotheses have been proposed to explain the behaviour of chopper cells, and the\ndifference between sustained and transient cells in particular. However, there is no conclusive evidence so far.\nHere, a reduced mathematical model is developed and used to compare and test a wide range of hypotheses with a\nlimited number of parameters. Simulation results show a continuum of cell types and behaviours: chopper-like\nbehaviour arises for a wide range of parameters, suggesting that multiple mechanisms may underlie this behaviour.\nThe model accounts for systematic trends in regularity as a function of stimulus level that have previously only\nbeen reported anecdotally. Finally, the model is used to predict the effects of a reduction in the number of\nauditory nerve fibres (deafferentation due to, for example, cochlear synaptopathy). An interactive\nversion of this paper in which all the model parameters can be changed is available online.",
@@ -835,6 +967,10 @@
       [
         "Conference",
         "http://www.aes.org/e-lib/browse.cfm?elib=19406"
+      ],
+      [
+        "QR code",
+        "pub_vr_mobile_binaural-qrcode.png"
       ]
     ],
     "abstract": "Delivery of immersive 3D audio with arbitrarily-positioned sound sources over headphones often requires processing of individual source signals through a set of Head-Related Transfer Functions (HRTFs), the direction-dependent filters that describe the propagation of sound in an anechoic environment from the source to the listener's ears. The individual morphological differences and the impracticality of HRTF measurement make it difficult to deliver completely individualized 3D audio in this manner, and instead lead to the use of previously-measured non-individual sets of HRTFs. In this study a VR-based mobile sound localization training prototype system is introduced that uses HRTF sets for audio. It consists of a mobile phone as a head-mounted device, a hand-held Bluetooth controller, and a network-enabled PC with a USB audio interface and a pair of headphones. The virtual environment was developed on the mobile phone such that the user can listen-to/navigate-in an acoustically neutral scene and locate invisible target sound sources presented at random directions using non-individualized HRTFs in repetitive sessions. Various training paradigms can be designed with this system, with performance-related feedback provided according to the user's localization accuracy, including visual indication of the target location, and some aspects of a typical first-person shooting game, such as enemies, scoring, and level advancement. An experiment was conducted using this system in which 11 subjects went through multiple training sessions, using non-individualized HRTF sets. The localization performance evaluations showed reduction of overall localization angle error over repeated training sessions, reflecting lower front-back confusion rates."
@@ -864,6 +1000,10 @@
       [
         "PDF (preprint)",
         "https://www.biorxiv.org/content/early/2017/10/05/198366.full.pdf"
+      ],
+      [
+        "QR code",
+        "pub_astrocytes-qrcode.png"
       ]
     ],
     "abstract": "Despite compelling evidence that glial cells could crucially regulate neural network activity, the vast majority\nof available neural simulators ignores the possible contribution of glia to neuronal physiology. Here, we show\nhow to model glial physiology and neuron-glia interactions in the Brian 2 simulator. Brian 2 offers facilities to\nexplicitly describe any model in mathematical terms with limited and simple simulator-specific syntax,\nautomatically generating high-performance code from the user-provided descriptions. The flexibility of this\napproach allows us to model not only networks of neurons, but also individual glial cells, electrical coupling of\nglial cells, and the interaction between glial cells and synapses. We therefore conclude that Brian 2 provides an\nideal platform to efficiently simulate glial physiology, and specifically, the influence of astrocytes on neural\nactivity.",
@@ -895,6 +1035,10 @@
       [
         "PDF",
         "https://ccneuro.org/2019/showDoc.php?s=W&pn=1431"
+      ],
+      [
+        "QR code",
+        "pub_attention_ccn2019-qrcode.png"
       ]
     ],
     "abstract": "\"Listen to the cello in this symphony!\" How can we direct selective attention according to different goals, even\nin distracting environments which we haven't experienced before? It is an essential cognitive ability of the\nbrain, but remains challenging for machines. We developed a computational model that can identify individual\ndigits in images containing multiple overlapping digits, without ever having seen overlapping digits during\ntraining. The goal-driven attentional selection is modelled as inferring the posterior distribution of latent\nvariables (the attended target) in a generative model, conditioned on both sensory input and different semantic\ngoals. A neural network model has been build to efficiently carry out the the inference process by predicting the\nmost likely results, instead of using classic per-sample based iterative optimization methods which may not\nnaturally map onto neural structures. Our model also help to understand how top-down and bottom-up attention are\ncombined during perception in the brain."
@@ -915,6 +1059,10 @@
       [
         "Conference",
         "http://www.aes.org/e-lib/browse.cfm?elib=20388"
+      ],
+      [
+        "QR code",
+        "pub_auditory_anchors-qrcode.png"
       ]
     ],
     "abstract": "Traditional sound localization studies are often performed in anechoic chambers and in complete darkness. In our daily life, however, we are exposed to rich auditory scenes with multiple sound sources and complementary visual information. Although it is understood that the presence of maskers hinders auditory spatial awareness, it is not known whether competing sound sources can provide spatial information that helps in localizing a target stimulus. In this study, we explore the effect of presenting controlled auditory scenes with different amounts of visual and spatial cues during a sound localization task. A novel, gamified localization task is also presented. Preliminary results suggest that subjects who are exposed to audio-visual anchors show faster improvements than those who are not."
@@ -955,6 +1103,10 @@
       [
         "Website",
         "http://briansimulator.org/"
+      ],
+      [
+        "QR code",
+        "pub_brian2-qrcode.png"
       ]
     ],
     "abstract": "Brian 2 allows scientists to simply and efficiently simulate spiking neural network models. These models can\nfeature novel dynamical equations, their interactions with the environment, and experimental protocols. To\npreserve high performance when defining new models, most simulators offer two options: low-level programming or\ndescription languages. The first option requires expertise, is prone to errors, and is problematic for\nreproducibility. The second option cannot describe all aspects of a computational experiment, such as the\npotentially complex logic of a stimulation protocol. Brian addresses these issues using runtime code generation.\nScientists write code with simple and concise high-level descriptions, and Brian transforms them into efficient\nlow-level code that can run interleaved with their code. We illustrate this with several challenging examples: a\nplastic model of the pyloric network, a closed-loop sensorimotor model, a programmatic exploration of a neuron\nmodel, and an auditory model with real-time input.",
@@ -988,6 +1140,10 @@
       [
         "Live code (Binder)",
         "https://mybinder.org/v2/gh/neural-reckoning/simple_ambb_modelling/master?filepath=index.ipynb"
+      ],
+      [
+        "QR code",
+        "pub_canonical_ambb-qrcode.png"
       ]
     ],
     "abstract": "Sound localization in reverberant environments is a difficult task that human listeners perform effortlessly.\nMany neural mechanisms have been proposed to account for this behavior. Generally they rely on emphasizing localization\ninformation at the onset of the incoming sound while discarding localization cues that arrive later. We modelled several\nof these mechanisms using neural circuits commonly found in the brain and tested their performance in the context of\nexperiments showing that, in the dominant frequency region for sound localisation, we have a preference for auditory cues\narriving during the rising slope of the sound energy (Dietz et al., 2013). We found that both single cell mechanisms (onset\nand adaptation) and population mechanisms (lateral inhibition) were easily able to reproduce the results across a very wide\nrange of parameter settings. This suggests that sound localization in reverberant environments may not require specialised\nmechanisms specific to perform that task, but could instead rely on common neural circuits in the brain. This would allow\nfor the possibility of individual differences in learnt strategies or neuronal parameters. This research is fully\nreproducible, and we made our code available to edit and run online via interactive live notebooks.",
@@ -1016,6 +1172,10 @@
       [
         "PDF",
         "https://ccneuro.org/2019/showDoc.php?s=W&pn=1245"
+      ],
+      [
+        "QR code",
+        "pub_data_driven_auditory_ccn2019-qrcode.png"
       ]
     ],
     "abstract": "Our understanding of hearing and speech recognition rests on controlled experiments requiring simple stimuli. However, these stimuli often lack the characteristics of complex sounds such as speech. We propose an approach that combines neural modelling with machine learning to determine relevant low-level auditory features. Our approach bridges the gap between detailed neuronal models that capture specific auditory responses, and research on the statistics of real-world speech data and speech recognition. First, we introduce a feature detection model with a modest number of parameters that is compatible with auditory physiology. In order to objectively determine relevant feature detectors within the model parameter space, the model is tested in a speech classification task, using a simple classifier that approximates the information bottleneck. This framework allows us to determine the best model parameters and their neurophysiological and psychoacoustic implications. We show that our model can capture a variety of well-studied features (such as amplitude modulations and onsets) and allows us to unify concepts from different areas of hearing research. Our approach has various potential applications. Firstly, it could lead to new, testable experimental hypotheses for understanding hearing. Moreover, promising features could be directly applied as a new acoustic front-end for speech recognition systems."
@@ -1053,6 +1213,10 @@
       [
         "PDF (preprint)",
         "https://www.biorxiv.org/content/biorxiv/early/2019/07/10/207753.full-text.pdf"
+      ],
+      [
+        "QR code",
+        "pub_gamification_sound_localisation-qrcode.png"
       ]
     ],
     "abstract": "Head-related transfer functions (HRTFs) capture the direction-dependant way that sound interacts with the head and torso. In virtual audio systems, which aim to emulate these effects, non-individualized, generic HRTFs are typically used leading to an inaccurate perception of virtual sound location. Training has the potential to exploit the brain's ability to adapt to these unfamiliar cues. In this study, three virtual sound localization training paradigms were evaluated; one provided simple visual positional confirmation of sound source location, a second introduced game design elements (\"gamification\") and a final version additionally utilized head-tracking to provide listeners with experience of relative sound source motion (\"active listening\"). The results demonstrate a significant effect of training after a small number of short (12-minute) training sessions, which is retained across multiple days. Gamification alone had no significant effect on the efficacy of the training, but active listening resulted in a significantly greater improvements in localization accuracy. In general, improvements in virtual sound localization following training generalized to a second set of non-individualized HRTFs, although some HRTF-specific changes were observed in polar angle judgement for the active listening group. The implications of this on the putative mechanisms of the adaptation process are discussed."
@@ -1079,6 +1243,10 @@
       [
         "PDF",
         "https://ccneuro.org/2019/showDoc.php?s=W&pn=1173"
+      ],
+      [
+        "QR code",
+        "pub_heterogeneity_ccn2019-qrcode.png"
       ]
     ],
     "abstract": "It is very common in studies of the learning capabilities of spiking neural networks (SNNs) to use homogeneous neural and synaptic parameters (time constants, thresholds, etc.). Even in studies in which these parameters are distributed heterogeneously, the advantages or disadvantages of the heterogeneity have rarely been studied in depth. By contrast, in the brain, neurons and synapses are highly diverse, leading naturally to the hypothesis that this heterogeneity may be advantageous for learning. Starting from two state-of-the-art methods for training spiking neural networks (Nicola & Clopath, 2017, Shrestha & Orchard 2018), we found that adding parameter heterogeneity reduced errors when the network had to learn more complex patterns, increased robustness to hyperparameter mistuning, and reduced the number of training iterations required. We propose that neural heterogeneity may be an important principle for brains to learn robustly in real world environments with highly complex structure, and where task-specific hyperparameter tuning may be impossible. Consequently, heterogeneity may also be a good candidate design principle for artificial neural networks, to reduce the need for expensive hyperparameter tuning as well as for reducing training time. "
@@ -1099,6 +1267,10 @@
       [
         "Thesis",
         "https://spiral.imperial.ac.uk/handle/10044/1/76509"
+      ],
+      [
+        "QR code",
+        "pub_lestang_thesis-qrcode.png"
       ]
     ],
     "abstract": "Localizing sounds is an important ability for many species. However, reverberative sounds present a significant challenge to the auditory system as later arriving reverberations may carry confounding localization cues. The \"precedence effect\" refers to a set of perceptual behaviours related to this situation. Studies investigating the precedence effect observed that the auditory system tends to focus the core of the localization process on the computation of localization cues carried by the first arriving sound. Doing so relieves the auditory system from dealing with contradictory localization cues in later arriving sounds. A recent study by Dietz et al. (2013) confirmed that human listeners use this approach to deal with dynamic localization cues. In order to provide an explanation for this finding, we first tested several auditory models on the specific task described in Dietz et al. (2013) in order to shortlist possible mechanisms capable of accounting for the early extraction of temporal binaural cues. We found that the best candidates to account for this data are single cell mechanisms, such as adaptation and onset firing, as well as inhibitory population mechanisms. To further understand how each mechanism contributes to the suppression of lagging sounds, we designed more general models capable of demonstrating the principal features of each mechanism. We tested these models thoroughly and found that all mechanisms were able to reproduce the results over a wide range of parameters. This finding suggests that mechanisms responsible for the precedence effect may not be specialized to perform this specific task but instead may be the results of more commonly found neural circuits in the brain. Finally, to facilitate comparing the performance of auditory models on psychoacoustical data, we also designed and implemented an auditory modelling framework capable of addressing many challenges existing in the field of auditory modelling.",
@@ -1128,6 +1300,10 @@
       [
         "PDF",
         "https://ccneuro.org/2019/showDoc.php?s=W&pn=1382"
+      ],
+      [
+        "QR code",
+        "pub_neural_topic_modelling_ccn2019-qrcode.png"
       ]
     ],
     "abstract": "We introduce neural topic modelling - an unsupervised, scalable and interpretable neural data analysis tool which can be applied across different spatial and temporal scales. The aim is an approach that can handle the ever-increasing number of neurons recorded by high channel count multi-electrode arrays. Neural topic modelling is based on latent Dirichlet allocation, a method routinely used in text mining to find latent topics in texts. The spike trains are converted into \"neural words\" - the presence or absence of discrete events (e.g. neuron 1 has a higher firing rate than usual). Neural topic modelling results in a number of topics (probability distributions over words) which best explain the given co-occurrences of neural words over time. Applied to an electrophysiological dataset of mouse visual cortex, hippocampus and thalamus neurons, neural topic modelling groups neural words into topics which exhibit common attributes such as overlapping receptive fields or proximity on the recording electrode. It recovers these relationships despite receiving no knowledge about the cortex topography or about the spatial structure of the stimuli. Choosing neural activity patterns as neural words that are relevant to the brain makes the topics interpretable by both the brain and researchers, setting neural topic modelling apart from other machine learning approaches."
@@ -1169,6 +1345,10 @@
       [
         "Preprint (PDF)",
         "https://www.biorxiv.org/content/early/2018/10/20/448050.full.pdf"
+      ],
+      [
+        "QR code",
+        "pub_brian2genn-qrcode.png"
       ]
     ],
     "abstract": "\"Brian\" is a popular Python-based simulator for spiking neural networks, commonly used in computational neuroscience. GeNN is a C++-based meta-compiler for accelerating spiking neural network simulations using consumer or high performance grade graphics processing units (GPUs). Here we introduce a new software package, Brian2GeNN, that connects the two systems so that users can make use of GeNN GPU acceleration when developing their models in Brian, without requiring any technical knowledge about GPUs, C++ or GeNN. The new Brian2GeNN software uses a pipeline of code generation to translate Brian scripts into C++ code that can be used as input to GeNN, and subsequently can be run on suitable NVIDIA GPU accelerators. From the user's perspective, the entire pipeline is invoked by adding two simple lines to their Brian scripts. We have shown that using Brian2GeNN, two non-trivial models from the literature can run tens to hundreds of times faster than on CPU.",
@@ -1194,6 +1374,10 @@
       [
         "Neuromatch",
         "https://www.neuromatch.io/"
+      ],
+      [
+        "QR code",
+        "pub_elife_labs_matching-qrcode.png"
       ]
     ],
     "abstract": "We developed machine-learning algorithms to help connect scientists during online\nresearch conferences. ",
@@ -1219,6 +1403,10 @@
       [
         "Neuromatch",
         "https://www.neuromatch.io/"
+      ],
+      [
+        "QR code",
+        "pub_elife_neuromatch-qrcode.png"
       ]
     ],
     "abstract": "Scientific conferences and meetings have an important role in research, but they\nalso suffer from a number of disadvantages: in particular, they can have a massive\ncarbon footprint, they are time-consuming, and the high costs involved in attending can\nexclude many potential participants. The COVID-19 pandemic has led to the cancellation\nof many conferences, forcing the scientific community to explore online alternatives.\nHere, we report on our experiences of organizing an online neuroscience conference,\nneuromatch, that attracted some 3000 participants and featured two days of talks,\ndebates, panel discussions, and one-on-one meetings facilitated by a matching algorithm.\nBy offering most of the benefits of traditional conferences, several clear advantages,\nand with fewer of the downsides, we feel that online conferences have the potential to\nreplace many legacy conferences.",
@@ -1245,6 +1433,10 @@
       [
         "Thesis",
         "https://spiral.imperial.ac.uk/handle/10044/1/86622"
+      ],
+      [
+        "QR code",
+        "pub_hathway_thesis-qrcode.png"
       ]
     ],
     "abstract": "<p>Recent progress in recording techniques now allows researchers to record\nfrom hundreds and even thousands of neurons simultaneously. New, scalable\nmethods need to be developed to handle such large data sets. Ideally\nthese methods should not only analyse the multi-dimensional data, but also\nprovide results which could be interpreted by the brain.</p>\n\n<p>One key problem in neuronal data analysis is to identify neuronal assemblies\ni.e. groups of neurons displaying coordinated neuronal activity. Currently\navailable methods either search for assemblies whose neurons participate\nin repeated spike sequences or search for assemblies whose neurons display\nsimilar firing rate modulations. In this thesis, I present two approaches\nto the search for neuronal assemblies.</p>\n\n<p>I investigate whether a spiking neural network equipped with biologically\nplausible synaptic learning rules can provide a biologically interpretable way\nof finding repeating spike patterns in neuronal data. Due to the similarities\nbetween spiking neural networks to how brains function, this might be very\nclose to how the brain itself detects such repeated activity.</p>\n\n<p>Furthermore, I present neural topic modelling – a new data analysis method\nfor large neuronal data sets. Based on a machine learning method from text\nmining, neural topic modelling is scalable and produces interpretable results.\nBy including multiple features of neuronal spike trains and even other\ndata types such as local field potentials into the analysis, I can expand the\ndefinition of neuronal assemblies to any type of neuronal activity features\nwhich are co-modulated. The application of neural topic modelling to neuronal\nrecordings reveals interactions between features of neuronal activity\nwhich have previously not been identified.</p>\n\n<p>Since both approaches are biologically plausible, the results from both\nmethods can be used to generate hypotheses about how the brain processes\ninformation and may reveal hitherto unknown information processing pathways.</p>",
@@ -1278,6 +1470,10 @@
       [
         "Code (GitHub)",
         "https://github.com/jxz12/pconfluent"
+      ],
+      [
+        "QR code",
+        "pub_comments_on_edge_bundling-qrcode.png"
       ]
     ],
     "abstract": "Bach et al. [1] recently presented an algorithm for constructing confluent drawings, by leveraging power graph\ndecomposition to generate an auxiliary routing graph. We identify two problems with their method and offer a\nsingle solution to solve both. We also classify the exact type of confluent drawings that the algorithm can\nproduce as 'power-confluent', and prove that it is a subclass of the previously studied 'strict confluent'\ndrawing. A description and source code of our implementation is also provided, which additionally includes an\nimproved method for power graph construction.",
@@ -1305,6 +1501,10 @@
       [
         "Thesis (PDF)",
         "https://spiral.imperial.ac.uk/bitstream/10044/1/92700/4/Engel-AM-JIE-2021-PhD-Thesis.pdf"
+      ],
+      [
+        "QR code",
+        "pub_engel_thesis-qrcode.png"
       ]
     ],
     "abstract": "Audio augmented reality (AAR) is defined as the extension of a real auditory environment through virtual sound sources. A successful AAR system should create the illusion that virtual sounds actually come from the user's environment, for which several technical challenges must be overcome. First, room acoustics must be simulated accurately to predict the reverberant sound field produced by the virtual source as sound wavefronts reach the user. Second, said sound field must be translated into a pair of sound pressure signals at the user's ears. Finally, this binaural signal must be delivered to the user through an acoustically transparent system without limiting their ability to hear real sources. This process should be able to adapt in real time to user movements in a computationally efficient way, considering that resources may be limited in practice and most of them will likely be allocated to graphics processing (e.g. in a pair of augmented reality glasses). This Thesis aims to improve current techniques for binaural audio rendering in AAR by exploring the trade-off between computational complexity and perceived quality. Several perception-focused studies were proposed to explore the different parts of the rendering process. First, a prototype AAR system with hear-through functionality was proposed and a pilot experiment was conducted to investigate how users could adapt to it over time. A second study assessed the effect of non-individualised equalisation on the perceived quality of binaural renderings reproduced with open-ear headphones. A third study evaluated several state-of-the-art methods for the binaural rendering of sound fields of limited resolution in the spherical harmonics (Ambisonics) domain. Finally, a fourth study assessed the perceptual effect of simplifying Ambisonics-based binaural reverberation in various ways. Even though this Thesis focuses on the AAR scenario, the findings herein may be helpful for any application that would benefit from a computationally efficient implementation of binaural audio rendering methods."
@@ -1360,6 +1560,10 @@
       [
         "Podcast with WaterCooler Neuroscience",
         "https://open.spotify.com/episode/6PYxjRFg2bI8pSDN82Dume?si=S7Z4BxXNS2aRCnbBMskTHg"
+      ],
+      [
+        "QR code",
+        "pub_heterogeneity-qrcode.png"
       ]
     ],
     "abstract": "The brain is a hugely diverse, heterogeneous structure. Whether or not heterogeneity at the neural level plays a functional role remains unclear, and has been relatively little explored in models which are often highly homogeneous. We compared the performance of spiking neural networks trained to carry out tasks of real-world difficulty, with varying degrees of heterogeneity, and found that heterogeneity substantially improved task performance. Learning with heterogeneity was more stable and robust, particularly for tasks with a rich temporal structure. In addition, the distribution of neuronal parameters in the trained networks is similar to those observed experimentally. We suggest that the heterogeneity observed in the brain may be more than just the byproduct of noisy processes, but rather may serve an active and important role in allowing animals to learn in changing environments.",
@@ -1385,6 +1589,10 @@
       [
         "Preprint (PDF)",
         "https://www.dropbox.com/s/jy45giagrffkm9j/jitter-preprint.pdf?dl=1"
+      ],
+      [
+        "QR code",
+        "pub_jitter-qrcode.png"
       ]
     ],
     "abstract": "Although pitch is closely related to temporal periodicity, stimuli with a degree of temporal irregularity can evoke a pitch sensation in human listeners. However, the neural mechanisms underlying pitch perception for irregular sounds are poorly understood. Here, we recorded responses of single units in the inferior colliculus (IC) of normal hearing (NH) rabbits to acoustic pulse trains with different amounts of random jitter in the inter-pulse intervals and compared with responses to electric pulse trains delivered through a cochlear implant (CI) in a different group of rabbits. In both NH and CI animals, many IC neurons demonstrated tuning of firing rate to the average pulse rate (APR) that was robust against temporal jitter, although jitter tended to increase the firing rates for APRs ≥ 1280 Hz. Strength and limiting frequency of spike synchronization to stimulus pulses were also comparable between periodic and irregular pulse trains, although there was a slight increase in synchronization at high APRs with CI stimulation. There were clear differences between CI and NH animals in both the range of APRs over which firing rate tuning was observed and the prevalence of synchronized responses. These results suggest that the pitches of regular and irregular pulse trains are coded differently by IC neurons depending on the APR, the degree of irregularity, and the mode of stimulation. In particular, the temporal pitch produced by periodic pulse trains lacking spectral cues may be based on a rate code rather than a temporal code at higher APRs."
@@ -1413,6 +1621,10 @@
       [
         "Neuromatch",
         "https://www.neuromatch.io/"
+      ],
+      [
+        "QR code",
+        "pub_nmc3-qrcode.png"
       ]
     ],
     "abstract": "Legacy conferences are costly, time-consuming, and exclude scientists lacking various resources\nor abilities. During the 2020 pandemic, we created an online conference platform, Neuromatch\nConferences, aimed at developing technological and cultural changes to make conferences more\ndemocratic, scalable, and accessible. We discuss the lessons we learned.",
@@ -1450,6 +1662,10 @@
       [
         "Workshop talk recordings",
         "https://www.youtube.com/playlist?list=PL09WqqDbQWHFvM9DFYkM_GfnrVnIdLRhy"
+      ],
+      [
+        "QR code",
+        "pub_snufa_review-qrcode.png"
       ]
     ],
     "abstract": "Recent research resolves the challenging problem of building biophysically plausible spiking neural models that\nare also capable of complex information processing. This advance creates new opportunities in neuroscience and\nneuromorphic engineering, which we discussed at an online focus meeting.",
@@ -1485,6 +1701,10 @@
       [
         "Preprint (PDF)",
         "https://arxiv.org/pdf/2105.08810"
+      ],
+      [
+        "QR code",
+        "pub_sparse_spiking_gradient_descent-qrcode.png"
       ]
     ],
     "abstract": "There is an increasing interest in emulating Spiking Neural Networks (SNNs) on neuromorphic\ncomputing devices due to their low energy consumption. Recent advances have allowed training\nSNNs to a point where they start to compete with traditional Artificial Neural Networks (ANNs)\nin terms of accuracy, while at the same time being energy efficient when run on neuromorphic\nhardware. However, the process of training SNNs is still based on dense tensor operations\noriginally developed for ANNs which do not leverage the spatiotemporally sparse nature of SNNs.\nWe present here the first sparse SNN backpropagation algorithm which achieves the same or better\naccuracy as current state of the art methods while being significantly faster and more memory\nefficient. We show the effectiveness of our method on real datasets of varying complexity\n(Fashion-MNIST, Neuromophic-MNIST and Spiking Heidelberg Digits) achieving a speedup in the\nbackward pass of up to 150x, and 85% more memory efficient, without losing accuracy."
@@ -1505,6 +1725,10 @@
       [
         "Thesis",
         "https://spiral.imperial.ac.uk/handle/10044/1/100667"
+      ],
+      [
+        "QR code",
+        "pub_weerts_thesis-qrcode.png"
       ]
     ],
     "abstract": "Recent advances in machine learning have instigated a renewed interest in using machine learning approaches to better understand human sensory processing. This line of research is particularly interesting for speech research since speech comprehension is uniquely human, which complicates obtaining detailed neural recordings. In this thesis, I explore how machine learning can be used to uncover new knowledge about the auditory system, with a focus on discovering robust auditory features. The resulting increased understanding of the noise robustness of human hearing may help to better assist those with hearing loss and improve Automatic Speech Recognition (ASR) systems. First, I show how computational neuroscience and machine learning can be combined to generate hypotheses about auditory features. I introduce a neural feature detection model with a modest number of parameters that is compatible with auditory physiology. By testing feature detector variants in a speech classification task, I confirm the importance of both well-studied and lesser-known auditory features. Second, I investigate whether ASR software is a good candidate model of the human auditory system. By comparing several state-of-the-art ASR systems to the results from humans on a range of psychometric experiments, I show that these ASR systems diverge markedly from humans in at least some psychometric tests. This implies that none of these systems act as a strong proxy for human speech recognition, although some may be useful when asking more narrowly defined questions. For neuroscientists, this thesis exemplifies how machine learning can be used to generate new hypotheses about human hearing, while also highlighting the caveats of investigating systems that may work fundamentally differently from the human brain. For machine learning engineers, I point to tangible directions for improving ASR systems. To motivate the continued cross-fertilization between these fields, a toolbox that allows researchers to assess new ASR systems has been released.",
@@ -1528,6 +1752,10 @@
       [
         "Thesis",
         "https://spiral.imperial.ac.uk/handle/10044/1/88583"
+      ],
+      [
+        "QR code",
+        "pub_zheng_thesis-qrcode.png"
       ]
     ],
     "abstract": "This thesis concerns the visualisation of networks, through an in-depth study into\nthe node-link diagram representation. Three subtopics are explored within this\nspace. The first is the problem of node layout, where the optimisation of a popular\nenergy function, known as stress, is improved through an algorithm known\nas stochastic gradient descent. The second is the method of edge bundling, where\nthe idea of hierarchical edge bundling is explored in the absence of a known ground\ntruth hierarchy. Its similarity to a topologically lossless bundling method known\nas power-confluent drawing is then leveraged, in order to improve technical problems\nwith the underlying algorithms. The final topic is an engineering application\nin the form of a serious game called EcoBuilder, which utilises the node-link diagram\nto visualise the dynamical behaviour of food webs. Its purpose is to crowdsource\nresearch through a citizen science approach, with outcomes in both visualisation\nand mathematical ecology.",
@@ -1555,6 +1783,10 @@
       [
         "Journal (PDF)",
         "https://acta-acustica.edpsciences.org/articles/aacus/pdf/2022/01/aacus210029.pdf"
+      ],
+      [
+        "QR code",
+        "pub_assessing_hrtf_ambisonics-qrcode.png"
       ]
     ],
     "doi": "10.1051/aacus/2021055",
@@ -1579,6 +1811,10 @@
       [
         "Tutorial videos (YouTube)",
         "https://www.youtube.com/playlist?list=PL09WqqDbQWHGJd7Il3yVxiBts5nRSxvJ4"
+      ],
+      [
+        "QR code",
+        "pub_cosyne_tutorial-qrcode.png"
       ]
     ],
     "doi": "10.5281/zenodo.7044500",
@@ -1614,6 +1850,10 @@
       [
         "Talk by Dan Goodman (video)",
         "https://www.youtube.com/watch?v=TnTphoFWsrE"
+      ],
+      [
+        "QR code",
+        "pub_humanlikehearing-qrcode.png"
       ]
     ],
     "abstract": "Deep neural networks have had considerable success in neuroscience as models of the visual system, and recent work has suggested this may also extend to the auditory system. We tested the behaviour of a range of state of the art deep learning-based automatic speech recognition systems on a wide collection of manipulated sounds used in standard human psychometric experiments. While some systems showed qualitative agreement with humans in certain tests, in others all tested systems diverged markedly from humans. In particular, all systems used spectral invariance, temporal fine structure and speech periodicity differently from humans. We conclude that despite some promising results, none of the tested automatic speech recognition systems can yet act as a strong proxy for human speech recognition. However, we note that the more recent systems with better performance also tend to better match human results, suggesting that continued cross-fertilisation of ideas between human and automatic speech recognition may be fruitful. Our open source toolbox allows researchers to assess future automatic speech recognition systems or add additional psychoacoustic measures.",
@@ -1643,6 +1883,10 @@
       [
         "Thesis",
         "https://spiral.imperial.ac.uk/handle/10044/1/112873"
+      ],
+      [
+        "QR code",
+        "pub_perez_thesis-qrcode.png"
       ]
     ],
     "abstract": "This thesis focuses on the study of training deep spiking neural networks (SNNs). In recent years there has been an increasing interest in using spiking neurons for deep learning with the aim of leveraging their unique properties and characteristics. These include their potential for very energy efficient training and inference due to their highly sparse activity and their suitability to model biological neurons. We first introduce the fundamental models that are used in the SNN training literature, including neuron models at different levels of abstraction, synapses and networks of neurons and neurons under noise. We also review the main SNN training methods that have been developed to this date. Then, we study the role of neural heterogeneity and study the performance and robustness of SNNs under different heterogeneity schemes on two different supervised learning methods. Next, we show how the sparse activity present in the forward pass on SNNs can also be achieved in the backward pass, leading to highly efficient implementations that can speed up the backward pass up to 150x and save 85% of the memory. Finally, we aim to solve the weight initialisation problem for SNNs to achieve a predictable network activity as well as prevent the gradient from vanishing or exploding. In this process, we identify and solve the firing rate collapse issue caused by the discretisation of SNNs for simulation. In addition, we obtain theoretical and empirical results for a general SNN initialisation strategy making use of variance propagation and diffusion/shot-noise/threshold integration methods, as well as the solution to the firing rate collapse problem we previously found. Besides the ideas and experiments discussed in this thesis, code for the methods described here can be found in <a href=\"https://github.com/npvoid\">https://github.com/npvoid</a>."
@@ -1664,6 +1908,10 @@
       [
         "Preprint (PDF)",
         "https://arxiv.org/pdf/2305.08879"
+      ],
+      [
+        "QR code",
+        "pub_snn_init-qrcode.png"
       ]
     ],
     "abstract": "In recent years, newly developed methods to train spiking neural networks (SNNs) have rendered them as a\nplausible alternative to Artificial Neural Networks (ANNs) in terms of accuracy, while at the same time\nbeing much more energy efficient at inference and potentially at training time. However, it is still unclear\nwhat constitutes a good initialisation for an SNN. We often use initialisation schemes developed for ANN\ntraining which are often inadequate and require manual tuning. In this paper, we attempt to tackle this\nissue by using techniques from the ANN initialisation literature as well as computational neuroscience\nresults. We show that the problem of weight initialisation for ANNs is a more nuanced problem than it is\nfor ANNs due to the spike-and-reset non-linearity of SNNs and the firing rate collapse problem. We firstly\nidentify and propose several solutions to the firing rate collapse problem under different sets of\nassumptions which successfully solve the issue by leveraging classical random walk and Wiener processes\nresults. Secondly, we devise a general strategy for SNN initialisation which combines variance propagation\ntechniques from ANNs and different methods to obtain the expected firing rate and membrane potential\ndistribution based on diffusion and shot-noise approximations. Altogether, we obtain theoretical results\nto solve the SNN initialisation which consider the membrane potential distribution in the presence of a\nthreshold. Yet, to what extent can these methods be successfully applied to SNNs on real datasets remains\nan open question. "
@@ -1703,6 +1951,10 @@
       [
         "Preprint (PDF)",
         "https://arxiv.org/pdf/2404.14325"
+      ],
+      [
+        "QR code",
+        "pub_adapting_to_time-qrcode.png"
       ]
     ],
     "abstract": "Brains have evolved diverse neurons with varying morphologies and dynamics that impact temporal information processing. In contrast, most neural network models use homogeneous units that vary only in spatial parameters (weights and biases). To explore the importance of temporal parameters, we trained spiking neural networks on tasks with varying temporal complexity, holding different parameter subsets constant. We found that adapting conduction delays is crucial for solving all test conditions under tight resource constraints. Remarkably, these tasks can be solved using only temporal parameters (delays and time constants) with constant weights. In more complex spatio-temporal tasks, an adaptable bursting parameter was essential. Overall, allowing adaptation of both temporal and spatial parameters enhances network robustness to noise, a vital feature for biological brains and neuromorphic computing systems. Our findings suggest that rich and adaptable dynamics may be the key for solving temporally structured tasks efficiently in evolving organisms, which would help explain the diverse physiological properties of biological neurons."
@@ -1751,6 +2003,10 @@
       [
         "Mastodon",
         "https://neuromatch.social/@neuralreckoning/110785811144218374"
+      ],
+      [
+        "QR code",
+        "pub_multimodal-qrcode.png"
       ]
     ],
     "abstract": "Animals continuously detect information via multiple sensory channels, like vision and hearing, and integrate these signals to realise faster and more accurate decisions; a fundamental neural computation known as multisensory integration. A widespread view of this process is that multimodal neurons linearly fuse information across sensory channels. However, does linear fusion generalise beyond the classical tasks used to explore multisensory integration? Here, we develop novel multisensory tasks, which focus on the underlying statistical relationships between channels, and deploy models at three levels of abstraction: from probabilistic ideal observers to artificial and spiking neural networks. Using these models, we demonstrate that when the information provided by different channels is not independent, linear fusion performs sub-optimally and even fails in extreme cases. This leads us to propose a simple nonlinear algorithm for multisensory integration which is compatible with our current knowledge of multimodal circuits, excels in naturalistic settings and is optimal for a wide class of multisensory tasks. Thus, our work emphasises the role of nonlinear fusion in multisensory integration, and provides testable hypotheses for the field to explore at multiple levels: from single neurons to behaviour.",
@@ -1806,6 +2062,10 @@
       [
         "Mastodon",
         "https://neuromatch.social/@neuralreckoning/115146644216055627"
+      ],
+      [
+        "QR code",
+        "pub_comob_soundloc-qrcode.png"
       ]
     ],
     "abstract": "Neuroscientists are increasingly initiating large-scale collaborations which bring together tens to hundreds of researchers. At this scale, such projects can tackle large-scale challenges and engage a wide range of participants. Inspired by projects in pure mathematics, we set out to test the feasibility of widening access to such projects even further, by running a massively collaborative project in computational neuroscience. The key difference, with prior neuroscientific efforts, being that our entire project (code, results, writing) was public from the outset, and that anyone could participate. To achieve this, we launched a public Git repository, with code for training spiking neural networks to solve a sound localisation task via surrogate gradient descent. We then invited anyone, anywhere to use this code as a springboard for exploring questions of interest to them, and encouraged participants to share their work both asynchronously through Git and synchronously at monthly online workshops. Our hope was that the resulting range of participants would allow us to make discoveries that a single team would have been unlikely to find. At a scientific level, our work investigated how a range of biologically-relevant parameters, from time delays to membrane time constants and levels of inhibition, could impact sound localisation in networks of spiking units. At a more macro-level, our project brought together 31 researchers from multiple countries, provided hands-on research experience to early career participants, and opportunities for supervision and teaching to later career participants. While our scientific results were not groundbreaking, our project demonstrates the potential for massively collaborative projects to transform neuroscience.",
@@ -1845,6 +2105,10 @@
       [
         "PDF",
         "https://2025.ccneuro.org/abstract_pdf/Sun_2025_Long_delays_reduce_need_precise_weights.pdf"
+      ],
+      [
+        "QR code",
+        "pub_delays_ccn-qrcode.png"
       ]
     ],
     "abstract": "Recent work has shown that the performance of spiking neural networks (SNNs) on temporally complex tasks improves significantly when axonal delays are treated as learnable parameters. This raises an important question: If temporal delays improve a network's computational capacity, how precise do synaptic weights need to be? In this work, we investigate the relationship between delay-based computation and weight precision by combining quantized synaptic weights with a range of learnable delays on a challenging neuromorphic audio task. Our results reveal that short delays contribute little to performance, whereas medium to long delays are critical. Building on this insight, we introduce a learnable thresholding mechanism to suppress short delays that can be effectively compensated for by weights. These findings suggest that delays can reduce the burden on weight precision, highlighting a promising direction for energy-efficient SNN design and offering new perspectives on the role of delay in biological and neuromorphic computation."
@@ -1862,6 +2126,10 @@
       [
         "Journal (HTML)",
         "https://www.thetransmitter.org/funding/neuroscience-needs-to-empower-early-career-researchers-not-fund-moon-shots/"
+      ],
+      [
+        "QR code",
+        "pub_fund_ecrs_not_moonshots-qrcode.png"
       ]
     ],
     "abstract": "Large-scale projects run the risk of stifling scientific independence. Instead, let's explore alternative mechanisms of collaboration.",
@@ -1880,6 +2148,10 @@
       [
         "Journal (HTML)",
         "https://www.thetransmitter.org/policy/science-must-step-away-from-nationally-managed-infrastructure/"
+      ],
+      [
+        "QR code",
+        "pub_international_science_infrastructure-qrcode.png"
       ]
     ],
     "abstract": "Scientific data and independence are at risk. We need to work with community-driven services and university libraries to create new multi-country organizations that are resilient to political interference.",
@@ -1928,6 +2200,10 @@
       [
         "Mastodon",
         "https://neuromatch.social/@neuralreckoning/114394002639348151"
+      ],
+      [
+        "QR code",
+        "pub_learning_sound_loc_limited_sup-qrcode.png"
       ]
     ],
     "doi": "10.1371/journal.pcbi.1013543",
@@ -1987,6 +2263,10 @@
       [
         "Mastodon",
         "https://neuromatch.social/@neuralreckoning/113826859929010069"
+      ],
+      [
+        "QR code",
+        "pub_multisensory-channels-and-time-qrcode.png"
       ]
     ],
     "abstract": "Animals continuously combine information across sensory modalities and time, and use these combined signals to guide their behaviour. Picture a predator watching their prey sprint and screech through a field. To date, a range of multisensory algorithms have been proposed to model this process including linear and nonlinear fusion, which combine the inputs from multiple sensory channels via either a sum or nonlinear function. However, many multisensory algorithms treat successive observations independently, and so cannot leverage the temporal structure inherent to naturalistic stimuli. To investigate this, we introduce a novel multisensory task in which we provide the same number of task-relevant signals per trial but vary how this information is presented: from many short bursts to a few long sequences. We demonstrate that multisensory algorithms that treat different time steps as independent, perform sub-optimally on this task. However, simply augmenting these algorithms to integrate across sensory channels and short temporal windows allows them to perform surprisingly well, and comparably to fully recurrent neural networks. Overall, our work: highlights the benefits of fusing multisensory information across channels and time, shows that small increases in circuit/model complexity can lead to significant gains in performance, and provides a novel multisensory task for testing the relevance of this in biological systems.",
@@ -2043,6 +2323,10 @@
       [
         "Bluesky",
         "https://bsky.app/profile/solarpunkgabs.bsky.social/post/3lqsghrbb322i"
+      ],
+      [
+        "QR code",
+        "pub_path_to_universal_nca-qrcode.png"
       ]
     ],
     "abstract": "Cellular automata have long been celebrated for their ability to generate complex behaviors from simple, local rules, with well-known discrete models like Conway's Game of Life proven capable of universal computation. Recent advancements have extended cellular automata into continuous domains, raising the question of whether these systems retain the capacity for universal computation. In parallel, neural cellular automata have emerged as a powerful paradigm where rules are learned via gradient descent rather than manually designed. This work explores the potential of neural cellular automata to develop a continuous Universal Cellular Automaton through training by gradient descent. We introduce a cellular automaton model, objective functions and training strategies to guide neural cellular automata toward universal computation in a continuous setting. Our experiments demonstrate the successful training of fundamental computational primitives - such as matrix multiplication and transposition - culminating in the emulation of a neural network solving the MNIST digit classification task directly within the cellular automata state. These results represent a foundational step toward realizing analog general-purpose computers, with implications for understanding universal computation in continuous dynamics and advancing the automated discovery of complex cellular automata behaviors via machine learning. ",
@@ -2113,6 +2397,10 @@
       [
         "Mastodon",
         "https://neuromatch.social/@neuralreckoning/113878770587575972"
+      ],
+      [
+        "QR code",
+        "pub_sparsity_specialization-qrcode.png"
       ]
     ],
     "abstract": "The brain is structurally and functionally modular, although recent evidence has raised questions about the extent of both types of modularity. Using a simple, toy artificial neural network setup that allows for precise control, we find that structural modularity does not in general guarantee functional specialization (across multiple measures of specialization). Further, in this setup (1) specialization only emerges when features of the environment are meaningfully separable, (2) specialization preferentially emerges when the network is strongly resource-constrained, and (3) these findings are qualitatively similar across several different variations of network architectures. Finally, we show that functional specialization varies dynamically across time, and these dynamics depend on both the timing and bandwidth of information flow in the network. We conclude that a static notion of specialization is likely too simple a framework for understanding intelligence in situations of real-world complexity, from biology to brain-inspired neuromorphic systems.",
@@ -2156,10 +2444,39 @@
       [
         "Journal (HTML)",
         "https://www.thetransmitter.org/this-paper-changed-my-life/this-paper-changed-my-life-dan-goodman-on-a-paper-that-reignited-the-field-of-spiking-neural-networks/"
+      ],
+      [
+        "QR code",
+        "pub_spytorch_transmitter-qrcode.png"
       ]
     ],
     "abstract": "Friedemann Zenke’s 2019 paper, and its related coding tutorial SpyTorch, made it possible to apply modern machine learning to spiking neural networks. The innovation reinvigorated the field.",
     "peer_reviewed": false
+  },
+  "bena_thesis": {
+    "year": 2026,
+    "authors": "Béna G",
+    "title": "Physical constraints and functional demands shape modular neuromorphic intelligence",
+    "publisher": "Imperial College London",
+    "phd_thesis": true,
+    "categories": [
+      "Machine learning",
+      "Neuroscience",
+      "Learning",
+      "Modelling",
+      "Neuromorphic"
+    ],
+    "urls": [
+      [
+        "Thesis",
+        "https://hdl.handle.net/10044/1/128990"
+      ],
+      [
+        "QR code",
+        "pub_bena_thesis-qrcode.png"
+      ]
+    ],
+    "abstract": "Modularity---the decomposition of complex systems into semi-autonomous, reusable parts---is widely regarded as a foundational organising principle of intelligence. Yet the concept remains elusive: definitions shift across fields, and the causal mechanisms linking structure to function are poorly understood. This thesis investigates modularity in neural networks from multiple angles, and in doing so, traces an arc from studying it as a measurable property to building self-organising substrates where it could emerge. We first disentangle modularity along two axes: its causal locus (physical vs. functional) and its causal role (imposed vs. emergent). Using this framework, we show that imposing structural modularity yields functional specialisation only under specific resource constraints and environmental separability. We then demonstrate that enforcing the metabolic costs of long-range connectivity via spatial embedding naturally produces sparse, modular topologies. These structurally modular networks outperform unstructured architectures on compositional tasks, proving physical wiring costs can drive functionally beneficial modularity. Pivoting to self-organisation, we demonstrate that locally-connected Neural Cellular Automata can master a wide range of computational primitives like matrix operations, and support neural network emulation. Next, we introduce a scale-free framework for self-organising digital circuits. Here, a topology-masked Transformer replaces global backpropagation with local message passing to act as a decentralised meta-optimizer. This system self-assembles functional Boolean circuits, maintains homeostasis, and dynamically re-routes logic around permanent hardware faults—exhibiting adaptive resilience that generalises from small to large circuits without retraining. Together, these investigations reveal modularity not as a single property to engineer, but as an emergent phenomenon---shaped by physical constraints, driven by functional demands, and mediated by local, self-organising rules. They suggest that the path toward robust, scalable intelligence may lie in cultivating substrates that grow, learn, and repair themselves from the ground up."
   },
   "beyond_rate_coding": {
     "year": 2026,
@@ -2208,6 +2525,10 @@
       [
         "Mastodon",
         "https://neuromatch.social/@neuralreckoning/114909302481345141"
+      ],
+      [
+        "QR code",
+        "pub_beyond_rate_coding-qrcode.png"
       ]
     ],
     "abstract": "The surrogate gradient descent algorithm enabled spiking neural networks to be trained to carry out challenging sensory processing tasks, an important step in understanding how spikes contribute to neural computations. However, it is unclear the extent to which these algorithms fully explore the space of possible spiking solutions to problems. We investigated whether spiking networks trained with surrogate gradient descent can learn to make use of information that is only encoded in the timing and not the rate of spikes. We constructed synthetic datasets with a range of types of spike timing information (interspike intervals, spatio-temporal spike patterns or polychrony, and coincidence codes). We find that surrogate gradient descent training can extract all of these types of information. In more realistic speech-based datasets, both timing and rate information is present. We therefore constructed variants of these datasets in which all rate information is removed, and find that surrogate gradient descent can still perform well. We tested all networks both with and without trainable axonal delays. We find that delays can give a significant increase in performance, particularly for more challenging tasks. To determine what types of spike timing information are being used by the networks trained on the speech-based tasks, we test these networks on time-reversed spikes which perturb spatio-temporal spike patterns but leave interspike intervals and coincidence information unchanged. We find that when axonal delays are not used, networks perform well under time reversal, whereas networks trained with delays perform poorly. This suggests that spiking neural networks with delays are better able to exploit temporal structure. To facilitate further studies of temporal coding, we have released our modified speech-based datasets.",
@@ -2242,6 +2563,10 @@
       [
         "Preprint (PDF)",
         "https://arxiv.org/pdf/2512.07602"
+      ],
+      [
+        "QR code",
+        "pub_dual_memory_pathways-qrcode.png"
       ]
     ],
     "abstract": "Spiking neural networks excel at event-driven sensing yet maintaining task-relevant context over long timescales. However building these networks in hardware respecting both tight energy and memory budgets, remains a core challenge in the field. We address this challenge through novel algorithm-hardware co-design effort. At the algorithm level, inspired by the cortical fast-slow organization in the brain, we introduce a neural network with an explicit slow memory pathway that, combined with fast spiking activity, enables a dual memory pathway (DMP) architecture in which each layer maintains a compact low-dimensional state that summarizes recent activity and modulates spiking dynamics. This explicit memory stabilizes learning while preserving event-driven sparsity, achieving competitive accuracy on long-sequence benchmarks with 40-60% fewer parameters than equivalent state-of-the-art spiking neural networks. At the hardware level, we introduce a near-memory-compute architecture that fully leverages the advantages of the DMP architecture by retaining its compact shared state while optimizing dataflow, across heterogeneous sparse-spike and dense-memory pathways. We show experimental results that demonstrate more than a 4x increase in throughput and over a 5x improvement in energy efficiency compared with state-of-the-art implementations. Together, these contributions demonstrate that biological principles can guide functional abstractions that are both algorithmically effective and hardware-efficient, establishing a scalable co-design paradigm for real-time neuromorphic computation and learning."
@@ -2278,6 +2603,10 @@
       [
         "LinkedIn",
         "https://www.linkedin.com/posts/dan-goodman-78658b24a_exploiting-heterogeneous-delays-for-efficient-activity-7394793296428105728-evZK"
+      ],
+      [
+        "QR code",
+        "pub_heterogeneous_delays_low_bit-qrcode.png"
       ]
     ],
     "abstract": "Neural networks rely on learning synaptic weights. However, this overlooks other neural parameters that can also be learned and may be utilized by the brain. One such parameter is the delay: the brain exhibits complex temporal dynamics with heterogeneous delays, where signals are transmitted asynchronously between neurons. It has been theorized that this delay heterogeneity, rather than a cost to be minimized, can be exploited in embodied contexts where task-relevant information naturally sits contextually in the time domain. We test this hypothesis by training spiking neural networks to modify not only their weights but also their delays at different levels of precision. We find that delay heterogeneity enables state-of-the-art performance on temporally complex neuromorphic problems and can be achieved even when weights are extremely imprecise (1.58-bit ternary precision: just positive, negative, or absent). By enabling high performance with extremely low-precision weights, delay heterogeneity allows memory-efficient solutions that maintain state-of-the-art accuracy even when weights are compressed over an order of magnitude more aggressively than typically studied weight-only networks. We show how delays and time-constants adaptively trade-off, and reveal through ablation that task performance depends on task-appropriate delay distributions, with temporally-complex tasks requiring longer delays. Our results suggest temporal heterogeneity is an important principle for efficient computation, particularly when task-relevant information is temporal - as in the physical world - with implications for embodied intelligent systems and neuromorphic hardware.",
@@ -2329,6 +2658,10 @@
       [
         "Mastodon",
         "https://neuromatch.social/@neuralreckoning/115226255243849089"
+      ],
+      [
+        "QR code",
+        "pub_neuromodulation_enhances_sensory-qrcode.png"
       ]
     ],
     "abstract": "Neuromodulators allow circuits to dynamically change their biophysical properties in a context-sensitive way. In addition to their role in learning, neuromodulators have been suggested to play a role in sensory processing at relatively fast timescales (less than a second), although the precise mechanisms at play are still not well understood. To assess the potential computational role of neuromodulators in sensory processing, we added a simple but flexible model of neuromodulation to spiking neural networks. These networks were then trained - with methods from machine learning - to carry out challenging sensory processing tasks. We find that this addition leads to a dramatic improvement in sensory processing in every task and configuration we tested. In particular, we find that without explicitly training for this, it decreases reaction times, a role that has been discussed for the cholinergic system. In a particularly challenging speech recognition in noise task, we find that the networks learn to make use of rapid dynamic gain control via excitability, an attentional mechanism akin to the “listening in the dips” strategy. This has been hypothesised to be a key element of human hearing allowing us to perform better in these conditions than even state-of-the-art machine learning systems. We conclude that neuromodulation does have the potential to play a significant computational role in fast sensory processing. In addition, our neuromodulated spiking neural networks are able to substantially increase performance at only a small cost to computational complexity, and may therefore be valuable for applications in energy-efficient “neuromorphic” computing devices.\n",
@@ -2376,6 +2709,10 @@
       [
         "Bluesky",
         "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4r4urk26"
+      ],
+      [
+        "QR code",
+        "pub_partial_recurrence-qrcode.png"
       ]
     ],
     "abstract": "Neural circuits are sparse and bidirectional. Meaning that signals flow from early sensory areas to later regions and back. Yet, between connected areas there exist some but not all pathways. How does this structure, somewhere between feedforward and fully recurrent, shape circuit function? To address this question, we designed a new recurrent neural network model in which a set of weight matrices (i.e. pathways) can be combined to generate every network structure between feedforward and fully recurrent. We term these architectures partially recurrent neural networks (pRNNs). We trained over 25,000 pRNNs on a novel set of reinforcement learning tasks, designed to mimic multisensory navigation, and compared their performance across multiple functional metrics. Our findings reveal three key insights. First, many architectures match or exceed the performance of fully recurrent networks, despite using as few as one-quarter the number of parameters; demonstrating that partial recurrence enables energy efficient, yet performant solutions. Second, each pathway’s functional impact is both task and circuit dependent. For instance, feedback connections enhance robustness to noise in some, but not all contexts. Third, different pRNN architectures learn solutions with distinct input sensitivities and memory dynamics, and these computational traits help to explain their functional capabilities. Overall, our results demonstrate that partial recurrence enables robust and efficient computation - a finding that helps to explain why neural circuits are sparse and bidirectional, and how these principles could inform the design of artificial systems.\n",
@@ -2413,6 +2750,10 @@
       [
         "Preprint (PDF)",
         "https://arxiv.org/pdf/2605.03598"
+      ],
+      [
+        "QR code",
+        "pub_unifying_ds_graphs_mechanistic-qrcode.png"
       ]
     ],
     "abstract": "Understanding how biological and artificial neural networks implement computation from connectivity is a central problem in neuroscience and machine learning. In neural systems, structural and functional connectivity are known to diverge, motivating approaches that move beyond direct connections alone. Here, we show that the spatial and temporal function of recurrent neural networks (RNNs) trained on hierarchically modular tasks can be recovered by modelling the network as a graph and analysing the multi-hop pathways between input and output units. In particular, decomposing these pathways by hop length reveals how the network temporally routes information. This perspective reframes regularisation: if function is implemented through multi-hop communication, then standard penalties such as L1 regularisation, which act only on individual weights, constrain single-hop structure rather than the multi-hop pathways that support computation. Motivated by this view, we introduce resolvent-RNNs (R-RNNs), which constrain multi-hop pathways and thereby induce temporal sparsity beyond that achieved by standard L1 regularisation. Compared with L1 regularisation, R-RNNs achieve improved performance by inducing temporal sparsity that matches the task structure, even when the task signal is sparse. Moreover, R-RNNs exhibit stronger sparsity-function alignment, reflected in their increased robustness under strong regularisation. Together, our results identify multi-hop communication as a key principle linking structure to function in recurrent networks, and suggest that sparsity should be defined over functional pathways rather than individual parameters.\n"

@@ -8,11 +8,6 @@ from templater import additional_urls
 do_check_links = True
 
 link_exceptions = set([
-    'https://uk.linkedin.com/in/jean-hugues-lestang-90b70073', # LinkedIn doesn't like links... in...?
-    'https://uk.linkedin.com/in/greta-horvathova-5a22961b1',
-    'https://uk.linkedin.com/in/swathi-anillink',
-    'https://www.linkedin.com/in/nicolas-dundov/',
-    'https://www.linkedin.com/in/yishu-zhang-5a474913a/',
     'https://www.cns.nyu.edu/malab/bayesianbook.html', # This one just seems to not respond when I check it via python, but works fine
     ])
 
@@ -34,6 +29,8 @@ def check_link(url, msg):
     if url in last_checked_links or url in link_exceptions or url in checked_this_run:
         return
     if 'https://t.co/' in url:
+        return
+    if 'linkedin.com' in url:
         return
     checked_this_run.add(url)
     # first try just getting the header (quick)

@@ -92,7 +92,7 @@ class Person(Thing):
 
 def get_people():
     people = {}
-    fnames = glob.glob('people/*.yaml')
+    fnames = glob.glob('people/**/*.yaml', recursive=True)
     for fname in fnames:
         person = Person(fname)
         people[person.key] = person
