@@ -38,15 +38,15 @@
         {% endif %}
         <h{{h}} class="pt-5 pb-3">{{ header }}</h{{h}}>
         {% if cls=="Software" %}
-            {{ card_list(things[cls]) }}
+            {{ card_list(things[cls]|sort(attribute='key')) }}
         {% elif cls=="Organisation" %}
-            {{ card_list(things[cls], false) }}
+            {{ card_list(things[cls]|sort(attribute='key'), false) }}
         {% elif cls=="Video" %}
-            {{ vidlist.video_highlight(things['Video'], show='all') }}
+            {{ vidlist.video_highlight(things['Video']|sort(attribute='last_updated,title')|reverse, show='all') }}
         {% elif cls=="Person" %}
-            {{ authmacro.authors_list(things['Person']) }}
+            {{ authmacro.authors_list(things['Person']|sort(attribute='name')) }}
         {% elif cls=="Paper" %}
-            {{ publist.grouped_publications(things['Paper']) }}
+            {{ publist.grouped_publications(things['Paper']|sort(attribute='year,last_updated')|reverse) }}
         {% endif %}
     {% endfor %}
     {% if categories %}
