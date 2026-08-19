@@ -32,6 +32,8 @@ def check_link(url, msg):
         return
     if 'linkedin.com' in url:
         return
+    if 'biorxiv.org' in url:
+        return # rate limiting, and they're likely to be correct
     checked_this_run.add(url)
     # first try just getting the header (quick)
     p = urlparse(url)

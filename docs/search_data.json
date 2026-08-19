@@ -2605,6 +2605,66 @@
       "https://bsky.app/profile/neural-reckoning.org/post/3molalxefpk2z"
     ]
   },
+  "partial_recurrence": {
+    "year": 2026,
+    "last_updated": "07-08-2026",
+    "authors": [
+      "Ghosh M",
+      "Goodman DFM"
+    ],
+    "title": "Partial recurrence enables robust and efficient computation",
+    "journal": "Communications AI & Computing",
+    "additional": "1, 11",
+    "doi": "10.1038/s44488-026-00013-z",
+    "categories": [
+      "Neuroscience",
+      "Multimodal",
+      "Machine learning",
+      "Modelling"
+    ],
+    "urls": [
+      [
+        "Journal (HTML)",
+        "https://www.nature.com/articles/s44488-026-00013-z"
+      ],
+      [
+        "Journal (PDF)",
+        "https://www.nature.com/articles/s44488-026-00013-z.pdf"
+      ],
+      [
+        "Preprint",
+        "https://www.biorxiv.org/content/10.1101/2025.07.28.667142v1"
+      ],
+      [
+        "Preprint (PDF)",
+        "https://www.biorxiv.org/content/10.1101/2025.07.28.667142v1.full.pdf"
+      ],
+      [
+        "Code (GitHub)",
+        "https://github.com/ghoshm/Multimodal_mazes"
+      ],
+      [
+        "Bluesky",
+        "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4r4urk26"
+      ],
+      [
+        "QR code",
+        "pub_partial_recurrence-qrcode.png"
+      ]
+    ],
+    "abstract": "Neural circuits are sparse and bidirectional. Meaning that signals flow from early sensory areas to later regions and back. Yet, between connected areas there exist some but not all pathways. How does this structure, somewhere between feedforward and fully recurrent, shape circuit function? To address this question, we designed a recurrent neural network model in which a set of weight matrices (i.e. pathways) can be combined to generate every network structure between feedforward and fully recurrent. We term these architectures partially recurrent neural networks (pRNNs). We trained over 25,000 pRNNs on a novel set of reinforcement learning tasks, designed to mimic multisensory navigation, and compared their performance across multiple functional metrics. Our findings reveal three key insights. First, in dense-cue environments, most pRNN architectures match or exceed the task performance, learning speed or robustness of fully recurrent networks, despite using as few as one quarter the number of parameters; in sparse-cue environments, many match but a substantial fraction underperform. These results demonstrate that partial recurrence can enable energy efficient, yet performant solutions. Second, each pathway's functional impact is both task and circuit dependent. For instance, feedback connections enhance robustness to noise in some, but not all contexts. Third, different pRNN architectures learn solutions with distinct input sensitivities and memory dynamics, and these computational traits help to explain their functional capabilities. Overall, our results demonstrate that partial recurrence can enable robust and efficient computation - a finding that may help to explain why neural circuits are sparse and bidirectional, and shows how these principles can inform the design of artificial systems.\n",
+    "bluesky_thread": [
+      "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4r4urk26",
+      "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4uh37k26",
+      "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4vg6dc26",
+      "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4xl3fs26",
+      "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4zjcmk26",
+      "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4zjdls26",
+      "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda52ipis26",
+      "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda53ewt226",
+      "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda54eark26"
+    ]
+  },
   "emergent_generalization": {
     "year": "Preprints",
     "last_updated": "14-07-2026",
@@ -2634,11 +2694,20 @@
         "pub_emergent_generalization-qrcode.png"
       ]
     ],
-    "abstract": "Dimensionality reduction has proven powerful for identifying neural manifolds, which are low-dimensional structures underlying high-dimensional neural activity. These low-dimensional representations have improved the interpretability of population-level coding. Yet whether such low-dimensional representations are biologically relevant and confer functional advantages in learning systems, or merely reflect neuron-level activity, remains contested in neuroscience. We show that an explicit information bottleneck forcing a recurrent neural network to learn a low-dimensional representation is necessary for rotational and out-of-distribution generalisation in a time-series prediction task. Using information-theoretic measures of causal emergence, we characterise the dynamics of this representation across the memorisation-to-generalisation transition, finding a non-monotonic trajectory which shows an initial decrease, a minimum, and a subsequent rise to a maximum, even as prediction loss falls monotonically. This trajectory scales with task complexity, and the magnitude of emergent structure reliably predicts generalisation performance. Analysis of CA1 hippocampal activity in mice learning an alternating maze task reveals analogous non-monotonic emergence dynamics that track behavioural performance. Together, these findings indicate that the ability of neural networks to learn compact, distributed and emergent representations confers a functional advantage for generalisation, supporting a causal role for learned representations in cognition.\n"
+    "abstract": "Dimensionality reduction has proven powerful for identifying neural manifolds, which are low-dimensional structures underlying high-dimensional neural activity. These low-dimensional representations have improved the interpretability of population-level coding. Yet whether such low-dimensional representations are biologically relevant and confer functional advantages in learning systems, or merely reflect neuron-level activity, remains contested in neuroscience. We show that an explicit information bottleneck forcing a recurrent neural network to learn a low-dimensional representation is necessary for rotational and out-of-distribution generalisation in a time-series prediction task. Using information-theoretic measures of causal emergence, we characterise the dynamics of this representation across the memorisation-to-generalisation transition, finding a non-monotonic trajectory which shows an initial decrease, a minimum, and a subsequent rise to a maximum, even as prediction loss falls monotonically. This trajectory scales with task complexity, and the magnitude of emergent structure reliably predicts generalisation performance. Analysis of CA1 hippocampal activity in mice learning an alternating maze task reveals analogous non-monotonic emergence dynamics that track behavioural performance. Together, these findings indicate that the ability of neural networks to learn compact, distributed and emergent representations confers a functional advantage for generalisation, supporting a causal role for learned representations in cognition.\n",
+    "bluesky_thread": [
+      "https://bsky.app/profile/h-rajpal.bsky.social/post/3msg7xwokuc2w",
+      "https://bsky.app/profile/h-rajpal.bsky.social/post/3msgaughvo22w",
+      "https://bsky.app/profile/h-rajpal.bsky.social/post/3msgb74jihc2h",
+      "https://bsky.app/profile/h-rajpal.bsky.social/post/3msgbd5qnnk2h",
+      "https://bsky.app/profile/h-rajpal.bsky.social/post/3msgbd6tyj22h",
+      "https://bsky.app/profile/h-rajpal.bsky.social/post/3msgbd7xrzc2h",
+      "https://bsky.app/profile/h-rajpal.bsky.social/post/3msgbmves2c2h"
+    ]
   },
   "factorization_genomic": {
     "year": "Preprints",
-    "last_updated": "20-07-2026",
+    "last_updated": "12-08-2026",
     "authors": [
       "Habashy KG",
       "Evans BD",
@@ -2656,18 +2725,25 @@
     "urls": [
       [
         "Preprint",
-        "https://www.biorxiv.org/content/10.64898/2026.07.14.738413v1"
+        "https://www.biorxiv.org/content/10.64898/2026.07.14.738413v2"
       ],
       [
         "Preprint (PDF)",
-        "https://www.biorxiv.org/content/10.64898/2026.07.14.738413v1.full.pdf"
+        "https://www.biorxiv.org/content/10.64898/2026.07.14.738413v2.full.pdf"
       ],
       [
         "QR code",
         "pub_factorization_genomic-qrcode.png"
       ]
     ],
-    "abstract": "The genomic mechanisms that efficiently encode the initial architecture and synaptic connectivity of neural circuits remain poorly understood. We hypothesise that two primary mechanisms — spatial encoding and factorisation — enable a limited genome to initialise networks of billions of neurons. Spatial encoding, a form of indirect representation, compresses neural network parameters while enforcing structural continuity. Complementarily, we introduce a factorisation mechanism inspired by reaction-diffusion models, comprising a spatially invariant reaction rule and spatially variant diffusion dynamics. Based on this insight, we can efficiently abstract a neural network layer as a spatially invariant weight kernel (or filter) and its spatially variant transformations along the spatial dimensions. Thus, coupling this variant-invariant decomposition with spatial encodings can substantially reduce the size of the solution space explored by the genome. In addition, we show that this coupling leads to efficient initialisation of cortical maps, such as V1 orientation maps, and neural networks with the ability to generalise. In summary, coupling factorisation and spatial encodings can offer functional advantages to the evolving genome.\n"
+    "abstract": "The genomic mechanisms that efficiently encode the initial architecture and synaptic connectivity of neural circuits remain poorly understood. We hypothesise that two primary mechanisms — spatial encoding and factorisation — enable a limited genome to initialise networks of billions of neurons. Spatial encoding, a form of indirect representation, compresses neural network parameters while enforcing structural continuity. Complementarily, we introduce a factorisation mechanism inspired by reaction-diffusion models, comprising a spatially invariant reaction rule and spatially variant diffusion dynamics. Based on this insight, we can efficiently abstract a neural network layer as a spatially invariant weight kernel (or filter) and its spatially variant transformations along the spatial dimensions. Thus, coupling this variant-invariant decomposition with spatial encodings can substantially reduce the size of the solution space explored by the genome. In addition, we show that this coupling leads to efficient itialisation of cortical maps, such as V1 orientation maps, and neural networks with the ability to generalise. In summary, coupling factorisation and spatial encodings can offer functional advantages to the evolving genome.\n",
+    "bluesky_thread": [
+      "https://bsky.app/profile/krhab.bsky.social/post/3msycaijgpc2n",
+      "https://bsky.app/profile/krhab.bsky.social/post/3msyd4772r22n",
+      "https://bsky.app/profile/krhab.bsky.social/post/3msyeqkiwf22o",
+      "https://bsky.app/profile/krhab.bsky.social/post/3msyesqieik2r",
+      "https://bsky.app/profile/krhab.bsky.social/post/3msygotlv5c2h"
+    ]
   },
   "heterogeneous_delays_low_bit": {
     "year": "Preprints",
@@ -2782,56 +2858,6 @@
       "https://bsky.app/profile/neural-reckoning.org/post/3lz4riqzybk2e",
       "https://bsky.app/profile/neural-reckoning.org/post/3lz4rituomk2e",
       "https://bsky.app/profile/neural-reckoning.org/post/3lz4riuhfas2e"
-    ]
-  },
-  "partial_recurrence": {
-    "year": "Preprints",
-    "last_updated": "31-07-2025",
-    "authors": [
-      "Ghosh M",
-      "Goodman DFM"
-    ],
-    "title": "Partial recurrence enables robust and efficient computation",
-    "doi": null,
-    "categories": [
-      "Neuroscience",
-      "Multimodal",
-      "Machine learning",
-      "Modelling"
-    ],
-    "urls": [
-      [
-        "Preprint",
-        "https://www.biorxiv.org/content/10.1101/2025.07.28.667142v1"
-      ],
-      [
-        "Preprint (PDF)",
-        "https://www.biorxiv.org/content/10.1101/2025.07.28.667142v1.full.pdf"
-      ],
-      [
-        "Code (GitHub)",
-        "https://github.com/ghoshm/Multimodal_mazes"
-      ],
-      [
-        "Bluesky",
-        "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4r4urk26"
-      ],
-      [
-        "QR code",
-        "pub_partial_recurrence-qrcode.png"
-      ]
-    ],
-    "abstract": "Neural circuits are sparse and bidirectional. Meaning that signals flow from early sensory areas to later regions and back. Yet, between connected areas there exist some but not all pathways. How does this structure, somewhere between feedforward and fully recurrent, shape circuit function? To address this question, we designed a new recurrent neural network model in which a set of weight matrices (i.e. pathways) can be combined to generate every network structure between feedforward and fully recurrent. We term these architectures partially recurrent neural networks (pRNNs). We trained over 25,000 pRNNs on a novel set of reinforcement learning tasks, designed to mimic multisensory navigation, and compared their performance across multiple functional metrics. Our findings reveal three key insights. First, many architectures match or exceed the performance of fully recurrent networks, despite using as few as one-quarter the number of parameters; demonstrating that partial recurrence enables energy efficient, yet performant solutions. Second, each pathway’s functional impact is both task and circuit dependent. For instance, feedback connections enhance robustness to noise in some, but not all contexts. Third, different pRNN architectures learn solutions with distinct input sensitivities and memory dynamics, and these computational traits help to explain their functional capabilities. Overall, our results demonstrate that partial recurrence enables robust and efficient computation - a finding that helps to explain why neural circuits are sparse and bidirectional, and how these principles could inform the design of artificial systems.\n",
-    "bluesky_thread": [
-      "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4r4urk26",
-      "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4uh37k26",
-      "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4vg6dc26",
-      "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4xl3fs26",
-      "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4zjcmk26",
-      "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda4zjdls26",
-      "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda52ipis26",
-      "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda53ewt226",
-      "https://bsky.app/profile/marcusghosh.bsky.social/post/3lvda54eark26"
     ]
   },
   "unifying_ds_graphs_mechanistic": {
