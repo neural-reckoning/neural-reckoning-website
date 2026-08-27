@@ -1,0 +1,41 @@
+{% macro talk_list_item(talk) %}
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+            <a href="talk_{{talk.key}}.html">{{talk.name}}</a><br/>
+            <a href="{{ talk.author_objects[0].url }}">{{ talk.author_objects[0].name }}</a> at <i>{{ talk.venue }}</i> ({{ talk.year }})
+        </div>
+    </li>
+{% endmacro %}
+
+{% macro grouped_talk_list(talks) %}
+    <div>
+        {% for group in talks | groupby('year') | reverse %}
+            <h5 class="pt-1">{{group.grouper}}</h5>
+            <ul class="list-group">
+            {% for talk in group.list | sort(attribute='last_updated', reverse=True) %}
+                {{ talk_list_item(talk) }}
+            {% endfor %}
+            </ul>
+        {% endfor %}
+    </div>
+{% endmacro %}
+
+{% macro flat_talk_list(talks) %}
+    <div>
+        <ul class="list-group">
+        {% for talk in talks | sort(attribute='last_updated', reverse=True) %}
+            {{ talk_list_item(talk) }}
+        {% endfor %}
+        </ul>
+    </div>
+{% endmacro %}
+
+{% macro recent_talks(talks, n=5) %}
+    <div>
+        <ul class="list-group pb-3">
+        {% for talk in (talks | sort(attribute='last_updated', reverse=True))[:n] %}
+            {{ talk_list_item(talk) }}
+        {% endfor %}
+        </ul>
+    </div>
+{% endmacro %}

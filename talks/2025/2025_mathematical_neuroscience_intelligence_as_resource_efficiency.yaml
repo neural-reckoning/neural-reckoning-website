@@ -1,0 +1,26 @@
+name: Intelligence as resource efficiency
+authors: Goodman DFM
+venue: Mathematical Neuroscience conference
+abstract: >
+  I start by asking what could it mean to understand the brain. My answer is that we need to understand the nontrivial thing that only the brain can do ("intelligence", although that's a risky word). I argue for a definition of intelligence that includes resource efficiency as a core part, and suggest that this may be why machine learning approaches with such vast resources produce intelligence so unlike human intelligence. I illustrate with examples from multimodal perception and modularity, and discuss how this might be useful for our ongoing work in heterogeneity, delays and neuromodulation.
+categories:
+  - Modelling
+  - Neuroscience
+  - Metascience
+  - Machine learning
+  - Spiking
+  - Neuromorphic
+  - Multimodal
+related:
+  - gabriel_bena
+  - marcus_ghosh
+  - pengfei_sun
+  - swathi_anil
+  - nicolas_perez
+  - multimodal
+  - multisensory-channels-and-time
+  - heterogeneous_delays_low_bit
+  - sparsity_specialization
+  - heterogeneity
+  - partial_recurrence
+last_updated: 12-12-2025

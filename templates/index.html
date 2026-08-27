@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% import 'publication_list_macro.html' as publist with context %}
+{% import 'talk_list_macro.html' as talklist with context %}
 {% import 'video_list_macro.html' as vidlist with context %}
 {% import 'related_list_macro.html' as relist with context %}
 
@@ -77,6 +78,11 @@
         <div class="row"><div class="col bg-light mt-3 mb-3 pt-2">
             <h2 class="pb-3">Selected publications</h2>
             {{ publist.selected_publications() }}
+        </div></div>
+
+        <div class="row"><div class="col bg-light mt-3 mb-3 pt-2">
+            <h2 class="pb-3">Recent talks</h2>
+            {{ talklist.recent_talks(talks, 5) }}
         </div></div>
 
         <div class="row"><div class="col mt-3 mb-3 pt-2">

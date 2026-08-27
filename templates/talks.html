@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% import 'talk_list_macro.html' as talklist with context %}
+
+{% block main %}
+
+<h2 class="pb-3">Talks</h2>
+
+<div>
+    {{ talklist.grouped_talk_list(talks) }}
+</div>
+
+{% endblock %}

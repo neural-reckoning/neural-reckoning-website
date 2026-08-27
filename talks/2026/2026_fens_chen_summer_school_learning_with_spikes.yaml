@@ -1,0 +1,16 @@
+name: Learning with spikes
+authors: Goodman DFM
+venue: FENS-Chen Institute summer school lecture (Cambridge)
+abstract: >
+  This was a lecture for a wide range of neuroscience students. I discuss why we should care about spiking neural networks, how to code and train them. I also talk about two studies that use the methods I've described, on neural heterogeneity and on the computational role of neuromodulation.
+categories:
+  - Modelling
+  - Neuroscience
+  - Machine learning
+  - Spiking
+related:
+  - nicolas_perez
+  - abdelqader_alkilany
+  - neuromodulation_enhances_sensory
+  - heterogeneity
+last_updated: 15-07-2026

@@ -1,0 +1,20 @@
+name: "Neural architectures: what are they good for anyway?"
+authors: Goodman DFM
+venue: UCL NeuroAI seminar series
+abstract: >
+  I discuss how we can ask the question of what different neural architectures are good for, and why this is challenging from the point of view of causal reasoning. My answer is that theoretical approaches can achieve something here that purely experimental approaches cannot, which is to compare to counterfactual models. I illustrate by talking about our work on modularity, and multimodal architectures.
+categories:
+  - Modelling
+  - Neuroscience
+  - Metascience
+  - Machine learning
+  - Multimodal
+related:
+  - gabriel_bena
+  - marcus_ghosh
+  - swathi_anil
+  - multimodal
+  - multisensory-channels-and-time
+  - sparsity_specialization
+  - partial_recurrence
+last_updated: 12-02-2025

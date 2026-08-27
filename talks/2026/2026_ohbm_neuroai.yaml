@@ -1,0 +1,15 @@
+name: Untitled NeuroAI talk
+authors: Goodman DFM
+venue: Organisation for Human Brain Mapping
+abstract: >
+  Invited tutorial/research talk at the 2026 OHBM conference workshop on NeuroAI. I discuss the problem of the "garden of forking paths" in NeuroAI, multiverse analysis, and how I try to handle these issues. I talk about my work on modularity as an example of this in practice.
+categories:
+  - Modelling
+  - Neuroscience
+  - Metascience
+  - Machine learning
+related:
+  - gabriel_bena
+  - marcus_ghosh
+  - sparsity_specialization
+last_updated: 13-06-2026

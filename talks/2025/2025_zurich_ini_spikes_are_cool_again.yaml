@@ -1,0 +1,36 @@
+name: Spikes are cool again! What's next?
+authors: Goodman DFM
+venue: Institute for Neuroinformatics, University of Zurich
+abstract: >
+  Invited talk. I discussed my history with spiking neural networks, from writing the Brian simulator, sound localisation, surrogate gradient descent and SNUFA. I talked about why spikes, particularly in a neuromorphic context. My argument included nonlinearity and temporal dynamics (including coincidence detection, multimodal processing in time, and delay networks), heterogeneity, sparsity and modularity.
+categories:
+  - Modelling
+  - Neuroscience
+  - Metascience
+  - Machine learning
+  - Spiking
+  - Neuromorphic
+  - Brian
+  - Sound localisation
+  - Multimodal
+related:
+  - gabriel_bena
+  - marcus_ghosh
+  - danyal_akarca
+  - pengfei_sun
+  - swathi_anil
+  - nicolas_perez
+  - brian
+  - snufa
+  - spike_timing_sound_loc
+  - learning_localisation
+  - snufa_review
+  - comob_soundloc
+  - multimodal
+  - adapting_to_time
+  - multisensory-channels-and-time
+  - heterogeneous_delays_low_bit
+  - sparsity_specialization
+  - heterogeneity
+  - sparse_spiking_gradient_descent
+last_updated: 06-03-2025

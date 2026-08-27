@@ -13,7 +13,7 @@ def make_members_global_for_navigation(people):
     update_template_globals(members=members, grouped_members=grouped_members, positions_in_order=positions_in_order, position_headers=position_headers)
 
 
-def write_pages(nav, people, papers, software, categories, videos, organisations):
+def write_pages(nav, people, papers, software, categories, videos, organisations, talks):
     pages = nav['pages']
     unindexed_pages = nav['unindexed_pages']
     extra_keys = dict(
@@ -22,6 +22,7 @@ def write_pages(nav, people, papers, software, categories, videos, organisations
         videos=list(videos.values()),
         categories=categories,
         organisations=list(organisations.values()),
+        talks=list(talks.values()),
     )
 
     # Generate index pages

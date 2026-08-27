@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% import 'authors_list_macro.html' as authmacro with context %}
+{% import 'related_list_macro.html' as relist with context %}
+
+{% block main %}
+
+<div class="row">
+    <div class="col">
+
+        <h2>{{ name }}</h2>
+
+        <div>
+            <i>{{ venue }}</i><br/>
+            {{ last_updated.strftime('%Y-%m-%d') }}
+        </div>
+
+        <div>&nbsp;</div>
+
+        {% if author_objects|length<=8 %}
+            <div class="d-none d-sm-block">
+                {{ authmacro.authors_list(author_objects) }}
+            </div>
+            <div class="d-block d-sm-none">
+                {{ authors }}
+            </div>
+        {% else %}
+            <div>{{ authors }}</div>
+        {% endif %}
+
+        <div>&nbsp;</div>
+
+        {% if abstract %}
+        <h3>Abstract</h3>
+        <div>{{ abstract }}</div>
+        {% endif %}
+
+        <h3 class="pt-3">Slides</h3>
+        <div style="width: 100%; aspect-ratio: 16/9;">
+            <iframe
+            src="https://mozilla.github.io/pdf.js/web/viewer.html?file={{ pdf_url }}"
+            style = "width: 100%; height: 100%; border: none;"
+            ></iframe>
+        </div>
+
+        <!-- <div class="embed-responsive embed-responsive-16by9 pt-3 pb-3">
+            {{ embed }}
+        </div> -->
+
+        {{ relist.related_by_class(things, categories=category_objects, urls=urls) }}
+        
+    </div>
+</div>
+
+{% endblock %}

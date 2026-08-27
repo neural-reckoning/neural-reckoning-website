@@ -1,4 +1,5 @@
 {% import 'video_list_macro.html' as vidlist with context %}
+{% import 'talk_list_macro.html' as talklist with context %}
 {% import 'publication_list_macro.html' as publist with context %}
 {% import 'authors_list_macro.html' as authmacro with context %}
 {% import 'publication_list_macro.html' as publist with context %}
@@ -20,7 +21,7 @@
 
 {% macro related_by_class(things, categories=None, urls=None, classes=None, exclude=[], h=3, person_page=False) %}
     {% if not classes %}
-        {% set classes=['Person', 'Organisation', 'Software', 'Video', 'Paper'] %}
+        {% set classes=['Person', 'Organisation', 'Software', 'Video', 'Talk', 'Paper'] %}
     {% endif %}
     {% if urls %}
         <h3 class="pt-3">Links</h3>
@@ -32,7 +33,7 @@
         {% if cls not in things or cls in exclude or not things[cls] %}
             {% continue %}
         {% endif %}
-        {% set header = {'Software': 'Software', 'Person': 'People', 'Organisation': 'Organisations', 'Video': 'Videos', 'Paper': 'Publications'}[cls] %}
+        {% set header = {'Software': 'Software', 'Person': 'People', 'Organisation': 'Organisations', 'Video': 'Videos', 'Talk': 'Talks', 'Paper': 'Publications'}[cls] %}
         {% if not person_page %}
         {% set header = "Related "+header.lower() %}
         {% endif %}
@@ -43,6 +44,8 @@
             {{ card_list(things[cls]|sort(attribute='key'), false) }}
         {% elif cls=="Video" %}
             {{ vidlist.video_highlight(things['Video']|sort(attribute='last_updated,title')|reverse, show='all') }}
+        {% elif cls=="Talk" %}
+            {{ talklist.flat_talk_list(things['Talk']) }}
         {% elif cls=="Person" %}
             {{ authmacro.authors_list(things['Person']|sort(attribute='name')) }}
         {% elif cls=="Paper" %}

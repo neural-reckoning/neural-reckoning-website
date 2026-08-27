@@ -18,6 +18,7 @@ from papers import get_papers, write_papers
 from related import find_thing_authors, find_related, RelatedSoftwareGetter, RelatedThingGetter
 from search import generate_json_for_search
 from software import get_software, write_software
+from talks import get_talks, write_talks
 from templater import update_template_globals
 from videos import get_videos, write_videos
 from wordclouds import make_wordclouds
@@ -31,6 +32,7 @@ people = get_people()
 papers = get_papers()
 software = get_software()
 videos = get_videos()
+talks = get_talks()
 organisations = get_organisations()
 generate_json_for_search(papers)
 
@@ -43,11 +45,13 @@ generate_bluesky_threads(papers)
 # Find relationships
 find_thing_authors(people, papers)
 find_thing_authors(people, software)
-categories = build_categories({**papers, **software, **videos, **organisations})
+find_thing_authors(people, talks)
+categories = build_categories({**papers, **software, **videos, **organisations, **talks})
 find_related(papers, RelatedSoftwareGetter(software))
 find_related(papers, RelatedThingGetter({**papers, **organisations}))
-find_related(videos, RelatedThingGetter({**people, **papers, **software, **organisations}))
-find_related(organisations, RelatedThingGetter({**people, **papers, **software, **organisations}))
+find_related(talks, RelatedThingGetter({**people, **papers, **software, **organisations}))
+find_related(videos, RelatedThingGetter({**people, **papers, **software, **organisations, **talks}))
+find_related(organisations, RelatedThingGetter({**people, **papers, **software, **organisations, **talks, **videos}))
 
 # Generate wordclouds
 make_wordclouds(people, papers)
@@ -60,9 +64,10 @@ write_people(people)
 write_papers(papers)
 write_categories(categories)
 write_software(software)
+write_talks(talks)
 write_videos(videos)
 write_organisations(organisations)
-write_pages(nav, people, papers, software, categories, videos, organisations)
+write_pages(nav, people, papers, software, categories, videos, organisations, talks)
 
 # Copy static files to docs directory
 os.system(r'copy files\* docs >nul')
