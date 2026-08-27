@@ -2,6 +2,7 @@ name: Marcus Ghosh
 author_names:
 - Ghosh M
 email: 'bS5naG9zaEBpbXBlcmlhbC5hYy51aw==' # generate this by import base64; base64.b64encode(b'address')
+signoff: Marcus left the group in 2025 to start his own research group <a href="https://www.neural-forms.org/">Neural forms</a> at Imperial College, but continues to collaborate with us.
 positions:
  - type: affiliated
    short: Affiliated
@@ -15,15 +16,16 @@ positions:
        - dan_goodman
 long: >
   <p>
-    Marcus Ghosh is an Imperial College Research Fellow, funded by <a href="https://www.schmidtsciences.org/">Schmidt Sciences</a>. 
+    Marcus Ghosh was a postdoc with us, and now runs his own research group <a href="https://www.neural-forms.org/">Neural forms</a> at Imperial College,
   </p>
   <p>
-    In his work he uses artificial neural networks to explore how the brain combines information from
+    In his work he used artificial neural networks to explore how the brain combines information from
     multiple senses (multisensory integration). And how the brain's structure enables its function.
   </p>
 orcid: 0000-0002-2428-4605
-short: Multisensory integration in biological and simulated neural networks.
+short: Discovering how brain structure shapes function.
 links:
+  - ['Website', 'https://www.neural-forms.org/']
   - ['Mastodon', 'https://neuromatch.social/@marcusghosh']
   - ['Bluesky', 'https://bsky.app/profile/marcusghosh.bsky.social']
   - ['Google Scholar', 'https://scholar.google.com/citations?user=__03svoAAAAJ&hl=en']

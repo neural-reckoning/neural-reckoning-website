@@ -1,0 +1,23 @@
+name: Iñigo Lara
+author_names:
+- Lara I
+position: phd
+email: 'aS5sYXJhMjZAaW1wZXJpYWwuYWMudWs=' # generate this by import base64; base64.b64encode(b'address')
+short: Physical neuromorphic computing.
+long: |-
+  <p>
+    I’m a PhD student working in the field of physical neuromorphic computing, utilising systems with complex dynamics to gain insights into what features lead to compact and efficient learning. Such systems include heterogeneous lasing photonic networks and nonlinear electronic devices.
+  </p>
+  <p>
+    Iñigo is supervised by <a href="https://profiles.imperial.ac.uk/j.carter-gartside13">Jack Gartside</a> (Physics) and co-supervised by <a href="dan_goodman">Dan Goodman</a> and <a href="https://profiles.imperial.ac.uk/r.sapienza">Riccardo Sapienza</a> (Physics).
+  </p>
+dates:
+- 2026
+links:
+  - ['Website', 'https://inigoliz.com']
+  - ['LinkedIn', 'https://www.linkedin.com/in/inigo-lara-psi/']
+  - ['Bluesky', 'https://bsky.app/profile/inigoliz.com']
+social_feed: ['Bluesky', 'inigoliz.com']
+relationships:
+  supervisor:
+    - dan_goodman
