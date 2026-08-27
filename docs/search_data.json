@@ -2835,7 +2835,7 @@
       ],
       [
         "Bluesky",
-        "https://bsky.app/profile/neural-reckoning.org/post/3lz4rihm2622e"
+        "https://bsky.app/profile/neural-reckoning.org/post/3mqrr5fsmh22a"
       ],
       [
         "Mastodon",
@@ -2848,16 +2848,15 @@
     ],
     "abstract": "Spiking neurons underlie the brain's extreme energy efficiency, and therefore have great potential in neuromorphic computing, although realising this efficiency in practice has proven challenging. We use neuromodulation, a biological mechanism that lets the network dynamically and contextually modify its own parameters. We find it substantially increases performance across a range of sensory processing tasks, including a challenging new speech-in-noise dataset we introduce, with very few additional resources (neurons, energy, parameters). Neuromodulatory networks are space and energy efficient thanks to two mechanisms that are directly relevant to neuromorphic computing and biology: firstly, they allow for an order-of-magnitude reduction in the number of neurons required; and secondly, they enable very sparse firing, achieving better results using orders of magnitude fewer spikes. Together, these properties may throw light on the computational role of neuromodulation in biology, and make neuromodulation an ideal mechanism to improve performance and efficiency for neuromorphic devices.\n",
     "bluesky_thread": [
-      "https://bsky.app/profile/neural-reckoning.org/post/3lz4rihm2622e",
-      "https://bsky.app/profile/neural-reckoning.org/post/3lz4rijevis2e",
-      "https://bsky.app/profile/neural-reckoning.org/post/3lz4rily4lk2e",
-      "https://bsky.app/profile/neural-reckoning.org/post/3lz4rimo7mk2e",
-      "https://bsky.app/profile/neural-reckoning.org/post/3lz4ringzks2e",
-      "https://bsky.app/profile/neural-reckoning.org/post/3lz4riowvs22e",
-      "https://bsky.app/profile/neural-reckoning.org/post/3lz4ripmvvc2e",
-      "https://bsky.app/profile/neural-reckoning.org/post/3lz4riqzybk2e",
-      "https://bsky.app/profile/neural-reckoning.org/post/3lz4rituomk2e",
-      "https://bsky.app/profile/neural-reckoning.org/post/3lz4riuhfas2e"
+      "https://bsky.app/profile/neural-reckoning.org/post/3mqrr5fsmh22a",
+      "https://bsky.app/profile/neural-reckoning.org/post/3mqrr5gvmks2a",
+      "https://bsky.app/profile/neural-reckoning.org/post/3mqrr5itwpc2a",
+      "https://bsky.app/profile/neural-reckoning.org/post/3mqrr5kg46c2a",
+      "https://bsky.app/profile/neural-reckoning.org/post/3mqrr5mqmws2a",
+      "https://bsky.app/profile/neural-reckoning.org/post/3mqrr5ocxc22a",
+      "https://bsky.app/profile/neural-reckoning.org/post/3mqrr5pyh7c2a",
+      "https://bsky.app/profile/neural-reckoning.org/post/3mqrr5ujisk2a",
+      "https://bsky.app/profile/neural-reckoning.org/post/3mqrr5vk6pc2a"
     ]
   },
   "unifying_ds_graphs_mechanistic": {
