@@ -3,7 +3,6 @@ dependencies:
 - python=3
 - jinja2
 - pillow
-- wordcloud
 - pip
 - pip:
     - tweepy
@@ -11,3 +10,4 @@ dependencies:
     - semanticscholar
     - pyyaml
     - qrcode
+    - nltk

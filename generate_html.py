@@ -21,7 +21,7 @@ from software import get_software, write_software
 from talks import get_talks, write_talks
 from templater import update_template_globals
 from videos import get_videos, write_videos
-from wordclouds import make_wordclouds
+from wordfreq import calculate_all_wordfreqs
 
 # Load the basic navigational structure and put it into the template engine
 nav = yaml.safe_load(open('navigation.yaml', 'r'))
@@ -58,7 +58,7 @@ find_related(videos, RelatedThingGetter({**people, **papers, **software, **organ
 find_related(organisations, RelatedThingGetter({**people, **papers, **software, **organisations, **talks, **videos}))
 
 # Generate wordclouds
-make_wordclouds(people, papers)
+calculate_all_wordfreqs(people, papers)
 
 # Add members to global environment for navigation bar
 make_members_global_for_navigation(people)

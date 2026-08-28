@@ -20,14 +20,7 @@
                 {% endif %}
             </a>
         </div>
-        <div style="flex: 0 0 125px;" class="d-none d-md-block">
-            <a href="{{member.key}}.html">
-                {% if os.path.exists('docs/wordcloud_'+member.key+'.png') %}
-                    <img src="wordcloud_{{member.key}}.png" style="max-height: 100px; max-width: 100px;"/>
-                {% endif %}
-            </a>
-        </div>
-        <div class="col">
+        <div class="col"  style="min-width: 0">
             <a href="{{member.key}}.html"><b>{{member.name}}</b></a>
             {% if hasattr(member, 'dates') %}
                 {% if hasattr(member, 'positions') and member.positions|length>1 %}
@@ -40,7 +33,14 @@
                     <span style="color: #aaaaaa;">({% if hasattr(member, 'former_position') %}{{member.former_position}}&nbsp;{% endif %}{{ member.dates_string }})</span>
                 {% endif %}
             {% endif %}<br/>
-            {{ member.short }}
+            <div class="pb-1">{{ member.short }}</div>
+            {% if hasattr(member, 'word_frequencies') and member.word_frequencies %}
+                <div class="keywords">
+                    {% for word, frequency in member.word_frequencies %}
+                        <span class="keyword">{{ word }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
         </div>
     </div>
     {% endfor %}

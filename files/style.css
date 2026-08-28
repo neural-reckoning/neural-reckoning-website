@@ -66,3 +66,25 @@
     opacity: 0.5;
     filter: sepia(100%);
 }
+
+.keywords {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.keyword {
+    flex: 0 0 auto;
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+    background: #fafafa;
+    color: #bbb;
+    font-size: 0.8rem;
+    transition: all 0.15s ease;
+}
+
+.keyword:hover {
+    background: #eef2ff;
+}    
