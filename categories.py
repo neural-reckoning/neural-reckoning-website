@@ -1,8 +1,5 @@
-import os, hashlib
-
 from collections import defaultdict
 
-from cache import cached
 from things import Thing
 from templater import apply_template
 
@@ -92,72 +89,26 @@ def build_categories(things):
         pub.category_objects = set([categories[catid] for catid in pub.category_ids])
 
     for k, v in list(category_detail_links.items()):
-        # category_detail_links[category_id(k)] = v
         categories[category_id(k)].detail_link = v
 
     # Generate category graphs and HTML maps
     numpapers = defaultdict(int)
     category_graph = defaultdict(set)
-    category_connections = defaultdict(int)
     for pub in things:
         if not hasattr(pub, 'categories'):
             continue
         for cat in pub.category_objects:
             category_graph[cat.key] = set([])
             numpapers[cat.key] += 1
-            for cat2 in sorted(pub.category_objects, key=lambda cat: cat.key):
-                if cat2.key<cat.key:
-                    category_connections[cat.key, cat2.key] += 1
 
-    max_connections = max(category_connections.values())
-    min_connections = min(category_connections.values())
-    max_num_papers = max(numpapers.values())
-    min_num_papers = min(numpapers.values())
     for catname, inclusions in list(category_inclusions.items()):
         tgt_id = category_id(catname)
         for inclusion in sorted(inclusions):
             src_id = category_id(inclusion)
             category_graph[src_id].add(tgt_id)
-    # Generate hierarchical categories
-    category_dot_lines = []
-    category_colours = {}
-    for cat_id in sorted(list(category_graph.keys())):
-        cat_name = category_id_names[cat_id]
-        col = (numpapers[cat_id]-min_num_papers)/(1.0*(max_num_papers-min_num_papers))
-        col = cm.YlGn(0.1+0.6*col)
-        col = colors.to_hex(col)#+'ee' # last bit is alpha
-        category_colours[cat_id] = col
-        category_dot_lines.append('{cat_id} [URL="publication_category_{cat_id}.html", label="{cat_name}", fillcolor="{col}", color="{col}", style="filled", fontcolor="#000000", '
-                                'shape=box];'.format(cat_id=cat_id, cat_name=cat_name, col=col))
-    for src_id, target_ids in sorted(list(category_graph.items())):
-        for tgt_id in sorted(target_ids):
-            category_dot_lines.append('{src_id} -> {tgt_id} [color="#bbbbbb"];'.format(src_id=src_id, tgt_id=tgt_id,
-                                                                                    col=category_colours[src_id]))
-    category_dot = '''
-    digraph categories_hierarchy {{
-        rankdir = LR;
-    {graphspec}
-    }}
-    '''.format(graphspec='\n'.join(category_dot_lines))
 
-    m = hashlib.md5()
-    m.update(category_dot.encode("utf-8"))
-    cat_hash = m.hexdigest()
-    fname = 'temp/categories_hierarchy.dot'
-    if os.path.exists(fname) and fname in cached and cached[fname]==cat_hash:
-        return categories
-    print('recomputing category map')
-
-    if not os.path.exists('temp'):
-        os.mkdir('temp')
-    open('temp/categories_hierarchy.dot', 'w').write(category_dot)
-    layout_algo = 'dot'
-    if os.system('{algo} -Tsvg temp/categories_hierarchy.dot -o temp/categories_hierarchy.svg'.format(algo=layout_algo))==0:
-        svg = open('temp/categories_hierarchy.svg', 'r').read()
-        svg = svg.replace('<svg', '<svg class="img-fluid"')
-        open('temp/categories_hierarchy.svg', 'w').write(svg)
-
-    cached[fname] = cat_hash
+    # Generate mermaid code
+    generate_mermaid(category_graph, numpapers, category_id_names)
 
     return categories
 
@@ -169,3 +120,40 @@ def write_categories(categories):
         filename = f'publication_category_{key}.html'
         apply_template('category.html', filename, keys_from=cat,
             keys=dict(subcats=subcats, parents=parents, categories=categories))
+
+
+def generate_mermaid(category_graph, numpapers, category_id_names):
+    max_num_papers = max(numpapers.values())
+    min_num_papers = min(numpapers.values())
+    category_colours = {}
+    for cat_id in sorted(list(category_graph.keys())):
+        col = (numpapers[cat_id]-min_num_papers)/(1.0*(max_num_papers-min_num_papers))
+        col = cm.YlGn(0.1+0.6*col)
+        col = colors.to_hex(col)#+'ee' # last bit is alpha
+        category_colours[cat_id] = col
+
+    lines = [
+        "---",
+        "config:",
+        "   layout: elk",
+        "---",
+        "graph LR",
+        ]  # LR = left-to-right
+    
+    for cat_id in sorted(category_colours.keys()):
+        col = category_colours[cat_id]
+        name = category_id_names[cat_id]
+        lines.append(f'    {cat_id}[{name}]')
+        lines.append(f'    style {cat_id} fill:{col},stroke:{col}')
+        lines.append(f'    click {cat_id} "publication_category_{cat_id}.html" "Open category {name}"')
+
+    for src, targets in sorted(category_graph.items()):
+        if not targets:
+            # ensure isolated nodes appear
+            lines.append(f'    {src}')
+            continue
+
+        for dst in targets:
+            lines.append(f'    {src} --> {dst}')
+
+    open('temp/categories_hierarchy.mermaid', 'w').write('\n'.join(lines))

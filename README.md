@@ -4,8 +4,6 @@ http://neural-reckoning.org
 
 ## Installation
 
-Install GraphViz https://graphviz.org/
-
 Create an environment with
 
     conda env create -f environment.yml

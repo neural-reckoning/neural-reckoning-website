@@ -4,15 +4,23 @@
 
 <h2>Research themes</h2>
 
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+import elkLayouts from 'https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@latest/dist/mermaid-layout-elk.esm.min.mjs';
+mermaid.registerLayoutLoaders(elkLayouts);
+mermaid.initialize({
+  startOnLoad: true,
+  layout: 'elk',
+  });
+</script>
+
 <p>
-    Clickable map of research categories generated with <a href="https://graphviz.org/">Graphviz</a>.
+    Clickable map of research categories generated with <a href="https://mermaid.ai/">Mermaid</a>.
 </p>
 
-<div class="card show">
-  <div class="card-body">
-    {% include 'categories_hierarchy.svg' ignore missing %}
-  </div>
-</div>
+<pre class="mermaid">
+  {% include 'categories_hierarchy.mermaid' ignore missing %}
+</pre>
 
 <h3 class="mb-3 mt-5">Word cloud</h3>
 
