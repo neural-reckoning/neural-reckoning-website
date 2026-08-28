@@ -2,13 +2,13 @@ pages:
     'index.html': Home
     'members.html': People
     'publications.html': Publications
+    'talks.html': 'Talks'
     'software.html': Software
-    'themes.html': Themes
     'openings.html': Join us
     'location.html': Location
 
 unindexed_pages:
-    'talks.html': 'Talks'
+    'themes.html': Themes
     'videos.html': 'Videos'
     'organisations.html': 'Organisations'
     'comp-neuro-resources.html': 'Computational neuroscience resources'

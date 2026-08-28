@@ -9,6 +9,7 @@ class ORCIDPublication:
         for k, v in kwds.items():
             setattr(self, k, v)
 
+cache_expiry_seconds = 7*24*60*60  # 7 days in seconds
 
 orcid_cache = Cache('temp/orcid_cache')
 
@@ -101,5 +102,5 @@ def get_orcid_publications(user_id):
         titles.add(title.lower())
         if doi is not None:
             dois.add(doi.lower())
-    orcid_cache.set(user_id, publications, expire=24*60*60)
+    orcid_cache.set(user_id, publications, expire=cache_expiry_seconds)
     return publications

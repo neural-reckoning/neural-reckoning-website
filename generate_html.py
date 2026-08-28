@@ -28,7 +28,9 @@ nav = yaml.safe_load(open('navigation.yaml', 'r'))
 update_template_globals(**nav)
 
 # Load all the people, papers
+print('Loading people (downloading ORCID and SemanticScholar data may take some time)')
 people = get_people()
+print('--- Done loading people.')
 papers = get_papers()
 software = get_software()
 videos = get_videos()
@@ -40,7 +42,9 @@ generate_json_for_search(papers)
 make_people_thumbnails(people)
 
 # Generate social media threads
+print('Generating social media threads')
 generate_bluesky_threads(papers)
+print('--- Done generating social media threads')
 
 # Find relationships
 find_thing_authors(people, papers)
@@ -80,4 +84,4 @@ print('Finished generating HTML, now checking links.')
 check_links()
 
 # And we're done
-print('Finished.')
+print('--- Finished.')

@@ -3,6 +3,8 @@ import semanticscholar
 import time
 import tenacity
 
+cache_expiry_seconds = 7*24*60*60  # 7 days in seconds
+
 cache = Cache('temp/semantic_scholar_cache')
 
 sch = semanticscholar.SemanticScholar(timeout=25) # note: rate limit is 100 requests per 5 minutes
@@ -22,14 +24,14 @@ def get_papers(paper_ids):
         try:
             papers = sch.get_papers(list(papers_not_in_cache))
             for paper in papers:
-                cache.set(paper['paperId'], paper, expire=24*60*60)
+                cache.set(paper['paperId'], paper, expire=cache_expiry_seconds)
         except tenacity.RetryError:
             print("Connection refused. Sleeping for 10 seconds.")
             time.sleep(10)
             papers = []
             for paper_id in papers_not_in_cache:
                 paper = sch.get_paper(paper_id)
-                cache.set(paper_id, paper, expire=24*60*60)
+                cache.set(paper_id, paper, expire=cache_expiry_seconds)
     return [cache[paper_id] for paper_id in paper_ids]
 
 
@@ -41,7 +43,7 @@ def get_semantic_scholar_publications(user_id):
         time.sleep(3)
         # print(f"Getting data for semantic scholar user {user_id}")
         author = sch.get_author(user_id)
-        cache.set(f'scholar_{user_id}', author, expire=24*60*60)
+        cache.set(f'scholar_{user_id}', author, expire=cache_expiry_seconds)
     else:
         author = cache[f'scholar_{user_id}']
 
@@ -70,7 +72,7 @@ def get_semantic_scholar_publications(user_id):
             pub.authors = ', '.join(authors)
         publications.append(pub)
 
-    cache.set(user_id, publications, expire=24*60*60)
+    cache.set(user_id, publications, expire=cache_expiry_seconds)
     return publications
 
 
