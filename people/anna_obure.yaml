@@ -1,0 +1,23 @@
+name: Anna Obure
+author_names:
+- Obure A
+position: phd
+email: 'YS5vYnVyZTI2QGltcGVyaWFsLmFjLnVr' # generate this by import base64; base64.b64encode(b'address')
+short: Developmental learning in multimodal intelligence.
+long: |-
+  <p>
+    I am interested in how neural development shapes the emergence of multimodal intelligence. My research combines computational modelling and neuroscience to investigate how different learning rules, architectures, and multisensory experiences influence the formation and evolution of neural representations. To explore this, I will compare computational models with neural recordings to understand how representations change over the course of development.
+  </p>
+  <p>
+    My journey began with studying Computer Science, where I developed an interest in machine intelligence and brain-inspired architectures. This led me to question how the brain learns and reorganises over time, and how it integrates information from different sensory modalities. These are questions that I am excited to explore in this next chapter of my research.
+  </p>
+dates:
+- 2026
+links:
+  - ['LinkedIn', 'https://www.linkedin.com/in/annobure/']
+  - ['ORCID', 'https://orcid.org/0009-0000-1824-6605']
+  - ['GitHub', 'https://github.com/dqegu']
+relationships:
+  supervisor:
+    - dan_goodman
+    - marcus_ghosh
