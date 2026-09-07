@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% import 'video_list_macro.html' as vidlist with context %}
 {% import 'related_list_macro.html' as relist with context %}
 {% import 'utils/lists.html' as listmacro with context %}
 
@@ -97,7 +96,7 @@
         <div class="row"><div class="col mt-3 mb-3 pt-2">
             <h2 class="pb-1 mb-3">Latest video</h2>
             <p>See <a href="videos.html">more videos here</a>.</p>
-            {{ vidlist.video_highlight(videos) }}
+            {{ listmacro.featured_item((videos | sort(attribute='last_updated,title', reverse=True))[0]) }}
         </div></div>
 
     </div>

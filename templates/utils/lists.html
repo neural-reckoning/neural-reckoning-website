@@ -1,17 +1,28 @@
-{% macro flat_list(items, class_name='') %}
+{% macro featured_item(item) %}
+    {% include 'things/' ~ item.__class__.__name__ ~ '/featured.html' with context %}
+{% endmacro %}
+
+{% macro flat_list(items, class_name='', feature_first=False) %}
     <ul class="list-group{% if class_name %} {{class_name}}{% endif %}">
-    {% for item in items %}
-        {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
-    {% endfor %}
+        {% set items = items | sort(attribute='last_updated,sort_date,key', reverse=True) %}
+        {% if feature_first %}
+            {{ featured_item(items | first) }}
+        {% endif %}
+        {% for item in items %}
+            {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
+        {% endfor %}
     </ul>
 {% endmacro %}
 
 {% macro grouped_list(items, group_by_attr, class_name='') %}
+    {% if group_by_attr=='year' %}
+        {% set hide_date = True %}
+    {% endif %}
     <div{% if class_name %} class="{{class_name}}"{% endif %}>
     {% for group in items | groupby(group_by_attr) | reverse %}
         <h5 class="hide-if-searching">{{group.grouper}}</h5>
         <ul class="list-group">
-        {% for item in group.list | sort(attribute='key') | sort(attribute='sort_date', reverse=True) %}
+        {% for item in group.list | sort(attribute='key') | sort(attribute='last_updated,sort_date,key', reverse=True) %}
             {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
         {% endfor %}
         </ul>
@@ -21,7 +32,7 @@
 
 {% macro selected_list(items, class_name='') %}
     <ul class="list-group{% if class_name %} {{class_name}}{% endif %}">
-    {% for item in items | selectattr('selected') | selectattr('last_updated') | sort(attribute='last_updated', reverse=True) %}
+    {% for item in items | selectattr('selected') | selectattr('last_updated') | sort(attribute='last_updated,sort_date,key', reverse=True) %}
         {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
     {% endfor %}
     </ul>
@@ -29,7 +40,7 @@
 
 {% macro recent_list(items, n, class_name='') %}
     <ul class="list-group{% if class_name %} {{class_name}}{% endif %}">
-    {% for item in (items|selectattr('last_updated')|sort(attribute='last_updated', reverse=True))[:n] %}
+    {% for item in (items|selectattr('last_updated')|sort(attribute='last_updated,sort_date,key', reverse=True))[:n] %}
         {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
     {% endfor %}
     </ul>

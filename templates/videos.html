@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% import 'video_list_macro.html' as vidlist with context %}
+{% import 'utils/lists.html' as listmacro with context %}
 
 {% block main %}
 
@@ -12,10 +12,10 @@
 
 <h3 class="pt-3 pb-3">Latest video</h3>
 
-{{ vidlist.video_highlight(videos) }}
+{{ listmacro.featured_item(videos | sort(attribute='last_updated,title', reverse=True) | first) }}
 
 <h3 class="pt-3 pb-3">All videos</h3>
 
-{{ vidlist.grouped_video_list(videos) }}
+{{ listmacro.grouped_list(videos, 'year', 'video_list') }}
 
 {% endblock %}
