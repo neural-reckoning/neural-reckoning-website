@@ -1,8 +1,7 @@
 {% import 'video_list_macro.html' as vidlist with context %}
 {% import 'talk_list_macro.html' as talklist with context %}
-{% import 'publication_list_macro.html' as publist with context %}
 {% import 'authors_list_macro.html' as authmacro with context %}
-{% import 'publication_list_macro.html' as publist with context %}
+{% import 'utils/lists.html' as listmacro with context %}
 
 {% macro card_list(things, header_text=true) %}
 <div class="d-flex flex-row flex-nowrap" style="overflow-x: auto;">
@@ -49,7 +48,7 @@
         {% elif cls=="Person" %}
             {{ authmacro.authors_list(things['Person']|sort(attribute='name')) }}
         {% elif cls=="Paper" %}
-            {{ publist.grouped_publications(things['Paper']|sort(attribute='year,last_updated')|reverse) }}
+            {{ listmacro.grouped_list(things['Paper'], 'publication_list_year', 'publication_list') }}
         {% endif %}
     {% endfor %}
     {% if categories %}

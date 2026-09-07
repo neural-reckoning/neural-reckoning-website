@@ -112,7 +112,7 @@ def write_papers(papers):
                 if not hasattr(paper, 'socialcard'):
                     paper.socialcard = {}
                 paper.socialcard['fediverse_creator'] = linkvaldict['mastodon']
-        apply_template('paper.html', filename, keys_from=paper)
+        apply_template('things/Paper/page.html', filename, keys_from=paper)
         qrcode_url = f'https://neural-reckoning.org/{filename}'
         if not os.path.exists(f'docs/pub_{paper.key}-qrcode.png'):
             img = qrcode.make(qrcode_url)

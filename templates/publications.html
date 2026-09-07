@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% import 'publication_list_macro.html' as publist with context %}
+{% import 'utils/lists.html' as listmacro with context %}
 
 {% block main %}
 
@@ -69,6 +69,6 @@
 
 <h3 class="hide-if-searching">All publications</h3>
 
-{{ publist.grouped_publications(publications) }}
+{{ listmacro.grouped_list(publications, 'publication_list_year', 'publication_list') }}
 
 {% endblock %}

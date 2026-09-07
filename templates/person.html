@@ -4,7 +4,8 @@
 {% else %}
     {% set collapse_conference_papers_default = "collapse" %}
 {% endif %}
-{% import 'publication_list_macro.html' as publist with context %}
+{% import 'utils/external_publication_list.html' as publist with context %}
+{% import 'utils/lists.html' as listmacro with context %}
 {% import 'related_list_macro.html' as relist with context %}
 
 {% block main %}
@@ -115,7 +116,7 @@
             <p>Note that only publications as part of the Neural Reckoning group are included here{% if external_publications %} (see <a href="#external_publications">external publications below</a> for full list){% endif %}.</p>
         {% endif %}
 
-        {{ publist.grouped_publications(things['Paper']) }}
+        {{ listmacro.grouped_list(things['Paper'], 'publication_list_year', 'publication_list') }}
         {% endif %}
 
         {% if external_publications %}

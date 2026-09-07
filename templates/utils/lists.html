@@ -1,0 +1,36 @@
+{% macro flat_list(items, class_name='') %}
+    <ul{% if class_name %} class="{{class_name}}"{% endif %}>
+    {% for item in items %}
+        {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
+    {% endfor %}
+    </ul>
+{% endmacro %}
+
+{% macro grouped_list(items, group_by_attr, class_name='') %}
+    <div{% if class_name %} class="{{class_name}}"{% endif %}>
+    {% for group in items | groupby(group_by_attr) | reverse %}
+        <h5 class="hide-if-searching">{{group.grouper}}</h5>
+        <ul>
+        {% for item in group.list | sort(attribute='key') | sort(attribute='sort_date', reverse=True) %}
+            {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
+        {% endfor %}
+        </ul>
+    {% endfor %}
+    </div>
+{% endmacro %}
+
+{% macro selected_list(items, class_name='') %}
+    <ul{% if class_name %} class="{{class_name}}"{% endif %}>
+    {% for item in items | selectattr('selected') | selectattr('last_updated') | sort(attribute='last_updated', reverse=True) %}
+        {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
+    {% endfor %}
+    </ul>
+{% endmacro %}
+
+{% macro recent_list(items, n, class_name='') %}
+    <ul{% if class_name %} class="{{class_name}}"{% endif %}>
+    {% for item in (items|selectattr('last_updated')|sort(attribute='last_updated', reverse=True))[:n] %}
+        {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
+    {% endfor %}
+    </ul>
+{% endmacro %}

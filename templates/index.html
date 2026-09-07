@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
-{% import 'publication_list_macro.html' as publist with context %}
 {% import 'talk_list_macro.html' as talklist with context %}
 {% import 'video_list_macro.html' as vidlist with context %}
 {% import 'related_list_macro.html' as relist with context %}
+{% import 'utils/lists.html' as listmacro with context %}
 
 {% block title %}Neural Reckoning Group{% endblock %}
 
@@ -72,12 +72,12 @@
 
         <div class="row"><div class="col bg-light mt-3 mb-3 pt-2">
             <h2 class="pb-3">Recent publications</h2>
-            {{ publist.recent_publications(5) }}
+            {{ listmacro.recent_list(publications, 5, 'publication_list') }}
         </div></div>
 
         <div class="row"><div class="col bg-light mt-3 mb-3 pt-2">
             <h2 class="pb-3">Selected publications</h2>
-            {{ publist.selected_publications() }}
+            {{ listmacro.selected_list(publications, 'publication_list') }}
         </div></div>
 
         <div class="row"><div class="col bg-light mt-3 mb-3 pt-2">
