@@ -6,6 +6,7 @@
 .publication_list li
 {
     list-style-type: none;
+    padding-left: 2em;
     text-indent: -2em;
     margin-bottom: 0.5em;
     display: flex;

@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-{% import 'talk_list_macro.html' as talklist with context %}
 {% import 'video_list_macro.html' as vidlist with context %}
 {% import 'related_list_macro.html' as relist with context %}
 {% import 'utils/lists.html' as listmacro with context %}
@@ -82,7 +81,7 @@
 
         <div class="row"><div class="col bg-light mt-3 mb-3 pt-2">
             <h2 class="pb-3">Recent talks</h2>
-            {{ talklist.recent_talks(talks, 5) }}
+            {{ listmacro.recent_list(talks, 5, 'talk_list') }}
         </div></div>
 
         <div class="row"><div class="col mt-3 mb-3 pt-2">

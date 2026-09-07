@@ -25,4 +25,4 @@ def get_talks():
 def write_talks(talks):
     for key, talk in talks.items():
         filename = f'talk_{key}.html'
-        apply_template('talk.html', filename, keys_from=talk)
+        apply_template('things/Talk/page.html', filename, keys_from=talk)

@@ -1,5 +1,4 @@
 {% import 'video_list_macro.html' as vidlist with context %}
-{% import 'talk_list_macro.html' as talklist with context %}
 {% import 'authors_list_macro.html' as authmacro with context %}
 {% import 'utils/lists.html' as listmacro with context %}
 
@@ -44,7 +43,7 @@
         {% elif cls=="Video" %}
             {{ vidlist.video_highlight(things['Video']|sort(attribute='last_updated,title')|reverse, show='all') }}
         {% elif cls=="Talk" %}
-            {{ talklist.flat_talk_list(things['Talk']) }}
+            {{ listmacro.flat_list(things['Talk'], 'talk_list') }}
         {% elif cls=="Person" %}
             {{ authmacro.authors_list(things['Person']|sort(attribute='name')) }}
         {% elif cls=="Paper" %}
