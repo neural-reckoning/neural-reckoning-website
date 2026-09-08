@@ -22,4 +22,4 @@ def get_organisations():
 def write_organisations(organisations):
     for key, org in organisations.items():
         filename = f'org_{key}.html'
-        apply_template('organisation.html', filename, keys_from=org)
+        apply_template('things/Organisation/page.html', filename, keys_from=org)
