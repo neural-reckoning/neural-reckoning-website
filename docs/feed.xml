@@ -12,7 +12,6 @@
             <link>https://neural-reckoning.org</link>
         </image>
         <language>en-gb</language>
-    </channel>
         <item>
             <title>Paper: Factorization and spatial encodings: a hypothesis about the foundations of the genomic code</title>
             <link>https://neural-reckoning.org/pub_factorization_genomic.html</link>
@@ -162,4 +161,5 @@
             <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
                 <description>Large-scale projects run the risk of stifling scientific independence. Instead, let's explore alternative mechanisms of collaboration.</description>
         </item>
+    </channel>
 </rss>
