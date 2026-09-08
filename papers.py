@@ -78,6 +78,13 @@ class Paper(Thing):
         else:
             raise ValueError("Cannot assign a publication list year to "+self.name)
 
+    @property
+    def rss_description(self):
+        if hasattr(self, 'abstract'):
+            return self.abstract
+        else:
+            return self.name
+
 
 def get_papers():
     papers = {}

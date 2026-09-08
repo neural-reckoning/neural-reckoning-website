@@ -8,6 +8,13 @@ class Talk(Thing):
     page_prefix = "talk_"
     def validate(self):
         pass
+    @property
+    def rss_description(self):
+        if hasattr(self, 'abstract'):
+            return self.abstract
+        else:
+            return self.name
+
 
 def get_talks():
     talks = {}

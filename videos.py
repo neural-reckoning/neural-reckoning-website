@@ -8,6 +8,14 @@ class Video(Thing):
     page_prefix = "video_"
     def validate(self):
         pass
+    @property
+    def rss_description(self):
+        if hasattr(self, 'long'):
+            return self.long
+        elif hasattr(self, 'short'):
+            return self.short
+        else:
+            return self.name
 
 def get_videos():
     videos = {}

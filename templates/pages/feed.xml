@@ -5,6 +5,13 @@
         <description>Feed of latest updates from the Neural Reckoning group</description>
         <link>https://neural-reckoning.org</link>
         <atom:link href="https://neural-reckoning.org/feed.xml" rel="self" type="application/rss+xml"/>
+        <category>Science</category>
+        <image>
+            <url>https://neural-reckoning.org/nr-logo.png</url>
+            <title>Neural Reckoning</title>
+            <link>https://neural-reckoning.org</link>
+        </image>
+        <language>en-gb</language>
     </channel>
     {% for item in (all_things|selectattr('last_updated')|sort(attribute='sort_date,key', reverse=True))[:20] %}
         <item>
@@ -12,6 +19,11 @@
             <link>https://neural-reckoning.org/{{item.page_prefix}}{{item.key}}.html</link>
             <guid>https://neural-reckoning.org/{{item.page_prefix}}{{item.key}}.html</guid>
             <pubDate>{{item.last_updated.strftime('%a, %d %b %Y %H:%M:%S +0000')}}</pubDate>
+            {% if hasattr(item, 'rss_description') %}
+                <description>{{item.rss_description}}</description>
+            {% else %}
+                <description>{{item.__class__.__name__}} updated on {{item.last_updated.strftime('%d %b %Y')}}: {{item.title}}</description>
+            {% endif %}
         </item>
     {% endfor %}
 </rss>
