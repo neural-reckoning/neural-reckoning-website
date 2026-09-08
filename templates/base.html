@@ -87,8 +87,8 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarMiscDropdown" role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
                 <div class="dropdown-menu" aria-labelledby="navbarMiscDropdown">
-                    {% for miscurl, misctitle in unindexed_pages.items() %}
-                        <a class="dropdown-item" href="{{miscurl}}">{{misctitle}}</a>
+                    {% for miscurl, misc_details in unindexed_pages.items() %}
+                        <a class="dropdown-item" href="{{miscurl}}">{{misc_details.title}}</a>
                     {% endfor %}
                 </div>
             </li>

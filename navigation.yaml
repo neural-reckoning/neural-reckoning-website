@@ -52,9 +52,17 @@ unindexed_pages:
     'apply_phd.html':
       title: 'PhD application process'
       location: 'pages/apply_phd.html'
+    'feed.html':
+      title: Recent updates feed
+      location: 'pages/feed.html'
     'accessibility.html':
       title: 'Accessibility statement'
       location: 'pages/accessibility.html'
+
+unlisted_pages:
+  'feed.xml':
+    title: Recent updates feed (XML)
+    location: 'pages/feed.xml'
 
 external_icon_links:
     - name: Mastodon
@@ -69,3 +77,6 @@ external_icon_links:
     - name: YouTube
       fa: fa-brands fa-youtube
       url: https://www.youtube.com/@neuralreckoning
+    - name: RSS
+      fa: fa-solid fa-rss
+      url: https://neural-reckoning.org/feed.xml

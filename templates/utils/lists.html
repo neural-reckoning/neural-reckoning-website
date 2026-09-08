@@ -40,7 +40,7 @@
 
 {% macro recent_list(items, n, class_name='') %}
     <ul class="list-group{% if class_name %} {{class_name}}{% endif %}">
-    {% for item in (items|selectattr('last_updated')|sort(attribute='last_updated,sort_date,key', reverse=True))[:n] %}
+    {% for item in (items|selectattr('last_updated')|sort(attribute='sort_date,key', reverse=True))[:n] %}
         {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
     {% endfor %}
     </ul>
@@ -70,4 +70,18 @@
     </li>
 {% endfor %}
 </ul>
+{% endmacro %}
+
+{% macro recent_things_list(things, n, show_header=True) %}
+    <ul class="list-group feed_list">
+    {% for item in (all_things|selectattr('last_updated')|sort(attribute='sort_date,key', reverse=True))[:n] %}
+        {% if show_header %}
+        <li class="feed_list_header">
+            <span class="feed_list_type">{{item.__class__.__name__}}</span> last updated 
+            <span class="feed_list_date">{{item.last_updated.strftime('%Y-%m-%d')}}</span>:
+        </li>
+        {% endif %}
+        {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
+    {% endfor %}
+    </ul>
 {% endmacro %}

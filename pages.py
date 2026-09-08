@@ -14,6 +14,7 @@ def make_members_global_for_navigation(people):
 
 
 def write_pages(nav, people, papers, software, categories, videos, organisations, talks):
+    all_things = {**people, **papers, **software, **videos, **organisations, **talks}.values()
     pages = nav['pages']
     unindexed_pages = nav['unindexed_pages']
     extra_keys = dict(
@@ -23,10 +24,11 @@ def write_pages(nav, people, papers, software, categories, videos, organisations
         categories=categories,
         organisations=list(organisations.values()),
         talks=list(talks.values()),
+        all_things=all_things,
     )
 
     # Generate index pages
-    for filename, page_details in list(pages.items())+list(unindexed_pages.items()):
+    for filename, page_details in list(pages.items())+list(unindexed_pages.items())+list(nav['unlisted_pages'].items()):
         title = page_details['title']
         location = page_details['location']
         extra_keys['title'] = title

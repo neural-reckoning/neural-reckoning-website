@@ -83,6 +83,10 @@ def check_links():
             check_link(url, "page "+pagename)
 
         # Print out any failed links
+        failed_links_messages = set()
         for url, pagename in additional_urls:
             if url in cache and cache[url] is not True:
-                print(cache[url])
+                failed_links_messages.add(cache[url])
+        if failed_links_messages:
+            for message in failed_links_messages:
+                print(message)

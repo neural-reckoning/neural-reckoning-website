@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% import 'utils/lists.html' as listmacro with context %}
+
+{% block main %}
+
+<h2 class="pb-3">Recent updated feed</h2>
+
+<p>The page below shows a list of the most recently updated items on the site.</p>
+
+<p>
+    <a href="feed.xml"><i class="fas fa-rss"></i> Subscribe to the feed</a>
+</p>
+
+<div class="pt-3">
+    {{ listmacro.recent_things_list(all_things, 20) }}
+</div>
+
+{% endblock %}

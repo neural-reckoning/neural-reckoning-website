@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>                  
+        <title>Neural Reckoning</title>
+        <description>Feed of latest updates from the Neural Reckoning group</description>
+        <link>https://neural-reckoning.org</link>
+        <atom:link href="https://neural-reckoning.org/feed.xml" rel="self" type="application/rss+xml"/>
+    </channel>
+        <item>
+            <title>Paper: Factorization and spatial encodings: a hypothesis about the foundations of the genomic code</title>
+            <link>https://neural-reckoning.org/pub_factorization_genomic.html</link>
+            <guid>https://neural-reckoning.org/pub_factorization_genomic.html</guid>
+            <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Paper: Partial recurrence enables robust and efficient computation</title>
+            <link>https://neural-reckoning.org/pub_partial_recurrence.html</link>
+            <guid>https://neural-reckoning.org/pub_partial_recurrence.html</guid>
+            <pubDate>Fri, 07 Aug 2026 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Talk: Learning with spikes</title>
+            <link>https://neural-reckoning.org/talk_2026_fens_chen_summer_school_learning_with_spikes.html</link>
+            <guid>https://neural-reckoning.org/talk_2026_fens_chen_summer_school_learning_with_spikes.html</guid>
+            <pubDate>Wed, 15 Jul 2026 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Paper: Emergent Generalization by Representation Learning in Artificial Neural Networks</title>
+            <link>https://neural-reckoning.org/pub_emergent_generalization.html</link>
+            <guid>https://neural-reckoning.org/pub_emergent_generalization.html</guid>
+            <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Paper: Neuromodulation enhances the capability and efficiency of spiking neural networks</title>
+            <link>https://neural-reckoning.org/pub_neuromodulation_enhances_sensory.html</link>
+            <guid>https://neural-reckoning.org/pub_neuromodulation_enhances_sensory.html</guid>
+            <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Paper: Algorithm-hardware co-design of neuromorphic networks with dual memory pathways</title>
+            <link>https://neural-reckoning.org/pub_dual_memory_pathways.html</link>
+            <guid>https://neural-reckoning.org/pub_dual_memory_pathways.html</guid>
+            <pubDate>Tue, 16 Jun 2026 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Talk: Untitled NeuroAI talk</title>
+            <link>https://neural-reckoning.org/talk_2026_ohbm_neuroai.html</link>
+            <guid>https://neural-reckoning.org/talk_2026_ohbm_neuroai.html</guid>
+            <pubDate>Sat, 13 Jun 2026 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Paper: Unifying Dynamical Systems and Graph Theory to Mechanistically Understand Computation in Neural Networks</title>
+            <link>https://neural-reckoning.org/pub_unifying_ds_graphs_mechanistic.html</link>
+            <guid>https://neural-reckoning.org/pub_unifying_ds_graphs_mechanistic.html</guid>
+            <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Talk: Theoretical and experimental challenges in understanding the brain</title>
+            <link>https://neural-reckoning.org/talk_2026_swc_will_we_understand_the_brain.html</link>
+            <guid>https://neural-reckoning.org/talk_2026_swc_will_we_understand_the_brain.html</guid>
+            <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Paper: Beyond rate coding: surrogate gradients enable spike timing learning in spiking neural networks</title>
+            <link>https://neural-reckoning.org/pub_beyond_rate_coding.html</link>
+            <guid>https://neural-reckoning.org/pub_beyond_rate_coding.html</guid>
+            <pubDate>Tue, 17 Feb 2026 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Paper: Physical constraints and functional demands shape modular neuromorphic intelligence</title>
+            <link>https://neural-reckoning.org/pub_bena_thesis.html</link>
+            <guid>https://neural-reckoning.org/pub_bena_thesis.html</guid>
+            <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Talk: Intelligence as resource efficiency</title>
+            <link>https://neural-reckoning.org/talk_2025_mathematical_neuroscience_intelligence_as_resource_efficiency.html</link>
+            <guid>https://neural-reckoning.org/talk_2025_mathematical_neuroscience_intelligence_as_resource_efficiency.html</guid>
+            <pubDate>Fri, 12 Dec 2025 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Paper: Exploiting heterogeneous delays for efficient computation in low-bit neural networks</title>
+            <link>https://neural-reckoning.org/pub_heterogeneous_delays_low_bit.html</link>
+            <guid>https://neural-reckoning.org/pub_heterogeneous_delays_low_bit.html</guid>
+            <pubDate>Fri, 31 Oct 2025 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Paper: Learning spatial hearing via innate mechanisms</title>
+            <link>https://neural-reckoning.org/pub_learning_sound_loc_limited_sup.html</link>
+            <guid>https://neural-reckoning.org/pub_learning_sound_loc_limited_sup.html</guid>
+            <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Paper: This paper changed my life: Dan Goodman on a paper that reignited the field of spiking neural networks</title>
+            <link>https://neural-reckoning.org/pub_spytorch_transmitter.html</link>
+            <guid>https://neural-reckoning.org/pub_spytorch_transmitter.html</guid>
+            <pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Paper: Long delays reduce the need for precise weights in spiking neural networks</title>
+            <link>https://neural-reckoning.org/pub_delays_ccn.html</link>
+            <guid>https://neural-reckoning.org/pub_delays_ccn.html</guid>
+            <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Paper: A Path to Universal Neural Cellular Automata</title>
+            <link>https://neural-reckoning.org/pub_path_to_universal_nca.html</link>
+            <guid>https://neural-reckoning.org/pub_path_to_universal_nca.html</guid>
+            <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Paper: Spiking neural network models of interaural time difference extraction via a massively collaborative process</title>
+            <link>https://neural-reckoning.org/pub_comob_soundloc.html</link>
+            <guid>https://neural-reckoning.org/pub_comob_soundloc.html</guid>
+            <pubDate>Thu, 26 Jun 2025 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Paper: Fusing multisensory signals across channels and time</title>
+            <link>https://neural-reckoning.org/pub_multisensory-channels-and-time.html</link>
+            <guid>https://neural-reckoning.org/pub_multisensory-channels-and-time.html</guid>
+            <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>Paper: Neuroscience needs to empower early-career researchers, not fund moon shots</title>
+            <link>https://neural-reckoning.org/pub_fund_ecrs_not_moonshots.html</link>
+            <guid>https://neural-reckoning.org/pub_fund_ecrs_not_moonshots.html</guid>
+            <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+        </item>
+</rss>

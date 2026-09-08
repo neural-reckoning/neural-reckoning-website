@@ -5,6 +5,7 @@ from templater import apply_template
 
 
 class Video(Thing):
+    page_prefix = "video_"
     def validate(self):
         pass
 

@@ -5,6 +5,7 @@ from templater import apply_template
 
 
 class Talk(Thing):
+    page_prefix = "talk_"
     def validate(self):
         pass
 
