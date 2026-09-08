@@ -1,0 +1,14 @@
+{% if item %}
+    {% set sw = item %}
+{% endif %}
+<div class="border rounded p-3 miniboxed">
+    <h4><a href="sw_{{sw.key}}.html">{{sw.title}}</a></h4>
+    <div class="row">
+        <div class="col-sm-4 order-sm-12">
+            <img class="img-fluid" src="{{sw.logo}}" style="width: 250px; max-width: 100%">
+        </div>
+        <div class="col-sm-8 order-sm-1">
+            {{sw.long}}
+        </div>
+    </div>
+</div>

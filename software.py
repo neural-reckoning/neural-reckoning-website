@@ -24,4 +24,4 @@ def get_software():
 def write_software(software):
     for key, sw in software.items():
         filename = f'sw_{key}.html'
-        apply_template('single_software.html', filename, keys_from=sw)
+        apply_template('things/Software/page.html', filename, keys_from=sw)
