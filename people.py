@@ -112,7 +112,7 @@ def get_people():
 def write_people(people):
     for key, person in people.items():
         filename = f'{key}.html'
-        apply_template('person.html', filename, keys=dict(person=person), keys_from=person)
+        apply_template('things/Person/page.html', filename, keys=dict(person=person), keys_from=person)
 
 
 def make_people_thumbnails(people):

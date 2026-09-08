@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<h2 class="mb-5">Lab members</h2>
+
+{% for position in positions_in_order %}
+    {% if not grouped_members[position] %}{% continue %}{% endif %}
+    {% if position_headers[position] %}
+        <h3 class="mb-3 mt-5">{{position_headers[position]}}</h3>
+    {% endif %}
+    {% for member in grouped_members[position] | sort(attribute='author_names') | sort(attribute='dates', reverse=(position=='former')) %}
+        {% include 'things/Person/featured.html' %}
+    {% endfor %}
+{% endfor %}
+
+{% endblock %}

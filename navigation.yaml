@@ -4,7 +4,7 @@ pages:
       location: 'pages/index.html'
     'members.html':
       title: People
-      location: 'members.html'
+      location: 'things/Person/index.html'
     'publications.html':
       title: Publications
       location: 'things/Paper/index.html'

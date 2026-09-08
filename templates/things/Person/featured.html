@@ -1,0 +1,36 @@
+{% if item %}
+    {% set member = item %}
+{% endif %}
+<div class="row mb-3 align-items-center">
+    <div style="flex: 0 0 125px;">
+        <a href="{{member.key}}.html">
+            {% if os.path.exists('files/photo_'+member.key+'.jpg') %}
+                <img src="photo_{{member.key}}.m.circ.png" {% if member.years_since_leaving>5 %} class="old-photo"{% endif %} style="max-height: 100px; max-width: 100px;"/>
+            {% else %}
+                <img src="portrait_placeholder.png" style="max-height: 100px; max-width: 100px;"/>
+            {% endif %}
+        </a>
+    </div>
+    <div class="col"  style="min-width: 0">
+        <a href="{{member.key}}.html"><b>{{member.name}}</b></a>
+        {% if hasattr(member, 'dates') %}
+            {% if hasattr(member, 'positions') and member.positions|length>1 %}
+                {% if hasattr(member, 'current_position') %}
+                    <span style="color: #aaaaaa;">(current role since {{ member.current_position.start }}, member since {{ member.lab_member_dates[0] }} )</span>
+                {% else %}
+                    <span style="color: #aaaaaa;">(lab member {{ member.lab_member_dates[0] }}-{{ member.lab_member_dates[1] }})</span>
+                {% endif %}
+            {% else %}
+                <span style="color: #aaaaaa;">({% if hasattr(member, 'former_position') %}{{member.former_position}}&nbsp;{% endif %}{{ member.dates_string }})</span>
+            {% endif %}
+        {% endif %}<br/>
+        <div class="pb-1">{{ member.short }}</div>
+        {% if hasattr(member, 'word_frequencies') and member.word_frequencies %}
+            <div class="keywords">
+                {% for word, frequency in member.word_frequencies %}
+                    <span class="keyword">{{ word }}</span>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</div>
