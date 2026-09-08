@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% import 'utils/lists.html' as listmacro with context %}
+
+{% block main %}
+
+<h2 class="pb-3">Talks</h2>
+
+<div>
+    {{ listmacro.grouped_list(talks, 'year', 'talk_list') }}
+</div>
+
+{% endblock %}

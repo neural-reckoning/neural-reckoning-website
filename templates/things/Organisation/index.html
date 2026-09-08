@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<h2 class="pb-3">Organisations</h2>
+
+{% for org in organisations | sort(attribute='thing_count', reverse=True) %}
+    {% include 'things/Organisation/featured.html' with context %}
+{% endfor %}
+
+{% endblock %}

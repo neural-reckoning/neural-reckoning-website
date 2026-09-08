@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% import 'utils/related_list_macro.html' as relist with context %}
+
+{% block main %}
+
+{% if parents %}
+    <div>
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        {% for cat in parents %}<a href="{{cat.page}}">{{cat.name}}</a>{{ " | " if not loop.last else "" }}{% endfor %}
+    </div>
+{% endif %}
+<h2>Category: {{ name }}</h2>
+{% if subcats %}
+<div>
+    <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>
+    {% for cat in subcats %}<a href="{{cat.page}}">{{cat.name}}</a>{{ " | " if not loop.last else "" }}{% endfor %}
+</div>
+{% endif %}
+
+{% if detail_link %}
+<p class="pt-3">
+For more details on this category, click <a href="{{ detail_link }}">here</a>.
+</p>
+{% endif %}
+
+{{ relist.related_by_class(things) }}
+
+{% endblock %}

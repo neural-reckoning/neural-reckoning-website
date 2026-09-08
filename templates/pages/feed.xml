@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>                  
+        <title>Neural Reckoning</title>
+        <description>Feed of latest updates from the Neural Reckoning group</description>
+        <link>https://neural-reckoning.org</link>
+        <atom:link href="https://neural-reckoning.org/feed.xml" rel="self" type="application/rss+xml"/>
+    </channel>
+    {% for item in (all_things|selectattr('last_updated')|sort(attribute='sort_date,key', reverse=True))[:20] %}
+        <item>
+            <title>{{item.__class__.__name__}}: {{item.title}}</title>
+            <link>https://neural-reckoning.org/{{item.page_prefix}}{{item.key}}.html</link>
+            <guid>https://neural-reckoning.org/{{item.page_prefix}}{{item.key}}.html</guid>
+            <pubDate>{{item.last_updated.strftime('%a, %d %b %Y %H:%M:%S +0000')}}</pubDate>
+        </item>
+    {% endfor %}
+</rss>

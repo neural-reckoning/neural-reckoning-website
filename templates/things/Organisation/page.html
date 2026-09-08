@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% import 'utils/related_list_macro.html' as relist with context %}
+
+{% block main %}
+
+<div class="row">
+    <div class="col">
+
+        <h2><a href="{{ url }}">{{ name }}</a></h2>
+
+        {% if logo!="default_org.png" %}
+        <div class="row pb-3">
+            <div class="col-sm-4 order-sm-12">
+                <a href="{{ url }}"><img class="img-fluid" src="{{logo}}"></a>
+            </div>
+            <div class="col-sm-8 order-sm-1">
+                {{ long }}
+                {% if extended %}
+                    <div class="pt-3">
+                        {{ extended }}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+        {% else %}
+        <div class="pb-3">
+            {{ long }}
+        </div>
+        {% if extended %}
+            <div class="pb-3">
+                {{ extended }}
+            </div>
+        {% endif %}
+        {% endif %}
+
+
+        {{ relist.related_by_class(things, categories=categories) }}
+
+    </div>
+</div>
+
+{% endblock %}

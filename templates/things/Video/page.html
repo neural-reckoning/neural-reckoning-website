@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% import 'utils/related_list_macro.html' as relist with context %}
+
+{% block main %}
+
+<div class="row">
+    <div class="col">
+
+        <h2><a href="{{ url }}">{{ name }}</a></h2>
+
+        <p>
+            {{ long }}
+        </p>
+
+        <div class="embed-responsive embed-responsive-16by9 pt-3 pb-3">
+            {{ embed }}
+        </div>
+
+        {{ relist.related_by_class(things, categories=category_objects) }}
+        
+    </div>
+</div>
+
+{% endblock %}

@@ -118,7 +118,7 @@ def write_categories(categories):
         parents = [categories[c] for c in sorted([category_id(name) for name in category_inclusions.get(cat.name, [])])]
         subcats = [categories[c] for c in sorted([category_id(name) for name in category_descendants.get(cat.name, [])])]
         filename = f'publication_category_{key}.html'
-        apply_template('category.html', filename, keys_from=cat,
+        apply_template('things/Category/page.html', filename, keys_from=cat,
             keys=dict(subcats=subcats, parents=parents, categories=categories))
 
 

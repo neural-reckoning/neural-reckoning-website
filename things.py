@@ -61,3 +61,11 @@ class Thing(object):
     @property
     def thing_count(self):
         return len(self.things['all'])
+
+    @property
+    def sort_date(self):
+        if hasattr(self, 'last_updated'):
+            return self.last_updated
+        if hasattr(self, 'year') and self.year!='Preprints':
+            return datetime.datetime(int(self.year), 1, 1)
+        return datetime.datetime.now()

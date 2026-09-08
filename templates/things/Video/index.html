@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% import 'utils/lists.html' as listmacro with context %}
+
+{% block main %}
+
+<h2 class="pb-3">Videos</h2>
+
+<p>
+    Our videos are also available on our <a href="https://www.youtube.com/channel/UCfJdfQGtvv7IN8YAIz4yfGw">YouTube channel</a>
+    if you want to subscribe.
+</p>
+
+<h3 class="pt-3 pb-3">Latest video</h3>
+
+{{ listmacro.featured_item(videos | sort(attribute='last_updated,title', reverse=True) | first) }}
+
+<h3 class="pt-3 pb-3">All videos</h3>
+
+{{ listmacro.grouped_list(videos, 'year', 'video_list') }}
+
+{% endblock %}

@@ -56,7 +56,8 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-        {% for page_filename, page_title in pages.items() %}
+        {% for page_filename, page_details in pages.items() %}
+            {% set page_title = page_details.title %}
             {% if page_filename=="members.html" %}
                 <li class="nav-item dropdown{{" active" if page_filename==filename}}">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarMembersDropdown" role="button"
@@ -86,8 +87,8 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarMiscDropdown" role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
                 <div class="dropdown-menu" aria-labelledby="navbarMiscDropdown">
-                    {% for miscurl, misctitle in unindexed_pages.items() %}
-                        <a class="dropdown-item" href="{{miscurl}}">{{misctitle}}</a>
+                    {% for miscurl, misc_details in unindexed_pages.items() %}
+                        <a class="dropdown-item" href="{{miscurl}}">{{misc_details.title}}</a>
                     {% endfor %}
                 </div>
             </li>

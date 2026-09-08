@@ -1,0 +1,8 @@
+<div class="card col-5 col-md-4 p-1 border-0">
+    <a href="{{thing.page}}"><div class="card-header bg-transparent border-0" style="height: 100px; background-image: url('{{thing.logo}}'); background-size: contain; background-repeat: no-repeat; background-position: center bottom;">
+    </div></a>
+    <div class="card-body p-1 border-0 text-center">
+        {% if header_text %}<p class="card-title"><a href="{{thing.page}}">{{thing.name}}</a></p>{% endif %}
+        <p class="card-text">{{thing.short}}</p>
+    </div>
+</div>

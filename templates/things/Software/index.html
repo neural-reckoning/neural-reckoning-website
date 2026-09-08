@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<h2 class="pb-3">Software</h2>
+
+{% for sw in software | sort(attribute='thing_count', reverse=True) %}
+{% include 'things/Software/featured.html' with context %}
+{% endfor %}
+
+{% endblock %}

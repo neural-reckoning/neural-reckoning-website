@@ -6,6 +6,7 @@
 .publication_list li
 {
     list-style-type: none;
+    padding-left: 2em;
     text-indent: -2em;
     margin-bottom: 0.5em;
     display: flex;
@@ -88,3 +89,28 @@
 .keyword:hover {
     background: #eef2ff;
 }    
+
+.feed_list li {
+    padding: .75rem 1.25rem;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.125);
+    list-style-type: none;
+}
+
+.feed_list .publication_list_item
+{
+    list-style-type: none;
+    padding-left: calc(2em + 1.25rem);
+    text-indent: -2em;
+    display: flex;
+    flex-direction: row;
+}
+
+li.feed_list_header {
+    border: none;
+    padding-left: 0;
+}
+
+.feed_list_type {
+    font-weight: bold;
+}

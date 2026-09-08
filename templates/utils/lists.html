@@ -1,0 +1,87 @@
+{% macro featured_item(item) %}
+    {% include 'things/' ~ item.__class__.__name__ ~ '/featured.html' with context %}
+{% endmacro %}
+
+{% macro flat_list(items, class_name='', feature_first=False) %}
+    <ul class="list-group{% if class_name %} {{class_name}}{% endif %}">
+        {% set items = items | sort(attribute='last_updated,sort_date,key', reverse=True) %}
+        {% if feature_first %}
+            {{ featured_item(items | first) }}
+        {% endif %}
+        {% for item in items %}
+            {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
+        {% endfor %}
+    </ul>
+{% endmacro %}
+
+{% macro grouped_list(items, group_by_attr, class_name='') %}
+    {% if group_by_attr=='year' %}
+        {% set hide_date = True %}
+    {% endif %}
+    <div{% if class_name %} class="{{class_name}}"{% endif %}>
+    {% for group in items | groupby(group_by_attr) | reverse %}
+        <h5 class="hide-if-searching">{{group.grouper}}</h5>
+        <ul class="list-group">
+        {% for item in group.list | sort(attribute='key') | sort(attribute='last_updated,sort_date,key', reverse=True) %}
+            {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
+        {% endfor %}
+        </ul>
+    {% endfor %}
+    </div>
+{% endmacro %}
+
+{% macro selected_list(items, class_name='') %}
+    <ul class="list-group{% if class_name %} {{class_name}}{% endif %}">
+    {% for item in items | selectattr('selected') | selectattr('last_updated') | sort(attribute='last_updated,sort_date,key', reverse=True) %}
+        {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
+    {% endfor %}
+    </ul>
+{% endmacro %}
+
+{% macro recent_list(items, n, class_name='') %}
+    <ul class="list-group{% if class_name %} {{class_name}}{% endif %}">
+    {% for item in (items|selectattr('last_updated')|sort(attribute='sort_date,key', reverse=True))[:n] %}
+        {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
+    {% endfor %}
+    </ul>
+{% endmacro %}
+
+{% macro card_list(things, header_text=true) %}
+<div class="d-flex flex-row flex-nowrap" style="overflow-x: auto;">
+    {% for thing in things | sort(attribute='key') %}
+        {% include 'things/' ~ thing.__class__.__name__ ~ '/card.html' with context %}
+    {% endfor %}
+</div>
+{% endmacro %}
+
+{% macro authors_list(author_objects) %}
+<ul class="list-inline author-list">
+{% for author in author_objects %}
+    <li>
+        {% if not isinstance(author, str) %}
+        <a href="{{ author.key }}.html">
+        <div><img src="photo_{{ author.key }}.s.circ.png" {% if author.years_since_leaving>5 %} class="old-photo"{% endif %}/></div>
+        <div>{{ author.name }}</div>
+        </a>
+        {% else %}
+        <div><img src="photo_placeholder.s.circ.png"/></div>
+        <div>{{ author }}</div>
+        {% endif %}
+    </li>
+{% endfor %}
+</ul>
+{% endmacro %}
+
+{% macro recent_things_list(things, n, show_header=True) %}
+    <ul class="list-group feed_list">
+    {% for item in (all_things|selectattr('last_updated')|sort(attribute='sort_date,key', reverse=True))[:n] %}
+        {% if show_header %}
+        <li class="feed_list_header">
+            <span class="feed_list_type">{{item.__class__.__name__}}</span> last updated 
+            <span class="feed_list_date">{{item.last_updated.strftime('%Y-%m-%d')}}</span>:
+        </li>
+        {% endif %}
+        {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
+    {% endfor %}
+    </ul>
+{% endmacro %}

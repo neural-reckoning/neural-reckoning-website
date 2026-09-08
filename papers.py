@@ -70,14 +70,6 @@ class Paper(Thing):
         self.icons = ''.join([icon_html for icon_type, icon_html in sorted(icons.items(), reverse=True)])
 
     @property
-    def sort_date(self):
-        if hasattr(self, 'last_updated'):
-            return self.last_updated
-        if hasattr(self, 'year') and self.year!='Preprints':
-            return datetime.datetime(int(self.year), 1, 1)
-        return datetime.datetime.now()
-
-    @property
     def publication_list_year(self):
         if hasattr(self, 'year') and self.year!='Preprints':
             return int(self.year)
@@ -112,7 +104,7 @@ def write_papers(papers):
                 if not hasattr(paper, 'socialcard'):
                     paper.socialcard = {}
                 paper.socialcard['fediverse_creator'] = linkvaldict['mastodon']
-        apply_template('paper.html', filename, keys_from=paper)
+        apply_template('things/Paper/page.html', filename, keys_from=paper)
         qrcode_url = f'https://neural-reckoning.org/{filename}'
         if not os.path.exists(f'docs/pub_{paper.key}-qrcode.png'):
             img = qrcode.make(qrcode_url)
