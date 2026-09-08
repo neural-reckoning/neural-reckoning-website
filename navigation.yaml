@@ -1,24 +1,60 @@
 pages:
-    'index.html': Home
-    'members.html': People
-    'publications.html': Publications
-    'talks.html': 'Talks'
-    'software.html': Software
-    'openings.html': Join us
-    'location.html': Location
+    'index.html':
+      title: Home
+      location: 'pages/index.html'
+    'members.html':
+      title: People
+      location: 'members.html'
+    'publications.html':
+      title: Publications
+      location: 'things/Paper/index.html'
+    'talks.html':
+      title: 'Talks'
+      location: 'things/Talk/index.html'
+    'software.html':
+      title: Software
+      location: 'things/Software/index.html'
+    'openings.html':
+      title: 'Join us'
+      location: 'pages/openings.html'
+    'location.html':
+      title: Location
+      location: 'pages/location.html'
 
 unindexed_pages:
-    'themes.html': Themes
-    'videos.html': 'Videos'
-    'organisations.html': 'Organisations'
-    'comp-neuro-resources.html': 'Computational neuroscience resources'
-    'reviewing.html': 'Ending support for legacy academic publishing'
-    'metascience.html': 'Metascience'
-    'neuroinformatics.html': 'Neuroinformatics'
-    'sensory.html': 'Sensory neuroscience'
-    'mathematics.html': 'Mathematics'
-    'apply_phd.html': 'PhD application process'
-    'accessibility.html': 'Accessibility statement'
+    'themes.html':
+      title: Themes
+      location: 'pages/themes.html'
+    'videos.html':
+      title: Videos
+      location: 'things/Video/index.html'
+    'organisations.html':
+      title: Organisations
+      location: 'things/Organisation/index.html'
+    'comp-neuro-resources.html':
+      title: 'Computational neuroscience resources'
+      location: 'pages/comp-neuro-resources.html'
+    'reviewing.html':
+      title: 'Ending support for legacy academic publishing'
+      location: 'pages/reviewing.html'
+    'metascience.html':
+      title: 'Metascience'
+      location: 'pages/metascience.html'
+    'neuroinformatics.html':
+      title: 'Neuroinformatics'
+      location: 'pages/neuroinformatics.html'
+    'sensory.html':
+      title: 'Sensory neuroscience'
+      location: 'pages/sensory.html'
+    'mathematics.html':
+      title: 'Mathematics'
+      location: 'pages/mathematics.html'
+    'apply_phd.html':
+      title: 'PhD application process'
+      location: 'pages/apply_phd.html'
+    'accessibility.html':
+      title: 'Accessibility statement'
+      location: 'pages/accessibility.html'
 
 external_icon_links:
     - name: Mastodon

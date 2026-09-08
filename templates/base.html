@@ -56,7 +56,8 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-        {% for page_filename, page_title in pages.items() %}
+        {% for page_filename, page_details in pages.items() %}
+            {% set page_title = page_details.title %}
             {% if page_filename=="members.html" %}
                 <li class="nav-item dropdown{{" active" if page_filename==filename}}">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarMembersDropdown" role="button"
