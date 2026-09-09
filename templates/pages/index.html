@@ -68,29 +68,22 @@
             We are also interested in <a href="metascience.html">reforming and improving the way we do science</a>.
         </p>
 
-        <div class="row"><div class="col bg-light mt-3 mb-3 pt-2">
-            <h2 class="pb-3">Recent publications</h2>
-            {{ listmacro.recent_list(publications, 5, 'publication_list') }}
+        <div class="row"><div class="col mt-3 mb-3 pt-2">
+            <h2 class="pb-3">Recent work</h2>
+            {{ listmacro.recent_things_list(publications, 5, show_header=False) }}
         </div></div>
 
-        <div class="row"><div class="col bg-light mt-3 mb-3 pt-2">
+        <div class="row"><div class="col mt-3 mb-3 pt-2">
             <h2 class="pb-3">Selected publications</h2>
             {{ listmacro.selected_list(publications, 'publication_list') }}
         </div></div>
 
-        <div class="row"><div class="col bg-light mt-3 mb-3 pt-2">
-            <h2 class="pb-3">Recent talks</h2>
-            {{ listmacro.recent_list(talks, 5, 'talk_list') }}
-        </div></div>
-
         <div class="row"><div class="col mt-3 mb-3 pt-2">
-            <h2 class="pb-1 mb-3">Selected software packages</h2>
-            {{ listmacro.card_list(software | selectattr('selected')) }}
-        </div></div>
-
-        <div class="row"><div class="col mt-3 mb-3 pt-2">
-            <h2 class="pb-1 mb-3">Selected organisations</h2>
-            {{ listmacro.card_list(organisations | selectattr('selected'), false) }}
+            <h2 class="pb-3">Other things we do</h2>
+            <p>
+                We build <a href="software.html">open source software</a> like <a href="sw_brian.html">Brian</a>, and <a href="organisations.html">organisations</a> like <a href="org_neuromatch.html">Neuromatch</a> and <a href="org_snufa.html">SNUFA</a>.
+            </p>
+            {{ listmacro.card_list([all_things_dict['brian'], all_things_dict['neuromatch'], all_things_dict['snufa']]) }}
         </div></div>
 
         <div class="row"><div class="col mt-3 mb-3 pt-2">
