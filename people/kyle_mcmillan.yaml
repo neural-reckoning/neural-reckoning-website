@@ -1,0 +1,16 @@
+name: Kyle McMillan
+author_names:
+- McMillan K
+position: phd
+# email: '' # generate this by import base64; base64.b64encode(b'address')
+short: Local learning and neuromorphic computing.
+long: |-
+  <p>
+    I am particularly interesting in efficient learning for Spiking Neural Networks. Spiking Neural Networks running on neuromorphic devices possess the unique opportunity for fast, low power AI, an important development to prevent the slow cooking of humanity. My research will focus on efficient, biologically inspired training methods for large scale SNNs that can hopefully run on neuromorphic devices, eliminating the need for GPUs in the backward pass.
+  </p>
+dates:
+- 2026
+# links:
+relationships:
+  supervisor:
+    - dan_goodman
