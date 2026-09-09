@@ -74,7 +74,9 @@ write_organisations(organisations)
 write_pages(nav, people, papers, software, categories, videos, organisations, talks)
 
 # Copy static files to docs directory
-os.system(r'copy files\* docs >nul')
+os.system(r'copy files\content\* docs >nul')
+os.system(r'copy files\layout\* docs >nul')
+os.system(r'copy files\photos\* docs >nul')
 
 # Save cache before finishing
 save_cache()

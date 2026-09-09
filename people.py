@@ -129,7 +129,7 @@ def make_people_thumbnails(people):
         #('files/portrait_placeholder', '.png')
         ]
     for member in people.values():
-        photo_fnames.append(('files/photo_'+member.key, '.jpg'))
+        photo_fnames.append(('files/photos/photo_'+member.key, '.jpg'))
     for base, ext in photo_fnames:
         if os.path.exists(base+ext):
             try:

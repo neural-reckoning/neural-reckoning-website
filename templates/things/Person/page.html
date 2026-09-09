@@ -23,7 +23,7 @@
     </div>
 {% endif %}
 
-{% if os.path.exists('files/photo_'+key+'.jpg') %}
+{% if os.path.exists('files/photos/photo_'+key+'.jpg') %}
 {% set photo_filename = 'photo_'+key+'.jpg' %}
 {% else %}
 {% set photo_filename = 'portrait_placeholder.png' %}
@@ -31,7 +31,7 @@
 
 <div class="row">
     <div class="col-lg-4 order-lg-12">
-        <img src="{{photo_filename}}" class="img-fluid{% if years_since_leaving>5 %} old-photo{% endif %}"><!--  style="width: 200px; max-width: 100%;" -->
+        <img src="{{photo_filename}}" class="img-fluid{% if position=="former" %} old-photo{% endif %}"><!--  style="width: 200px; max-width: 100%;" -->
         <!-- {% if os.path.exists('docs/wordcloud_'+key+'.png') %}
         <img src="wordcloud_{{key}}.png" class="img-fluid">
         {% endif %} -->
