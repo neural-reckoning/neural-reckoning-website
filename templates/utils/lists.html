@@ -2,49 +2,51 @@
     {% include 'things/' ~ item.__class__.__name__ ~ '/featured.html' with context %}
 {% endmacro %}
 
-{% macro flat_list(items, class_name='', feature_first=False) %}
-    <ul class="list-group{% if class_name %} {{class_name}}{% endif %}">
+
+{% macro flat_list(items, feature_first=False) %}
+    <ul class="list-group">
         {% set items = items | sort(attribute='last_updated,sort_date,key', reverse=True) %}
         {% if feature_first %}
             {{ featured_item(items | first) }}
         {% endif %}
         {% for item in items %}
-            {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
+            <li class="list-group-item" id="{{ item.page_key }}">
+                {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
+            </li>
         {% endfor %}
     </ul>
 {% endmacro %}
 
-{% macro grouped_list(items, group_by_attr, class_name='') %}
+
+{% macro grouped_list(items, group_by_attr) %}
     {% if group_by_attr=='year' %}
         {% set hide_date = True %}
     {% endif %}
-    <div{% if class_name %} class="{{class_name}}"{% endif %}>
+    <div>
     {% for group in items | groupby(group_by_attr) | reverse %}
-        <h5 class="hide-if-searching">{{group.grouper}}</h5>
+        <h5 class="grouping-header hide-if-searching">{{group.grouper}}</h5>
         <ul class="list-group">
         {% for item in group.list | sort(attribute='key') | sort(attribute='last_updated,sort_date,key', reverse=True) %}
-            {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
+            <li class="list-group-item" id="{{ item.page_key }}">
+                {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
+            </li>
         {% endfor %}
         </ul>
     {% endfor %}
     </div>
 {% endmacro %}
 
-{% macro selected_list(items, class_name='') %}
-    <ul class="list-group{% if class_name %} {{class_name}}{% endif %}">
+
+{% macro selected_list(items) %}
+    <ul class="list-group">
     {% for item in items | selectattr('selected') | selectattr('last_updated') | sort(attribute='last_updated,sort_date,key', reverse=True) %}
-        {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
+        <li class="list-group-item" id="{{ item.page_key }}">
+            {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
+        </li>
     {% endfor %}
     </ul>
 {% endmacro %}
 
-{% macro recent_list(items, n, class_name='') %}
-    <ul class="list-group{% if class_name %} {{class_name}}{% endif %}">
-    {% for item in (items|selectattr('last_updated')|sort(attribute='sort_date,key', reverse=True))[:n] %}
-        {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
-    {% endfor %}
-    </ul>
-{% endmacro %}
 
 {% macro card_list(things, header_text=true) %}
 <div class="d-flex flex-row flex-nowrap" style="overflow-x: auto;">
@@ -53,6 +55,7 @@
     {% endfor %}
 </div>
 {% endmacro %}
+
 
 {% macro authors_list(author_objects) %}
 <ul class="list-inline author-list">
@@ -72,16 +75,19 @@
 </ul>
 {% endmacro %}
 
+
 {% macro recent_things_list(things, n, show_header=True) %}
     <ul class="list-group feed_list">
     {% for item in (all_things|selectattr('last_updated')|sort(attribute='sort_date,key', reverse=True))[:n] %}
-        {% if show_header %}
-        <li class="feed_list_header">
-            <span class="feed_list_type">{{item.__class__.__name__}}</span> last updated 
-            <span class="feed_list_date">{{item.last_updated.strftime('%Y-%m-%d')}}</span>:
+        <li class="list-group-item" id="{{ item.page_key }}">
+            {% if show_header %}
+            <div class="feed-list-header">
+                <span class="feed_list_type">{{item.__class__.__name__}}</span>
+                <span class="feed_list_date">last updated {{item.last_updated.strftime('%Y-%m-%d')}}:</span><br/>
+            </div>
+            {% endif %}
+            {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
         </li>
-        {% endif %}
-        {% include 'things/' ~ item.__class__.__name__ ~ '/item.html' with context %}
     {% endfor %}
     </ul>
 {% endmacro %}

@@ -24,13 +24,13 @@
         {% elif cls=="Organisation" %}
             {{ listmacro.card_list(things[cls]|sort(attribute='key'), false) }}
         {% elif cls=="Video" %}
-            {{ listmacro.flat_list(things['Video'], 'video_list', feature_first=True) }}
+            {{ listmacro.flat_list(things['Video'], feature_first=True) }}
         {% elif cls=="Talk" %}
-            {{ listmacro.flat_list(things['Talk'], 'talk_list') }}
+            {{ listmacro.flat_list(things['Talk']) }}
         {% elif cls=="Person" %}
             {{ listmacro.authors_list(things['Person']|sort(attribute='name')) }}
         {% elif cls=="Paper" %}
-            {{ listmacro.grouped_list(things['Paper'], 'publication_list_year', 'publication_list') }}
+            {{ listmacro.grouped_list(things['Paper'], 'publication_list_year') }}
         {% endif %}
     {% endfor %}
     {% if categories %}

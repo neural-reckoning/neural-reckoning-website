@@ -1,27 +1,24 @@
-{% set publication = item %}
-<li class="publication_list_item" id="pub_{{publication.key}}">
-    <div class="publication_list_text">
-        {{publication.authors_short}}
-            {% if publication.year!='Preprints' %}
-                ({{publication.year}})
-            {% endif %}
-            <br/>
-        <a href="pub_{{publication.key}}.html">
-            <b>{{publication.title}}.</b><br/>
-        </a>
-        <i>
-            {% if publication.year=='Preprints' %}
-                Preprint
-            {% endif %}
-            {{publication.journal}}
-            {% if publication.phd_thesis %}<span class="publication-type-icon"><i class="fa-solid fa-graduation-cap"></i></span>PhD thesis, {% endif %}
-            {{publication.publisher}}
-            {% if publication.conference %}<span class="publication-type-icon"><i class="fa-solid fa-user-group"></i></span>{{publication.conference}}{% endif %}
-        </i>
-    </div>
-    {% if publication.icons %}
-        <div class="publication_list_icons">
-            {{ publication.icons }}
-        </div>
+{% if item %}
+    {% set publication = item %}
+{% endif %}
+{{publication.authors_short}}
+    {% if publication.year!='Preprints' %}
+        ({{publication.year}})
     {% endif %}
-</li>
+    <br/>
+<a href="pub_{{publication.key}}.html">
+    <b>{{publication.title}}.</b><br/>
+</a>
+<i>
+    {% if publication.year=='Preprints' %}
+        Preprint
+    {% endif %}
+    {{publication.journal}}
+    {% if publication.phd_thesis %}<span class="publication-type-icon"><i class="fa-solid fa-graduation-cap"></i></span> PhD thesis, {% endif %}
+    {{publication.publisher}}
+    {% if publication.conference %}<span class="publication-type-icon"><i class="fa-solid fa-user-group"></i></span> {{publication.conference}}{% endif %}
+</i>
+{% if publication.icons %}
+    <br/>
+    {{ publication.icons }}
+{% endif %}

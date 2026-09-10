@@ -116,7 +116,7 @@
             <p>Note that only publications as part of the Neural Reckoning group are included here{% if external_publications %} (see <a href="#external_publications">external publications below</a> for full list){% endif %}.</p>
         {% endif %}
 
-        {{ listmacro.grouped_list(things['Paper'], 'publication_list_year', 'publication_list') }}
+        {{ listmacro.grouped_list(things['Paper'], 'publication_list_year') }}
         {% endif %}
 
         {% if external_publications %}

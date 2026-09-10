@@ -69,3 +69,11 @@ class Thing(object):
         if hasattr(self, 'year') and self.year!='Preprints':
             return datetime.datetime(int(self.year), 1, 1)
         return datetime.datetime.now()
+
+    @property
+    def page_key(self):
+        return f'{self.page_prefix}{self.key}'
+
+    @property
+    def page_url(self):
+        return f'{self.page_key}.html'

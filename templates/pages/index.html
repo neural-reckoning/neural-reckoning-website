@@ -70,12 +70,12 @@
 
         <div class="row"><div class="col mt-3 mb-3 pt-2">
             <h2 class="pb-3">Recent work</h2>
-            {{ listmacro.recent_things_list(publications, 5, show_header=False) }}
+            {{ listmacro.recent_things_list(publications, 5, show_header=True) }}
         </div></div>
 
         <div class="row"><div class="col mt-3 mb-3 pt-2">
             <h2 class="pb-3">Selected publications</h2>
-            {{ listmacro.selected_list(publications, 'publication_list') }}
+            {{ listmacro.selected_list(publications) }}
         </div></div>
 
         <div class="row"><div class="col mt-3 mb-3 pt-2">
