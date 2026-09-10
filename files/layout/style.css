@@ -88,3 +88,23 @@
 .grouping-header {
     font-weight: bold;
 }
+
+.collapse-toggle {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+.collapse-toggle::before {
+    font: var(--fa-font-solid);
+    content: "\f0da"; /* fa-caret-right */
+    display: inline-block;
+    margin-right: 0.5rem;
+    transition: transform 0.2s ease;
+    font-size: 0.75em;
+    position: relative;
+    top: -0.1em;
+}
+
+.collapse-toggle[aria-expanded="true"]::before {
+    transform: rotate(90deg);
+}

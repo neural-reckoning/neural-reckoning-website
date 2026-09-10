@@ -18,20 +18,22 @@
         {% if not person_page %}
         {% set header = "Related "+header.lower() %}
         {% endif %}
-        <h{{h}} class="pt-5 pb-3">{{ header }}</h{{h}}>
-        {% if cls=="Software" %}
-            {{ listmacro.card_list(things[cls]|sort(attribute='key')) }}
-        {% elif cls=="Organisation" %}
-            {{ listmacro.card_list(things[cls]|sort(attribute='key'), false) }}
-        {% elif cls=="Video" %}
-            {{ listmacro.flat_list(things['Video'], feature_first=True) }}
-        {% elif cls=="Talk" %}
-            {{ listmacro.flat_list(things['Talk']) }}
-        {% elif cls=="Person" %}
-            {{ listmacro.authors_list(things['Person']|sort(attribute='name')) }}
-        {% elif cls=="Paper" %}
-            {{ listmacro.grouped_list(things['Paper'], 'publication_list_year') }}
-        {% endif %}
+        <h{{h}} class="collapse-toggle pt-5 pb-3" data-toggle="collapse" data-target="#related{{cls}}" aria-expanded="false" aria-controls="related{{cls}}">{{ header }}</h{{h}}>
+        <div class="collapse" id="related{{cls}}">
+            {% if cls=="Software" %}
+                {{ listmacro.card_list(things[cls]|sort(attribute='key')) }}
+            {% elif cls=="Organisation" %}
+                {{ listmacro.card_list(things[cls]|sort(attribute='key'), false) }}
+            {% elif cls=="Video" %}
+                {{ listmacro.flat_list(things['Video'], feature_first=True) }}
+            {% elif cls=="Talk" %}
+                {{ listmacro.flat_list(things['Talk']) }}
+            {% elif cls=="Person" %}
+                {{ listmacro.authors_list(things['Person']|sort(attribute='name')) }}
+            {% elif cls=="Paper" %}
+                {{ listmacro.grouped_list(things['Paper'], 'publication_list_year') }}
+            {% endif %}
+        </div>
     {% endfor %}
     {% if categories %}
     <h{{h}} class="pt-3">Categories</h{{h}}>

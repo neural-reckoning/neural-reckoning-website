@@ -107,31 +107,38 @@
         {{ long }}
         </div>
 
-        {{ relist.related_by_class(things, exclude=['Paper'], person_page=True) }}
+        {{ relist.related_by_class(things, exclude=['Paper'], person_page=True, h=2) }}
 
         {% if show_publications and things['Paper'] %}
-        <h2 class="pt-5 pb-3">Publications</h2>
+        <h2 class="pt-5 pb-3 collapse-toggle" data-toggle="collapse" data-target="#publications" aria-expanded="false" aria-controls="publications">Publications</h2>
+        <div class="collapse{% if key!="dan_goodman" %} show{% endif %}" id="publications">
 
-        {% if key!="dan_goodman" %}
-            <p>Note that only publications as part of the Neural Reckoning group are included here{% if external_publications %} (see <a href="#external_publications">external publications below</a> for full list){% endif %}.</p>
-        {% endif %}
-
-        {{ listmacro.grouped_list(things['Paper'], 'publication_list_year') }}
-        {% endif %}
-
-        {% if external_publications %}
-        <h2 class="pt-5 pb-3" id="external_publications">External publications</h2>
-        <p>
-            This is a short preview of the publications from other sources (<a href="https://orcid.org/">ORCID</a>,
-            <a href="https://www.semanticscholar.org/">Semantic Scholar</a>).
             {% if key!="dan_goodman" %}
-            Note that publications from work done outside the Neural Reckoning group are included in this list.
+                <p>Note that only publications as part of the Neural Reckoning group are included here{% if external_publications %} (see <a href="#external_publications">external publications below</a> for full list){% endif %}.</p>
             {% endif %}
-        </p>
 
-        {{ publist.external_publications(person) }}
+            {{ listmacro.grouped_list(things['Paper'], 'publication_list_year') }}
+            {% endif %}
+        </div>
 
-        {% endif %}
+            {% if external_publications %}
+            <h2 class="pt-5 pb-3 collapse-toggle" data-toggle="collapse" data-target="#external_publications" aria-expanded="false" aria-controls="external_publications">External publications</h2>
+            <div class="collapse" id="external_publications">
+                <p>
+                    This is a short preview of the publications from other sources (<a href="https://orcid.org/">ORCID</a>,
+                    <a href="https://www.semanticscholar.org/">Semantic Scholar</a>).
+                    {% if key!="dan_goodman" %}
+                    Note that publications from work done outside the Neural Reckoning group are included in this list.
+                    {% endif %}
+                </p>
+
+                {{ publist.external_publications(person) }}
+
+            </div>
+
+            {% endif %}
+
+        </div>
 
     </div>
 </div>
