@@ -29,6 +29,7 @@
     <title>Algorithm-hardware co-design of neuromorphic networks with dual memory pathways</title>
     <link rel="STYLESHEET" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://unpkg.com/markdown-it@15.0.2/dist/browser/markdown-it.umd.min.js"></script>
 
 </head>
 <body>
@@ -238,6 +239,21 @@ Long story short: neat trick to augment SNNs with a tiny memory buffer to improv
 <script type="module">
     import { thingsToDoOnLoad } from './nr.js';
     thingsToDoOnLoad();
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const md = window.markdownit({
+            html: true
+        });
+
+        document.querySelectorAll(".markdown").forEach(function (pre) {
+            const article = document.createElement("article");
+            article.className = "markdown-rendered";
+            article.innerHTML = md.render(pre.innerHTML.trim());
+            pre.replaceWith(article);
+        });
+    });
 </script>
 
 </body>

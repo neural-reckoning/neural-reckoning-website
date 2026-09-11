@@ -9,7 +9,7 @@
         {% for cat in parents %}<a href="{{cat.page}}">{{cat.name}}</a>{{ " | " if not loop.last else "" }}{% endfor %}
     </div>
 {% endif %}
-<h2>Category: {{ name }}</h2>
+<h2>Category browser: {{ name }}</h2>
 {% if subcats %}
 <div>
     <i class="fa-solid fa-arrow-down" aria-hidden="true"></i>

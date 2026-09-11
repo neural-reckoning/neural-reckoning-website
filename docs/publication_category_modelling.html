@@ -29,6 +29,7 @@
     <title>Modelling</title>
     <link rel="STYLESHEET" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://unpkg.com/markdown-it@15.0.2/dist/browser/markdown-it.umd.min.js"></script>
 
 </head>
 <body>
@@ -134,7 +135,7 @@
     <div>
         <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
 <a href="publication_category_neuroscience.html">Neuroscience</a>    </div>
-<h2>Category: Modelling</h2>
+<h2>Category browser: Modelling</h2>
 
 
         <h3 class="collapse-toggle pt-5 pb-3" data-toggle="collapse" data-target="#relatedVideo" aria-expanded="false" aria-controls="relatedVideo">Related videos</h3>
@@ -909,6 +910,21 @@ Kremer Y, Léger J-F, <a href="dan_goodman.html">Goodman D</a>, Brette R, Bourdi
 <script type="module">
     import { thingsToDoOnLoad } from './nr.js';
     thingsToDoOnLoad();
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const md = window.markdownit({
+            html: true
+        });
+
+        document.querySelectorAll(".markdown").forEach(function (pre) {
+            const article = document.createElement("article");
+            article.className = "markdown-rendered";
+            article.innerHTML = md.render(pre.innerHTML.trim());
+            pre.replaceWith(article);
+        });
+    });
 </script>
 
 </body>

@@ -29,6 +29,7 @@
     <title>Themes</title>
     <link rel="STYLESHEET" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://unpkg.com/markdown-it@15.0.2/dist/browser/markdown-it.umd.min.js"></script>
 
 </head>
 <body>
@@ -234,26 +235,26 @@ graph LR
     neuraldataanalysis --> spikesorting
     neuralsimulation --> brian
     neuroinformatics --> spikesorting
-    neuroinformatics --> neuraldataanalysis
     neuroinformatics --> neuralsimulation
+    neuroinformatics --> neuraldataanalysis
     neuromorphic --> brian
-    neuroscience --> plasticity
     neuroscience --> modelling
-    neuroscience --> neuroinformatics
+    neuroscience --> plasticity
     neuroscience --> spiking
     neuroscience --> learning
     neuroscience --> soundlocalisation
+    neuroscience --> neuroinformatics
     plasticity
-    sensory --> multimodal
     sensory --> virtualreality
+    sensory --> multimodal
     sensory --> visual
     sensory --> auditory
     software --> neuroinformatics
     soundlocalisation
     spikesorting
     spiking --> spikesorting
-    spiking --> brian
     spiking --> neuralsimulation
+    spiking --> brian
     virtualreality
     visual
     visualisation</pre>
@@ -279,6 +280,21 @@ graph LR
 <script type="module">
     import { thingsToDoOnLoad } from './nr.js';
     thingsToDoOnLoad();
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const md = window.markdownit({
+            html: true
+        });
+
+        document.querySelectorAll(".markdown").forEach(function (pre) {
+            const article = document.createElement("article");
+            article.className = "markdown-rendered";
+            article.innerHTML = md.render(pre.innerHTML.trim());
+            pre.replaceWith(article);
+        });
+    });
 </script>
 
 </body>
