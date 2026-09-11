@@ -158,7 +158,7 @@ graph LR
     style auditory fill:#c4e799,stroke:#c4e799
     click auditory "publication_category_auditory.html" "Open category Auditory"
     brian[Brian]
-    style brian fill:#e7f6ad,stroke:#e7f6ad
+    style brian fill:#e8f6ae,stroke:#e8f6ae
     click brian "publication_category_brian.html" "Open category Brian"
     ecology[Ecology]
     style ecology fill:#f9fdc2,stroke:#f9fdc2
@@ -167,19 +167,19 @@ graph LR
     style learning fill:#dff3a8,stroke:#dff3a8
     click learning "publication_category_learning.html" "Open category Learning"
     machinelearning[Machine learning]
-    style machinelearning fill:#88cd7f,stroke:#88cd7f
+    style machinelearning fill:#86cc7f,stroke:#86cc7f
     click machinelearning "publication_category_machinelearning.html" "Open category Machine learning"
     mathematics[Mathematics]
     style mathematics fill:#f8fcc0,stroke:#f8fcc0
     click mathematics "publication_category_mathematics.html" "Open category Mathematics"
     metascience[Metascience]
-    style metascience fill:#e4f4ab,stroke:#e4f4ab
+    style metascience fill:#e3f4aa,stroke:#e3f4aa
     click metascience "publication_category_metascience.html" "Open category Metascience"
     modelling[Modelling]
-    style modelling fill:#acdd8e,stroke:#acdd8e
+    style modelling fill:#abdc8d,stroke:#abdc8d
     click modelling "publication_category_modelling.html" "Open category Modelling"
     multimodal[Multimodal]
-    style multimodal fill:#f5fbb8,stroke:#f5fbb8
+    style multimodal fill:#f6fcb8,stroke:#f6fcb8
     click multimodal "publication_category_multimodal.html" "Open category Multimodal"
     neuraldataanalysis[Neural data analysis]
     style neuraldataanalysis fill:#f7fcb9,stroke:#f7fcb9
@@ -191,7 +191,7 @@ graph LR
     style neuroinformatics fill:#b6e192,stroke:#b6e192
     click neuroinformatics "publication_category_neuroinformatics.html" "Open category Neuroinformatics"
     neuromorphic[Neuromorphic]
-    style neuromorphic fill:#cfec9e,stroke:#cfec9e
+    style neuromorphic fill:#d0ec9f,stroke:#d0ec9f
     click neuromorphic "publication_category_neuromorphic.html" "Open category Neuromorphic"
     neuroscience[Neuroscience]
     style neuroscience fill:#2f934d,stroke:#2f934d
@@ -200,10 +200,10 @@ graph LR
     style plasticity fill:#f7fcbc,stroke:#f7fcbc
     click plasticity "publication_category_plasticity.html" "Open category Plasticity"
     sensory[Sensory]
-    style sensory fill:#a9db8c,stroke:#a9db8c
+    style sensory fill:#a7db8c,stroke:#a7db8c
     click sensory "publication_category_sensory.html" "Open category Sensory"
     software[Software]
-    style software fill:#98d486,stroke:#98d486
+    style software fill:#9ad587,stroke:#9ad587
     click software "publication_category_software.html" "Open category Software"
     soundlocalisation[Sound localisation]
     style soundlocalisation fill:#e9f6af,stroke:#e9f6af
@@ -212,10 +212,10 @@ graph LR
     style spikesorting fill:#f8fcc0,stroke:#f8fcc0
     click spikesorting "publication_category_spikesorting.html" "Open category Spike sorting"
     spiking[Spiking]
-    style spiking fill:#97d385,stroke:#97d385
+    style spiking fill:#95d385,stroke:#95d385
     click spiking "publication_category_spiking.html" "Open category Spiking"
     virtualreality[Virtual reality]
-    style virtualreality fill:#f5fbb8,stroke:#f5fbb8
+    style virtualreality fill:#f6fcb8,stroke:#f6fcb8
     click virtualreality "publication_category_virtualreality.html" "Open category Virtual reality"
     visual[Visual]
     style visual fill:#f8fcbe,stroke:#f8fcbe
@@ -235,26 +235,26 @@ graph LR
     neuraldataanalysis --> spikesorting
     neuralsimulation --> brian
     neuroinformatics --> spikesorting
-    neuroinformatics --> neuralsimulation
     neuroinformatics --> neuraldataanalysis
+    neuroinformatics --> neuralsimulation
     neuromorphic --> brian
-    neuroscience --> modelling
-    neuroscience --> plasticity
-    neuroscience --> spiking
-    neuroscience --> learning
     neuroscience --> soundlocalisation
     neuroscience --> neuroinformatics
+    neuroscience --> spiking
+    neuroscience --> learning
+    neuroscience --> plasticity
+    neuroscience --> modelling
     plasticity
     sensory --> virtualreality
-    sensory --> multimodal
     sensory --> visual
+    sensory --> multimodal
     sensory --> auditory
     software --> neuroinformatics
     soundlocalisation
     spikesorting
     spiking --> spikesorting
-    spiking --> neuralsimulation
     spiking --> brian
+    spiking --> neuralsimulation
     virtualreality
     visual
     visualisation</pre>

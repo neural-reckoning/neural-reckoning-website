@@ -13,6 +13,14 @@
         </image>
         <language>en-gb</language>
         <item>
+            <title>Talk: Does heterogeneity help the brain and how could we know if it did?</title>
+            <link>https://neural-reckoning.org/talk_2026_crick_heterogeneity.html</link>
+            <guid>https://neural-reckoning.org/talk_2026_crick_heterogeneity.html</guid>
+            <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
+                <description>To conclude our series on how we can get theoretical and experimental neuroscience working better together, I will present some work from my group where I'm not sure whether it can be tested experimentally. We'll brainstorm this together. A number of studies and work in progress in our group suggests that in theory, a more heterogeneous brain ought to learn faster and better, use less energy, and learn more robustly than a homogeneous one. These all seem like ideal traits that a brain should have, and we know that the brain is indeed quite heterogeneous. But, do these two things connect? Brain models benefit from heterogeneity, and real brains are heterogeneous, but is this enough to establish that real brains are heterogeneous because of those benefits? Is this an interesting or indeed even a meaningful question? Is there any way to experimentally test it? If we can't test it experimentally, does this work have any value? I'll discuss this work in the context of what I see as the challenges for doing theory and experiment together, before we go into a brainstorming/discussion session on these questions. Finally, since this is the last in the series, we'll discuss together what we've learned throughout this talk series, and how we go forward from here in encouraging theoretical and experimental neuroscientists to collaborate better together.
+</description>
+        </item>
+        <item>
             <title>Paper: Factorization and spatial encodings: a hypothesis about the foundations of the genomic code</title>
             <link>https://neural-reckoning.org/pub_factorization_genomic.html</link>
             <guid>https://neural-reckoning.org/pub_factorization_genomic.html</guid>
@@ -153,13 +161,6 @@
             <guid>https://neural-reckoning.org/pub_multisensory-channels-and-time.html</guid>
             <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
                 <description>Animals continuously combine information across sensory modalities and time, and use these combined signals to guide their behaviour. Picture a predator watching their prey sprint and screech through a field. To date, a range of multisensory algorithms have been proposed to model this process including linear and nonlinear fusion, which combine the inputs from multiple sensory channels via either a sum or nonlinear function. However, many multisensory algorithms treat successive observations independently, and so cannot leverage the temporal structure inherent to naturalistic stimuli. To investigate this, we introduce a novel multisensory task in which we provide the same number of task-relevant signals per trial but vary how this information is presented: from many short bursts to a few long sequences. We demonstrate that multisensory algorithms that treat different time steps as independent, perform sub-optimally on this task. However, simply augmenting these algorithms to integrate across sensory channels and short temporal windows allows them to perform surprisingly well, and comparably to fully recurrent neural networks. Overall, our work: highlights the benefits of fusing multisensory information across channels and time, shows that small increases in circuit/model complexity can lead to significant gains in performance, and provides a novel multisensory task for testing the relevance of this in biological systems.</description>
-        </item>
-        <item>
-            <title>Paper: Neuroscience needs to empower early-career researchers, not fund moon shots</title>
-            <link>https://neural-reckoning.org/pub_fund_ecrs_not_moonshots.html</link>
-            <guid>https://neural-reckoning.org/pub_fund_ecrs_not_moonshots.html</guid>
-            <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
-                <description>Large-scale projects run the risk of stifling scientific independence. Instead, let's explore alternative mechanisms of collaboration.</description>
         </item>
     </channel>
 </rss>

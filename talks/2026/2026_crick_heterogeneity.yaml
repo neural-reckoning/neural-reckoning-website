@@ -1,0 +1,17 @@
+name: Does heterogeneity help the brain and how could we know if it did?
+authors: Goodman DFM
+venue: Francis Crick Institute seminar series "Understanding the brain in theory and practice"
+abstract: >
+  To conclude our series on how we can get theoretical and experimental neuroscience working better together, I will present some work from my group where I'm not sure whether it can be tested experimentally. We'll brainstorm this together. A number of studies and work in progress in our group suggests that in theory, a more heterogeneous brain ought to learn faster and better, use less energy, and learn more robustly than a homogeneous one. These all seem like ideal traits that a brain should have, and we know that the brain is indeed quite heterogeneous. But, do these two things connect? Brain models benefit from heterogeneity, and real brains are heterogeneous, but is this enough to establish that real brains are heterogeneous because of those benefits? Is this an interesting or indeed even a meaningful question? Is there any way to experimentally test it? If we can't test it experimentally, does this work have any value? I'll discuss this work in the context of what I see as the challenges for doing theory and experiment together, before we go into a brainstorming/discussion session on these questions. Finally, since this is the last in the series, we'll discuss together what we've learned throughout this talk series, and how we go forward from here in encouraging theoretical and experimental neuroscientists to collaborate better together.
+categories:
+  - Modelling
+  - Neuroscience
+  - Metascience
+  - Machine learning
+  - Spiking
+  - Sensory
+related:
+  - nicolas_perez
+  - heterogeneity
+  - marcus_ghosh
+last_updated: 10-09-2026

@@ -1,5 +1,5 @@
 {% if item %}
     {% set talk = item %}
 {% endif %}
-<a href="talk_{{talk.key}}.html">{{talk.name}}</a><br/>
+<b><a href="talk_{{talk.key}}.html">{{talk.name}}</a></b><br/>
 <a href="{{ talk.author_objects[0].url }}">{{ talk.author_objects[0].name }}</a> at <i>{{ talk.venue }}</i>{% if not hide_date %} ({{ talk.year }}){% endif %}
