@@ -15,18 +15,18 @@
     <meta http-equiv="pragma" content="no-cache" />
 
     <!-- social media stuff -->
-    <meta name="description" content="">
-    <meta property="og:url" content="https://neural-reckoning.org/themes.html">
+    <meta name="description" content="Feature binding - how the brain encodes which features are part of other features to form representations of the coherent objects we perceive - remains an unsol...">
+    <meta property="og:url" content="https://neural-reckoning.org/pub_hierarchical_feature_binding.html">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Themes">
-    <meta property="og:description" content="">
+    <meta property="og:title" content="Hierarchical feature binding in a spiking neural network model of the primate ventral visual pathway">
+    <meta property="og:description" content="Feature binding - how the brain encodes which features are part of other features to form representations of the coherent objects we perceive - remains an unsol...">
     <meta property="og:image" content="https://neural-reckoning.org/default-social-media-card.png">
     <meta name="fediverse:creator" content="@neuralreckoning@neuromatch.social"/>
     <!-- bsky embed feed -->
     <script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js" async></script>
 
 
-    <title>Themes</title>
+    <title>Hierarchical feature binding in a spiking neural network model of the primate ventral visual pathway</title>
     <link rel="STYLESHEET" href="style.css" type="text/css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script src="https://unpkg.com/markdown-it@15.0.2/dist/browser/markdown-it.umd.min.js"></script>
@@ -132,140 +132,67 @@
 
 <div class="main">
 
-<h2>Research themes</h2>
 
-<script type="module">
-import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
-import elkLayouts from 'https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@latest/dist/mermaid-layout-elk.esm.min.mjs';
-mermaid.registerLayoutLoaders(elkLayouts);
-mermaid.initialize({
-  startOnLoad: true,
-  layout: 'elk',
-  });
-</script>
+<h2>Hierarchical feature binding in a spiking neural network model of the primate ventral visual pathway</h2>
+    <div class="d-none d-sm-block">
+        <ul class="list-inline author-list">
+    <li>
+        <div><img src="photo_placeholder.s.circ.png"/></div>
+        <div>Gardner B</div>
+    </li>
+    <li>
+        <div><img src="photo_placeholder.s.circ.png"/></div>
+        <div>McCarthy PT</div>
+    </li>
+    <li>
+        <div><img src="photo_placeholder.s.circ.png"/></div>
+        <div>Chrol-Cannon J</div>
+    </li>
+    <li>
+        <a href="dan_goodman.html">
+        <div><img src="photo_dan_goodman.s.circ.png" /></div>
+        <div>Dan Goodman</div>
+        </a>
+    </li>
+    <li>
+        <div><img src="photo_placeholder.s.circ.png"/></div>
+        <div>Schultz SR</div>
+    </li>
+    <li>
+        <div><img src="photo_placeholder.s.circ.png"/></div>
+        <div>Lo Iacono G</div>
+    </li>
+    <li>
+        <div><img src="photo_placeholder.s.circ.png"/></div>
+        <div>Stringer SM</div>
+    </li>
+</ul>
 
-<p>
-    Clickable map of research categories generated with <a href="https://mermaid.ai/">Mermaid</a>.
-</p>
+    </div>
+    <div class="d-block d-sm-none">
+        Gardner B, McCarthy PT, Chrol-Cannon J, <a href="dan_goodman.html">Goodman DFM</a>, Schultz SR, Lo Iacono G, Stringer SM
+    </div>
+<div>
+    <i>PLOS Computational Biology</i>
+    <i></i>
+    <i></i>
+    (2026) <font color="#aaaaaa">22(9): e1014752</font>
+</div>
+<div>
+    <a href="http://dx.doi.org/10.1371/journal.pcbi.1014752" style="color: #aaaaaa">doi: 10.1371/journal.pcbi.1014752</a>
+</div>
+<div>&nbsp;</div>
+<h3>Abstract</h3>
+<div>Feature binding - how the brain encodes which features are part of other features to form representations of the coherent objects we perceive - remains an unsolved problem in neuroscience. Despite progress towards a solution, major theories either lack detailed explanations at the neuronal level or rely on biologically unrealistic simplifications, and none adequately account for the representation of hierarchical information, which is crucial to our perception of the world. To address this, a solution termed binding by polychrony has been proposed to explain how hierarchical feature relationships may be encoded at the neuronal level in a biologically realistic system. This theory relies on a phenomenon known as polychronization, where groups of neurons fire in precisely coordinated, time-locked sequences, leading to the emergence of regularly repeating spatiotemporal patterns that might encode these relationships. In this study, we explore binding by polychrony through simulations of a spiking neural network that closely aligns with the structural organisation of the primate ventral visual pathway, incorporating bottom-up, top-down, and lateral synaptic connections. By exposing the network to collections of related 2D object shapes from ecologically realistic datasets and applying spike-timing-dependent plasticity, the network self-organises such that individual neurons respond selectively to specific shape features. Furthermore, the network exhibits polychronization, giving rise to repeating spatiotemporal patterns, some of which form circuits that encode hierarchical feature relationships. Notably, these circuits are robust, even with the randomised, Poisson-distributed spike timings that represent the visual stimuli in the input layer. These results provide evidence for binding by polychrony as a feasible solution to the feature binding problem, and characterise the mechanism by which it may function. This mechanism can guide experimentalists in identifying such circuits in vivo, and could also be utilised in computer vision systems to capture more information and improve robustness to adversarial inputs.</div>
 
-<pre class="mermaid">
----
-config:
-   layout: elk
----
-graph LR
-    auditory[Auditory]
-    style auditory fill:#c5e89a,stroke:#c5e89a
-    click auditory "publication_category_auditory.html" "Open category Auditory"
-    brian[Brian]
-    style brian fill:#e8f6ae,stroke:#e8f6ae
-    click brian "publication_category_brian.html" "Open category Brian"
-    ecology[Ecology]
-    style ecology fill:#f9fdc2,stroke:#f9fdc2
-    click ecology "publication_category_ecology.html" "Open category Ecology"
-    learning[Learning]
-    style learning fill:#e0f3a8,stroke:#e0f3a8
-    click learning "publication_category_learning.html" "Open category Learning"
-    machinelearning[Machine learning]
-    style machinelearning fill:#88cd7f,stroke:#88cd7f
-    click machinelearning "publication_category_machinelearning.html" "Open category Machine learning"
-    mathematics[Mathematics]
-    style mathematics fill:#f8fcc0,stroke:#f8fcc0
-    click mathematics "publication_category_mathematics.html" "Open category Mathematics"
-    metascience[Metascience]
-    style metascience fill:#e3f4aa,stroke:#e3f4aa
-    click metascience "publication_category_metascience.html" "Open category Metascience"
-    modelling[Modelling]
-    style modelling fill:#acdd8e,stroke:#acdd8e
-    click modelling "publication_category_modelling.html" "Open category Modelling"
-    multimodal[Multimodal]
-    style multimodal fill:#f6fcb8,stroke:#f6fcb8
-    click multimodal "publication_category_multimodal.html" "Open category Multimodal"
-    neuraldataanalysis[Neural data analysis]
-    style neuraldataanalysis fill:#f7fcb9,stroke:#f7fcb9
-    click neuraldataanalysis "publication_category_neuraldataanalysis.html" "Open category Neural data analysis"
-    neuralsimulation[Neural simulation]
-    style neuralsimulation fill:#e0f3a8,stroke:#e0f3a8
-    click neuralsimulation "publication_category_neuralsimulation.html" "Open category Neural simulation"
-    neuroinformatics[Neuroinformatics]
-    style neuroinformatics fill:#b8e293,stroke:#b8e293
-    click neuroinformatics "publication_category_neuroinformatics.html" "Open category Neuroinformatics"
-    neuromorphic[Neuromorphic]
-    style neuromorphic fill:#d0ec9f,stroke:#d0ec9f
-    click neuromorphic "publication_category_neuromorphic.html" "Open category Neuromorphic"
-    neuroscience[Neuroscience]
-    style neuroscience fill:#2f934d,stroke:#2f934d
-    click neuroscience "publication_category_neuroscience.html" "Open category Neuroscience"
-    plasticity[Plasticity]
-    style plasticity fill:#f7fcbc,stroke:#f7fcbc
-    click plasticity "publication_category_plasticity.html" "Open category Plasticity"
-    sensory[Sensory]
-    style sensory fill:#a9db8c,stroke:#a9db8c
-    click sensory "publication_category_sensory.html" "Open category Sensory"
-    software[Software]
-    style software fill:#9cd687,stroke:#9cd687
-    click software "publication_category_software.html" "Open category Software"
-    soundlocalisation[Sound localisation]
-    style soundlocalisation fill:#e9f6af,stroke:#e9f6af
-    click soundlocalisation "publication_category_soundlocalisation.html" "Open category Sound localisation"
-    spikesorting[Spike sorting]
-    style spikesorting fill:#f8fcc0,stroke:#f8fcc0
-    click spikesorting "publication_category_spikesorting.html" "Open category Spike sorting"
-    spiking[Spiking]
-    style spiking fill:#97d385,stroke:#97d385
-    click spiking "publication_category_spiking.html" "Open category Spiking"
-    virtualreality[Virtual reality]
-    style virtualreality fill:#f6fcb8,stroke:#f6fcb8
-    click virtualreality "publication_category_virtualreality.html" "Open category Virtual reality"
-    visual[Visual]
-    style visual fill:#f8fcbe,stroke:#f8fcbe
-    click visual "publication_category_visual.html" "Open category Visual"
-    visualisation[Visualisation]
-    style visualisation fill:#f2fab5,stroke:#f2fab5
-    click visualisation "publication_category_visualisation.html" "Open category Visualisation"
-    auditory --> soundlocalisation
-    brian
-    ecology
-    learning
-    machinelearning
-    mathematics
-    metascience
-    modelling
-    multimodal
-    neuraldataanalysis --> spikesorting
-    neuralsimulation --> brian
-    neuroinformatics --> neuraldataanalysis
-    neuroinformatics --> spikesorting
-    neuroinformatics --> neuralsimulation
-    neuromorphic --> brian
-    neuroscience --> plasticity
-    neuroscience --> learning
-    neuroscience --> modelling
-    neuroscience --> soundlocalisation
-    neuroscience --> spiking
-    neuroscience --> neuroinformatics
-    plasticity
-    sensory --> auditory
-    sensory --> multimodal
-    sensory --> virtualreality
-    sensory --> visual
-    software --> neuroinformatics
-    soundlocalisation
-    spikesorting
-    spiking --> brian
-    spiking --> spikesorting
-    spiking --> neuralsimulation
-    virtualreality
-    visual
-    visualisation</pre>
+        <h3 class="pt-3">Links</h3>
+        <p>
+<button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1014752"><i class="fa-regular fa-file-lines"></i> Journal (HTML)</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1014752&type=printable"><i class="fa-regular fa-file-pdf"></i> Journal (PDF)</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="https://github.com/BCGardner/feature_binding">Code (GitHub)</a></button><button type="button" class="btn btn-light" style="margin: 2px;"><a href="pub_hierarchical_feature_binding-qrcode.png">QR code</a></button>        </p>
+    <h3 class="pt-3">Categories</h3>
+    <p>
+<button type="button" class="btn btn-light" style="margin: 2px;"><a href="publication_category_neuroscience.html">Neuroscience</a></button>    </p>
 
-<h3 class="pt-4">Keywords over time</h3>
 
-<p>
-  This image shows how the most common 30 words in our abstracts have evolved over time (with a little bit of smoothing to make it cleaner).
-</p>
-
-<img src="wordfreq.png" class="img-fluid"/>
 
 
     <p>&nbsp;</p>

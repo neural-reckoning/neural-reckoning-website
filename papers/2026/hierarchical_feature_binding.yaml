@@ -1,0 +1,25 @@
+# selected: True
+year: 2026
+last_updated: 16-09-2026
+authors:
+  - Gardner B
+  - McCarthy PT
+  - Chrol-Cannon J
+  - Goodman DFM
+  - Schultz SR
+  - Lo Iacono G
+  - Stringer SM
+title: Hierarchical feature binding in a spiking neural network model of the primate ventral visual pathway
+journal: PLOS Computational Biology
+additional: "22(9): e1014752"
+doi: 10.1371/journal.pcbi.1014752
+categories:
+  - Neuroscience
+urls:
+  - - Journal (HTML)
+    - https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1014752
+  - - Journal (PDF)
+    - https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1014752&type=printable
+  - - Code (GitHub)
+    - https://github.com/BCGardner/feature_binding
+abstract: Feature binding - how the brain encodes which features are part of other features to form representations of the coherent objects we perceive - remains an unsolved problem in neuroscience. Despite progress towards a solution, major theories either lack detailed explanations at the neuronal level or rely on biologically unrealistic simplifications, and none adequately account for the representation of hierarchical information, which is crucial to our perception of the world. To address this, a solution termed binding by polychrony has been proposed to explain how hierarchical feature relationships may be encoded at the neuronal level in a biologically realistic system. This theory relies on a phenomenon known as polychronization, where groups of neurons fire in precisely coordinated, time-locked sequences, leading to the emergence of regularly repeating spatiotemporal patterns that might encode these relationships. In this study, we explore binding by polychrony through simulations of a spiking neural network that closely aligns with the structural organisation of the primate ventral visual pathway, incorporating bottom-up, top-down, and lateral synaptic connections. By exposing the network to collections of related 2D object shapes from ecologically realistic datasets and applying spike-timing-dependent plasticity, the network self-organises such that individual neurons respond selectively to specific shape features. Furthermore, the network exhibits polychronization, giving rise to repeating spatiotemporal patterns, some of which form circuits that encode hierarchical feature relationships. Notably, these circuits are robust, even with the randomised, Poisson-distributed spike timings that represent the visual stimuli in the input layer. These results provide evidence for binding by polychrony as a feasible solution to the feature binding problem, and characterise the mechanism by which it may function. This mechanism can guide experimentalists in identifying such circuits in vivo, and could also be utilised in computer vision systems to capture more information and improve robustness to adversarial inputs.
