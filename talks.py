@@ -26,6 +26,8 @@ def get_talks():
             ('PPTX', f'https://raw.githubusercontent.com/neural-reckoning/slides/main/{talk.year}/{talk.key}.pptx'),
             ('PDF', f'https://raw.githubusercontent.com/neural-reckoning/slides/main/{talk.year}/{talk.key}.pdf'),
         ]
+        if hasattr(talk, 'video_url'):
+            talk.urls.append(('Video', talk.video_url))
         talk.pdf_url = f'https://raw.githubusercontent.com/neural-reckoning/slides/main/{talk.year}/{talk.key}.pdf'
     return talks
 

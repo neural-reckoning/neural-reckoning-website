@@ -87,6 +87,7 @@
         </div></div>
 
         <div class="row"><div class="col mt-3 mb-3 pt-2">
+            {% set videos = videos+(talks|selectattr('embed')|list) %}
             <h2 class="pb-1 mb-3">Latest video</h2>
             <p>See <a href="videos.html">more videos here</a>.</p>
             {{ listmacro.featured_item((videos | sort(attribute='last_updated,title', reverse=True))[0]) }}

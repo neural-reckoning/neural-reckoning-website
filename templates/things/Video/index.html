@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% import 'utils/lists.html' as listmacro with context %}
 
+{% set videos = videos+(talks|selectattr('embed')|list) %}
+
 {% block main %}
 
 <h2 class="pb-3">Videos</h2>

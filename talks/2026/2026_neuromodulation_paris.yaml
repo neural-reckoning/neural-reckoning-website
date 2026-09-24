@@ -1,0 +1,16 @@
+name: Rapid neuromodulation enables context-dependent sensory processing
+authors: AlKilany A
+venue: Neuromodulation of Neuronal Circuits workshop at the Paris Brain Institute
+abstract: >
+  Spiking neurons underlie the brain's extreme energy efficiency, and therefore have great potential in neuromorphic computing, although realising this efficiency in practice has proven challenging. We use neuromodulation, a biological mechanism that lets the network dynamically and contextually modify its own parameters. We find it substantially increases performance across a range of sensory processing tasks, including a challenging new speech-in-noise dataset we introduce, with very few additional resources (neurons, energy, parameters). Neuromodulatory networks are space and energy efficient thanks to two mechanisms that are directly relevant to neuromorphic computing and biology: firstly, they allow for an order-of-magnitude reduction in the number of neurons required; and secondly, they enable very sparse firing, achieving better results using orders of magnitude fewer spikes. Together, these properties may throw light on the computational role of neuromodulation in biology, and make neuromodulation an ideal mechanism to improve performance and efficiency for neuromorphic devices.
+categories:
+  - Modelling
+  - Neuroscience
+  - Machine learning
+  - Spiking
+  - Sensory
+related:
+  - neuromodulation_enhances_sensory
+last_updated: 16-09-2026
+embed: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/NF0H3LIJatM?si=jINwu13iNil56Wn_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+video_url: https://youtu.be/NF0H3LIJatM
