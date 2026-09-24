@@ -5,6 +5,12 @@
 
 <h2 class="pb-3">Talks</h2>
 
+<h3 class="pt-3 pb-3">Latest recorded talk</h3>
+
+{{ listmacro.featured_item(talks | selectattr('embed') | list | sort(attribute='last_updated,title', reverse=True) | first) }}
+
+<h3 class="pt-3 pb-3">All talks</h3>
+
 <div>
     {{ listmacro.grouped_list(talks, 'year') }}
 </div>
