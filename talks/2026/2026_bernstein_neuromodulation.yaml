@@ -1,0 +1,15 @@
+name: Learning to use neuromodulation for efficient sensory processing
+authors: Goodman DFM
+venue: Bernstein Conference on Computational Neuroscience
+abstract: >
+  Spiking neurons underlie the brain's extreme energy efficiency, and therefore have great potential in neuromorphic computing, although realising this efficiency in practice has proven challenging. We use neuromodulation, a biological mechanism that lets the network dynamically and contextually modify its own parameters. We find it substantially increases performance across a range of sensory processing tasks, including a challenging new speech-in-noise dataset we introduce, with very few additional resources (neurons, energy, parameters). Neuromodulatory networks are space and energy efficient thanks to two mechanisms that are directly relevant to neuromorphic computing and biology: firstly, they allow for an order-of-magnitude reduction in the number of neurons required; and secondly, they enable very sparse firing, achieving better results using orders of magnitude fewer spikes. Together, these properties may throw light on the computational role of neuromodulation in biology, and make neuromodulation an ideal mechanism to improve performance and efficiency for neuromorphic devices.
+categories:
+  - Modelling
+  - Neuroscience
+  - Machine learning
+  - Spiking
+  - Sensory
+related:
+  - neuromodulation_enhances_sensory
+  - abdelqader_alkilany
+last_updated: 28-09-2026

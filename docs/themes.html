@@ -167,7 +167,7 @@ graph LR
     style learning fill:#e0f3a8,stroke:#e0f3a8
     click learning "publication_category_learning.html" "Open category Learning"
     machinelearning[Machine learning]
-    style machinelearning fill:#88cd7f,stroke:#88cd7f
+    style machinelearning fill:#86cc7f,stroke:#86cc7f
     click machinelearning "publication_category_machinelearning.html" "Open category Machine learning"
     mathematics[Mathematics]
     style mathematics fill:#f8fcc0,stroke:#f8fcc0
@@ -176,7 +176,7 @@ graph LR
     style metascience fill:#e3f4aa,stroke:#e3f4aa
     click metascience "publication_category_metascience.html" "Open category Metascience"
     modelling[Modelling]
-    style modelling fill:#abdc8d,stroke:#abdc8d
+    style modelling fill:#a9db8c,stroke:#a9db8c
     click modelling "publication_category_modelling.html" "Open category Modelling"
     multimodal[Multimodal]
     style multimodal fill:#f6fcb8,stroke:#f6fcb8
@@ -203,7 +203,7 @@ graph LR
     style sensory fill:#a7db8c,stroke:#a7db8c
     click sensory "publication_category_sensory.html" "Open category Sensory"
     software[Software]
-    style software fill:#9dd688,stroke:#9dd688
+    style software fill:#9fd788,stroke:#9fd788
     click software "publication_category_software.html" "Open category Software"
     soundlocalisation[Sound localisation]
     style soundlocalisation fill:#eaf7af,stroke:#eaf7af
@@ -212,7 +212,7 @@ graph LR
     style spikesorting fill:#f8fcc0,stroke:#f8fcc0
     click spikesorting "publication_category_spikesorting.html" "Open category Spike sorting"
     spiking[Spiking]
-    style spiking fill:#95d385,stroke:#95d385
+    style spiking fill:#93d284,stroke:#93d284
     click spiking "publication_category_spiking.html" "Open category Spiking"
     virtualreality[Virtual reality]
     style virtualreality fill:#f6fcb8,stroke:#f6fcb8
@@ -221,7 +221,7 @@ graph LR
     style visual fill:#f8fcbe,stroke:#f8fcbe
     click visual "publication_category_visual.html" "Open category Visual"
     visualisation[Visualisation]
-    style visualisation fill:#f2fab5,stroke:#f2fab5
+    style visualisation fill:#f3fab6,stroke:#f3fab6
     click visualisation "publication_category_visualisation.html" "Open category Visualisation"
     auditory --> soundlocalisation
     brian
@@ -234,26 +234,26 @@ graph LR
     multimodal
     neuraldataanalysis --> spikesorting
     neuralsimulation --> brian
-    neuroinformatics --> spikesorting
     neuroinformatics --> neuraldataanalysis
+    neuroinformatics --> spikesorting
     neuroinformatics --> neuralsimulation
     neuromorphic --> brian
-    neuroscience --> learning
-    neuroscience --> spiking
-    neuroscience --> soundlocalisation
-    neuroscience --> neuroinformatics
     neuroscience --> plasticity
+    neuroscience --> neuroinformatics
     neuroscience --> modelling
+    neuroscience --> learning
+    neuroscience --> soundlocalisation
+    neuroscience --> spiking
     plasticity
-    sensory --> virtualreality
-    sensory --> auditory
     sensory --> visual
+    sensory --> virtualreality
     sensory --> multimodal
+    sensory --> auditory
     software --> neuroinformatics
     soundlocalisation
     spikesorting
-    spiking --> brian
     spiking --> spikesorting
+    spiking --> brian
     spiking --> neuralsimulation
     virtualreality
     visual

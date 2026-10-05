@@ -13,6 +13,14 @@
         </image>
         <language>en-gb</language>
         <item>
+            <title>Talk: Learning to use neuromodulation for efficient sensory processing</title>
+            <link>https://neural-reckoning.org/talk_2026_bernstein_neuromodulation.html</link>
+            <guid>https://neural-reckoning.org/talk_2026_bernstein_neuromodulation.html</guid>
+            <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+                <description>Spiking neurons underlie the brain's extreme energy efficiency, and therefore have great potential in neuromorphic computing, although realising this efficiency in practice has proven challenging. We use neuromodulation, a biological mechanism that lets the network dynamically and contextually modify its own parameters. We find it substantially increases performance across a range of sensory processing tasks, including a challenging new speech-in-noise dataset we introduce, with very few additional resources (neurons, energy, parameters). Neuromodulatory networks are space and energy efficient thanks to two mechanisms that are directly relevant to neuromorphic computing and biology: firstly, they allow for an order-of-magnitude reduction in the number of neurons required; and secondly, they enable very sparse firing, achieving better results using orders of magnitude fewer spikes. Together, these properties may throw light on the computational role of neuromodulation in biology, and make neuromodulation an ideal mechanism to improve performance and efficiency for neuromorphic devices.
+</description>
+        </item>
+        <item>
             <title>Paper: Hierarchical feature binding in a spiking neural network model of the primate ventral visual pathway</title>
             <link>https://neural-reckoning.org/pub_hierarchical_feature_binding.html</link>
             <guid>https://neural-reckoning.org/pub_hierarchical_feature_binding.html</guid>
@@ -155,13 +163,6 @@
             <guid>https://neural-reckoning.org/pub_delays_ccn.html</guid>
             <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
                 <description>Recent work has shown that the performance of spiking neural networks (SNNs) on temporally complex tasks improves significantly when axonal delays are treated as learnable parameters. This raises an important question: If temporal delays improve a network's computational capacity, how precise do synaptic weights need to be? In this work, we investigate the relationship between delay-based computation and weight precision by combining quantized synaptic weights with a range of learnable delays on a challenging neuromorphic audio task. Our results reveal that short delays contribute little to performance, whereas medium to long delays are critical. Building on this insight, we introduce a learnable thresholding mechanism to suppress short delays that can be effectively compensated for by weights. These findings suggest that delays can reduce the burden on weight precision, highlighting a promising direction for energy-efficient SNN design and offering new perspectives on the role of delay in biological and neuromorphic computation.</description>
-        </item>
-        <item>
-            <title>Paper: A Path to Universal Neural Cellular Automata</title>
-            <link>https://neural-reckoning.org/pub_path_to_universal_nca.html</link>
-            <guid>https://neural-reckoning.org/pub_path_to_universal_nca.html</guid>
-            <pubDate>Mon, 11 Aug 2025 00:00:00 +0000</pubDate>
-                <description>Cellular automata have long been celebrated for their ability to generate complex behaviors from simple, local rules, with well-known discrete models like Conway's Game of Life proven capable of universal computation. Recent advancements have extended cellular automata into continuous domains, raising the question of whether these systems retain the capacity for universal computation. In parallel, neural cellular automata have emerged as a powerful paradigm where rules are learned via gradient descent rather than manually designed. This work explores the potential of neural cellular automata to develop a continuous Universal Cellular Automaton through training by gradient descent. We introduce a cellular automaton model, objective functions and training strategies to guide neural cellular automata toward universal computation in a continuous setting. Our experiments demonstrate the successful training of fundamental computational primitives - such as matrix multiplication and transposition - culminating in the emulation of a neural network solving the MNIST digit classification task directly within the cellular automata state. These results represent a foundational step toward realizing analog general-purpose computers, with implications for understanding universal computation in continuous dynamics and advancing the automated discovery of complex cellular automata behaviors via machine learning. </description>
         </item>
     </channel>
 </rss>
