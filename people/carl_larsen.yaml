@@ -1,0 +1,22 @@
+name: Carl Larsen
+author_names:
+- Larsen C
+position: phd
+email: 'Y2FybC5sYXJzZW4yNkBpbXBlcmlhbC5hYy51aw==' # generate this by import base64; base64.b64encode(b'address')
+short: Co-designing brain-inspired algorithms and hardware accelerators.
+long: |-
+  <p>
+    I’m a PhD student in Electrical and Electronic Engineering at Imperial, and part of <a href="https://neuroware-ikc.com/">NeuroWare</a>, the national Innovation and Knowledge Centre in Neuromorphic Computation. I work across machine learning, computational neuroscience and digital hardware design: training delay-based spiking models, studying the trade-offs between temporal representation, weight precision and memory, and mapping these models onto FPGAs with hardware-aware measures of energy, memory and latency. More broadly, I'm interested in intelligence and its physical implementation: what can be learned and computed under tight power and memory budgets, as on edge devices and event-based sensors.
+  </p>
+  <p>
+    Carl is supervised by <a href="https://profiles.imperial.ac.uk/g.constantinides">George Constantinides</a> and co-supervised by <a href="dan_goodman.html">Dan Goodman</a> and <a href="https://profiles.imperial.ac.uk/christos-savvas.bouganis">Christos-Savvas Bouganis</a>.
+  </p>
+dates:
+- 2026
+links:
+  - ['LinkedIn', 'https://www.linkedin.com/in/carleriklarsen/']
+  - ['Google Scholar', 'https://scholar.google.com/citations?user=SKRy2HoAAAAJ&hl=en']
+# orcid: 0009-0003-7220-4395
+relationships:
+  supervisor:
+    - dan_goodman
