@@ -98,3 +98,4 @@ temp/
 twitter_secrets.py
 twitter_threads_cache.*
 orcid_secrets.py
+semanticscholar_secrets.py

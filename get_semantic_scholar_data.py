@@ -1,5 +1,8 @@
+import os
+
 from diskcache import Cache
 import semanticscholar
+from semanticscholar_secrets import api_key
 import time
 import tenacity
 
@@ -7,7 +10,7 @@ cache_expiry_seconds = 7*24*60*60  # 7 days in seconds
 
 cache = Cache('temp/semantic_scholar_cache')
 
-sch = semanticscholar.SemanticScholar(timeout=25) # note: rate limit is 100 requests per 5 minutes
+sch = semanticscholar.SemanticScholar(timeout=25, api_key=api_key) # note: rate limit is 100 requests per 5 minutes
 
 class SemanticScholarPublication:
     def __init__(self, **kwds):

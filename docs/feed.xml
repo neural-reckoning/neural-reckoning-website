@@ -13,6 +13,13 @@
         </image>
         <language>en-gb</language>
         <item>
+            <title>Paper: Input-dependent Neuromodulation Enhances Mixed-Signal Neuromorphic Hardware</title>
+            <link>https://neural-reckoning.org/pub_neuromodulation_mixed_signal_neuromorphic.html</link>
+            <guid>https://neural-reckoning.org/pub_neuromodulation_mixed_signal_neuromorphic.html</guid>
+            <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+                <description>Gating mechanisms allow a fixed neural network to adapt its computation to the current input by dynamically modulating its effective parameters. In the brain, neuromodulation uses this principle to move neural circuits between dynamical regimes, and deep learning exploits input-dependent gating, e.g., in gated recurrent networks and self-attention. Input-dependent modulation has also recently been shown to improve spiking neural networks, with particularly strong benefits in small, parameter-limited ones. This makes neuromodulation especially promising for neuromorphic processors at the edge, where area, memory and energy budgets constrain network size, while circuit physics limits parameter precision. Here we demonstrate input-dependent, within-trial neuromodulation of a spiking recurrent neural network on a mixed-signal neuromorphic processor. An off-chip modulator reads the on-chip network's input and activity and adjusts its population-level gains while the chip's analog circuits compute with the physics of the silicon. Neuromodulation raises binary spoken-digit classification accuracy by +17.3±10.4 percentage points, tested across five hardware network instantiations.</description>
+        </item>
+        <item>
             <title>Talk: Learning to use neuromodulation for efficient sensory processing</title>
             <link>https://neural-reckoning.org/talk_2026_bernstein_neuromodulation.html</link>
             <guid>https://neural-reckoning.org/talk_2026_bernstein_neuromodulation.html</guid>
@@ -156,13 +163,6 @@
             <guid>https://neural-reckoning.org/pub_spytorch_transmitter.html</guid>
             <pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate>
                 <description>Friedemann Zenke’s 2019 paper, and its related coding tutorial SpyTorch, made it possible to apply modern machine learning to spiking neural networks. The innovation reinvigorated the field.</description>
-        </item>
-        <item>
-            <title>Paper: Long delays reduce the need for precise weights in spiking neural networks</title>
-            <link>https://neural-reckoning.org/pub_delays_ccn.html</link>
-            <guid>https://neural-reckoning.org/pub_delays_ccn.html</guid>
-            <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
-                <description>Recent work has shown that the performance of spiking neural networks (SNNs) on temporally complex tasks improves significantly when axonal delays are treated as learnable parameters. This raises an important question: If temporal delays improve a network's computational capacity, how precise do synaptic weights need to be? In this work, we investigate the relationship between delay-based computation and weight precision by combining quantized synaptic weights with a range of learnable delays on a challenging neuromorphic audio task. Our results reveal that short delays contribute little to performance, whereas medium to long delays are critical. Building on this insight, we introduce a learnable thresholding mechanism to suppress short delays that can be effectively compensated for by weights. These findings suggest that delays can reduce the burden on weight precision, highlighting a promising direction for energy-efficient SNN design and offering new perspectives on the role of delay in biological and neuromorphic computation.</description>
         </item>
     </channel>
 </rss>

@@ -28,3 +28,7 @@ Because of the pip installed parts, to upgrade just delete the existing environm
 For the search functionality, the local copy needs to be run on a server using [http-server](https://www.npmjs.com/package/http-server) npm package. You can run
 
     http-server . --cors
+
+## API keys
+
+Create a file ``semanticscholar_secrets.py`` with ``api_key='...'``.

@@ -1,10 +1,15 @@
 name: Yang Chu
 author_names:
 - Chu Y
+signoff: Yang left the group in 2026 to work full time at <a href="https://www.callosum.com/">Callosum</a>, but continues to collaborate with us.
 positions:
+ - type: affiliated
+   short: Affiliated
+   start: 2026
  - type: postdoc
    short: Postdoc
    start: 2025
+   end: 2026
    relationships:
      supervisor:
        - danyal_akarca
@@ -16,11 +21,13 @@ positions:
    relationships:
      supervisor:
        - dan_goodman
-email: eS5jaHUxNkBpbXBlcmlhbC5hYy51aw==
 short: Robust and flexible perception under distribution shift
 long: |-
   <p>
-    Yang Chu is a postdoctoral researcher supervised by <a href="danyal_akarca.html">Danyal Akarca</a>, <a href="dan_goodman.html">Dan Goodman</a> and Jascha Achterberg.
+    Yang left the group in 2026 to work full time at <a href="https://www.callosum.com/">Callosum</a>, but continues to collaborate with us.
+  </p>
+  <p>
+    Yang Chu was a postdoctoral researcher supervised by <a href="danyal_akarca.html">Danyal Akarca</a>, <a href="dan_goodman.html">Dan Goodman</a> and Jascha Achterberg.
   </p>
   <p>
     Previously, Yang did his PhD in the lab, working on understanding how the brain achieves robust perception and flexible behaviour in a constantly changing world. He had a particular interest in brain-inspired machine learning models that can handle "distribution shift". He was jointly supervised by <a href="http://www.imperial.ac.uk/people/w.luk">Wayne Luk</a> and <a href="https://tbrx.github.io/">Brooks Paige</a>.

@@ -55,7 +55,6 @@
                         <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="dan_goodman.html">Dan Goodman</a>
                                 <h6 class="dropdown-header">Postdocs and Fellows</h6>
-                                    <a class="dropdown-item" href="chu_yang.html">Yang Chu</a>
                                     <a class="dropdown-item" href="hardik_rajpal.html">Hardik Rajpal</a>
                                 <h6 class="dropdown-header">PhD students</h6>
                                     <a class="dropdown-item" href="greta_horvathova.html">Greta Horvathova</a>
@@ -68,6 +67,7 @@
                                     <a class="dropdown-item" href="anna_obure.html">Anna Obure</a>
                                     <a class="dropdown-item" href="yishu_zhang.html">Yishu Zhang</a>
                                 <h6 class="dropdown-header">Affiliated members</h6>
+                                    <a class="dropdown-item" href="chu_yang.html">Yang Chu</a>
                                     <a class="dropdown-item" href="marcus_ghosh.html">Marcus Ghosh</a>
                     </div>
                 </li>
@@ -156,7 +156,7 @@ config:
 ---
 graph LR
     auditory[Auditory]
-    style auditory fill:#c7e89a,stroke:#c7e89a
+    style auditory fill:#c8e99b,stroke:#c8e99b
     click auditory "publication_category_auditory.html" "Open category Auditory"
     brian[Brian]
     style brian fill:#e8f6ae,stroke:#e8f6ae
@@ -165,19 +165,19 @@ graph LR
     style ecology fill:#f9fdc2,stroke:#f9fdc2
     click ecology "publication_category_ecology.html" "Open category Ecology"
     learning[Learning]
-    style learning fill:#e0f3a8,stroke:#e0f3a8
+    style learning fill:#dff3a8,stroke:#dff3a8
     click learning "publication_category_learning.html" "Open category Learning"
     machinelearning[Machine learning]
-    style machinelearning fill:#86cc7f,stroke:#86cc7f
+    style machinelearning fill:#84cb7e,stroke:#84cb7e
     click machinelearning "publication_category_machinelearning.html" "Open category Machine learning"
     mathematics[Mathematics]
     style mathematics fill:#f8fcc0,stroke:#f8fcc0
     click mathematics "publication_category_mathematics.html" "Open category Mathematics"
     metascience[Metascience]
-    style metascience fill:#e3f4aa,stroke:#e3f4aa
+    style metascience fill:#e4f4ab,stroke:#e4f4ab
     click metascience "publication_category_metascience.html" "Open category Metascience"
     modelling[Modelling]
-    style modelling fill:#a9db8c,stroke:#a9db8c
+    style modelling fill:#a7db8c,stroke:#a7db8c
     click modelling "publication_category_modelling.html" "Open category Modelling"
     multimodal[Multimodal]
     style multimodal fill:#f6fcb8,stroke:#f6fcb8
@@ -189,10 +189,10 @@ graph LR
     style neuralsimulation fill:#e0f3a8,stroke:#e0f3a8
     click neuralsimulation "publication_category_neuralsimulation.html" "Open category Neural simulation"
     neuroinformatics[Neuroinformatics]
-    style neuroinformatics fill:#b9e294,stroke:#b9e294
+    style neuroinformatics fill:#bae394,stroke:#bae394
     click neuroinformatics "publication_category_neuroinformatics.html" "Open category Neuroinformatics"
     neuromorphic[Neuromorphic]
-    style neuromorphic fill:#d2eda0,stroke:#d2eda0
+    style neuromorphic fill:#e4f4ab,stroke:#e4f4ab
     click neuromorphic "publication_category_neuromorphic.html" "Open category Neuromorphic"
     neuroscience[Neuroscience]
     style neuroscience fill:#2f934d,stroke:#2f934d
@@ -213,7 +213,7 @@ graph LR
     style spikesorting fill:#f8fcc0,stroke:#f8fcc0
     click spikesorting "publication_category_spikesorting.html" "Open category Spike sorting"
     spiking[Spiking]
-    style spiking fill:#93d284,stroke:#93d284
+    style spiking fill:#8bce81,stroke:#8bce81
     click spiking "publication_category_spiking.html" "Open category Spiking"
     virtualreality[Virtual reality]
     style virtualreality fill:#f6fcb8,stroke:#f6fcb8
@@ -235,27 +235,28 @@ graph LR
     multimodal
     neuraldataanalysis --> spikesorting
     neuralsimulation --> brian
-    neuroinformatics --> neuraldataanalysis
     neuroinformatics --> spikesorting
     neuroinformatics --> neuralsimulation
-    neuromorphic --> brian
-    neuroscience --> soundlocalisation
+    neuroinformatics --> neuraldataanalysis
+    neuromorphic
     neuroscience --> spiking
     neuroscience --> learning
-    neuroscience --> modelling
-    neuroscience --> plasticity
+    neuroscience --> soundlocalisation
     neuroscience --> neuroinformatics
+    neuroscience --> plasticity
+    neuroscience --> modelling
     plasticity
-    sensory --> virtualreality
-    sensory --> multimodal
     sensory --> visual
     sensory --> auditory
+    sensory --> multimodal
+    sensory --> virtualreality
     software --> neuroinformatics
     soundlocalisation
     spikesorting
-    spiking --> brian
     spiking --> spikesorting
     spiking --> neuralsimulation
+    spiking --> brian
+    spiking --> neuromorphic
     virtualreality
     visual
     visualisation</pre>

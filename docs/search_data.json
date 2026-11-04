@@ -1589,6 +1589,41 @@
       "https://bsky.app/profile/neural-reckoning.org/post/3mqrr5vk6pc2a"
     ]
   },
+  "neuromodulation_mixed_signal_neuromorphic": {
+    "year": "Preprints",
+    "last_updated": "30-10-2026",
+    "authors": [
+      "Mehta A",
+      "AlKilany A",
+      "Goodman DFM",
+      "Indiveri G",
+      "Payvand M"
+    ],
+    "title": "Input-dependent Neuromodulation Enhances Mixed-Signal Neuromorphic Hardware",
+    "doi": "10.48550/arXiv.2610.41265",
+    "categories": [
+      "Neuroscience",
+      "Neuromorphic",
+      "Modelling",
+      "Learning",
+      "Machine learning"
+    ],
+    "urls": [
+      [
+        "Preprint (arXiv)",
+        "https://arxiv.org/abs/2610.41265"
+      ],
+      [
+        "Preprint (PDF)",
+        "https://arxiv.org/pdf/2610.41265"
+      ],
+      [
+        "QR code",
+        "pub_neuromodulation_mixed_signal_neuromorphic-qrcode.png"
+      ]
+    ],
+    "abstract": "Gating mechanisms allow a fixed neural network to adapt its computation to the current input by dynamically modulating its effective parameters. In the brain, neuromodulation uses this principle to move neural circuits between dynamical regimes, and deep learning exploits input-dependent gating, e.g., in gated recurrent networks and self-attention. Input-dependent modulation has also recently been shown to improve spiking neural networks, with particularly strong benefits in small, parameter-limited ones. This makes neuromodulation especially promising for neuromorphic processors at the edge, where area, memory and energy budgets constrain network size, while circuit physics limits parameter precision. Here we demonstrate input-dependent, within-trial neuromodulation of a spiking recurrent neural network on a mixed-signal neuromorphic processor. An off-chip modulator reads the on-chip network's input and activity and adjusts its population-level gains while the chip's analog circuits compute with the physics of the silicon. Neuromodulation raises binary spoken-digit classification accuracy by +17.3±10.4 percentage points, tested across five hardware network instantiations."
+  },
   "unifying_ds_graphs_mechanistic": {
     "year": "Preprints",
     "last_updated": "5-5-2026",
