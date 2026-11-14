@@ -1,0 +1,17 @@
+name:  Neuromodulation Enhances the Capability and Efficiency of Spiking Neural Networks
+authors: Goodman DFM
+venue: CING x META-BRAIN Seminar Series
+abstract: >
+  In this talk I start by introducing spiking neural networks and surrogate gradient descent, and then move on to discussing our work on modelling neuromodulation.
+categories:
+  - Modelling
+  - Neuroscience
+  - Machine learning
+  - Spiking
+  - Sensory
+related:
+  - neuromodulation_enhances_sensory
+  - abdelqader_alkilany
+last_updated: 9-11-2026
+video_url: https://www.youtube.com/watch?app=desktop&v=0GKo2jZN6No&list=PLbYgQnGW9lqi3AWYrWkupBCoZ7UEGtoRg&index=1
+embed: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0GKo2jZN6No?si=QEqnSVzj0mQojj2h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

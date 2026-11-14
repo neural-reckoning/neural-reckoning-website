@@ -13,6 +13,22 @@
         </image>
         <language>en-gb</language>
         <item>
+            <title>Talk: Modules in the garden of forking paths</title>
+            <link>https://neural-reckoning.org/talk_2026_making_connections_modules_garden_forking_paths.html</link>
+            <guid>https://neural-reckoning.org/talk_2026_making_connections_modules_garden_forking_paths.html</guid>
+            <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+                <description>In this talk I discuss why it’s hard to draw strong conclusions about how the brain works from computational modelling, and how the process is full of pitfalls. In the first part of the talk, I discuss the “garden of forking paths”, a parable that attempts to explain why well-intentioned researchers can end up p-hacking by accident. I explain why I think this problem is particularly acute for computational modelling work, and discuss some ways we can try to avoid, or at least minimise the risk. I then move on to a discussion of how introducing the concept of resource efficiency of the brain can help with that. With this in mind, I present some of our recent research trying to understand the relationship between structural and functional modularity in the brain. I speculate on why I think modularity might make sense as a resource-efficient strategy for brains, and why it doesn’t emerge naturally in models. I finish by presenting our results suggesting that these two types of modularity appear to be only weakly linked in neural network models.
+</description>
+        </item>
+        <item>
+            <title>Talk: Neuromodulation Enhances the Capability and Efficiency of Spiking Neural Networks</title>
+            <link>https://neural-reckoning.org/talk_2026_cing_meta_spiking_and_neuromodulation.html</link>
+            <guid>https://neural-reckoning.org/talk_2026_cing_meta_spiking_and_neuromodulation.html</guid>
+            <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+                <description>In this talk I start by introducing spiking neural networks and surrogate gradient descent, and then move on to discussing our work on modelling neuromodulation.
+</description>
+        </item>
+        <item>
             <title>Paper: Input-dependent Neuromodulation Enhances Mixed-Signal Neuromorphic Hardware</title>
             <link>https://neural-reckoning.org/pub_neuromodulation_mixed_signal_neuromorphic.html</link>
             <guid>https://neural-reckoning.org/pub_neuromodulation_mixed_signal_neuromorphic.html</guid>
@@ -149,20 +165,6 @@
             <guid>https://neural-reckoning.org/pub_heterogeneous_delays_low_bit.html</guid>
             <pubDate>Fri, 31 Oct 2025 00:00:00 +0000</pubDate>
                 <description>Neural networks rely on learning synaptic weights. However, this overlooks other neural parameters that can also be learned and may be utilized by the brain. One such parameter is the delay: the brain exhibits complex temporal dynamics with heterogeneous delays, where signals are transmitted asynchronously between neurons. It has been theorized that this delay heterogeneity, rather than a cost to be minimized, can be exploited in embodied contexts where task-relevant information naturally sits contextually in the time domain. We test this hypothesis by training spiking neural networks to modify not only their weights but also their delays at different levels of precision. We find that delay heterogeneity enables state-of-the-art performance on temporally complex neuromorphic problems and can be achieved even when weights are extremely imprecise (1.58-bit ternary precision: just positive, negative, or absent). By enabling high performance with extremely low-precision weights, delay heterogeneity allows memory-efficient solutions that maintain state-of-the-art accuracy even when weights are compressed over an order of magnitude more aggressively than typically studied weight-only networks. We show how delays and time-constants adaptively trade-off, and reveal through ablation that task performance depends on task-appropriate delay distributions, with temporally-complex tasks requiring longer delays. Our results suggest temporal heterogeneity is an important principle for efficient computation, particularly when task-relevant information is temporal - as in the physical world - with implications for embodied intelligent systems and neuromorphic hardware.</description>
-        </item>
-        <item>
-            <title>Paper: Learning spatial hearing via innate mechanisms</title>
-            <link>https://neural-reckoning.org/pub_learning_sound_loc_limited_sup.html</link>
-            <guid>https://neural-reckoning.org/pub_learning_sound_loc_limited_sup.html</guid>
-            <pubDate>Fri, 10 Oct 2025 00:00:00 +0000</pubDate>
-                <description>The acoustic cues used by humans and other animals to localise sounds are subtle, and change throughout our lifetime. This means that we need to constantly relearn or recalibrate our sound localisation circuit. This is often thought of as a “supervised” learning process where a “teacher” (for example, a parent, or your visual system) tells you whether or not you guessed the location correctly, and you use this information to update your localiser. However, there is not always an obvious teacher (for example in babies or blind people). Using computational models, we showed that approximate feedback from a simple innate circuit, such as that can distinguish left from right (e.g. the auditory orienting response), is sufficient to learn an accurate full-range sound localiser. Moreover, using this mechanism in addition to supervised learning can more robustly maintain the adaptive neural representation. We find several possible neural mechanisms that could underlie this type of learning, and hypothesise that multiple mechanisms may be present and provide examples in which these mechanisms can interact with each other. We conclude that when studying spatial hearing, we should not assume that the only source of learning is from the visual system or other supervisory signals. Further study of the proposed mechanisms could allow us to design better rehabilitation programmes to accelerate relearning/recalibration of spatial hearing.</description>
-        </item>
-        <item>
-            <title>Paper: This paper changed my life: Dan Goodman on a paper that reignited the field of spiking neural networks</title>
-            <link>https://neural-reckoning.org/pub_spytorch_transmitter.html</link>
-            <guid>https://neural-reckoning.org/pub_spytorch_transmitter.html</guid>
-            <pubDate>Wed, 17 Sep 2025 00:00:00 +0000</pubDate>
-                <description>Friedemann Zenke’s 2019 paper, and its related coding tutorial SpyTorch, made it possible to apply modern machine learning to spiking neural networks. The innovation reinvigorated the field.</description>
         </item>
     </channel>
 </rss>

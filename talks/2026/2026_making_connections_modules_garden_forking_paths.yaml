@@ -1,0 +1,15 @@
+name:  Modules in the garden of forking paths
+authors: Goodman DFM
+venue: Making Connections seminar series (Cambridge, KCL)
+abstract: >
+  In this talk I discuss why it’s hard to draw strong conclusions about how the brain works from computational modelling, and how the process is full of pitfalls. In the first part of the talk, I discuss the “garden of forking paths”, a parable that attempts to explain why well-intentioned researchers can end up p-hacking by accident. I explain why I think this problem is particularly acute for computational modelling work, and discuss some ways we can try to avoid, or at least minimise the risk. I then move on to a discussion of how introducing the concept of resource efficiency of the brain can help with that. With this in mind, I present some of our recent research trying to understand the relationship between structural and functional modularity in the brain. I speculate on why I think modularity might make sense as a resource-efficient strategy for brains, and why it doesn’t emerge naturally in models. I finish by presenting our results suggesting that these two types of modularity appear to be only weakly linked in neural network models.
+categories:
+  - Modelling
+  - Neuroscience
+  - Machine learning
+related:
+  - sparsity_specialization
+  - gabriel_bena
+last_updated: 12-11-2026
+video_url: https://www.youtube.com/watch?app=desktop&v=vuyyZwWeENM
+embed: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vuyyZwWeENM?si=7BwIicDwbK-vYZ3I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
